@@ -1,0 +1,196 @@
+name: Run ai-security-analyzer on config changes
+
+on:
+  push:
+    paths:
+      - '**/**/config.json'
+
+jobs:
+  get_config_files:
+    runs-on: ubuntu-latest
+    outputs:
+      config_files: ${{ steps.get_config_files.outputs.config_files }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get list of changed config.json files
+        id: get_config_files
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const commitSHA = context.sha;
+            const response = await github.rest.repos.getCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: commitSHA,
+            });
+            const changedFiles = response.data.files.map(f => f.filename);
+            const configFilesChanged = changedFiles.filter(f => f.endsWith('config.json'));
+            if (configFilesChanged.length === 0) {
+              throw new Error('No changed config.json files found');
+            }
+            core.setOutput('config_files', JSON.stringify(configFilesChanged));
+
+  analyze:
+    needs: get_config_files
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config_file: ${{ fromJson(needs.get_config_files.outputs.config_files) }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up git user
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Read config.json
+        id: read_config
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const configFile = '${{ matrix.config_file }}';
+            const configPath = path.join(process.env.GITHUB_WORKSPACE, configFile);
+            const configContent = fs.readFileSync(configPath, 'utf8');
+            const config = JSON.parse(configContent);
+
+            let analyzer_args = config.analyzer_args || '';
+            let agent_model = config.agent_model || 'gpt-4o-mini';
+            let agent_temperature = config.agent_temperature || 0.0;
+            analyzer_args += ` --agent-model ${agent_model} --agent-temperature ${agent_temperature}`;
+            core.setOutput('analyzer_args', analyzer_args);
+
+            core.setOutput('repo_url', config.repo_url || '');
+            core.setOutput('repo_ref', config.repo_ref || '');
+            core.setOutput('repo_tag', config.repo_tag || '');
+            core.setOutput('agent_model', agent_model);
+            core.setOutput('agent_temperature', agent_temperature);
+            const configDir = path.dirname(configFile);
+            core.setOutput('config_dir', configDir);
+            // Determine the output subdirectory
+            const output_subdir = config.repo_tag || config.repo_ref || 'latest';
+            core.setOutput('output_subdir', output_subdir);
+
+      - name: Clone target repository
+        run: |
+          git clone ${{ steps.read_config.outputs.repo_url }} target_repo
+          cd target_repo
+          if [ "${{ steps.read_config.outputs.repo_ref }}" != "" ]; then
+            git checkout ${{ steps.read_config.outputs.repo_ref }}
+          elif [ "${{ steps.read_config.outputs.repo_tag }}" != "" ]; then
+            git checkout tags/${{ steps.read_config.outputs.repo_tag }}
+          fi
+        shell: bash
+
+      - name: Run dry-run ai-security-analyzer via Docker
+        id: dry_run
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          docker run --rm \
+            --user $(id -u):$(id -g) \
+            -v ${{ github.workspace }}/target_repo:/code \
+            -e OPENAI_API_KEY \
+            ghcr.io/xvnpw/ai-security-analyzer:latest \
+            -v --dry-run -t /code \
+            ${{ steps.read_config.outputs.analyzer_args }} >> ./target_repo/output.txt
+
+          cat ./target_repo/output.txt | grep 'All documents token count:' | awk '{print $5}' > ./target_repo/token_count.txt
+          echo "token_count=$(cat ./target_repo/token_count.txt)" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Record Start Time
+        id: record_start_time
+        shell: bash
+        run: |
+          echo "start_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
+
+      - name: Run ai-security-analyzer via Docker
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          docker run --rm \
+            --user $(id -u):$(id -g) \
+            -v ${{ github.workspace }}/target_repo:/code \
+            -e OPENAI_API_KEY \
+            ghcr.io/xvnpw/ai-security-analyzer:latest \
+            -v -t /code \
+            -o /code/DESIGN_DOC.md \
+            ${{ steps.read_config.outputs.analyzer_args }} 
+        shell: bash
+
+      - name: Record End Time
+        id: record_end_time
+        shell: bash
+        run: |
+          echo "end_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
+
+      - name: Move DESIGN_DOC.md to output directory
+        run: |
+          mkdir -p ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}
+          mv target_repo/DESIGN_DOC.md ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
+        shell: bash
+
+      - name: Create output-metadata.json
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const outputDir = path.join(
+              process.env.GITHUB_WORKSPACE,
+              '${{ steps.read_config.outputs.config_dir }}',
+              '${{ steps.read_config.outputs.output_subdir }}'
+            );
+            const metadata = {
+              repo_url: process.env.REPO_URL,
+              repo_ref: process.env.REPO_REF,
+              repo_tag: process.env.REPO_TAG,
+              analyzer_args: process.env.ANALYZER_ARGS,
+              start_datetime: process.env.START_DATETIME,
+              end_datetime: process.env.END_DATETIME,
+              token_count: process.env.TOKEN_COUNT,
+              agent_model: process.env.AGENT_MODEL,
+              agent_temperature: process.env.AGENT_TEMPERATURE,
+            };
+            fs.mkdirSync(outputDir, { recursive: true });
+            fs.writeFileSync(path.join(outputDir, 'output-metadata.json'), JSON.stringify(metadata, null, 2));
+        env:
+          REPO_URL: ${{ steps.read_config.outputs.repo_url }}
+          REPO_REF: ${{ steps.read_config.outputs.repo_ref }}
+          REPO_TAG: ${{ steps.read_config.outputs.repo_tag }}
+          ANALYZER_ARGS: ${{ steps.read_config.outputs.analyzer_args }}
+          START_DATETIME: ${{ steps.record_start_time.outputs.start_datetime }}
+          END_DATETIME: ${{ steps.record_end_time.outputs.end_datetime }}
+          TOKEN_COUNT: ${{ steps.dry_run.outputs.token_count }}
+          AGENT_MODEL: ${{ steps.read_config.outputs.agent_model }}
+          AGENT_TEMPERATURE: ${{ steps.read_config.outputs.agent_temperature }}
+
+      - name: Clean up target_repo
+        run: |
+          rm -rf target_repo
+        shell: bash
+
+      - name: Set Branch Name
+        id: set_branch_name
+        run: |
+          # Sanitize the config_file path to create a valid branch name
+          BRANCH_NAME="ai-analyzer-output-${GITHUB_RUN_ID}-$(echo '${{ matrix.config_file }}' | tr '/\._' '-')"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: ${{ steps.set_branch_name.outputs.branch_name }}
+          commit-message: "Add security documentation generated by ai-security-analyzer for ${{ matrix.config_file }}"
+          title: "Add security documentation generated by ai-security-analyzer for ${{ matrix.config_file }}"
+          body: "Add security documentation generated by ai-security-analyzer for ${{ matrix.config_file }}"
+          add-paths: |
+            ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
