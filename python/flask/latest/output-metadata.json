@@ -1,0 +1,8 @@
+{
+  "repo_url": "https://github.com/xvnpw/fabric-agent-action",
+  "repo_ref": "",
+  "repo_tag": "",
+  "analyzer_args": "--exclude '**/prompts/**'",
+  "start_datetime": "2024-12-14T13:13:24Z",
+  "end_datetime": "2024-12-14T13:14:11Z"
+}
