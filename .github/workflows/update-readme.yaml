@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '!**/*.md'   # Negation to include all `.md` files
-      - 'README.md'  # Exclude README.md
+    paths:
+      - '**/*.md'   
+      - '!README.md' 
 
 permissions:
   contents: write
