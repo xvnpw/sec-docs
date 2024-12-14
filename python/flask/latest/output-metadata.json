@@ -1,0 +1,12 @@
+{
+  "repo_url": "https://github.com/xvnpw/fabric-agent-action",
+  "repo_ref": "",
+  "repo_tag": "",
+  "analyzer_args": "--exclude '**/prompts/**'",
+  "start_datetime": "2024-12-14T20:01:36Z",
+  "end_datetime": "2024-12-14T20:04:30Z",
+  "token_count": "59921",
+  "agent_model": "gpt-4o-mini",
+  "agent_temperature": "0",
+  "agent_prompt_types": "[\"sec-design\",\"threat-modeling\",\"attack-surface\",\"threat-scenarios\",\"attack-tree\"]"
+}
