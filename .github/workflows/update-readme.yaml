@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '**/*.md'   # Include all markdown files
     paths-ignore:
-      - '.github/**'
-      - 'README.md'
-      - 'LICENSE'
-      - 'generate_readme.py'
+      - 'README.md' # Exclude README.md specifically
+
 
 permissions:
   contents: write
