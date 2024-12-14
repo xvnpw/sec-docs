@@ -2,7 +2,7 @@
 
 ## ASSETS
 
-1. **User Data **: Information submitted by users via web forms, including usernames, passwords, and personal details.
+1. **User Data**: Information submitted by users via web forms, including usernames, passwords, and personal details.
 2. **Session Data**: Session cookies and tokens used to maintain user sessions and authentication state.
 3. **Application Code**: The source code of the Flask application, including Python scripts, HTML templates, and static files.
 4. **Configuration Files**: Files containing sensitive settings such as secret keys, database connection strings, and API keys.
