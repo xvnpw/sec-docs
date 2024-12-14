@@ -1,0 +1,6 @@
+{
+    "repo_url": "https://github.com/xvnpw/fabric-agent-action",
+    "repo_ref": "",
+    "repo_tag": "",
+    "analyzer_args": "--exclude '**/prompts/**'"
+}
