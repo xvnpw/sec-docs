@@ -1,0 +1,11 @@
+{
+  "repo_url": "https://github.com/xvnpw/fabric-agent-action",
+  "repo_ref": "",
+  "repo_tag": "",
+  "analyzer_args": "--exclude '**/prompts/**' --agent-model gpt-4o-mini --agent-temperature 0",
+  "start_datetime": "2024-12-14T14:41:15Z",
+  "end_datetime": "2024-12-14T14:41:52Z",
+  "token_count": "59921",
+  "agent_model": "gpt-4o-mini",
+  "agent_temperature": "0"
+}
