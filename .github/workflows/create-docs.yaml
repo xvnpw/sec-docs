@@ -67,14 +67,14 @@ jobs:
             core.setOutput('analyzer_args', analyzer_args);
 
             core.setOutput('repo_url', config.repo_url || '');
-            core.setOutput('repo_ref', config.repo_ref || '');
+            core.setOutput('repo_sha', config.repo_sha || '');
             core.setOutput('repo_tag', config.repo_tag || '');
             core.setOutput('agent_model', agent_model);
             core.setOutput('agent_temperature', agent_temperature);
             const configDir = path.dirname(configFile);
             core.setOutput('config_dir', configDir);
             // Determine the output subdirectory
-            const output_subdir = config.repo_tag || config.repo_ref || 'latest';
+            const output_subdir = config.repo_tag || (config.repo_sha ? config.repo_sha.substring(0,7) : '') || 'latest';
             core.setOutput('output_subdir', output_subdir);
 
             // Handle agent_prompt_types
@@ -89,8 +89,8 @@ jobs:
         run: |
           git clone ${{ steps.read_config.outputs.repo_url }} target_repo
           cd target_repo
-          if [ "${{ steps.read_config.outputs.repo_ref }}" != "" ]; then
-            git checkout ${{ steps.read_config.outputs.repo_ref }}
+          if [ "${{ steps.read_config.outputs.repo_sha }}" != "" ]; then
+            git checkout ${{ steps.read_config.outputs.repo_sha }}
           elif [ "${{ steps.read_config.outputs.repo_tag }}" != "" ]; then
             git checkout tags/${{ steps.read_config.outputs.repo_tag }}
           fi
@@ -189,7 +189,7 @@ jobs:
             );
             const metadata = {
               repo_url: process.env.REPO_URL,
-              repo_ref: process.env.REPO_REF,
+              repo_sha: process.env.REPO_SHA,
               repo_tag: process.env.REPO_TAG,
               analyzer_args: process.env.ANALYZER_ARGS,
               start_datetime: process.env.START_DATETIME,
@@ -197,13 +197,13 @@ jobs:
               token_count: process.env.TOKEN_COUNT,
               agent_model: process.env.AGENT_MODEL,
               agent_temperature: process.env.AGENT_TEMPERATURE,
-              agent_prompt_types: process.env.AGENT_PROMPT_TYPES,
+              agent_prompt_types: JSON.parse(process.env.AGENT_PROMPT_TYPES),
             };
             fs.mkdirSync(outputDir, { recursive: true });
             fs.writeFileSync(path.join(outputDir, 'output-metadata.json'), JSON.stringify(metadata, null, 2));
         env:
           REPO_URL: ${{ steps.read_config.outputs.repo_url }}
-          REPO_REF: ${{ steps.read_config.outputs.repo_ref }}
+          REPO_SHA: ${{ steps.read_config.outputs.repo_sha }}
           REPO_TAG: ${{ steps.read_config.outputs.repo_tag }}
           ANALYZER_ARGS: ${{ steps.read_config.outputs.analyzer_args }}
           START_DATETIME: ${{ steps.record_start_time.outputs.start_datetime }}
