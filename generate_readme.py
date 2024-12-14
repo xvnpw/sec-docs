@@ -44,7 +44,7 @@ def main():
                     readme_lines.append(f"    - {version_link}")
 
     # Write to README.md
-    with open("READMEa.md", "w") as f:
+    with open("README.md", "w") as f:
         for line in readme_lines:
             f.write(line + "\n")
 
