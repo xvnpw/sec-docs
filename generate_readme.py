@@ -5,7 +5,7 @@ import json
 
 SPONSORSHIP = """## Support **sec-docs**  
 
-**sec-docs** is an ambitious project aimed at improving the security landscape of open-source software (OSS). Using cutting-edge large language models (LLMs), this project generates high-quality, detailed security documentation for critical OSS projects.  
+**sec-docs** is an ambitious project aimed at improving the security landscape of open-source software (OSS). Using cutting-edge large language models (LLMs), this project generates high-quality, detailed security documentation for important OSS projects.  
 
 ### Why This Project Matters  
 
