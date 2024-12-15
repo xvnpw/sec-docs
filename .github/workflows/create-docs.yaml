@@ -118,6 +118,7 @@ jobs:
         shell: bash
 
       - name: Record Start Time
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: record_start_time
         shell: bash
         run: |
