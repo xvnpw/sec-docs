@@ -20,7 +20,7 @@ This effort empowers developers to secure their projects more effectively and en
 
 ### Why We Need Your Support  
 
-Using large language models like **o1** and **o1-pro** incurs high costs. To generate meaningful documentation for just one project, the process consumes over **hounded thousands tokens**, leading to substantial expenses.  
+Using large language models like **o1** and **o1-pro** incurs high costs. To generate meaningful documentation for just one project, the process consumes over **over hundreds of thousands of tokens**, leading to substantial expenses.  
 
 Here's what your support will help fund:  
 1. **AI Model Access**: Covering the costs of API calls and subscriptions to premium LLM services.  
