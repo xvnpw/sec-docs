@@ -3,6 +3,40 @@
 import os
 import json
 
+SPONSORSHIP = """## Support **sec-docs**  
+
+**sec-docs** is an ambitious project aimed at improving the security landscape of open-source software (OSS). Using cutting-edge large language models (LLMs), this project generates high-quality, detailed security documentation for critical OSS projects.  
+
+### Why This Project Matters  
+
+Open-source software powers much of today's digital infrastructure, but security documentation is often incomplete, inconsistent, or outdated. This can leave projects vulnerable to attacks, misconfigurations, and other security risks.  
+
+**sec-docs** solves this problem by leveraging advanced AI models to:  
+- Automatically analyze OSS projects to create comprehensive, tailored security documentation.  
+- Simplify complex security concepts, making them accessible to a wider audience of developers.  
+- Update documentation dynamically as codebases evolve.  
+
+This effort empowers developers to secure their projects more effectively and enhances trust in open-source software.  
+
+### Why We Need Your Support  
+
+Running large language models like **o1** and **o1-pro** requires significant computational resources and incurs high costs. To generate meaningful documentation for just one project, the process consumes over **hounded thousands tokens**, leading to substantial expenses.  
+
+Here's what your support will help fund:  
+1. **AI Model Access**: Covering the costs of API calls and subscriptions to premium LLM services.  
+
+### How You Can Help  
+
+Your contributions will enable **sec-docs** to expand its reach and deliver critical security documentation to more OSS projects. Together, we can make open-source software safer for everyone.  
+
+Consider sponsoring the project through:  
+- **GitHub Sponsors** (https://github.com/sponsors/xvnpw)   
+
+### Thank You  
+
+Your support means the world to us and the broader open-source community. Let's work together to make open-source software more secure, one project at a time.
+"""
+
 
 def main():
     readme_lines = []
@@ -62,6 +96,8 @@ def main():
     with open("README.md", "w") as f:
         for line in readme_lines:
             f.write(line + "\n")
+
+        f.write("\n" + SPONSORSHIP)
 
 
 if __name__ == "__main__":
