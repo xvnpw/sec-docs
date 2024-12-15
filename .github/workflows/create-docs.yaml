@@ -62,13 +62,14 @@ jobs:
             const config = JSON.parse(configContent);
 
             let analyzer_args = config.analyzer_args || '';
-            let agent_model = config.agent_model || 'gpt-4o-mini';
+            let agent_model = config.agent_model || 'gpt-4o';
             let agent_temperature = config.agent_temperature || 0.0;
             core.setOutput('analyzer_args', analyzer_args);
 
             core.setOutput('repo_url', config.repo_url || '');
             core.setOutput('repo_sha', config.repo_sha || '');
             core.setOutput('repo_tag', config.repo_tag || '');
+            core.setOutput('dry_run', config.dry_run || false);
             core.setOutput('agent_model', agent_model);
             core.setOutput('agent_temperature', agent_temperature);
             const configDir = path.dirname(configFile);
@@ -110,7 +111,7 @@ jobs:
             ${{ steps.read_config.outputs.analyzer_args }} \
             --agent-model ${{ steps.read_config.outputs.agent_model }} \
             --agent-temperature ${{ steps.read_config.outputs.agent_temperature }} \
-            >> ./target_repo/output.txt
+            | tee ./target_repo/output.txt
 
           cat ./target_repo/output.txt | grep 'All documents token count:' | awk '{print $5}' > ./target_repo/token_count.txt
           echo "token_count=$(cat ./target_repo/token_count.txt)" >> $GITHUB_OUTPUT
@@ -123,6 +124,7 @@ jobs:
           echo "start_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
 
       - name: Run ai-security-analyzer via Docker for each agent_prompt_type
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: run_analyzer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -155,12 +157,14 @@ jobs:
         shell: bash
 
       - name: Record End Time
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: record_end_time
         shell: bash
         run: |
           echo "end_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
 
       - name: Move output files to output directory
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         env:
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
         run: |
@@ -177,6 +181,7 @@ jobs:
         shell: bash
 
       - name: Create output-metadata.json
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }} 
         uses: actions/github-script@v6
         with:
           script: |
@@ -214,11 +219,13 @@ jobs:
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
 
       - name: Clean up target_repo
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         run: |
           rm -rf target_repo
         shell: bash
 
       - name: Set Branch Name
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: set_branch_name
         run: |
           # Sanitize the config_file path to create a valid branch name
@@ -226,6 +233,7 @@ jobs:
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         uses: peter-evans/create-pull-request@v7
         with:
           branch: ${{ steps.set_branch_name.outputs.branch_name }}

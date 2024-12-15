@@ -2,8 +2,9 @@
     "repo_url": "https://github.com/xvnpw/fabric-agent-action",
     "repo_sha": "",
     "repo_tag": "",
+    "dry_run": true,
     "analyzer_args": "--exclude '**/prompts/**'",
-    "agent_model": "gpt-4o-mini",
+    "agent_model": "gpt-4o",
     "agent_temperature": 0.0,
     "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "threat-scenarios", "attack-tree"]
 }
