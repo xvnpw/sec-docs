@@ -114,7 +114,7 @@ jobs:
             | tee ./target_repo/output.txt
 
           cat ./target_repo/output.txt | grep 'All documents token count:' | awk '{print $5}' > ./target_repo/token_count.txt
-          echo "token_count=$(cat ./target_repo/token_count.txt)" >> $GITHUB_OUTPUT
+          echo "dry_run_token_count=$(cat ./target_repo/token_count.txt)" >> $GITHUB_OUTPUT
         shell: bash
 
       - name: Record Start Time
@@ -129,6 +129,7 @@ jobs:
         id: run_analyzer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LANGCHAIN_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
         run: |
           AGENT_PROMPT_TYPES='${{ steps.read_config.outputs.agent_prompt_types }}'
           AGENT_MODEL='${{ steps.read_config.outputs.agent_model }}'
@@ -147,14 +148,23 @@ jobs:
               -v "${{ github.workspace }}/target_repo:/code" \
               -v "${{ github.workspace }}/output:/output" \
               -e OPENAI_API_KEY \
+              -e LANGCHAIN_API_KEY \
               ghcr.io/xvnpw/ai-security-analyzer:latest \
               -v -t /code \
               -o "$output_file" \
               ${{ steps.read_config.outputs.analyzer_args }} \
               --agent-model "$AGENT_MODEL" \
               --agent-temperature "$AGENT_TEMPERATURE" \
-              --agent-prompt-type "$prompt_type"
+              --agent-prompt-type "$prompt_type" | tee -a ./output/ai-security-analyzer.log
           done
+        shell: bash
+
+      - name: Calculate total token count
+        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
+        id: calculate_total_token_count
+        run: |
+          actual_token_usage=$(grep -oP 'Actual token usage: \K\d+' "./output/ai-security-analyzer.log" | awk '{sum += $1} END {print sum}')
+          echo "actual_token_usage=$actual_token_usage" >> $GITHUB_OUTPUT
         shell: bash
 
       - name: Record End Time
@@ -200,10 +210,11 @@ jobs:
               analyzer_args: process.env.ANALYZER_ARGS,
               start_datetime: process.env.START_DATETIME,
               end_datetime: process.env.END_DATETIME,
-              token_count: process.env.TOKEN_COUNT,
+              dry_run_token_count: process.env.DRY_RUN_TOKEN_COUNT,
               agent_model: process.env.AGENT_MODEL,
               agent_temperature: process.env.AGENT_TEMPERATURE,
               agent_prompt_types: JSON.parse(process.env.AGENT_PROMPT_TYPES),
+              actual_token_usage: process.env.ACTUAL_TOKEN_USAGE,
             };
             fs.mkdirSync(outputDir, { recursive: true });
             fs.writeFileSync(path.join(outputDir, 'output-metadata.json'), JSON.stringify(metadata, null, 2));
@@ -214,10 +225,11 @@ jobs:
           ANALYZER_ARGS: ${{ steps.read_config.outputs.analyzer_args }}
           START_DATETIME: ${{ steps.record_start_time.outputs.start_datetime }}
           END_DATETIME: ${{ steps.record_end_time.outputs.end_datetime }}
-          TOKEN_COUNT: ${{ steps.dry_run.outputs.token_count }}
+          DRY_RUN_TOKEN_COUNT: ${{ steps.dry_run.outputs.dry_run_token_count }}
           AGENT_MODEL: ${{ steps.read_config.outputs.agent_model }}
           AGENT_TEMPERATURE: ${{ steps.read_config.outputs.agent_temperature }}
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
+          ACTUAL_TOKEN_USAGE: ${{ steps.calculate_total_token_count.outputs.actual_token_usage }}
 
       - name: Clean up target_repo
         if: ${{ steps.read_config.outputs.dry_run == 'false' }}

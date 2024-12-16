@@ -3,7 +3,7 @@
     "repo_sha": "",
     "repo_tag": "3.1.0",
     "dry_run": true,
-    "analyzer_args": "--exclude '**/pull_request_template.md,**/ISSUE_TEMPLATE*,**/CODE_OF_CONDUCT.md' --include '**/requirements/*.txt,**/*.rst'",
+    "analyzer_args": "-p python --exclude '**/pull_request_template.md,**/ISSUE_TEMPLATE*,**/CODE_OF_CONDUCT.md' --include '**/requirements/*.txt,**/*.rst'",
     "agent_model": "gpt-4o",
     "agent_temperature": 0.0,
     "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "threat-scenarios", "attack-tree"]

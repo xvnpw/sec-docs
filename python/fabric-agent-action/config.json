@@ -6,5 +6,5 @@
     "analyzer_args": "--exclude '**/prompts/**'",
     "agent_model": "gpt-4o",
     "agent_temperature": 0.0,
-    "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "threat-scenarios", "attack-tree"]
+    "agent_prompt_types": ["attack-tree"]
 }

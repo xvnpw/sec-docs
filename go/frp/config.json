@@ -1,0 +1,10 @@
+{
+    "repo_url": "https://github.com/fatedier/frp",
+    "repo_sha": "",
+    "repo_tag": "v0.61.1",
+    "dry_run": true,
+    "analyzer_args": "-p go --exclude '**/README_zh.md,**/pull_request_template.md,**/ISSUE_TEMPLATE/**,**/FUNDING.yml,**/yarn.lock' --include '**/*.ini,**/dockerfiles/*,**/*.vue,**/*.ts,**/web/frps/*'",
+    "agent_model": "gpt-4o",
+    "agent_temperature": 0.0,
+    "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "threat-scenarios", "attack-tree"]
+}
