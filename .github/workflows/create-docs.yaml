@@ -155,7 +155,7 @@ jobs:
               ${{ steps.read_config.outputs.analyzer_args }} \
               --agent-model "$AGENT_MODEL" \
               --agent-temperature "$AGENT_TEMPERATURE" \
-              --agent-prompt-type "$prompt_type" | tee -a ./output/ai-security-analyzer.log
+              --agent-prompt-type "$prompt_type" 2>&1 | tee -a ./output/ai-security-analyzer.log
           done
         shell: bash
 
