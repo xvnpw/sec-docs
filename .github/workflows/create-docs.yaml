@@ -61,6 +61,10 @@ jobs:
             const configContent = fs.readFileSync(configPath, 'utf8');
             const config = JSON.parse(configContent);
 
+            let mode = config.mode || 'github';
+            let target = mode === 'github' ? config.repo_url : '/code';
+            core.setOutput('target', target);
+
             core.setOutput('repo_url', config.repo_url || '');
             core.setOutput('repo_sha', config.repo_sha || '');
             core.setOutput('repo_tag', config.repo_tag || '');
@@ -133,6 +137,8 @@ jobs:
           AGENT_PROMPT_TYPES='${{ steps.read_config.outputs.agent_prompt_types }}'
           AGENT_MODEL='${{ steps.read_config.outputs.agent_model }}'
           AGENT_TEMPERATURE='${{ steps.read_config.outputs.agent_temperature }}'
+          MODE='${{ steps.read_config.outputs.mode }}'
+          TARGET='${{ steps.read_config.outputs.target }}'
 
           # Convert JSON array to bash array
           agent_prompt_types=$(echo "$AGENT_PROMPT_TYPES" | jq -r '.[]')
@@ -149,7 +155,7 @@ jobs:
               -e OPENAI_API_KEY \
               -e LANGCHAIN_API_KEY \
               ghcr.io/xvnpw/ai-security-analyzer:latest \
-              ${{ steps.read_config.outputs.mode }} -v -t /code \
+              $MODE -v -t $TARGET \
               -o "$output_file" \
               ${{ steps.read_config.outputs.analyzer_args }} \
               --agent-model "$AGENT_MODEL" \

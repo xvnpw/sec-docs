@@ -1,6 +1,7 @@
 {
     "repo_url": "https://github.com/expressjs/express",
     "mode": "github",
+    "dry_run": true,
     "analyzer_args": "--refinement-count 3",
     "agent_model": "gpt-4o",
     "agent_temperature": 0.0,
