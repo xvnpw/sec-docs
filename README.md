@@ -10,6 +10,7 @@ For some projects, we also use `dir` mode - where the model is also given all pr
   - [gin](go/gin) - [source repo](https://github.com/gin-gonic/gin)
 - [java](java)
   - [micronaut-security](java/micronaut-security) - [source repo](https://github.com/micronaut-projects/micronaut-security)
+    - [latest](java/micronaut-security/latest) - [attack-surface](java/micronaut-security/latest/attack-surface.md), [attack-tree](java/micronaut-security/latest/attack-tree.md), [sec-design](java/micronaut-security/latest/sec-design.md), [threat-modeling](java/micronaut-security/latest/threat-modeling.md), [threat-scenarios](java/micronaut-security/latest/threat-scenarios.md)
   - [xxl-job](java/xxl-job) - [source repo](https://github.com/xuxueli/xxl-job)
 - [javascript](javascript)
   - [axios](javascript/axios) - [source repo](https://github.com/axios/axios)
@@ -21,6 +22,8 @@ For some projects, we also use `dir` mode - where the model is also given all pr
     - [v1.0.0](python/fabric-agent-action/v1.0.0) - [threat-modeling](python/fabric-agent-action/v1.0.0/threat-modeling.md)
   - [flask](python/flask) - [source repo](https://github.com/pallets/flask)
     - [latest](python/flask/latest) - [attack-surface](python/flask/latest/attack-surface.md), [attack-tree](python/flask/latest/attack-tree.md), [sec-design](python/flask/latest/sec-design.md), [threat-modeling](python/flask/latest/threat-modeling.md), [threat-scenarios](python/flask/latest/threat-scenarios.md)
+  - [flask-dir-mode](python/flask-dir-mode) - [source repo](https://github.com/pallets/flask)
+    - [latest](python/flask-dir-mode/latest) - [attack-surface](python/flask-dir-mode/latest/attack-surface.md), [attack-tree](python/flask-dir-mode/latest/attack-tree.md), [sec-design](python/flask-dir-mode/latest/sec-design.md), [threat-modeling](python/flask-dir-mode/latest/threat-modeling.md), [threat-scenarios](python/flask-dir-mode/latest/threat-scenarios.md)
   - [requests](python/requests) - [source repo](https://github.com/psf/requests)
     - [latest](python/requests/latest) - [attack-surface](python/requests/latest/attack-surface.md), [attack-tree](python/requests/latest/attack-tree.md), [sec-design](python/requests/latest/sec-design.md), [threat-modeling](python/requests/latest/threat-modeling.md), [threat-scenarios](python/requests/latest/threat-scenarios.md)
 
