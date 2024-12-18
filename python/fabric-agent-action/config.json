@@ -1,5 +1,6 @@
 {
     "repo_url": "https://github.com/xvnpw/fabric-agent-action",
+    "mode": "dir",
     "repo_sha": "",
     "repo_tag": "",
     "dry_run": false,

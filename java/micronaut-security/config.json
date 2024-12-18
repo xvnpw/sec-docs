@@ -1,9 +1,7 @@
 {
     "repo_url": "https://github.com/micronaut-projects/micronaut-security",
-    "repo_sha": "",
-    "repo_tag": "v4.11.2",
-    "dry_run": true,
-    "analyzer_args": "-p java --exclude '**/test-suite*' --include '**/*.adoc'",
+    "mode": "github",
+    "analyzer_args": "--refinement-count 3",
     "agent_model": "gpt-4o",
     "agent_temperature": 0.0,
     "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "threat-scenarios", "attack-tree"]

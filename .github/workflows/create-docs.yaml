@@ -61,17 +61,14 @@ jobs:
             const configContent = fs.readFileSync(configPath, 'utf8');
             const config = JSON.parse(configContent);
 
-            let analyzer_args = config.analyzer_args || '';
-            let agent_model = config.agent_model || 'gpt-4o';
-            let agent_temperature = config.agent_temperature || 0.0;
-            core.setOutput('analyzer_args', analyzer_args);
-
             core.setOutput('repo_url', config.repo_url || '');
             core.setOutput('repo_sha', config.repo_sha || '');
             core.setOutput('repo_tag', config.repo_tag || '');
             core.setOutput('dry_run', config.dry_run || false);
-            core.setOutput('agent_model', agent_model);
-            core.setOutput('agent_temperature', agent_temperature);
+            core.setOutput('agent_model', config.agent_model || 'gpt-4o');
+            core.setOutput('agent_temperature', config.agent_temperature || 0.0);
+            core.setOutput('mode', config.mode || 'github');
+            core.setOutput('analyzer_args', config.analyzer_args || '');
             const configDir = path.dirname(configFile);
             core.setOutput('config_dir', configDir);
             // Determine the output subdirectory
@@ -87,6 +84,7 @@ jobs:
             core.setOutput('agent_prompt_types', JSON.stringify(agent_prompt_types));
 
       - name: Clone target repository
+        if: ${{ steps.read_config.outputs.mode == 'dir' }}
         run: |
           git clone ${{ steps.read_config.outputs.repo_url }} target_repo
           cd target_repo
@@ -98,6 +96,7 @@ jobs:
         shell: bash
 
       - name: Run dry-run ai-security-analyzer via Docker
+        if: ${{ steps.read_config.outputs.mode == 'dir' }}
         id: dry_run
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -107,7 +106,7 @@ jobs:
             -v ${{ github.workspace }}/target_repo:/code \
             -e OPENAI_API_KEY \
             ghcr.io/xvnpw/ai-security-analyzer:latest \
-            -v --dry-run -t /code \
+            ${{ steps.read_config.outputs.mode }} -v --dry-run -t /code \
             ${{ steps.read_config.outputs.analyzer_args }} \
             --agent-model ${{ steps.read_config.outputs.agent_model }} \
             --agent-temperature ${{ steps.read_config.outputs.agent_temperature }} \
@@ -138,7 +137,7 @@ jobs:
           # Convert JSON array to bash array
           agent_prompt_types=$(echo "$AGENT_PROMPT_TYPES" | jq -r '.[]')
 
-          mkdir output
+          mkdir -p output target_repo
 
           for prompt_type in $agent_prompt_types; do
             echo "Running ai-security-analyzer with agent_prompt_type: $prompt_type"
@@ -150,7 +149,7 @@ jobs:
               -e OPENAI_API_KEY \
               -e LANGCHAIN_API_KEY \
               ghcr.io/xvnpw/ai-security-analyzer:latest \
-              -v -t /code \
+              ${{ steps.read_config.outputs.mode }} -v -t /code \
               -o "$output_file" \
               ${{ steps.read_config.outputs.analyzer_args }} \
               --agent-model "$AGENT_MODEL" \
@@ -215,6 +214,7 @@ jobs:
               agent_temperature: process.env.AGENT_TEMPERATURE,
               agent_prompt_types: JSON.parse(process.env.AGENT_PROMPT_TYPES),
               actual_token_usage: process.env.ACTUAL_TOKEN_USAGE,
+              mode: process.env.MODE,
             };
             fs.mkdirSync(outputDir, { recursive: true });
             fs.writeFileSync(path.join(outputDir, 'output-metadata.json'), JSON.stringify(metadata, null, 2));
@@ -230,6 +230,7 @@ jobs:
           AGENT_TEMPERATURE: ${{ steps.read_config.outputs.agent_temperature }}
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
           ACTUAL_TOKEN_USAGE: ${{ steps.calculate_total_token_count.outputs.actual_token_usage }}
+          MODE: ${{ steps.read_config.outputs.mode }}
 
       - name: Clean up target_repo
         if: ${{ steps.read_config.outputs.dry_run == 'false' }}
