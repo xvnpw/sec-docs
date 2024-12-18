@@ -3,7 +3,7 @@
     "mode": "dir",
     "repo_sha": "",
     "repo_tag": "",
-    "dry_run": true,
+    "dry_run": false,
     "analyzer_args": "--exclude  '**/prompts/**'",
     "agent_model": "gpt-4o",
     "agent_temperature": 0.0,
