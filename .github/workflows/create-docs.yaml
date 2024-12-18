@@ -241,7 +241,7 @@ jobs:
       - name: Clean up target_repo
         if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         run: |
-          rm -rf target_repo
+          rm -rf target_repo/ output/
         shell: bash
 
       - name: Set Branch Name
