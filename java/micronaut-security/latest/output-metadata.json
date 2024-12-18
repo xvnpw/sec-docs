@@ -1,0 +1,20 @@
+{
+  "repo_url": "https://github.com/micronaut-projects/micronaut-security",
+  "repo_sha": "",
+  "repo_tag": "",
+  "analyzer_args": "--refinement-count 3",
+  "start_datetime": "2024-12-18T13:32:44Z",
+  "end_datetime": "2024-12-18T13:42:19Z",
+  "dry_run_token_count": "",
+  "agent_model": "gpt-4o",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "threat-scenarios",
+    "attack-tree"
+  ],
+  "actual_token_usage": "91537",
+  "mode": "github"
+}
