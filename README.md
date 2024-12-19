@@ -12,7 +12,7 @@ Documentation is primarily generated using two modes:
 - `github` [mode](https://github.com/xvnpw/ai-security-analyzer/tree/main?tab=readme-ov-file#general-options): Analysis based on the model's knowledge of the project from GitHub
 - `dir` mode: In-depth analysis where the model examines all project files directly
 
-Each project folder contains detailed security documentation organized by version, with 'latest' representing the most recent analysis.
+Each project folder contains detailed security documentation organized by version.
 
 - [go](go)
   - [frp](go/frp) - [source repo](https://github.com/fatedier/frp)
