@@ -52,6 +52,8 @@ Documentation is primarily generated using two modes:
 - `dir` mode: In-depth analysis where the model examines all project files directly
 
 Each project folder contains detailed security documentation organized by version.
+
+⭐️ First goal of this project is to generate security documentation for 100 projects among various languages.
 """
 
 

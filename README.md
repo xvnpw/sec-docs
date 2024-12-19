@@ -14,6 +14,8 @@ Documentation is primarily generated using two modes:
 
 Each project folder contains detailed security documentation organized by version.
 
+⭐️ First goal of this project is to generate security documentation for 100 projects among various languages.
+
 - [go](go)
   - [frp](go/frp) - [source repo](https://github.com/fatedier/frp)
   - [gin](go/gin) - [source repo](https://github.com/gin-gonic/gin)
