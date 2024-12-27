@@ -1,2 +1,0 @@
-
-| Attack Surface             | Description                                                                                                | How Spring Security Contributes                                                                                                                                                                                                                                                           | Example
