@@ -1,5 +1,3 @@
-c https://github.com/rsyslog/rsyslog
-c https://github.com/Snaipe/libcsptr
 c https://github.com/torvalds/linux
 c https://github.com/uTox/uTox
 c https://github.com/wg/wrk
