@@ -13,6 +13,12 @@ The documentation includes:
 
 
 
+### [C](c/)
+
+| Project | Analysis Date | Documentation |
+|---------|-------------|---------------|
+| [**asciinema-player**](c/asciinema-player/) ([GitHub](https://github.com/asciinema/asciinema-player)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+
 ### [Go](go/)
 
 | Project | Analysis Date | Documentation |
