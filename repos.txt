@@ -1,5 +1,3 @@
-python https://github.com/locustio/locust
-python https://github.com/matplotlib/matplotlib
 python https://github.com/numpy/numpy
 python https://github.com/NVlabs/stylegan
 python https://github.com/opencv/opencv-python
