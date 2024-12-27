@@ -1,5 +1,3 @@
-c https://github.com/obsproject/obs-studio
-c https://github.com/openssl/openssl
 c https://github.com/redis/hiredis
 c https://github.com/rsyslog/liblognorm
 c https://github.com/rsyslog/rsyslog
