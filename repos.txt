@@ -1,5 +1,3 @@
-c https://github.com/wg/wrk
-c https://github.com/wireshark/wireshark
 c https://github.com/xianyi/OpenBLAS
 clojure https://github.com/metabase/metabase
 cpp https://github.com/AcademySoftwareFoundation/openvdb
