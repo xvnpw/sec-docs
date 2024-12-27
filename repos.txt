@@ -1,5 +1,3 @@
-c https://github.com/glfw/glfw
-c https://github.com/gobolinux/BootScripts
 c https://github.com/hishamhm/htop
 c https://github.com/jart/cosmopolitan
 c https://github.com/krallin/tini
