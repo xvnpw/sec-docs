@@ -1,8 +1,8 @@
 {
     "repo_url": "https://github.com/fatedier/frp",
-    "mode": "github",
-    "analyzer_args": "--refinement-count 3",
-    "agent_model": "gpt-4o",
+    "analyzer_args": " ",
+    "agent_provider": "google",
+    "agent_model": "gemini-2.0-flash-thinking-exp",
     "agent_temperature": 0.0,
-    "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "threat-scenarios", "attack-tree"]
+    "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "attack-tree"]
 }
