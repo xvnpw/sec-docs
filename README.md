@@ -2,39 +2,31 @@
 Security documentation for important Open Source Software (OSS) projects, generated using LLM technology.
 
 This repository contains comprehensive security analysis and documentation for various popular open-source projects. The documentation includes:
-- Attack surface analysis
-- Attack trees
-- Security design reviews
-- Threat modeling
-- Detailed threat scenarios
-
-Documentation is primarily generated using two modes:
-- `github` [mode](https://github.com/xvnpw/ai-security-analyzer/tree/main?tab=readme-ov-file#general-options): Analysis based on the model's knowledge of the project from GitHub
-- `dir` mode: In-depth analysis where the model examines all project files directly
-
-Each project folder contains detailed security documentation organized by version.
-
-⭐️ First goal of this project is to generate security documentation for 100 projects among various languages.
+- 🔍 Attack surface analysis
+- 🌳 Attack trees
+- 🔒 Security design reviews
+- 🎯 Threat modeling
 
 - [go](go)
-  - [frp](go/frp) - [source repo](https://github.com/fatedier/frp)
-  - [gin](go/gin) - [source repo](https://github.com/gin-gonic/gin)
+  - [frp](go/frp) - [github](https://github.com/fatedier/frp)
+  - [gin](go/gin) - [github](https://github.com/gin-gonic/gin)
 - [java](java)
-  - [micronaut-security](java/micronaut-security) - [source repo](https://github.com/micronaut-projects/micronaut-security)
+  - [micronaut-security](java/micronaut-security) - [github](https://github.com/micronaut-projects/micronaut-security)
     - [latest](java/micronaut-security/latest) - [attack-surface](java/micronaut-security/latest/attack-surface.md), [attack-tree](java/micronaut-security/latest/attack-tree.md), [sec-design](java/micronaut-security/latest/sec-design.md), [threat-modeling](java/micronaut-security/latest/threat-modeling.md), [threat-scenarios](java/micronaut-security/latest/threat-scenarios.md)
-  - [xxl-job](java/xxl-job) - [source repo](https://github.com/xuxueli/xxl-job)
+  - [xxl-job](java/xxl-job) - [github](https://github.com/xuxueli/xxl-job)
 - [javascript](javascript)
-  - [axios](javascript/axios) - [source repo](https://github.com/axios/axios)
-  - [express](javascript/express) - [source repo](https://github.com/expressjs/express)
+  - [axios](javascript/axios) - [github](https://github.com/axios/axios)
+  - [express](javascript/express) - [github](https://github.com/expressjs/express)
 - [python](python)
-  - [fabric-agent-action](python/fabric-agent-action) - [source repo](https://github.com/xvnpw/fabric-agent-action)
-    - [latest](python/fabric-agent-action/latest) - [attack-surface](python/fabric-agent-action/latest/attack-surface.md), [attack-tree](python/fabric-agent-action/latest/attack-tree.md), [sec-design](python/fabric-agent-action/latest/sec-design.md), [threat-modeling](python/fabric-agent-action/latest/threat-modeling.md), [threat-scenarios](python/fabric-agent-action/latest/threat-scenarios.md)
+  - [fabric-agent-action](python/fabric-agent-action) - [github](https://github.com/xvnpw/fabric-agent-action)
     - [b51d2ed](python/fabric-agent-action/b51d2ed) - [threat-modeling](python/fabric-agent-action/b51d2ed/threat-modeling.md)
+    - [latest](python/fabric-agent-action/latest) - [attack-surface](python/fabric-agent-action/latest/attack-surface.md), [attack-tree](python/fabric-agent-action/latest/attack-tree.md), [sec-design](python/fabric-agent-action/latest/sec-design.md), [threat-modeling](python/fabric-agent-action/latest/threat-modeling.md), [threat-scenarios](python/fabric-agent-action/latest/threat-scenarios.md)
     - [v1.0.0](python/fabric-agent-action/v1.0.0) - [threat-modeling](python/fabric-agent-action/v1.0.0/threat-modeling.md)
-  - [flask](python/flask) - [source repo](https://github.com/pallets/flask)
-  - [flask-dir-mode](python/flask-dir-mode) - [source repo](https://github.com/pallets/flask)
+  - [flask](python/flask) - [github](https://github.com/pallets/flask)
+  - [flask-dir-mode](python/flask-dir-mode) - [github](https://github.com/pallets/flask)
     - [latest](python/flask-dir-mode/latest) - [attack-surface](python/flask-dir-mode/latest/attack-surface.md), [attack-tree](python/flask-dir-mode/latest/attack-tree.md), [sec-design](python/flask-dir-mode/latest/sec-design.md), [threat-modeling](python/flask-dir-mode/latest/threat-modeling.md), [threat-scenarios](python/flask-dir-mode/latest/threat-scenarios.md)
-  - [requests](python/requests) - [source repo](https://github.com/psf/requests)
+  - [requests](python/requests) - [github](https://github.com/psf/requests)
+    - [2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp) - [attack-surface](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/attack-surface.md), [attack-tree](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/attack-tree.md), [sec-design](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/sec-design.md), [threat-modeling](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 
 ## Support **sec-docs**  
 

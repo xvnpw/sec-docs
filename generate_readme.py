@@ -41,19 +41,10 @@ INTRODUCTION = """# sec-docs
 Security documentation for important Open Source Software (OSS) projects, generated using LLM technology.
 
 This repository contains comprehensive security analysis and documentation for various popular open-source projects. The documentation includes:
-- Attack surface analysis
-- Attack trees
-- Security design reviews
-- Threat modeling
-- Detailed threat scenarios
-
-Documentation is primarily generated using two modes:
-- `github` [mode](https://github.com/xvnpw/ai-security-analyzer/tree/main?tab=readme-ov-file#general-options): Analysis based on the model's knowledge of the project from GitHub
-- `dir` mode: In-depth analysis where the model examines all project files directly
-
-Each project folder contains detailed security documentation organized by version.
-
-⭐️ First goal of this project is to generate security documentation for 100 projects among various languages.
+- 🔍 Attack surface analysis
+- 🌳 Attack trees
+- 🔒 Security design reviews
+- 🎯 Threat modeling
 """
 
 
@@ -85,12 +76,11 @@ def main():
                     repo_url = config.get("repo_url", "").strip()
                     # If repo_url exists and is not empty, create the link
                     if repo_url:
-                        source_repo_link = f" - [source repo]({repo_url})"
+                        source_repo_link = f" - [github]({repo_url})"
 
             readme_lines.append(f"  - {project_link}{source_repo_link}")
 
             versions = sorted([v for v in os.listdir(project_dir) if os.path.isdir(os.path.join(project_dir, v))])
-            versions.sort(key=lambda x: (0, x) if x == "latest" else (1, x))
             for version in versions:
                 version_dir = os.path.join(project_dir, version)
                 version_link = f"[{version}]({language}/{project}/{version})"

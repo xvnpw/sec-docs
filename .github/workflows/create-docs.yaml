@@ -181,6 +181,7 @@ jobs:
               analyzer_args: process.env.ANALYZER_ARGS,
               start_datetime: process.env.START_DATETIME,
               end_datetime: process.env.END_DATETIME,
+              agent_provider: process.env.AGENT_PROVIDER,
               agent_model: process.env.AGENT_MODEL,
               agent_temperature: process.env.AGENT_TEMPERATURE,
               agent_prompt_types: JSON.parse(process.env.AGENT_PROMPT_TYPES),
@@ -194,6 +195,7 @@ jobs:
           ANALYZER_ARGS: ${{ steps.read_config.outputs.analyzer_args }}
           START_DATETIME: ${{ steps.record_start_time.outputs.start_datetime }}
           END_DATETIME: ${{ steps.record_end_time.outputs.end_datetime }}
+          AGENT_PROVIDER: ${{ steps.read_config.outputs.agent_provider }}
           AGENT_MODEL: ${{ steps.read_config.outputs.agent_model }}
           AGENT_TEMPERATURE: ${{ steps.read_config.outputs.agent_temperature }}
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
