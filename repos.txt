@@ -1,5 +1,3 @@
-cpp https://github.com/electron/electron
-cpp https://github.com/embree/embree
 cpp https://github.com/facebook/folly
 cpp https://github.com/facebook/hermes
 cpp https://github.com/facebook/rocksdb
