@@ -1,5 +1,3 @@
-csharp https://github.com/dotnet/eShop
-csharp https://github.com/dotnet/maui
 csharp https://github.com/dotnet/orleans
 csharp https://github.com/dotnet/reactive
 csharp https://github.com/dotnet/roslyn
