@@ -32,7 +32,7 @@ The documentation includes:
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
-| [**axios**](javascript/axios/) () | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**axios**](javascript/axios/) ([GitHub](https://github.com/axios/axios)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Python](python/)
 
