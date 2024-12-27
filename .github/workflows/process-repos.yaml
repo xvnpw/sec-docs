@@ -2,7 +2,7 @@ name: Run process_repos.py
 
 on:
   schedule:
-    - cron: '*/7 * * * *'  # Runs every 7 minutes
+    - cron: '*/10 * * * *'  # Runs every 10 minutes
   workflow_dispatch: 
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT_TOKEN }}
+          token: ${{ secrets.PAT_SECRET }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
