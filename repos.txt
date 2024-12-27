@@ -1,4 +1,2 @@
-java https://github.com/spring-projects/spring-security
-java https://github.com/xuxueli/xxl-job
 javascript https://github.com/axios/axios
 javascript https://github.com/expressjs/express
