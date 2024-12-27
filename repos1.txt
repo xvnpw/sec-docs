@@ -1,5 +1,4 @@
-
-c https://github.com/asciinema/asciinema-player
+javascript https://github.com/asciinema/asciinema-player
 c https://github.com/curl/curl
 c https://github.com/davatorium/rofi
 c https://github.com/FFmpeg/FFmpeg
