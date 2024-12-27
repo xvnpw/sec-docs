@@ -1,5 +1,3 @@
-cpp https://github.com/Microsoft/vcpkg
-cpp https://github.com/Microsoft/Win2D
 cpp https://github.com/milostosic/mtuner
 cpp https://github.com/nasa/trick
 cpp https://github.com/nlohmann/json
