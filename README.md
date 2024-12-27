@@ -17,6 +17,8 @@ The documentation includes:
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
+| [**curl**](c/curl/) ([GitHub](https://github.com/curl/curl)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](c/curl/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](c/curl/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](c/curl/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](c/curl/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**rofi**](c/rofi/) ([GitHub](https://github.com/davatorium/rofi)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](c/rofi/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](c/rofi/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](c/rofi/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](c/rofi/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Go](go/)
 
