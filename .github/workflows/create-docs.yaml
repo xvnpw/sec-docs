@@ -40,17 +40,6 @@ jobs:
       matrix:
         config_file: ${{ fromJson(needs.get_config_files.outputs.config_files) }}
     steps:
-      - name: Calculate sleep time
-        id: sleep
-        run: |
-          # Get index of current config file in the array
-          CONFIG_FILES='${{ needs.get_config_files.outputs.config_files }}'
-          CURRENT_FILE='${{ matrix.config_file }}'
-          INDEX=$(echo $CONFIG_FILES | jq -r "index(\"$CURRENT_FILE\")")
-          # Sleep for 8 minutes times the index
-          SLEEP_TIME=$((INDEX * 480))
-          echo "Sleeping for $SLEEP_TIME seconds before processing $CURRENT_FILE"
-          sleep $SLEEP_TIME
 
       - name: Checkout repository
         uses: actions/checkout@v4
