@@ -100,7 +100,7 @@ def main():
                     links.append(file_link)
 
                 if links:
-                    links_str = ", ".join(links)
+                    links_str = " ".join(links)
                     readme_lines.append(f"    - {version_link}{links_str}")
                 else:
                     readme_lines.append(f"    - {version_link}")
