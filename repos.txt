@@ -1,5 +1,3 @@
-c https://github.com/xianyi/OpenBLAS
-clojure https://github.com/metabase/metabase
 cpp https://github.com/AcademySoftwareFoundation/openvdb
 cpp https://github.com/alembic/alembic
 cpp https://github.com/apache/arrow
