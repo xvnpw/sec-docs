@@ -1,5 +1,3 @@
-python https://github.com/encode/django-rest-framework
-python https://github.com/fabric/fabric
 python https://github.com/fastai/fastai
 python https://github.com/getredash/redash
 python https://github.com/google/jax
