@@ -1,5 +1,3 @@
-python https://github.com/haystacksearch/haystack
-python https://github.com/keras-team/keras
 python https://github.com/locustio/locust
 python https://github.com/matplotlib/matplotlib
 python https://github.com/numpy/numpy
