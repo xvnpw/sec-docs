@@ -35,6 +35,7 @@ Each project folder contains detailed security documentation organized by versio
   - [flask-dir-mode](python/flask-dir-mode) - [source repo](https://github.com/pallets/flask)
     - [latest](python/flask-dir-mode/latest) - [attack-surface](python/flask-dir-mode/latest/attack-surface.md), [attack-tree](python/flask-dir-mode/latest/attack-tree.md), [sec-design](python/flask-dir-mode/latest/sec-design.md), [threat-modeling](python/flask-dir-mode/latest/threat-modeling.md), [threat-scenarios](python/flask-dir-mode/latest/threat-scenarios.md)
   - [requests](python/requests) - [source repo](https://github.com/psf/requests)
+    - [2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp) - [attack-surface](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/attack-surface.md), [attack-tree](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/attack-tree.md), [sec-design](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/sec-design.md), [threat-modeling](python/requests/2024-12-27T07-14-15.468Z-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 
 ## Support **sec-docs**  
 
