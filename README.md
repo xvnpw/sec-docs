@@ -17,7 +17,6 @@ The documentation includes:
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
-| [**asciinema-player**](c/asciinema-player/) ([GitHub](https://github.com/asciinema/asciinema-player)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](c/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Go](go/)
 
@@ -38,6 +37,7 @@ The documentation includes:
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
+| [**asciinema-player**](javascript/asciinema-player/) ([GitHub](https://github.com/asciinema/asciinema-player)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/asciinema-player/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**axios**](javascript/axios/) ([GitHub](https://github.com/axios/axios)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**express**](javascript/express/) ([GitHub](https://github.com/expressjs/express)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
