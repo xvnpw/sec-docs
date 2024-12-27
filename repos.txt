@@ -1,5 +1,3 @@
-c https://github.com/curl/curl
-c https://github.com/davatorium/rofi
 c https://github.com/FFmpeg/FFmpeg
 c https://github.com/git/git
 c https://github.com/glfw/glfw
