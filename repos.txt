@@ -20,7 +20,6 @@ cpp https://github.com/google/googletest
 cpp https://github.com/google/leveldb
 cpp https://github.com/google/re2
 cpp https://github.com/KhronosGroup/Vulkan-Samples
-cpp https://github.com/leaningtech/cheerpjs
 cpp https://github.com/microsoft/calculator
 cpp https://github.com/Microsoft/onnxruntime
 cpp https://github.com/microsoft/terminal
@@ -70,7 +69,6 @@ csharp https://github.com/migueldeicaza/gui.cs
 csharp https://github.com/mono/mono
 csharp https://github.com/mono/MonoGame
 csharp https://github.com/nancyfx/nancy
-csharp https://github.com/NancyFx/Nancy
 csharp https://github.com/nuget/nuget.client
 csharp https://github.com/nuke-build/nuke
 csharp https://github.com/quartznet/quartznet
@@ -223,6 +221,7 @@ javascript https://github.com/ianstormtaylor/slate
 javascript https://github.com/jasmine/jasmine
 javascript https://github.com/jquery/jquery
 javascript https://github.com/Leaflet/Leaflet
+javascript https://github.com/leaningtech/cheerpjs
 javascript https://github.com/lodash/lodash
 javascript https://github.com/markedjs/marked
 javascript https://github.com/meteor/meteor
@@ -238,7 +237,6 @@ javascript https://github.com/standard/standard
 javascript https://github.com/sveltejs/svelte
 javascript https://github.com/threejs/three.js
 javascript https://github.com/twbs/bootstrap
-javascript https://github.com/uBlockOrigin/uBlock-issues
 javascript https://github.com/vercel/hyper
 javascript https://github.com/vercel/next.js
 javascript https://github.com/webpack/webpack
@@ -341,7 +339,6 @@ ruby https://github.com/jekyll/jekyll
 ruby https://github.com/jeremyevans/sequel
 ruby https://github.com/metasploit-framework/metasploit-framework
 ruby https://github.com/mikel/mail
-ruby https://github.com/mperham/sidekiq
 ruby https://github.com/omniauth/omniauth
 ruby https://github.com/opscode/chef
 ruby https://github.com/plataformatec/devise
@@ -464,7 +461,6 @@ typescript https://github.com/ionic-team/ionic-framework
 typescript https://github.com/jest-community/eslint-plugin-jest
 typescript https://github.com/marmelab/react-admin
 typescript https://github.com/microsoft/typescript
-typescript https://github.com/microsoft/TypeScript
 typescript https://github.com/modernweb-dev/web
 typescript https://github.com/mui-org/material-ui
 typescript https://github.com/NathanWalker/angular-seed-advanced
