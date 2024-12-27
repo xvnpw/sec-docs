@@ -1,5 +1,3 @@
-python https://github.com/opencv/opencv-python
-python https://github.com/pallets/click
 python https://github.com/pallets/jinja
 python https://github.com/pandas-dev/pandas
 python https://github.com/paramiko/paramiko
