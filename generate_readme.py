@@ -53,35 +53,34 @@ The documentation includes:
 
 def main():
     readme_lines = []
-
     exclude_dirs = {".git", ".github", "__pycache__"}
     exclude_files = {"README.md", "LICENSE", "generate_readme.py"}
 
     # Get the top-level directories (languages)
     languages = sorted([d for d in os.listdir(".") if os.path.isdir(d) and d not in exclude_dirs])
     for language in languages:
-        language_link = f"[{language}]({language})"
-        readme_lines.append(f"- {language_link}")
-        language_dir = os.path.join(".", language)
+        # Add language header with link
+        readme_lines.append(f"\n### [{language.title()}]({language}/)\n")
 
+        # Add table header
+        readme_lines.append("| Project | GitHub Link | Analysis Date | Documentation |")
+        readme_lines.append("|---------|-------------|---------------|---------------|")
+
+        language_dir = os.path.join(".", language)
         projects = sorted([p for p in os.listdir(language_dir) if os.path.isdir(os.path.join(language_dir, p))])
+
         for project in projects:
             project_dir = os.path.join(language_dir, project)
-            project_link = f"[{project}]({language}/{project})"
 
-            # Initialize source repo link
+            # Get GitHub link
             source_repo_link = ""
-            # Check for config.json in the project directory
             config_path = os.path.join(project_dir, "config.json")
             if os.path.isfile(config_path):
                 with open(config_path, "r") as config_file:
                     config = json.load(config_file)
                     repo_url = config.get("repo_url", "").strip()
-                    # If repo_url exists and is not empty, create the link
                     if repo_url:
-                        source_repo_link = f" - [github link]({repo_url})"
-
-            readme_lines.append(f"  - {project_link}{source_repo_link}")
+                        source_repo_link = f"[GitHub]({repo_url})"
 
             versions = sorted(
                 [v for v in os.listdir(project_dir) if os.path.isdir(os.path.join(project_dir, v))], reverse=True
@@ -89,29 +88,37 @@ def main():
 
             for version in versions:
                 version_dir = os.path.join(project_dir, version)
-                version_link = f"[{version}]({language}/{project}/{version})"
 
-                # List markdown files in version_dir
-                md_files = sorted([f for f in os.listdir(version_dir) if f.endswith(".md")])
-                links = []
-                for md_file in md_files:
-                    name = os.path.splitext(md_file)[0]
-                    file_link = f"\n        - [{name}]({language}/{project}/{version}/{md_file})"
-                    links.append(file_link)
+                # Split version string by first hyphen to separate date and model
+                parts = version.split("-", 1)
+                analysis_date = version[:10]
+                model_info = f"<br>{version[11:]}"
 
-                if links:
-                    links_str = " ".join(links)
-                    readme_lines.append(f"    - {version_link}{links_str}")
-                else:
-                    readme_lines.append(f"    - {version_link}")
+                # Get documentation links
+                doc_types = {
+                    "sec-design.md": "Security Design Review",
+                    "threat-modeling.md": "Threat Modeling",
+                    "attack-surface.md": "Attack Surface",
+                    "attack-tree.md": "Attack Tree",
+                }
+
+                doc_links = []
+                for doc_file, doc_name in doc_types.items():
+                    if os.path.exists(os.path.join(version_dir, doc_file)):
+                        doc_links.append(f"[{doc_name}]({language}/{project}/{version}/{doc_file})")
+
+                # Create table row with project link
+                project_link = f"[**{project}**]({language}/{project}/)"
+                table_row = (
+                    f"| {project_link} | {source_repo_link} | {analysis_date} {model_info} | {', '.join(doc_links)} |"
+                )
+                readme_lines.append(table_row)
 
     # Write to README.md
     with open("README.md", "w") as f:
         f.write(INTRODUCTION + "\n")
-
         for line in readme_lines:
             f.write(line + "\n")
-
         f.write("\n" + SPONSORSHIP)
 
 
