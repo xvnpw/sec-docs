@@ -23,12 +23,9 @@ jobs:
         run: |
           python generate_readme.py
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
         with:
-          branch: update-readme
-          commit-message: "Update README.md"
-          title: "Update README.md"
-          body: "Update README.md"
-          add-paths: |
-            README.md
+          message: 'Process repos'
+          add: README.md
+          pull: '--rebase --autostash'
