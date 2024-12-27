@@ -1,5 +1,3 @@
-cpp https://github.com/gflags/gflags
-cpp https://github.com/google/benchmark
 cpp https://github.com/google/flatbuffers
 cpp https://github.com/google/googletest
 cpp https://github.com/google/leveldb
