@@ -63,8 +63,8 @@ def main():
         readme_lines.append(f"\n### [{language.title()}]({language}/)\n")
 
         # Add table header
-        readme_lines.append("| Project | GitHub Link | Analysis Date | Documentation |")
-        readme_lines.append("|---------|-------------|---------------|---------------|")
+        readme_lines.append("| Project | Analysis Date | Documentation |")
+        readme_lines.append("|---------|-------------|---------------|")
 
         language_dir = os.path.join(".", language)
         projects = sorted([p for p in os.listdir(language_dir) if os.path.isdir(os.path.join(language_dir, p))])
@@ -89,10 +89,8 @@ def main():
             for version in versions:
                 version_dir = os.path.join(project_dir, version)
 
-                # Split version string by first hyphen to separate date and model
-                parts = version.split("-", 1)
                 analysis_date = version[:10]
-                model_info = f"<br>{version[11:]}"
+                model_info = version[11:]
 
                 # Get documentation links
                 doc_types = {
@@ -110,7 +108,7 @@ def main():
                 # Create table row with project link
                 project_link = f"[**{project}**]({language}/{project}/)"
                 table_row = (
-                    f"| {project_link} | {source_repo_link} | {analysis_date} {model_info} | {', '.join(doc_links)} |"
+                    f"| {project_link} ({source_repo_link}) | {analysis_date} {model_info} | {', '.join(doc_links)} |"
                 )
                 readme_lines.append(table_row)
 
