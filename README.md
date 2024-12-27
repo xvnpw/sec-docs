@@ -18,19 +18,21 @@ The documentation includes:
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
 | [**frp**](go/frp/) ([GitHub](https://github.com/fatedier/frp)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
-| [**gin**](go/gin/) ([GitHub](https://github.com/gin-gonic/gin)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**gin**](go/gin/) () | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Java](java/)
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
-| [**micronaut-security**](java/micronaut-security/) ([GitHub](https://github.com/micronaut-projects/micronaut-security)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
-| [**spring-security**](java/spring-security/) ([GitHub](https://github.com/spring-projects/spring-security)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**micronaut-security**](java/micronaut-security/) () | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**spring-security**](java/spring-security/) () | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](java/spring-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**xxl-job**](java/xxl-job/) () | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Javascript](javascript/)
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
+| [**axios**](javascript/axios/) () | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Python](python/)
 
