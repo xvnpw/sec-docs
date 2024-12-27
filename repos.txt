@@ -1,5 +1,3 @@
-python https://github.com/PrefectHQ/prefect
-python https://github.com/psf/black
 python https://github.com/pypa/pipenv
 python https://github.com/pytest-dev/pytest
 python https://github.com/python-telegram-bot/python-telegram-bot
