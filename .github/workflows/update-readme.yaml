@@ -1,12 +1,7 @@
 name: Update README
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '**/*.md'   
-      - '!README.md' 
+  workflow_dispatch:
 
 permissions:
   contents: write
