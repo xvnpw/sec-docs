@@ -25,7 +25,7 @@ This repository contains comprehensive security analysis and documentation for v
   - [flask](python/flask) - [github link](https://github.com/pallets/flask)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp) - [attack-surface](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [attack-tree](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), [sec-design](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [threat-modeling](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
   - [requests](python/requests) - [github link](https://github.com/psf/requests)
-    - [2024-12-27-gemini-2.0-flash-thinking-exp](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp) - [attack-surface](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [attack-tree](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), [sec-design](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [threat-modeling](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
+    - [2024-12-27-gemini-2.0-flash-thinking-exp](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp) - [🔍 attack-surface](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [🌳 attack-tree](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), [🔒 sec-design](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [🎯 threat-modeling](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 
 ## Support **sec-docs**  
 
