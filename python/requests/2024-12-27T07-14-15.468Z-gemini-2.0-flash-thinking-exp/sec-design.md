@@ -87,11 +87,11 @@ graph LR
         I
     end
 
-    style B fill:#ccf,stroke:#333,stroke-width:2px, title: "Entry Point, Input Validation"
-    style C fill:#ccf,stroke:#333,stroke-width:2px, title: "State Management, Security Context"
-    style D fill:#ccf,stroke:#333,stroke-width:2px, title: "Request Parameter Handling"
-    style E fill:#ccf,stroke:#333,stroke-width:2px, title: "Protocol Formatting, Authentication"
-    style I fill:#ccf,stroke:#333,stroke-width:2px, title: "Response Interpretation, Data Extraction"
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:2px
+    style E fill:#ccf,stroke:#333,stroke-width:2px
+    style I fill:#ccf,stroke:#333,stroke-width:2px
 ```
 
 **3.1. Key Components (Detailed Responsibilities and Security Considerations):**
