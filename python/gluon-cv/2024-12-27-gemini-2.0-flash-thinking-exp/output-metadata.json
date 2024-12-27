@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/dmlc/gluon-cv",
+  "analyzer_args": "",
+  "start_datetime": "2024-12-27T13:27:18Z",
+  "end_datetime": "2024-12-27T13:32:04Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "73483",
+  "mode": "github"
+}
