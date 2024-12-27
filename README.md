@@ -46,6 +46,11 @@ The documentation includes:
         - [sec-design](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
         - [threat-modeling](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
   - [express](javascript/express) - [github link](https://github.com/expressjs/express)
+    - [2024-12-27-gemini-2.0-flash-thinking-exp](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp) - 
+        - [attack-surface](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
+        - [attack-tree](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
+        - [sec-design](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [threat-modeling](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 - [python](python)
   - [flask](python/flask) - [github link](https://github.com/pallets/flask)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp) - 
