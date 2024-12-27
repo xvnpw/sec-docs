@@ -1,5 +1,3 @@
-cpp https://github.com/google/leveldb
-cpp https://github.com/google/re2
 cpp https://github.com/KhronosGroup/Vulkan-Samples
 cpp https://github.com/microsoft/calculator
 cpp https://github.com/Microsoft/onnxruntime
