@@ -1,5 +1,3 @@
-csharp https://github.com/nuget/nuget.client
-csharp https://github.com/nuke-build/nuke
 csharp https://github.com/quartznet/quartznet
 csharp https://github.com/serilog/serilog
 csharp https://github.com/serilog/serilog-sinks-console
