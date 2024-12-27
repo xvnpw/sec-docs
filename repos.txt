@@ -1,2 +1,0 @@
-python https://github.com/tiangolo/fastapi
-python https://github.com/tornadoweb/tornado
