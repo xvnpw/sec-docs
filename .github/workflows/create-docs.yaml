@@ -231,6 +231,10 @@ jobs:
           add: ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
           pull: '--rebase --autostash'
 
+  trigger_workflow:
+    needs: analyze  # This ensures this job runs after all analyze jobs complete
+    runs-on: ubuntu-latest
+    steps:
       - name: Trigger second workflow
         env:
           PAT_SECRET: ${{ secrets.PAT_SECRET }}
