@@ -3,7 +3,6 @@ c https://github.com/davatorium/rofi
 c https://github.com/FFmpeg/FFmpeg
 c https://github.com/git/git
 c https://github.com/glfw/glfw
-c https://github.com/gobolinux/BootScripts
 c https://github.com/hishamhm/htop
 c https://github.com/jart/cosmopolitan
 c https://github.com/krallin/tini
@@ -24,13 +23,11 @@ c https://github.com/xianyi/OpenBLAS
 clojure https://github.com/metabase/metabase
 cpp https://github.com/AcademySoftwareFoundation/openvdb
 cpp https://github.com/alembic/alembic
-cpp https://github.com/alibaba/flatbuffers
 cpp https://github.com/apache/arrow
 cpp https://github.com/apache/incubator-brpc
 cpp https://github.com/apache/thrift
 cpp https://github.com/boostorg/boost
 cpp https://github.com/catchorg/Catch2
-cpp https://github.com/dmlc/dgl
 cpp https://github.com/electron/electron
 cpp https://github.com/embree/embree
 cpp https://github.com/facebook/folly
@@ -39,6 +36,7 @@ cpp https://github.com/facebook/rocksdb
 cpp https://github.com/fmtlib/fmt
 cpp https://github.com/gflags/gflags
 cpp https://github.com/google/benchmark
+cpp https://github.com/google/flatbuffers
 cpp https://github.com/google/googletest
 cpp https://github.com/google/leveldb
 cpp https://github.com/google/re2
@@ -72,10 +70,8 @@ csharp https://github.com/aspnetboilerplate/aspnetboilerplate
 csharp https://github.com/AutoFixture/AutoFixture
 csharp https://github.com/AutoMapper/AutoMapper
 csharp https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection
-csharp https://github.com/dapr/dapr
 csharp https://github.com/dotnet/aspnetcore
 csharp https://github.com/dotnet/docfx
-csharp https://github.com/dotnet/EntityFramework.Docs
 csharp https://github.com/dotnet/maui
 csharp https://github.com/dotnet/orleans
 csharp https://github.com/dotnet/reactive
@@ -84,13 +80,12 @@ csharp https://github.com/dotnet/runtime
 csharp https://github.com/dotnet-architecture/eShopOnContainers
 csharp https://github.com/elastic/elasticsearch-net
 csharp https://github.com/elmah/Elmah
+csharp https://github.com/graphql-dotnet/graphql-dotnet
 csharp https://github.com/hangfireio/Hangfire
 csharp https://github.com/IdentityServer/IdentityServer4
 csharp https://github.com/JamesNK/Newtonsoft.Json
 csharp https://github.com/jstedfast/MailKit
 csharp https://github.com/lucasg/Dependencies
-csharp https://github.com/lucidworks/spark-solr
-csharp https://github.com/Marten-Loveculator/Marten
 csharp https://github.com/MassTransit/MassTransit
 csharp https://github.com/migueldeicaza/gui.cs
 csharp https://github.com/mono/mono
@@ -100,7 +95,6 @@ csharp https://github.com/NancyFx/Nancy
 csharp https://github.com/nuget/nuget.client
 csharp https://github.com/nuke-build/nuke
 csharp https://github.com/quartznet/quartznet
-csharp https://github.com/samesystem/graphql-dotnet
 csharp https://github.com/serilog/serilog
 csharp https://github.com/serilog/serilog-sinks-console
 csharp https://github.com/ServiceStack/ServiceStack
@@ -124,7 +118,6 @@ dart https://github.com/flutter/flutter
 dart https://github.com/flutter/plugins
 dart https://github.com/fluttercommunity/flutter_bloc
 dart https://github.com/GetStream/stream-chat-flutter
-dart https://github.com/google_fonts/google_fonts
 dart https://github.com/isar/isar
 dart https://github.com/leoafarias/fvm
 dart https://github.com/miguelpruivo/flutter_file_picker
@@ -136,6 +129,7 @@ go https://github.com/99designs/gqlgen
 go https://github.com/astaxie/beego
 go https://github.com/avelino/awesome-go
 go https://github.com/cloudwego/kitex
+go https://github.com/dapr/dapr
 go https://github.com/docker/cli
 go https://github.com/docker/docker
 go https://github.com/etcd-io/etcd
@@ -158,12 +152,12 @@ go https://github.com/grafana/grafana
 go https://github.com/grafana/loki
 go https://github.com/grpc/grpc-go
 go https://github.com/hashicorp/terraform
+go https://github.com/hibiken/asynq
 go https://github.com/istio/istio
 go https://github.com/jaegertracing/jaeger
 go https://github.com/kataras/iris
 go https://github.com/kubernetes/kubernetes
 go https://github.com/labstack/echo
-go https://github.com/matsoffice/oreilly-go
 go https://github.com/micro/go-micro
 go https://github.com/micro/micro
 go https://github.com/moby/moby
@@ -176,6 +170,7 @@ go https://github.com/Shopify/sarama
 go https://github.com/sirupsen/logrus
 go https://github.com/spf13/cobra
 go https://github.com/spf13/viper
+go https://github.com/StackExchange/dnscontrol
 go https://github.com/uber-go/zap
 go https://github.com/urfave/cli
 go https://github.com/valyala/fasthttp
@@ -207,7 +202,6 @@ java https://github.com/google/guice
 java https://github.com/gradle/gradle
 java https://github.com/greenrobot/EventBus
 java https://github.com/hibernate/hibernate-orm
-java https://github.com/hibiken/asynq
 java https://github.com/iluwatar/java-design-patterns
 java https://github.com/JakeWharton/butterknife
 java https://github.com/JodaOrg/joda-time
@@ -215,7 +209,6 @@ java https://github.com/junit-team/junit5
 java https://github.com/keycloak/keycloak
 java https://github.com/libgdx/libgdx
 java https://github.com/mockito/mockito
-java https://github.com/NathanWalker/angular-seed-advanced
 java https://github.com/netty/netty
 java https://github.com/oracle/graal
 java https://github.com/PhilJay/MPAndroidChart
@@ -234,6 +227,8 @@ javascript https://github.com/babel/babel
 javascript https://github.com/chartjs/Chart.js
 javascript https://github.com/d3/d3
 javascript https://github.com/daneden/animate.css
+javascript https://github.com/eggjs/egg
+javascript https://github.com/ElemeFE/element
 javascript https://github.com/emberjs/ember.js
 javascript https://github.com/eslint/eslint
 javascript https://github.com/expressjs/body-parser
@@ -258,7 +253,6 @@ javascript https://github.com/nodejs/node
 javascript https://github.com/npm/npm
 javascript https://github.com/pixijs/pixi.js
 javascript https://github.com/Prettier/prettier
-javascript https://github.com/reactjs/react
 javascript https://github.com/sindresorhus/awesome
 javascript https://github.com/socketio/socket.io
 javascript https://github.com/standard/standard
@@ -269,17 +263,12 @@ javascript https://github.com/uBlockOrigin/uBlock-issues
 javascript https://github.com/vercel/hyper
 javascript https://github.com/vercel/next.js
 javascript https://github.com/webpack/webpack
-javascript https://github.com/zeit/next.js
-js https://github.com/eggjs/egg
-js https://github.com/ElemeFE/element
-js https://github.com/StackExchange/dnscontrol
 julia https://github.com/FluxML/Flux.jl
 kotlin https://github.com/airbnb/MvRx
 kotlin https://github.com/android/architecture-components-samples
 kotlin https://github.com/apollographql/apollo-android
 kotlin https://github.com/badoo/Reaktive
 kotlin https://github.com/cashapp/sqldelight
-kotlin https://github.com/coroutinelet/kotlin-coroutine
 kotlin https://github.com/detekt/detekt
 kotlin https://github.com/google/Filament
 kotlin https://github.com/google/ksp
@@ -350,7 +339,6 @@ php https://github.com/SymfonyCasts/reset-password-bundle
 php https://github.com/TheAlgorithms/PHP
 php https://github.com/woocommerce/woocommerce
 php https://github.com/wordpress/wordpress
-php https://github.com/WordPress/WordPress
 php https://github.com/yiisoft/yii2
 php https://github.com/ziadoz/awesome-php
 python https://github.com/ansible/ansible
@@ -361,6 +349,7 @@ python https://github.com/cocos2d/cocos2d-x
 python https://github.com/cython/cython
 python https://github.com/davidsandberg/facenet
 python https://github.com/django/django
+python https://github.com/dmlc/dgl
 python https://github.com/dmlc/gluon-cv
 python https://github.com/dmlc/xgboost
 python https://github.com/encode/django-rest-framework
@@ -544,6 +533,7 @@ typescript https://github.com/microsoft/typescript
 typescript https://github.com/microsoft/TypeScript
 typescript https://github.com/modernweb-dev/web
 typescript https://github.com/mui-org/material-ui
+typescript https://github.com/NathanWalker/angular-seed-advanced
 typescript https://github.com/nestjs/nest
 typescript https://github.com/nrwl/nx
 typescript https://github.com/nuxt/nuxt.js
