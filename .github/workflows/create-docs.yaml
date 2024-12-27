@@ -61,80 +61,48 @@ jobs:
             const configContent = fs.readFileSync(configPath, 'utf8');
             const config = JSON.parse(configContent);
 
-            let mode = config.mode || 'github';
-            let target = mode === 'github' ? config.repo_url : '/code';
+            let mode = 'github';
+            let target = config.repo_url;
+            let agent_model = config.agent_model || 'gpt-4o';
+            core.setOutput('mode', mode);
             core.setOutput('target', target);
 
             core.setOutput('repo_url', config.repo_url || '');
-            core.setOutput('repo_sha', config.repo_sha || '');
-            core.setOutput('repo_tag', config.repo_tag || '');
-            core.setOutput('dry_run', config.dry_run || false);
-            core.setOutput('agent_model', config.agent_model || 'gpt-4o');
+            
+            core.setOutput('agent_provider', config.agent_provider || 'openai');
+            core.setOutput('agent_model', agent_model);
             core.setOutput('agent_temperature', config.agent_temperature || 0.0);
-            core.setOutput('mode', config.mode || 'github');
+            
             core.setOutput('analyzer_args', config.analyzer_args || '');
             const configDir = path.dirname(configFile);
             core.setOutput('config_dir', configDir);
             // Determine the output subdirectory
-            const output_subdir = config.repo_tag || (config.repo_sha ? config.repo_sha.substring(0,7) : '') || 'latest';
+            const output_subdir = `${new Date().toISOString().replace(/:/g, '-')}-${agent_model}`;
             core.setOutput('output_subdir', output_subdir);
 
             // Handle agent_prompt_types
-            const default_agent_prompt_types = ["sec-design", "threat-modeling", "attack-surface", "threat-scenarios", "attack-tree"];
+            const default_agent_prompt_types = ["sec-design", "threat-modeling", "attack-surface", "attack-tree"];
             let agent_prompt_types = config.agent_prompt_types;
             if (!Array.isArray(agent_prompt_types) || agent_prompt_types.length === 0) {
               agent_prompt_types = default_agent_prompt_types;
             }
             core.setOutput('agent_prompt_types', JSON.stringify(agent_prompt_types));
 
-      - name: Clone target repository
-        if: ${{ steps.read_config.outputs.mode == 'dir' }}
-        run: |
-          git clone ${{ steps.read_config.outputs.repo_url }} target_repo
-          cd target_repo
-          if [ "${{ steps.read_config.outputs.repo_sha }}" != "" ]; then
-            git checkout ${{ steps.read_config.outputs.repo_sha }}
-          elif [ "${{ steps.read_config.outputs.repo_tag }}" != "" ]; then
-            git checkout tags/${{ steps.read_config.outputs.repo_tag }}
-          fi
-        shell: bash
-
-      - name: Run dry-run ai-security-analyzer via Docker
-        if: ${{ steps.read_config.outputs.mode == 'dir' }}
-        id: dry_run
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          docker run --rm \
-            --user $(id -u):$(id -g) \
-            -v ${{ github.workspace }}/target_repo:/code \
-            -e OPENAI_API_KEY \
-            ghcr.io/xvnpw/ai-security-analyzer:latest \
-            ${{ steps.read_config.outputs.mode }} -v --dry-run -t /code \
-            ${{ steps.read_config.outputs.analyzer_args }} \
-            --agent-model ${{ steps.read_config.outputs.agent_model }} \
-            --agent-temperature ${{ steps.read_config.outputs.agent_temperature }} \
-            | tee ./target_repo/output.txt
-
-          cat ./target_repo/output.txt | grep 'All documents token count:' | awk '{print $5}' > ./target_repo/token_count.txt
-          echo "dry_run_token_count=$(cat ./target_repo/token_count.txt)" >> $GITHUB_OUTPUT
-        shell: bash
-
       - name: Record Start Time
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: record_start_time
         shell: bash
         run: |
           echo "start_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
 
       - name: Run ai-security-analyzer via Docker for each agent_prompt_type
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: run_analyzer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGCHAIN_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
           AGENT_PROMPT_TYPES='${{ steps.read_config.outputs.agent_prompt_types }}'
+          AGENT_PROVIDER='${{ steps.read_config.outputs.agent_provider }}'
           AGENT_MODEL='${{ steps.read_config.outputs.agent_model }}'
           AGENT_TEMPERATURE='${{ steps.read_config.outputs.agent_temperature }}'
           MODE='${{ steps.read_config.outputs.mode }}'
@@ -156,10 +124,12 @@ jobs:
               -e LANGCHAIN_API_KEY \
               -e LANGCHAIN_TRACING_V2=true \
               -e LANGCHAIN_PROJECT=sec-docs \
+              -e GOOGLE_API_KEY \
               ghcr.io/xvnpw/ai-security-analyzer:latest \
               $MODE -v -t $TARGET \
               -o "$output_file" \
               ${{ steps.read_config.outputs.analyzer_args }} \
+              --agent-provider "$AGENT_PROVIDER" \
               --agent-model "$AGENT_MODEL" \
               --agent-temperature "$AGENT_TEMPERATURE" \
               --agent-prompt-type "$prompt_type" 2>&1 | tee -a ./output/ai-security-analyzer.log
@@ -167,7 +137,6 @@ jobs:
         shell: bash
 
       - name: Calculate total token count
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: calculate_total_token_count
         run: |
           actual_token_usage=$(grep -oP 'Actual token usage: \K\d+' "./output/ai-security-analyzer.log" | awk '{sum += $1} END {print sum}')
@@ -175,14 +144,12 @@ jobs:
         shell: bash
 
       - name: Record End Time
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: record_end_time
         shell: bash
         run: |
           echo "end_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
 
       - name: Move output files to output directory
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         env:
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
         run: |
@@ -199,7 +166,6 @@ jobs:
         shell: bash
 
       - name: Create output-metadata.json
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }} 
         uses: actions/github-script@v6
         with:
           script: |
@@ -212,12 +178,9 @@ jobs:
             );
             const metadata = {
               repo_url: process.env.REPO_URL,
-              repo_sha: process.env.REPO_SHA,
-              repo_tag: process.env.REPO_TAG,
               analyzer_args: process.env.ANALYZER_ARGS,
               start_datetime: process.env.START_DATETIME,
               end_datetime: process.env.END_DATETIME,
-              dry_run_token_count: process.env.DRY_RUN_TOKEN_COUNT,
               agent_model: process.env.AGENT_MODEL,
               agent_temperature: process.env.AGENT_TEMPERATURE,
               agent_prompt_types: JSON.parse(process.env.AGENT_PROMPT_TYPES),
@@ -228,12 +191,9 @@ jobs:
             fs.writeFileSync(path.join(outputDir, 'output-metadata.json'), JSON.stringify(metadata, null, 2));
         env:
           REPO_URL: ${{ steps.read_config.outputs.repo_url }}
-          REPO_SHA: ${{ steps.read_config.outputs.repo_sha }}
-          REPO_TAG: ${{ steps.read_config.outputs.repo_tag }}
           ANALYZER_ARGS: ${{ steps.read_config.outputs.analyzer_args }}
           START_DATETIME: ${{ steps.record_start_time.outputs.start_datetime }}
           END_DATETIME: ${{ steps.record_end_time.outputs.end_datetime }}
-          DRY_RUN_TOKEN_COUNT: ${{ steps.dry_run.outputs.dry_run_token_count }}
           AGENT_MODEL: ${{ steps.read_config.outputs.agent_model }}
           AGENT_TEMPERATURE: ${{ steps.read_config.outputs.agent_temperature }}
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
@@ -241,13 +201,11 @@ jobs:
           MODE: ${{ steps.read_config.outputs.mode }}
 
       - name: Clean up target_repo
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         run: |
           rm -rf target_repo/ output/
         shell: bash
 
       - name: Set Branch Name
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         id: set_branch_name
         run: |
           # Sanitize the config_file path to create a valid branch name
@@ -255,7 +213,6 @@ jobs:
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
-        if: ${{ steps.read_config.outputs.dry_run == 'false' }}
         uses: peter-evans/create-pull-request@v7
         with:
           branch: ${{ steps.set_branch_name.outputs.branch_name }}
