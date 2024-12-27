@@ -1,5 +1,3 @@
-cpp https://github.com/KhronosGroup/Vulkan-Samples
-cpp https://github.com/microsoft/calculator
 cpp https://github.com/Microsoft/onnxruntime
 cpp https://github.com/microsoft/terminal
 cpp https://github.com/Microsoft/vcpkg
