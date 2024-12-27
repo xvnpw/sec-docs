@@ -1,3 +1,4 @@
+python https://github.com/psf/requests
 python https://github.com/pallets/flask
 python https://github.com/django/django
 go https://github.com/fatedier/frp
