@@ -1,5 +1,3 @@
-cpp https://github.com/apache/arrow
-cpp https://github.com/apache/incubator-brpc
 cpp https://github.com/apache/thrift
 cpp https://github.com/boostorg/boost
 cpp https://github.com/catchorg/Catch2
