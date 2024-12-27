@@ -1,5 +1,3 @@
-cpp https://github.com/pocoproject/poco
-cpp https://github.com/protocolbuffers/protobuf
 cpp https://github.com/ripple/rippled
 cpp https://github.com/sqlcipher/sqlcipher
 cpp https://github.com/Tencent/rapidjson
