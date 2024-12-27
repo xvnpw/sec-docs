@@ -1,5 +1,3 @@
-python https://github.com/django/django
-go https://github.com/fatedier/frp
 go https://github.com/gin-gonic/gin
 java https://github.com/micronaut-projects/micronaut-security
 java https://github.com/spring-projects/spring-security
