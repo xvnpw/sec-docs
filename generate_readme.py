@@ -78,7 +78,7 @@ def main():
                     repo_url = config.get("repo_url", "").strip()
                     # If repo_url exists and is not empty, create the link
                     if repo_url:
-                        source_repo_link = f" - 🌐 [github]({repo_url})"
+                        source_repo_link = f" - [github]({repo_url})"
 
             readme_lines.append(f"  - {project_link}{source_repo_link}")
 
