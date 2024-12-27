@@ -1,4 +1,3 @@
-java https://github.com/micronaut-projects/micronaut-security
 java https://github.com/spring-projects/spring-security
 java https://github.com/xuxueli/xxl-job
 javascript https://github.com/axios/axios
