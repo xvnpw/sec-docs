@@ -1,5 +1,3 @@
-csharp https://github.com/SignalR/SignalR
-csharp https://github.com/SixLabors/ImageSharp
 csharp https://github.com/StackExchange/Dapper
 csharp https://github.com/StackExchange/StackExchange.Redis
 csharp https://github.com/xunit/xunit
