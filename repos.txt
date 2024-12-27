@@ -1,5 +1,3 @@
-c https://github.com/htop-dev/htop/
-cpp https://github.com/catchorg/Catch2
 cpp https://github.com/electron/electron
 cpp https://github.com/embree/embree
 cpp https://github.com/facebook/folly
