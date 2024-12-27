@@ -154,8 +154,7 @@ jobs:
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
         run: |
           mkdir -p ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}
-          agent_prompt_types=$(echo $AGENT_PROMPT_TYPES | jq -r '.[]')
-          for prompt_type in $agent_prompt_types; do
+          echo "$AGENT_PROMPT_TYPES" | jq -r '.[]' | while read -r prompt_type; do
             output_file="output/${prompt_type}.md"
             if [ -f "$output_file" ]; then
               mv "$output_file" ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
