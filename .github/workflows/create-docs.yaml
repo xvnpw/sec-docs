@@ -231,11 +231,11 @@ jobs:
           add: ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
           pull: '--rebase --autostash'
 
-      # - name: Trigger second workflow
-      #   env:
-      #     PAT_SECRET: ${{ secrets.PAT_SECRET }}
-      #   run: |
-      #     curl -X POST -H "Authorization: token $PAT_SECRET" \
-      #     -H "Accept: application/vnd.github.v3+json" \
-      #     https://api.github.com/repos/xvnpw/sec-docs/actions/workflows/process-repos.yaml/dispatches \
-      #     -d '{"ref":"main"}'
+      - name: Trigger second workflow
+        env:
+          PAT_SECRET: ${{ secrets.PAT_SECRET }}
+        run: |
+          curl -X POST -H "Authorization: token $PAT_SECRET" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/xvnpw/sec-docs/actions/workflows/process-repos.yaml/dispatches \
+          -d '{"ref":"main"}'
