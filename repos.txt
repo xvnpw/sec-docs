@@ -1,3 +1,4 @@
+python https://github.com/davidsandberg/facenet
 python https://github.com/dmlc/xgboost
 python https://github.com/encode/django-rest-framework
 python https://github.com/fabric/fabric
