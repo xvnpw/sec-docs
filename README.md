@@ -15,54 +15,54 @@ The documentation includes:
 - [go](go)
   - [frp](go/frp) - [github link](https://github.com/fatedier/frp)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](go/frp/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
   - [gin](go/gin) - [github link](https://github.com/gin-gonic/gin)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](go/gin/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 - [java](java)
   - [micronaut-security](java/micronaut-security) - [github link](https://github.com/micronaut-projects/micronaut-security)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](java/micronaut-security/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
   - [xxl-job](java/xxl-job) - [github link](https://github.com/xuxueli/xxl-job)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](java/xxl-job/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 - [javascript](javascript)
   - [axios](javascript/axios) - [github link](https://github.com/axios/axios)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](javascript/axios/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
   - [express](javascript/express) - [github link](https://github.com/expressjs/express)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](javascript/express/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 - [python](python)
   - [flask](python/flask) - [github link](https://github.com/pallets/flask)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
   - [requests](python/requests) - [github link](https://github.com/psf/requests)
     - [2024-12-27-gemini-2.0-flash-thinking-exp](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp)
-        - [attack-surface](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), 
-        - [attack-tree](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md), 
-        - [sec-design](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), 
+        - [attack-surface](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md) 
+        - [attack-tree](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) 
+        - [sec-design](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md) 
         - [threat-modeling](python/requests/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md)
 
 ## Support **sec-docs**
