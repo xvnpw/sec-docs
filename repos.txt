@@ -1,4 +1,2 @@
-python https://github.com/streamlit/streamlit
-python https://github.com/tensorflow/tensorflow
 python https://github.com/tiangolo/fastapi
 python https://github.com/tornadoweb/tornado
