@@ -19,7 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: Process repos
-        run: python process_repos.py 3
+        run: python process_repos.py 2
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
