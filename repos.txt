@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 python https://github.com/psf/requests
 python https://github.com/pallets/flask
 python https://github.com/django/django
@@ -9,5 +10,7 @@ java https://github.com/spring-projects/spring-security
 =======
 >>>>>>> e4aaeefb56d306879797ba42841ed4cbb4df80ae
 java https://github.com/xuxueli/xxl-job
+=======
+>>>>>>> 714275ea2df7991c79f4d348973510d51a0e4ef3
 javascript https://github.com/axios/axios
 javascript https://github.com/expressjs/express
