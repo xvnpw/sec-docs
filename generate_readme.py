@@ -82,7 +82,10 @@ def main():
 
             readme_lines.append(f"  - {project_link}{source_repo_link}")
 
-            versions = sorted([v for v in os.listdir(project_dir) if os.path.isdir(os.path.join(project_dir, v))])
+            versions = sorted(
+                [v for v in os.listdir(project_dir) if os.path.isdir(os.path.join(project_dir, v))], reverse=True
+            )
+
             for version in versions:
                 version_dir = os.path.join(project_dir, version)
                 version_link = f"[{version}]({language}/{project}/{version})"
