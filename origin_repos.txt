@@ -118,7 +118,6 @@ go https://github.com/99designs/gqlgen
 go https://github.com/astaxie/beego
 go https://github.com/cloudwego/kitex
 go https://github.com/dapr/dapr
-go https://github.com/docker/cli
 go https://github.com/docker/docker
 go https://github.com/etcd-io/etcd
 go https://github.com/fatedier/frp
@@ -458,7 +457,6 @@ swift https://github.com/tuist/tuist
 swift https://github.com/vapor/vapor
 typescript https://github.com/akveo/ngx-admin
 typescript https://github.com/angular/angular
-typescript https://github.com/angular/angular-cli
 typescript https://github.com/ant-design/ant-design
 typescript https://github.com/ant-design/ant-design-pro
 typescript https://github.com/apollographql/apollo-client
