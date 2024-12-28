@@ -1,5 +1,3 @@
-php https://github.com/phalcon/cphalcon
-php https://github.com/phan/phan
 php https://github.com/php/php-src
 php https://github.com/PHPMailer/PHPMailer
 php https://github.com/PHPOffice/PHPPresentation
