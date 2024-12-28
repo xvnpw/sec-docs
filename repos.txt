@@ -99,7 +99,6 @@ ruby https://github.com/jekyll/jekyll
 ruby https://github.com/jeremyevans/sequel
 ruby https://github.com/mikel/mail
 ruby https://github.com/omniauth/omniauth
-ruby https://github.com/opscode/chef
 ruby https://github.com/plataformatec/devise
 ruby https://github.com/puma/puma
 ruby https://github.com/puppetlabs/puppet
