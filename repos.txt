@@ -1,5 +1,3 @@
-python https://github.com/graphite-project/graphite-web
-python https://github.com/opencv/opencv-python
 python https://github.com/pallets/jinja
 python https://github.com/plotly/dash
 python https://github.com/scikit-learn/scikit-learn
