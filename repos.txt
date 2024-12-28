@@ -1,5 +1,3 @@
-go https://github.com/moby/moby
-go https://github.com/nsqio/nsq
 go https://github.com/olivere/elastic
 go https://github.com/pingcap/tidb
 go https://github.com/prometheus/prometheus
