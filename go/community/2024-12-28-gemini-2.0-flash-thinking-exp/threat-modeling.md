@@ -1,0 +1,44 @@
+- **Threat:** Compromised Dependency Introduction
+    - **Description:** An attacker, posing as a legitimate contributor or through a compromised account *within the Knative Community repository*, submits a pull request that introduces a dependency with known vulnerabilities or intentionally malicious code into a Knative component or example hosted *in the repository*. This malicious dependency could be directly included or subtly replace a legitimate one within the repository's files.
+    - **Impact:**  Applications using the affected Knative component or example from the *community repository* could be vulnerable to exploitation, leading to data breaches, unauthorized access, or denial of service.
+    - **Affected Component:**  Dependency manifests (e.g., `go.mod`, `pom.xml` in examples) present *within the repository*, build scripts hosted *in the repository*, potentially the source code of various Knative components if the dependency change is made directly *within the repository*.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Implement rigorous code review processes for all contributions *to the repository*, focusing on dependency changes.
+        - Utilize automated dependency scanning tools to identify known vulnerabilities in dependencies present *within the repository*.
+        - Employ Software Bill of Materials (SBOMs) to track and manage dependencies used *within the repository's content*.
+        - Pin dependency versions in manifests *within the repository* to avoid unexpected updates.
+        - Regularly audit and update dependencies used *within the repository's content*.
+
+- **Threat:** Malicious Code Injection via Pull Request
+    - **Description:** An attacker submits a pull request *to the Knative Community repository* containing malicious code directly within a Knative component or example hosted *in the repository*. This code could exploit existing vulnerabilities, introduce new ones, or perform malicious actions when executed by users who obtain the code from the repository.
+    - **Impact:**  Compromise of applications using the affected Knative component obtained *from the community repository*, potential for wider impact if the component is widely used and distributed *through the repository*. This could lead to data breaches, unauthorized access, or denial of service.
+    - **Affected Component:** Source code of various Knative components (e.g., controllers, APIs, CLI tools) hosted *in the repository*, example code present *in the repository*, configuration files stored *in the repository*.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Enforce strict code review processes by multiple trusted maintainers for all pull requests *to the repository*.
+        - Implement automated static analysis security testing (SAST) tools to detect potential vulnerabilities in code contributions *to the repository*.
+        - Require contributors to sign their commits *to the repository*.
+        - Have a clear process for reporting and addressing security vulnerabilities found *within the repository's content*.
+
+- **Threat:** Compromised Contributor Account
+    - **Description:** An attacker gains unauthorized access to a legitimate contributor's account *on the Knative Community GitHub repository* and uses it to push malicious code, modify documentation with misleading information, or spread misinformation within the community *through the repository's features*.
+    - **Impact:** Introduction of vulnerabilities *into the repository's content*, damage to community trust *in the repository's integrity*, potential for widespread impact if the compromised account has significant privileges *within the repository*.
+    - **Affected Component:** Any part of the GitHub repository the compromised account has access to, including source code, documentation, issues, and pull requests *within the repository*.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Encourage and enforce the use of strong, unique passwords and multi-factor authentication for all contributors *to the repository*.
+        - Regularly review contributor permissions *on the repository* and remove unnecessary access.
+        - Monitor for suspicious activity on contributor accounts *within the repository*.
+        - Have a clear process for reporting and handling compromised accounts *on the repository*.
+
+- **Threat:** Social Engineering to Introduce Vulnerabilities
+    - **Description:** An attacker builds trust within the community *interacting through the Knative Community repository* and uses social engineering techniques to convince maintainers to merge pull requests *to the repository* containing subtle vulnerabilities or backdoors. This could involve manipulating discussions *on the repository*, providing seemingly legitimate justifications, or exploiting trust relationships *within the community interacting on the repository*.
+    - **Impact:** Introduction of vulnerabilities *into the repository's content* that might be difficult to detect, potentially leading to long-term security weaknesses in Knative components hosted *in the repository*.
+    - **Affected Component:**  Design documents, architectural discussions (within issues/PRs), potentially the source code of various Knative components modified through pull requests *to the repository*.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Foster a security-conscious culture within the community *interacting on the repository*.
+        - Encourage critical evaluation of all contributions *to the repository*, regardless of the contributor's reputation.
+        - Implement a "trust but verify" approach to code reviews for pull requests *to the repository*.
+        - Maintain clear and well-documented security guidelines for contributions *to the repository*.
