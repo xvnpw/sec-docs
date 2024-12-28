@@ -1,5 +1,3 @@
-go https://github.com/urfave/cli
-go https://github.com/valyala/fasthttp
 groovy https://github.com/apache/groovy
 haskell https://github.com/jgm/pandoc
 java https://github.com/Activiti/Activiti
