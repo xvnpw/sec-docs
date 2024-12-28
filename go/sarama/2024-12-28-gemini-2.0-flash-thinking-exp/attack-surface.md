@@ -1,0 +1,52 @@
+- **Attack Surface:** Insecure Connection to Kafka Brokers
+    - **Description:** Communication between the application and Kafka brokers is not encrypted, allowing attackers to eavesdrop on sensitive data in transit.
+    - **How Sarama Contributes:** Sarama allows configuring plaintext connections (without TLS). If developers don't explicitly configure TLS, the connection will be insecure by default or if they explicitly disable TLS.
+    - **Example:** An attacker on the same network intercepts credentials or sensitive message payloads being exchanged between the application and the Kafka broker.
+    - **Impact:** Confidentiality breach, exposure of sensitive data, potential for replay attacks.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Enforce TLS Encryption:** Configure Sarama to use TLS for all connections to Kafka brokers. This involves setting the `Net.TLS.Enable` configuration option to `true` and providing necessary certificate and key files or using system certificate pools.
+        - **Verify Broker Certificates:** Ensure Sarama is configured to verify the server's TLS certificate to prevent man-in-the-middle attacks. This involves configuring `Net.TLS.Config.InsecureSkipVerify` to `false` (or not setting it, as `false` is the default secure value) and potentially providing a trusted CA certificate pool.
+
+- **Attack Surface:** Weak or Missing Authentication to Kafka Brokers
+    - **Description:** The application connects to Kafka brokers without proper authentication, allowing unauthorized access and potential manipulation of data.
+    - **How Sarama Contributes:** Sarama provides various SASL mechanisms for authentication (e.g., PLAIN, SCRAM, GSSAPI/Kerberos). If developers choose weak mechanisms or fail to configure authentication at all within Sarama's configuration, the connection is vulnerable.
+    - **Example:** An attacker gains unauthorized access to the Kafka cluster and can produce or consume messages, potentially disrupting operations or stealing data.
+    - **Impact:** Unauthorized access, data manipulation, data breaches, denial of service.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Implement Strong Authentication:** Configure Sarama to use a strong SASL mechanism like SCRAM-SHA-512 or GSSAPI (Kerberos).
+        - **Secure Credential Management:** Store and manage authentication credentials securely and configure Sarama to use them. Avoid hardcoding credentials in the application. Use environment variables, secrets management systems, or secure configuration files.
+        - **Proper Kerberos Configuration (if applicable):** Ensure the Kerberos keytab file is properly secured and access is restricted. Configure Sarama with the correct Kerberos principal and keytab path.
+
+- **Attack Surface:** Connecting to Malicious or Untrusted Kafka Brokers
+    - **Description:** The application is configured to connect to a Kafka broker controlled by an attacker, potentially leading to data exfiltration or manipulation.
+    - **How Sarama Contributes:** Sarama relies on the provided list of broker addresses in its configuration. If this list is compromised or dynamically generated from untrusted sources without validation and then used to configure Sarama, the application might connect to a malicious broker.
+    - **Example:** An attacker redirects the application's connection to a rogue Kafka instance where they can intercept messages or send malicious data back to the application.
+    - **Impact:** Data exfiltration, data manipulation, potential for further attacks if the malicious broker exploits vulnerabilities in the application.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Hardcode or Securely Manage Broker List:**  Store the list of trusted Kafka broker addresses securely and configure Sarama with this secure list. Avoid dynamic generation from untrusted sources.
+        - **Validate Broker Addresses:** If the broker list is dynamically generated, implement strict validation before using it to configure Sarama.
+        - **Use TLS with Certificate Verification:** Even if the broker is compromised, TLS with proper certificate verification configured in Sarama can prevent the attacker from impersonating a legitimate broker.
+
+- **Attack Surface:** Message Header Manipulation Leading to Security Bypass
+    - **Description:** The application relies on message headers for security decisions without proper validation, allowing attackers to manipulate headers in messages sent *to* Kafka, which are then read by other applications using Sarama.
+    - **How Sarama Contributes:** Sarama allows setting and accessing message headers when producing and consuming messages. If the application logic in other services trusts these headers without validation (facilitated by Sarama's header access), it can be exploited.
+    - **Example:** An application uses a message header set by a producer using Sarama to determine user permissions. An attacker crafts a message with a header indicating elevated privileges, bypassing authorization checks in the consuming application (which uses Sarama to read the header).
+    - **Impact:** Unauthorized access, privilege escalation, data manipulation.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Validate Message Headers:** Implement strict validation on all message headers used for security decisions in applications consuming messages via Sarama.
+        - **Avoid Sole Reliance on Headers for Security:**  Don't rely solely on message headers for critical security decisions. Use more robust mechanisms like authentication and authorization at the application level.
+
+- **Attack Surface:** Unauthorized Access or Misuse of Sarama's Admin Client Functionality
+    - **Description:** If the application uses Sarama's admin client features (e.g., creating/deleting topics, managing ACLs) and this functionality is not properly secured, attackers could perform administrative actions on the Kafka cluster.
+    - **How Sarama Contributes:** Sarama provides an admin client API that allows programmatic interaction with Kafka's administrative functions. If this functionality is exposed without proper authorization controls within the application using Sarama, it becomes an attack vector.
+    - **Example:** An attacker gains access to the application's admin client functionality (exposed through the application's API or internal logic using Sarama's admin client) and deletes critical Kafka topics, causing data loss and service disruption.
+    - **Impact:** Data loss, service disruption, unauthorized modification of Kafka cluster configuration.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Restrict Access to Admin Functionality:** Implement strict authorization controls within the application to limit access to Sarama's admin client features to only authorized users or services.
+        - **Secure Admin Client Credentials:** If the admin client requires separate credentials (configured within Sarama's admin client configuration), manage them securely.
+        - **Implement Input Validation for Admin Operations:** Validate all inputs used with Sarama's admin client to prevent injection attacks or unintended consequences.
