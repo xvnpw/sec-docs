@@ -1,5 +1,3 @@
-java https://github.com/apache/hadoop
-java https://github.com/apache/kafka
 java https://github.com/apache/maven
 java https://github.com/apache/rocketmq
 java https://github.com/apache/skywalking
