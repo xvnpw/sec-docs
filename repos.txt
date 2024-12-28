@@ -1,5 +1,3 @@
-javascript https://github.com/daneden/animate.css
-javascript https://github.com/eggjs/egg
 javascript https://github.com/ElemeFE/element
 javascript https://github.com/emberjs/ember.js
 javascript https://github.com/eslint/eslint
