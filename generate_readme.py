@@ -62,6 +62,8 @@ We need community help to determine:
 ## How to Navigate This Repository
 
 **sec-docs** is organized by programming language, with folders for each major OSS project. Each project contains subfolders with detailed analyses performed at a specific date using a certain LLM model.
+
+### Current Projects
 """
 
 
