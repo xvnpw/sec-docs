@@ -1,5 +1,3 @@
-c https://github.com/redis/redis
-c https://github.com/sqlite/sqlite
 cpp https://github.com/ceph/ceph
 cpp https://github.com/mariadb/mariadb
 cpp https://github.com/mysql/mysql
