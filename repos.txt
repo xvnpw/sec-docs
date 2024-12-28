@@ -1,5 +1,3 @@
-javascript https://github.com/Prettier/prettier
-javascript https://github.com/socketio/socket.io
 javascript https://github.com/standard/standard
 javascript https://github.com/sveltejs/svelte
 javascript https://github.com/twbs/bootstrap
