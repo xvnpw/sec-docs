@@ -1,5 +1,3 @@
-javascript https://github.com/moment/moment
-javascript https://github.com/nodejs/node
 javascript https://github.com/npm/cli
 javascript https://github.com/pixijs/pixi.js
 javascript https://github.com/Prettier/prettier
