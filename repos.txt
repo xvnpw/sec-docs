@@ -1,5 +1,3 @@
-python https://github.com/saltstack/salt
-python https://github.com/scikit-learn/scikit-learn
 python https://github.com/tensorflow/tensorflow
 python https://github.com/tiangolo/fastapi
 python https://github.com/tornadoweb/tornado
