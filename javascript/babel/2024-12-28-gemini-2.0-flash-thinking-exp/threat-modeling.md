@@ -57,13 +57,3 @@ graph LR
         direction LR
         B
     end
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#ccf,stroke:#333,stroke-width:2px
-    linkStyle 0,1 stroke:black,stroke-width:2px;
-    linkStyle 0,1 text-align:center;
-    linkStyle 0,1 font-size:12px;
-    linkStyle 0,1 font-family:sans-serif;
-    linkStyle 0,1 color:black;
-    linkStyle 0,1 stroke-dasharray: 5 5;
-    linkStyle 0,1 tooltip: "Malicious Input Exploitation";
-    linkStyle 1 tooltip: "Compiler Vulnerabilities, Introduction of Vulnerabilities";
