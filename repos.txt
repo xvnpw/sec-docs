@@ -1,5 +1,3 @@
-dart https://github.com/flutter/flutter
-dart https://github.com/flutter/packages
 dart https://github.com/GetStream/stream-chat-flutter
 dart https://github.com/miguelpruivo/flutter_file_picker
 erlang https://github.com/apache/couchdb
