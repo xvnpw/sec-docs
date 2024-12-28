@@ -1,5 +1,3 @@
-java https://github.com/apache/skywalking
-java https://github.com/apache/struts
 java https://github.com/bumptech/glide
 java https://github.com/dbeaver/dbeaver
 java https://github.com/dropwizard/dropwizard
