@@ -1,3 +1,4 @@
+c https://github.com/davatorium/rofi
 kotlin https://github.com/Kotlin/kotlinx.cli
 kotlin https://github.com/Kotlin/kotlinx.coroutines
 kotlin https://github.com/Kotlin/kotlinx.serialization
