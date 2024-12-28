@@ -1,0 +1,4 @@
+
+## High and Critical Docker Threats
+
+| Threat                                  | Description (Attacker Actions & How)                                                                                                                                                                                                                                                           | Impact                                                                                                                               | Affected Docker Component(s)                                  | Risk Severity | Mitigation Strategies
