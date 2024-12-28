@@ -1,33 +1,25 @@
 # sec-docs
-Security documentation for important Open Source Software (OSS) projects, generated using LLM technology.
+An experimental project using LLM technology to generate security documentation for Open Source Software (OSS) projects.
 
-The documentation includes:
-- 🔍 Attack surface analysis
-- 🌳 Attack trees
-- 🔒 Security design reviews
-- 🎯 Threat modeling
+## 🔍 Project Overview
 
-## 🚨 Important Notice: Experimental AI Model
+We're exploring how different LLM models can help create comprehensive security documentation including:
+- Attack surface analysis
+- Attack trees
+- Security design reviews
+- Threat modeling
 
-This documentation was generated using **Gemini 2.0 Flash Thinking Experimental**, an experimental AI model. Please be aware of the following limitations:
+## 🧪 Experimental Status
 
-### Known Issues
-- **Formatting Problems**: The model may produce incorrect or broken:
-  - Mermaid diagrams
-  - Markdown tables
-  - Other formatting elements
+This is an early-phase research project currently testing:
+- Gemini 2.0 Flash Thinking Experimental
+- Other LLM models (planned)
 
-- **Content Reliability**: As this is an experimental model:
-  - Content may contain inaccuracies or hallucinations
-  - The model's knowledge boundaries are not fully understood
-  - Security recommendations should be carefully reviewed
-
-### Reporting Issues
-If you encounter any problems, please help us improve by creating issues:
-1. For formatting issues: Use label `formatting`
-2. For content accuracy issues: Use label `content`
-
-[Create New Issue](https://github.com/xvnpw/sec-docs/issues/new)
+### Help Us Evaluate!
+We need community help to determine:
+1. Which LLM models produce the most accurate security documentation
+2. Which types of security documents are most valuable
+3. How to improve documentation quality and reliability
 
 ## How to Navigate This Repository
 
@@ -352,6 +344,7 @@ If you encounter any problems, please help us improve by creating issues:
 | [**apollo-android**](kotlin/apollo-android/) ([GitHub](https://github.com/apollographql/apollo-android)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/apollo-android/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/apollo-android/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/apollo-android/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/apollo-android/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**compose-jb**](kotlin/compose-jb/) ([GitHub](https://github.com/JetBrains/compose-jb)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/compose-jb/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/compose-jb/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/compose-jb/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/compose-jb/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**detekt**](kotlin/detekt/) ([GitHub](https://github.com/detekt/detekt)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/detekt/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/detekt/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/detekt/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/detekt/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**helidon**](kotlin/helidon/) ([GitHub](https://github.com/oracle/helidon)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/helidon/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/helidon/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/helidon/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/helidon/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**koin**](kotlin/koin/) ([GitHub](https://github.com/insertkoinio/koin)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/koin/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/koin/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/koin/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/koin/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**korge**](kotlin/korge/) ([GitHub](https://github.com/korlibs/korge)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/korge/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/korge/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/korge/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/korge/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**kotlin**](kotlin/kotlin/) ([GitHub](https://github.com/JetBrains/kotlin)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
@@ -361,7 +354,9 @@ If you encounter any problems, please help us improve by creating issues:
 | [**kotlinx.serialization**](kotlin/kotlinx.serialization/) ([GitHub](https://github.com/Kotlin/kotlinx.serialization)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/kotlinx.serialization/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/kotlinx.serialization/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/kotlinx.serialization/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/kotlinx.serialization/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**ksp**](kotlin/ksp/) ([GitHub](https://github.com/google/ksp)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/ksp/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/ksp/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/ksp/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/ksp/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**ktor**](kotlin/ktor/) ([GitHub](https://github.com/ktorio/ktor)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/ktor/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/ktor/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/ktor/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/ktor/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**realm-kotlin**](kotlin/realm-kotlin/) ([GitHub](https://github.com/realm/realm-kotlin)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/realm-kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/realm-kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/realm-kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/realm-kotlin/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**rxhttp**](kotlin/rxhttp/) ([GitHub](https://github.com/liujingxing/rxhttp)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/rxhttp/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/rxhttp/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/rxhttp/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/rxhttp/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**spark**](kotlin/spark/) ([GitHub](https://github.com/perwendel/spark)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/spark/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/spark/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/spark/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/spark/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**sqldelight**](kotlin/sqldelight/) ([GitHub](https://github.com/cashapp/sqldelight)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/sqldelight/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/sqldelight/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/sqldelight/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/sqldelight/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**timber**](kotlin/timber/) ([GitHub](https://github.com/JakeWharton/timber)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](kotlin/timber/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](kotlin/timber/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](kotlin/timber/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](kotlin/timber/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
@@ -414,34 +409,34 @@ If you encounter any problems, please help us improve by creating issues:
 | [**xadmin**](python/xadmin/) ([GitHub](https://github.com/sshwsfc/xadmin)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/xadmin/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/xadmin/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/xadmin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/xadmin/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**xgboost**](python/xgboost/) ([GitHub](https://github.com/dmlc/xgboost)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/xgboost/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/xgboost/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/xgboost/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/xgboost/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
-## Support **sec-docs**
+## ⚠️ Known Limitations
 
-**sec-docs** is an ambitious initiative aimed at enhancing the security of open-source software through AI-powered documentation. We need your support to continue and expand our analysis of major OSS projects.
+- Documentation accuracy varies by model and project
+- Some formatting issues exist (diagrams, tables)
+- Security recommendations need expert validation
+- Model responses may contain inaccuracies
 
-### Why Your Support Matters
+## 🤝 How to Contribute
 
-Open-source software drives much of the technology we rely on daily. However, inadequate security documentation leaves these projects vulnerable. **sec-docs** bridges this gap by:
+Help us improve by:
+1. Reviewing documentation and reporting inaccuracies
+2. Suggesting better LLM models to test
+3. Recommending documentation improvements
+4. Sharing which document types you find most useful
 
-- **Automatic Analysis:** Using advanced AI models to create tailored, comprehensive security documentation.
-- **Simplifying Security:** Making complex security concepts understandable and actionable for developers.
-- **Dynamic Updates:** Keeping documentation current as code evolves.
+### Reporting Issues
+Create issues with:
+- Label `model-evaluation` for LLM model feedback
+- Label `doc-type-feedback` for document type evaluation
+- Label `content` for accuracy concerns
+- Label `formatting` for layout problems
 
-**Note:** So far, the documentation has been generated using the experimental **Gemini 2.0 Flash Thinking** model during its free-of-charge phase. As we move forward, continued access to advanced AI models will incur costs.
+[Create New Issue](https://github.com/xvnpw/sec-docs/issues/new)
 
-### The Cost of Innovation
+## 💝 Support the Project
 
-Generating security documentation for just one project requires over **dozens of thousands of tokens**, costing around **~$15** per project. These expenses are incurred through:
+This research requires access to various AI models and computing resources. Support our work through:
+- [GitHub Sponsors](https://github.com/sponsors/xvnpw)
+- Contributing feedback and improvements
 
-1. **AI Model Access:** API calls and subscriptions to premium LLM services.
-
-### How You Can Make a Difference
-
-Your contributions will fuel the expansion of **sec-docs**, bringing vital security resources to more OSS projects. Together, we can enhance the security landscape of open-source software.
-
-**Ways to Support:**
-
-- **GitHub Sponsors:** Become a sponsor and directly support our ongoing efforts at [GitHub Sponsors](https://github.com/sponsors/xvnpw).
-
-### Thank You
-
-Your support is crucial to our mission and greatly appreciated by the global open-source community. Together, let's make open-source software safer, one project at a time.
+Your support helps us evaluate more models and improve documentation quality for the OSS community.
