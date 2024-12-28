@@ -1,0 +1,53 @@
+- **Threat:** Drupal Core Remote Code Execution (RCE)
+    - **Description:** An attacker exploits a vulnerability in Drupal core to execute arbitrary code on the server. This could involve crafting malicious requests or exploiting insecure data handling.
+    - **Impact:** Full compromise of the Drupal application and potentially the underlying server, allowing the attacker to steal data, install malware, deface the site, or use the server for further attacks.
+    - **Affected Component:** Drupal Core (specific functions or subsystems depending on the vulnerability).
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Regularly update Drupal core to the latest stable version.
+        - Subscribe to Drupal security advisories and apply patches immediately.
+        - Implement a Web Application Firewall (WAF) to detect and block malicious requests.
+        - Follow secure coding practices if developing custom core patches or extensions.
+
+- **Threat:** Drupal Core SQL Injection
+    - **Description:** An attacker crafts malicious SQL queries that are executed by the Drupal core database layer due to a vulnerability in input sanitization or query construction. This allows the attacker to read, modify, or delete data in the database.
+    - **Impact:** Data breaches, data manipulation, privilege escalation (e.g., creating new administrative accounts), denial of service.
+    - **Affected Component:** Drupal Core (database abstraction layer, specific functions handling user input or database interactions).
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Regularly update Drupal core to the latest stable version.
+        - Utilize Drupal's database API correctly and avoid direct SQL queries where possible.
+        - Employ parameterized queries or prepared statements to prevent SQL injection.
+        - Implement input validation and sanitization on all user-provided data.
+        - Regularly audit custom code for potential SQL injection vulnerabilities.
+
+- **Threat:** Insecure Default Configuration
+    - **Description:** An attacker exploits default Drupal settings that are not secure out-of-the-box. This could include weak password policies, overly permissive file permissions, or enabled debugging features in production.
+    - **Impact:** Unauthorized access to administrative areas, information disclosure, potential for further exploitation.
+    - **Affected Component:** Drupal Core (installation process, default settings for user management, file system permissions).
+    - **Risk Severity:** Medium
+    - **Mitigation Strategies:**
+        - Review and harden default configurations during initial setup.
+        - Enforce strong password policies for all user accounts, especially administrative accounts.
+        - Restrict file system permissions to the minimum necessary.
+        - Disable debugging and development features in production environments.
+
+- **Threat:** Insufficient Access Controls
+    - **Description:** An attacker exploits misconfigured user roles and permissions to gain unauthorized access to content or functionality. This could involve exploiting overly permissive roles or vulnerabilities in custom access control logic.
+    - **Impact:** Unauthorized access to sensitive information, ability to modify content, potential for privilege escalation.
+    - **Affected Component:** Drupal Core (user management system, permission system, role configuration).
+    - **Risk Severity:** Medium
+    - **Mitigation Strategies:**
+        - Implement the principle of least privilege when assigning roles and permissions.
+        - Regularly review and audit user roles and permissions.
+        - Carefully configure access control settings for content types, nodes, and other entities.
+
+- **Threat:** Exploiting Unpatched Vulnerabilities
+    - **Description:** An attacker exploits known vulnerabilities in Drupal core for which security patches have been released but not applied to the target site.
+    - **Impact:** Varies depending on the vulnerability, ranging from information disclosure to remote code execution.
+    - **Affected Component:** Drupal Core (vulnerable code sections).
+    - **Risk Severity:** Varies (can be Critical or High depending on the vulnerability).
+    - **Mitigation Strategies:**
+        - Implement a robust patch management process.
+        - Regularly monitor Drupal security advisories and apply patches promptly.
+        - Utilize tools that can help identify outdated components.

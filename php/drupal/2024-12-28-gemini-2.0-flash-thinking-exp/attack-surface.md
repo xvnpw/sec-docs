@@ -1,0 +1,47 @@
+- **Unpatched Drupal Core or Contributed Modules/Themes**
+    - Description:  Known security vulnerabilities exist in specific versions of Drupal core, contributed modules, or themes that have been publicly disclosed and often have available exploits.
+    - How Drupal Contributes: Drupal's modular architecture means vulnerabilities can exist in both the core system and the vast ecosystem of contributed code. The responsibility for patching falls on the site administrator.
+    - Example: A publicly disclosed SQL injection vulnerability in Drupal core version 9.3.x allows an attacker to execute arbitrary SQL queries by crafting a specific URL.
+    - Impact:  Complete compromise of the Drupal site, including data breaches, defacement, malware injection, and potential server takeover.
+    - Risk Severity: Critical
+    - Mitigation Strategies:
+        - Implement a regular update schedule for Drupal core, contributed modules, and themes.
+        - Subscribe to Drupal security advisories (PSA channel) and apply patches promptly.
+        - Utilize tools like Drush or Drupal Console to automate the update process.
+        - Consider using a security monitoring service that alerts on outdated components.
+
+- **Vulnerabilities in Contributed Modules and Themes**
+    - Description:  Security flaws present in third-party modules or themes due to coding errors, lack of security awareness by developers, or malicious intent.
+    - How Drupal Contributes: Drupal's extensive module ecosystem, while beneficial, introduces a larger attack surface as the security of these components relies on individual developers or maintainers.
+    - Example: A contributed module has an unvalidated input field that allows an attacker to inject arbitrary PHP code, leading to remote code execution.
+    - Impact:  Similar to core vulnerabilities, this can lead to site compromise, data breaches, and malware injection. The impact is highly dependent on the module's privileges and functionality.
+    - Risk Severity: High
+    - Mitigation Strategies:
+        - Thoroughly vet contributed modules and themes before installation, considering their popularity, maintainership, and security release history.
+        - Regularly review and audit installed contributed modules and themes for known vulnerabilities.
+        - Uninstall or replace modules that are no longer maintained or have a history of security issues.
+        - Consider using static analysis tools to scan module code for potential vulnerabilities.
+
+- **Insecure File Upload Handling**
+    - Description:  Vulnerabilities in how Drupal handles file uploads, allowing attackers to upload malicious files (e.g., PHP shells) that can be executed on the server.
+    - How Drupal Contributes: Drupal provides file upload mechanisms for various content types and modules. Misconfigurations or vulnerabilities in these mechanisms can be exploited.
+    - Example: An attacker uploads a PHP script disguised as an image through a vulnerable file upload field in a content type, and then accesses the script directly to execute commands on the server.
+    - Impact:  Remote code execution, allowing attackers to gain control of the server, install malware, or deface the website.
+    - Risk Severity: Critical
+    - Mitigation Strategies:
+        - Configure allowed file extensions strictly and only permit necessary types.
+        - Implement robust file validation on the server-side, checking file content and not just the extension.
+        - Store uploaded files outside the webroot and serve them through a separate, non-executable domain or using a secure file serving mechanism.
+        - Use Drupal's built-in file management features and avoid custom, potentially insecure, upload implementations.
+
+- **SQL Injection Vulnerabilities (Specific to Custom/Contributed Code)**
+    - Description:  Flaws in database queries within custom modules or poorly written contributed modules that allow attackers to inject malicious SQL code, potentially leading to data breaches or manipulation.
+    - How Drupal Contributes: While Drupal core provides a robust database abstraction layer to prevent SQL injection, developers writing custom code or contributing modules might bypass or misuse it, introducing vulnerabilities.
+    - Example: A custom module directly concatenates user input into a database query without proper sanitization, allowing an attacker to inject SQL commands through a form field.
+    - Impact:  Data breaches, data manipulation, unauthorized access to sensitive information, and potentially complete database compromise.
+    - Risk Severity: High
+    - Mitigation Strategies:
+        - Always use Drupal's database abstraction layer (e.g., `db_query()`, entity queries) with parameterized queries to prevent SQL injection.
+        - Thoroughly sanitize and validate all user inputs before using them in database queries.
+        - Conduct code reviews and security audits of custom modules and contributed code.
+        - Educate developers on secure coding practices for database interactions in Drupal.
