@@ -1,5 +1,3 @@
-java https://github.com/FasterXML/jackson-core
-java https://github.com/FasterXML/jackson-databind
 java https://github.com/jenkinsci/jenkins
 java https://github.com/qos-ch/slf4j
 javascript https://github.com/minimistjs/minimist
