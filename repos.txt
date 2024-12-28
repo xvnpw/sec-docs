@@ -1,5 +1,3 @@
-java https://github.com/spring-projects/spring-boot
-java https://github.com/spring-projects/spring-framework
 java https://github.com/square/retrofit
 java https://github.com/TeamNewPipe/NewPipe
 javascript https://github.com/airbnb/javascript
