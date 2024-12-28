@@ -1,5 +1,3 @@
-go https://github.com/spf13/cobra
-go https://github.com/spf13/viper
 go https://github.com/StackExchange/dnscontrol
 go https://github.com/uber-go/zap
 go https://github.com/urfave/cli
