@@ -39,7 +39,6 @@ cpp https://github.com/google/benchmark
 cpp https://github.com/google/flatbuffers
 cpp https://github.com/google/leveldb
 cpp https://github.com/google/re2
-cpp https://github.com/KhronosGroup/Vulkan-Samples
 cpp https://github.com/microsoft/calculator
 cpp https://github.com/Microsoft/onnxruntime
 cpp https://github.com/microsoft/terminal
@@ -183,14 +182,12 @@ java https://github.com/dbeaver/dbeaver
 java https://github.com/dropwizard/dropwizard
 java https://github.com/elastic/elasticsearch
 java https://github.com/elastic/logstash
-java https://github.com/eugenp/tutorials
 java https://github.com/google/ExoPlayer
 java https://github.com/google/guava
 java https://github.com/google/guice
 java https://github.com/gradle/gradle
 java https://github.com/greenrobot/EventBus
 java https://github.com/hibernate/hibernate-orm
-java https://github.com/iluwatar/java-design-patterns
 java https://github.com/JakeWharton/butterknife
 java https://github.com/JodaOrg/joda-time
 java https://github.com/keycloak/keycloak
@@ -200,7 +197,6 @@ java https://github.com/oracle/graal
 java https://github.com/PhilJay/MPAndroidChart
 java https://github.com/ReactiveX/RxJava
 java https://github.com/realm/realm-java
-java https://github.com/skylot/jadx
 java https://github.com/spockframework/spock
 java https://github.com/spring-projects/spring-boot
 java https://github.com/spring-projects/spring-framework
