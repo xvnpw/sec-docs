@@ -1,5 +1,3 @@
-javascript https://github.com/ianstormtaylor/slate
-javascript https://github.com/jasmine/jasmine
 javascript https://github.com/jquery/jquery
 javascript https://github.com/Leaflet/Leaflet
 javascript https://github.com/lodash/lodash
