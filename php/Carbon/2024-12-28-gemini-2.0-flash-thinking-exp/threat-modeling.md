@@ -1,0 +1,20 @@
+- **Threat:** Malicious or unexpected date/time strings leading to errors or unexpected behavior.
+    - **Description:** An attacker might provide specially crafted date/time strings to the application's input fields. When this input is passed directly to Carbon's parsing functions (like `Carbon::parse()`), it can lead to parsing errors, exceptions, or even resource exhaustion if the parsing logic becomes computationally expensive due to the malformed input.
+    - **Impact:** Application crashes, denial of service, unexpected application behavior, potential for further exploitation if error handling is insufficient.
+    - **Affected Carbon Component:** Parsing functions (e.g., `Carbon::parse()`, `Carbon::createFromFormat()`).
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement strict input validation and sanitization on all date/time inputs before passing them to Carbon.
+        - Use specific Carbon parsing methods with predefined formats (e.g., `Carbon::createFromFormat()`) instead of relying solely on `Carbon::parse()` for untrusted input.
+        - Implement robust error handling to catch parsing exceptions and prevent application crashes.
+
+- **Threat:** Incorrect timezone conversions leading to security-sensitive logical errors.
+    - **Description:** If the application performs timezone conversions incorrectly using Carbon's methods, especially when dealing with access control, expiry dates, or scheduling, an attacker could exploit these errors to gain unauthorized access or bypass restrictions. For example, an incorrect conversion could make an expired resource appear valid.
+    - **Impact:** Unauthorized access, privilege escalation, bypassing security controls, incorrect enforcement of time-based restrictions.
+    - **Affected Carbon Component:** Timezone conversion methods (e.g., `setTimezone()`, `utc()`, `local()`, `copy()`).
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Thoroughly understand the application's requirements for timezone handling and implement conversions carefully using Carbon's methods.
+        - Store dates and times in a consistent, canonical timezone (e.g., UTC) in the database.
+        - Perform timezone conversions only when necessary, such as for displaying times to users in their local timezone.
+        - Implement unit tests specifically to verify the correctness of timezone conversions in various scenarios using Carbon.
