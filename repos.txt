@@ -1,5 +1,3 @@
-c https://github.com/openssl/openssl
-c https://github.com/wireshark/wireshark
 cpp https://github.com/AcademySoftwareFoundation/openvdb
 cpp https://github.com/facebook/hermes
 cpp https://github.com/fmtlib/fmt
