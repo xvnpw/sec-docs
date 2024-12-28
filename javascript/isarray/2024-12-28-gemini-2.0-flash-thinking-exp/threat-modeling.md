@@ -1,0 +1,10 @@
+* Threat: Prototype Pollution Affecting Type Checking
+    * Description: An attacker exploits a prototype pollution vulnerability *in the same JavaScript environment* where `isarray` is running. This allows them to modify the `Object.prototype.toString` method. Because `isarray` directly uses `Object.prototype.toString.call()` to determine if an object is an array, this manipulation causes `isarray` to return incorrect results. The attacker doesn't need to interact with `isarray` directly, but rather manipulates a core JavaScript mechanism that `isarray` relies upon.
+    * Impact:  `isarray` will incorrectly identify objects, leading to flawed logic within the application that depends on its output. This can bypass security checks or cause the application to process malicious objects as if they were safe arrays, potentially leading to remote code execution or other critical vulnerabilities.
+    * Affected Component: The core functionality of the `isarray` module, specifically its reliance on the standard `Object.prototype.toString` method for type checking.
+    * Risk Severity: High
+    * Mitigation Strategies:
+        * Implement robust input validation and sanitization throughout the application to prevent prototype pollution vulnerabilities that could indirectly affect `isarray`.
+        * If the environment allows, consider freezing the `Object.prototype` to prevent modifications. However, be aware of potential compatibility issues.
+        * When dealing with untrusted data or in security-critical sections, avoid relying solely on `isarray` and consider more robust and isolated type checking mechanisms that are not susceptible to prototype pollution.
+        * Regularly update all dependencies to patch any potential prototype pollution vulnerabilities in other libraries that could be exploited to affect the environment where `isarray` runs.
