@@ -1,5 +1,3 @@
-php https://github.com/laravel/laravel
-php https://github.com/Laravel-Backpack/CRUD
 php https://github.com/mtdowling/cron-expression
 php https://github.com/nextcloud/server
 php https://github.com/nikic/FastRoute
