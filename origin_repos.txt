@@ -54,7 +54,7 @@ cpp https://github.com/google/benchmark
 cpp https://github.com/google/flatbuffers
 cpp https://github.com/google/leveldb
 cpp https://github.com/google/re2
-cpp https://github.com/mariadb/mariadb
+cpp https://github.com/MariaDB/server
 cpp https://github.com/microsoft/calculator
 cpp https://github.com/Microsoft/onnxruntime
 cpp https://github.com/microsoft/terminal
@@ -186,7 +186,7 @@ go https://github.com/urfave/cli
 go https://github.com/valyala/fasthttp
 groovy https://github.com/apache/groovy
 haskell https://github.com/jgm/pandoc
-java http://github.com/qos-ch/logback
+java https://github.com/qos-ch/logback
 java https://github.com/Activiti/Activiti
 java https://github.com/airbnb/lottie-android
 java https://github.com/alibaba/druid
@@ -239,7 +239,7 @@ java https://github.com/spring-projects/spring-boot
 java https://github.com/spring-projects/spring-framework
 java https://github.com/square/retrofit
 java https://github.com/TeamNewPipe/NewPipe
-javascript http://github.com/substack/minimist
+javascript https://github.com/minimistjs/minimist
 javascript https://github.com/addaleax/natives
 javascript https://github.com/ampproject/amphtml
 javascript https://github.com/asciinema/asciinema-player
@@ -486,7 +486,6 @@ rust https://github.com/wasmerio/wasmer
 rust https://github.com/yewstack/yew
 scala https://github.com/apache/spark
 scala https://github.com/scala/scala
-shell https://github.com/autotools-mirror/autotools
 swift https://github.com/Alamofire/Alamofire
 swift https://github.com/ashleymills/Reachability.swift
 swift https://github.com/daltoniam/Starscream

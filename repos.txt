@@ -1,6 +1,6 @@
 go https://github.com/sigstore/sigstore
 go https://github.com/traefik/traefik
-java http://github.com/qos-ch/logback
+java https://github.com/qos-ch/logback
 java https://github.com/apache/commons-codec
 java https://github.com/apache/commons-io
 java https://github.com/apache/commons-lang
@@ -14,7 +14,7 @@ java https://github.com/FasterXML/jackson-core
 java https://github.com/FasterXML/jackson-databind
 java https://github.com/jenkinsci/jenkins
 java https://github.com/qos-ch/slf4j
-javascript http://github.com/substack/minimist
+javascript https://github.com/minimistjs/minimist
 javascript https://github.com/addaleax/natives
 javascript https://github.com/ampproject/amphtml
 javascript https://github.com/caolan/async
@@ -136,7 +136,6 @@ rust https://github.com/wasmerio/wasmer
 rust https://github.com/yewstack/yew
 scala https://github.com/apache/spark
 scala https://github.com/scala/scala
-shell https://github.com/autotools-mirror/autotools
 swift https://github.com/Alamofire/Alamofire
 swift https://github.com/ashleymills/Reachability.swift
 swift https://github.com/daltoniam/Starscream
