@@ -1,5 +1,3 @@
-cpp https://github.com/mysql/mysql
-cpp https://github.com/signalapp/Signal-Android
 erlang https://github.com/rabbitmq/rabbitmq-server
 go https://github.com/distribution/distribution
 go https://github.com/hashicorp/vault
