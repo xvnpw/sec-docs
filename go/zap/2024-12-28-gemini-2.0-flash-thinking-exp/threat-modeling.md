@@ -37,17 +37,19 @@ Here's the updated Mermaid flowchart, still relevant as it shows the data flow i
 
 ```mermaid
 graph LR
-    A["Application Code"] --> | "Log Message" | B("Zap Library Core");
-    B --> | "Formatted Log Event" | C{{"Log Destination (File, Network, etc.)"}};
+    A["Application Code"] --> |Log Message| B["Zap Library Core"];
+    B --> |Formatted Log Event| C["Log Destination (File, Network, etc.)"];
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#ccf,stroke:#333,stroke-width:2px
     style C fill:#ddf,stroke:#333,stroke-width:2px
 
     subgraph "Threat Points"
         direction LR
-        T1["Accidental Data Exposure"] -- "Occurs during log message creation using Zap" --> A
-        T5["Zap Library Vulnerabilities"] -- "Inherent to the Zap library code" --> B
+        T1["Accidental Data Exposure"] --> |Occurs during log message creation using Zap| A
+        T5["Zap Library Vulnerabilities"] --> |Inherent to the Zap library code| B
     end
 
-    A -- Threat Point T1 --> B
-    B -- Threat Point T5 --> C
+    A --> |Threat Point T1| B
+    B --> |Threat Point T5| C
+
+```
