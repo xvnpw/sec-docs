@@ -1,5 +1,3 @@
-go https://github.com/dapr/dapr
-go https://github.com/docker/cli
 go https://github.com/docker/docker
 go https://github.com/etcd-io/etcd
 go https://github.com/fatedier/frp
