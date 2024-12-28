@@ -1,5 +1,3 @@
-cpp https://github.com/open-source-parsers/jsoncpp
-csharp https://github.com/aspnetboilerplate/aspnetboilerplate
 csharp https://github.com/dotnet/reactive
 csharp https://github.com/mono/mono
 csharp https://github.com/mono/MonoGame
