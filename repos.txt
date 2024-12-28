@@ -1,5 +1,3 @@
-go https://github.com/gohugoio/hugo
-go https://github.com/go-kit/kit
 go https://github.com/go-sql-driver/mysql
 java https://github.com/apache/hadoop
 java https://github.com/spockframework/spock
