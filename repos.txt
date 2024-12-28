@@ -7,13 +7,11 @@ kotlin https://github.com/Kotlin/kotlinx.coroutines
 kotlin https://github.com/Kotlin/kotlinx.serialization
 kotlin https://github.com/Kotlin/kotlinx-datetime
 kotlin https://github.com/ktorio/ktor
-kotlin https://github.com/ktorio/ktor-samples
 kotlin https://github.com/liujingxing/rxhttp
 kotlin https://github.com/mikepenz/MaterialDrawer
 kotlin https://github.com/oracle/helidon
 kotlin https://github.com/permissions-dispatcher/PermissionsDispatcher
 kotlin https://github.com/perwendel/spark
-kotlin https://github.com/pinterest/ktlint
 kotlin https://github.com/realm/realm-kotlin
 kotlin https://github.com/square/leakcanary
 kotlin https://github.com/square/okhttp
@@ -173,7 +171,6 @@ typescript https://github.com/ant-design/ant-design
 typescript https://github.com/ant-design/ant-design-pro
 typescript https://github.com/apollographql/apollo-client
 typescript https://github.com/aws/aws-cdk
-typescript https://github.com/conventional-changelog/commitlint
 typescript https://github.com/DefinitelyTyped/DefinitelyTyped
 typescript https://github.com/facebook/jest
 typescript https://github.com/formatjs/formatjs
@@ -201,7 +198,6 @@ typescript https://github.com/remix-run/react-router
 typescript https://github.com/remix-run/remix
 typescript https://github.com/storybookjs/storybook
 typescript https://github.com/typeorm/typeorm
-typescript https://github.com/typescript-eslint/typescript-eslint
 typescript https://github.com/umijs/umi
 typescript https://github.com/vuejs/vue
 typescript https://github.com/vuejs/vue-next
