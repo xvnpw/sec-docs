@@ -1,5 +1,3 @@
-c https://github.com/nginx/nginx
-c https://github.com/openssh/openssh-portable
 c https://github.com/OpenVPN/openvpn
 c https://github.com/postgres/postgres
 c https://github.com/redis/redis
