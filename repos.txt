@@ -1,5 +1,3 @@
-go https://github.com/gohugoio/hugo
-go https://github.com/go-kit/kit
 go https://github.com/golang/go
 go https://github.com/golang-migrate/migrate
 go https://github.com/go-martini/martini
