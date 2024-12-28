@@ -1,4 +1,0 @@
-Okay, Development Team, here's the updated threat list focusing only on **high and critical** threats that **directly involve Graphite-Web**:
-
-```markdown
-| Threat                                      | Description (Attacker Actions & How)                                                                                                                                                                                                                                                           | Impact                                                                                                                               | Affected Graphite-Web Component(s)

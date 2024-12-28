@@ -1,4 +1,0 @@
-
-## High and Critical Threats Directly Involving Clean Architecture (ardalis/CleanArchitecture)
-
-| Threat                                      | Description (Attacker Action & How)                                                                                                                                                                                                                                                           | Impact                                                                                                                               | Affected Component                                                                 | Risk Severity | Mitigation Strategies

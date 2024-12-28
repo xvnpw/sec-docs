@@ -7,8 +7,10 @@ cat $TMP_FILE | while read line; do
     grep $REPO origin_repos.txt >> redo_repos.txt
 done
 
-# cat $TMP_FILE | while read line; do
-#     echo $line | xargs -I {} rm -r {}
-# done
+cat redo_repos.txt | sort -u -o redo_repos.txt
+
+cat $TMP_FILE | while read line; do
+    echo $line | cut -d'/' -f1-3 | xargs -I {} rm -rf {}
+done
 
 rm $TMP_FILE

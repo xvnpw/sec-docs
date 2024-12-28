@@ -1,2 +1,0 @@
-
-| Threat                     | Description (Attacker Action & How)                                                                                                                                                                                             | Impact                                                                                                                               | Affected Nuke Component(s)                                                                 | Risk Severity | Mitigation Strategies

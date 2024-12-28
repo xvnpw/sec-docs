@@ -1,4 +1,0 @@
-
-## High and Critical Express.js Threats
-
-| Threat                                  | Description (Attacker Action & Method)
