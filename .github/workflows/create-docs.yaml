@@ -121,9 +121,6 @@ jobs:
               -v "${{ github.workspace }}/target_repo:/code" \
               -v "${{ github.workspace }}/output:/output" \
               -e OPENAI_API_KEY \
-              -e LANGCHAIN_API_KEY \
-              -e LANGCHAIN_TRACING_V2=true \
-              -e LANGCHAIN_PROJECT=sec-docs \
               -e GOOGLE_API_KEY \
               ghcr.io/xvnpw/ai-security-analyzer:latest \
               $MODE -v -t $TARGET \
