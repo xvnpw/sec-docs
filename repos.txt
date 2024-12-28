@@ -75,7 +75,6 @@ python https://github.com/tiangolo/fastapi
 python https://github.com/tornadoweb/tornado
 r https://github.com/tidyverse/ggplot2
 ruby https://github.com/activemerchant/active_merchant
-ruby https://github.com/bbatsov/rubocop
 ruby https://github.com/capistrano/capistrano
 ruby https://github.com/chef/chef
 ruby https://github.com/CocoaPods/CocoaPods
@@ -101,7 +100,6 @@ ruby https://github.com/rails/rails
 ruby https://github.com/rails-api/active_model_serializers
 ruby https://github.com/resque/resque
 ruby https://github.com/rpush/rpush
-ruby https://github.com/rubocop-hq/rubocop
 ruby https://github.com/ruby/ruby
 ruby https://github.com/rubygems/rubygems
 ruby https://github.com/ruby-grape/grape
