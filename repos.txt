@@ -1,5 +1,3 @@
-javascript https://github.com/sveltejs/svelte
-php https://github.com/mtdowling/cron-expression
 python https://github.com/cocos2d/cocos2d-x
 python https://github.com/fabric/fabric
 python https://github.com/getredash/redash
