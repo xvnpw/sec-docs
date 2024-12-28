@@ -1,5 +1,3 @@
-php https://github.com/composer/composer
-php https://github.com/doctrine/orm
 php https://github.com/elastic/elasticsearch-php
 php https://github.com/filp/whoops
 php https://github.com/getsentry/sentry-php
