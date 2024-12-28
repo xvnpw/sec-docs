@@ -1,5 +1,3 @@
-javascript https://github.com/moment/moment
-javascript https://github.com/standard/standard
 javascript https://github.com/sveltejs/svelte
 php https://github.com/mtdowling/cron-expression
 python https://github.com/cocos2d/cocos2d-x
