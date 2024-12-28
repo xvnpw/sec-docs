@@ -1,0 +1,61 @@
+Here's the updated list of key attack surfaces directly involving Elasticsearch, with high and critical severity:
+
+- **Attack Surface:** Unsecured Default Ports
+    - **Description:** Elasticsearch, by default, listens on ports 9200 (HTTP) and 9300 (transport protocol) without requiring authentication.
+    - **Elasticsearch Contribution:**  Elasticsearch's default configuration exposes these ports, making it immediately accessible on the network.
+    - **Example:** An attacker can directly access the Elasticsearch API on port 9200 without providing credentials, potentially retrieving sensitive data or manipulating the cluster.
+    - **Impact:** Full compromise of the Elasticsearch cluster, including data breaches, data manipulation, and denial of service.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Configure `network.host` in `elasticsearch.yml` to bind Elasticsearch to specific internal IP addresses, limiting external access.
+        - Implement network firewalls to restrict access to ports 9200 and 9300 from untrusted networks.
+        - Enable Elasticsearch security features (Security plugin) and configure authentication and authorization for all access.
+
+- **Attack Surface:** Elasticsearch Query DSL Injection
+    - **Description:**  If user-provided input is directly incorporated into Elasticsearch Query DSL queries without proper sanitization, attackers can inject malicious query fragments.
+    - **Elasticsearch Contribution:** Elasticsearch's powerful and flexible Query DSL allows for complex queries, but this flexibility can be exploited if not handled carefully by the application.
+    - **Example:** An application allows users to search by name. A malicious user inputs `* OR _id: "malicious_id"` which could return or manipulate data beyond their intended scope.
+    - **Impact:** Data exfiltration, data modification, denial of service by executing resource-intensive queries, and potentially even remote code execution in older versions with scripting enabled.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Use parameterized queries or prepared statements where possible.
+        - Implement strict input validation and sanitization on the application side *before* sending queries to Elasticsearch.
+        - Avoid constructing raw Query DSL strings from user input. Utilize Elasticsearch client libraries' query builder methods.
+        - Disable scripting if not absolutely necessary, or implement strict controls and sandboxing for scripting languages.
+
+- **Attack Surface:** Insecure Plugin Management
+    - **Description:**  Installing untrusted or vulnerable Elasticsearch plugins can introduce security risks.
+    - **Elasticsearch Contribution:** Elasticsearch's plugin architecture allows extending its functionality, but this also creates an avenue for introducing vulnerabilities directly within the Elasticsearch process.
+    - **Example:** A vulnerable plugin has a remote code execution flaw. An attacker exploits this flaw to gain control of the Elasticsearch server.
+    - **Impact:** Remote code execution, data breaches, denial of service, and other forms of system compromise.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Only install plugins from trusted sources.
+        - Regularly audit installed plugins and their versions for known vulnerabilities.
+        - Implement a process for vetting and approving plugin installations.
+        - Consider using Elasticsearch's security features to control plugin installation.
+
+- **Attack Surface:**  Unauthorized Access to APIs
+    - **Description:**  Lack of proper authentication and authorization controls allows unauthorized users to access and manipulate Elasticsearch APIs.
+    - **Elasticsearch Contribution:** Elasticsearch provides various APIs for managing and interacting with data and the cluster. Without security measures, these APIs are open to abuse.
+    - **Example:** An attacker uses the Index Management API to delete critical indices, causing data loss.
+    - **Impact:** Data loss, data manipulation, denial of service, and potential compromise of the entire Elasticsearch cluster.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Enable and configure Elasticsearch's Security plugin (or a similar security solution).
+        - Implement strong authentication mechanisms (e.g., username/password, API keys, TLS client certificates).
+        - Configure role-based access control (RBAC) to restrict API access based on user roles and permissions.
+        - Ensure all API requests are authenticated and authorized.
+
+- **Attack Surface:**  Scripting Vulnerabilities (Painless, etc.)
+    - **Description:**  If scripting is enabled in Elasticsearch, vulnerabilities in the scripting engine or poorly written scripts can be exploited to execute arbitrary code.
+    - **Elasticsearch Contribution:** Elasticsearch allows scripting for advanced queries and aggregations, providing powerful functionality but also potential security risks directly within the Elasticsearch process.
+    - **Example:** An attacker crafts a malicious Painless script that reads sensitive files from the Elasticsearch server.
+    - **Impact:** Remote code execution, data breaches, and potential full system compromise.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Disable scripting if it's not required.
+        - If scripting is necessary, use the least privileged context possible.
+        - Implement strict controls and sandboxing for scripting languages.
+        - Regularly review and audit scripts for potential vulnerabilities.
+        - Keep Elasticsearch and its scripting engine up to date.
