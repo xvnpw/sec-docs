@@ -1,5 +1,3 @@
-go https://github.com/micro/go-micro
-go https://github.com/micro/micro
 go https://github.com/moby/moby
 go https://github.com/nsqio/nsq
 go https://github.com/olivere/elastic
