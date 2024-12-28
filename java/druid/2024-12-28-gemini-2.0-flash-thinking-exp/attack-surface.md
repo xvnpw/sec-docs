@@ -1,0 +1,35 @@
+- **Attack Surface: SQL Injection Vulnerabilities**
+    - **Description:** Attackers inject malicious SQL code into queries executed by Druid, potentially gaining unauthorized access to or manipulating data.
+    - **How Druid Contributes:** Druid parses and executes SQL queries. If user-provided input is not properly sanitized or parameterized before being incorporated into these queries, it creates an entry point for SQL injection.
+    - **Example:** An application allows users to filter data based on a name. If the application directly concatenates the user-provided name into a Druid SQL query like `SELECT * FROM users WHERE name = '` + userInput + `'`, an attacker could input `' OR 1=1 --` to bypass the intended filter and retrieve all user data.
+    - **Impact:** Data breach, data modification, potential for denial of service, and in some cases, the ability to execute arbitrary commands on the database server.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Use Parameterized Queries (Prepared Statements): This is the most effective way to prevent SQL injection. Parameterized queries treat user input as data, not executable code.
+        - Input Validation and Sanitization: Validate and sanitize all user-provided input before using it in Druid queries. This includes checking data types, lengths, and removing potentially malicious characters.
+        - Principle of Least Privilege: Ensure the database user Druid connects with has only the necessary permissions to perform its intended tasks, limiting the damage an attacker can do even with a successful injection.
+        - Regular Security Audits and Penetration Testing: Identify potential SQL injection vulnerabilities in the application's interaction with Druid.
+
+- **Attack Surface: Configuration Vulnerabilities (Exposed Credentials)**
+    - **Description:** Sensitive information, such as database credentials, is stored insecurely in Druid's configuration files or application settings.
+    - **How Druid Contributes:** Druid requires configuration to connect to data sources. If these configurations store credentials in plain text or use weak encryption, they become a target for attackers.
+    - **Example:** Database connection details, including the username and password, are stored in plain text within a `druid.properties` file accessible to unauthorized users.
+    - **Impact:** Complete compromise of the database, allowing attackers to access, modify, or delete data.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Avoid Storing Credentials Directly in Configuration Files: Use environment variables, secure vaults (like HashiCorp Vault), or dedicated credential management systems to store sensitive information.
+        - Encrypt Configuration Files: If storing credentials in files is unavoidable, ensure they are properly encrypted.
+        - Restrict Access to Configuration Files: Implement strict access controls to ensure only authorized personnel and processes can read configuration files.
+        - Regularly Rotate Credentials: Change database passwords and other sensitive credentials periodically.
+
+- **Attack Surface: Serialization/Deserialization Vulnerabilities**
+    - **Description:** If Druid uses serialization and deserialization of data, particularly from untrusted sources, it can be vulnerable to attacks where malicious serialized objects can lead to code execution.
+    - **How Druid Contributes:** If Druid deserializes data from external sources (e.g., network requests, configuration), and this process is not secured, it can be exploited.
+    - **Example:** An attacker crafts a malicious serialized Java object. If Druid deserializes this object without proper validation, it could lead to the execution of arbitrary code on the server.
+    - **Impact:** Remote code execution, potentially leading to complete system compromise.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Avoid Deserializing Untrusted Data: Minimize or eliminate the deserialization of data from untrusted sources.
+        - Use Safe Serialization Mechanisms: If deserialization is necessary, prefer safer alternatives to Java's built-in serialization, such as JSON or Protocol Buffers.
+        - Implement Input Validation and Sanitization: If deserialization from untrusted sources is unavoidable, rigorously validate and sanitize the data before deserialization.
+        - Keep Serialization Libraries Up-to-Date: Ensure any serialization libraries used are up-to-date to patch known vulnerabilities.
