@@ -1,5 +1,5 @@
 {
-    "repo_url": "https://github.com/permissions-dispatcher/PermissionsDispatcher",
+    "repo_url": "https://github.com/oracle/helidon",
     "analyzer_args": "",
     "agent_provider": "google",
     "agent_model": "gemini-2.0-flash-thinking-exp",
