@@ -1,5 +1,3 @@
-javascript https://github.com/vercel/next.js
-javascript https://github.com/webpack/webpack
 julia https://github.com/FluxML/Flux.jl
 kotlin https://github.com/airbnb/MvRx
 kotlin https://github.com/apollographql/apollo-android
