@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 go https://github.com/sigstore/sigstore
 go https://github.com/traefik/traefik
 java https://github.com/qos-ch/logback
 java https://github.com/apache/commons-codec
-=======
->>>>>>> 96e0175efcc827d7a4f57ff3e319c7b060d287ba
 java https://github.com/apache/commons-io
 java https://github.com/apache/commons-lang
 java https://github.com/apache/httpcomponents-client
