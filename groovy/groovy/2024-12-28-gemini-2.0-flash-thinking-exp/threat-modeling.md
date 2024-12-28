@@ -44,23 +44,3 @@ Here's a list of high and critical threats that directly involve Apache Groovy:
         *   Implement integrity checks on JAR files loaded into the classpath.
         *   Run the application with restricted file system permissions to prevent unauthorized modifications.
         *   Avoid dynamically adding JAR files to the classpath at runtime if possible.
-
-**Data Flow Diagram with High and Critical Threat Points:**
-
-```mermaid
-graph LR
-    subgraph "Application Boundary"
-        A["User Input/External Data"] --> B("Application Logic");
-        B --> C{"Groovy Engine (GroovyShell, Eval, etc.)"};
-        C --> D["Executed Groovy Code"];
-        D --> E["System Resources/Data"];
-        B --> F["Application Output"];
-    end
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#ccf,stroke:#333,stroke-width:2px
-    style C fill:#aaf,stroke:#333,stroke-width:2px
-    linkStyle 0,1,2 stroke:red,stroke-width:2px;
-
-    link A --> C "1. Code Injection"
-    link A --> B "2. Insecure Deserialization (via data)"
-    link "Application Boundary" -- "3. Classpath Manipulation (external influence)" --> C
