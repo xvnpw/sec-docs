@@ -1,0 +1,82 @@
+- **Attack Surface: Exposed Docker Daemon Socket**
+    - Description: The Docker daemon socket (`/var/run/docker.sock`) provides a powerful interface to control the Docker daemon. If exposed without proper access controls, it allows unauthorized users or processes to manage containers and the Docker environment.
+    - How Docker Contributes: Docker uses this socket for communication between the Docker client and the daemon. Making it accessible outside of the intended scope creates the vulnerability.
+    - Example: An application running on the same host as the Docker daemon, if compromised, could use the exposed socket to create privileged containers, mount host directories, or even execute commands on the host.
+    - Impact: Full control over the Docker environment, potentially leading to container escape, host compromise, data breaches, and denial of service.
+    - Risk Severity: Critical
+    - Mitigation Strategies:
+        - Restrict access to the Docker daemon socket using file system permissions.
+        - Avoid exposing the socket directly to containers or other applications unless absolutely necessary.
+        - Use alternative methods for inter-container communication or management, such as the Docker API with proper authentication.
+        - Consider using a dedicated management network for Docker communication.
+
+- **Attack Surface: Pulling Images from Untrusted Registries**
+    - Description: Downloading and running Docker images from public or untrusted registries introduces the risk of executing malicious code embedded within those images.
+    - How Docker Contributes: Docker's core functionality relies on pulling images from registries to create containers. The lack of inherent trust in public registries creates the risk.
+    - Example: A developer pulls a seemingly legitimate image from a public registry, unaware that it contains a backdoor that grants an attacker access to the running container or the host system.
+    - Impact: Container compromise, host compromise, data theft, introduction of malware into the environment.
+    - Risk Severity: High
+    - Mitigation Strategies:
+        - Only pull images from trusted and verified registries.
+        - Implement image scanning tools to identify vulnerabilities and malware in images before deployment.
+        - Use private registries to host internally built and vetted images.
+        - Implement a process for verifying the integrity and authenticity of images (e.g., using image signing).
+
+- **Attack Surface: Insecurely Configured Container Networking**
+    - Description: Misconfigurations in Docker networking can expose containers to unnecessary network traffic and potential attacks.
+    - How Docker Contributes: Docker provides various networking options, and incorrect configuration can lead to security vulnerabilities.
+    - Example: Exposing a container port directly to the public internet without proper firewall rules or access controls allows anyone to attempt to connect to the application running inside.
+    - Impact: Unauthorized access to containerized applications, data breaches, denial of service attacks.
+    - Risk Severity: High
+    - Mitigation Strategies:
+        - Use Docker's built-in networking features to isolate containers.
+        - Implement network policies and firewalls to control traffic to and from containers.
+        - Avoid exposing container ports directly to the public internet whenever possible. Use reverse proxies or load balancers with appropriate security measures.
+        - Carefully consider the network mode used for containers (e.g., bridge, host, overlay).
+
+- **Attack Surface: Volume Mounts Exposing Host Filesystem**
+    - Description: Incorrectly configured volume mounts can expose sensitive files and directories from the host system to containers, potentially allowing unauthorized access or modification.
+    - How Docker Contributes: Docker's volume feature allows containers to access files and directories on the host. Misuse of this feature creates the risk.
+    - Example: Mounting the root directory (`/`) of the host system into a container with write access grants the container full control over the host's filesystem.
+    - Impact: Host compromise, data breaches, modification or deletion of critical system files.
+    - Risk Severity: Critical
+    - Mitigation Strategies:
+        - Follow the principle of least privilege when mounting volumes. Only mount necessary directories and with the minimum required permissions.
+        - Avoid mounting sensitive host directories into containers.
+        - Use named volumes instead of bind mounts when possible, as they offer better isolation.
+        - Regularly review and audit volume configurations.
+
+- **Attack Surface: Secrets Management within Docker Images**
+    - Description: Storing sensitive information like API keys, passwords, or certificates directly within Docker images makes them easily accessible to anyone with access to the image.
+    - How Docker Contributes: Docker images are often shared and stored, making embedded secrets vulnerable.
+    - Example: An API key is hardcoded into a Dockerfile or copied into an image layer. This key can be extracted by anyone who has access to the image.
+    - Impact: Unauthorized access to external services, data breaches, account compromise.
+    - Risk Severity: High
+    - Mitigation Strategies:
+        - Avoid storing secrets directly in Dockerfiles or image layers.
+        - Use Docker Secrets or other dedicated secret management solutions.
+        - Mount secrets as files or environment variables at runtime.
+        - Utilize build arguments and multi-stage builds to prevent secrets from being permanently baked into the final image.
+
+- **Attack Surface: Container Escape Vulnerabilities**
+    - Description: Vulnerabilities in the container runtime (e.g., containerd, runc) or the underlying kernel can allow an attacker to break out of the container's isolation and gain access to the host system.
+    - How Docker Contributes: Docker relies on these underlying technologies for containerization, and their vulnerabilities can be exploited.
+    - Example: A vulnerability in the `runc` runtime allows an attacker within a container to execute arbitrary code on the host system with root privileges.
+    - Impact: Full host compromise, access to sensitive data on the host, ability to control other containers.
+    - Risk Severity: Critical
+    - Mitigation Strategies:
+        - Keep the Docker engine, container runtime, and host kernel updated with the latest security patches.
+        - Implement and enforce strong security profiles for containers (e.g., AppArmor, SELinux).
+        - Regularly audit and review container configurations and security settings.
+
+- **Attack Surface: Docker API Exposure without Proper Authentication**
+    - Description: Exposing the Docker API (either locally or remotely) without proper authentication and authorization allows unauthorized users to manage containers and the Docker environment.
+    - How Docker Contributes: Docker provides an API for programmatic interaction, and securing this API is crucial.
+    - Example: A remotely accessible Docker API endpoint without authentication allows an attacker to create, start, stop, and delete containers at will.
+    - Impact: Full control over the Docker environment, potentially leading to container escape, host compromise, data breaches, and denial of service.
+    - Risk Severity: Critical
+    - Mitigation Strategies:
+        - Enable TLS authentication for the Docker API.
+        - Implement strong authentication and authorization mechanisms for API access.
+        - Restrict access to the Docker API to authorized users and systems only.
+        - Avoid exposing the Docker API directly to the public internet.
