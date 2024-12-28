@@ -1,5 +1,5 @@
 {
-    "repo_url": "http://github.com/qos-ch/logback",
+    "repo_url": "https://github.com/qos-ch/logback",
     "analyzer_args": "",
     "agent_provider": "google",
     "agent_model": "gemini-2.0-flash-thinking-exp",
