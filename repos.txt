@@ -1,5 +1,3 @@
-c https://github.com/eclipse-mosquitto/mosquitto
-c https://github.com/facebook/zstd
 c https://github.com/gpg/gnupg
 c https://github.com/haproxy/haproxy
 c https://github.com/madler/zlib
