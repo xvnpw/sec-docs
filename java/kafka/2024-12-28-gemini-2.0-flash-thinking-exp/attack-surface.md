@@ -1,0 +1,64 @@
+- **Unauthenticated Access to Broker Ports:**
+    - **Description:** Kafka brokers expose ports for inter-broker and client communication. If these ports are open without authentication, unauthorized entities can connect.
+    - **How Kafka Contributes:** Kafka brokers, by default, can be configured without authentication mechanisms enabled.
+    - **Example:** A malicious actor on the same network gains access to the broker port (e.g., 9092) and can send arbitrary Kafka requests.
+    - **Impact:**  Data breaches, data manipulation, denial of service, cluster disruption.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Implement strong authentication mechanisms like SASL/PLAIN, SASL/SCRAM, or mutual TLS for client and inter-broker communication.
+        - Use network segmentation and firewalls to restrict access to broker ports to authorized hosts only.
+
+- **Weak or Misconfigured Authentication:**
+    - **Description:** Even with authentication enabled, using weak or improperly configured mechanisms can be easily bypassed.
+    - **How Kafka Contributes:** Kafka supports various authentication methods, and their strength depends on configuration and implementation.
+    - **Example:** Using default or easily guessable credentials for SASL/PLAIN authentication.
+    - **Impact:** Unauthorized access, data breaches, data manipulation.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Enforce strong password policies for SASL/PLAIN or SASL/SCRAM.
+        - Prefer more secure authentication methods like mutual TLS.
+        - Regularly rotate authentication credentials.
+        - Properly configure access control lists (ACLs) in conjunction with authentication.
+
+- **Lack of Authorization Controls:**
+    - **Description:** Even with authenticated clients, insufficient authorization controls allow users or applications to perform actions they shouldn't (e.g., accessing sensitive topics).
+    - **How Kafka Contributes:** Kafka's authorization is managed through ACLs, which need to be explicitly configured.
+    - **Example:** A consumer application with valid credentials can read data from a topic it's not intended to access.
+    - **Impact:** Data breaches, unauthorized data access, compliance violations.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement granular ACLs to control access to topics, consumer groups, and other Kafka resources based on the principle of least privilege.
+        - Regularly review and update ACLs as application requirements change.
+
+- **Data in Transit Encryption Missing or Weak:**
+    - **Description:**  Data transmitted between brokers and clients is vulnerable to eavesdropping if not encrypted.
+    - **How Kafka Contributes:** Kafka transmits data over the network between brokers and clients.
+    - **Example:** An attacker eavesdropping on network traffic intercepts sensitive messages being produced or consumed.
+    - **Impact:** Data breaches, exposure of sensitive information.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Enable TLS/SSL encryption for both client-broker and inter-broker communication.
+        - Ensure strong cipher suites are configured for TLS/SSL.
+        - Properly manage and rotate TLS certificates.
+
+- **Vulnerabilities in Kafka Components:**
+    - **Description:**  Known or zero-day vulnerabilities in the Kafka broker, ZooKeeper (if used), Kafka Connect, or Kafka Streams components can be exploited.
+    - **How Kafka Contributes:** Kafka is a complex software system with its own codebase and dependencies.
+    - **Example:** Exploiting a known remote code execution vulnerability in a specific version of the Kafka broker.
+    - **Impact:**  Complete compromise of the Kafka cluster, data breaches, denial of service.
+    - **Risk Severity:** Critical (for actively exploited vulnerabilities) to High (for known but not actively exploited).
+    - **Mitigation Strategies:**
+        - Regularly update Kafka and its dependencies to the latest stable versions with security patches.
+        - Subscribe to security mailing lists and monitor for vulnerability announcements.
+        - Implement a vulnerability management process to identify and remediate known issues.
+
+- **Malicious Consumers Exfiltrating Data:**
+    - **Description:** A compromised or malicious consumer application can read and exfiltrate sensitive data from Kafka topics.
+    - **How Kafka Contributes:** Kafka allows consumers to read messages from topics.
+    - **Example:** A compromised application reads sensitive customer data from a Kafka topic and sends it to an external attacker.
+    - **Impact:** Data breaches, exposure of sensitive information, compliance violations.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement strong authentication and authorization for consumers.
+        - Monitor consumer activity for suspicious behavior.
+        - Implement data loss prevention (DLP) measures around consumer applications.
