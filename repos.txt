@@ -1,3 +1,16 @@
+clojure https://github.com/metabase/metabase
+cpp https://github.com/boostorg/boost
+cpp https://github.com/facebook/rocksdb
+cpp https://github.com/microsoft/calculator
+cpp https://github.com/Microsoft/Win2D
+cpp https://github.com/nlohmann/json
+cpp https://github.com/open-source-parsers/jsoncpp
+csharp https://github.com/aspnetboilerplate/aspnetboilerplate
+csharp https://github.com/dotnet/reactive
+csharp https://github.com/mono/mono
+csharp https://github.com/mono/MonoGame
+dart https://github.com/dart-lang/http
+python https://github.com/ansible/ansible
 cpp https://github.com/AcademySoftwareFoundation/openvdb
 cpp https://github.com/facebook/hermes
 cpp https://github.com/fmtlib/fmt
