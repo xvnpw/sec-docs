@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/symfony/finder",
+  "analyzer_args": "",
+  "start_datetime": "2024-12-28T23:21:52Z",
+  "end_datetime": "2024-12-28T23:25:43Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "61530",
+  "mode": "github"
+}
