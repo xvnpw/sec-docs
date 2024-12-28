@@ -27,11 +27,14 @@ while IFS= read -r line; do
     owner=${BASH_REMATCH[1]}
     repo_name=${BASH_REMATCH[2]}
 
+    # Convert repository name to lowercase for case-insensitive comparison
+    repo_name_lower=$(echo "$repo_name" | tr '[:upper:]' '[:lower:]')
+
     # Check if the repository name is already in the map
-    if [[ -v "repo_map[$repo_name]" ]]; then
-      repo_map[$repo_name]="${repo_map[$repo_name]}, $owner"
+    if [[ -v "repo_map[$repo_name_lower]" ]]; then
+      repo_map[$repo_name_lower]="${repo_map[$repo_name_lower]}, $owner"
     else
-      repo_map[$repo_name]="$owner"
+      repo_map[$repo_name_lower]="$owner"
     fi
   fi
 done < "$filename"
