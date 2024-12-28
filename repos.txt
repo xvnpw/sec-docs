@@ -1,5 +1,3 @@
-java https://github.com/google/ExoPlayer
-java https://github.com/google/guava
 java https://github.com/google/guice
 java https://github.com/gradle/gradle
 java https://github.com/greenrobot/EventBus
