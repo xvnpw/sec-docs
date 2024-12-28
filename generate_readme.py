@@ -15,7 +15,7 @@ Open-source software drives much of the technology we rely on daily. However, in
 - **Simplifying Security:** Making complex security concepts understandable and actionable for developers.
 - **Dynamic Updates:** Keeping documentation current as code evolves.
 
-Your support enables more developers to build safer applications and strengthens trust in open-source ecosystems.
+**Note:** So far, the documentation has been generated using the experimental **Gemini 2.0 Flash Thinking** model during its free-of-charge phase. As we move forward, continued access to advanced AI models will incur costs.
 
 ### The Cost of Innovation
 
@@ -28,6 +28,7 @@ Generating security documentation for just one project requires over **dozens of
 Your contributions will fuel the expansion of **sec-docs**, bringing vital security resources to more OSS projects. Together, we can enhance the security landscape of open-source software.
 
 **Ways to Support:**
+
 - **GitHub Sponsors:** Become a sponsor and directly support our ongoing efforts at [GitHub Sponsors](https://github.com/sponsors/xvnpw).
 
 ### Thank You
@@ -44,10 +45,31 @@ The documentation includes:
 - 🔒 Security design reviews
 - 🎯 Threat modeling
 
+## 🚨 Important Notice: Experimental AI Model
+
+This documentation was generated using **Gemini 2.0 Flash Thinking Experimental**, an experimental AI model. Please be aware of the following limitations:
+
+### Known Issues
+- **Formatting Problems**: The model may produce incorrect or broken:
+  - Mermaid diagrams
+  - Markdown tables
+  - Other formatting elements
+
+- **Content Reliability**: As this is an experimental model:
+  - Content may contain inaccuracies or hallucinations
+  - The model's knowledge boundaries are not fully understood
+  - Security recommendations should be carefully reviewed
+
+### Reporting Issues
+If you encounter any problems, please help us improve by creating issues:
+1. For formatting issues: Use label `formatting`
+2. For content accuracy issues: Use label `content`
+
+[Create New Issue](https://github.com/xvnpw/sec-docs/issues/new)
+
 ## How to Navigate This Repository
 
 **sec-docs** is organized by programming language, with folders for each major OSS project. Each project contains subfolders with detailed analyses performed at a specific date using a certain LLM model.
-
 """
 
 

@@ -7,10 +7,31 @@ The documentation includes:
 - 🔒 Security design reviews
 - 🎯 Threat modeling
 
+## 🚨 Important Notice: Experimental AI Model
+
+This documentation was generated using **Gemini 2.0 Flash Thinking Experimental**, an experimental AI model. Please be aware of the following limitations:
+
+### Known Issues
+- **Formatting Problems**: The model may produce incorrect or broken:
+  - Mermaid diagrams
+  - Markdown tables
+  - Other formatting elements
+
+- **Content Reliability**: As this is an experimental model:
+  - Content may contain inaccuracies or hallucinations
+  - The model's knowledge boundaries are not fully understood
+  - Security recommendations should be carefully reviewed
+
+### Reporting Issues
+If you encounter any problems, please help us improve by creating issues:
+1. For formatting issues: Use label `formatting`
+2. For content accuracy issues: Use label `content`
+
+[Create New Issue](https://github.com/xvnpw/sec-docs/issues/new)
+
 ## How to Navigate This Repository
 
 **sec-docs** is organized by programming language, with folders for each major OSS project. Each project contains subfolders with detailed analyses performed at a specific date using a certain LLM model.
-
 
 
 ### [C](c/)
@@ -312,6 +333,7 @@ The documentation includes:
 | [**slate**](javascript/slate/) ([GitHub](https://github.com/ianstormtaylor/slate)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/slate/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/slate/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/slate/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/slate/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**socket.io**](javascript/socket.io/) ([GitHub](https://github.com/socketio/socket.io)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/socket.io/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/socket.io/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/socket.io/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/socket.io/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**standard**](javascript/standard/) ([GitHub](https://github.com/standard/standard)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/standard/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/standard/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/standard/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/standard/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**svelte**](javascript/svelte/) ([GitHub](https://github.com/sveltejs/svelte)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/svelte/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/svelte/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/svelte/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/svelte/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**webpack**](javascript/webpack/) ([GitHub](https://github.com/webpack/webpack)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](javascript/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](javascript/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](javascript/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](javascript/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Julia](julia/)
@@ -340,6 +362,7 @@ The documentation includes:
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
+| [**cron-expression**](php/cron-expression/) ([GitHub](https://github.com/mtdowling/cron-expression)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](php/cron-expression/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](php/cron-expression/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](php/cron-expression/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](php/cron-expression/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Python](python/)
 
@@ -350,9 +373,11 @@ The documentation includes:
 | [**bottle**](python/bottle/) ([GitHub](https://github.com/bottlepy/bottle)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/bottle/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/bottle/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/bottle/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/bottle/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**celery**](python/celery/) ([GitHub](https://github.com/celery/celery)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/celery/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/celery/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/celery/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/celery/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**click**](python/click/) ([GitHub](https://github.com/pallets/click)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/click/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/click/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/click/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/click/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**cocos2d-x**](python/cocos2d-x/) ([GitHub](https://github.com/cocos2d/cocos2d-x)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](python/cocos2d-x/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/cocos2d-x/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/cocos2d-x/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/cocos2d-x/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**cython**](python/cython/) ([GitHub](https://github.com/cython/cython)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/cython/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/cython/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/cython/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/cython/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**django**](python/django/) ([GitHub](https://github.com/django/django)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/django/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/django/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/django/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/django/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**django-rest-framework**](python/django-rest-framework/) ([GitHub](https://github.com/encode/django-rest-framework)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/django-rest-framework/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/django-rest-framework/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/django-rest-framework/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/django-rest-framework/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [**fabric**](python/fabric/) ([GitHub](https://github.com/fabric/fabric)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](python/fabric/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/fabric/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/fabric/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/fabric/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**facenet**](python/facenet/) ([GitHub](https://github.com/davidsandberg/facenet)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/facenet/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/facenet/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/facenet/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/facenet/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**fastai**](python/fastai/) ([GitHub](https://github.com/fastai/fastai)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/fastai/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/fastai/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/fastai/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/fastai/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 | [**flask**](python/flask/) ([GitHub](https://github.com/pallets/flask)) | 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](python/flask/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
@@ -390,7 +415,7 @@ Open-source software drives much of the technology we rely on daily. However, in
 - **Simplifying Security:** Making complex security concepts understandable and actionable for developers.
 - **Dynamic Updates:** Keeping documentation current as code evolves.
 
-Your support enables more developers to build safer applications and strengthens trust in open-source ecosystems.
+**Note:** So far, the documentation has been generated using the experimental **Gemini 2.0 Flash Thinking** model during its free-of-charge phase. As we move forward, continued access to advanced AI models will incur costs.
 
 ### The Cost of Innovation
 
@@ -403,6 +428,7 @@ Generating security documentation for just one project requires over **dozens of
 Your contributions will fuel the expansion of **sec-docs**, bringing vital security resources to more OSS projects. Together, we can enhance the security landscape of open-source software.
 
 **Ways to Support:**
+
 - **GitHub Sponsors:** Become a sponsor and directly support our ongoing efforts at [GitHub Sponsors](https://github.com/sponsors/xvnpw).
 
 ### Thank You
