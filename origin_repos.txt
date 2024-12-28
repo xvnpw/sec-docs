@@ -97,7 +97,6 @@ csharp https://github.com/SignalR/SignalR
 csharp https://github.com/SixLabors/ImageSharp
 csharp https://github.com/StackExchange/Dapper
 csharp https://github.com/StackExchange/StackExchange.Redis
-csharp https://github.com/xunit/xunit
 dart https://github.com/Baseflow/flutter-permission-handler
 dart https://github.com/dart-lang/http
 dart https://github.com/dart-lang/json_serializable
@@ -194,7 +193,6 @@ java https://github.com/hibernate/hibernate-orm
 java https://github.com/iluwatar/java-design-patterns
 java https://github.com/JakeWharton/butterknife
 java https://github.com/JodaOrg/joda-time
-java https://github.com/junit-team/junit5
 java https://github.com/keycloak/keycloak
 java https://github.com/libgdx/libgdx
 java https://github.com/netty/netty
@@ -302,7 +300,6 @@ php https://github.com/php/php-src
 php https://github.com/PHPMailer/PHPMailer
 php https://github.com/PHPOffice/PHPPresentation
 php https://github.com/PHPOffice/PhpSpreadsheet
-php https://github.com/sebastianbergmann/phpunit
 php https://github.com/Seldaek/monolog
 php https://github.com/symfony/console
 php https://github.com/symfony/finder
@@ -481,7 +478,6 @@ typescript https://github.com/formatjs/formatjs
 typescript https://github.com/graphql/graphql-js
 typescript https://github.com/immerjs/immer
 typescript https://github.com/ionic-team/ionic-framework
-typescript https://github.com/jest-community/eslint-plugin-jest
 typescript https://github.com/marmelab/react-admin
 typescript https://github.com/microsoft/typescript
 typescript https://github.com/modernweb-dev/web
