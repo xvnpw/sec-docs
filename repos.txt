@@ -1,5 +1,3 @@
-python https://github.com/ansible/ansible
-cpp https://github.com/AcademySoftwareFoundation/openvdb
 cpp https://github.com/facebook/hermes
 cpp https://github.com/fmtlib/fmt
 cpp https://github.com/gflags/gflags
