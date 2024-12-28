@@ -1,5 +1,3 @@
-java https://github.com/google/guice
-java https://github.com/gradle/gradle
 java https://github.com/greenrobot/EventBus
 java https://github.com/hibernate/hibernate-orm
 java https://github.com/iluwatar/java-design-patterns
