@@ -37,7 +37,6 @@ cpp https://github.com/fmtlib/fmt
 cpp https://github.com/gflags/gflags
 cpp https://github.com/google/benchmark
 cpp https://github.com/google/flatbuffers
-cpp https://github.com/google/googletest
 cpp https://github.com/google/leveldb
 cpp https://github.com/google/re2
 cpp https://github.com/KhronosGroup/Vulkan-Samples
@@ -198,7 +197,6 @@ java https://github.com/JodaOrg/joda-time
 java https://github.com/junit-team/junit5
 java https://github.com/keycloak/keycloak
 java https://github.com/libgdx/libgdx
-java https://github.com/mockito/mockito
 java https://github.com/netty/netty
 java https://github.com/oracle/graal
 java https://github.com/PhilJay/MPAndroidChart
@@ -210,7 +208,6 @@ java https://github.com/spring-projects/spring-boot
 java https://github.com/spring-projects/spring-framework
 java https://github.com/square/retrofit
 java https://github.com/TeamNewPipe/NewPipe
-javascript https://github.com/airbnb/javascript
 javascript https://github.com/asciinema/asciinema-player
 javascript https://github.com/axios/axios
 javascript https://github.com/babel/babel
@@ -223,7 +220,6 @@ javascript https://github.com/emberjs/ember.js
 javascript https://github.com/eslint/eslint
 javascript https://github.com/expressjs/body-parser
 javascript https://github.com/expressjs/express
-javascript https://github.com/facebook/create-react-app
 javascript https://github.com/facebook/react
 javascript https://github.com/facebook/react-native
 javascript https://github.com/hakimel/reveal.js
@@ -240,7 +236,6 @@ javascript https://github.com/meteor/meteor
 javascript https://github.com/mochajs/mocha
 javascript https://github.com/moment/moment
 javascript https://github.com/nodejs/node
-javascript https://github.com/npm/cli
 javascript https://github.com/pixijs/pixi.js
 javascript https://github.com/Prettier/prettier
 javascript https://github.com/socketio/socket.io
@@ -272,7 +267,6 @@ kotlin https://github.com/ktorio/ktor
 kotlin https://github.com/ktorio/ktor-samples
 kotlin https://github.com/liujingxing/rxhttp
 kotlin https://github.com/mikepenz/MaterialDrawer
-kotlin https://github.com/mockk/mockk
 kotlin https://github.com/oracle/helidon
 kotlin https://github.com/permissions-dispatcher/PermissionsDispatcher
 kotlin https://github.com/perwendel/spark
@@ -348,10 +342,8 @@ python https://github.com/pandas-dev/pandas
 python https://github.com/paramiko/paramiko
 python https://github.com/plotly/dash
 python https://github.com/PrefectHQ/prefect
-python https://github.com/psf/black
 python https://github.com/psf/requests
 python https://github.com/pypa/pipenv
-python https://github.com/pytest-dev/pytest
 python https://github.com/python-telegram-bot/python-telegram-bot
 python https://github.com/pytorch/pytorch
 python https://github.com/scikit-learn/scikit-learn

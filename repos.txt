@@ -12,7 +12,6 @@ kotlin https://github.com/ktorio/ktor
 kotlin https://github.com/ktorio/ktor-samples
 kotlin https://github.com/liujingxing/rxhttp
 kotlin https://github.com/mikepenz/MaterialDrawer
-kotlin https://github.com/mockk/mockk
 kotlin https://github.com/oracle/helidon
 kotlin https://github.com/permissions-dispatcher/PermissionsDispatcher
 kotlin https://github.com/perwendel/spark
