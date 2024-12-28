@@ -104,18 +104,19 @@ graph LR
         O["Compromise CA"]
         R["Impersonate Sidecar"]
 
-        J -- "-> " -- K
-        J -- "-> " -- L
-        J -- "-> " -- O
+        J --> K
+        J --> L
+        J --> O
 
         K -- "Affects" --> C
         L -- "Affects" --> F
         O -- "Affects" --> G
 
-        J -- "-> " -- M
+        J --> M
         M -- "Affects" --> B
         M -- "Leads to" --> C
 
-        J -- "-> " -- R
+        J --> R
         R -- "Affects" --> C & D
     end
+```
