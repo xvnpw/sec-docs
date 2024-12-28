@@ -1,5 +1,3 @@
-javascript https://github.com/ampproject/amphtml
-javascript https://github.com/caolan/async
 javascript https://github.com/dominictarr/rc
 javascript https://github.com/faisalman/ua-parser-js
 javascript https://github.com/feross/safe-buffer
