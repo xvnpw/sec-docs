@@ -1,5 +1,3 @@
-go https://github.com/hashicorp/vault
-go https://github.com/knative/community
 go https://github.com/sigstore/sigstore
 go https://github.com/traefik/traefik
 java http://github.com/qos-ch/logback
