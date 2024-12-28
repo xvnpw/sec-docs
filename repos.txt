@@ -1,5 +1,3 @@
-erlang https://github.com/rabbitmq/rabbitmq-server
-go https://github.com/distribution/distribution
 go https://github.com/hashicorp/vault
 go https://github.com/knative/community
 go https://github.com/sigstore/sigstore
