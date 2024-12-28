@@ -45,7 +45,6 @@ php https://github.com/php/php-src
 php https://github.com/PHPMailer/PHPMailer
 php https://github.com/PHPOffice/PHPPresentation
 php https://github.com/PHPOffice/PhpSpreadsheet
-php https://github.com/sebastianbergmann/phpunit
 php https://github.com/Seldaek/monolog
 php https://github.com/symfony/console
 php https://github.com/symfony/finder
@@ -182,7 +181,6 @@ typescript https://github.com/formatjs/formatjs
 typescript https://github.com/graphql/graphql-js
 typescript https://github.com/immerjs/immer
 typescript https://github.com/ionic-team/ionic-framework
-typescript https://github.com/jest-community/eslint-plugin-jest
 typescript https://github.com/marmelab/react-admin
 typescript https://github.com/microsoft/typescript
 typescript https://github.com/modernweb-dev/web
