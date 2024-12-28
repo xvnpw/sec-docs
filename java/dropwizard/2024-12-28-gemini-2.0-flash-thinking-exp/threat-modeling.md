@@ -93,22 +93,4 @@ graph LR
         C -- HTTPS --> J;
         J -- "Route Request" --> R;
     end
-
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style J fill:#ccf,stroke:#333,stroke-width:2px
-    style R fill:#ddf,stroke:#333,stroke-width:2px
-    style H fill:#eef,stroke:#333,stroke-width:2px
-    style B fill:#efe,stroke:#333,stroke-width:2px
-    style D fill:#fee,stroke:#333,stroke-width:2px
-    style M fill:#fde,stroke:#333,stroke-width:2px
-    style L fill:#edf,stroke:#333,stroke-width:2px
-    style CFG fill:#eee,stroke:#333,stroke-width:2px
-
-    linkStyle 0,1,2,3,4,5,6,7,8 stroke:#333, stroke-width: 2px;
-
-    linkStyle 9 stroke:#00f, stroke-width: 2px;
-    linkStyle 10 stroke:#00f, stroke-width: 2px;
-
-    click R "Potential Threats: Insecure Deserialization"
-    click J "Potential Threats: Jetty Version Vulnerabilities, TLS Configuration Issues"
-    click CFG "Potential Threats: Plaintext Secrets, XXE in Configuration"
+```
