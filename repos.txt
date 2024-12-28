@@ -1,5 +1,3 @@
-java https://github.com/apache/logging-log4j2
-java https://github.com/apache/solr
 java https://github.com/apache/tomcat
 java https://github.com/apache/zookeeper
 java https://github.com/FasterXML/jackson-core
