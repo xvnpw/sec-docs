@@ -45,6 +45,7 @@ The documentation includes:
 
 | Project | Analysis Date | Documentation |
 |---------|-------------|---------------|
+| [**metabase**](clojure/metabase/) ([GitHub](https://github.com/metabase/metabase)) | 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](clojure/metabase/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](clojure/metabase/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](clojure/metabase/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](clojure/metabase/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
 
 ### [Cpp](cpp/)
 
