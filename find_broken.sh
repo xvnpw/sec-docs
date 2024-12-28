@@ -11,12 +11,18 @@ TMP_FILE=$(mktemp)
 #     fi
 # done
 
-find "." -type f -name "attack-tree.md" | while read -r file; do
-    # Check if the file does not contain the word "Breakdown"
-    if ! grep -iq "Breakdown" "$file"; then
-        echo "File without 'Breakdown': $file"
-    fi
-done
+# find "." -type f -name "attack-tree.md" | while read -r file; do
+#     # Check if the file does not contain the word "Breakdown"
+#     if ! grep -iq "Breakdown" "$file"; then
+#         echo "File without 'Breakdown': $file"
+#     fi
+# done
+
+# find "." -type f -name "threat-modeling.md" | while read -r file; do
+#     if grep -iq "mermaid" "$file"; then
+#         echo "File with 'mermaid': $file"
+#     fi
+# done
 
 # cat $TMP_FILE | while read line; do
 #     REPO=$(echo $line | cut -d'/' -f3)
