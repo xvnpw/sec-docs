@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Sort first by URL (column 2), then by language (column 1)
-sort -k2,2 -k1,1 origin_repos.txt |
+sort -k2,2 -k1,1 .data/origin_repos.txt |
 # Group by URL and print only if there are multiple entries
 awk '{
     url = $2
