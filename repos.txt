@@ -1,5 +1,3 @@
-csharp https://github.com/spectreconsole/spectre.console
-csharp https://github.com/unoplatform/uno
 java https://github.com/apache/shardingsphere
 java https://github.com/apolloconfig/apollo
 java https://github.com/Baseflow/PhotoView
