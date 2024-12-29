@@ -1,5 +1,3 @@
-swift https://github.com/johnlui/Swift-On-iOS
-swift https://github.com/krzysztofzablocki/Sourcery
 swift https://github.com/krzyzanowskim/CryptoSwift
 swift https://github.com/mac-cain13/R.swift
 swift https://github.com/MengTo/Spring
