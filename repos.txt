@@ -1,5 +1,3 @@
-javascript https://github.com/videojs/video.js
-javascript https://github.com/zenorocha/clipboard.js
 groovy https://github.com/airbnb/okreplay
 groovy https://github.com/akhikhl/gretty
 groovy https://github.com/betamaxteam/betamax
