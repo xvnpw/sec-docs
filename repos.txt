@@ -1,5 +1,3 @@
-cpp https://github.com/LizardByte/Sunshine
-cpp https://github.com/microsoft/CNTK
 cpp https://github.com/ml-explore/mlx
 cpp https://github.com/mongodb/mongo
 cpp https://github.com/mudler/LocalAI
