@@ -1,5 +1,3 @@
-c https://github.com/NVIDIA/open-gpu-kernel-modules
-c https://github.com/octalmage/robotjs
 c https://github.com/openresty/lua-nginx-module
 c https://github.com/openresty/openresty
 c https://github.com/openwrt/openwrt
