@@ -1,5 +1,3 @@
-swift https://github.com/daltoniam/Starscream
-swift https://github.com/devxoul/Then
 swift https://github.com/FlexMonkey/Blurable
 swift https://github.com/hackiftekhar/IQKeyboardManager
 swift https://github.com/HeroTransitions/Hero
