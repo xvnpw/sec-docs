@@ -1,5 +1,3 @@
-csharp https://github.com/IdentityServer/IdentityServer4
-csharp https://github.com/jbogard/MediatR
 csharp https://github.com/jellyfin/jellyfin
 csharp https://github.com/MahApps/MahApps.Metro
 csharp https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit
