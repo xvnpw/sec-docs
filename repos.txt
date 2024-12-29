@@ -1,5 +1,3 @@
-c https://github.com/twitter/twemproxy
-c https://github.com/valkey-io/valkey
 c https://github.com/vurtun/nuklear
 c https://github.com/woltapp/blurhash
 cpp https://github.com/apache/mxnet
