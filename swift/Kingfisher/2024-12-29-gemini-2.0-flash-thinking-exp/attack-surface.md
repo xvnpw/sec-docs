@@ -1,0 +1,29 @@
+- **Man-in-the-Middle (MITM) Attacks on Image Downloads:**
+    - **Description:** An attacker intercepts network traffic between the application and the image server, potentially reading or modifying the image data in transit.
+    - **How Kingfisher Contributes:** Kingfisher handles the network requests for image downloads. If not configured to enforce HTTPS or if certificate validation is weak, it becomes vulnerable.
+    - **Example:** An application downloads a user's profile picture over HTTP using Kingfisher. An attacker on the same network intercepts the request and replaces the legitimate image with a malicious one.
+    - **Impact:** Compromised data integrity (displaying incorrect or malicious images), potential for phishing or social engineering if the replaced image is designed to deceive.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Enforce HTTPS: Ensure all image URLs used with Kingfisher start with `https://`.
+        - Implement Certificate Pinning: Use Kingfisher's certificate pinning features to validate the server's certificate against a known good certificate, preventing MITM attacks even if the attacker has a compromised CA certificate.
+
+- **Image Processing Vulnerabilities:**
+    - **Description:**  Vulnerabilities in the underlying image decoding libraries used by the operating system or third-party libraries can be exploited by processing maliciously crafted images.
+    - **How Kingfisher Contributes:** Kingfisher relies on these underlying libraries to decode and process downloaded images. If a malicious image triggers a vulnerability in these libraries, it can impact the application.
+    - **Example:** A specially crafted PNG image, when processed by the underlying image decoding library used by Kingfisher, causes a buffer overflow, potentially leading to a crash or even remote code execution.
+    - **Impact:** Application crashes, memory corruption, potential for remote code execution (depending on the vulnerability).
+    - **Risk Severity:** High (if RCE is possible)
+    - **Mitigation Strategies:**
+        - Regularly Update Kingfisher: Newer versions of Kingfisher might incorporate mitigations or workarounds for known vulnerabilities in underlying libraries.
+        - Sanitize Image Sources: If possible, validate the source of images and restrict downloads to trusted sources.
+
+- **Vulnerabilities in Kingfisher's Dependencies (Transitive Dependencies):**
+    - **Description:** Kingfisher might rely on other third-party libraries, and vulnerabilities in these dependencies could indirectly affect the application.
+    - **How Kingfisher Contributes:** By including these dependencies, Kingfisher introduces the attack surface of those libraries into the application.
+    - **Example:** Kingfisher uses a specific version of a networking library that has a known security vulnerability. This vulnerability could be exploited through Kingfisher's usage of that library.
+    - **Impact:**  Depends on the nature of the vulnerability in the dependency, ranging from DoS to remote code execution.
+    - **Risk Severity:** Varies depending on the dependency's vulnerability (can be High or Critical).
+    - **Mitigation Strategies:**
+        - Regularly Update Kingfisher: Updating Kingfisher often includes updates to its dependencies, patching known vulnerabilities.
+        - Dependency Scanning: Use tools to scan the application's dependencies (including Kingfisher's) for known vulnerabilities.
