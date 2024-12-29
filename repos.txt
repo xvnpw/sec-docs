@@ -1,5 +1,3 @@
-go https://github.com/helm/helm
-go https://github.com/iawia002/lux
 go https://github.com/IceWhaleTech/CasaOS
 go https://github.com/inconshreveable/ngrok
 go https://github.com/jesseduffield/lazydocker
