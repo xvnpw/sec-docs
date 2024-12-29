@@ -1,5 +1,3 @@
-csharp https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit
-csharp https://github.com/microsoft/garnet
 csharp https://github.com/microsoft/semantic-kernel
 csharp https://github.com/MonoGame/MonoGame
 csharp https://github.com/mxgmn/WaveFunctionCollapse
