@@ -1,5 +1,3 @@
-rust https://github.com/rayon-rs/rayon
-rust https://github.com/rg3dengine/rg3d
 rust https://github.com/rust-analyzer/rust-analyzer
 rust https://github.com/rust-lang/cargo
 rust https://github.com/rust-lang/mdBook
