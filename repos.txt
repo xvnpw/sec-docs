@@ -1,5 +1,3 @@
-swift https://github.com/Quick/Nimble
-swift https://github.com/Quick/Quick
 swift https://github.com/ra1028/DifferenceKit
 swift https://github.com/ReactiveX/RxSwift
 swift https://github.com/realm/realm-cocoa
