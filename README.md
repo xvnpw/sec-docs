@@ -28,11 +28,6 @@ We need community help to determine:
 ### Current Projects
 
 
-### [.Data](.data/)
-
-| Project | Analysis Date | Documentation |
-|---------|-------------|---------------|
-
 ### [C](c/)
 
 | Project | Analysis Date | Documentation |

@@ -70,7 +70,7 @@ We need community help to determine:
 
 def main():
     readme_lines = []
-    exclude_dirs = {".git", ".github", "__pycache__"}
+    exclude_dirs = {".git", ".github", "__pycache__", ".data"}
     exclude_files = {"README.md", "LICENSE", "generate_readme.py"}
 
     # Get the top-level directories (languages)
