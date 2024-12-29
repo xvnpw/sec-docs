@@ -1,5 +1,3 @@
-go https://github.com/AdguardTeam/AdGuardHome
-go https://github.com/AlistGo/alist
 go https://github.com/beego/beego
 go https://github.com/caddyserver/caddy
 go https://github.com/charmbracelet/bubbletea
