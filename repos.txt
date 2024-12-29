@@ -1,5 +1,3 @@
-csharp https://github.com/cefsharp/CefSharp
-csharp https://github.com/DapperLib/Dapper
 csharp https://github.com/dotnet/efcore
 csharp https://github.com/dotnet/machinelearning
 csharp https://github.com/egametang/ET
