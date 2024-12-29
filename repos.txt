@@ -1,5 +1,3 @@
-swift https://github.com/realm/realm-cocoa
-swift https://github.com/robb/Cartography
 swift https://github.com/RxSwiftCommunity/RxAlamofire
 swift https://github.com/RxSwiftCommunity/RxDataSources
 swift https://github.com/scalessec/Toast-Swift
