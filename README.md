@@ -12,7 +12,7 @@ We're exploring how different LLM models can help create comprehensive security 
 ## 🧪 Experimental Status
 
 This is an early-phase research project currently testing:
-- Gemini 2.0 Flash Thinking Experimental - model cut off date: **2023-11-26**
+- Gemini 2.0 Flash Thinking Experimental - model cut off date: **2023-10-26**
 - Other LLM models (planned)
 
 ### Help Us Evaluate!
