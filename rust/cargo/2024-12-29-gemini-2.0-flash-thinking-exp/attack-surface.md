@@ -1,0 +1,33 @@
+- **Attack Surface: Malicious Dependencies (Typosquatting, Compromised Accounts)**
+    - **Description:** Attackers publish packages with names similar to popular crates (typosquatting) or compromise legitimate crate owner accounts to upload malicious versions.
+    - **How Cargo Contributes:** Cargo's dependency resolution mechanism automatically downloads and integrates these dependencies into a project based on the `Cargo.toml` file.
+    - **Example:** A developer intends to add the `request` crate but accidentally types `requets`. An attacker has published a malicious `requets` crate that gets included in the build. Or, an attacker gains access to a popular crate owner's account and pushes a backdoored version.
+    - **Impact:** Arbitrary code execution during the build process or at runtime, leading to system compromise, data exfiltration, or denial of service.
+    - **Risk Severity: Critical**
+    - **Mitigation Strategies:**
+        - **Careful Review of Dependencies:** Double-check the names of dependencies in `Cargo.toml` for typos.
+        - **Utilize `cargo audit`:** Regularly run `cargo audit` to identify known security vulnerabilities in dependencies.
+        - **Dependency Pinning:** Specify exact versions of dependencies in `Cargo.toml` to avoid automatically pulling in potentially malicious updates.
+        - **Subresource Integrity (SRI) for Dependencies (Future Feature):**  While not currently a standard Cargo feature, the concept of verifying checksums of downloaded dependencies could be a future mitigation.
+        - **Trustworthy Registries:** Primarily rely on the official crates.io registry and exercise caution when using alternative or private registries.
+
+- **Attack Surface: Malicious Build Scripts (`build.rs`)**
+    - **Description:** `build.rs` files allow arbitrary code execution during the build process. Malicious dependencies or a compromised project's own `build.rs` can contain harmful commands.
+    - **How Cargo Contributes:** Cargo executes the `build.rs` script if it exists in a dependency or the project itself.
+    - **Example:** A malicious dependency's `build.rs` script downloads and executes a binary from an attacker-controlled server, compromising the developer's machine. Or, a compromised project's `build.rs` exfiltrates sensitive environment variables.
+    - **Impact:** System compromise, data exfiltration, modification of build artifacts, denial of service on the build system.
+    - **Risk Severity: High**
+    - **Mitigation Strategies:**
+        - **Review `build.rs` Scripts:** Carefully examine the contents of `build.rs` files in dependencies, especially those from untrusted sources.
+        - **Vendoring Dependencies:**  Vendor dependencies to have a local copy of the source code, allowing for more thorough inspection and reducing reliance on remote sources during build time.
+
+- **Attack Surface: Dependency Confusion**
+    - **Description:** An attacker publishes a malicious package with the same name as an internal dependency on a public registry, hoping the build system will fetch the public, malicious version instead of the intended private one.
+    - **How Cargo Contributes:** Cargo searches configured registries for dependencies. If not configured correctly, it might prioritize the public registry.
+    - **Example:** A company has an internal crate named `internal-auth`. An attacker publishes a crate with the same name on crates.io. If the internal registry is not properly prioritized, the build might pull the malicious public crate.
+    - **Impact:** Inclusion of malicious code in the build, potentially leading to data breaches or internal system compromise.
+    - **Risk Severity: High**
+    - **Mitigation Strategies:**
+        - **Prioritize Internal Registries:** Configure Cargo to prioritize internal or private registries over public ones.
+        - **Namespacing/Prefixing Internal Crates:** Use unique prefixes or namespaces for internal crates to avoid naming collisions with public packages.
+        - **Registry Authentication and Authorization:** Secure internal registries with proper authentication and authorization mechanisms.
