@@ -1,0 +1,96 @@
+- **Attack Surface: Unauthenticated or Poorly Authenticated API Endpoints**
+    - **Description:** CasaOS exposes API endpoints for managing various functionalities (containers, files, users, system settings). If these endpoints lack proper authentication or use weak authentication mechanisms, attackers can directly interact with them without authorization.
+    - **How CasaOS Contributes:** CasaOS's architecture relies heavily on its internal API for the web UI to interact with the backend services. Vulnerabilities here directly expose core functionalities.
+    - **Example:** An unauthenticated API endpoint allows an attacker to create new admin users, granting them full control over the CasaOS instance and potentially the underlying system.
+    - **Impact:** Complete system compromise, data breach, denial of service, unauthorized access to sensitive information.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Developers:**
+            - Implement robust authentication and authorization mechanisms for all API endpoints (e.g., JWT, OAuth 2.0).
+            - Enforce the principle of least privilege for API access.
+            - Thoroughly test all API endpoints for authentication and authorization flaws.
+            - Rate-limit API requests to prevent brute-force attacks.
+        - **Users:**
+            - Ensure CasaOS is running the latest version with security patches.
+            - Avoid exposing the CasaOS API directly to the public internet without proper protection (e.g., VPN, reverse proxy with authentication).
+
+- **Attack Surface: Insecure App Store/Marketplace Integration**
+    - **Description:** CasaOS integrates with an app store or marketplace to allow users to easily install applications. If this integration lacks proper security measures, malicious or vulnerable applications could be introduced into the ecosystem.
+    - **How CasaOS Contributes:** CasaOS simplifies the installation of third-party applications, increasing the potential attack surface if the vetting and sandboxing of these applications are insufficient.
+    - **Example:** A malicious application disguised as a legitimate tool is uploaded to the marketplace. When installed, it compromises the CasaOS instance or the underlying host system.
+    - **Impact:** Malware infection, data theft, privilege escalation, compromise of the host system and other containers.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Developers:**
+            - Implement a rigorous review process for applications submitted to the marketplace.
+            - Utilize static and dynamic analysis tools to scan applications for vulnerabilities.
+            - Enforce strong sandboxing for installed applications to limit their access to system resources.
+            - Provide clear warnings to users about the risks of installing third-party applications.
+            - Implement a mechanism for users to report malicious applications.
+        - **Users:**
+            - Only install applications from trusted sources within the marketplace.
+            - Be cautious about granting excessive permissions to installed applications.
+            - Keep CasaOS and installed applications updated.
+
+- **Attack Surface: Direct Exposure of Container Management Socket (Docker/Podman)**
+    - **Description:** If CasaOS exposes the Docker or Podman socket without proper authorization, attackers can gain full control over the container runtime environment.
+    - **How CasaOS Contributes:** CasaOS manages containers, and if the communication channel with the container runtime is not secured, it becomes a critical vulnerability.
+    - **Example:** An attacker gains access to the Docker socket and uses it to create a privileged container that mounts the host filesystem, allowing them to execute arbitrary commands on the host.
+    - **Impact:** Complete host system compromise, data breach, denial of service, ability to control all containers.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Developers:**
+            - Avoid directly exposing the Docker/Podman socket.
+            - Implement a secure API or mechanism for CasaOS to interact with the container runtime with strict authorization controls.
+            - If socket exposure is necessary, restrict access using file system permissions and consider using a dedicated, less privileged socket.
+        - **Users:**
+            - Ensure the Docker/Podman socket is not publicly accessible.
+            - Review CasaOS configurations to understand how it interacts with the container runtime.
+
+- **Attack Surface: Vulnerabilities in Custom Web UI Components**
+    - **Description:** CasaOS utilizes custom web UI components (JavaScript, HTML, CSS). Vulnerabilities in these components, such as Cross-Site Scripting (XSS) or insecure handling of user input, can be exploited by attackers.
+    - **How CasaOS Contributes:** The custom nature of the UI means standard web security practices must be meticulously implemented by the CasaOS development team.
+    - **Example:** A stored XSS vulnerability in the file manager allows an attacker to inject malicious JavaScript that executes when another user views a specific file, potentially stealing their session cookies.
+    - **Impact:** Session hijacking, account takeover, redirection to malicious sites, execution of arbitrary JavaScript in the user's browser.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Developers:**
+            - Implement proper input sanitization and output encoding to prevent XSS vulnerabilities.
+            - Regularly scan the codebase for client-side vulnerabilities.
+            - Follow secure coding practices for web development.
+            - Utilize Content Security Policy (CSP) to mitigate XSS risks.
+        - **Users:**
+            - Keep their web browsers updated with the latest security patches.
+            - Be cautious about clicking on untrusted links within the CasaOS interface.
+
+- **Attack Surface: Insecure File Management Interface**
+    - **Description:** The file management interface provided by CasaOS could contain vulnerabilities that allow unauthorized file access, modification, or deletion.
+    - **How CasaOS Contributes:** CasaOS provides a built-in file manager, and vulnerabilities here directly impact the security of the files stored on the system.
+    - **Example:** A path traversal vulnerability in the file upload functionality allows an attacker to upload files to arbitrary locations on the server, potentially overwriting critical system files.
+    - **Impact:** Data loss, data corruption, privilege escalation, arbitrary code execution.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Developers:**
+            - Implement strict input validation and sanitization for file paths and names.
+            - Enforce proper access controls and permissions for file operations.
+            - Prevent path traversal vulnerabilities by using secure file path handling techniques.
+        - **Users:**
+            - Be cautious about the permissions granted to CasaOS for file access.
+            - Regularly back up important data.
+
+- **Attack Surface: Weaknesses in User and Permission Management**
+    - **Description:** Vulnerabilities in how CasaOS manages users and their permissions can lead to privilege escalation or unauthorized access to resources.
+    - **How CasaOS Contributes:** CasaOS's user management system directly controls who can access and manage the platform and its resources.
+    - **Example:** A vulnerability allows a standard user to elevate their privileges to an administrator, granting them full control over the system.
+    - **Impact:** Unauthorized access to sensitive data, system compromise, ability to modify critical settings.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Developers:**
+            - Implement robust role-based access control (RBAC).
+            - Enforce strong password policies and multi-factor authentication.
+            - Regularly audit user permissions and access logs.
+            - Securely handle password resets and account recovery mechanisms.
+        - **Users:**
+            - Use strong, unique passwords for all user accounts.
+            - Enable multi-factor authentication if available.
+            - Regularly review user accounts and permissions.
