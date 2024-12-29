@@ -1,0 +1,44 @@
+Here's the updated list of key attack surfaces directly involving QuestPDF, with high and critical severity:
+
+**- Attack Surface: Malicious Content Injection via Document Structure**
+    - **Description:** An attacker injects specially crafted content or structural elements into the data used to generate the PDF, exploiting vulnerabilities in QuestPDF's rendering engine.
+    - **How QuestPDF Contributes:** QuestPDF's rendering engine processes the provided data and structures it into a PDF. If this engine has vulnerabilities in handling certain input, malicious content can trigger unexpected behavior.
+    - **Example:** A user provides text containing a large number of deeply nested elements or excessively long strings, causing QuestPDF to consume excessive memory or processing power during rendering, leading to a denial-of-service.
+    - **Impact:** Denial of Service (DoS), potential for information disclosure if the rendering engine mishandles data, or in rare cases, potential for remote code execution if a critical vulnerability exists in the underlying rendering libraries.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Input Validation and Sanitization:**  Thoroughly validate and sanitize all user-provided data before using it to generate the PDF. Limit the size and complexity of user-provided content.
+        - **Resource Limits:** Implement resource limits (e.g., memory, CPU time) for the PDF generation process to prevent DoS attacks.
+        - **Regularly Update QuestPDF:** Keep QuestPDF updated to the latest version to patch known vulnerabilities in the rendering engine.
+
+**- Attack Surface: Exploiting Supported File Formats (Images, Fonts)**
+    - **Description:** An attacker provides malicious files (images, fonts) that are processed by QuestPDF during PDF generation, exploiting vulnerabilities in the underlying libraries used for parsing these formats.
+    - **How QuestPDF Contributes:** QuestPDF allows embedding various file formats. If the libraries it uses to process these formats have vulnerabilities, a malicious file can trigger those vulnerabilities.
+    - **Example:** A user uploads a specially crafted TIFF image that, when processed by QuestPDF's image handling library, causes a buffer overflow, potentially leading to a crash or code execution.
+    - **Impact:** Denial of Service (crash), potential for information disclosure, or remote code execution depending on the severity of the vulnerability in the underlying library.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Strict File Type Validation:**  Enforce strict validation of uploaded files based on their content (magic numbers) and not just the file extension.
+        - **Secure File Processing Libraries:** Ensure QuestPDF and its dependencies use secure and up-to-date versions of file processing libraries.
+        - **Content Security Policies (If Applicable):** If the generated PDFs are viewed in a web context, use CSP to restrict the types of resources that can be loaded.
+
+**- Attack Surface: Path Traversal in Output File Naming/Storage**
+    - **Description:** If the application allows user input to influence the filename or storage path of the generated PDF without proper sanitization, an attacker could potentially overwrite arbitrary files on the server.
+    - **How QuestPDF Contributes:** QuestPDF provides functionality to save the generated PDF to a specified path. If the application doesn't sanitize the path before passing it to QuestPDF, it's vulnerable.
+    - **Example:** A user provides a filename like "../../important_config.ini" which, if not sanitized, could cause QuestPDF to overwrite a critical configuration file.
+    - **Impact:**  Arbitrary file overwrite, potentially leading to application compromise or denial of service.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Strict Path Sanitization:**  Thoroughly sanitize and validate any user-provided input used to construct the output file path. Use allow-lists for characters and path components.
+        - **Fixed Output Directories:**  Store generated PDFs in a designated directory with restricted write permissions.
+        - **Avoid User-Controlled Paths:**  Ideally, avoid allowing users to directly specify the output path.
+
+**- Attack Surface: Vulnerabilities in Underlying PDF Rendering Libraries**
+    - **Description:** QuestPDF relies on underlying libraries (e.g., SkiaSharp) for the actual PDF rendering. Vulnerabilities in these libraries can be indirectly exploitable through QuestPDF.
+    - **How QuestPDF Contributes:** QuestPDF acts as an interface to these lower-level libraries. If those libraries have security flaws, QuestPDF users are potentially exposed when generating PDFs.
+    - **Example:** A vulnerability in SkiaSharp's handling of certain vector graphics could be triggered by a specially crafted PDF generated by QuestPDF, leading to a crash or code execution.
+    - **Impact:** Denial of Service, potential for information disclosure, or remote code execution depending on the severity of the vulnerability in the underlying library.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Regularly Update QuestPDF:** Updating QuestPDF often includes updates to its dependencies, patching vulnerabilities in underlying libraries.
+        - **Monitor Security Advisories:** Stay informed about security advisories for the libraries QuestPDF depends on.
