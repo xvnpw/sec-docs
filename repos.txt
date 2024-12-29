@@ -1,5 +1,3 @@
-cpp https://github.com/Tencent/ncnn
-cpp https://github.com/typesense/typesense
 cpp https://github.com/uNetworking/uWebSockets
 csharp https://github.com/abpframework/abp
 csharp https://github.com/App-vNext/Polly
