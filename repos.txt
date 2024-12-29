@@ -1,5 +1,3 @@
-typescript https://github.com/ant-design/ant-design
-typescript https://github.com/ant-design/ant-design-pro
 typescript https://github.com/apollographql/apollo-client
 typescript https://github.com/aws/aws-cdk
 typescript https://github.com/DefinitelyTyped/DefinitelyTyped
