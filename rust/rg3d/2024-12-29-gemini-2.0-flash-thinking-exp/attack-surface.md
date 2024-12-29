@@ -1,0 +1,53 @@
+- **Description:** Maliciously Crafted Model Files
+  - **How rg3d Contributes to the Attack Surface:** rg3d's implementation of model loading for formats like FBX and glTF involves parsing complex data structures. Vulnerabilities like buffer overflows or integer overflows can exist in this parsing logic.
+  - **Example:** A user loads a custom level containing a 3D model with an excessively long bone name. rg3d's parsing code doesn't properly handle this length, leading to a buffer overflow and potentially allowing an attacker to execute arbitrary code.
+  - **Impact:** Arbitrary code execution, application crash, denial of service.
+  - **Risk Severity:** Critical
+  - **Mitigation Strategies:**
+    - **Developers:** Implement robust validation of model file structures before passing them to rg3d. Use safe parsing libraries where possible. Keep rg3d updated to benefit from bug fixes. Consider sandboxing or separate processes for loading untrusted assets.
+    - **Users:** Only use assets from trusted sources.
+
+- **Description:** Maliciously Crafted Texture Files
+  - **How rg3d Contributes to the Attack Surface:** rg3d uses image loading libraries (e.g., for PNG, JPEG) to load textures. Vulnerabilities in these underlying libraries or in rg3d's integration with them can be exploited.
+  - **Example:** A user loads a texture file that exploits a known vulnerability in the PNG decoding library used by rg3d, leading to a buffer overflow and potential code execution.
+  - **Impact:** Arbitrary code execution, application crash, denial of service.
+  - **Risk Severity:** Critical
+  - **Mitigation Strategies:**
+    - **Developers:** Ensure rg3d and its image loading dependencies are up-to-date. Implement checks on image dimensions and file sizes before loading. Consider using safer image formats or libraries if feasible.
+    - **Users:** Only use textures from trusted sources.
+
+- **Description:** Maliciously Crafted Scene Files
+  - **How rg3d Contributes to the Attack Surface:** rg3d's scene loading mechanism parses scene files that define the game world. Vulnerabilities in the parsing logic can be exploited to manipulate game state or cause crashes.
+  - **Example:** A malicious scene file contains a large number of nested nodes, exceeding the expected recursion depth in rg3d's scene loading code, leading to a stack overflow and application crash.
+  - **Impact:** Denial of service, unexpected game behavior, potential for logic exploitation.
+  - **Risk Severity:** High
+  - **Mitigation Strategies:**
+    - **Developers:** Implement limits on the complexity of scene files (e.g., maximum number of nodes, recursion depth). Thoroughly test scene loading with various potentially malicious inputs.
+    - **Users:** Be cautious when loading scene files from untrusted sources.
+
+- **Description:** Vulnerabilities in Built-in Networking Features (If Used)
+  - **How rg3d Contributes to the Attack Surface:** If the application utilizes rg3d's built-in networking capabilities (if any exist and are used), vulnerabilities in the underlying network protocol implementation within rg3d could be exploited.
+  - **Example:** rg3d's networking implementation has a buffer overflow vulnerability in its packet parsing logic. A malicious actor sends a specially crafted network packet that overflows this buffer, allowing them to execute arbitrary code on the server or client.
+  - **Impact:** Arbitrary code execution, denial of service, man-in-the-middle attacks (depending on the vulnerability).
+  - **Risk Severity:** Critical
+  - **Mitigation Strategies:**
+    - **Developers:** If using rg3d's networking, thoroughly audit the implementation for vulnerabilities. Use secure network protocols and encryption. Implement proper input validation and sanitization for network data. Keep rg3d updated. Consider using well-established and audited networking libraries instead of relying solely on built-in features if security is a major concern.
+    - **Users:** Be cautious when connecting to untrusted servers. Ensure your network connection is secure.
+
+- **Description:** Code Injection in Scripting (If Used)
+  - **How rg3d Contributes to the Attack Surface:** If the application uses rg3d's scripting capabilities, vulnerabilities in the scripting language interpreter or its integration with the engine could allow for the execution of arbitrary code.
+  - **Example:** A user provides a malicious script that exploits a vulnerability in rg3d's scripting engine, allowing them to execute system commands or access sensitive game data.
+  - **Impact:** Arbitrary code execution, manipulation of game state, information disclosure.
+  - **Risk Severity:** Critical
+  - **Mitigation Strategies:**
+    - **Developers:** Implement strong sandboxing for the scripting environment. Limit the access of scripts to sensitive engine functionality. Carefully validate and sanitize any user-provided script code. Keep rg3d and its scripting components updated. Consider using a safer or more restricted scripting language if security is paramount.
+    - **Users:** Avoid running scripts from untrusted sources.
+
+- **Description:** Maliciously Crafted Audio Files
+  - **How rg3d Contributes to the Attack Surface:** Similar to textures, rg3d uses audio decoding libraries. Vulnerabilities in these libraries can be exploited by crafted audio files.
+  - **Example:** A user loads an audio file that exploits a buffer overflow in the MP3 decoding library used by rg3d, potentially leading to code execution.
+  - **Impact:** Arbitrary code execution, application crash, denial of service.
+  - **Risk Severity:** High
+  - **Mitigation Strategies:**
+    - **Developers:** Keep rg3d and its audio decoding dependencies updated. Implement checks on audio file properties before loading.
+    - **Users:** Only use audio files from trusted sources.
