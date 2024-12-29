@@ -1,0 +1,22 @@
+- **Threat:** False Negatives leading to undetected vulnerabilities
+  - **Description:** An attacker exploits a security vulnerability in the application that Brakeman failed to identify during its static analysis. The attacker leverages this oversight to compromise the application, potentially gaining unauthorized access, manipulating data, or disrupting service.
+  - **Impact:** Data breach, unauthorized access to sensitive information, application defacement, denial of service, financial loss, reputational damage.
+  - **Affected Brakeman Component:** Core analysis engine, specific vulnerability detection rules/signatures.
+  - **Risk Severity:** High
+  - **Mitigation Strategies:**
+    - Combine Brakeman with other security testing methodologies (e.g., dynamic application security testing (DAST), penetration testing).
+    - Regularly update Brakeman to benefit from new vulnerability detection rules and improvements.
+    - Ensure developers understand the limitations of static analysis and don't solely rely on Brakeman.
+    - Conduct manual code reviews, especially for complex or security-critical sections.
+    - Utilize Brakeman's configuration options to enable more comprehensive checks, even if it increases analysis time.
+
+- **Threat:** Manipulation of Brakeman Configuration to Ignore Vulnerabilities
+  - **Description:** An attacker with access to the development environment or CI/CD pipeline could maliciously modify Brakeman's configuration file (e.g., `.brakeman.yml`) to exclude specific checks or directories, effectively hiding existing vulnerabilities from being reported.
+  - **Impact:** Critical vulnerabilities are not detected, leaving the application exposed to attack.
+  - **Affected Brakeman Component:** Configuration file parsing and handling.
+  - **Risk Severity:** High
+  - **Mitigation Strategies:**
+    - Implement strong access controls and authentication for the development environment and CI/CD pipeline.
+    - Use code review processes to detect unauthorized or suspicious changes to Brakeman configuration files.
+    - Store Brakeman configuration files in a version control system and track changes.
+    - Consider using a centralized configuration management system to enforce consistent Brakeman settings.
