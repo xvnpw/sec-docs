@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/openresty/openresty",
+  "analyzer_args": "",
+  "start_datetime": "2024-12-29T18:02:33Z",
+  "end_datetime": "2024-12-29T18:06:57Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "71194",
+  "mode": "github"
+}

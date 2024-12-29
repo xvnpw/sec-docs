@@ -1,0 +1,61 @@
+- **Attack Surface: Lua Code Injection**
+    - **Description:** Attackers inject and execute arbitrary Lua code within the OpenResty environment.
+    - **How OpenResty Contributes:** OpenResty's core functionality relies heavily on Lua scripting for request handling, logic implementation, and integration with other services. This provides numerous entry points for executing Lua code.
+    - **Example:** An application takes user input and directly uses it in a `loadstring()` or `eval()` call, allowing an attacker to inject malicious Lua code within the input.
+    - **Impact:** Full control over the OpenResty process, potentially leading to data breaches, server compromise, denial of service, or further attacks on internal systems.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Never use `loadstring()` or `eval()` with untrusted input.
+        - Sanitize and validate all user inputs thoroughly before using them in Lua code.
+        - Use parameterized queries or prepared statements when interacting with databases from Lua.
+        - Implement a strict Content Security Policy (CSP) to limit the execution of inline scripts (though this is less directly applicable to server-side Lua).
+        - Regularly audit Lua code for potential injection vulnerabilities.
+
+- **Attack Surface: Resource Exhaustion via Lua**
+    - **Description:** Attackers craft requests that cause Lua scripts to consume excessive CPU, memory, or file descriptors, leading to denial of service.
+    - **How OpenResty Contributes:** OpenResty allows complex logic to be implemented in Lua, and poorly written or malicious scripts can easily consume excessive resources within the Nginx worker processes.
+    - **Example:** A Lua script processes a large amount of data without proper pagination or limits, leading to excessive memory consumption. Another example is a script with an infinite loop triggered by specific input.
+    - **Impact:** Denial of service, impacting the availability of the application. Can also lead to instability and crashes of the OpenResty instance.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement timeouts and resource limits within Lua scripts (e.g., using `ngx.timer.at` with a timeout).
+        - Carefully review and optimize Lua code for performance and resource usage.
+        - Implement rate limiting and request throttling at the OpenResty level.
+        - Monitor resource usage (CPU, memory) of OpenResty processes and set up alerts.
+        - Use `lua_code_cache on;` to cache compiled Lua code and reduce parsing overhead.
+
+- **Attack Surface: Server-Side Request Forgery (SSRF) via Lua**
+    - **Description:** Attackers can induce the OpenResty server to make requests to unintended internal or external resources.
+    - **How OpenResty Contributes:** Lua's networking capabilities (e.g., `ngx.location.capture`, `ngx.socket.tcp`) allow making arbitrary HTTP requests from the server-side Lua code.
+    - **Example:** A Lua script takes a URL as user input and uses `ngx.location.capture` to fetch its content without proper validation, allowing an attacker to make requests to internal services or arbitrary external URLs.
+    - **Impact:** Access to internal services, data exfiltration, potential for further attacks on internal infrastructure, and abuse of external services.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Strictly validate and sanitize URLs provided by users or external sources before using them in Lua networking functions.
+        - Implement a whitelist of allowed destination hosts or IP ranges for outbound requests.
+        - Disable or restrict the use of Lua networking functions if not strictly necessary.
+        - Use network segmentation and firewalls to limit the impact of potential SSRF attacks.
+
+- **Attack Surface: SQL/Redis Injection via Lua**
+    - **Description:** Attackers inject malicious SQL or Redis commands into database queries executed by Lua scripts.
+    - **How OpenResty Contributes:** When using OpenResty modules like `ngx_redis` or custom Lua libraries to interact with databases, developers might directly embed user input into queries without proper sanitization.
+    - **Example:** A Lua script constructs a SQL query by concatenating user-provided data into the `WHERE` clause, allowing an attacker to inject arbitrary SQL commands.
+    - **Impact:** Data breaches, data manipulation, unauthorized access to sensitive information, and potential for remote code execution (depending on database configuration).
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Always use parameterized queries or prepared statements when interacting with databases from Lua.
+        - Avoid concatenating user input directly into database queries.
+        - Implement proper input validation and sanitization before using data in database interactions.
+        - Follow the principle of least privilege for database user accounts used by OpenResty.
+
+- **Attack Surface: Insecure Lua Module Loading**
+    - **Description:** Attackers can manipulate the Lua module search path to load malicious modules instead of legitimate ones.
+    - **How OpenResty Contributes:** OpenResty uses Lua's module system, and if the `lua_package_path` or `lua_package_cpath` directives are not properly configured, it can lead to loading code from untrusted locations.
+    - **Example:** The `lua_package_path` includes a world-writable directory, allowing an attacker to place a malicious module that will be loaded by the OpenResty process.
+    - **Impact:** Arbitrary code execution within the OpenResty process, potentially leading to full server compromise.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Ensure that `lua_package_path` and `lua_package_cpath` only point to trusted and controlled directories.
+        - Avoid including world-writable directories in the module search paths.
+        - Implement mechanisms to verify the integrity of loaded Lua modules (e.g., using checksums).
+        - Restrict file system permissions for the directories containing Lua modules.
