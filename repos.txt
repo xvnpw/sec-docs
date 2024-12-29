@@ -1,5 +1,3 @@
-python https://github.com/ray-project/ray
-python https://github.com/gradio-app/gradio
 ruby https://github.com/mastodon/mastodon
 ruby https://github.com/huginn/huginn
 ruby https://github.com/maybe-finance/maybe
