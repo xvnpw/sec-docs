@@ -1,5 +1,3 @@
-cpp https://github.com/ggerganov/llama.cpp
-cpp https://github.com/ggerganov/whisper.cpp
 cpp https://github.com/LizardByte/Sunshine
 cpp https://github.com/microsoft/CNTK
 cpp https://github.com/ml-explore/mlx
