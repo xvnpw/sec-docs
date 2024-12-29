@@ -1,3 +1,1 @@
-typescript https://github.com/vuejs/vue
-typescript https://github.com/vuejs/vue-next
 typescript https://github.com/xtermjs/xterm.js
