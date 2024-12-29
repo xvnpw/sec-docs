@@ -1,5 +1,3 @@
-csharp https://github.com/dotnet/efcore
-csharp https://github.com/dotnet/machinelearning
 csharp https://github.com/egametang/ET
 csharp https://github.com/FluentValidation/FluentValidation
 csharp https://github.com/gui-cs/Terminal.Gui
