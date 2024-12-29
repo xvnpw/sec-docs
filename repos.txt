@@ -1,5 +1,3 @@
-swift https://github.com/FlexMonkey/Blurable
-swift https://github.com/hackiftekhar/IQKeyboardManager
 swift https://github.com/HeroTransitions/Hero
 swift https://github.com/hyperoslo/Cache
 swift https://github.com/johnlui/Swift-On-iOS
