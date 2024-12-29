@@ -1,5 +1,3 @@
-rust https://github.com/wasmerio/wasmer
-rust https://github.com/yewstack/yew
 scala https://github.com/apache/spark
 scala https://github.com/scala/scala
 swift https://github.com/Alamofire/Alamofire
