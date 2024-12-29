@@ -1,0 +1,32 @@
+- **Attack Surface:** HTML Injection/Cross-Site Scripting (XSS)
+    - **Description:**  An attacker injects malicious HTML or JavaScript code into a web page, which is then executed by other users' browsers.
+    - **How Draper Contributes:** Decorator methods are responsible for formatting and presenting data. If a decorator method directly outputs user-controlled data without proper HTML escaping, it creates an opportunity for HTML injection. Draper itself doesn't enforce escaping; it's up to the developer writing the decorators.
+    - **Example:** A decorator method for displaying a user's comment directly renders the comment text: `def formatted_comment; object.comment; end`. If a user enters `<script>alert('XSS')</script>` as their comment, this script will be executed when the comment is displayed.
+    - **Impact:**  Can lead to session hijacking, cookie theft, redirection to malicious sites, defacement, and execution of arbitrary JavaScript in the user's browser.
+    - **Risk Severity:** **High** to **Critical** (depending on the context and sensitivity of the application).
+    - **Mitigation Strategies:**
+        - **Always HTML-escape user-controlled data within decorator methods.** Use Rails' built-in `h` helper or `ERB::Util.html_escape`. Example: `def formatted_comment; h(object.comment); end`.
+        - **Utilize content security policy (CSP) headers** to restrict the sources from which the browser is allowed to load resources, reducing the impact of successful XSS.
+        - **Regularly review decorator code** for potential areas where unescaped user input is being rendered.
+
+- **Attack Surface:** Information Disclosure via Decorator Methods
+    - **Description:**  Sensitive information that should not be visible to the user is inadvertently exposed through the application's interface.
+    - **How Draper Contributes:** Decorators are used to present model data. If a decorator method accesses and displays attributes or related data that are intended for internal use or restricted access, it can lead to information disclosure.
+    - **Example:** A decorator for an order displays the internal cost price, which should only be visible to administrators: `def display_price; object.cost_price; end`. This exposes sensitive pricing information to regular users.
+    - **Impact:**  Exposure of confidential data, financial information, personal details, or internal system details. Can lead to loss of trust, regulatory fines, and competitive disadvantage.
+    - **Risk Severity:** **Medium** to **High** (depending on the sensitivity of the disclosed information).
+    - **Mitigation Strategies:**
+        - **Apply the principle of least privilege within decorators.** Only access and display the data that is absolutely necessary for the intended presentation.
+        - **Carefully review decorator methods** to ensure they are not inadvertently exposing sensitive attributes or relationships.
+        - **Implement proper authorization checks** at the model or controller level to restrict access to sensitive data before it even reaches the decorator.
+
+- **Attack Surface:** Abuse of Helper Methods within Decorators
+    - **Description:**  Vulnerabilities in helper methods used within decorators can be exploited through the decorator context.
+    - **How Draper Contributes:** Decorators often utilize helper methods provided by the application's view context. If these helper methods have vulnerabilities or are used incorrectly within the decorator, it can introduce security risks.
+    - **Example:** A decorator uses a helper method that generates URLs without proper validation, allowing an attacker to craft malicious links: `def malicious_link; helper.url_for(evil: 'parameter'); end`. If `url_for` doesn't sanitize the `evil` parameter, it could lead to vulnerabilities.
+    - **Impact:**  Depends on the vulnerability in the helper method. Could range from XSS to information disclosure or even more severe exploits.
+    - **Risk Severity:** **Medium** to **High** (depending on the vulnerability in the helper method).
+    - **Mitigation Strategies:**
+        - **Ensure all helper methods used within decorators are secure and properly validated.**
+        - **Treat helper method calls within decorators with the same level of scrutiny as direct output.**
+        - **Regularly review and update helper methods** to patch any known vulnerabilities.
