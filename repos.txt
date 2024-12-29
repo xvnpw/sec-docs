@@ -1,5 +1,3 @@
-groovy https://github.com/fizzed/font-mfizz
-groovy https://github.com/geb/geb
 groovy https://github.com/gogradle/gogradle
 groovy https://github.com/GradleUp/shadow
 groovy https://github.com/grails/grails
