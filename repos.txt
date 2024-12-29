@@ -1,5 +1,3 @@
-go https://github.com/IceWhaleTech/CasaOS
-go https://github.com/inconshreveable/ngrok
 go https://github.com/jesseduffield/lazydocker
 go https://github.com/jesseduffield/lazygit
 go https://github.com/juanfont/headscale
