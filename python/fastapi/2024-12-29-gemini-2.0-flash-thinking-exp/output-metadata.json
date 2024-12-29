@@ -1,8 +1,8 @@
 {
-  "repo_url": "https://github.com/tiangolo/fastapi",
+  "repo_url": "https://github.com/fastapi/fastapi",
   "analyzer_args": "",
-  "start_datetime": "2024-12-29T00:00:57Z",
-  "end_datetime": "2024-12-29T00:05:49Z",
+  "start_datetime": "2024-12-29T12:01:17Z",
+  "end_datetime": "2024-12-29T12:06:06Z",
   "agent_provider": "google",
   "agent_model": "gemini-2.0-flash-thinking-exp",
   "agent_temperature": "0",
@@ -12,6 +12,6 @@
     "attack-surface",
     "attack-tree"
   ],
-  "actual_token_usage": "81724",
+  "actual_token_usage": "78036",
   "mode": "github"
 }
