@@ -1,5 +1,3 @@
-cpp https://github.com/ClickHouse/ClickHouse
-cpp https://github.com/dragonflydb/dragonfly
 cpp https://github.com/duckdb/duckdb
 cpp https://github.com/envoyproxy/envoy
 cpp https://github.com/ethereum/solidity
