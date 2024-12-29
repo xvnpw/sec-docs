@@ -1,5 +1,3 @@
-c https://github.com/swaywm/sway
-c https://github.com/taosdata/TDengine
 c https://github.com/timescale/timescaledb
 c https://github.com/tmux/tmux
 c https://github.com/twitter/twemproxy
