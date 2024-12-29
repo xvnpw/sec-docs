@@ -1,5 +1,3 @@
-c https://github.com/netdata/netdata
-c https://github.com/nothings/stb
 c https://github.com/NVIDIA/open-gpu-kernel-modules
 c https://github.com/octalmage/robotjs
 c https://github.com/openresty/lua-nginx-module
