@@ -1,5 +1,3 @@
-javascript https://github.com/adobe/brackets
-javascript https://github.com/airbnb/lottie-web
 javascript https://github.com/alvarotrigo/fullPage.js
 javascript https://github.com/angular/angular.js
 javascript https://github.com/atom/atom
