@@ -1,5 +1,3 @@
-go https://github.com/gorilla/websocket
-go https://github.com/grafana/k6
 go https://github.com/harness/harness
 go https://github.com/hashicorp/consul
 go https://github.com/helm/helm
