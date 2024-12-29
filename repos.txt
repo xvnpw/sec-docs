@@ -1,5 +1,3 @@
-java https://github.com/brettwooldridge/HikariCP
-java https://github.com/conductor-oss/conductor
 java https://github.com/dromara/hutool
 java https://github.com/LMAX-Exchange/disruptor
 java https://github.com/macrozheng/mall
