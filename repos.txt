@@ -1,5 +1,3 @@
-go https://github.com/mislav/hub
-go https://github.com/nektos/act
 go https://github.com/openfaas/faas
 go https://github.com/opentofu/opentofu
 go https://github.com/photoprism/photoprism
