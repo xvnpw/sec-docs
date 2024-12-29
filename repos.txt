@@ -1,5 +1,3 @@
-javascript https://github.com/Semantic-Org/Semantic-UI
-javascript https://github.com/serverless/serverless
 javascript https://github.com/SortableJS/Sortable
 javascript https://github.com/ToolJet/ToolJet
 javascript https://github.com/TryGhost/Ghost
