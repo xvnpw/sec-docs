@@ -1,5 +1,3 @@
-csharp https://github.com/nopSolutions/nopCommerce
-csharp https://github.com/QuantConnect/Lean
 csharp https://github.com/QuestPDF/QuestPDF
 csharp https://github.com/restsharp/RestSharp
 csharp https://github.com/spectreconsole/spectre.console
