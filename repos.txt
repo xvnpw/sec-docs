@@ -1,5 +1,3 @@
-ruby https://github.com/Homebrew/brew
-ruby https://github.com/Homebrew/homebrew-cask
 ruby https://github.com/Homebrew/homebrew-core
 ruby https://github.com/javan/whenever
 ruby https://github.com/jekyll/jekyll
