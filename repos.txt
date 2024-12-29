@@ -1,5 +1,3 @@
-c https://github.com/ImageMagick/ImageMagick
-c https://github.com/iovisor/bcc
 c https://github.com/jedisct1/libsodium
 c https://github.com/jqlang/jq
 c https://github.com/libuv/libuv
