@@ -1,5 +1,3 @@
-java https://github.com/macrozheng/mall
-java https://github.com/mybatis/mybatis-3
 java https://github.com/ReactiveX/RxAndroid
 java https://github.com/Stirling-Tools/Stirling-PDF
 java https://github.com/termux/termux-app
