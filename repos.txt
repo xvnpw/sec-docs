@@ -1,5 +1,3 @@
-c https://github.com/ffmpegwasm/ffmpeg.wasm
-c https://github.com/google/sanitizers
 c https://github.com/ImageMagick/ImageMagick
 c https://github.com/iovisor/bcc
 c https://github.com/jedisct1/libsodium
