@@ -1,5 +1,3 @@
-javascript https://github.com/mozilla/pdf.js
-javascript https://github.com/naptha/tesseract.js
 javascript https://github.com/nolimits4web/swiper
 javascript https://github.com/nwjs/nw.js
 javascript https://github.com/phaserjs/phaser
