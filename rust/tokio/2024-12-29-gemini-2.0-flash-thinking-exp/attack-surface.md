@@ -1,0 +1,56 @@
+- **Attack Surface: Unbounded Task Spawning**
+    - **Description:** An attacker can trigger the creation of an excessive number of asynchronous tasks, potentially overwhelming the application's resources (CPU, memory, file descriptors).
+    - **How Tokio Contributes:** Tokio's ease of spawning tasks using `tokio::spawn` makes it straightforward to create many concurrent operations. If not controlled, this can be abused.
+    - **Example:** A malicious client repeatedly sends requests that each trigger the spawning of a new, long-running task without any limits or backpressure.
+    - **Impact:** Denial of Service (DoS), application slowdown, resource exhaustion leading to crashes.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement task limits or quotas.
+        - Use a bounded channel or semaphore to control the number of concurrent tasks.
+        - Implement backpressure mechanisms to handle incoming requests gracefully.
+        - Set timeouts for tasks to prevent indefinite resource consumption.
+
+- **Attack Surface: Race Conditions in Shared Mutable State**
+    - **Description:** Concurrent access to shared mutable data without proper synchronization can lead to unpredictable and potentially exploitable behavior.
+    - **How Tokio Contributes:** Tokio's asynchronous nature encourages concurrency. If shared data is not protected with synchronization primitives, race conditions are likely.
+    - **Example:** Multiple asynchronous tasks concurrently increment a shared counter without using a `Mutex`, leading to incorrect counts and potentially exploitable logic based on that count.
+    - **Impact:** Data corruption, inconsistent application state, potential for privilege escalation or other security breaches depending on the affected data.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Use Tokio's synchronization primitives like `Mutex`, `RwLock`, or `Semaphore` to protect shared mutable data.
+        - Employ message passing (e.g., using `tokio::sync::mpsc` or `tokio::sync::broadcast`) to manage state changes between tasks.
+        - Design the application to minimize shared mutable state.
+
+- **Attack Surface: Denial of Service via Connection Flooding**
+    - **Description:** An attacker floods the application with connection requests, overwhelming its ability to handle legitimate traffic.
+    - **How Tokio Contributes:** Tokio's asynchronous networking allows handling many concurrent connections, but without proper safeguards, it can be overwhelmed by a flood of malicious connections.
+    - **Example:** A botnet sends a large number of TCP connection requests to a Tokio-based server, exhausting its resources and preventing it from accepting new connections.
+    - **Impact:** Denial of Service (DoS), making the application unavailable to legitimate users.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement connection limits.
+        - Use rate limiting on incoming connections.
+        - Employ techniques like SYN cookies to mitigate SYN flood attacks.
+        - Consider using load balancers or reverse proxies with DDoS protection.
+
+- **Attack Surface: Vulnerabilities in Underlying Libraries (Indirect)**
+    - **Description:** Tokio relies on other crates (e.g., `mio`, `async-io`). Vulnerabilities in these dependencies can indirectly affect the security of applications using Tokio.
+    - **How Tokio Contributes:** Tokio's functionality is built upon these lower-level libraries. Exploits in these libraries can be leveraged through Tokio's API.
+    - **Example:** A vulnerability in the `mio` crate related to socket handling could be exploited by sending specially crafted network packets to a Tokio application.
+    - **Impact:** Varies depending on the vulnerability in the underlying library, potentially leading to remote code execution, denial of service, or information disclosure.
+    - **Risk Severity:** Varies (can be Critical)
+    - **Mitigation Strategies:**
+        - Regularly update Tokio and its dependencies to the latest versions.
+        - Monitor security advisories for Tokio and its dependencies.
+        - Consider using tools for dependency vulnerability scanning.
+
+- **Attack Surface: Command Injection via Process Spawning (if used)**
+    - **Description:** If the application uses Tokio's process spawning capabilities with unsanitized user input, attackers can inject arbitrary commands.
+    - **How Tokio Contributes:** Tokio provides `tokio::process` for interacting with external processes. Improper use can lead to command injection.
+    - **Example:** A web application uses user-provided input to construct a command executed using `tokio::process::Command`, allowing an attacker to execute arbitrary system commands.
+    - **Impact:** Remote code execution, full system compromise.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Avoid using user-provided input directly in commands.
+        - Sanitize and validate user input thoroughly.
+        - Use parameterized commands or safer alternatives to process spawning if possible.
