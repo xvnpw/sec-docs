@@ -1,5 +1,3 @@
-go https://github.com/containers/podman
-go https://github.com/coreybutler/nvm-windows
 go https://github.com/docker/compose
 go https://github.com/ethereum/go-ethereum
 go https://github.com/evanw/esbuild
