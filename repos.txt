@@ -1,5 +1,3 @@
-swift https://github.com/SwiftyBeaver/SwiftyBeaver
-swift https://github.com/SwiftyJSON/SwiftyJSON
 swift https://github.com/tuist/tuist
 swift https://github.com/vapor/vapor
 typescript https://github.com/akveo/ngx-admin
