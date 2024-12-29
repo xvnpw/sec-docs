@@ -1,5 +1,3 @@
-csharp https://github.com/App-vNext/Polly
-csharp https://github.com/AvaloniaUI/Avalonia
 csharp https://github.com/bchavez/Bogus
 csharp https://github.com/bitwarden/server
 csharp https://github.com/cefsharp/CefSharp
