@@ -1,4 +1,2 @@
-ruby https://github.com/lostisland/faraday
-ruby https://github.com/mislav/will_paginate
 ruby https://github.com/ruby-concurrency/concurrent-ruby
 ruby https://github.com/activerecord-hackery/ransack
