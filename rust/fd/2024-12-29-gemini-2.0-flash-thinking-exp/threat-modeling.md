@@ -1,0 +1,30 @@
+- **Threat:** Command Injection
+    - **Description:** An attacker could inject arbitrary shell commands by manipulating input that is directly used to construct the `fd` command. This could involve using shell metacharacters to execute unintended actions. For example, if the application uses user input to build a search command like `fd "{user_input}" .`, an attacker could input `"; rm -rf /"` to execute a destructive command.
+    - **Impact:** Complete compromise of the application's host system, including data breaches, system modification, or denial of service.
+    - **Affected Component:** The execution of the `fd` subprocess by the application. Specifically, the part of the code that constructs the command string passed to the shell.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Avoid direct string concatenation.
+        - Use parameterized execution.
+        - Implement strict input validation and sanitization.
+        - Use allow-lists.
+
+- **Threat:** Path Traversal
+    - **Description:** An attacker could manipulate the search path provided to `fd` to access files or directories outside the intended scope. For instance, if the application allows users to specify a starting directory for the search, an attacker could input `../../../../etc/passwd` to attempt to access sensitive system files.
+    - **Impact:** Unauthorized access to sensitive files and directories, potentially leading to information disclosure or privilege escalation.
+    - **Affected Component:** The argument parsing and validation logic within the application that handles the search path passed to `fd`.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Restrict search paths.
+        - Canonicalize paths.
+        - Use allow-lists for paths.
+
+- **Threat:** Privilege Escalation (Indirect)
+    - **Description:** If the application runs `fd` with elevated privileges (e.g., as root) and there's a vulnerability in how the application constructs the `fd` command or handles its output, an attacker could potentially leverage this to execute commands with those elevated privileges. This is a specific case of command injection with higher stakes.
+    - **Impact:** Complete compromise of the system due to the attacker gaining root or administrator privileges.
+    - **Affected Component:** The execution of the `fd` subprocess with elevated privileges and the code responsible for constructing and handling the command.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Principle of least privilege.
+        - Strict command construction and output handling.
+        - Consider using capabilities.
