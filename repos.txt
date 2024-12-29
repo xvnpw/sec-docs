@@ -1,5 +1,3 @@
-ruby https://github.com/hanami/hanami
-ruby https://github.com/norman/friendly_id
 ruby https://github.com/ddollar/foreman
 ruby https://github.com/progit/progit
 ruby https://github.com/github/markup
