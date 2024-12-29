@@ -1,5 +1,3 @@
-swift https://github.com/RxSwiftCommunity/RxAlamofire
-swift https://github.com/RxSwiftCommunity/RxDataSources
 swift https://github.com/scalessec/Toast-Swift
 swift https://github.com/SnapKit/Masonry
 swift https://github.com/SnapKit/SnapKit
