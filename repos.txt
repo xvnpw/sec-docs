@@ -1,5 +1,3 @@
-python https://github.com/OpenInterpreter/open-interpreter
-python https://github.com/ultralytics/yolov5
 python https://github.com/commaai/openpilot
 python https://github.com/Textualize/rich
 python https://github.com/lllyasviel/Fooocus
