@@ -1,5 +1,3 @@
-javascript https://github.com/phaserjs/phaser
-javascript https://github.com/preactjs/preact
 javascript https://github.com/Semantic-Org/Semantic-UI
 javascript https://github.com/serverless/serverless
 javascript https://github.com/SortableJS/Sortable
