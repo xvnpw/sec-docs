@@ -1,5 +1,3 @@
-rust https://github.com/serde-rs/serde
-rust https://github.com/SergioBenitez/Rocket
 rust https://github.com/sharkdp/bat
 rust https://github.com/sharkdp/fd
 rust https://github.com/simd-lite/simd-json
