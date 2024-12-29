@@ -1,5 +1,3 @@
-go https://github.com/fyne-io/fyne
-go https://github.com/gocolly/colly
 go https://github.com/gofiber/fiber
 go https://github.com/go-gitea/gitea
 go https://github.com/go-gorm/gorm
