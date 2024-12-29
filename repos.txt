@@ -1,5 +1,3 @@
-java https://github.com/apache/shardingsphere
-java https://github.com/apolloconfig/apollo
 java https://github.com/Baseflow/PhotoView
 java https://github.com/Blankj/AndroidUtilCode
 java https://github.com/brettwooldridge/HikariCP
