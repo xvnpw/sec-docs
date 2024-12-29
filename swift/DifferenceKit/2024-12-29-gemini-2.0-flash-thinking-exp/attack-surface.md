@@ -1,0 +1,21 @@
+- **Excessive Processing due to Malicious Input:**
+    - **Description:** An attacker provides specially crafted input collections that cause DifferenceKit's diffing algorithms to perform an excessive amount of computation.
+    - **How DifferenceKit Contributes:** The library's core function is to calculate differences between collections. Certain input patterns can trigger worst-case scenarios in the underlying algorithms, leading to high CPU usage.
+    - **Example:** Providing two very large arrays with only minor, strategically placed differences that force the algorithm to compare a large number of elements.
+    - **Impact:** Denial of Service (DoS) on the client device, leading to application unresponsiveness or crashes. Battery drain on mobile devices.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement input validation to limit the size and complexity of collections passed to DifferenceKit.
+        - Set timeouts or resource limits for the diffing process.
+        - Consider using simpler diffing algorithms if the performance overhead is a concern and the complexity of changes is limited.
+
+- **Incorrect Diff Results Leading to Data Corruption or UI Inconsistencies:**
+    - **Description:**  Maliciously crafted input collections exploit edge cases or algorithmic quirks in DifferenceKit, resulting in incorrect or unexpected diff calculations.
+    - **How DifferenceKit Contributes:** The accuracy of the diff calculation is fundamental to the library's purpose. Flaws in the algorithm or its implementation can lead to incorrect diffs.
+    - **Example:** Providing collections where the order of elements is manipulated in a way that confuses the diffing algorithm, leading to incorrect insertion or deletion operations being reported.
+    - **Impact:** Data corruption within the application's data model, leading to incorrect application state. UI inconsistencies and unexpected behavior for the user.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Thoroughly test the application's integration with DifferenceKit using a wide range of input data, including edge cases and potentially malicious patterns.
+        - Implement robust error handling and validation when applying the calculated diffs to the application's data structures or UI.
+        - Consider using alternative diffing algorithms or libraries for comparison if the risk of incorrect diffs is a major concern.
