@@ -1,5 +1,3 @@
-cpp https://github.com/ethereum/solidity
-cpp https://github.com/facebook/yoga
 cpp https://github.com/facebookresearch/faiss
 cpp https://github.com/gabime/spdlog
 cpp https://github.com/ggerganov/llama.cpp
