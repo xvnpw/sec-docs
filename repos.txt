@@ -1,5 +1,3 @@
-cpp https://github.com/ml-explore/mlx
-cpp https://github.com/mongodb/mongo
 cpp https://github.com/mudler/LocalAI
 cpp https://github.com/nomic-ai/gpt4all
 cpp https://github.com/ossrs/srs
