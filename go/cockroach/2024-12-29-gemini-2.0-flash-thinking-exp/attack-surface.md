@@ -1,0 +1,48 @@
+Here's the updated key attack surface list, focusing on elements directly involving CockroachDB with high or critical risk severity:
+
+*   **Attack Surface:** Authentication and Authorization Bypass (Client Connections)
+    *   **Description:**  Circumventing the intended authentication and authorization mechanisms when connecting to the CockroachDB cluster.
+    *   **How CockroachDB Contributes:** CockroachDB relies on mechanisms like password authentication, client certificates, and role-based access control (RBAC). Weaknesses in the application's implementation or management of *these CockroachDB features* can create vulnerabilities.
+    *   **Example:** An application incorrectly handles client certificates required by CockroachDB, allowing connections without proper validation.
+    *   **Impact:** Unauthorized access to the database, data breaches, data manipulation, potential for complete compromise of the database.
+    *   **Risk Severity:** Critical
+    *   **Mitigation Strategies:**
+        *   **Secure Credential Management:**  Store database credentials securely using secrets management tools or environment variables, avoiding hardcoding or storing in plain text.
+        *   **Enforce Strong Authentication:**  Utilize CockroachDB's features for strong password policies and consider multi-factor authentication where applicable.
+        *   **Implement Robust RBAC:**  Carefully define roles and permissions *within CockroachDB*, granting users only the necessary access.
+        *   **Regularly Rotate Credentials:**  Periodically change database passwords and client certificates *managed by CockroachDB*.
+        *   **Secure Key Distribution (for certificates):** Ensure client certificates *used for CockroachDB authentication* are distributed securely.
+
+*   **Attack Surface:** Man-in-the-Middle Attacks (Inter-Node Communication)
+    *   **Description:**  An attacker intercepts and potentially alters communication between nodes within the CockroachDB cluster.
+    *   **How CockroachDB Contributes:** CockroachDB relies on internal communication between nodes for replication and consensus. If *CockroachDB's inter-node communication* is not properly secured, it becomes vulnerable.
+    *   **Example:**  Inter-node communication within the CockroachDB cluster is not encrypted using TLS, allowing an attacker on the same network to eavesdrop on data being replicated between nodes.
+    *   **Impact:** Data breaches, data manipulation, potential for disrupting cluster consensus and availability.
+    *   **Risk Severity:** High
+    *   **Mitigation Strategies:**
+        *   **Enable TLS for Inter-Node Communication:**  Configure *CockroachDB* to use TLS for all communication between nodes.
+        *   **Secure Network Infrastructure:**  Isolate the CockroachDB cluster on a private network and restrict access.
+        *   **Use Strong Certificates:**  Ensure that the TLS certificates *used by CockroachDB* for inter-node communication are strong and properly managed.
+
+*   **Attack Surface:** Authentication and Authorization Bypass (Admin UI)
+    *   **Description:**  Gaining unauthorized access to the CockroachDB Admin UI, which provides control over the cluster.
+    *   **How CockroachDB Contributes:** The *CockroachDB* Admin UI is a powerful tool for managing the cluster. Weaknesses in its authentication or authorization mechanisms can lead to significant security breaches.
+    *   **Example:**  Using default credentials for the CockroachDB Admin UI or vulnerabilities in its authentication logic allowing bypass.
+    *   **Impact:** Complete compromise of the CockroachDB cluster, including data manipulation, deletion, and denial of service.
+    *   **Risk Severity:** Critical
+    *   **Mitigation Strategies:**
+        *   **Change Default Credentials:**  Immediately change the default administrator credentials for the *CockroachDB* Admin UI.
+        *   **Enable Strong Authentication:**  Enforce strong passwords and consider methods like client certificates for *CockroachDB* Admin UI access.
+        *   **Restrict Access to Admin UI:**  Limit access to the *CockroachDB* Admin UI to authorized personnel and networks.
+        *   **Keep CockroachDB Updated:**  Regularly update CockroachDB to patch known vulnerabilities in the Admin UI.
+
+*   **Attack Surface:** Unauthorized Access to Backups
+    *   **Description:**  Gaining access to CockroachDB backup files without proper authorization.
+    *   **How CockroachDB Contributes:** *CockroachDB's* backup mechanisms create snapshots of the data. If these backups are not stored securely, they become a target for attackers.
+    *   **Example:** Backups created by CockroachDB are stored in a publicly accessible cloud storage bucket without proper access controls.
+    *   **Impact:** Data breach, exposure of sensitive information.
+    *   **Risk Severity:** High
+    *   **Mitigation Strategies:**
+        *   **Secure Backup Storage:**  Store backups *generated by CockroachDB* in secure locations with appropriate access controls and encryption.
+        *   **Encrypt Backups:**  Encrypt backup files *created by CockroachDB* at rest to protect the data even if the storage is compromised.
+        *   **Control Access to Backup Credentials:**  Securely manage the credentials required to access backup storage *used by CockroachDB*.
