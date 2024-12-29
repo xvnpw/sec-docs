@@ -83,7 +83,9 @@ def main():
         readme_lines.append("|---------|-------------|---------------|")
 
         language_dir = os.path.join(".", language)
-        projects = sorted([p for p in os.listdir(language_dir) if os.path.isdir(os.path.join(language_dir, p))])
+        projects = sorted(
+            [p for p in os.listdir(language_dir) if os.path.isdir(os.path.join(language_dir, p))], key=str.lower
+        )
 
         for project in projects:
             project_dir = os.path.join(language_dir, project)
