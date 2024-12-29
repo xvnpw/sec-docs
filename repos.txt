@@ -1,5 +1,3 @@
-rust https://github.com/BurntSushi/ripgrep
-rust https://github.com/bytecodealliance/wasmtime
 rust https://github.com/crossbeam-rs/crossbeam
 rust https://github.com/dalance/procs
 rust https://github.com/denoland/deno
