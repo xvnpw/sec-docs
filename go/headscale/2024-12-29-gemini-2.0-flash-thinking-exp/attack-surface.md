@@ -1,0 +1,46 @@
+- **Attack Surface:** Unauthenticated or Weakly Authenticated API Endpoints
+    - **Description:** Headscale exposes API endpoints for various functionalities, including node registration and management. If these endpoints lack proper authentication or use weak authentication methods, attackers can interact with the Headscale server without authorization.
+    - **How Headscale Contributes:** Headscale's core functionality relies on these APIs for managing the VPN. Weaknesses here directly expose the control plane.
+    - **Example:** An attacker could register unauthorized nodes on the network, potentially gaining access to internal resources or disrupting the VPN.
+    - **Impact:** Unauthorized access to the VPN, potential data breaches, denial of service.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Implement strong authentication mechanisms for all API endpoints (e.g., API keys, JWT).
+        - Enforce authentication for all sensitive operations.
+        - Regularly review and audit API endpoint security configurations.
+        - Consider mutual TLS (mTLS) for client authentication.
+
+- **Attack Surface:** Insecure Handling of Pre-Shared Keys (if used)
+    - **Description:** Headscale allows the use of pre-shared keys for node authentication. If these keys are weak, easily guessable, or stored insecurely, attackers can use them to register unauthorized nodes.
+    - **How Headscale Contributes:** Headscale provides the mechanism for using pre-shared keys, and its security depends on the strength and secure management of these keys.
+    - **Example:** An attacker obtains a weak pre-shared key and uses it to register a malicious node on the network.
+    - **Impact:** Unauthorized access to the VPN, potential for lateral movement within the network.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Encourage or enforce the use of strong, randomly generated pre-shared keys.
+        - Implement secure storage mechanisms for pre-shared keys, avoiding storing them in plain text.
+        - Consider alternative, more secure authentication methods like OIDC.
+        - Regularly rotate pre-shared keys.
+
+- **Attack Surface:** Web UI Input Validation Vulnerabilities
+    - **Description:** If the Headscale web UI (if enabled) doesn't properly sanitize user inputs, attackers can inject malicious code (e.g., JavaScript for XSS) or commands, potentially compromising administrator accounts or the Headscale server itself.
+    - **How Headscale Contributes:** Headscale's web UI provides an interface for managing the VPN, and vulnerabilities here can directly impact the control plane.
+    - **Example:** An attacker injects malicious JavaScript into a node name, which is then executed in the browsers of administrators viewing the node list, potentially stealing session cookies.
+    - **Impact:** Account compromise, potential for further attacks on the Headscale server or connected nodes.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement robust input validation and sanitization on all user-provided data in the web UI.
+        - Utilize output encoding to prevent the execution of malicious scripts.
+        - Regularly scan the web UI for vulnerabilities.
+        - Implement a Content Security Policy (CSP).
+
+- **Attack Surface:** Insecure Configuration Management
+    - **Description:** If the Headscale configuration file (e.g., `config.yaml`) contains sensitive information (API keys, database credentials) and is not properly protected, attackers who gain access to the server could compromise these secrets.
+    - **How Headscale Contributes:** Headscale relies on its configuration file for critical settings and secrets.
+    - **Example:** An attacker gains access to the Headscale server and reads the `config.yaml` file, obtaining the API key and using it for unauthorized actions.
+    - **Impact:** Full compromise of the Headscale instance and potentially the entire VPN.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Restrict access to the Headscale configuration file to only the necessary users and processes.
+        - Avoid storing sensitive information directly in the configuration file. Consider using environment variables or a dedicated secrets management solution.
+        - Implement proper file system permissions.
