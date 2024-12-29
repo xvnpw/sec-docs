@@ -1,0 +1,38 @@
+- **Attack Vector: Cache Poisoning**
+    - **Description:** An attacker injects malicious or incorrect data into the cache, which is then served to legitimate users, leading to application malfunction or the delivery of false information.
+    - **How Cache Contributes to the Attack Surface:** The `Cache` library facilitates the storage and retrieval of data. If the application doesn't properly sanitize or validate data *before* storing it in the cache using `Cache`'s `set` method, it becomes vulnerable to poisoning.
+    - **Example:** An attacker manipulates a request parameter that is used as part of the cache key. The application fetches data based on this manipulated key and stores attacker-controlled content in the cache. Subsequent legitimate requests using the same (now poisoned) key retrieve the malicious data.
+    - **Impact:** Application malfunction, display of incorrect information, potential for further attacks if the poisoned data is used in security-sensitive operations (e.g., reflected XSS if HTML is cached).
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Input Validation:**  Thoroughly validate and sanitize all data before storing it in the cache using `Cache`.
+        - **Secure Cache Key Generation:** Ensure cache keys are not easily predictable or manipulable by attackers. Avoid directly using user-supplied input in cache keys without proper sanitization.
+
+- **Attack Vector: Cache Deception/Confusion**
+    - **Description:** An attacker manipulates the cache in a way that causes the application to serve incorrect data based on a false assumption about the cached content's origin or validity. This can lead to authorization bypasses or other logical flaws.
+    - **How Cache Contributes to the Attack Surface:** If the application relies on cached data for authorization decisions or assumes the integrity of cached data without verification, `Cache` becomes a vector for deception. The library itself doesn't provide mechanisms for verifying the source or trustworthiness of cached data.
+    - **Example:** An application caches user roles based on a user ID. An attacker might try to manipulate the cache key or the cached role data to gain elevated privileges by making the application believe they have a different role.
+    - **Impact:** Unauthorized access to resources, privilege escalation, circumvention of security controls.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Don't Rely Solely on Cache for Authorization:**  Always re-verify authorization against the source of truth, especially for critical operations. The cache should be used for performance optimization, not as the sole authority.
+        - **Secure Cache Key Design:**  Ensure cache keys for sensitive data are robust and difficult to guess or manipulate.
+
+- **Attack Vector: Sensitive Data Exposure in Cache**
+    - **Description:** Sensitive information is stored in the cache without proper encryption or access controls, making it vulnerable to unauthorized access if the cache storage is compromised.
+    - **How Cache Contributes to the Attack Surface:** The `Cache` library itself doesn't provide built-in encryption for cached data. If the application stores sensitive data using `Cache` without implementing its own encryption, it directly contributes to this vulnerability.
+    - **Example:** An application caches API keys or personally identifiable information (PII) using `Cache`'s default in-memory storage or a persistent storage like Redis without enabling encryption at rest. If an attacker gains access to the server or the Redis instance, they can potentially read this sensitive data.
+    - **Impact:** Data breaches, privacy violations, compliance issues, reputational damage.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Encrypt Sensitive Data:** Always encrypt sensitive data before storing it in the cache using appropriate encryption algorithms.
+
+- **Attack Vector: Resource Exhaustion (Cache Filling)**
+    - **Description:** An attacker floods the cache with a large number of unique entries, consuming excessive memory or storage resources and potentially leading to denial of service or performance degradation.
+    - **How Cache Contributes to the Attack Surface:** The `Cache` library allows storing arbitrary data based on keys. If the application doesn't implement limits on the number of cache entries or eviction policies, an attacker can exploit this by creating numerous unique cache entries.
+    - **Example:** An attacker repeatedly makes requests with slightly different parameters that are used to generate unique cache keys. This rapidly fills the cache, potentially causing the application to slow down or crash due to memory exhaustion.
+    - **Impact:** Denial of service, performance degradation, increased infrastructure costs.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Set Cache Limits:** Configure maximum size limits for the cache to prevent unbounded growth.
+        - **Implement Eviction Policies:** Use appropriate cache eviction policies (e.g., LRU, LFU) to automatically remove less frequently used or older entries.
