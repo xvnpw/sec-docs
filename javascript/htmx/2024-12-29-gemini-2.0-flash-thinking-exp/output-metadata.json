@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/bigskysoftware/htmx",
+  "analyzer_args": "",
+  "start_datetime": "2024-12-29T22:19:59Z",
+  "end_datetime": "2024-12-29T22:24:29Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "73035",
+  "mode": "github"
+}

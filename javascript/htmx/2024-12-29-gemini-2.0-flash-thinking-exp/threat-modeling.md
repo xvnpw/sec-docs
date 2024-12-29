@@ -1,0 +1,40 @@
+- **Threat:** Malicious Attribute Injection
+    - **Description:** An attacker injects malicious HTMX attributes (e.g., `hx-get`, `hx-post`, `hx-on`) into the HTML, typically through Cross-Site Scripting (XSS) vulnerabilities. This allows them to directly control the behavior of HTMX requests initiated by the user's browser, without any other client-side scripting necessarily being involved. They might redirect requests to attacker-controlled servers, trigger unintended actions on the application via HTMX, or exfiltrate data through HTMX requests.
+    - **Impact:** Execution of arbitrary JavaScript due to the triggered requests, redirection to malicious sites via HTMX, unauthorized data access or modification through manipulated HTMX requests, session hijacking facilitated by malicious HTMX actions.
+    - **Affected HTMX Component:** Any attribute that directly triggers an HTMX request or manipulates its behavior, such as `hx-get`, `hx-post`, `hx-put`, `hx-delete`, `hx-patch`, `hx-on`, `hx-trigger`, `hx-target`, `hx-vals`, `hx-headers`.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Implement robust input validation and output encoding to prevent XSS vulnerabilities, which are the primary enabler of this threat.
+        - Utilize a strict Content Security Policy (CSP) to restrict the sources from which scripts can be loaded and executed, limiting the impact of injected malicious attributes.
+        - Regularly audit code for potential XSS vulnerabilities that could be used to inject malicious HTMX attributes.
+        - Sanitize any user-generated content that might influence HTML attributes before rendering.
+
+- **Threat:** Attribute Manipulation
+    - **Description:** An attacker manipulates existing HTMX attributes directly on the client-side, potentially through DOM manipulation techniques or vulnerabilities in other client-side scripts. This allows them to alter the intended behavior of HTMX requests. They could change the target URL of a request defined by `hx-get` or `hx-post`, modify the request method, add malicious headers using `hx-headers`, or alter the data sent in the request via `hx-vals`. This manipulation directly leverages HTMX's attribute-driven nature.
+    - **Impact:** Sending HTMX requests to unintended endpoints, performing actions with modified data through HTMX, potentially bypassing server-side security checks that rely on the integrity of the original HTMX attributes.
+    - **Affected HTMX Component:** Attributes directly controlling HTMX request behavior like `hx-get`, `hx-post`, `hx-target`, `hx-headers`, `hx-params`, `hx-vals`.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Minimize the use of client-side JavaScript that directly manipulates HTMX attributes, especially those controlling critical request parameters.
+        - Implement integrity checks or checksums for critical HTMX attributes if client-side manipulation is unavoidable.
+        - Ensure robust server-side validation and authorization that does not solely rely on the client-provided HTMX attributes being unmanipulated.
+
+- **Threat:** HTML Injection via HTMX Responses
+    - **Description:** The server's response to an HTMX request, specifically the HTML content intended to update a portion of the page as defined by `hx-target` and `hx-swap`, contains malicious HTML or JavaScript. HTMX directly injects this response into the DOM. This is a direct consequence of how HTMX handles server responses.
+    - **Impact:** Execution of arbitrary JavaScript (XSS) within the application's context, leading to data theft, session hijacking, or further malicious actions, directly facilitated by HTMX's DOM manipulation.
+    - **Affected HTMX Component:** `hx-target` (determines where the potentially malicious response is injected), `hx-swap` (determines how the injection occurs), and the server-side logic generating the HTML content for HTMX responses.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Perform thorough server-side sanitization of all HTML content returned in HTMX responses before sending it to the client.
+        - Utilize templating engines with built-in auto-escaping features when generating HTML for HTMX responses.
+        - Set appropriate `Content-Security-Policy` headers to mitigate the impact of any XSS that might occur despite sanitization efforts.
+
+- **Threat:** Unintended Actions due to HTMX Requests
+    - **Description:** HTMX simplifies triggering various types of requests (GET, POST, PUT, DELETE) using HTML attributes. If the server-side application doesn't properly validate the origin and intent of these requests specifically triggered by HTMX, an attacker could craft malicious HTMX requests (e.g., by manipulating attributes or triggering requests from a different context) to perform actions the user did not intend. The ease with which HTMX allows triggering different request types makes this a direct HTMX-related threat.
+    - **Impact:** Unauthorized data modification, deletion, or creation on the server-side, execution of privileged actions without proper authorization, all triggered through maliciously crafted HTMX requests.
+    - **Affected HTMX Component:** Attributes that directly trigger requests (`hx-get`, `hx-post`, `hx-put`, `hx-delete`, `hx-patch`) and the server-side request handling logic for endpoints targeted by HTMX requests.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement robust server-side authorization and authentication checks for all endpoints that can be targeted by HTMX requests.
+        - Utilize anti-CSRF tokens for state-changing requests triggered by HTMX to verify the request's origin.
+        - Validate the `HX-Request` header on the server-side to confirm that the request originated from an HTMX interaction, adding a layer of defense against direct, non-HTMX initiated malicious requests.
