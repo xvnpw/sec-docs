@@ -1,0 +1,50 @@
+- **Threat:** Insecure Connection Configuration (No TLS)
+    - **Description:** An attacker could eavesdrop on network traffic between the application and the Redis server if the connection is not encrypted using TLS/SSL. They could capture sensitive data being transmitted, such as user credentials, session identifiers, or application-specific data.
+    - **Impact:** Confidentiality breach, potential compromise of user accounts or sensitive data, regulatory non-compliance.
+    - **Affected `node-redis` Component:** `createClient` configuration options (specifically the `tls` option).
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Always enable TLS/SSL for the Redis connection by setting the `tls` option in the `createClient` configuration.
+        - Ensure proper certificate validation is configured to prevent man-in-the-middle attacks.
+
+- **Threat:** Redis Command Injection
+    - **Description:** An attacker could inject arbitrary Redis commands by manipulating user input that is directly incorporated into Redis commands without proper sanitization or parameterization. This allows them to execute commands beyond the intended application logic.
+    - **Impact:**  Bypassing application logic, accessing or modifying sensitive data, executing administrative commands on the Redis server (e.g., `FLUSHALL`), potentially leading to data breaches, data corruption, or denial of service. In some cases, with Redis modules enabled, it could lead to remote code execution.
+    - **Affected `node-redis` Component:** Functions that execute Redis commands (e.g., `client.get()`, `client.set()`, `client.sendCommand()`) when used with unsanitized input.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Never** directly concatenate user input into Redis commands.
+        - Use parameterized commands or the `redis.call()` method with proper argument handling to ensure input is treated as data, not code.
+        - Implement strict input validation and sanitization to prevent malicious input from reaching the Redis command execution.
+
+- **Threat:** Connection Pool Exhaustion leading to Denial of Service
+    - **Description:** An attacker could flood the application with requests that cause it to open numerous connections to the Redis server, exceeding the configured connection pool limits. This prevents legitimate requests from acquiring connections.
+    - **Impact:** Denial of service for legitimate users, application downtime, and potential financial losses.
+    - **Affected `node-redis` Component:** The connection pooling mechanism within `node-redis`.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Properly configure the connection pool size in the `createClient` options.
+        - Implement connection reuse and ensure connections are closed appropriately after use.
+        - Implement rate limiting or request queuing to prevent excessive connection attempts.
+        - Monitor Redis connection usage and alert on anomalies.
+
+- **Threat:** Exploiting Vulnerable Redis Commands (e.g., `EVAL` with unsanitized input)
+    - **Description:** An attacker could leverage powerful Redis commands, such as `EVAL` for executing Lua scripts, if the application uses them without proper security considerations. If user input is incorporated into these commands without sanitization, it can lead to script injection.
+    - **Impact:**  Executing arbitrary code on the Redis server, bypassing security controls, accessing or modifying data, potentially leading to data breaches, data corruption, or even compromising the Redis server itself.
+    - **Affected `node-redis` Component:** Functions that execute specific Redis commands like `client.eval()`.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Avoid using potentially dangerous commands like `EVAL` with user-supplied input.
+        - If `EVAL` is necessary, carefully sanitize and validate all input before incorporating it into Lua scripts.
+        - Consider alternative approaches that don't involve dynamic script generation.
+        - Follow the principle of least privilege when designing your application's interaction with Redis.
+
+- **Threat:** Data Deserialization Vulnerabilities (if storing serialized data)
+    - **Description:** If the application stores serialized data in Redis (e.g., using `JSON.stringify` and `JSON.parse`), an attacker could inject malicious serialized data. When the application deserializes this data, it could lead to code execution or other unexpected behavior.
+    - **Impact:** Remote code execution on the application server, allowing the attacker to gain control of the server or manipulate application state.
+    - **Affected `node-redis` Component:** Functions that retrieve data from Redis and subsequently deserialize it (e.g., `client.get()`).
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Be extremely cautious when storing serialized data in Redis.
+        - Consider using safer serialization formats or implementing robust validation and sanitization of deserialized data.
+        - Keep the Node.js runtime and any serialization libraries up-to-date with the latest security patches.
