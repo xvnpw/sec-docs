@@ -1,5 +1,3 @@
-swift https://github.com/HeroTransitions/Hero
-swift https://github.com/hyperoslo/Cache
 swift https://github.com/johnlui/Swift-On-iOS
 swift https://github.com/krzysztofzablocki/Sourcery
 swift https://github.com/krzyzanowskim/CryptoSwift
