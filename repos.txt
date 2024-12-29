@@ -1,5 +1,3 @@
-typescript https://github.com/DefinitelyTyped/DefinitelyTyped
-typescript https://github.com/facebook/jest
 typescript https://github.com/formatjs/formatjs
 typescript https://github.com/graphql/graphql-js
 typescript https://github.com/immerjs/immer
