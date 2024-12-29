@@ -1,5 +1,5 @@
 {
-    "repo_url": "https://github.com/fastapi/fastapi",
+    "repo_url": "https://github.com/3b1b/manim",
     "analyzer_args": "",
     "agent_provider": "google",
     "agent_model": "gemini-2.0-flash-thinking-exp",
