@@ -85,7 +85,6 @@ cpp https://github.com/google/re2
 cpp https://github.com/lizardbyte/sunshine
 cpp https://github.com/mariadb/server
 cpp https://github.com/microsoft/cntk
-cpp https://github.com/microsoft/onnxruntime
 cpp https://github.com/microsoft/vcpkg
 cpp https://github.com/microsoft/win2d
 cpp https://github.com/milostosic/mtuner
@@ -134,7 +133,6 @@ csharp https://github.com/dotnet/maui
 csharp https://github.com/dotnet/orleans
 csharp https://github.com/dotnet/reactive
 csharp https://github.com/dotnet/roslyn
-csharp https://github.com/dotnet/runtime
 csharp https://github.com/duendesoftware/products
 csharp https://github.com/egametang/et
 csharp https://github.com/elastic/elasticsearch-net
