@@ -1,5 +1,3 @@
-python https://github.com/dmlc/dgl
-rust https://github.com/bevyengine/bevy
 rust https://github.com/chroma-core/chroma
 rust https://github.com/clap-rs/clap
 rust https://github.com/cloudflare/pingora
