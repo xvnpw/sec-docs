@@ -17,7 +17,6 @@ c https://github.com/glfw/glfw
 c https://github.com/google/sanitizers
 c https://github.com/haproxy/haproxy
 c https://github.com/imagemagick/imagemagick
-c https://github.com/jart/cosmopolitan
 c https://github.com/jedisct1/libsodium
 c https://github.com/krallin/tini
 c https://github.com/libevent/libevent

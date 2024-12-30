@@ -49,7 +49,6 @@ We need community help to determine:
 - [google/sanitizers](c/google/sanitizers) ([GitHub](https://github.com/google/sanitizers))
 - [haproxy/haproxy](c/haproxy/haproxy) ([GitHub](https://github.com/haproxy/haproxy))
 - [imagemagick/imagemagick](c/imagemagick/imagemagick) ([GitHub](https://github.com/ImageMagick/ImageMagick))
-- [jart/cosmopolitan](c/jart/cosmopolitan) ([GitHub](https://github.com/jart/cosmopolitan))
 - [jedisct1/libsodium](c/jedisct1/libsodium) ([GitHub](https://github.com/jedisct1/libsodium))
 - [krallin/tini](c/krallin/tini) ([GitHub](https://github.com/krallin/tini))
 - [libevent/libevent](c/libevent/libevent) ([GitHub](https://github.com/libevent/libevent))
