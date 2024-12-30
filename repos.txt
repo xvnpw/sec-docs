@@ -1,5 +1,3 @@
-objectivec https://github.com/sparkle-project/Sparkle
-objectivec https://github.com/steipete/Aspects
 objectivec https://github.com/SVProgressHUD/SVProgressHUD
 objectivec https://github.com/swisspol/GCDWebServer
 objectivec https://github.com/tonymillion/Reachability
