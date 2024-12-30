@@ -19,7 +19,7 @@ c https://github.com/glfw/glfw
 c https://github.com/google/sanitizers
 c https://github.com/gpg/gnupg
 c https://github.com/haproxy/haproxy
-c https://github.com/htop-dev/htop/
+c https://github.com/htop-dev/htop
 c https://github.com/imagemagick/imagemagick
 c https://github.com/iovisor/bcc
 c https://github.com/jart/cosmopolitan
