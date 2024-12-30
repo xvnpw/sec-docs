@@ -1,5 +1,3 @@
-objectivec https://github.com/facebookarchive/Shimmer
-objectivec https://github.com/facebookarchive/three20
 objectivec https://github.com/facebookincubator/SocketRocket
 objectivec https://github.com/Flipboard/FLAnimatedImage
 objectivec https://github.com/forkingdog/UITableView-FDTemplateLayoutCell
