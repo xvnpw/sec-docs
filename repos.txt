@@ -1,5 +1,3 @@
-groovy https://github.com/PrototypeZ/AppJoint
-groovy https://github.com/rundeck/rundeck
 groovy https://github.com/sonatype/docker-nexus3
 groovy https://github.com/spinnaker/clouddriver
 groovy https://github.com/stjohnjohnson/smartthings-mqtt-bridge
