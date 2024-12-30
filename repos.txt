@@ -1,5 +1,3 @@
-objectivec https://github.com/SDWebImage/SDWebImage
-objectivec https://github.com/slackhq/SlackTextViewController
 objectivec https://github.com/sparkle-project/Sparkle
 objectivec https://github.com/steipete/Aspects
 objectivec https://github.com/SVProgressHUD/SVProgressHUD
