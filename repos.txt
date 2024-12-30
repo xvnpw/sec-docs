@@ -1,5 +1,3 @@
-php https://github.com/phpoffice/phpexcel
-php https://github.com/ramsey/uuid
 php https://github.com/reactphp/reactphp
 php https://github.com/roots/sage
 php https://github.com/serbanghita/mobile-detect
