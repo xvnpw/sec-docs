@@ -1,5 +1,3 @@
-php https://github.com/flarum/flarum
-php https://github.com/FreshRSS/FreshRSS
 php https://github.com/FriendsOfPHP/Goutte
 php https://github.com/fzaninotto/Faker
 php https://github.com/getgrav/grav
