@@ -1,5 +1,3 @@
-rust https://github.com/leptos-rs/leptos
-rust https://github.com/neondatabase/neon
 rust https://github.com/pola-rs/polars
 rust https://github.com/qdrant/qdrant
 rust https://github.com/ruffle-rs/ruffle
