@@ -1,0 +1,45 @@
+- **Threat:** Arbitrary Code Execution via DSL Injection
+    - **Description:** An attacker with permissions to create or modify Job DSL seed jobs crafts malicious DSL code that executes arbitrary Groovy code on the Jenkins master. This is achieved by leveraging the Job DSL plugin's ability to interpret and execute Groovy code provided in the DSL scripts.
+    - **Impact:** Full compromise of the Jenkins master, including data exfiltration, modification of configurations, installation of backdoors, and denial of service.
+    - **Affected Component:** DSL parsing logic within the Job DSL plugin, `ScriptJob` execution initiated by the plugin.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Restrict access to Job DSL seed jobs to highly trusted users.
+        - Implement mandatory code reviews for all changes to Job DSL scripts.
+        - Utilize the "Script Security" plugin and configure a restrictive Groovy sandbox, limiting the capabilities of scripts executed by the Job DSL plugin.
+        - Employ the "Workflow CPS Script Approval" feature for DSL scripts executed within pipelines, requiring administrator approval for new scripts or significant changes processed by the Job DSL plugin.
+        - Regularly audit existing Job DSL scripts for potentially dangerous constructs.
+
+- **Threat:** Command Injection through Unsafe DSL Constructs
+    - **Description:** An attacker leverages DSL commands provided by the Job DSL plugin, like `shell()` or `batchFile()`, without proper input sanitization. They inject malicious commands into parameters that are later executed on build agents or the master when the Job DSL plugin processes the script and creates/updates jobs.
+    - **Impact:** Remote command execution on build agents or the Jenkins master, potentially leading to data breaches, system compromise, or denial of service on those systems.
+    - **Affected Component:** `ShellStep`, `BatchFileStep` components within the Job DSL plugin that translate DSL into executable steps.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Avoid using `shell()` or `batchFile()` steps provided by the Job DSL plugin when possible. Prefer dedicated Jenkins plugins or steps for specific tasks.
+        - If `shell()` or `batchFile()` are necessary, meticulously sanitize and validate all user-provided input before incorporating it into commands within the DSL script.
+        - Use parameterized builds with caution and ensure input validation within the DSL script.
+        - Consider using containerized build environments to limit the impact of command injection initiated by jobs created via the Job DSL plugin.
+
+- **Threat:** Exposure of Secrets in DSL Code
+    - **Description:** Developers unintentionally hardcode sensitive information like passwords, API keys, or credentials directly within Job DSL scripts. This code, managed and interpreted by the Job DSL plugin, might be stored in version control systems or be accessible to unauthorized users.
+    - **Impact:** Unauthorized access to external systems, data breaches, compromised accounts.
+    - **Affected Component:** DSL script storage and handling within the Job DSL plugin.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Never hardcode secrets in DSL code managed by the Job DSL plugin.
+        - Utilize Jenkins' built-in credential management system to store and manage sensitive information.
+        - Use the `credentials()` DSL method provided by the Job DSL plugin to securely reference stored credentials.
+        - Implement secret scanning tools in your version control system to detect accidental commits of secrets within DSL scripts.
+        - Educate developers on secure secret management practices when writing Job DSL scripts.
+
+- **Threat:** Manipulation of Existing Job Configurations
+    - **Description:** An attacker with permissions to modify Job DSL seed jobs alters the DSL code to change the configuration of existing jobs. This is done by modifying the DSL scripts that the Job DSL plugin uses to define and update job configurations. This could involve adding malicious build steps, modifying notification settings, or introducing backdoors into build processes.
+    - **Impact:** Compromised builds, unauthorized access to build artifacts or logs, disruption of CI/CD pipelines.
+    - **Affected Component:** DSL update logic within the Job DSL plugin, job configuration update mechanisms triggered by the plugin.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Restrict access to Job DSL seed jobs and the ability to modify them.
+        - Implement version control for Job DSL scripts and track all changes.
+        - Implement a change approval process for modifications to Job DSL scripts.
+        - Regularly audit job configurations for unexpected changes resulting from Job DSL script execution.
