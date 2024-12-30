@@ -1,5 +1,3 @@
-objectivec https://github.com/Mantle/Mantle
-objectivec https://github.com/marcuswestin/WebViewJavascriptBridge
 objectivec https://github.com/MatthewYork/DateTools
 objectivec https://github.com/MortimerGoro/MGSwipeTableCell
 objectivec https://github.com/mutualmobile/MMDrawerController
