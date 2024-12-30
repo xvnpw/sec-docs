@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/rundeck/rundeck",
+  "analyzer_args": "",
+  "start_datetime": "2024-12-30T00:38:50Z",
+  "end_datetime": "2024-12-30T00:43:47Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "82744",
+  "mode": "github"
+}
