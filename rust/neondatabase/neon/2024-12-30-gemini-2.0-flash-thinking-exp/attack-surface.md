@@ -1,0 +1,48 @@
+- **Attack Surface: Exposed Neon Connection Strings**
+    - **Description:** Sensitive database credentials (username, password, hostname, database name) required to connect to the Neon database are unintentionally revealed.
+    - **How Neon Contributes to the Attack Surface:**  Applications *must* have a way to connect to the Neon database, making the connection string a necessary piece of configuration. The complexity of the connection string (including potentially long passwords and specific hostnames) increases the risk if not handled properly.
+    - **Example:** A developer hardcodes the Neon connection string directly into the application code, which is then committed to a public repository.
+    - **Impact:** Unauthorized access to the Neon database, leading to data breaches, data manipulation, or denial of service.
+    - **Risk Severity:** **Critical**
+    - **Mitigation Strategies:**
+        - **Utilize Environment Variables:** Store connection strings as environment variables, separate from the application code.
+        - **Avoid Hardcoding:** Never embed connection strings directly in the source code.
+        - **Implement Secrets Management Solutions:** Use dedicated tools like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault to securely store and manage connection strings.
+        - **Restrict Access to Configuration Files:** Ensure proper access controls are in place for configuration files containing connection string information.
+        - **Regularly Rotate Credentials:** Periodically change database passwords and update connection strings accordingly.
+
+- **Attack Surface: Compromised Neon API Keys**
+    - **Description:**  If the application interacts with the Neon API (for tasks like branch management, autoscaling, or project configuration), the API keys used for authentication are compromised.
+    - **How Neon Contributes to the Attack Surface:** Neon provides an API for managing database instances and related resources. Applications leveraging these features require API keys, which become a potential attack vector if exposed.
+    - **Example:** An API key is accidentally included in a client-side JavaScript file or is exposed through a server-side logging mechanism.
+    - **Impact:** Unauthorized control over the Neon project, potentially leading to resource deletion, unauthorized branch creation, data manipulation through compromised branches, or unexpected cost increases.
+    - **Risk Severity:** **High**
+    - **Mitigation Strategies:**
+        - **Secure Storage of API Keys:** Treat API keys with the same level of security as database credentials. Use secrets management solutions.
+        - **Principle of Least Privilege for API Keys:** Grant API keys only the necessary permissions required for the application's functionality. Avoid using project-level API keys if more granular control is possible.
+        - **Regularly Rotate API Keys:** Periodically regenerate API keys to limit the window of opportunity for compromised keys.
+        - **Monitor API Key Usage:** Track API calls made by the application to detect any suspicious activity.
+        - **Avoid Embedding API Keys in Client-Side Code:**  Never expose API keys directly in client-side code.
+
+- **Attack Surface: Insecure Management of Neon Database Roles**
+    - **Description:** If the application programmatically manages Neon database roles and permissions, vulnerabilities in this management process can lead to unauthorized access.
+    - **How Neon Contributes to the Attack Surface:** Neon's Postgres foundation includes a robust role-based access control system. If the application interacts with this system directly (e.g., creating roles, granting permissions), it introduces a potential attack surface.
+    - **Example:**  An application endpoint designed to create database roles has insufficient input validation, allowing an attacker to create roles with excessive privileges.
+    - **Impact:** Privilege escalation within the Neon database, allowing attackers to access or modify data they shouldn't have access to.
+    - **Risk Severity:** **High**
+    - **Mitigation Strategies:**
+        - **Implement Robust Input Validation:** Thoroughly validate all inputs when managing database roles programmatically.
+        - **Principle of Least Privilege for Application Database User:** The application's database user should only have the necessary permissions to perform its intended tasks, minimizing the impact of a compromise.
+        - **Secure Role Management Logic:** Carefully design and review the code responsible for managing database roles to prevent vulnerabilities.
+        - **Avoid Dynamic SQL for Role Management:**  If possible, use parameterized queries or ORM features to manage roles instead of constructing raw SQL strings, reducing the risk of SQL injection.
+
+- **Attack Surface: Insufficient Network Security for Neon Connections**
+    - **Description:**  Lack of proper encryption or network-level access controls for connections between the application and the Neon database.
+    - **How Neon Contributes to the Attack Surface:** The application relies on network communication to interact with the Neon database. If this communication is not secured, it becomes vulnerable.
+    - **Example:**  The application connects to Neon without enforcing TLS/SSL, allowing an attacker to eavesdrop on the communication and potentially capture credentials or data.
+    - **Impact:** Exposure of sensitive data transmitted between the application and the database, including credentials and application data.
+    - **Risk Severity:** **High**
+    - **Mitigation Strategies:**
+        - **Enforce TLS/SSL Connections:** Ensure that the application is configured to always connect to the Neon database using TLS/SSL encryption.
+        - **Utilize Neon's Network Controls (if available):** Explore any network-level access control features offered by Neon to restrict connections to authorized sources.
+        - **Secure the Network Infrastructure:** Ensure the network infrastructure where the application is hosted is also secure.
