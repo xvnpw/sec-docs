@@ -1,5 +1,3 @@
-php https://github.com/serbanghita/mobile-detect
-php https://github.com/slimphp/slim
 php https://github.com/snipe/snipe-it
 php https://github.com/spartnernl/laravel-excel
 php https://github.com/spatie/laravel-permission
