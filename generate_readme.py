@@ -70,7 +70,7 @@ We need community help to determine:
 
 def main():
     readme_lines = []
-    exclude_dirs = {".git", ".github", "__pycache__", ".data"}
+    exclude_dirs = {".git", ".github", "__pycache__", ".data", ".scripts"}
     exclude_files = {"README.md", "LICENSE", "generate_readme.py"}
 
     # Get the top-level directories (languages)
@@ -81,55 +81,59 @@ def main():
 
         # Add table header
         readme_lines.append("| Project | Analysis Date | Documentation |")
-        readme_lines.append("|---------|-------------|---------------|")
+        readme_lines.append("|---------|---------------|---------------|")
 
         language_dir = os.path.join(".", language)
-        projects = sorted(
-            [p for p in os.listdir(language_dir) if os.path.isdir(os.path.join(language_dir, p))], key=str.lower
-        )
 
-        for project in projects:
-            project_dir = os.path.join(language_dir, project)
+        # Get owner directories
+        owners = sorted([o for o in os.listdir(language_dir) if os.path.isdir(os.path.join(language_dir, o))])
+        for owner in owners:
+            owner_dir = os.path.join(language_dir, owner)
 
-            # Get GitHub link
-            source_repo_link = ""
-            config_path = os.path.join(project_dir, "config.json")
-            if os.path.isfile(config_path):
-                with open(config_path, "r") as config_file:
-                    config = json.load(config_file)
-                    repo_url = config.get("repo_url", "").strip()
-                    if repo_url:
-                        source_repo_link = f"[GitHub]({repo_url})"
-
-            versions = sorted(
-                [v for v in os.listdir(project_dir) if os.path.isdir(os.path.join(project_dir, v))], reverse=True
+            projects = sorted(
+                [p for p in os.listdir(owner_dir) if os.path.isdir(os.path.join(owner_dir, p))], key=str.lower
             )
 
-            for version in versions:
-                version_dir = os.path.join(project_dir, version)
+            for project in projects:
+                project_dir = os.path.join(owner_dir, project)
 
-                analysis_date = version[:10]
-                model_info = version[11:]
+                # Get GitHub link
+                source_repo_link = ""
+                config_path = os.path.join(project_dir, "config.json")
+                if os.path.isfile(config_path):
+                    with open(config_path, "r") as config_file:
+                        config = json.load(config_file)
+                        repo_url = config.get("repo_url", "").strip()
+                        if repo_url:
+                            source_repo_link = f"[GitHub]({repo_url})"
 
-                # Get documentation links
-                doc_types = {
-                    "sec-design.md": "Security Design Review",
-                    "threat-modeling.md": "Threat Modeling",
-                    "attack-surface.md": "Attack Surface",
-                    "attack-tree.md": "Attack Tree",
-                }
-
-                doc_links = []
-                for doc_file, doc_name in doc_types.items():
-                    if os.path.exists(os.path.join(version_dir, doc_file)):
-                        doc_links.append(f"[{doc_name}]({language}/{project}/{version}/{doc_file})")
-
-                # Create table row with project link
-                project_link = f"[**{project}**]({language}/{project}/)"
-                table_row = (
-                    f"| {project_link} ({source_repo_link}) | {analysis_date} {model_info} | {', '.join(doc_links)} |"
+                versions = sorted(
+                    [v for v in os.listdir(project_dir) if os.path.isdir(os.path.join(project_dir, v))], reverse=True
                 )
-                readme_lines.append(table_row)
+
+                for version in versions:
+                    version_dir = os.path.join(project_dir, version)
+
+                    analysis_date = version[:10]
+                    model_info = version[11:]
+
+                    # Get documentation links
+                    doc_types = {
+                        "sec-design.md": "Security Design Review",
+                        "threat-modeling.md": "Threat Modeling",
+                        "attack-surface.md": "Attack Surface",
+                        "attack-tree.md": "Attack Tree",
+                    }
+
+                    doc_links = []
+                    for doc_file, doc_name in doc_types.items():
+                        if os.path.exists(os.path.join(version_dir, doc_file)):
+                            doc_links.append(f"[{doc_name}]({language}/{owner}/{project}/{version}/{doc_file})")
+
+                    # Create table row with project link
+                    project_link = f"[**{owner}/{project}**]({language}/{owner}/{project}/)"
+                    table_row = f"| {project_link} ({source_repo_link}) | {analysis_date} {model_info} | {', '.join(doc_links)} |"
+                    readme_lines.append(table_row)
 
     # Write to README.md
     with open("README.md", "w") as f:
