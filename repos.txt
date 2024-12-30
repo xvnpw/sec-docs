@@ -1,5 +1,3 @@
-objectivec https://github.com/IFTTT/JazzHands
-objectivec https://github.com/Instagram/IGListKit
 objectivec https://github.com/ivpusic/react-native-image-crop-picker
 objectivec https://github.com/jdg/MBProgressHUD
 objectivec https://github.com/jessesquires/JSQMessagesViewController
