@@ -1,5 +1,3 @@
-objectivec https://github.com/mutualmobile/MMDrawerController
-objectivec https://github.com/mwaterfall/MWPhotoBrowser
 objectivec https://github.com/nicklockwood/iCarousel
 objectivec https://github.com/nst/iOS-Runtime-Headers
 objectivec https://github.com/path/FastImageCache
