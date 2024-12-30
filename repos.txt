@@ -1,4 +1,2 @@
-rust https://github.com/typst/typst
-rust https://github.com/valeriansaliou/sonic
 rust https://github.com/vectordotdev/vector
 rust https://github.com/vercel/turborepo
