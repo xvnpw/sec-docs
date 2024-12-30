@@ -1,5 +1,3 @@
-groovy https://github.com/jfrog/artifactory-user-plugins
-groovy https://github.com/jwagenleitner/groovy-wslite
 groovy https://github.com/kezong/fat-aar-android
 groovy https://github.com/marcelbirkner/docker-ci-tool-stack
 groovy https://github.com/marcoRS/lint-cleaner-plugin
