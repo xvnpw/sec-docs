@@ -668,9 +668,6 @@ We need community help to determine:
 - [vicc/chameleon](objectivec/vicc/chameleon) ([GitHub](https://github.com/vicc/chameleon))
 - [wenchaod/fscalendar](objectivec/wenchaod/fscalendar) ([GitHub](https://github.com/WenchaoD/FSCalendar))
 
-### [Perl](perl/)
-
-
 ### [Php](php/)
 
 - [bagisto/bagisto](php/bagisto/bagisto) ([GitHub](https://github.com/bagisto/bagisto))
