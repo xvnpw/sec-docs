@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/snipe/snipe-it",
+  "analyzer_args": "",
+  "start_datetime": "2024-12-30T13:30:48Z",
+  "end_datetime": "2024-12-30T13:35:44Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "80532",
+  "mode": "github"
+}
