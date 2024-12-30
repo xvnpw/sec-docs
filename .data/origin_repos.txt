@@ -32,6 +32,7 @@ c https://github.com/octalmage/robotjs
 c https://github.com/openresty/lua-nginx-module
 c https://github.com/openresty/openresty
 c https://github.com/openssl/openssl
+c https://github.com/ossec/ossec-hids
 c https://github.com/pgvector/pgvector
 c https://github.com/postgres/postgres
 c https://github.com/raysan5/raylib
@@ -50,6 +51,7 @@ c https://github.com/utox/utox
 c https://github.com/valkey-io/valkey
 c https://github.com/vurtun/nuklear
 c https://github.com/wg/wrk
+c https://github.com/wireguard/wireguard-linux
 c https://github.com/woltapp/blurhash
 c https://github.com/xianyi/openblas
 clojure https://github.com/metabase/metabase
@@ -57,6 +59,7 @@ cpp https://github.com/academysoftwarefoundation/openvdb
 cpp https://github.com/alembic/alembic
 cpp https://github.com/apache/arrow
 cpp https://github.com/apache/incubator-brpc
+cpp https://github.com/apache/mesos
 cpp https://github.com/apache/mxnet
 cpp https://github.com/apache/thrift
 cpp https://github.com/ariya/phantomjs
@@ -82,6 +85,8 @@ cpp https://github.com/gflags/gflags
 cpp https://github.com/google/flatbuffers
 cpp https://github.com/google/leveldb
 cpp https://github.com/google/re2
+cpp https://github.com/grpc/grpc
+cpp https://github.com/keepassxreboot/keepassxc
 cpp https://github.com/lizardbyte/sunshine
 cpp https://github.com/mariadb/server
 cpp https://github.com/microsoft/cntk
@@ -115,6 +120,7 @@ cpp https://github.com/weidai11/cryptopp
 cpp https://github.com/yhirose/cpp-httplib
 cpp https://github.com/zeromq/libzmq
 cpp https://github.com/zeromq/zeromq4-x
+cpp https://github.com/zerotier/zerotierone
 csharp https://github.com/abpframework/abp
 csharp https://github.com/app-vnext/polly
 csharp https://github.com/aspnet/entityframeworkcore
@@ -174,6 +180,7 @@ csharp https://github.com/spectreconsole/spectre.console
 csharp https://github.com/stackexchange/stackexchange.redis
 csharp https://github.com/unoplatform/uno
 dart https://github.com/baseflow/flutter-permission-handler
+dart https://github.com/bitwarden/mobile
 dart https://github.com/dart-lang/http
 dart https://github.com/dart-lang/json_serializable
 dart https://github.com/dart-lang/shelf
@@ -193,12 +200,17 @@ erlang https://github.com/rabbitmq/rabbitmq-server
 go https://github.com/99designs/gqlgen
 go https://github.com/adguardteam/adguardhome
 go https://github.com/alistgo/alist
+go https://github.com/argoproj/argo-cd
 go https://github.com/beego/beego
 go https://github.com/caddyserver/caddy
 go https://github.com/charmbracelet/bubbletea
+go https://github.com/cilium/cilium
 go https://github.com/cloudwego/kitex
 go https://github.com/cockroachdb/cockroach
+go https://github.com/containerd/containerd
 go https://github.com/containers/podman
+go https://github.com/coredns/coredns
+go https://github.com/cortexproject/cortex
 go https://github.com/dapr/dapr
 go https://github.com/distribution/distribution
 go https://github.com/docker/compose
@@ -208,6 +220,7 @@ go https://github.com/ethereum/go-ethereum
 go https://github.com/evanw/esbuild
 go https://github.com/fatedier/frp
 go https://github.com/filebrowser/filebrowser
+go https://github.com/filosottile/mkcert
 go https://github.com/fyne-io/fyne
 go https://github.com/gin-gonic/gin
 go https://github.com/go-chi/chi
@@ -234,9 +247,11 @@ go https://github.com/hashicorp/consul
 go https://github.com/hashicorp/vault
 go https://github.com/helm/helm
 go https://github.com/hibiken/asynq
+go https://github.com/hyperledger/fabric
 go https://github.com/iawia002/lux
 go https://github.com/icewhaletech/casaos
 go https://github.com/inconshreveable/ngrok
+go https://github.com/ipfs/go-ipfs
 go https://github.com/istio/istio
 go https://github.com/jaegertracing/jaeger
 go https://github.com/juanfont/headscale
@@ -245,17 +260,26 @@ go https://github.com/kataras/iris
 go https://github.com/knative/community
 go https://github.com/kubernetes/kubernetes
 go https://github.com/labstack/echo
+go https://github.com/letsencrypt/boulder
+go https://github.com/libp2p/go-libp2p
+go https://github.com/lightningnetwork/lnd
+go https://github.com/mattermost/mattermost-server
 go https://github.com/micro/go-micro
 go https://github.com/micro/micro
 go https://github.com/milvus-io/milvus
 go https://github.com/minio/minio
 go https://github.com/mislav/hub
 go https://github.com/moby/moby
+go https://github.com/mozilla/sops
 go https://github.com/nektos/act
 go https://github.com/nsqio/nsq
 go https://github.com/olivere/elastic
 go https://github.com/openfaas/faas
+go https://github.com/open-telemetry/opentelemetry-collector
 go https://github.com/opentofu/opentofu
+go https://github.com/ory/hydra
+go https://github.com/ory/kratos
+go https://github.com/peergos/peergos
 go https://github.com/photoprism/photoprism
 go https://github.com/pingcap/tidb
 go https://github.com/pocketbase/pocketbase
@@ -264,15 +288,18 @@ go https://github.com/rancher/rancher
 go https://github.com/rclone/rclone
 go https://github.com/restic/restic
 go https://github.com/revel/revel
+go https://github.com/rook/rook
 go https://github.com/schollz/croc
 go https://github.com/seaweedfs/seaweedfs
 go https://github.com/shopify/sarama
 go https://github.com/sigstore/sigstore
 go https://github.com/sirupsen/logrus
+go https://github.com/smallstep/certificates
 go https://github.com/spf13/cobra
 go https://github.com/spf13/viper
 go https://github.com/stackexchange/dnscontrol
 go https://github.com/syncthing/syncthing
+go https://github.com/tailscale/tailscale
 go https://github.com/traefik/traefik
 go https://github.com/tsenart/vegeta
 go https://github.com/uber-go/zap
@@ -280,6 +307,7 @@ go https://github.com/urfave/cli
 go https://github.com/usememos/memos
 go https://github.com/v2ray/v2ray-core
 go https://github.com/valyala/fasthttp
+go https://github.com/vitessio/vitess
 go https://github.com/wailsapp/wails
 go https://github.com/wox-launcher/wox
 go https://github.com/xtls/xray-core
@@ -340,6 +368,7 @@ java https://github.com/apolloconfig/apollo
 java https://github.com/baseflow/photoview
 java https://github.com/blankj/androidutilcode
 java https://github.com/bumptech/glide
+java https://github.com/camunda/camunda-bpm-platform
 java https://github.com/conductor-oss/conductor
 java https://github.com/dbeaver/dbeaver
 java https://github.com/dromara/hutool
@@ -351,6 +380,7 @@ java https://github.com/fasterxml/jackson-databind
 java https://github.com/google/exoplayer
 java https://github.com/google/guava
 java https://github.com/google/guice
+java https://github.com/google/tink
 java https://github.com/greenrobot/eventbus
 java https://github.com/hibernate/hibernate-orm
 java https://github.com/jakewharton/butterknife
@@ -362,6 +392,7 @@ java https://github.com/lmax-exchange/disruptor
 java https://github.com/macrozheng/mall
 java https://github.com/mybatis/mybatis-3
 java https://github.com/netty/netty
+java https://github.com/nextcloud/android
 java https://github.com/oracle/graal
 java https://github.com/philjay/mpandroidchart
 java https://github.com/qos-ch/logback
@@ -369,6 +400,7 @@ java https://github.com/qos-ch/slf4j
 java https://github.com/reactivex/rxandroid
 java https://github.com/reactivex/rxjava
 java https://github.com/realm/realm-java
+java https://github.com/signalapp/signal-server
 java https://github.com/spockframework/spock
 java https://github.com/spring-projects/spring-boot
 java https://github.com/spring-projects/spring-framework
@@ -390,6 +422,7 @@ javascript https://github.com/atom/atom
 javascript https://github.com/axios/axios
 javascript https://github.com/babel/babel
 javascript https://github.com/bigskysoftware/htmx
+javascript https://github.com/bpmn-io/bpmn-js
 javascript https://github.com/caolan/async
 javascript https://github.com/chartjs/chart.js
 javascript https://github.com/cypress-io/cypress
@@ -400,7 +433,9 @@ javascript https://github.com/dogfalo/materialize
 javascript https://github.com/dominictarr/rc
 javascript https://github.com/eggjs/egg
 javascript https://github.com/elemefe/element
+javascript https://github.com/element-hq/element-web
 javascript https://github.com/emberjs/ember.js
+javascript https://github.com/eslint/eslint
 javascript https://github.com/expressjs/body-parser
 javascript https://github.com/expressjs/express
 javascript https://github.com/facebook/react
@@ -408,6 +443,7 @@ javascript https://github.com/facebook/react-native
 javascript https://github.com/faisalman/ua-parser-js
 javascript https://github.com/fastify/fastify
 javascript https://github.com/feross/safe-buffer
+javascript https://github.com/freecodecamp/freecodecamp
 javascript https://github.com/gatsbyjs/gatsby
 javascript https://github.com/hakimel/reveal.js
 javascript https://github.com/handlebars-lang/handlebars.js
@@ -444,10 +480,12 @@ javascript https://github.com/phaserjs/phaser
 javascript https://github.com/pixijs/pixi.js
 javascript https://github.com/preactjs/preact
 javascript https://github.com/prettier/prettier
+javascript https://github.com/rocketchat/rocket.chat
 javascript https://github.com/semantic-org/semantic-ui
 javascript https://github.com/serverless/serverless
 javascript https://github.com/socketio/socket.io
 javascript https://github.com/sortablejs/sortable
+javascript https://github.com/standardnotes/app
 javascript https://github.com/sveltejs/svelte
 javascript https://github.com/tooljet/tooljet
 javascript https://github.com/tryghost/ghost
@@ -457,6 +495,7 @@ javascript https://github.com/veged/coa
 javascript https://github.com/vercel/hyper
 javascript https://github.com/vercel/next.js
 javascript https://github.com/videojs/video.js
+javascript https://github.com/yarnpkg/berry
 javascript https://github.com/zenorocha/clipboard.js
 julia https://github.com/fluxml/flux.jl
 kotlin https://github.com/acra/acra
@@ -475,6 +514,7 @@ kotlin https://github.com/coil-kt/coil
 kotlin https://github.com/cymchad/baserecyclerviewadapterhelper
 kotlin https://github.com/detekt/detekt
 kotlin https://github.com/drakeet/multitype
+kotlin https://github.com/element-hq/element-android
 kotlin https://github.com/ethereum-lists/chains
 kotlin https://github.com/facebook/facebook-android-sdk
 kotlin https://github.com/facebook/litho
@@ -525,6 +565,7 @@ kotlin https://github.com/wasabeef/recyclerview-animators
 kotlin https://github.com/yiiguxing/translationplugin
 kotlin https://github.com/zetbaitsu/compressor
 kotlin https://github.com/zhanghai/materialfiles
+lua https://github.com/apache/incubator-apisix
 lua https://github.com/kong/kong
 lua https://github.com/nodemcu/nodemcu-firmware
 objectivec https://github.com/afnetworking/afnetworking
@@ -604,6 +645,7 @@ php https://github.com/doctrine/instantiator
 php https://github.com/doctrine/lexer
 php https://github.com/doctrine/orm
 php https://github.com/dompdf/dompdf
+php https://github.com/drupal/core
 php https://github.com/drupal/drupal
 php https://github.com/egulias/emailvalidator
 php https://github.com/elastic/elasticsearch-php
@@ -638,6 +680,7 @@ php https://github.com/nextcloud/server
 php https://github.com/nikic/fastroute
 php https://github.com/nikic/php-parser
 php https://github.com/octobercms/october
+php https://github.com/owncloud/core
 php https://github.com/parse-community/parse-server
 php https://github.com/pestphp/pest
 php https://github.com/phacility/phabricator
@@ -684,6 +727,7 @@ python https://github.com/3b1b/manim
 python https://github.com/abi/screenshot-to-code
 python https://github.com/ansible/ansible
 python https://github.com/apache/airflow
+python https://github.com/borgbackup/borg
 python https://github.com/bottlepy/bottle
 python https://github.com/celery/celery
 python https://github.com/cocos2d/cocos2d-x
@@ -698,7 +742,9 @@ python https://github.com/dmlc/xgboost
 python https://github.com/encode/django-rest-framework
 python https://github.com/fabric/fabric
 python https://github.com/fastapi/fastapi
+python https://github.com/freedombox/freedombox
 python https://github.com/getredash/redash
+python https://github.com/getsentry/sentry
 python https://github.com/google/jax
 python https://github.com/gradio-app/gradio
 python https://github.com/graphite-project/graphite-web
@@ -707,9 +753,13 @@ python https://github.com/httpie/cli
 python https://github.com/keras-team/keras
 python https://github.com/lllyasviel/fooocus
 python https://github.com/locustio/locust
+python https://github.com/matrix-org/synapse
 python https://github.com/mesonbuild/meson
 python https://github.com/mingrammer/diagrams
+python https://github.com/misp/misp
 python https://github.com/mitmproxy/mitmproxy
+python https://github.com/mopidy/mopidy
+python https://github.com/mozilla/addons-server
 python https://github.com/nvlabs/stylegan
 python https://github.com/odoo/odoo
 python https://github.com/openai/gym
@@ -729,13 +779,16 @@ python https://github.com/pytorch/pytorch
 python https://github.com/quivrhq/quivr
 python https://github.com/ray-project/ray
 python https://github.com/saltstack/salt
+python https://github.com/searxng/searxng
 python https://github.com/sqlalchemy/sqlalchemy
 python https://github.com/sshwsfc/xadmin
 python https://github.com/streamlit/streamlit
+python https://github.com/stripe/stripe-python
 python https://github.com/tensorflow/tensorflow
 python https://github.com/textualize/rich
 python https://github.com/tornadoweb/tornado
 python https://github.com/ultralytics/yolov5
+python https://github.com/urllib3/urllib3
 ruby https://github.com/activeadmin/activeadmin
 ruby https://github.com/activemerchant/active_merchant
 ruby https://github.com/activerecord-hackery/ransack
@@ -819,6 +872,7 @@ ruby https://github.com/sj26/mailcatcher
 ruby https://github.com/skwp/dotfiles
 ruby https://github.com/spree/spree
 ruby https://github.com/teamcapybara/capybara
+ruby https://github.com/theforeman/foreman
 ruby https://github.com/thoughtbot/bourbon
 ruby https://github.com/thoughtbot/factory_bot
 ruby https://github.com/thoughtbot/paperclip
@@ -859,6 +913,7 @@ rust https://github.com/iced-rs/iced
 rust https://github.com/influxdata/influxdb
 rust https://github.com/kata-containers/kata-containers
 rust https://github.com/kitao/pyxel
+rust https://github.com/lemmynet/lemmy
 rust https://github.com/leptos-rs/leptos
 rust https://github.com/lettre/lettre
 rust https://github.com/librespot-org/librespot
@@ -885,6 +940,7 @@ rust https://github.com/sharkdp/bat
 rust https://github.com/sharkdp/fd
 rust https://github.com/simd-lite/simd-json
 rust https://github.com/slint-ui/slint
+rust https://github.com/solana-labs/solana
 rust https://github.com/starship/starship
 rust https://github.com/surrealdb/surrealdb
 rust https://github.com/swc-project/swc
@@ -901,6 +957,7 @@ rust https://github.com/vercel/turborepo
 rust https://github.com/wasmerio/wasmer
 rust https://github.com/yewstack/yew
 scala https://github.com/apache/spark
+shell https://github.com/pi-hole/pi-hole
 swift https://github.com/alamofire/alamofire
 swift https://github.com/ashleymills/reachability.swift
 swift https://github.com/daltoniam/starscream
@@ -970,3 +1027,4 @@ typescript https://github.com/umijs/umi
 typescript https://github.com/vuejs/vue
 typescript https://github.com/vuejs/vue-next
 typescript https://github.com/xtermjs/xterm.js
+yaml https://github.com/airflow-helm/charts
