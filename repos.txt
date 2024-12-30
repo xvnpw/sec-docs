@@ -1,5 +1,3 @@
-javascript https://github.com/bpmn-io/bpmn-js
-javascript https://github.com/element-hq/element-web
 javascript https://github.com/eslint/eslint
 javascript https://github.com/freecodecamp/freecodecamp
 javascript https://github.com/rocketchat/rocket.chat
