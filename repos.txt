@@ -1,2 +1,0 @@
-shell https://github.com/pi-hole/pi-hole
-yaml https://github.com/airflow-helm/charts
