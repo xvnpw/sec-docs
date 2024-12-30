@@ -227,7 +227,6 @@ go https://github.com/gorilla/websocket
 go https://github.com/go-sql-driver/mysql
 go https://github.com/go-swagger/go-swagger
 go https://github.com/grafana/grafana
-go https://github.com/grafana/k6
 go https://github.com/grafana/loki
 go https://github.com/grpc/grpc-go
 go https://github.com/harness/harness

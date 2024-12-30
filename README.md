@@ -280,7 +280,6 @@ We need community help to determine:
 - [gorilla/mux](go/gorilla/mux) ([GitHub](https://github.com/gorilla/mux))
 - [gorilla/websocket](go/gorilla/websocket) ([GitHub](https://github.com/gorilla/websocket))
 - [grafana/grafana](go/grafana/grafana) ([GitHub](https://github.com/grafana/grafana))
-- [grafana/k6](go/grafana/k6) ([GitHub](https://github.com/grafana/k6))
 - [grafana/loki](go/grafana/loki) ([GitHub](https://github.com/grafana/loki))
 - [grpc/grpc-go](go/grpc/grpc-go) ([GitHub](https://github.com/grpc/grpc-go))
 - [harness/harness](go/harness/harness) ([GitHub](https://github.com/harness/harness))
