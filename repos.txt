@@ -1,5 +1,3 @@
-rust https://github.com/servo/servo
-rust https://github.com/slint-ui/slint
 rust https://github.com/surrealdb/surrealdb
 rust https://github.com/swc-project/swc
 rust https://github.com/tokio-rs/axum
