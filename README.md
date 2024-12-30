@@ -824,9 +824,6 @@ We need community help to determine:
 - [tornadoweb/tornado](python/tornadoweb/tornado) ([GitHub](https://github.com/tornadoweb/tornado))
 - [ultralytics/yolov5](python/ultralytics/yolov5) ([GitHub](https://github.com/ultralytics/yolov5))
 
-### [R](r/)
-
-
 ### [Ruby](ruby/)
 
 - [activeadmin/activeadmin](ruby/activeadmin/activeadmin) ([GitHub](https://github.com/activeadmin/activeadmin))
