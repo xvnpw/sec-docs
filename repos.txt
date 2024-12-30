@@ -1,5 +1,3 @@
-groovy https://github.com/marcoRS/lint-cleaner-plugin
-groovy https://github.com/NationalSecurityAgency/skills-service
 groovy https://github.com/Netflix/asgard
 groovy https://github.com/nextflow-io/nextflow
 groovy https://github.com/novoda/bintray-release
