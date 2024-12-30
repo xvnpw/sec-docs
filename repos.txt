@@ -1,5 +1,3 @@
-python https://github.com/matrix-org/synapse
-python https://github.com/misp/misp
 python https://github.com/mopidy/mopidy
 python https://github.com/mozilla/addons-server
 python https://github.com/searxng/searxng
