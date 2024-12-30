@@ -1,5 +1,3 @@
-groovy https://github.com/kezong/fat-aar-android
-groovy https://github.com/marcelbirkner/docker-ci-tool-stack
 groovy https://github.com/marcoRS/lint-cleaner-plugin
 groovy https://github.com/NationalSecurityAgency/skills-service
 groovy https://github.com/Netflix/asgard
