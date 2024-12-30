@@ -1,5 +1,3 @@
-go https://github.com/urfave/cli
-java https://github.com/spring-projects/spring-boot
 java https://github.com/spring-projects/spring-framework
 php https://github.com/flarum/flarum
 php https://github.com/freshrss/freshrss
