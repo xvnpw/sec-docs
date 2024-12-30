@@ -1,5 +1,3 @@
-objectivec https://github.com/jessesquires/JSQMessagesViewController
-objectivec https://github.com/johnezang/JSONKit
 objectivec https://github.com/jsonmodel/jsonmodel
 objectivec https://github.com/jverdi/JVFloatLabeledTextField
 objectivec https://github.com/jverkoey/nimbus
