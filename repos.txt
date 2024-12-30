@@ -1,4 +1,2 @@
-rust https://github.com/lemmynet/lemmy
-rust https://github.com/solana-labs/solana
 shell https://github.com/pi-hole/pi-hole
 yaml https://github.com/airflow-helm/charts
