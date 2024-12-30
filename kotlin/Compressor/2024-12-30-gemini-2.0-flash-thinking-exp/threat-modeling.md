@@ -1,0 +1,39 @@
+- **Threat:** Malicious Image Exploitation
+    - **Description:** An attacker uploads a specially crafted image file designed to exploit vulnerabilities in the underlying image processing libraries *used by `Compressor`* (e.g., `java.awt.imageio`). This could involve malformed headers, excessive data, or format-specific exploits. The attacker aims to trigger a bug in the library's parsing or processing logic *within the `Compressor` execution*.
+    - **Impact:** Server crash, leading to denial of service for legitimate users. In more severe cases, it could lead to remote code execution on the server if the vulnerability allows for arbitrary code injection *during `Compressor`'s processing*.
+    - **Affected Compressor Component:** Image Input Handling (specifically the `compress` methods that process the input stream/file).
+    - **Risk Severity:** High to Critical (depending on the nature of the underlying vulnerability).
+    - **Mitigation Strategies:**
+        - Implement robust input validation *before* passing the image to `Compressor`, including checks for file headers, magic numbers, and potentially using separate, sandboxed image validation libraries.
+        - Keep the underlying Java environment and image processing libraries (dependencies of `Compressor`) up-to-date with the latest security patches.
+        - Consider running the image processing *performed by `Compressor`* in a sandboxed environment with limited permissions.
+
+- **Threat:** Zip Bomb/Decompression Bomb Attack
+    - **Description:** An attacker uploads a compressed archive (e.g., a ZIP file disguised as an image) that, when processed *by `Compressor`* or its underlying libraries, expands to an extremely large size. The attacker aims to exhaust server resources (CPU, memory, disk space) by forcing the server to process an unexpectedly large amount of data *during `Compressor`'s operation*.
+    - **Impact:** Denial of service, server instability, potential for other services on the same server to be affected.
+    - **Affected Compressor Component:** Image Input Handling and potentially the internal decompression mechanisms if the library attempts to decompress nested archives.
+    - **Risk Severity:** High.
+    - **Mitigation Strategies:**
+        - Implement strict limits on the size of uploaded files *before they are processed by `Compressor`*.
+        - Monitor resource usage (CPU, memory, disk I/O) during image processing *by `Compressor`* and implement timeouts to prevent runaway processes.
+        - If the application handles compressed image formats, consider unpacking and inspecting them before passing them to `Compressor` for further processing.
+
+- **Threat:** Path Traversal via Filename
+    - **Description:** If the application uses user-provided filenames or paths in conjunction with `Compressor` (e.g., for saving compressed images), an attacker could manipulate these inputs to include path traversal sequences (e.g., `../../`) to write compressed files to arbitrary locations on the server's file system *through `Compressor`'s file saving functionality*.
+    - **Impact:** Overwriting critical files, unauthorized file creation, potential for further exploitation by placing malicious files in accessible locations.
+    - **Affected Compressor Component:** File Output Handling (if the application uses `Compressor` to save files based on user input).
+    - **Risk Severity:** High.
+    - **Mitigation Strategies:**
+        - Avoid using user-provided filenames directly *when interacting with `Compressor`'s file saving features*. Generate unique and sanitized filenames server-side.
+        - Enforce strict directory permissions and access controls for the directories where compressed images are stored.
+        - If user input is used for file paths, implement robust sanitization and validation to prevent path traversal *before passing it to `Compressor`*.
+
+- **Threat:** Vulnerabilities in Underlying Dependencies
+    - **Description:** `Compressor` relies on other Java libraries for image processing. These libraries may contain security vulnerabilities that could be exploited if not properly patched. An attacker could potentially leverage these vulnerabilities *through the `Compressor` library's usage of these dependencies*.
+    - **Impact:** Potential for remote code execution, information disclosure, or denial of service depending on the specific vulnerability in the dependency *when `Compressor` utilizes it*.
+    - **Affected Compressor Component:** All components that rely on the vulnerable dependency.
+    - **Risk Severity:** High (if a critical vulnerability exists in a direct dependency).
+    - **Mitigation Strategies:**
+        - Regularly update the `Compressor` library and all its dependencies to the latest versions.
+        - Use dependency scanning tools (e.g., OWASP Dependency-Check) to identify known vulnerabilities in the project's dependencies.
+        - Implement a process for promptly addressing identified vulnerabilities.
