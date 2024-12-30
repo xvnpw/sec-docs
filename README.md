@@ -765,9 +765,6 @@ We need community help to determine:
 - [yourls/yourls](php/yourls/yourls) ([GitHub](https://github.com/yourls/yourls))
 - [z-song/laravel-admin](php/z-song/laravel-admin) ([GitHub](https://github.com/z-song/laravel-admin))
 
-### [Powershell](powershell/)
-
-
 ### [Python](python/)
 
 - [3b1b/manim](python/3b1b/manim) ([GitHub](https://github.com/3b1b/manim))
