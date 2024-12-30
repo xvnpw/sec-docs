@@ -1,5 +1,3 @@
-objectivec https://github.com/tonymillion/Reachability
-objectivec https://github.com/TTTAttributedLabel/TTTAttributedLabel
 objectivec https://github.com/vicc/chameleon
 objectivec https://github.com/WenchaoD/FSCalendar
 php https://github.com/bagisto/bagisto
