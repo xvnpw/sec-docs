@@ -1,5 +1,3 @@
-objectivec https://github.com/bang590/JSPatch
-objectivec https://github.com/BlocksKit/BlocksKit
 objectivec https://github.com/BradLarson/GPUImage
 objectivec https://github.com/ccgus/fmdb
 objectivec https://github.com/CocoaLumberjack/CocoaLumberjack
