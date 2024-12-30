@@ -1,0 +1,46 @@
+Here are the high and critical threats directly involving `react-native-image-crop-picker`:
+
+- Threat: Insecure Temporary File Handling
+  - Description:
+    - An attacker could potentially gain access to temporary files created *by the library* if they are stored in a world-readable location or have predictable names.
+    - This could involve another application on the device with broad storage permissions reading these files before the intended application processes them.
+  - Impact:
+    - Information disclosure: Unauthorized access to potentially sensitive photos or other media selected by the user *through the library*.
+    - Data tampering: A malicious application could modify the temporary image file *created by the library* before the intended application uses it.
+  - Affected Component:
+    - The native module *within `react-native-image-crop-picker`* responsible for creating and managing temporary files during the image selection and cropping process.
+  - Risk Severity: High
+  - Mitigation Strategies:
+    - Utilize platform-specific secure temporary directory APIs for storing temporary files *within the library's native code*.
+    - Ensure temporary files *created by the library* have restrictive permissions, accessible only by the application.
+    - Implement secure file naming conventions with sufficient randomness *within the library*.
+    - Delete temporary files immediately after they are no longer needed *by the library*.
+
+- Threat: Path Traversal Vulnerabilities
+  - Description:
+    - An attacker might be able to manipulate file paths provided *to the library* (if any such functionality exists or is introduced through future updates) to access files outside the intended directories.
+    - This could involve crafting malicious file paths that bypass security checks *within the library's path handling logic*.
+  - Impact:
+    - Information disclosure: Access to sensitive application files or other user data on the device *due to the library's path handling*.
+    - Potential denial of service or application instability if critical files are accessed or modified *through the library's actions*.
+  - Affected Component:
+    - Any function or module *within `react-native-image-crop-picker`* that handles or processes file paths provided as input.
+  - Risk Severity: High
+  - Mitigation Strategies:
+    - Avoid allowing users or external sources to directly specify file paths for the library to process.
+    - If file paths are necessary *within the library's functionality*, implement strict input validation and sanitization to prevent path traversal attempts.
+    - Use absolute paths or restrict operations to specific, controlled directories *within the library's implementation*.
+
+- Threat: Injection through Malicious Image Files
+  - Description:
+    - If *the library* uses underlying image processing libraries with known vulnerabilities, a specially crafted malicious image file could potentially exploit these vulnerabilities *during the library's image processing*.
+    - This could lead to unexpected behavior or, in more severe cases, code execution (though less likely in a sandboxed mobile environment).
+  - Impact:
+    - Potential application compromise *due to a vulnerability in the library's image processing*.
+    - Unexpected application behavior or crashes *caused by the library's handling of a malicious image*.
+  - Affected Component:
+    - The underlying native image processing libraries used *by `react-native-image-crop-picker`*.
+  - Risk Severity: High
+  - Mitigation Strategies:
+    - Ensure the `react-native-image-crop-picker` library and its dependencies are kept up-to-date to patch known vulnerabilities.
+    - Consider using secure and well-maintained image processing libraries *within the library's native code*.
