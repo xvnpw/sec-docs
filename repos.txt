@@ -1,5 +1,3 @@
-php https://github.com/pestphp/pest
-php https://github.com/phacility/phabricator
 php https://github.com/phpdocumentor/reflectioncommon
 php https://github.com/phpdocumentor/typeresolver
 php https://github.com/php-fig/container
