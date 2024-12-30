@@ -1,5 +1,3 @@
-php https://github.com/tymondesigns/jwt-auth
-php https://github.com/typecho/typecho
 php https://github.com/uvdesk/community-skeleton
 php https://github.com/vlucas/phpdotenv
 php https://github.com/walkor/workerman
