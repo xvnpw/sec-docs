@@ -1,0 +1,4 @@
+# Skills-Service Analysis
+| Analysis Date | Documentation |
+|---------------|---------------|
+| 2024-12-30 gemini-2.0-flash-thinking-exp | [Security Design Review](nationalsecurityagency/skills-service/2024-12-30-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](nationalsecurityagency/skills-service/2024-12-30-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](nationalsecurityagency/skills-service/2024-12-30-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](nationalsecurityagency/skills-service/2024-12-30-gemini-2.0-flash-thinking-exp/attack-tree.md) |

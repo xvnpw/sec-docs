@@ -1,0 +1,4 @@
+# Blueprint Analysis
+| Analysis Date | Documentation |
+|---------------|---------------|
+| 2024-12-29 gemini-2.0-flash-thinking-exp | [Security Design Review](palantir/blueprint/2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](palantir/blueprint/2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](palantir/blueprint/2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](palantir/blueprint/2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |

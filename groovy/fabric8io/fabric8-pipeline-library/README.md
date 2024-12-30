@@ -1,0 +1,4 @@
+# Fabric8-Pipeline-Library Analysis
+| Analysis Date | Documentation |
+|---------------|---------------|
+| 2024-12-29 gemini-2.0-flash-thinking-exp | [Security Design Review](fabric8io/fabric8-pipeline-library/2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](fabric8io/fabric8-pipeline-library/2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](fabric8io/fabric8-pipeline-library/2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](fabric8io/fabric8-pipeline-library/2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |

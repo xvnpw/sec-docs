@@ -1,0 +1,5 @@
+# Scala Projects
+| Project | Analysis Date | Documentation |
+|---------|---------------|---------------|
+| [apache/spark](apache/spark/) | 2024-12-29 gemini-2.0-flash-thinking-exp | [Security Design Review](apache/spark/2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](apache/spark/2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](apache/spark/2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](apache/spark/2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| [scala/scala](scala/scala/) | 2024-12-29 gemini-2.0-flash-thinking-exp | [Security Design Review](scala/scala/2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](scala/scala/2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](scala/scala/2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](scala/scala/2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |
