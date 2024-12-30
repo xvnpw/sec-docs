@@ -1,5 +1,3 @@
-php https://github.com/php-fig/container
-php https://github.com/php-fig/log
 php https://github.com/phpoffice/phpexcel
 php https://github.com/ramsey/uuid
 php https://github.com/reactphp/reactphp
