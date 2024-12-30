@@ -1,5 +1,3 @@
-objectivec https://github.com/dzenbot/DZNEmptyDataSet
-objectivec https://github.com/facebookarchive/KVOController
 objectivec https://github.com/facebookarchive/Shimmer
 objectivec https://github.com/facebookarchive/three20
 objectivec https://github.com/facebookincubator/SocketRocket
