@@ -1,0 +1,45 @@
+- **Attack Surface:** Unauthenticated or Misconfigured HTTP API
+    - **Description:** The `go-ipfs` node exposes a powerful HTTP API for management and data access. If this API is not properly secured (e.g., lacks authentication, has permissive CORS settings), it becomes a direct attack vector.
+    - **How go-ipfs Contributes:** `go-ipfs` inherently provides this HTTP API as a core functionality for interaction.
+    - **Example:** An attacker could use `curl` or a similar tool to send requests to the unauthenticated API to add malicious content, pin large amounts of data, retrieve sensitive information, or even shut down the node.
+    - **Impact:** Full compromise of the `go-ipfs` node, potential data breaches, resource exhaustion, denial of service for the application relying on the node.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Enable and enforce API authentication within `go-ipfs` configuration.
+        - Restrict API access to specific origins using CORS settings in `go-ipfs`.
+        - Utilize a firewall to limit network access to the API port.
+        - Regularly review and update API access configurations in `go-ipfs`.
+
+- **Attack Surface:** Malicious Peers in the libp2p Network
+    - **Description:** `go-ipfs` participates in the decentralized libp2p network, connecting with potentially untrusted peers. Malicious peers can exploit vulnerabilities in the `go-ipfs` implementation or attempt to disrupt the network.
+    - **How go-ipfs Contributes:** `go-ipfs`'s core functionality relies on participating in the libp2p network for content routing and retrieval.
+    - **Example:** A malicious peer could send crafted messages exploiting a known vulnerability in the `go-ipfs` libp2p implementation, leading to a crash or unexpected behavior. They could also attempt to poison routing tables or flood the node with requests.
+    - **Impact:** Node instability, denial of service, potential data corruption or injection, network disruption.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Keep `go-ipfs` updated to the latest version to patch known libp2p vulnerabilities.
+        - Configure trusted peers in `go-ipfs` if possible, limiting connections to known entities.
+        - Implement connection limits within `go-ipfs` to restrict the number of incoming and outgoing connections.
+        - Monitor peer connections through `go-ipfs` tools for suspicious activity.
+
+- **Attack Surface:** Data Poisoning via IPFS
+    - **Description:** Attackers could inject malicious or incorrect data into the IPFS network with the same content identifier (CID) as legitimate data, potentially misleading or harming users who retrieve it.
+    - **How go-ipfs Contributes:** `go-ipfs`'s content addressing system relies on the immutability of content based on its CID. However, if an attacker can generate content with the same CID, they can replace legitimate data.
+    - **Example:** An attacker could create a malicious file with the same CID as a legitimate software update, potentially tricking users into downloading and installing malware.
+    - **Impact:** Distribution of malicious content, compromise of user systems, reputational damage.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Implement mechanisms *outside* of `go-ipfs` to verify the authenticity and integrity of data retrieved from IPFS, beyond just the CID (e.g., cryptographic signatures).
+        - Use IPNS or DNSLink with caution, ensuring the underlying private keys or DNS records are securely managed (these are features of `go-ipfs`).
+        - Educate users about the potential for data poisoning in the IPFS network.
+
+- **Attack Surface:** Exploiting Known `go-ipfs` Vulnerabilities
+    - **Description:** Like any software, `go-ipfs` may have known vulnerabilities that attackers can exploit if the node is not kept up-to-date.
+    - **How go-ipfs Contributes:** Vulnerabilities are inherent in software development and can exist in the `go-ipfs` codebase.
+    - **Example:** A publicly disclosed vulnerability in a specific version of `go-ipfs` could allow an attacker to execute arbitrary code on the node by sending a specially crafted request.
+    - **Impact:** Node compromise, data breaches, denial of service, potential for lateral movement within the network.
+    - **Risk Severity:** Varies (can be Critical to High depending on the vulnerability)
+    - **Mitigation Strategies:**
+        - Stay updated with the latest stable version of `go-ipfs` to patch known vulnerabilities.
+        - Subscribe to security advisories related to `go-ipfs` to be informed of new vulnerabilities.
+        - Implement a vulnerability management process for the `go-ipfs` component.
