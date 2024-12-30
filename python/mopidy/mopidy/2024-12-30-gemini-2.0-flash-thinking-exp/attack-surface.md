@@ -1,0 +1,69 @@
+- **Attack Surface: Local File Access Vulnerability**
+    - **Description:**  Mopidy, when configured to use local files as a music source, might allow access to files outside the intended music directories due to insufficient path validation or improper handling of file system operations.
+    - **How Mopidy Contributes:** Mopidy's configuration allows specifying local directories. If these configurations are not carefully managed or if Mopidy doesn't properly sanitize or restrict file access based on the configured paths, vulnerabilities can arise.
+    - **Example:** A user configures Mopidy with a broad directory like `/` or `/home` as a music source. A malicious client could then potentially request playback of files like `/etc/passwd` or other sensitive system files if Mopidy doesn't enforce strict boundaries.
+    - **Impact:** Exposure of sensitive data, potential for further system compromise if exposed files contain credentials or other exploitable information.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Developers:** Implement strict path validation and sanitization when accessing local files. Ensure that Mopidy only accesses files within the explicitly configured music directories. Consider using chroot or similar sandboxing techniques to further isolate Mopidy's file system access.
+        - **Users:** Carefully configure the `local` backend, ensuring that only specific, trusted music directories are included. Avoid using broad or root directories. Regularly review and audit the configured paths.
+
+- **Attack Surface: Malicious URI Handling**
+    - **Description:** Mopidy uses URIs to identify media sources. If Mopidy or its backend extensions don't properly validate or sanitize these URIs, malicious URIs could trigger unexpected behavior, resource exhaustion, or even code execution.
+    - **How Mopidy Contributes:** Mopidy accepts URIs from various sources (configuration, API requests, etc.) and passes them to backend extensions for processing. Vulnerabilities can arise if Mopidy doesn't have sufficient input validation before passing the URI or if the backend extensions have vulnerabilities in their URI handling logic.
+    - **Example:** A malicious client sends a crafted URI that exploits a vulnerability in a backend extension's URI parsing logic, leading to a denial-of-service or, in more severe cases, remote code execution within the Mopidy process.
+    - **Impact:** Denial of service, potential remote code execution depending on the vulnerability in the backend.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Developers:** Implement robust URI validation and sanitization within Mopidy before passing URIs to backend extensions. Encourage and contribute to secure URI handling practices in backend extensions.
+        - **Users:** Be cautious about the sources of URIs used with Mopidy. Avoid using URIs from untrusted sources. Keep Mopidy and its backend extensions updated to patch known vulnerabilities.
+
+- **Attack Surface: Unverified Extension Loading**
+    - **Description:** If Mopidy allows loading extensions from arbitrary sources without proper verification of their integrity and safety, malicious extensions could be installed, granting attackers significant control over the Mopidy instance and potentially the underlying system.
+    - **How Mopidy Contributes:** Mopidy's extension system is a core feature. If the mechanism for discovering, downloading, and installing extensions lacks proper security measures, it becomes a significant attack vector.
+    - **Example:** An attacker creates a malicious extension that mimics a legitimate one and hosts it on a public repository. If Mopidy allows installing extensions from arbitrary URLs without verification, a user could be tricked into installing the malicious extension, which could then steal credentials, monitor activity, or execute arbitrary commands.
+    - **Impact:** Full compromise of the Mopidy instance and potentially the underlying system.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Developers:** Implement a secure extension loading mechanism that includes signature verification and potentially a curated and trusted repository for extensions. Provide clear warnings to users about installing extensions from untrusted sources.
+        - **Users:** Only install extensions from trusted sources. Verify the authenticity of extensions before installing them. Be cautious about granting extensions excessive permissions.
+
+- **Attack Surface: Extension API Abuse**
+    - **Description:** Vulnerabilities in the Mopidy extension API could allow malicious extensions (or even legitimate but compromised extensions) to bypass security measures or gain unauthorized access to Mopidy's internal state and resources.
+    - **How Mopidy Contributes:** Mopidy provides an API for extensions to interact with its core functionality. Flaws in this API design or implementation can be exploited.
+    - **Example:** A vulnerability in the extension API allows an extension to access and modify the configuration settings of other extensions or Mopidy itself, potentially disabling security features or introducing malicious configurations.
+    - **Impact:** Compromise of Mopidy functionality, potential for privilege escalation within the Mopidy process.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Developers:** Design the extension API with security in mind, enforcing clear boundaries and access controls. Regularly audit the API for potential vulnerabilities. Provide secure coding guidelines for extension developers.
+        - **Users:** Be selective about the extensions installed and the permissions they require. Keep extensions updated.
+
+- **Attack Surface: Weak or Missing Web Interface Authentication**
+    - **Description:** If the Mopidy web interface is enabled without proper authentication or with weak default credentials, attackers on the network could gain unauthorized access and control Mopidy's functionality remotely.
+    - **How Mopidy Contributes:** Mopidy provides a web interface as a way to control the music server. The security of this interface directly impacts the overall security of Mopidy.
+    - **Example:** Mopidy is configured with the default web interface enabled and no password set. An attacker on the local network can access the web interface and control playback, add to playlists, or perform other actions.
+    - **Impact:** Unauthorized control of the music server, potential for disruption of service or malicious actions.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - **Developers:** Enforce strong default authentication for the web interface. Provide clear documentation on how to configure authentication properly. Consider offering options for more robust authentication methods.
+        - **Users:** Always configure strong, unique passwords for the web interface. Restrict access to the web interface to trusted networks. Consider disabling the web interface if it's not needed.
+
+- **Attack Surface: Web Interface API Parameter Injection**
+    - **Description:** Vulnerabilities in how the web interface API handles parameters could allow attackers to inject malicious commands or data, potentially leading to unexpected behavior or even code execution within the Mopidy process.
+    - **How Mopidy Contributes:** The web interface exposes API endpoints that accept user input. If this input is not properly sanitized and validated before being used in commands or database queries, injection vulnerabilities can occur.
+    - **Example:** An attacker crafts a malicious API request that injects shell commands into a parameter that is later executed by the Mopidy server, leading to remote code execution.
+    - **Impact:** Remote code execution, data manipulation, denial of service.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Developers:** Implement robust input validation and sanitization for all API endpoints. Use parameterized queries or prepared statements to prevent injection attacks. Follow secure coding practices.
+        - **Users:** Ensure Mopidy is running the latest version with security patches. Be cautious about interacting with the API from untrusted sources.
+
+- **Attack Surface: MPD Protocol Command Injection**
+    - **Description:** Vulnerabilities in how Mopidy parses and executes MPD commands could allow attackers to inject malicious commands, potentially leading to code execution on the server.
+    - **How Mopidy Contributes:** Mopidy interprets and executes commands received through the MPD protocol. If this parsing and execution are not done securely, injection vulnerabilities can arise.
+    - **Example:** An attacker sends a specially crafted MPD command that exploits a vulnerability in Mopidy's command parsing logic, allowing them to execute arbitrary shell commands on the server.
+    - **Impact:** Remote code execution.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - **Developers:** Implement secure command parsing and execution logic for the MPD protocol. Avoid using shell commands directly based on user input. Use whitelisting of allowed commands and parameters.
+        - **Users:** Ensure Mopidy is running the latest version with security patches. Be cautious about using MPD clients from untrusted sources.
