@@ -220,7 +220,6 @@ go https://github.com/gogs/gogs
 go https://github.com/goharbor/harbor
 go https://github.com/go-kit/kit
 go https://github.com/go-kratos/kratos
-go https://github.com/golang/go
 go https://github.com/golang-migrate/migrate
 go https://github.com/go-martini/martini
 go https://github.com/gorilla/mux

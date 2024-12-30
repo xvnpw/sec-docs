@@ -276,7 +276,6 @@ We need community help to determine:
 - [gogf/gf](go/gogf/gf) ([GitHub](https://github.com/gogf/gf))
 - [gogs/gogs](go/gogs/gogs) ([GitHub](https://github.com/gogs/gogs))
 - [goharbor/harbor](go/goharbor/harbor) ([GitHub](https://github.com/goharbor/harbor))
-- [golang/go](go/golang/go) ([GitHub](https://github.com/golang/go))
 - [golang-migrate/migrate](go/golang-migrate/migrate) ([GitHub](https://github.com/golang-migrate/migrate))
 - [gorilla/mux](go/gorilla/mux) ([GitHub](https://github.com/gorilla/mux))
 - [gorilla/websocket](go/gorilla/websocket) ([GitHub](https://github.com/gorilla/websocket))
