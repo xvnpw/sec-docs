@@ -1,0 +1,44 @@
+- **InfluxQL Injection**
+    - **Description:** Attackers inject malicious InfluxQL code into queries, potentially leading to unauthorized data access, modification, or deletion.
+    - **InfluxDB Contribution:** InfluxDB's query language, InfluxQL, can be vulnerable if user-supplied input is not properly sanitized before being incorporated into queries.
+    - **Example:** An application takes a user-provided tag value and directly inserts it into an InfluxQL `WHERE` clause: `SELECT value FROM measurement WHERE tag='user_input'`. A malicious user could input `' OR '1'='1'` to bypass the intended filter and retrieve all data.
+    - **Impact:** Data breach, data manipulation, potential denial of service if malicious queries consume excessive resources.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Use parameterized queries or prepared statements.
+        - Input validation and sanitization.
+        - Principle of least privilege.
+
+- **Weak Authentication and Authorization**
+    - **Description:** Using default credentials, weak passwords, or improperly configured role-based access control (RBAC) allows unauthorized access to the InfluxDB instance.
+    - **InfluxDB Contribution:** InfluxDB's user management and RBAC features, if not properly configured and maintained, can introduce significant security vulnerabilities.
+    - **Example:** An InfluxDB instance is deployed with the default administrator credentials. An attacker discovers these credentials and gains full control over the database.
+    - **Impact:** Complete database compromise, including data theft, modification, deletion, and potential denial of service.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Change default credentials immediately.
+        - Enforce strong password policies.
+        - Implement and configure RBAC.
+        - Disable anonymous access if not required.
+
+- **Unsecured API Access**
+    - **Description:** The InfluxDB API is accessed over an unencrypted connection (HTTP) or without proper authentication, allowing attackers to intercept or manipulate data.
+    - **InfluxDB Contribution:** InfluxDB exposes its functionality through an HTTP API. If not secured, this API becomes a direct attack vector.
+    - **Example:** An application communicates with InfluxDB over HTTP. An attacker on the same network intercepts the communication and reads sensitive time-series data or modifies data being written.
+    - **Impact:** Data breach, data manipulation, potential compromise of the application relying on the data.
+    - **Risk Severity:** High
+    - **Mitigation Strategies:**
+        - Enforce HTTPS.
+        - Require authentication for API access.
+        - Use API tokens securely.
+
+- **Exposed Administrative Interface**
+    - **Description:** The InfluxDB administrative interface (if enabled) is accessible without proper authentication or from untrusted networks, allowing attackers to potentially gain full control of the database.
+    - **InfluxDB Contribution:** InfluxDB offers an administrative interface for management tasks. If not secured, it presents a high-value target.
+    - **Example:** The InfluxDB administrative interface is exposed on a public IP address without strong authentication. An attacker accesses the interface and can perform administrative tasks, including creating users, modifying configurations, and accessing data.
+    - **Impact:** Complete database compromise, including data theft, modification, deletion, and potential denial of service.
+    - **Risk Severity:** Critical
+    - **Mitigation Strategies:**
+        - Disable the administrative interface if not required.
+        - Restrict access to the administrative interface.
+        - Enforce strong authentication for the administrative interface.
