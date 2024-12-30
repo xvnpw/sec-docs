@@ -1,5 +1,3 @@
-objectivec https://github.com/CocoaLumberjack/CocoaLumberjack
-objectivec https://github.com/Cocoanetics/DTCoreText
 objectivec https://github.com/CoderMJLee/MJExtension
 objectivec https://github.com/CoderMJLee/MJRefresh
 objectivec https://github.com/dzenbot/DZNEmptyDataSet
