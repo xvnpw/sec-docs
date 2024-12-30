@@ -1,5 +1,5 @@
 {
-    "repo_url": "https://github.com/cashapp/sqldelight",
+    "repo_url": "https://github.com/sqldelight/sqldelight",
     "analyzer_args": "",
     "agent_provider": "google",
     "agent_model": "gemini-2.0-flash-thinking-exp",
