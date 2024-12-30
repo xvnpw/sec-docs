@@ -1,5 +1,3 @@
-php https://github.com/yourls/yourls
-php https://github.com/z-song/laravel-admin
 python https://github.com/dmlc/dgl
 rust https://github.com/bevyengine/bevy
 rust https://github.com/chroma-core/chroma
