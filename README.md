@@ -28,9 +28,6 @@ We need community help to determine:
 ### Current Projects
 
 
-### [.Scripts](.scripts/)
-
-
 ### [C](c/)
 
 - [alibaba/tengine](c/alibaba/tengine) ([GitHub](https://github.com/alibaba/tengine))
@@ -783,6 +780,8 @@ We need community help to determine:
 - [nikic/php-parser](php/nikic/php-parser) ([GitHub](https://github.com/nikic/php-parser))
 - [octobercms/october](php/octobercms/october) ([GitHub](https://github.com/octobercms/october))
 - [parse-community/parse-server](php/parse-community/parse-server) ([GitHub](https://github.com/parse-community/parse-server))
+- [pestphp/pest](php/pestphp/pest) ([GitHub](https://github.com/pestphp/pest))
+- [phacility/phabricator](php/phacility/phabricator) ([GitHub](https://github.com/phacility/phabricator))
 - [phalcon/cphalcon](php/phalcon/cphalcon) ([GitHub](https://github.com/phalcon/cphalcon))
 - [phan/phan](php/phan/phan) ([GitHub](https://github.com/phan/phan))
 - [php/php-src](php/php/php-src) ([GitHub](https://github.com/php/php-src))
