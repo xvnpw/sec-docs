@@ -18,8 +18,9 @@ def process_first_repo(n=1):
             language, repo_url = line.split(" ")
 
             # Create directory if it doesn't exist
+            owner = repo_url.split("/")[-2]
             repo_name = repo_url.split("/")[-1]
-            config_dir = os.path.join(language, repo_name)
+            config_dir = os.path.join(language, owner, repo_name)
             os.makedirs(config_dir, exist_ok=True)
 
             # Create config.json
