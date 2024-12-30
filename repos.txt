@@ -1,5 +1,3 @@
-php https://github.com/uvdesk/community-skeleton
-php https://github.com/vlucas/phpdotenv
 php https://github.com/walkor/workerman
 php https://github.com/wallabag/wallabag
 php https://github.com/yourls/yourls
