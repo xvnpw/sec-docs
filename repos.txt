@@ -1,5 +1,3 @@
-javascript https://github.com/yarnpkg/berry
-kotlin https://github.com/element-hq/element-android
 lua https://github.com/apache/incubator-apisix
 php https://github.com/drupal/core
 php https://github.com/owncloud/core
