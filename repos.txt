@@ -1,5 +1,3 @@
-objectivec https://github.com/forkingdog/UITableView-FDTemplateLayoutCell
-objectivec https://github.com/Grouper/FlatUIKit
 objectivec https://github.com/ibireme/YYKit
 objectivec https://github.com/ibireme/YYText
 objectivec https://github.com/IFTTT/JazzHands
