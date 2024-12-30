@@ -1,4 +1,7 @@
 # V2Ray-Core Analysis
-| Analysis Date | Documentation |
-|---------------|---------------|
-| 2024-12-29 gemini-2.0-flash-thinking-exp | [Security Design Review](v2ray/v2ray-core/2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](v2ray/v2ray-core/2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](v2ray/v2ray-core/2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](v2ray/v2ray-core/2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+
+[GitHub Repository](https://github.com/v2ray/v2ray-core)
+
+| Analysis Date | Model | Documents |
+|---------------|-------|-----------|
+| 2024-12-29 | gemini-2.0-flash-thinking-exp | [Security Design Review](2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |

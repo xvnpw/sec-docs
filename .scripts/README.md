@@ -1,3 +1,3 @@
 # .Scripts Projects
-| Project | Analysis Date | Documentation |
-|---------|---------------|---------------|
+| Project | Analysis Date | Model | Documentation |
+|---------|---------------|-------|---------------|

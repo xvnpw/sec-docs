@@ -68,6 +68,15 @@ We need community help to determine:
 """
 
 
+def get_github_link(project_dir):
+    config_path = os.path.join(project_dir, "config.json")
+    if os.path.isfile(config_path):
+        with open(config_path, "r") as config_file:
+            config = json.load(config_file)
+            return config.get("repo_url", "")
+    return ""
+
+
 def generate_main_readme(languages):
     readme_lines = [INTRODUCTION]
 
@@ -75,37 +84,13 @@ def generate_main_readme(languages):
         readme_lines.append(f"\n### [{language.title()}]({language}/)\n")
         for owner in languages[language]:
             for project in languages[language][owner]:
-                readme_lines.append(f"- [{owner}/{project}]({language}/{owner}/{project}/)")
+                github_link = get_github_link(os.path.join(language, owner, project))
+                github_part = f"[GitHub]({github_link})" if github_link else ""
+                readme_lines.append(f"- [{owner}/{project}]({language}/{owner}/{project}) ({github_part})")
 
-    readme_lines.append(SPONSORSHIP)
+    readme_lines.append("\n" + SPONSORSHIP)
 
     with open("README.md", "w") as f:
-        f.write("\n".join(readme_lines))
-
-
-def generate_language_readme(language, projects):
-    readme_lines = [f"# {language.title()} Projects"]
-    readme_lines.append("| Project | Analysis Date | Documentation |")
-    readme_lines.append("|---------|---------------|---------------|")
-
-    for owner in projects:
-        for project, versions in projects[owner].items():
-            for version in versions:
-                # Correctly construct the table row with the proper number of columns
-                readme_lines.append(f"| [{owner}/{project}]({owner}/{project}/) {version}")
-
-    with open(os.path.join(language, "README.md"), "w") as f:
-        f.write("\n".join(readme_lines))
-
-
-def generate_project_readme(language, owner, project, versions):
-    readme_lines = [f"# {project.title()} Analysis"]
-    readme_lines.append("| Analysis Date | Documentation |")
-    readme_lines.append("|---------------|---------------|")
-    readme_lines.extend(versions)
-
-    project_dir = os.path.join(language, owner, project)
-    with open(os.path.join(project_dir, "README.md"), "w") as f:
         f.write("\n".join(readme_lines))
 
 
@@ -130,25 +115,17 @@ def main():
             for project in projects:
                 project_dir = os.path.join(owner_dir, project)
 
-                source_repo_link = ""
-                config_path = os.path.join(project_dir, "config.json")
-                if os.path.isfile(config_path):
-                    with open(config_path, "r") as config_file:
-                        config = json.load(config_file)
-                        repo_url = config.get("repo_url", "").strip()
-                        if repo_url:
-                            source_repo_link = f"[GitHub]({repo_url})"
-
                 versions = sorted(
                     [v for v in os.listdir(project_dir) if os.path.isdir(os.path.join(project_dir, v))], reverse=True
                 )
 
                 version_lines = []
+                language_version_lines = []  # Separate lines for language README
                 for version in versions:
                     version_dir = os.path.join(project_dir, version)
 
                     analysis_date = version[:10]
-                    model_info = version[11:]
+                    model_name = version[11:]
 
                     doc_types = {
                         "sec-design.md": "Security Design Review",
@@ -157,20 +134,73 @@ def main():
                         "attack-tree.md": "Attack Tree",
                     }
 
-                    doc_links = []
+                    # Project README doc links (relative to project directory)
+                    project_doc_links = []
+                    # Language README doc links (relative to language directory)
+                    language_doc_links = []
+
                     for doc_file, doc_name in doc_types.items():
                         if os.path.exists(os.path.join(version_dir, doc_file)):
-                            doc_links.append(f"[{doc_name}]({owner}/{project}/{version}/{doc_file})")
+                            project_doc_links.append(f"[{doc_name}]({version}/{doc_file})")
+                            language_doc_links.append(f"[{doc_name}]({owner}/{project}/{version}/{doc_file})")
 
-                    version_lines.append(f"| {analysis_date} {model_info} | {', '.join(doc_links)} |")
+                    version_lines.append(f"| {analysis_date} | {model_name} | {', '.join(project_doc_links)} |")
+                    language_version_lines.append(
+                        f"| {analysis_date} | {model_name} | {', '.join(language_doc_links)} |"
+                    )
 
-                languages[language][owner][project] = version_lines
+                languages[language][owner][project] = {
+                    "project_lines": version_lines,
+                    "language_lines": language_version_lines,
+                }
 
+                # Generate project README
                 generate_project_readme(language, owner, project, version_lines)
 
+        # Generate language README with the correct paths
         generate_language_readme(language, languages[language])
 
     generate_main_readme(languages)
+
+
+def generate_language_readme(language, projects):
+    readme_lines = [f"# {language.title()} Projects"]
+    readme_lines.append("| Project | Analysis Date | Model | Documentation |")
+    readme_lines.append("|---------|---------------|-------|---------------|")
+
+    for owner in projects:
+        for project, data in projects[owner].items():
+            github_link = get_github_link(os.path.join(language, owner, project))
+            project_name = f"[{owner}/{project}]({owner}/{project}/)"
+            if github_link:
+                project_name += f" ([GitHub]({github_link}))"
+
+            for version_line in data["language_lines"]:
+                parts = version_line.split("|")
+                if len(parts) >= 4:
+                    date = parts[1].strip()
+                    model = parts[2].strip()
+                    docs = parts[3].strip()
+                    readme_lines.append(f"| {project_name} | {date} | {model} | {docs} |")
+
+    with open(os.path.join(language, "README.md"), "w") as f:
+        f.write("\n".join(readme_lines))
+
+
+def generate_project_readme(language, owner, project, versions):
+    readme_lines = [f"# {project.title()} Analysis"]
+
+    github_link = get_github_link(os.path.join(language, owner, project))
+    if github_link:
+        readme_lines.append(f"\n[GitHub Repository]({github_link})\n")
+
+    readme_lines.append("| Analysis Date | Model | Documents |")
+    readme_lines.append("|---------------|-------|-----------|")
+    readme_lines.extend(versions)
+
+    project_dir = os.path.join(language, owner, project)
+    with open(os.path.join(project_dir, "README.md"), "w") as f:
+        f.write("\n".join(readme_lines))
 
 
 if __name__ == "__main__":

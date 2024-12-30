@@ -1,4 +1,7 @@
 # Materialize Analysis
-| Analysis Date | Documentation |
-|---------------|---------------|
-| 2024-12-29 gemini-2.0-flash-thinking-exp | [Security Design Review](dogfalo/materialize/2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](dogfalo/materialize/2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](dogfalo/materialize/2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](dogfalo/materialize/2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+
+[GitHub Repository](https://github.com/Dogfalo/materialize)
+
+| Analysis Date | Model | Documents |
+|---------------|-------|-----------|
+| 2024-12-29 | gemini-2.0-flash-thinking-exp | [Security Design Review](2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |

@@ -1,4 +1,7 @@
 # Netdata Analysis
-| Analysis Date | Documentation |
-|---------------|---------------|
-| 2024-12-29 gemini-2.0-flash-thinking-exp | [Security Design Review](netdata/netdata/2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](netdata/netdata/2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](netdata/netdata/2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](netdata/netdata/2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+
+[GitHub Repository](https://github.com/netdata/netdata)
+
+| Analysis Date | Model | Documents |
+|---------------|-------|-----------|
+| 2024-12-29 | gemini-2.0-flash-thinking-exp | [Security Design Review](2024-12-29-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](2024-12-29-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](2024-12-29-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](2024-12-29-gemini-2.0-flash-thinking-exp/attack-tree.md) |

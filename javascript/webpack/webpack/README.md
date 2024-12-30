@@ -1,4 +1,7 @@
 # Webpack Analysis
-| Analysis Date | Documentation |
-|---------------|---------------|
-| 2024-12-28 gemini-2.0-flash-thinking-exp | [Security Design Review](webpack/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](webpack/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](webpack/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](webpack/webpack/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+
+[GitHub Repository](https://github.com/webpack/webpack)
+
+| Analysis Date | Model | Documents |
+|---------------|-------|-----------|
+| 2024-12-28 | gemini-2.0-flash-thinking-exp | [Security Design Review](2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |

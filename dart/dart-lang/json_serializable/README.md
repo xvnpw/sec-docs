@@ -1,4 +1,7 @@
 # Json_Serializable Analysis
-| Analysis Date | Documentation |
-|---------------|---------------|
-| 2024-12-27 gemini-2.0-flash-thinking-exp | [Security Design Review](dart-lang/json_serializable/2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](dart-lang/json_serializable/2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](dart-lang/json_serializable/2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](dart-lang/json_serializable/2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+
+[GitHub Repository](https://github.com/dart-lang/json_serializable)
+
+| Analysis Date | Model | Documents |
+|---------------|-------|-----------|
+| 2024-12-27 | gemini-2.0-flash-thinking-exp | [Security Design Review](2024-12-27-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](2024-12-27-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](2024-12-27-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](2024-12-27-gemini-2.0-flash-thinking-exp/attack-tree.md) |
