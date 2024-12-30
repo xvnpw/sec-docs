@@ -1,5 +1,3 @@
-python https://github.com/mopidy/mopidy
-python https://github.com/mozilla/addons-server
 python https://github.com/searxng/searxng
 python https://github.com/stripe/stripe-python
 python https://github.com/urllib3/urllib3
