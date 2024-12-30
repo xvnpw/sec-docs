@@ -1,5 +1,3 @@
-go https://github.com/ory/kratos
-go https://github.com/peergos/peergos
 go https://github.com/rook/rook
 go https://github.com/smallstep/certificates
 go https://github.com/tailscale/tailscale
