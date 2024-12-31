@@ -1,0 +1,4 @@
+# Shell Projects
+| Project | Analysis Date | Model | Documentation |
+|---------|---------------|-------|---------------|
+| [pi-hole/pi-hole](pi-hole/pi-hole/) ([GitHub](https://github.com/pi-hole/pi-hole)) | 2024-12-30 | gemini-2.0-flash-thinking-exp | [Security Design Review](pi-hole/pi-hole/2024-12-30-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](pi-hole/pi-hole/2024-12-30-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](pi-hole/pi-hole/2024-12-30-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](pi-hole/pi-hole/2024-12-30-gemini-2.0-flash-thinking-exp/attack-tree.md) |

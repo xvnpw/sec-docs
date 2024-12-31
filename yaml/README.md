@@ -1,0 +1,4 @@
+# Yaml Projects
+| Project | Analysis Date | Model | Documentation |
+|---------|---------------|-------|---------------|
+| [airflow-helm/charts](airflow-helm/charts/) ([GitHub](https://github.com/airflow-helm/charts)) | 2024-12-30 | gemini-2.0-flash-thinking-exp | [Security Design Review](airflow-helm/charts/2024-12-30-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](airflow-helm/charts/2024-12-30-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](airflow-helm/charts/2024-12-30-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](airflow-helm/charts/2024-12-30-gemini-2.0-flash-thinking-exp/attack-tree.md) |
