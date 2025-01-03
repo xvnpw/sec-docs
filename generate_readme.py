@@ -77,6 +77,15 @@ def get_github_link(project_dir):
     return ""
 
 
+def get_metadata(version_dir):
+    """Read and return the complete metadata from output-metadata.json"""
+    metadata_path = os.path.join(version_dir, "output-metadata.json")
+    if os.path.isfile(metadata_path):
+        with open(metadata_path, "r") as metadata_file:
+            return json.load(metadata_file)
+    return {}
+
+
 def generate_main_readme(languages):
     readme_lines = [INTRODUCTION]
 
@@ -124,11 +133,16 @@ def main():
                 for version in versions:
                     version_dir = os.path.join(project_dir, version)
 
+                    metadata = get_metadata(version_dir)
                     analysis_date = version[:10]
-                    model_name = version[11:]
+                    model_name = metadata.get("agent_model", "Unknown Model")
+
+                    analyzer_args = metadata.get("analyzer_args", "")
+                    deep_analysis = "✅" if "deep-analysis" in analyzer_args else ""
 
                     doc_types = {
                         "sec-design.md": "Security Design Review",
+                        "sec-design-deep-analysis.md": "Security Design Review - Deep Analysis",
                         "threat-modeling.md": "Threat Modeling",
                         "attack-surface.md": "Attack Surface",
                         "attack-tree.md": "Attack Tree",
@@ -144,9 +158,11 @@ def main():
                             project_doc_links.append(f"[{doc_name}]({version}/{doc_file})")
                             language_doc_links.append(f"[{doc_name}]({owner}/{project}/{version}/{doc_file})")
 
-                    version_lines.append(f"| {analysis_date} | {model_name} | {', '.join(project_doc_links)} |")
+                    version_lines.append(
+                        f"| {analysis_date} | {model_name} | {deep_analysis} | {', '.join(project_doc_links)} |"
+                    )
                     language_version_lines.append(
-                        f"| {analysis_date} | {model_name} | {', '.join(language_doc_links)} |"
+                        f"| {analysis_date} | {model_name} | {deep_analysis} | {', '.join(language_doc_links)} |"
                     )
 
                 languages[language][owner][project] = {
@@ -165,8 +181,8 @@ def main():
 
 def generate_language_readme(language, projects):
     readme_lines = [f"# {language.title()} Projects"]
-    readme_lines.append("| Project | Analysis Date | Model | Documentation |")
-    readme_lines.append("|---------|---------------|-------|---------------|")
+    readme_lines.append("| Project | Analysis Date | Model | Deep Analysis | Documentation |")
+    readme_lines.append("|---------|---------------|-------|---------------|---------------|")
 
     for owner in projects:
         for project, data in projects[owner].items():
@@ -180,8 +196,9 @@ def generate_language_readme(language, projects):
                 if len(parts) >= 4:
                     date = parts[1].strip()
                     model = parts[2].strip()
-                    docs = parts[3].strip()
-                    readme_lines.append(f"| {project_name} | {date} | {model} | {docs} |")
+                    deep_analysis = parts[3].strip()
+                    docs = parts[4].strip()
+                    readme_lines.append(f"| {project_name} | {date} | {model} | {deep_analysis} | {docs} |")
 
     with open(os.path.join(language, "README.md"), "w") as f:
         f.write("\n".join(readme_lines))
@@ -194,8 +211,8 @@ def generate_project_readme(language, owner, project, versions):
     if github_link:
         readme_lines.append(f"\n[GitHub Repository]({github_link})\n")
 
-    readme_lines.append("| Analysis Date | Model | Documents |")
-    readme_lines.append("|---------------|-------|-----------|")
+    readme_lines.append("| Analysis Date | Model | Deep Analysis | Documents |")
+    readme_lines.append("|---------------|-------|---------------|-----------|")
     readme_lines.extend(versions)
 
     project_dir = os.path.join(language, owner, project)

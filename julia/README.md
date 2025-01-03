@@ -1,4 +1,4 @@
 # Julia Projects
-| Project | Analysis Date | Model | Documentation |
-|---------|---------------|-------|---------------|
-| [fluxml/flux.jl](fluxml/flux.jl/) ([GitHub](https://github.com/FluxML/Flux.jl)) | 2024-12-28 | gemini-2.0-flash-thinking-exp | [Security Design Review](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
+| Project | Analysis Date | Model | Deep Analysis | Documentation |
+|---------|---------------|-------|---------------|---------------|
+| [fluxml/flux.jl](fluxml/flux.jl/) ([GitHub](https://github.com/FluxML/Flux.jl)) | 2024-12-28 | gemini-2.0-flash-thinking-exp |  | [Security Design Review](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/sec-design.md), [Threat Modeling](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/threat-modeling.md), [Attack Surface](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/attack-surface.md), [Attack Tree](fluxml/flux.jl/2024-12-28-gemini-2.0-flash-thinking-exp/attack-tree.md) |
