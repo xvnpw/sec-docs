@@ -151,14 +151,7 @@ jobs:
           AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
         run: |
           mkdir -p ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}
-          echo "$AGENT_PROMPT_TYPES" | jq -r '.[]' | while read -r prompt_type; do
-            output_file="output/${prompt_type}.md"
-            if [ -f "$output_file" ]; then
-              mv "$output_file" ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
-            else
-              echo "Output file $output_file not found!"
-            fi
-          done
+          cp -r output/* ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
         shell: bash
 
       - name: Create output-metadata.json
