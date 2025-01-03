@@ -1,5 +1,3 @@
-c https://github.com/ossec/ossec-hids
-c https://github.com/pgvector/pgvector
 c https://github.com/postgres/postgres
 c https://github.com/raysan5/raylib
 c https://github.com/redis/hiredis
