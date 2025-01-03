@@ -1,5 +1,3 @@
-c https://github.com/woltapp/blurhash
-c https://github.com/xianyi/openblas
 clojure https://github.com/metabase/metabase
 cpp https://github.com/academysoftwarefoundation/openvdb
 cpp https://github.com/alembic/alembic
