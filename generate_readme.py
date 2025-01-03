@@ -182,7 +182,7 @@ def main():
 def generate_language_readme(language, projects):
     readme_lines = [f"# {language.title()} Projects"]
     readme_lines.append("| Project | Analysis Date | Model | Deep Analysis | Documentation |")
-    readme_lines.append("|---------|---------------|-------|---------------|---------------|")
+    readme_lines.append("|---------|---------------|-------|:-------------:|---------------|")
 
     for owner in projects:
         for project, data in projects[owner].items():
@@ -212,7 +212,7 @@ def generate_project_readme(language, owner, project, versions):
         readme_lines.append(f"\n[GitHub Repository]({github_link})\n")
 
     readme_lines.append("| Analysis Date | Model | Deep Analysis | Documents |")
-    readme_lines.append("|---------------|-------|---------------|-----------|")
+    readme_lines.append("|---------------|-------|:-------------:|-----------|")
     readme_lines.extend(versions)
 
     project_dir = os.path.join(language, owner, project)
