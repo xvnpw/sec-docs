@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/psf/requests",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-03T12:17:54Z",
+  "end_datetime": "2025-01-03T12:31:29Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.5",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "161278",
+  "mode": "github"
+}
