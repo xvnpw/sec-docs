@@ -29,7 +29,7 @@ def process_first_repo(n=1):
                 "analyzer_args": "--deep-analysis",
                 "agent_provider": "google",
                 "agent_model": "gemini-2.0-flash-thinking-exp",
-                "agent_temperature": 0.0,
+                "agent_temperature": 0.5,
                 "agent_prompt_types": ["sec-design", "threat-modeling", "attack-surface", "attack-tree"],
             }
 
