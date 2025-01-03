@@ -1,3 +1,1 @@
-python https://github.com/pallets/flask
-python https://github.com/psf/requests
 csharp https://github.com/restsharp/restsharp

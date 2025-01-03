@@ -5,6 +5,9 @@
     "agent_model": "gemini-2.0-flash-thinking-exp",
     "agent_temperature": 0.0,
     "agent_prompt_types": [
-        "threat-modeling"
+        "sec-design",
+        "threat-modeling",
+        "attack-surface",
+        "attack-tree"
     ]
 }
