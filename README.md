@@ -211,7 +211,7 @@ We need community help to determine:
 - [quantconnect/lean](csharp/quantconnect/lean) ([GitHub](https://github.com/QuantConnect/Lean))
 - [quartznet/quartznet](csharp/quartznet/quartznet) ([GitHub](https://github.com/quartznet/quartznet))
 - [questpdf/questpdf](csharp/questpdf/questpdf) ([GitHub](https://github.com/QuestPDF/QuestPDF))
-- [restsharp/restsharp](csharp/restsharp/restsharp) ()
+- [restsharp/restsharp](csharp/restsharp/restsharp) ([GitHub](https://github.com/restsharp/restsharp))
 - [serilog/serilog](csharp/serilog/serilog) ([GitHub](https://github.com/serilog/serilog))
 - [serilog/serilog-sinks-console](csharp/serilog/serilog-sinks-console) ([GitHub](https://github.com/serilog/serilog-sinks-console))
 - [servicestack/servicestack](csharp/servicestack/servicestack) ([GitHub](https://github.com/ServiceStack/ServiceStack))
