@@ -1,5 +1,3 @@
-csharp https://github.com/quartznet/quartznet
-csharp https://github.com/questpdf/questpdf
 csharp https://github.com/serilog/serilog
 csharp https://github.com/serilog/serilog-sinks-console
 csharp https://github.com/servicestack/servicestack
