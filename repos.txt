@@ -1,5 +1,3 @@
-cpp https://github.com/electron/electron
-cpp https://github.com/embree/embree
 cpp https://github.com/envoyproxy/envoy
 cpp https://github.com/ethereum/solidity
 cpp https://github.com/facebook/folly
