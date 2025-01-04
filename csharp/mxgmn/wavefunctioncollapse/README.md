@@ -1,6 +1,6 @@
 # Wavefunctioncollapse Analysis
 
-[GitHub Repository](https://github.com/mxgmn/WaveFunctionCollapse)
+[GitHub Repository](https://github.com/mxgmn/wavefunctioncollapse)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
