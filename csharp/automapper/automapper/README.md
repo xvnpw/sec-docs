@@ -1,6 +1,6 @@
 # Automapper Analysis
 
-[GitHub Repository](https://github.com/AutoMapper/AutoMapper)
+[GitHub Repository](https://github.com/automapper/automapper)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
