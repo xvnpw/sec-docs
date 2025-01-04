@@ -1,5 +1,3 @@
-cpp https://github.com/keepassxreboot/keepassxc
-cpp https://github.com/lizardbyte/sunshine
 cpp https://github.com/mariadb/server
 cpp https://github.com/microsoft/cntk
 cpp https://github.com/microsoft/vcpkg
