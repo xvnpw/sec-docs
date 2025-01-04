@@ -1,5 +1,3 @@
-csharp https://github.com/identityserver/identityserver4
-csharp https://github.com/jamesnk/newtonsoft.json
 csharp https://github.com/jbogard/mediatr
 csharp https://github.com/jellyfin/jellyfin
 csharp https://github.com/jstedfast/mailkit
