@@ -1,5 +1,3 @@
-go https://github.com/prometheus/prometheus
-go https://github.com/rancher/rancher
 go https://github.com/rclone/rclone
 go https://github.com/restic/restic
 go https://github.com/revel/revel
