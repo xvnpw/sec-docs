@@ -1,5 +1,3 @@
-go https://github.com/olivere/elastic
-go https://github.com/openfaas/faas
 go https://github.com/open-telemetry/opentelemetry-collector
 go https://github.com/opentofu/opentofu
 go https://github.com/ory/hydra
