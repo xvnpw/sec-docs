@@ -1,5 +1,3 @@
-go https://github.com/icewhaletech/casaos
-go https://github.com/inconshreveable/ngrok
 go https://github.com/ipfs/go-ipfs
 go https://github.com/istio/istio
 go https://github.com/jaegertracing/jaeger
