@@ -1,5 +1,3 @@
-go https://github.com/gogs/gogs
-go https://github.com/goharbor/harbor
 go https://github.com/go-kit/kit
 go https://github.com/go-kratos/kratos
 go https://github.com/golang-migrate/migrate
