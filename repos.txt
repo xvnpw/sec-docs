@@ -1,5 +1,3 @@
-go https://github.com/gorilla/mux
-go https://github.com/gorilla/websocket
 go https://github.com/go-sql-driver/mysql
 go https://github.com/go-swagger/go-swagger
 go https://github.com/grafana/grafana
