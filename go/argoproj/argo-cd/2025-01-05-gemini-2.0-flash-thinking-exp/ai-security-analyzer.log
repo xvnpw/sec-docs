@@ -1,0 +1,108 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+38a8310d387e: Already exists
+f4d80a761251: Pulling fs layer
+98636e63ee65: Pulling fs layer
+976ae72214aa: Pulling fs layer
+59fe6015d754: Pulling fs layer
+90e6a85db132: Pulling fs layer
+948715fa814f: Pulling fs layer
+1a25bea527db: Pulling fs layer
+2c56a8eb3d98: Pulling fs layer
+1cfc19b5406e: Pulling fs layer
+d84f3cdd0fb6: Pulling fs layer
+91810cc0af27: Pulling fs layer
+1cfc19b5406e: Waiting
+90e6a85db132: Waiting
+d84f3cdd0fb6: Waiting
+948715fa814f: Waiting
+91810cc0af27: Waiting
+2c56a8eb3d98: Waiting
+1a25bea527db: Waiting
+59fe6015d754: Waiting
+f4d80a761251: Verifying Checksum
+f4d80a761251: Download complete
+976ae72214aa: Verifying Checksum
+976ae72214aa: Download complete
+98636e63ee65: Verifying Checksum
+98636e63ee65: Download complete
+59fe6015d754: Verifying Checksum
+59fe6015d754: Download complete
+948715fa814f: Download complete
+1a25bea527db: Verifying Checksum
+1a25bea527db: Download complete
+f4d80a761251: Pull complete
+2c56a8eb3d98: Download complete
+d84f3cdd0fb6: Verifying Checksum
+d84f3cdd0fb6: Download complete
+91810cc0af27: Verifying Checksum
+91810cc0af27: Download complete
+98636e63ee65: Pull complete
+976ae72214aa: Pull complete
+59fe6015d754: Pull complete
+90e6a85db132: Verifying Checksum
+90e6a85db132: Download complete
+90e6a85db132: Pull complete
+948715fa814f: Pull complete
+1a25bea527db: Pull complete
+2c56a8eb3d98: Pull complete
+1cfc19b5406e: Verifying Checksum
+1cfc19b5406e: Download complete
+1cfc19b5406e: Pull complete
+d84f3cdd0fb6: Pull complete
+91810cc0af27: Pull complete
+Digest: sha256:219cdeaf1c39b97e801ed25ebeb0626c3fc1b944c6df4de79da26b96570aa744
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-05 05:52:07,115 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-05 05:52:07,152 - ai_security_analyzer.github2sd_agents - INFO - Internal step 1 of 2
+2025-01-05 05:52:31,069 - ai_security_analyzer.github2sd_agents - INFO - Internal step 2 of 2
+2025-01-05 05:52:56,944 - ai_security_analyzer.github2sd_agents - INFO - Getting intermediate response
+2025-01-05 05:52:56,945 - ai_security_analyzer.github2sd_agents - INFO - Getting deep analysis of security design review
+2025-01-05 05:53:27,649 - ai_security_analyzer.graphs - INFO - Actual token usage: 18318
+2025-01-05 05:53:27,649 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-05 05:53:32,135 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-05 05:53:32,172 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-05 05:53:48,066 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-05 05:54:10,353 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-05 05:54:23,685 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-05 05:54:23,686 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-05 05:54:38,769 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 6
+2025-01-05 05:55:02,000 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 6
+2025-01-05 05:55:28,403 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 3 of 6
+2025-01-05 05:55:52,317 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 4 of 6
+2025-01-05 05:56:16,223 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 5 of 6
+2025-01-05 05:56:41,043 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 6 of 6
+2025-01-05 05:57:05,504 - ai_security_analyzer.github2tm_agents - INFO - Getting threats final response
+2025-01-05 05:57:05,505 - ai_security_analyzer.graphs - INFO - Actual token usage: 41423
+2025-01-05 05:57:05,506 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-05 05:57:09,956 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-05 05:57:09,995 - ai_security_analyzer.github2as_agents - INFO - Internal step 1 of 3
+2025-01-05 05:57:25,340 - ai_security_analyzer.github2as_agents - INFO - Internal step 2 of 3
+2025-01-05 05:57:42,744 - ai_security_analyzer.github2as_agents - INFO - Internal step 3 of 3
+2025-01-05 05:57:54,179 - ai_security_analyzer.github2as_agents - INFO - Getting intermediate response
+2025-01-05 05:57:54,180 - ai_security_analyzer.github2as_agents - INFO - Getting structured attack surface analysis
+2025-01-05 05:58:07,120 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 1 of 8
+2025-01-05 05:58:27,386 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 2 of 8
+2025-01-05 05:58:49,302 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 3 of 8
+2025-01-05 05:59:10,750 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 4 of 8
+2025-01-05 05:59:35,638 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 5 of 8
+2025-01-05 05:59:58,222 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 6 of 8
+2025-01-05 06:00:21,976 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 7 of 8
+2025-01-05 06:00:41,825 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 8 of 8
+2025-01-05 06:01:20,097 - ai_security_analyzer.github2as_agents - INFO - Getting attack surfaces final response
+2025-01-05 06:01:20,098 - ai_security_analyzer.graphs - INFO - Actual token usage: 39942
+2025-01-05 06:01:20,099 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-05 06:01:24,573 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-05 06:01:24,611 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-05 06:01:43,519 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-05 06:02:09,682 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-05 06:02:39,146 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-05 06:02:46,588 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-05 06:02:46,589 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-05 06:02:56,632 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 1 of 4
+2025-01-05 06:03:20,978 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 2 of 4
+2025-01-05 06:03:45,521 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 3 of 4
+2025-01-05 06:04:10,840 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 4 of 4
+2025-01-05 06:04:30,558 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree paths final response
+2025-01-05 06:04:30,559 - ai_security_analyzer.graphs - INFO - Actual token usage: 47956
+2025-01-05 06:04:30,560 - __main__ - INFO - AI Security Analyzer completed successfully
