@@ -1,5 +1,3 @@
-go https://github.com/k3s-io/k3s
-go https://github.com/kataras/iris
 go https://github.com/knative/community
 go https://github.com/kubernetes/kubernetes
 go https://github.com/labstack/echo
