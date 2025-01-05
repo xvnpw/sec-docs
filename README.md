@@ -233,11 +233,11 @@ We need community help to determine:
 - [flutter/engine](dart/flutter/engine) ([GitHub](https://github.com/flutter/engine))
 - [flutter/flutter](dart/flutter/flutter) ([GitHub](https://github.com/flutter/flutter))
 - [flutter/packages](dart/flutter/packages) ([GitHub](https://github.com/flutter/packages))
-- [getstream/stream-chat-flutter](dart/getstream/stream-chat-flutter) ([GitHub](https://github.com/GetStream/stream-chat-flutter))
+- [getstream/stream-chat-flutter](dart/getstream/stream-chat-flutter) ([GitHub](https://github.com/getstream/stream-chat-flutter))
 - [isar/isar](dart/isar/isar) ([GitHub](https://github.com/isar/isar))
 - [leoafarias/fvm](dart/leoafarias/fvm) ([GitHub](https://github.com/leoafarias/fvm))
 - [miguelpruivo/flutter_file_picker](dart/miguelpruivo/flutter_file_picker) ([GitHub](https://github.com/miguelpruivo/flutter_file_picker))
-- [reactivex/rxdart](dart/reactivex/rxdart) ([GitHub](https://github.com/ReactiveX/rxdart))
+- [reactivex/rxdart](dart/reactivex/rxdart) ([GitHub](https://github.com/reactivex/rxdart))
 
 ### [Elixir](elixir/)
 
@@ -251,8 +251,8 @@ We need community help to determine:
 ### [Go](go/)
 
 - [99designs/gqlgen](go/99designs/gqlgen) ([GitHub](https://github.com/99designs/gqlgen))
-- [adguardteam/adguardhome](go/adguardteam/adguardhome) ([GitHub](https://github.com/AdguardTeam/AdGuardHome))
-- [alistgo/alist](go/alistgo/alist) ([GitHub](https://github.com/AlistGo/alist))
+- [adguardteam/adguardhome](go/adguardteam/adguardhome) ([GitHub](https://github.com/adguardteam/adguardhome))
+- [alistgo/alist](go/alistgo/alist) ([GitHub](https://github.com/alistgo/alist))
 - [argoproj/argo-cd](go/argoproj/argo-cd) ([GitHub](https://github.com/argoproj/argo-cd))
 - [beego/beego](go/beego/beego) ([GitHub](https://github.com/beego/beego))
 - [caddyserver/caddy](go/caddyserver/caddy) ([GitHub](https://github.com/caddyserver/caddy))
