@@ -1,5 +1,3 @@
-go https://github.com/ipfs/go-ipfs
-go https://github.com/istio/istio
 go https://github.com/jaegertracing/jaeger
 go https://github.com/juanfont/headscale
 go https://github.com/k3s-io/k3s
