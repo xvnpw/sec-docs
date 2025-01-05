@@ -1,5 +1,3 @@
-go https://github.com/go-chi/chi
-go https://github.com/gocolly/colly
 go https://github.com/gofiber/fiber
 go https://github.com/gogf/gf
 go https://github.com/go-gitea/gitea
