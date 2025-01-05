@@ -1,5 +1,3 @@
-dart https://github.com/reactivex/rxdart
-elixir https://github.com/elixir-lang/elixir
 erlang https://github.com/apache/couchdb
 erlang https://github.com/rabbitmq/rabbitmq-server
 go https://github.com/99designs/gqlgen
