@@ -1,5 +1,3 @@
-javascript https://github.com/cypress-io/cypress
-javascript https://github.com/d3/d3
 javascript https://github.com/daneden/animate.css
 javascript https://github.com/dcloudio/uni-app
 javascript https://github.com/dogfalo/materialize
