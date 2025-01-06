@@ -1,5 +1,3 @@
-java https://github.com/apache/struts
-java https://github.com/apache/tomcat
 java https://github.com/apache/zookeeper
 java https://github.com/apolloconfig/apollo
 java https://github.com/baseflow/photoview
