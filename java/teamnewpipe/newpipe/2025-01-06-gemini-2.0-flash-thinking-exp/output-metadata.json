@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/teamnewpipe/newpipe",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-06T18:02:15Z",
+  "end_datetime": "2025-01-06T18:16:58Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.5",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "172949",
+  "mode": "github"
+}
