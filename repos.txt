@@ -1,5 +1,3 @@
-java https://github.com/apache/kafka
-java https://github.com/apache/logging-log4j2
 java https://github.com/apache/rocketmq
 java https://github.com/apache/shardingsphere
 java https://github.com/apache/skywalking
