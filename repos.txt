@@ -1,5 +1,3 @@
-groovy https://github.com/nextflow-io/nextflow
-groovy https://github.com/openboxes/openboxes
 groovy https://github.com/pongasoft/glu
 groovy https://github.com/prototypez/appjoint
 groovy https://github.com/rundeck/rundeck
