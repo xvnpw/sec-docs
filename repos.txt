@@ -1,5 +1,3 @@
-go https://github.com/zeromicro/go-zero
-groovy https://github.com/airbnb/okreplay
 groovy https://github.com/akhikhl/gretty
 groovy https://github.com/betamaxteam/betamax
 groovy https://github.com/eleme/mess
