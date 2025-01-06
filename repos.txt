@@ -1,5 +1,3 @@
-java https://github.com/stirling-tools/stirling-pdf
-java https://github.com/teamnewpipe/newpipe
 java https://github.com/termux/termux-app
 java https://github.com/thingsboard/thingsboard
 java https://github.com/zxing/zxing
