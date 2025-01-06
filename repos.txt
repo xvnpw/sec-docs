@@ -1,5 +1,3 @@
-groovy https://github.com/akhikhl/gretty
-groovy https://github.com/betamaxteam/betamax
 groovy https://github.com/eleme/mess
 groovy https://github.com/fabiomsr/drawable-optimizer
 groovy https://github.com/fabric8io/fabric8-pipeline-library
