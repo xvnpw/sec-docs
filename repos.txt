@@ -1,5 +1,3 @@
-javascript https://github.com/axios/axios
-javascript https://github.com/babel/babel
 javascript https://github.com/bigskysoftware/htmx
 javascript https://github.com/bpmn-io/bpmn-js
 javascript https://github.com/caolan/async
