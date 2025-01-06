@@ -1,5 +1,3 @@
-javascript https://github.com/airbnb/lottie-web
-javascript https://github.com/alvarotrigo/fullpage.js
 javascript https://github.com/ampproject/amphtml
 javascript https://github.com/angular/angular.js
 javascript https://github.com/asciinema/asciinema-player
