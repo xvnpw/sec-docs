@@ -1,5 +1,3 @@
-java https://github.com/fasterxml/jackson-core
-java https://github.com/fasterxml/jackson-databind
 java https://github.com/google/exoplayer
 java https://github.com/google/guava
 java https://github.com/google/guice
