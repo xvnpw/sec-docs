@@ -1,5 +1,3 @@
-java https://github.com/libgdx/libgdx
-java https://github.com/lmax-exchange/disruptor
 java https://github.com/macrozheng/mall
 java https://github.com/mybatis/mybatis-3
 java https://github.com/netty/netty
