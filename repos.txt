@@ -1,5 +1,3 @@
-java https://github.com/google/guice
-java https://github.com/google/tink
 java https://github.com/greenrobot/eventbus
 java https://github.com/hibernate/hibernate-orm
 java https://github.com/jakewharton/butterknife
