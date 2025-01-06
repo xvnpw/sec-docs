@@ -1,5 +1,3 @@
-groovy https://github.com/fabric8io/fabric8-pipeline-library
-groovy https://github.com/fizzed/font-mfizz
 groovy https://github.com/geb/geb
 groovy https://github.com/gradleup/shadow
 groovy https://github.com/grails/grails
