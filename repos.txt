@@ -1,5 +1,3 @@
-java https://github.com/netty/netty
-java https://github.com/nextcloud/android
 java https://github.com/oracle/graal
 java https://github.com/philjay/mpandroidchart
 java https://github.com/qos-ch/logback
