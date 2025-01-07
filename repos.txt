@@ -1,5 +1,3 @@
-javascript https://github.com/nodejs/string_decoder
-javascript https://github.com/nolimits4web/swiper
 javascript https://github.com/nwjs/nw.js
 javascript https://github.com/phaserjs/phaser
 javascript https://github.com/pixijs/pixi.js
