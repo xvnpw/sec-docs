@@ -1,5 +1,3 @@
-javascript https://github.com/jasmine/jasmine
-javascript https://github.com/jgraph/drawio
 javascript https://github.com/jonschlinkert/kind-of
 javascript https://github.com/jquery/jquery
 javascript https://github.com/juliangarnier/anime
