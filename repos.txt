@@ -1,5 +1,3 @@
-javascript https://github.com/impress/impress.js
-javascript https://github.com/isaacs/inherits
 javascript https://github.com/jasmine/jasmine
 javascript https://github.com/jgraph/drawio
 javascript https://github.com/jonschlinkert/kind-of
