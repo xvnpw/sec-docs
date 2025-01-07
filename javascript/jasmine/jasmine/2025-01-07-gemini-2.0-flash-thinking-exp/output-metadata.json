@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/jasmine/jasmine",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-07T07:59:13Z",
+  "end_datetime": "2025-01-07T08:07:22Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.5",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "106803",
+  "mode": "github"
+}
