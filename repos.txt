@@ -1,5 +1,3 @@
-javascript https://github.com/lodash/lodash
-javascript https://github.com/markedjs/marked
 javascript https://github.com/meteor/meteor
 javascript https://github.com/minimistjs/minimist
 javascript https://github.com/mochajs/mocha
