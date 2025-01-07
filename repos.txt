@@ -1,5 +1,3 @@
-javascript https://github.com/yarnpkg/berry
-javascript https://github.com/zenorocha/clipboard.js
 julia https://github.com/fluxml/flux.jl
 kotlin https://github.com/acra/acra
 kotlin https://github.com/afollestad/material-dialogs
