@@ -1,5 +1,3 @@
-javascript https://github.com/meteor/meteor
-javascript https://github.com/minimistjs/minimist
 javascript https://github.com/mochajs/mocha
 javascript https://github.com/moment/moment
 javascript https://github.com/mozilla/pdf.js
