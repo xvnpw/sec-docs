@@ -1,5 +1,3 @@
-objectivec https://github.com/magicalpanda/magicalrecord
-objectivec https://github.com/mamaral/onboard
 objectivec https://github.com/mantle/mantle
 objectivec https://github.com/marcuswestin/webviewjavascriptbridge
 objectivec https://github.com/matthewyork/datetools
