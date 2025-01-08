@@ -1,5 +1,3 @@
-objectivec https://github.com/path/fastimagecache
-objectivec https://github.com/purelayout/purelayout
 objectivec https://github.com/react-native-maps/react-native-maps
 objectivec https://github.com/realm/realm-swift
 objectivec https://github.com/restkit/restkit
