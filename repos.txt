@@ -1,5 +1,3 @@
-objectivec https://github.com/ivpusic/react-native-image-crop-picker
-objectivec https://github.com/jdg/mbprogresshud
 objectivec https://github.com/jessesquires/jsqmessagesviewcontroller
 objectivec https://github.com/johnezang/jsonkit
 objectivec https://github.com/jsonmodel/jsonmodel
