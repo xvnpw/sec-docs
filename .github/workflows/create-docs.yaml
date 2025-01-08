@@ -113,23 +113,51 @@ jobs:
 
           mkdir -p output target_repo
 
+          # Define maximum retries and delay between retries
+          MAX_RETRIES=3
+          RETRY_DELAY=5
+
           for prompt_type in $agent_prompt_types; do
             echo "Running ai-security-analyzer with agent_prompt_type: $prompt_type"
             output_file="/output/${prompt_type}.md"
-            docker run --rm \
-              --user $(id -u):$(id -g) \
-              -v "${{ github.workspace }}/target_repo:/code" \
-              -v "${{ github.workspace }}/output:/output" \
-              -e OPENAI_API_KEY \
-              -e GOOGLE_API_KEY \
-              ghcr.io/xvnpw/ai-security-analyzer:latest \
-              $MODE -v -t $TARGET \
-              -o "$output_file" \
-              ${{ steps.read_config.outputs.analyzer_args }} \
-              --agent-provider "$AGENT_PROVIDER" \
-              --agent-model "$AGENT_MODEL" \
-              --agent-temperature "$AGENT_TEMPERATURE" \
-              --agent-prompt-type "$prompt_type" 2>&1 | tee -a ./output/ai-security-analyzer.log
+
+            # Initialize retry counter
+            retries=0
+            success=false
+
+            while [ $retries -lt $MAX_RETRIES ]; do
+              docker run --rm \
+                --user $(id -u):$(id -g) \
+                -v "${{ github.workspace }}/target_repo:/code" \
+                -v "${{ github.workspace }}/output:/output" \
+                -e OPENAI_API_KEY \
+                -e GOOGLE_API_KEY \
+                ghcr.io/xvnpw/ai-security-analyzer:latest \
+                $MODE -v -t $TARGET \
+                -o "$output_file" \
+                ${{ steps.read_config.outputs.analyzer_args }} \
+                --agent-provider "$AGENT_PROVIDER" \
+                --agent-model "$AGENT_MODEL" \
+                --agent-temperature "$AGENT_TEMPERATURE" \
+                --agent-prompt-type "$prompt_type" 2>&1 | tee -a ./output/ai-security-analyzer.log
+
+              # Capture the exit code of the docker run command
+              exit_code=${PIPESTATUS[0]}
+
+              if [ $exit_code -eq 0 ]; then
+                success=true
+                break
+              else
+                echo "ai-security-analyzer failed with exit code $exit_code. Retrying in $RETRY_DELAY seconds..."
+                sleep $RETRY_DELAY
+                retries=$((retries + 1))
+              fi
+            done
+
+            if [ "$success" = false ]; then
+              echo "ai-security-analyzer failed after $MAX_RETRIES attempts."
+              exit 1
+            fi
           done
         shell: bash
 
