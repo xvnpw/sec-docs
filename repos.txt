@@ -1,5 +1,3 @@
-php https://github.com/erusev/parsedown
-php https://github.com/filamentphp/filament
 php https://github.com/filp/whoops
 php https://github.com/firefly-iii/firefly-iii
 php https://github.com/flarum/flarum
