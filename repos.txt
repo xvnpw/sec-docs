@@ -1,5 +1,3 @@
-php https://github.com/bcit-ci/codeigniter
-php https://github.com/bcosca/fatfree
 php https://github.com/blueimp/jquery-file-upload
 php https://github.com/bookstackapp/bookstack
 php https://github.com/briannesbitt/carbon
