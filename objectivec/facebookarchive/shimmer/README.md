@@ -1,6 +1,6 @@
 # Shimmer Analysis
 
-[GitHub Repository](https://github.com/facebookarchive/Shimmer)
+[GitHub Repository](https://github.com/facebookarchive/shimmer)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
