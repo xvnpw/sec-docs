@@ -1,6 +1,6 @@
 # Shizuku Analysis
 
-[GitHub Repository](https://github.com/RikkaApps/Shizuku)
+[GitHub Repository](https://github.com/rikkaapps/shizuku)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
