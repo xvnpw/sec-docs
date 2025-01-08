@@ -1,5 +1,3 @@
-objectivec https://github.com/bradlarson/gpuimage
-objectivec https://github.com/ccgus/fmdb
 objectivec https://github.com/cocoalumberjack/cocoalumberjack
 objectivec https://github.com/cocoanetics/dtcoretext
 objectivec https://github.com/codermjlee/mjextension
