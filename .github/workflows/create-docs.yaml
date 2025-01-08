@@ -115,7 +115,7 @@ jobs:
 
           # Define maximum retries and delay between retries
           MAX_RETRIES=3
-          RETRY_DELAY=5
+          RETRY_DELAY=10
 
           for prompt_type in $agent_prompt_types; do
             echo "Running ai-security-analyzer with agent_prompt_type: $prompt_type"
@@ -126,6 +126,7 @@ jobs:
             success=false
 
             while [ $retries -lt $MAX_RETRIES ]; do
+              # Run docker command and redirect output to log file
               docker run --rm \
                 --user $(id -u):$(id -g) \
                 -v "${{ github.workspace }}/target_repo:/code" \
@@ -139,10 +140,10 @@ jobs:
                 --agent-provider "$AGENT_PROVIDER" \
                 --agent-model "$AGENT_MODEL" \
                 --agent-temperature "$AGENT_TEMPERATURE" \
-                --agent-prompt-type "$prompt_type" 2>&1 | tee -a ./output/ai-security-analyzer.log
+                --agent-prompt-type "$prompt_type" >> ./output/ai-security-analyzer.log 2>&1
 
               # Capture the exit code of the docker run command
-              exit_code=${PIPESTATUS[0]}
+              exit_code=$?
 
               if [ $exit_code -eq 0 ]; then
                 success=true
