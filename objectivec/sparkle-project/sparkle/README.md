@@ -1,6 +1,6 @@
 # Sparkle Analysis
 
-[GitHub Repository](https://github.com/sparkle-project/Sparkle)
+[GitHub Repository](https://github.com/sparkle-project/sparkle)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
