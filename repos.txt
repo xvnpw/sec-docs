@@ -1,5 +1,3 @@
-objectivec https://github.com/robbiehanson/xmppframework
-objectivec https://github.com/romaonthego/residemenu
 objectivec https://github.com/sdwebimage/sdwebimage
 objectivec https://github.com/slackhq/slacktextviewcontroller
 objectivec https://github.com/sparkle-project/sparkle
