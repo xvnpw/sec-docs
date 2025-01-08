@@ -1,6 +1,6 @@
 # Jsqmessagesviewcontroller Analysis
 
-[GitHub Repository](https://github.com/jessesquires/JSQMessagesViewController)
+[GitHub Repository](https://github.com/jessesquires/jsqmessagesviewcontroller)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
