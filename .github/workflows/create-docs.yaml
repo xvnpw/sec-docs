@@ -113,18 +113,23 @@ jobs:
 
           mkdir -p output target_repo
 
-          failed_prompts=()
+          # Define maximum retries and delay between retries
+          MAX_RETRIES=3
+          RETRY_DELAY=10
 
           for prompt_type in $agent_prompt_types; do
             echo "Running ai-security-analyzer with agent_prompt_type: $prompt_type"
             output_file="/output/${prompt_type}.md"
 
-            # Retry logic with sleep
+            # Initialize retry counter
             retries=0
-            MAX_RETRIES=3 # Define maximum number of retries
-            RETRY_DELAY=10
             success=false
-            while [[ $retries -lt $MAX_RETRIES ]]; do
+
+            while [ $retries -lt $MAX_RETRIES ]; do
+              # Temporarily disable 'set -e' to handle command failures manually
+              set +e
+
+              # Run docker command and redirect output to log file
               docker run --rm \
                 --user $(id -u):$(id -g) \
                 -v "${{ github.workspace }}/target_repo:/code" \
@@ -139,10 +144,14 @@ jobs:
                 --agent-model "$AGENT_MODEL" \
                 --agent-temperature "$AGENT_TEMPERATURE" \
                 --agent-prompt-type "$prompt_type" >> ./output/ai-security-analyzer.log 2>&1
+
+              # Capture the exit code of the docker run command
               exit_code=$?
 
+              # Re-enable 'set -e' to make the script exit on errors outside this block
+              set -e
+
               if [ $exit_code -eq 0 ]; then
-                echo "ai-security-analyzer ran successfully for $prompt_type"
                 success=true
                 break
               else
@@ -152,17 +161,11 @@ jobs:
               fi
             done
 
-            if ! $success; then
-              echo "ai-security-analyzer failed for $prompt_type after $MAX_RETRIES attempts."
-              failed_prompts+=("$prompt_type")
+            if [ "$success" = false ]; then
+              echo "ai-security-analyzer failed after $MAX_RETRIES attempts."
+              exit 1
             fi
           done
-
-          if [ ${#failed_prompts[@]} -gt 0 ]; then
-            echo "The following agent prompt types failed after multiple retries: ${failed_prompts[@]}"
-            exit 1
-          fi
-
         shell: bash
 
       - name: Calculate total token count
