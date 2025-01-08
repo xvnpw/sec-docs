@@ -1,6 +1,6 @@
 # Magicalrecord Analysis
 
-[GitHub Repository](https://github.com/magicalpanda/MagicalRecord)
+[GitHub Repository](https://github.com/magicalpanda/magicalrecord)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
