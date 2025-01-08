@@ -1,5 +1,3 @@
-objectivec https://github.com/nicklockwood/icarousel
-objectivec https://github.com/nst/ios-runtime-headers
 objectivec https://github.com/path/fastimagecache
 objectivec https://github.com/purelayout/purelayout
 objectivec https://github.com/react-native-maps/react-native-maps
