@@ -1,0 +1,169 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+38a8310d387e: Pulling fs layer
+f4d80a761251: Pulling fs layer
+98636e63ee65: Pulling fs layer
+976ae72214aa: Pulling fs layer
+d007902a3e68: Pulling fs layer
+6a74ba77fcee: Pulling fs layer
+20aefc12af1b: Pulling fs layer
+8f1a114c690c: Pulling fs layer
+abea7197442a: Pulling fs layer
+d007902a3e68: Waiting
+6a74ba77fcee: Waiting
+b5c921081441: Pulling fs layer
+e109f0568a82: Pulling fs layer
+71433fcbef62: Pulling fs layer
+976ae72214aa: Waiting
+20aefc12af1b: Waiting
+8f1a114c690c: Waiting
+e109f0568a82: Waiting
+abea7197442a: Waiting
+71433fcbef62: Waiting
+b5c921081441: Waiting
+f4d80a761251: Verifying Checksum
+f4d80a761251: Download complete
+976ae72214aa: Verifying Checksum
+976ae72214aa: Download complete
+98636e63ee65: Verifying Checksum
+98636e63ee65: Download complete
+d007902a3e68: Verifying Checksum
+d007902a3e68: Download complete
+20aefc12af1b: Verifying Checksum
+20aefc12af1b: Download complete
+8f1a114c690c: Verifying Checksum
+8f1a114c690c: Download complete
+6a74ba77fcee: Verifying Checksum
+6a74ba77fcee: Download complete
+abea7197442a: Verifying Checksum
+abea7197442a: Download complete
+e109f0568a82: Verifying Checksum
+e109f0568a82: Download complete
+71433fcbef62: Verifying Checksum
+71433fcbef62: Download complete
+38a8310d387e: Download complete
+38a8310d387e: Pull complete
+b5c921081441: Verifying Checksum
+b5c921081441: Download complete
+f4d80a761251: Pull complete
+98636e63ee65: Pull complete
+976ae72214aa: Pull complete
+d007902a3e68: Pull complete
+6a74ba77fcee: Pull complete
+20aefc12af1b: Pull complete
+8f1a114c690c: Pull complete
+abea7197442a: Pull complete
+b5c921081441: Pull complete
+e109f0568a82: Pull complete
+71433fcbef62: Pull complete
+Digest: sha256:74d3aa62420762cf8217587f5f1cec2e42b4b56554fc4d0f18532c5200a4e6c3
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-09 10:01:45,710 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:01:45,745 - ai_security_analyzer.github2sd_agents - INFO - Internal step 1 of 2
+2025-01-09 10:02:04,716 - ai_security_analyzer.github2sd_agents - INFO - Internal step 2 of 2
+2025-01-09 10:02:26,521 - ai_security_analyzer.github2sd_agents - INFO - Getting intermediate response
+2025-01-09 10:02:26,522 - ai_security_analyzer.github2sd_agents - INFO - Getting deep analysis of security design review
+2025-01-09 10:02:53,875 - ai_security_analyzer.graphs - INFO - Actual token usage: 15147
+2025-01-09 10:02:53,876 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:02:58,271 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:02:58,308 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-09 10:03:27,432 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-09 10:03:41,174 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-09 10:03:51,536 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-09 10:03:51,537 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-09 10:04:00,365 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 3
+2025-01-09 10:04:22,150 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 3
+2025-01-09 10:04:43,591 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 3 of 3
+2025-01-09 10:05:07,117 - ai_security_analyzer.github2tm_agents - INFO - Getting threats final response
+2025-01-09 10:05:07,118 - ai_security_analyzer.graphs - INFO - Actual token usage: 30327
+2025-01-09 10:05:07,119 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:05:11,580 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:05:11,617 - ai_security_analyzer.github2as_agents - INFO - Internal step 1 of 3
+2025-01-09 10:05:28,708 - ai_security_analyzer.github2as_agents - INFO - Internal step 2 of 3
+2025-01-09 10:05:49,737 - ai_security_analyzer.github2as_agents - INFO - Internal step 3 of 3
+2025-01-09 10:06:05,878 - ai_security_analyzer.github2as_agents - INFO - Getting intermediate response
+2025-01-09 10:06:05,879 - ai_security_analyzer.github2as_agents - INFO - Getting structured attack surface analysis
+2025-01-09 10:06:24,916 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 1 of 7
+2025-01-09 10:06:46,797 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 2 of 7
+2025-01-09 10:07:06,406 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 3 of 7
+2025-01-09 10:07:27,234 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 4 of 7
+2025-01-09 10:07:49,190 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 5 of 7
+2025-01-09 10:08:13,132 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 6 of 7
+2025-01-09 10:08:33,155 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 7 of 7
+2025-01-09 10:08:51,931 - ai_security_analyzer.github2as_agents - INFO - Getting attack surfaces final response
+2025-01-09 10:08:51,932 - ai_security_analyzer.graphs - INFO - Actual token usage: 42647
+2025-01-09 10:08:51,933 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:08:56,373 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:08:56,411 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-09 10:09:16,979 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-09 10:09:39,479 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-09 10:09:59,076 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-09 10:10:07,966 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-09 10:10:07,966 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-09 10:10:19,304 - ai_security_analyzer.github2at_agents - ERROR - Error on structured attack tree path analysis: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Compromise an application by exploiting weaknesses or vulnerabilities within the `thealgorithms/php` library.", "attack_sub_tree_visualization": "**Sub-Tree:**\n\nAttack: Compromise Application Using thealgorithms/php ** (Critical Node)**\n* AND: Utilize Application Functionality that Employs the Library ** (Critical Node)**\n    * OR: Trigger Algorithm Execution with Malicious Input ** (Critical Node)**\n        * Exploit Algorithm Logic Flaws *** (High-Risk Path)***\n            * Achieve Undesired Application State *** (High-Risk Path)***\n                * Cause Incorrect Calculation/Output *** (High-Risk Path)***\n        * Trigger Resource Exhaustion *** (High-Risk Path)***\n            * OR: Provide Input Leading to Excessive Resource Consumption *** (High-Risk Path)***\n                * Cause CPU Exhaustion *** (High-Risk Path)***\n                * Cause Memory Exhaustion *** (High-Risk Path)***\n* AND: Application Passes Untrusted Data to Library Functions ** (Critical Node)**\n    * OR: Data Originates From ** (Critical Node)**\n        * User Input (Direct or Indirect) ** (Critical Node)**", "attack_sub_tree_paths": [{"title": "Compromise Application Using thealgorithms/php", "text": "* This represents the attacker's ultimate goal. All subsequent steps are aimed at achieving this objective.\n    * Successful compromise can lead to various negative outcomes depending on the application's purpose and sensitivity of its data."}, {"title": "Utilize Application Functionality that Employs the Library", "text": "* The attacker must find and interact with features of the application that use functions from the `thealgorithms/php` library.\n    * This involves understanding the application's functionality and how it integrates with the library."}, {"title": "Trigger Algorithm Execution with Malicious Input", "text": "* The attacker needs to manipulate input data in a way that causes a vulnerable algorithm within the library to execute.\n    * This requires understanding the input parameters of the library's functions and how to craft malicious inputs."}, {"title": "Exploit Algorithm Logic Flaws", "text": "* **Attack Vector:** The attacker identifies a logical error or flaw in one of the algorithms provided by the library.\n    * **How:** By carefully analyzing the algorithm's code or by fuzzing it with various inputs, the attacker discovers input combinations that lead to incorrect or unexpected output.\n    * **Impact:** This incorrect output is then used by the application's logic, leading to flawed decisions, incorrect data processing, or other unintended consequences. The severity depends on how critical the algorithm's output is to the application's functionality."}, {"title": "Achieve Undesired Application State", "text": null}, {"title": "Cause Incorrect Calculation/Output", "text": null}, {"title": "Trigger Resource Exhaustion", "text": null}, {"title": "Provide Input Leading to Excessive Resource Consumption", "text": null}, {"title": "Cause CPU Exhaustion", "text": "* **Attack Vector:** The attacker targets algorithms within the library that have high time complexity (e.g., O(n^2) or worse).\n    * **How:** By providing large or specifically crafted inputs, the attacker forces the algorithm to perform a very large number of computations, consuming excessive CPU resources.\n    * **Impact:** This can lead to a denial of service (DoS) condition, making the application slow or unresponsive to legitimate users."}, {"title": "Cause Memory Exhaustion", "text": "* **Attack Vector:** The attacker targets algorithms that allocate memory based on the input size or structure.\n    * **How:** By providing input that forces the algorithm to allocate an extremely large amount of memory, the attacker can exhaust the available memory resources.\n    * **Impact:** This can lead to application crashes, server instability, or even a complete system outage, causing a denial of service."}, {"title": "Application Passes Untrusted Data to Library Functions", "text": "* This is a fundamental requirement for exploiting the library. The application must directly or indirectly pass data from an untrusted source to the library's functions without adequate sanitization or validation.\n    * This highlights the importance of secure coding practices in how the application interacts with external libraries."}, {"title": "Data Originates From", "text": "* This node highlights the source of the untrusted data.\n    * Understanding the data's origin is crucial for implementing effective input validation and security measures."}, {"title": "User Input (Direct or Indirect)", "text": "* This is the most common source of untrusted data in web applications. Attackers can manipulate form fields, query parameters, headers, or other user-controlled inputs.\n    * This emphasizes the need for thorough validation of all user-provided data before it's used by the application, especially when passed to external libraries."}]}. Got: 4 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.4.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.5.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.7.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:10:19,304 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Compromise an application by exploiting weaknesses or vulnerabilities within the `thealgorithms/php` library.", "attack_sub_tree_visualization": "**Sub-Tree:**\n\nAttack: Compromise Application Using thealgorithms/php ** (Critical Node)**\n* AND: Utilize Application Functionality that Employs the Library ** (Critical Node)**\n    * OR: Trigger Algorithm Execution with Malicious Input ** (Critical Node)**\n        * Exploit Algorithm Logic Flaws *** (High-Risk Path)***\n            * Achieve Undesired Application State *** (High-Risk Path)***\n                * Cause Incorrect Calculation/Output *** (High-Risk Path)***\n        * Trigger Resource Exhaustion *** (High-Risk Path)***\n            * OR: Provide Input Leading to Excessive Resource Consumption *** (High-Risk Path)***\n                * Cause CPU Exhaustion *** (High-Risk Path)***\n                * Cause Memory Exhaustion *** (High-Risk Path)***\n* AND: Application Passes Untrusted Data to Library Functions ** (Critical Node)**\n    * OR: Data Originates From ** (Critical Node)**\n        * User Input (Direct or Indirect) ** (Critical Node)**", "attack_sub_tree_paths": [{"title": "Compromise Application Using thealgorithms/php", "text": "* This represents the attacker's ultimate goal. All subsequent steps are aimed at achieving this objective.\n    * Successful compromise can lead to various negative outcomes depending on the application's purpose and sensitivity of its data."}, {"title": "Utilize Application Functionality that Employs the Library", "text": "* The attacker must find and interact with features of the application that use functions from the `thealgorithms/php` library.\n    * This involves understanding the application's functionality and how it integrates with the library."}, {"title": "Trigger Algorithm Execution with Malicious Input", "text": "* The attacker needs to manipulate input data in a way that causes a vulnerable algorithm within the library to execute.\n    * This requires understanding the input parameters of the library's functions and how to craft malicious inputs."}, {"title": "Exploit Algorithm Logic Flaws", "text": "* **Attack Vector:** The attacker identifies a logical error or flaw in one of the algorithms provided by the library.\n    * **How:** By carefully analyzing the algorithm's code or by fuzzing it with various inputs, the attacker discovers input combinations that lead to incorrect or unexpected output.\n    * **Impact:** This incorrect output is then used by the application's logic, leading to flawed decisions, incorrect data processing, or other unintended consequences. The severity depends on how critical the algorithm's output is to the application's functionality."}, {"title": "Achieve Undesired Application State", "text": null}, {"title": "Cause Incorrect Calculation/Output", "text": null}, {"title": "Trigger Resource Exhaustion", "text": null}, {"title": "Provide Input Leading to Excessive Resource Consumption", "text": null}, {"title": "Cause CPU Exhaustion", "text": "* **Attack Vector:** The attacker targets algorithms within the library that have high time complexity (e.g., O(n^2) or worse).\n    * **How:** By providing large or specifically crafted inputs, the attacker forces the algorithm to perform a very large number of computations, consuming excessive CPU resources.\n    * **Impact:** This can lead to a denial of service (DoS) condition, making the application slow or unresponsive to legitimate users."}, {"title": "Cause Memory Exhaustion", "text": "* **Attack Vector:** The attacker targets algorithms that allocate memory based on the input size or structure.\n    * **How:** By providing input that forces the algorithm to allocate an extremely large amount of memory, the attacker can exhaust the available memory resources.\n    * **Impact:** This can lead to application crashes, server instability, or even a complete system outage, causing a denial of service."}, {"title": "Application Passes Untrusted Data to Library Functions", "text": "* This is a fundamental requirement for exploiting the library. The application must directly or indirectly pass data from an untrusted source to the library's functions without adequate sanitization or validation.\n    * This highlights the importance of secure coding practices in how the application interacts with external libraries."}, {"title": "Data Originates From", "text": "* This node highlights the source of the untrusted data.\n    * Understanding the data's origin is crucial for implementing effective input validation and security measures."}, {"title": "User Input (Direct or Indirect)", "text": "* This is the most common source of untrusted data in web applications. Attackers can manipulate form fields, query parameters, headers, or other user-controlled inputs.\n    * This emphasizes the need for thorough validation of all user-provided data before it's used by the application, especially when passed to external libraries."}]}. Got: 4 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.4.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.5.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.7.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:10:19,304 - __main__ - ERROR - Application error: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Compromise an application by exploiting weaknesses or vulnerabilities within the `thealgorithms/php` library.", "attack_sub_tree_visualization": "**Sub-Tree:**\n\nAttack: Compromise Application Using thealgorithms/php ** (Critical Node)**\n* AND: Utilize Application Functionality that Employs the Library ** (Critical Node)**\n    * OR: Trigger Algorithm Execution with Malicious Input ** (Critical Node)**\n        * Exploit Algorithm Logic Flaws *** (High-Risk Path)***\n            * Achieve Undesired Application State *** (High-Risk Path)***\n                * Cause Incorrect Calculation/Output *** (High-Risk Path)***\n        * Trigger Resource Exhaustion *** (High-Risk Path)***\n            * OR: Provide Input Leading to Excessive Resource Consumption *** (High-Risk Path)***\n                * Cause CPU Exhaustion *** (High-Risk Path)***\n                * Cause Memory Exhaustion *** (High-Risk Path)***\n* AND: Application Passes Untrusted Data to Library Functions ** (Critical Node)**\n    * OR: Data Originates From ** (Critical Node)**\n        * User Input (Direct or Indirect) ** (Critical Node)**", "attack_sub_tree_paths": [{"title": "Compromise Application Using thealgorithms/php", "text": "* This represents the attacker's ultimate goal. All subsequent steps are aimed at achieving this objective.\n    * Successful compromise can lead to various negative outcomes depending on the application's purpose and sensitivity of its data."}, {"title": "Utilize Application Functionality that Employs the Library", "text": "* The attacker must find and interact with features of the application that use functions from the `thealgorithms/php` library.\n    * This involves understanding the application's functionality and how it integrates with the library."}, {"title": "Trigger Algorithm Execution with Malicious Input", "text": "* The attacker needs to manipulate input data in a way that causes a vulnerable algorithm within the library to execute.\n    * This requires understanding the input parameters of the library's functions and how to craft malicious inputs."}, {"title": "Exploit Algorithm Logic Flaws", "text": "* **Attack Vector:** The attacker identifies a logical error or flaw in one of the algorithms provided by the library.\n    * **How:** By carefully analyzing the algorithm's code or by fuzzing it with various inputs, the attacker discovers input combinations that lead to incorrect or unexpected output.\n    * **Impact:** This incorrect output is then used by the application's logic, leading to flawed decisions, incorrect data processing, or other unintended consequences. The severity depends on how critical the algorithm's output is to the application's functionality."}, {"title": "Achieve Undesired Application State", "text": null}, {"title": "Cause Incorrect Calculation/Output", "text": null}, {"title": "Trigger Resource Exhaustion", "text": null}, {"title": "Provide Input Leading to Excessive Resource Consumption", "text": null}, {"title": "Cause CPU Exhaustion", "text": "* **Attack Vector:** The attacker targets algorithms within the library that have high time complexity (e.g., O(n^2) or worse).\n    * **How:** By providing large or specifically crafted inputs, the attacker forces the algorithm to perform a very large number of computations, consuming excessive CPU resources.\n    * **Impact:** This can lead to a denial of service (DoS) condition, making the application slow or unresponsive to legitimate users."}, {"title": "Cause Memory Exhaustion", "text": "* **Attack Vector:** The attacker targets algorithms that allocate memory based on the input size or structure.\n    * **How:** By providing input that forces the algorithm to allocate an extremely large amount of memory, the attacker can exhaust the available memory resources.\n    * **Impact:** This can lead to application crashes, server instability, or even a complete system outage, causing a denial of service."}, {"title": "Application Passes Untrusted Data to Library Functions", "text": "* This is a fundamental requirement for exploiting the library. The application must directly or indirectly pass data from an untrusted source to the library's functions without adequate sanitization or validation.\n    * This highlights the importance of secure coding practices in how the application interacts with external libraries."}, {"title": "Data Originates From", "text": "* This node highlights the source of the untrusted data.\n    * Understanding the data's origin is crucial for implementing effective input validation and security measures."}, {"title": "User Input (Direct or Indirect)", "text": "* This is the most common source of untrusted data in web applications. Attackers can manipulate form fields, query parameters, headers, or other user-controlled inputs.\n    * This emphasizes the need for thorough validation of all user-provided data before it's used by the application, especially when passed to external libraries."}]}. Got: 4 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.4.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.5.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.7.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:10:33,798 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:10:33,837 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-09 10:10:56,876 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-09 10:11:25,789 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-09 10:11:56,321 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-09 10:12:08,179 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-09 10:12:08,179 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-09 10:12:22,067 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 1 of 15
+2025-01-09 10:12:45,231 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 2 of 15
+2025-01-09 10:13:07,243 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 3 of 15
+2025-01-09 10:13:26,592 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 4 of 15
+2025-01-09 10:13:46,402 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 5 of 15
+2025-01-09 10:14:05,925 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 6 of 15
+2025-01-09 10:14:28,040 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 7 of 15
+2025-01-09 10:14:48,019 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 8 of 15
+2025-01-09 10:15:11,219 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 9 of 15
+2025-01-09 10:15:32,131 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 10 of 15
+2025-01-09 10:15:52,842 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 11 of 15
+2025-01-09 10:16:12,422 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 12 of 15
+2025-01-09 10:16:33,624 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 13 of 15
+2025-01-09 10:16:53,035 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 14 of 15
+2025-01-09 10:17:11,554 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 15 of 15
+2025-01-09 10:17:34,564 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree paths final response
+2025-01-09 10:17:34,565 - ai_security_analyzer.graphs - INFO - Actual token usage: 83983
+2025-01-09 10:17:34,566 - __main__ - INFO - AI Security Analyzer completed successfully
