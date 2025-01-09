@@ -1,0 +1,201 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+38a8310d387e: Pulling fs layer
+f4d80a761251: Pulling fs layer
+98636e63ee65: Pulling fs layer
+976ae72214aa: Pulling fs layer
+d007902a3e68: Pulling fs layer
+6a74ba77fcee: Pulling fs layer
+20aefc12af1b: Pulling fs layer
+8f1a114c690c: Pulling fs layer
+abea7197442a: Pulling fs layer
+b5c921081441: Pulling fs layer
+e109f0568a82: Pulling fs layer
+71433fcbef62: Pulling fs layer
+8f1a114c690c: Waiting
+abea7197442a: Waiting
+b5c921081441: Waiting
+d007902a3e68: Waiting
+e109f0568a82: Waiting
+71433fcbef62: Waiting
+20aefc12af1b: Waiting
+6a74ba77fcee: Waiting
+976ae72214aa: Waiting
+38a8310d387e: Verifying Checksum
+38a8310d387e: Download complete
+f4d80a761251: Verifying Checksum
+f4d80a761251: Download complete
+976ae72214aa: Verifying Checksum
+976ae72214aa: Download complete
+98636e63ee65: Verifying Checksum
+98636e63ee65: Download complete
+d007902a3e68: Verifying Checksum
+d007902a3e68: Download complete
+20aefc12af1b: Verifying Checksum
+20aefc12af1b: Download complete
+8f1a114c690c: Download complete
+38a8310d387e: Pull complete
+abea7197442a: Verifying Checksum
+abea7197442a: Download complete
+e109f0568a82: Verifying Checksum
+e109f0568a82: Download complete
+6a74ba77fcee: Verifying Checksum
+6a74ba77fcee: Download complete
+71433fcbef62: Verifying Checksum
+71433fcbef62: Download complete
+f4d80a761251: Pull complete
+b5c921081441: Verifying Checksum
+b5c921081441: Download complete
+98636e63ee65: Pull complete
+976ae72214aa: Pull complete
+d007902a3e68: Pull complete
+6a74ba77fcee: Pull complete
+20aefc12af1b: Pull complete
+8f1a114c690c: Pull complete
+abea7197442a: Pull complete
+b5c921081441: Pull complete
+e109f0568a82: Pull complete
+71433fcbef62: Pull complete
+Digest: sha256:74d3aa62420762cf8217587f5f1cec2e42b4b56554fc4d0f18532c5200a4e6c3
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-09 10:19:14,974 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:19:15,009 - ai_security_analyzer.github2sd_agents - INFO - Internal step 1 of 2
+2025-01-09 10:19:38,566 - ai_security_analyzer.github2sd_agents - INFO - Internal step 2 of 2
+2025-01-09 10:20:03,553 - ai_security_analyzer.github2sd_agents - INFO - Getting intermediate response
+2025-01-09 10:20:03,554 - ai_security_analyzer.github2sd_agents - INFO - Getting deep analysis of security design review
+2025-01-09 10:20:30,995 - ai_security_analyzer.graphs - INFO - Actual token usage: 17046
+2025-01-09 10:20:30,996 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:20:35,360 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:20:35,397 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-09 10:20:51,070 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-09 10:21:12,994 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-09 10:21:28,769 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-09 10:21:28,769 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-09 10:21:41,137 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 5
+2025-01-09 10:22:06,287 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 5
+2025-01-09 10:22:34,868 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 3 of 5
+2025-01-09 10:22:59,438 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 4 of 5
+2025-01-09 10:23:41,811 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 5 of 5
+2025-01-09 10:24:20,086 - ai_security_analyzer.github2tm_agents - INFO - Getting threats final response
+2025-01-09 10:24:20,087 - ai_security_analyzer.graphs - INFO - Actual token usage: 41601
+2025-01-09 10:24:20,088 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:24:24,557 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:24:24,597 - ai_security_analyzer.github2as_agents - INFO - Internal step 1 of 3
+2025-01-09 10:24:39,573 - ai_security_analyzer.github2as_agents - INFO - Internal step 2 of 3
+2025-01-09 10:24:59,243 - ai_security_analyzer.github2as_agents - INFO - Internal step 3 of 3
+2025-01-09 10:25:10,064 - ai_security_analyzer.github2as_agents - INFO - Getting intermediate response
+2025-01-09 10:25:10,064 - ai_security_analyzer.github2as_agents - INFO - Getting structured attack surface analysis
+2025-01-09 10:25:19,455 - ai_security_analyzer.github2as_agents - ERROR - Error on structured attack surface analysis: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "Hardcoded Secret Keys",
+      "text": "- **Description:** The secret key used to sign JWTs is directly embedded within the application's source code or configuration files.\n    - **How jwt-auth Contributes:** `jwt-auth` relies on the `jwt-auth.secret` configuration value. If this value is hardcoded, it becomes easily accessible if the codebase is compromised.\n    - **Example:**  A developer sets `JWT_SECRET='mysecretkey'` in the `.env` file and commits it to a public repository.\n    - **Impact:** Complete compromise of the authentication scheme. Attackers can forge valid JWTs, impersonate users, and gain unauthorized access.\n    - **Risk Severity:** Critical\n    - **Mitigation Strategies:**\n        - Store the secret key in secure environment variables or dedicated secrets management systems.\n        - Avoid committing secrets directly to version control.\n        - Implement proper access controls to configuration files."
+    },
+    {
+      "title": "Weak Secret Keys",
+      "text": "- **Description:** The secret key used for signing JWTs is easily guessable or lacks sufficient entropy.\n    - **How jwt-auth Contributes:** `jwt-auth` uses the provided `jwt-auth.secret` value. If this value is weak, it's susceptible to brute-force attacks.\n    - **Example:** Using a common word like "password" or "secret123" as the `JWT_SECRET`.\n    - **Impact:** Attackers can potentially guess the secret key and forge valid JWTs.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Generate cryptographically strong, random secret keys with sufficient length.\n        - Regularly rotate the secret key.\n        - Enforce minimum complexity requirements for secret keys."
+    },
+    {
+      "title": "Insecure Algorithm Configuration",
+      "text": "- **Description:** The application is configured to use insecure or deprecated JWT signing algorithms (e.g., `none`).\n    - **How jwt-auth Contributes:** `jwt-auth` allows configuration of the signing algorithm via the `jwt-auth.algo` setting. If set to an insecure algorithm, it opens the door for attacks.\n    - **Example:** Setting `JWT_ALGO='none'` in the configuration, allowing anyone to create JWTs without a signature.\n    - **Impact:** Attackers can forge JWTs without needing the secret key, bypassing authentication.\n    - **Risk Severity:** Critical\n    - **Mitigation Strategies:**\n        - Always use strong, recommended algorithms like `HS256`, `HS384`, or `HS512` for symmetric keys, or `RS256`, `ES256` etc. for asymmetric keys.\n        - Avoid using the `none` algorithm in production environments.\n        - Regularly review and update the configured algorithm based on security best practices."
+    },
+    {
+      "title": "Algorithm Confusion Vulnerabilities",
+      "text": "- **Description:**  Vulnerabilities in the underlying JWT library or `jwt-auth` itself might allow attackers to manipulate the algorithm header to bypass signature verification.\n    - **How jwt-auth Contributes:** While `jwt-auth` itself aims to prevent this, it relies on underlying JWT libraries. If these libraries have vulnerabilities, `jwt-auth` might be indirectly affected, and proper handling within `jwt-auth` is crucial.\n    - **Example:** An attacker crafts a JWT with the algorithm set to `HS256` but provides a public key as the \"secret,\" exploiting a flaw in the verification process.\n    - **Impact:** Attackers can forge JWTs even with a correctly configured secret key.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Keep `jwt-auth` and its dependencies updated to the latest versions to patch known vulnerabilities.\n        - Be aware of reported algorithm confusion vulnerabilities in JWT libraries and take necessary precautions."
+    },
+    {
+      "title": "Misconfiguration of Middleware",
+      "text": "- **Description:** The middleware responsible for protecting routes using JWT authentication is incorrectly configured.\n    - **How jwt-auth Contributes:** `jwt-auth` provides middleware (`auth:api`) for protecting routes. Incorrectly applying or configuring this middleware can lead to vulnerabilities.\n    - **Example:**  A developer forgets to apply the `auth:api` middleware to a sensitive endpoint, making it accessible without authentication.\n    - **Impact:** Unauthorized access to protected resources and functionalities.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Carefully review and configure the middleware applied to each route.\n        - Use route groups or middleware groups to ensure consistent application of authentication middleware.\n        - Implement integration tests to verify that routes are correctly protected."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:25:19,456 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "Hardcoded Secret Keys",
+      "text": "- **Description:** The secret key used to sign JWTs is directly embedded within the application's source code or configuration files.\n    - **How jwt-auth Contributes:** `jwt-auth` relies on the `jwt-auth.secret` configuration value. If this value is hardcoded, it becomes easily accessible if the codebase is compromised.\n    - **Example:**  A developer sets `JWT_SECRET='mysecretkey'` in the `.env` file and commits it to a public repository.\n    - **Impact:** Complete compromise of the authentication scheme. Attackers can forge valid JWTs, impersonate users, and gain unauthorized access.\n    - **Risk Severity:** Critical\n    - **Mitigation Strategies:**\n        - Store the secret key in secure environment variables or dedicated secrets management systems.\n        - Avoid committing secrets directly to version control.\n        - Implement proper access controls to configuration files."
+    },
+    {
+      "title": "Weak Secret Keys",
+      "text": "- **Description:** The secret key used for signing JWTs is easily guessable or lacks sufficient entropy.\n    - **How jwt-auth Contributes:** `jwt-auth` uses the provided `jwt-auth.secret` value. If this value is weak, it's susceptible to brute-force attacks.\n    - **Example:** Using a common word like "password" or "secret123" as the `JWT_SECRET`.\n    - **Impact:** Attackers can potentially guess the secret key and forge valid JWTs.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Generate cryptographically strong, random secret keys with sufficient length.\n        - Regularly rotate the secret key.\n        - Enforce minimum complexity requirements for secret keys."
+    },
+    {
+      "title": "Insecure Algorithm Configuration",
+      "text": "- **Description:** The application is configured to use insecure or deprecated JWT signing algorithms (e.g., `none`).\n    - **How jwt-auth Contributes:** `jwt-auth` allows configuration of the signing algorithm via the `jwt-auth.algo` setting. If set to an insecure algorithm, it opens the door for attacks.\n    - **Example:** Setting `JWT_ALGO='none'` in the configuration, allowing anyone to create JWTs without a signature.\n    - **Impact:** Attackers can forge JWTs without needing the secret key, bypassing authentication.\n    - **Risk Severity:** Critical\n    - **Mitigation Strategies:**\n        - Always use strong, recommended algorithms like `HS256`, `HS384`, or `HS512` for symmetric keys, or `RS256`, `ES256` etc. for asymmetric keys.\n        - Avoid using the `none` algorithm in production environments.\n        - Regularly review and update the configured algorithm based on security best practices."
+    },
+    {
+      "title": "Algorithm Confusion Vulnerabilities",
+      "text": "- **Description:**  Vulnerabilities in the underlying JWT library or `jwt-auth` itself might allow attackers to manipulate the algorithm header to bypass signature verification.\n    - **How jwt-auth Contributes:** While `jwt-auth` itself aims to prevent this, it relies on underlying JWT libraries. If these libraries have vulnerabilities, `jwt-auth` might be indirectly affected, and proper handling within `jwt-auth` is crucial.\n    - **Example:** An attacker crafts a JWT with the algorithm set to `HS256` but provides a public key as the \"secret,\" exploiting a flaw in the verification process.\n    - **Impact:** Attackers can forge JWTs even with a correctly configured secret key.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Keep `jwt-auth` and its dependencies updated to the latest versions to patch known vulnerabilities.\n        - Be aware of reported algorithm confusion vulnerabilities in JWT libraries and take necessary precautions."
+    },
+    {
+      "title": "Misconfiguration of Middleware",
+      "text": "- **Description:** The middleware responsible for protecting routes using JWT authentication is incorrectly configured.\n    - **How jwt-auth Contributes:** `jwt-auth` provides middleware (`auth:api`) for protecting routes. Incorrectly applying or configuring this middleware can lead to vulnerabilities.\n    - **Example:**  A developer forgets to apply the `auth:api` middleware to a sensitive endpoint, making it accessible without authentication.\n    - **Impact:** Unauthorized access to protected resources and functionalities.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Carefully review and configure the middleware applied to each route.\n        - Use route groups or middleware groups to ensure consistent application of authentication middleware.\n        - Implement integration tests to verify that routes are correctly protected."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:25:19,456 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "Hardcoded Secret Keys",
+      "text": "- **Description:** The secret key used to sign JWTs is directly embedded within the application's source code or configuration files.\n    - **How jwt-auth Contributes:** `jwt-auth` relies on the `jwt-auth.secret` configuration value. If this value is hardcoded, it becomes easily accessible if the codebase is compromised.\n    - **Example:**  A developer sets `JWT_SECRET='mysecretkey'` in the `.env` file and commits it to a public repository.\n    - **Impact:** Complete compromise of the authentication scheme. Attackers can forge valid JWTs, impersonate users, and gain unauthorized access.\n    - **Risk Severity:** Critical\n    - **Mitigation Strategies:**\n        - Store the secret key in secure environment variables or dedicated secrets management systems.\n        - Avoid committing secrets directly to version control.\n        - Implement proper access controls to configuration files."
+    },
+    {
+      "title": "Weak Secret Keys",
+      "text": "- **Description:** The secret key used for signing JWTs is easily guessable or lacks sufficient entropy.\n    - **How jwt-auth Contributes:** `jwt-auth` uses the provided `jwt-auth.secret` value. If this value is weak, it's susceptible to brute-force attacks.\n    - **Example:** Using a common word like "password" or "secret123" as the `JWT_SECRET`.\n    - **Impact:** Attackers can potentially guess the secret key and forge valid JWTs.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Generate cryptographically strong, random secret keys with sufficient length.\n        - Regularly rotate the secret key.\n        - Enforce minimum complexity requirements for secret keys."
+    },
+    {
+      "title": "Insecure Algorithm Configuration",
+      "text": "- **Description:** The application is configured to use insecure or deprecated JWT signing algorithms (e.g., `none`).\n    - **How jwt-auth Contributes:** `jwt-auth` allows configuration of the signing algorithm via the `jwt-auth.algo` setting. If set to an insecure algorithm, it opens the door for attacks.\n    - **Example:** Setting `JWT_ALGO='none'` in the configuration, allowing anyone to create JWTs without a signature.\n    - **Impact:** Attackers can forge JWTs without needing the secret key, bypassing authentication.\n    - **Risk Severity:** Critical\n    - **Mitigation Strategies:**\n        - Always use strong, recommended algorithms like `HS256`, `HS384`, or `HS512` for symmetric keys, or `RS256`, `ES256` etc. for asymmetric keys.\n        - Avoid using the `none` algorithm in production environments.\n        - Regularly review and update the configured algorithm based on security best practices."
+    },
+    {
+      "title": "Algorithm Confusion Vulnerabilities",
+      "text": "- **Description:**  Vulnerabilities in the underlying JWT library or `jwt-auth` itself might allow attackers to manipulate the algorithm header to bypass signature verification.\n    - **How jwt-auth Contributes:** While `jwt-auth` itself aims to prevent this, it relies on underlying JWT libraries. If these libraries have vulnerabilities, `jwt-auth` might be indirectly affected, and proper handling within `jwt-auth` is crucial.\n    - **Example:** An attacker crafts a JWT with the algorithm set to `HS256` but provides a public key as the \"secret,\" exploiting a flaw in the verification process.\n    - **Impact:** Attackers can forge JWTs even with a correctly configured secret key.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Keep `jwt-auth` and its dependencies updated to the latest versions to patch known vulnerabilities.\n        - Be aware of reported algorithm confusion vulnerabilities in JWT libraries and take necessary precautions."
+    },
+    {
+      "title": "Misconfiguration of Middleware",
+      "text": "- **Description:** The middleware responsible for protecting routes using JWT authentication is incorrectly configured.\n    - **How jwt-auth Contributes:** `jwt-auth` provides middleware (`auth:api`) for protecting routes. Incorrectly applying or configuring this middleware can lead to vulnerabilities.\n    - **Example:**  A developer forgets to apply the `auth:api` middleware to a sensitive endpoint, making it accessible without authentication.\n    - **Impact:** Unauthorized access to protected resources and functionalities.\n    - **Risk Severity:** High\n    - **Mitigation Strategies:**\n        - Carefully review and configure the middleware applied to each route.\n        - Use route groups or middleware groups to ensure consistent application of authentication middleware.\n        - Implement integration tests to verify that routes are correctly protected."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:25:34,042 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:25:34,081 - ai_security_analyzer.github2as_agents - INFO - Internal step 1 of 3
+2025-01-09 10:25:48,758 - ai_security_analyzer.github2as_agents - INFO - Internal step 2 of 3
+2025-01-09 10:26:08,596 - ai_security_analyzer.github2as_agents - INFO - Internal step 3 of 3
+2025-01-09 10:26:21,095 - ai_security_analyzer.github2as_agents - INFO - Getting intermediate response
+2025-01-09 10:26:21,096 - ai_security_analyzer.github2as_agents - INFO - Getting structured attack surface analysis
+2025-01-09 10:26:29,667 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 1 of 3
+2025-01-09 10:26:52,594 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 2 of 3
+2025-01-09 10:27:17,417 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 3 of 3
+2025-01-09 10:27:40,051 - ai_security_analyzer.github2as_agents - INFO - Getting attack surfaces final response
+2025-01-09 10:27:40,052 - ai_security_analyzer.graphs - INFO - Actual token usage: 26534
+2025-01-09 10:27:40,052 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:27:44,461 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:27:44,498 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-09 10:28:08,320 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-09 10:28:33,708 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-09 10:28:56,374 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-09 10:29:05,750 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-09 10:29:05,751 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-09 10:29:17,227 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 1 of 11
+2025-01-09 10:29:46,472 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 2 of 11
+2025-01-09 10:30:10,048 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 3 of 11
+2025-01-09 10:30:31,019 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 4 of 11
+2025-01-09 10:31:01,606 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 5 of 11
+2025-01-09 10:31:23,829 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 6 of 11
+2025-01-09 10:31:48,499 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 7 of 11
+2025-01-09 10:32:11,163 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 8 of 11
+2025-01-09 10:32:31,223 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 9 of 11
+2025-01-09 10:32:53,890 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 10 of 11
+2025-01-09 10:33:34,800 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 11 of 11
+2025-01-09 10:33:55,568 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree paths final response
+2025-01-09 10:33:55,570 - ai_security_analyzer.graphs - INFO - Actual token usage: 74084
+2025-01-09 10:33:55,571 - __main__ - INFO - AI Security Analyzer completed successfully
