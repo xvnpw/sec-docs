@@ -1,5 +1,3 @@
-php https://github.com/octobercms/october
-php https://github.com/owncloud/core
 php https://github.com/parse-community/parse-server
 php https://github.com/pestphp/pest
 php https://github.com/phacility/phabricator
