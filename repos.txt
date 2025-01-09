@@ -1,5 +1,3 @@
-ruby https://github.com/ankane/searchkick
-ruby https://github.com/basecamp/kamal
 ruby https://github.com/bettererrors/better_errors
 ruby https://github.com/bkeepers/dotenv
 ruby https://github.com/capistrano/capistrano
