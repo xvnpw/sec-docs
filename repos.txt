@@ -1,5 +1,3 @@
-php https://github.com/symfony/symfony
-php https://github.com/symfonycasts/reset-password-bundle
 php https://github.com/thealgorithms/php
 php https://github.com/thedevdojo/voyager
 php https://github.com/thephpleague/flysystem
