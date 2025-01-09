@@ -1,5 +1,3 @@
-php https://github.com/wallabag/wallabag
-php https://github.com/woocommerce/woocommerce
 php https://github.com/wordpress/wordpress
 php https://github.com/yiisoft/yii2
 php https://github.com/yourls/yourls
