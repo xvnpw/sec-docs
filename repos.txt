@@ -1,5 +1,3 @@
-php https://github.com/phan/phan
-php https://github.com/phpdocumentor/reflectioncommon
 php https://github.com/phpdocumentor/typeresolver
 php https://github.com/php-fig/container
 php https://github.com/php-fig/log
