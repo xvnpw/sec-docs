@@ -1,5 +1,3 @@
-python https://github.com/comfyanonymous/comfyui
-python https://github.com/commaai/openpilot
 python https://github.com/coqui-ai/tts
 python https://github.com/davidsandberg/facenet
 python https://github.com/django/django
