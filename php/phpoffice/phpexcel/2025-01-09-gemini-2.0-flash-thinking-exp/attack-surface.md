@@ -1,0 +1,50 @@
+# Attack Surface Analysis for phpoffice/phpexcel
+
+## Attack Surface: [Maliciously Crafted Spreadsheet Files (Malformed File Processing)](./attack_surfaces/maliciously_crafted_spreadsheet_files__malformed_file_processing_.md)
+
+*   **Description:**  Attackers can upload or provide specially crafted spreadsheet files (e.g., .xls, .xlsx, .csv, .ods) containing unexpected structures, corrupted data, or excessively large content designed to exploit vulnerabilities in the parsing logic.
+    *   **How PHPExcel Contributes:** PHPExcel is responsible for parsing and interpreting the data within these files. Vulnerabilities in its parsing engine for various file formats can be triggered by malformed inputs.
+    *   **Example:** A user uploads an XLSX file with a deeply nested XML structure that causes PHPExcel to consume excessive memory, leading to a denial-of-service.
+    *   **Impact:** Denial of Service (DoS), memory exhaustion, potential for code execution if underlying parsing libraries have vulnerabilities.
+    *   **Risk Severity:** High
+    *   **Mitigation Strategies:**
+        *   Implement strict file type validation based on file headers (magic numbers) rather than just the file extension.
+        *   Configure PHP and the web server with appropriate memory limits and execution time limits to prevent resource exhaustion.
+        *   Keep PHPExcel updated to the latest version to patch known vulnerabilities in its parsing logic.
+        *   Process uploaded files in an isolated environment (e.g., using containers or temporary directories with restricted permissions) to limit the impact of potential exploits.
+        *   Implement reasonable file size limits for uploaded spreadsheets.
+
+## Attack Surface: [Formula Injection](./attack_surfaces/formula_injection.md)
+
+*   **Description:** Attackers can inject malicious formulas into spreadsheet cells, which are then interpreted and executed by PHPExcel or when the generated spreadsheet is opened by a user in spreadsheet software.
+    *   **How PHPExcel Contributes:** PHPExcel interprets and evaluates formulas within spreadsheets. If user-provided data is directly inserted into formulas without proper sanitization, it can introduce malicious code.
+    *   **Example:** An application allows users to input data that is then used to generate a spreadsheet. An attacker inputs `=SYSTEM("rm -rf /")` (or an equivalent command for the server's OS) into a field, which is then inserted into a formula. If PHPExcel or the user's spreadsheet software executes this, it could have severe consequences.
+    *   **Impact:** Remote code execution on the server (if PHPExcel evaluates the formula), execution of arbitrary commands on the user's machine when the spreadsheet is opened, information disclosure.
+    *   **Risk Severity:** Critical
+    *   **Mitigation Strategies:**
+        *   Thoroughly sanitize and escape any user-provided data before incorporating it into spreadsheet formulas. Avoid directly concatenating user input into formulas.
+        *   If possible, define a whitelist of allowed functions or a blacklist of dangerous functions that PHPExcel should not execute. However, this can be complex and may not cover all potential attack vectors.
+        *   When generating spreadsheets that might be opened by end-users, consider the security implications of formulas and potentially escape or neutralize potentially dangerous functions.
+
+## Attack Surface: [External Entity Injection (XXE) in XML-based Formats (XLSX, ODS)](./attack_surfaces/external_entity_injection__xxe__in_xml-based_formats__xlsx__ods_.md)
+
+*   **Description:**  XML-based spreadsheet formats (like XLSX and ODS) can be vulnerable to XXE attacks if the XML parser used by PHPExcel is not properly configured to disable external entity processing.
+    *   **How PHPExcel Contributes:** PHPExcel uses XML parsing libraries to handle XLSX and ODS files. If these libraries are not configured securely, attackers can embed malicious external entity references in the spreadsheet.
+    *   **Example:** An attacker uploads an XLSX file containing an external entity definition that, when parsed by PHPExcel, reads a local file on the server (e.g., `/etc/passwd`).
+    *   **Impact:** Information disclosure (reading local files), Server-Side Request Forgery (SSRF).
+    *   **Risk Severity:** High
+    *   **Mitigation Strategies:**
+        *   Configure the underlying XML parser used by PHPExcel to disable the processing of external entities. This is a crucial security measure. Refer to the documentation of the XML parsing library used by your PHP installation.
+        *   Ensure the XML parsing library used by PHP is up-to-date with the latest security patches.
+
+## Attack Surface: [Path Traversal during Save Operations](./attack_surfaces/path_traversal_during_save_operations.md)
+
+*   **Description:** If the application allows users to specify the output file path when saving a spreadsheet generated by PHPExcel, attackers could potentially use path traversal techniques to save files to arbitrary locations on the server.
+    *   **How PHPExcel Contributes:** PHPExcel provides functionality to save generated spreadsheets. If the application doesn't properly sanitize the output path provided to PHPExcel's save methods, it introduces this risk.
+    *   **Example:** An attacker provides an output path like `../../../../var/www/html/malicious.php` when saving a generated spreadsheet, potentially overwriting critical files on the server.
+    *   **Impact:** Arbitrary file creation or overwriting on the server, potentially leading to code execution or data loss.
+    *   **Risk Severity:** High
+    *   **Mitigation Strategies:**
+        *   Never allow users to directly specify the output file path. Define a fixed, safe output directory and generate unique filenames.
+        *   If user input is involved in determining the filename, rigorously sanitize the path to prevent traversal attempts.
+
