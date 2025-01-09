@@ -1,5 +1,3 @@
-python https://github.com/matrix-org/synapse
-python https://github.com/mesonbuild/meson
 python https://github.com/mingrammer/diagrams
 python https://github.com/misp/misp
 python https://github.com/mitmproxy/mitmproxy
