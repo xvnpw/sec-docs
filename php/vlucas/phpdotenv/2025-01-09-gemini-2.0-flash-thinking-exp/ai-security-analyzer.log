@@ -1,0 +1,177 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+38a8310d387e: Pulling fs layer
+f4d80a761251: Pulling fs layer
+98636e63ee65: Pulling fs layer
+976ae72214aa: Pulling fs layer
+d007902a3e68: Pulling fs layer
+6a74ba77fcee: Pulling fs layer
+20aefc12af1b: Pulling fs layer
+8f1a114c690c: Pulling fs layer
+abea7197442a: Pulling fs layer
+b5c921081441: Pulling fs layer
+e109f0568a82: Pulling fs layer
+71433fcbef62: Pulling fs layer
+20aefc12af1b: Waiting
+8f1a114c690c: Waiting
+abea7197442a: Waiting
+b5c921081441: Waiting
+e109f0568a82: Waiting
+71433fcbef62: Waiting
+976ae72214aa: Waiting
+d007902a3e68: Waiting
+6a74ba77fcee: Waiting
+f4d80a761251: Download complete
+38a8310d387e: Verifying Checksum
+38a8310d387e: Download complete
+976ae72214aa: Download complete
+98636e63ee65: Verifying Checksum
+98636e63ee65: Download complete
+20aefc12af1b: Verifying Checksum
+20aefc12af1b: Download complete
+d007902a3e68: Verifying Checksum
+d007902a3e68: Download complete
+38a8310d387e: Pull complete
+8f1a114c690c: Download complete
+abea7197442a: Download complete
+e109f0568a82: Verifying Checksum
+e109f0568a82: Download complete
+6a74ba77fcee: Verifying Checksum
+6a74ba77fcee: Download complete
+71433fcbef62: Verifying Checksum
+71433fcbef62: Download complete
+f4d80a761251: Pull complete
+b5c921081441: Verifying Checksum
+b5c921081441: Download complete
+98636e63ee65: Pull complete
+976ae72214aa: Pull complete
+d007902a3e68: Pull complete
+6a74ba77fcee: Pull complete
+20aefc12af1b: Pull complete
+8f1a114c690c: Pull complete
+abea7197442a: Pull complete
+b5c921081441: Pull complete
+e109f0568a82: Pull complete
+71433fcbef62: Pull complete
+Digest: sha256:74d3aa62420762cf8217587f5f1cec2e42b4b56554fc4d0f18532c5200a4e6c3
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-09 10:49:29,999 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:49:30,036 - ai_security_analyzer.github2sd_agents - INFO - Internal step 1 of 2
+2025-01-09 10:49:49,277 - ai_security_analyzer.github2sd_agents - INFO - Internal step 2 of 2
+2025-01-09 10:50:10,026 - ai_security_analyzer.github2sd_agents - INFO - Getting intermediate response
+2025-01-09 10:50:10,026 - ai_security_analyzer.github2sd_agents - INFO - Getting deep analysis of security design review
+2025-01-09 10:50:35,202 - ai_security_analyzer.graphs - INFO - Actual token usage: 14637
+2025-01-09 10:50:35,203 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:50:39,815 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:50:39,853 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-09 10:50:54,316 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-09 10:51:09,834 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-09 10:51:19,577 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-09 10:51:19,578 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-09 10:51:27,276 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 2
+2025-01-09 10:51:54,359 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 2
+2025-01-09 10:52:15,498 - ai_security_analyzer.github2tm_agents - INFO - Getting threats final response
+2025-01-09 10:52:15,498 - ai_security_analyzer.graphs - INFO - Actual token usage: 21002
+2025-01-09 10:52:15,499 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:52:20,091 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:52:20,131 - ai_security_analyzer.github2as_agents - INFO - Internal step 1 of 3
+2025-01-09 10:52:33,389 - ai_security_analyzer.github2as_agents - INFO - Internal step 2 of 3
+2025-01-09 10:52:48,057 - ai_security_analyzer.github2as_agents - INFO - Internal step 3 of 3
+2025-01-09 10:52:54,704 - ai_security_analyzer.github2as_agents - INFO - Getting intermediate response
+2025-01-09 10:52:54,704 - ai_security_analyzer.github2as_agents - INFO - Getting structured attack surface analysis
+2025-01-09 10:53:02,153 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 1 of 3
+2025-01-09 10:53:22,246 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 2 of 3
+2025-01-09 10:53:46,235 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 3 of 3
+2025-01-09 10:54:08,844 - ai_security_analyzer.github2as_agents - INFO - Getting attack surfaces final response
+2025-01-09 10:54:08,845 - ai_security_analyzer.graphs - INFO - Actual token usage: 22096
+2025-01-09 10:54:08,845 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-09 10:54:13,483 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:54:13,522 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-09 10:54:34,226 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-09 10:54:53,504 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-09 10:55:14,049 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-09 10:55:24,755 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-09 10:55:24,756 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-09 10:55:35,272 - ai_security_analyzer.github2at_agents - ERROR - Error on structured attack tree path analysis: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Compromise application using phpdotenv by exploiting weaknesses or vulnerabilities within the project itself.", "attack_sub_tree_visualization": "* Compromise Application via phpdotenv **[CRITICAL NODE]**\n    * **Exploit .env File Vulnerabilities [HIGH-RISK PATH]**\n        * **Gain Unauthorized Access to .env File [CRITICAL NODE]**\n            * **Exploit Insecure File Permissions [HIGH-RISK PATH]**\n                * Application deployed with world-readable .env\n            * Leverage Insecure Deployment Practices **[HIGH-RISK PATH]**\n                * .env file is committed to version control\n    * **Exploit Insecure Variable Loading (if .env access is gained) [HIGH-RISK PATH]**\n        * **Overwrite Existing Environment Variables [CRITICAL NODE if successful]**\n            * Inject variables that override critical system or application environment variables\n    * **Exploit Insecure Usage of Environment Variables [HIGH-RISK PATH]**\n        * **Leverage Unsanitized Environment Variables in Sensitive Operations [HIGH-RISK PATH]**\n            * **Command Injection via Environment Variables [CRITICAL NODE if successful]**\n                * Application uses environment variables in shell commands without proper sanitization\n            * **SQL Injection via Environment Variables [CRITICAL NODE if successful]**\n                * Application uses environment variables in SQL queries without proper sanitization\n        * **Exploit Leaked Secrets via Environment Variables (if .env access is gained) [HIGH-RISK PATH]**\n            * Access sensitive information exposed through environment variables (e.g., API keys, database credentials)", "attack_sub_tree_paths": [{"title": "CRITICAL NODE", "text": "* Compromise Application via phpdotenv **[CRITICAL NODE]**"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit .env File Vulnerabilities [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE", "text": "        * **Gain Unauthorized Access to .env File [CRITICAL NODE]**"}, {"title": "HIGH-RISK PATH", "text": "            * **Exploit Insecure File Permissions [HIGH-RISK PATH]**"}, {"title": null, "text": "                * Application deployed with world-readable .env"}, {"title": "HIGH-RISK PATH", "text": "            * Leverage Insecure Deployment Practices **[HIGH-RISK PATH]**"}, {"title": null, "text": "                * .env file is committed to version control"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit Insecure Variable Loading (if .env access is gained) [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE if successful", "text": "        * **Overwrite Existing Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "            * Inject variables that override critical system or application environment variables"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit Insecure Usage of Environment Variables [HIGH-RISK PATH]**"}, {"title": "HIGH-RISK PATH", "text": "        * **Leverage Unsanitized Environment Variables in Sensitive Operations [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE if successful", "text": "            * **Command Injection via Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "                * Application uses environment variables in shell commands without proper sanitization"}, {"title": "CRITICAL NODE if successful", "text": "            * **SQL Injection via Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "                * Application uses environment variables in SQL queries without proper sanitization"}, {"title": "HIGH-RISK PATH", "text": "        * **Exploit Leaked Secrets via Environment Variables (if .env access is gained) [HIGH-RISK PATH]**"}, {"title": null, "text": "            * Access sensitive information exposed through environment variables (e.g., API keys, database credentials)"}]}. Got: 6 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.4.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.9.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.13.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.15.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.17.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:55:35,272 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Compromise application using phpdotenv by exploiting weaknesses or vulnerabilities within the project itself.", "attack_sub_tree_visualization": "* Compromise Application via phpdotenv **[CRITICAL NODE]**\n    * **Exploit .env File Vulnerabilities [HIGH-RISK PATH]**\n        * **Gain Unauthorized Access to .env File [CRITICAL NODE]**\n            * **Exploit Insecure File Permissions [HIGH-RISK PATH]**\n                * Application deployed with world-readable .env\n            * Leverage Insecure Deployment Practices **[HIGH-RISK PATH]**\n                * .env file is committed to version control\n    * **Exploit Insecure Variable Loading (if .env access is gained) [HIGH-RISK PATH]**\n        * **Overwrite Existing Environment Variables [CRITICAL NODE if successful]**\n            * Inject variables that override critical system or application environment variables\n    * **Exploit Insecure Usage of Environment Variables [HIGH-RISK PATH]**\n        * **Leverage Unsanitized Environment Variables in Sensitive Operations [HIGH-RISK PATH]**\n            * **Command Injection via Environment Variables [CRITICAL NODE if successful]**\n                * Application uses environment variables in shell commands without proper sanitization\n            * **SQL Injection via Environment Variables [CRITICAL NODE if successful]**\n                * Application uses environment variables in SQL queries without proper sanitization\n        * **Exploit Leaked Secrets via Environment Variables (if .env access is gained) [HIGH-RISK PATH]**\n            * Access sensitive information exposed through environment variables (e.g., API keys, database credentials)", "attack_sub_tree_paths": [{"title": "CRITICAL NODE", "text": "* Compromise Application via phpdotenv **[CRITICAL NODE]**"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit .env File Vulnerabilities [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE", "text": "        * **Gain Unauthorized Access to .env File [CRITICAL NODE]**"}, {"title": "HIGH-RISK PATH", "text": "            * **Exploit Insecure File Permissions [HIGH-RISK PATH]**"}, {"title": null, "text": "                * Application deployed with world-readable .env"}, {"title": "HIGH-RISK PATH", "text": "            * Leverage Insecure Deployment Practices **[HIGH-RISK PATH]**"}, {"title": null, "text": "                * .env file is committed to version control"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit Insecure Variable Loading (if .env access is gained) [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE if successful", "text": "        * **Overwrite Existing Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "            * Inject variables that override critical system or application environment variables"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit Insecure Usage of Environment Variables [HIGH-RISK PATH]**"}, {"title": "HIGH-RISK PATH", "text": "        * **Leverage Unsanitized Environment Variables in Sensitive Operations [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE if successful", "text": "            * **Command Injection via Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "                * Application uses environment variables in shell commands without proper sanitization"}, {"title": "CRITICAL NODE if successful", "text": "            * **SQL Injection via Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "                * Application uses environment variables in SQL queries without proper sanitization"}, {"title": "HIGH-RISK PATH", "text": "        * **Exploit Leaked Secrets via Environment Variables (if .env access is gained) [HIGH-RISK PATH]**"}, {"title": null, "text": "            * Access sensitive information exposed through environment variables (e.g., API keys, database credentials)"}]}. Got: 6 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.4.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.9.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.13.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.15.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.17.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:55:35,272 - __main__ - ERROR - Application error: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Compromise application using phpdotenv by exploiting weaknesses or vulnerabilities within the project itself.", "attack_sub_tree_visualization": "* Compromise Application via phpdotenv **[CRITICAL NODE]**\n    * **Exploit .env File Vulnerabilities [HIGH-RISK PATH]**\n        * **Gain Unauthorized Access to .env File [CRITICAL NODE]**\n            * **Exploit Insecure File Permissions [HIGH-RISK PATH]**\n                * Application deployed with world-readable .env\n            * Leverage Insecure Deployment Practices **[HIGH-RISK PATH]**\n                * .env file is committed to version control\n    * **Exploit Insecure Variable Loading (if .env access is gained) [HIGH-RISK PATH]**\n        * **Overwrite Existing Environment Variables [CRITICAL NODE if successful]**\n            * Inject variables that override critical system or application environment variables\n    * **Exploit Insecure Usage of Environment Variables [HIGH-RISK PATH]**\n        * **Leverage Unsanitized Environment Variables in Sensitive Operations [HIGH-RISK PATH]**\n            * **Command Injection via Environment Variables [CRITICAL NODE if successful]**\n                * Application uses environment variables in shell commands without proper sanitization\n            * **SQL Injection via Environment Variables [CRITICAL NODE if successful]**\n                * Application uses environment variables in SQL queries without proper sanitization\n        * **Exploit Leaked Secrets via Environment Variables (if .env access is gained) [HIGH-RISK PATH]**\n            * Access sensitive information exposed through environment variables (e.g., API keys, database credentials)", "attack_sub_tree_paths": [{"title": "CRITICAL NODE", "text": "* Compromise Application via phpdotenv **[CRITICAL NODE]**"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit .env File Vulnerabilities [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE", "text": "        * **Gain Unauthorized Access to .env File [CRITICAL NODE]**"}, {"title": "HIGH-RISK PATH", "text": "            * **Exploit Insecure File Permissions [HIGH-RISK PATH]**"}, {"title": null, "text": "                * Application deployed with world-readable .env"}, {"title": "HIGH-RISK PATH", "text": "            * Leverage Insecure Deployment Practices **[HIGH-RISK PATH]**"}, {"title": null, "text": "                * .env file is committed to version control"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit Insecure Variable Loading (if .env access is gained) [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE if successful", "text": "        * **Overwrite Existing Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "            * Inject variables that override critical system or application environment variables"}, {"title": "HIGH-RISK PATH", "text": "    * **Exploit Insecure Usage of Environment Variables [HIGH-RISK PATH]**"}, {"title": "HIGH-RISK PATH", "text": "        * **Leverage Unsanitized Environment Variables in Sensitive Operations [HIGH-RISK PATH]**"}, {"title": "CRITICAL NODE if successful", "text": "            * **Command Injection via Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "                * Application uses environment variables in shell commands without proper sanitization"}, {"title": "CRITICAL NODE if successful", "text": "            * **SQL Injection via Environment Variables [CRITICAL NODE if successful]**"}, {"title": null, "text": "                * Application uses environment variables in SQL queries without proper sanitization"}, {"title": "HIGH-RISK PATH", "text": "        * **Exploit Leaked Secrets via Environment Variables (if .env access is gained) [HIGH-RISK PATH]**"}, {"title": null, "text": "            * Access sensitive information exposed through environment variables (e.g., API keys, database credentials)"}]}. Got: 6 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.4.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.9.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.13.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.15.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.17.title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-09 10:55:49,837 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-09 10:55:49,875 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-09 10:56:11,366 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-09 10:56:41,113 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-09 10:57:01,310 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-09 10:57:12,961 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-09 10:57:12,961 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-09 10:57:31,210 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 1 of 13
+2025-01-09 10:57:53,187 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 2 of 13
+2025-01-09 10:58:15,096 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 3 of 13
+2025-01-09 10:58:36,885 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 4 of 13
+2025-01-09 10:58:57,255 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 5 of 13
+2025-01-09 10:59:15,635 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 6 of 13
+2025-01-09 10:59:34,637 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 7 of 13
+2025-01-09 10:59:55,954 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 8 of 13
+2025-01-09 11:00:17,798 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 9 of 13
+2025-01-09 11:00:40,065 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 10 of 13
+2025-01-09 11:00:59,826 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 11 of 13
+2025-01-09 11:01:18,939 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 12 of 13
+2025-01-09 11:01:37,982 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 13 of 13
+2025-01-09 11:02:00,093 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree paths final response
+2025-01-09 11:02:00,095 - ai_security_analyzer.graphs - INFO - Actual token usage: 75096
+2025-01-09 11:02:00,096 - __main__ - INFO - AI Security Analyzer completed successfully
