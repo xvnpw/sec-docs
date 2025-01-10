@@ -57,7 +57,7 @@ This is an early-phase research project currently testing:
 ### News
 
 - 2025-01-10: Deep analysis finished for all projects using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/ai-security-analyzer-deep-analysis-mode/)
-- 2025-01-01: Process 1000+ projects ([list](.data/origin_repos.txt)) using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/scaling-threat-modeling-with-ai/)
+- 2025-01-01: Processed 1000+ projects ([list](.data/origin_repos.txt)) using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/scaling-threat-modeling-with-ai/)
 
 ## Help Us Evaluate!
 
