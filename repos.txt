@@ -1,5 +1,3 @@
-ruby https://github.com/postalserver/postal
-ruby https://github.com/presidentbeef/brakeman
 ruby https://github.com/progit/progit
 ruby https://github.com/puma/puma
 ruby https://github.com/puppetlabs/puppet
