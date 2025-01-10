@@ -1,5 +1,3 @@
-swift https://github.com/snapkit/masonry
-swift https://github.com/snapkit/snapkit
 swift https://github.com/swiftgen/swiftgen
 swift https://github.com/swiftybeaver/swiftybeaver
 swift https://github.com/swiftyjson/swiftyjson
