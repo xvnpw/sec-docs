@@ -1,5 +1,3 @@
-rust https://github.com/slint-ui/slint
-rust https://github.com/solana-labs/solana
 rust https://github.com/starship/starship
 rust https://github.com/surrealdb/surrealdb
 rust https://github.com/swc-project/swc
