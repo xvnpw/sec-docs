@@ -1,5 +1,3 @@
-rust https://github.com/iced-rs/iced
-rust https://github.com/influxdata/influxdb
 rust https://github.com/kata-containers/kata-containers
 rust https://github.com/kitao/pyxel
 rust https://github.com/lemmynet/lemmy
