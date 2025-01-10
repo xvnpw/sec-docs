@@ -22,6 +22,8 @@ def check_directory_structure(input_file, base_dir):
     with open(input_file, "r") as f:
         lines = f.readlines()
 
+    print(f"Checking {len(lines)} repositories...")
+
     for line in lines:
         parts = line.strip().split()
         if len(parts) != 2:
@@ -51,7 +53,7 @@ def check_directory_structure(input_file, base_dir):
         )
         if not has_subdirectory:
             print(f"  Error: No subdirectories found in '{repo_dir}'.")
-
+        else:
             # Check for specific files in subdirectories
             required_files = [
                 "threat-modeling.md",
@@ -60,7 +62,11 @@ def check_directory_structure(input_file, base_dir):
                 "sec-design.md",
                 "output-metadata.json",
             ]
-            for item in os.listdir(repo_dir):
+            subdirectories = [item for item in os.listdir(repo_dir) if os.path.isdir(os.path.join(repo_dir, item))]
+            if len(subdirectories) < 2:
+                print(f"  Error: Only {len(subdirectories)} subdirectories found in '{repo_dir}'.")
+
+            for item in subdirectories:
                 subdir_path = os.path.join(repo_dir, item)
                 if os.path.isdir(subdir_path):
                     missing_files = [f for f in required_files if not os.path.isfile(os.path.join(subdir_path, f))]
