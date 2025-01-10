@@ -1,5 +1,3 @@
-typescript https://github.com/nestjs/nest
-typescript https://github.com/nrwl/nx
 typescript https://github.com/nuxt/nuxt.js
 typescript https://github.com/oclif/oclif
 typescript https://github.com/palantir/blueprint
