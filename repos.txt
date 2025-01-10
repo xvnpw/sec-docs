@@ -1,4 +1,2 @@
-typescript https://github.com/vuejs/vue-next
-typescript https://github.com/xtermjs/xterm.js
 yaml https://github.com/airflow-helm/charts
 php https://github.com/nikic/fastroute
