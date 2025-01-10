@@ -1,5 +1,3 @@
-typescript https://github.com/nuxt/nuxt.js
-typescript https://github.com/oclif/oclif
 typescript https://github.com/palantir/blueprint
 typescript https://github.com/pmndrs/react-three-fiber
 typescript https://github.com/prisma/prisma
