@@ -1,5 +1,3 @@
-swift https://github.com/devxoul/then
-swift https://github.com/flexmonkey/blurable
 swift https://github.com/hackiftekhar/iqkeyboardmanager
 swift https://github.com/herotransitions/hero
 swift https://github.com/hyperoslo/cache
