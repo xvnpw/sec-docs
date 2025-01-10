@@ -1,0 +1,149 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+38a8310d387e: Pulling fs layer
+f4d80a761251: Pulling fs layer
+98636e63ee65: Pulling fs layer
+976ae72214aa: Pulling fs layer
+d007902a3e68: Pulling fs layer
+6a74ba77fcee: Pulling fs layer
+20aefc12af1b: Pulling fs layer
+8f1a114c690c: Pulling fs layer
+abea7197442a: Pulling fs layer
+b5c921081441: Pulling fs layer
+e109f0568a82: Pulling fs layer
+71433fcbef62: Pulling fs layer
+8f1a114c690c: Waiting
+6a74ba77fcee: Waiting
+976ae72214aa: Waiting
+20aefc12af1b: Waiting
+d007902a3e68: Waiting
+abea7197442a: Waiting
+b5c921081441: Waiting
+e109f0568a82: Waiting
+f4d80a761251: Verifying Checksum
+f4d80a761251: Download complete
+38a8310d387e: Verifying Checksum
+38a8310d387e: Download complete
+976ae72214aa: Verifying Checksum
+976ae72214aa: Download complete
+98636e63ee65: Verifying Checksum
+98636e63ee65: Download complete
+d007902a3e68: Download complete
+8f1a114c690c: Verifying Checksum
+8f1a114c690c: Download complete
+20aefc12af1b: Download complete
+38a8310d387e: Pull complete
+abea7197442a: Verifying Checksum
+abea7197442a: Download complete
+6a74ba77fcee: Verifying Checksum
+6a74ba77fcee: Download complete
+71433fcbef62: Verifying Checksum
+71433fcbef62: Download complete
+e109f0568a82: Verifying Checksum
+e109f0568a82: Download complete
+f4d80a761251: Pull complete
+b5c921081441: Verifying Checksum
+b5c921081441: Download complete
+98636e63ee65: Pull complete
+976ae72214aa: Pull complete
+d007902a3e68: Pull complete
+6a74ba77fcee: Pull complete
+20aefc12af1b: Pull complete
+8f1a114c690c: Pull complete
+abea7197442a: Pull complete
+b5c921081441: Pull complete
+e109f0568a82: Pull complete
+71433fcbef62: Pull complete
+Digest: sha256:74d3aa62420762cf8217587f5f1cec2e42b4b56554fc4d0f18532c5200a4e6c3
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-10 07:48:12,445 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-10 07:48:12,480 - ai_security_analyzer.github2sd_agents - INFO - Internal step 1 of 2
+2025-01-10 07:48:26,618 - ai_security_analyzer.github2sd_agents - INFO - Internal step 2 of 2
+2025-01-10 07:48:42,327 - ai_security_analyzer.github2sd_agents - INFO - Getting intermediate response
+2025-01-10 07:48:42,328 - ai_security_analyzer.github2sd_agents - INFO - Getting deep analysis of security design review
+2025-01-10 07:48:57,209 - ai_security_analyzer.graphs - INFO - Actual token usage: 14936
+2025-01-10 07:48:57,209 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-10 07:49:01,625 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-10 07:49:01,663 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-10 07:49:13,996 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-10 07:49:23,163 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-10 07:49:26,218 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-10 07:49:26,219 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-10 07:49:29,271 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 3
+2025-01-10 07:49:47,354 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 3
+2025-01-10 07:50:03,656 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 3 of 3
+2025-01-10 07:50:03,684 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-01-10 07:50:05,712 - ai_security_analyzer.github2tm_agents - ERROR - Error on get threat details 2 of 3: 429 Resource has been exhausted (e.g. check quota).
+2025-01-10 07:50:05,712 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-01-10 07:50:05,712 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).
+2025-01-10 07:50:20,105 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-10 07:50:20,146 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-10 07:50:33,083 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-10 07:50:46,422 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-10 07:50:53,461 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-10 07:50:53,462 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-10 07:50:57,341 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 3
+2025-01-10 07:51:12,336 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 3
+2025-01-10 07:51:28,784 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 3 of 3
+2025-01-10 07:51:42,628 - ai_security_analyzer.github2tm_agents - INFO - Getting threats final response
+2025-01-10 07:51:42,629 - ai_security_analyzer.graphs - INFO - Actual token usage: 27189
+2025-01-10 07:51:42,630 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-10 07:51:47,100 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-10 07:51:47,137 - ai_security_analyzer.github2as_agents - INFO - Internal step 1 of 3
+2025-01-10 07:51:56,985 - ai_security_analyzer.github2as_agents - INFO - Internal step 2 of 3
+2025-01-10 07:52:08,677 - ai_security_analyzer.github2as_agents - INFO - Internal step 3 of 3
+2025-01-10 07:52:13,758 - ai_security_analyzer.github2as_agents - INFO - Getting intermediate response
+2025-01-10 07:52:13,759 - ai_security_analyzer.github2as_agents - INFO - Getting structured attack surface analysis
+2025-01-10 07:52:19,811 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 1 of 5
+2025-01-10 07:52:37,126 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 2 of 5
+2025-01-10 07:52:58,269 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 3 of 5
+2025-01-10 07:53:15,938 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 4 of 5
+2025-01-10 07:53:36,067 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 5 of 5
+2025-01-10 07:53:50,960 - ai_security_analyzer.github2as_agents - INFO - Getting attack surfaces final response
+2025-01-10 07:53:50,961 - ai_security_analyzer.graphs - INFO - Actual token usage: 35030
+2025-01-10 07:53:50,961 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-10 07:53:55,366 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-10 07:53:55,403 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-10 07:54:16,975 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-10 07:54:28,156 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-10 07:54:38,903 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-10 07:54:42,835 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-10 07:54:42,836 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-10 07:54:46,504 - ai_security_analyzer.github2at_agents - ERROR - Error on structured attack tree path analysis: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Attacker's Goal: To compromise the application utilizing Nushell by gaining unauthorized access, executing arbitrary code, or causing denial of service through exploiting weaknesses or vulnerabilities within Nushell's integration.", "attack_sub_tree_visualization": "* Compromise Application Utilizing Nushell [CRITICAL NODE]\n    * Exploit Nushell Command Injection Vulnerabilities [HIGH RISK PATH]\n        * Direct Command Injection [CRITICAL NODE]\n            * Insufficient Input Sanitization\n            * Improper Command Construction\n    * Exploit Nushell-Specific Features or Vulnerabilities\n        * Plugin/External Command Exploitation\n            * Exploit known vulnerabilities in used plugins/external commands. [CRITICAL NODE]\n            * Introduce malicious plugins/external commands. [HIGH RISK PATH] [CRITICAL NODE]", "attack_sub_tree_paths": [{"title": "Compromise Application Utilizing Nushell [CRITICAL NODE]", "text": "This represents the ultimate goal of the attacker. All successful attack paths will eventually lead to this state, where the attacker has gained unauthorized access, executed arbitrary code, or caused a denial of service affecting the application."}, {"title": "Exploit Nushell Command Injection Vulnerabilities [HIGH RISK PATH]", "text": "This category of attacks is considered high-risk because it directly allows an attacker to execute arbitrary commands on the system with the privileges of the application."}, {"title": "Direct Command Injection [CRITICAL NODE]", "text": "This occurs when user-supplied input is directly incorporated into a Nushell command without proper sanitization. The attacker's goal is to inject their own malicious commands that Nushell will execute."}, {"title": "Insufficient Input Sanitization", "text": "This happens when the application fails to properly validate or sanitize user input before using it in a Nushell command. For example, if the application takes a filename from the user and uses it in a `ls` command without validation, an attacker could input `; rm -rf /` to delete files."}, {"title": "Improper Command Construction", "text": "This occurs when the application constructs Nushell commands by concatenating strings without proper escaping or quoting. This can allow an attacker to inject additional commands or arguments by manipulating the input that is used in the concatenation."}, {"title": "Exploit Nushell-Specific Features or Vulnerabilities", "text": null}, {"title": "Plugin/External Command Exploitation", "text": null}, {"title": "Exploit known vulnerabilities in used plugins/external commands [CRITICAL NODE]", "text": "If the application utilizes Nushell plugins or external commands, and these components have known security vulnerabilities, an attacker can exploit these vulnerabilities to gain control. This could involve sending specially crafted input to the vulnerable plugin or command. The impact depends on the nature of the vulnerability, potentially leading to arbitrary code execution."}, {"title": "Introduce malicious plugins/external commands [HIGH RISK PATH] [CRITICAL NODE]", "text": "If the application's architecture allows for the loading of external plugins or commands, an attacker might be able to introduce a malicious plugin. This malicious plugin could then be executed by the application, granting the attacker significant control over the application and potentially the underlying system. This is a high-risk path because the impact of running attacker-controlled code is critical."}]}. Got: 2 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.5.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-10 07:54:46,504 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Attacker's Goal: To compromise the application utilizing Nushell by gaining unauthorized access, executing arbitrary code, or causing denial of service through exploiting weaknesses or vulnerabilities within Nushell's integration.", "attack_sub_tree_visualization": "* Compromise Application Utilizing Nushell [CRITICAL NODE]\n    * Exploit Nushell Command Injection Vulnerabilities [HIGH RISK PATH]\n        * Direct Command Injection [CRITICAL NODE]\n            * Insufficient Input Sanitization\n            * Improper Command Construction\n    * Exploit Nushell-Specific Features or Vulnerabilities\n        * Plugin/External Command Exploitation\n            * Exploit known vulnerabilities in used plugins/external commands. [CRITICAL NODE]\n            * Introduce malicious plugins/external commands. [HIGH RISK PATH] [CRITICAL NODE]", "attack_sub_tree_paths": [{"title": "Compromise Application Utilizing Nushell [CRITICAL NODE]", "text": "This represents the ultimate goal of the attacker. All successful attack paths will eventually lead to this state, where the attacker has gained unauthorized access, executed arbitrary code, or caused a denial of service affecting the application."}, {"title": "Exploit Nushell Command Injection Vulnerabilities [HIGH RISK PATH]", "text": "This category of attacks is considered high-risk because it directly allows an attacker to execute arbitrary commands on the system with the privileges of the application."}, {"title": "Direct Command Injection [CRITICAL NODE]", "text": "This occurs when user-supplied input is directly incorporated into a Nushell command without proper sanitization. The attacker's goal is to inject their own malicious commands that Nushell will execute."}, {"title": "Insufficient Input Sanitization", "text": "This happens when the application fails to properly validate or sanitize user input before using it in a Nushell command. For example, if the application takes a filename from the user and uses it in a `ls` command without validation, an attacker could input `; rm -rf /` to delete files."}, {"title": "Improper Command Construction", "text": "This occurs when the application constructs Nushell commands by concatenating strings without proper escaping or quoting. This can allow an attacker to inject additional commands or arguments by manipulating the input that is used in the concatenation."}, {"title": "Exploit Nushell-Specific Features or Vulnerabilities", "text": null}, {"title": "Plugin/External Command Exploitation", "text": null}, {"title": "Exploit known vulnerabilities in used plugins/external commands [CRITICAL NODE]", "text": "If the application utilizes Nushell plugins or external commands, and these components have known security vulnerabilities, an attacker can exploit these vulnerabilities to gain control. This could involve sending specially crafted input to the vulnerable plugin or command. The impact depends on the nature of the vulnerability, potentially leading to arbitrary code execution."}, {"title": "Introduce malicious plugins/external commands [HIGH RISK PATH] [CRITICAL NODE]", "text": "If the application's architecture allows for the loading of external plugins or commands, an attacker might be able to introduce a malicious plugin. This malicious plugin could then be executed by the application, granting the attacker significant control over the application and potentially the underlying system. This is a high-risk path because the impact of running attacker-controlled code is critical."}]}. Got: 2 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.5.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-10 07:54:46,504 - __main__ - ERROR - Application error: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "Attacker's Goal: To compromise the application utilizing Nushell by gaining unauthorized access, executing arbitrary code, or causing denial of service through exploiting weaknesses or vulnerabilities within Nushell's integration.", "attack_sub_tree_visualization": "* Compromise Application Utilizing Nushell [CRITICAL NODE]\n    * Exploit Nushell Command Injection Vulnerabilities [HIGH RISK PATH]\n        * Direct Command Injection [CRITICAL NODE]\n            * Insufficient Input Sanitization\n            * Improper Command Construction\n    * Exploit Nushell-Specific Features or Vulnerabilities\n        * Plugin/External Command Exploitation\n            * Exploit known vulnerabilities in used plugins/external commands. [CRITICAL NODE]\n            * Introduce malicious plugins/external commands. [HIGH RISK PATH] [CRITICAL NODE]", "attack_sub_tree_paths": [{"title": "Compromise Application Utilizing Nushell [CRITICAL NODE]", "text": "This represents the ultimate goal of the attacker. All successful attack paths will eventually lead to this state, where the attacker has gained unauthorized access, executed arbitrary code, or caused a denial of service affecting the application."}, {"title": "Exploit Nushell Command Injection Vulnerabilities [HIGH RISK PATH]", "text": "This category of attacks is considered high-risk because it directly allows an attacker to execute arbitrary commands on the system with the privileges of the application."}, {"title": "Direct Command Injection [CRITICAL NODE]", "text": "This occurs when user-supplied input is directly incorporated into a Nushell command without proper sanitization. The attacker's goal is to inject their own malicious commands that Nushell will execute."}, {"title": "Insufficient Input Sanitization", "text": "This happens when the application fails to properly validate or sanitize user input before using it in a Nushell command. For example, if the application takes a filename from the user and uses it in a `ls` command without validation, an attacker could input `; rm -rf /` to delete files."}, {"title": "Improper Command Construction", "text": "This occurs when the application constructs Nushell commands by concatenating strings without proper escaping or quoting. This can allow an attacker to inject additional commands or arguments by manipulating the input that is used in the concatenation."}, {"title": "Exploit Nushell-Specific Features or Vulnerabilities", "text": null}, {"title": "Plugin/External Command Exploitation", "text": null}, {"title": "Exploit known vulnerabilities in used plugins/external commands [CRITICAL NODE]", "text": "If the application utilizes Nushell plugins or external commands, and these components have known security vulnerabilities, an attacker can exploit these vulnerabilities to gain control. This could involve sending specially crafted input to the vulnerable plugin or command. The impact depends on the nature of the vulnerability, potentially leading to arbitrary code execution."}, {"title": "Introduce malicious plugins/external commands [HIGH RISK PATH] [CRITICAL NODE]", "text": "If the application's architecture allows for the loading of external plugins or commands, an attacker might be able to introduce a malicious plugin. This malicious plugin could then be executed by the application, granting the attacker significant control over the application and potentially the underlying system. This is a high-risk path because the impact of running attacker-controlled code is critical."}]}. Got: 2 validation errors for AttackTreeAnalysis
+attack_sub_tree_paths.5.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+attack_sub_tree_paths.6.text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-01-10 07:55:00,893 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-10 07:55:00,930 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-10 07:55:24,193 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-10 07:55:39,441 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-10 07:55:54,046 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-10 07:55:59,201 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-10 07:55:59,202 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-10 07:56:03,651 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 1 of 4
+2025-01-10 07:56:19,153 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 2 of 4
+2025-01-10 07:56:34,708 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 3 of 4
+2025-01-10 07:56:50,592 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 4 of 4
+2025-01-10 07:57:06,301 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree paths final response
+2025-01-10 07:57:06,302 - ai_security_analyzer.graphs - INFO - Actual token usage: 57858
+2025-01-10 07:57:06,303 - __main__ - INFO - AI Security Analyzer completed successfully
