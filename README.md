@@ -15,7 +15,13 @@ This is an early-phase research project currently testing:
 - Gemini 2.0 Flash Thinking Experimental - model cut off date: **end of October 2023**
 - Other LLM models (planned)
 
-### Help Us Evaluate!
+### News
+
+- 2025-01-10: Deep analysis finished for all projects using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/ai-security-analyzer-deep-analysis-mode/)
+- 2025-01-01: Process 1000+ projects ([list](.data/origin_repos.txt)) using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/scaling-threat-modeling-with-ai/)
+
+## Help Us Evaluate!
+
 We need community help to determine:
 1. Which LLM models produce the most accurate security documentation
 2. Which types of security documents are most valuable
