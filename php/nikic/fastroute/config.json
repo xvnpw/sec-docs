@@ -1,5 +1,5 @@
 {
-    "repo_url": "https://github.com/airflow-helm/charts",
+    "repo_url": "https://github.com/nikic/fastroute",
     "analyzer_args": "--deep-analysis",
     "agent_provider": "google",
     "agent_model": "gemini-2.0-flash-thinking-exp",
