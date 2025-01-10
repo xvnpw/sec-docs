@@ -1,5 +1,3 @@
-rust https://github.com/habitat-sh/habitat
-rust https://github.com/higherorderco/bend
 rust https://github.com/huggingface/candle
 rust https://github.com/hyperium/hyper
 rust https://github.com/iced-rs/iced
