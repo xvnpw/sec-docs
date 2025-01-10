@@ -1,5 +1,3 @@
-swift https://github.com/reactivex/rxswift
-swift https://github.com/realm/realm-cocoa
 swift https://github.com/robb/cartography
 swift https://github.com/rxswiftcommunity/rxalamofire
 swift https://github.com/rxswiftcommunity/rxdatasources
