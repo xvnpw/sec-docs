@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/ionic-team/ionic-framework",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-10T16:17:58Z",
+  "end_datetime": "2025-01-10T16:26:56Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.5",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "158458",
+  "mode": "github"
+}
