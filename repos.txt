@@ -1,5 +1,3 @@
-rust https://github.com/lemmynet/lemmy
-rust https://github.com/leptos-rs/leptos
 rust https://github.com/lettre/lettre
 rust https://github.com/librespot-org/librespot
 rust https://github.com/meilisearch/meilisearch
