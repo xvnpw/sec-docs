@@ -1,5 +1,3 @@
-swift https://github.com/robb/cartography
-swift https://github.com/rxswiftcommunity/rxalamofire
 swift https://github.com/rxswiftcommunity/rxdatasources
 swift https://github.com/scalessec/toast-swift
 swift https://github.com/snapkit/masonry
