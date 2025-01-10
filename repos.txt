@@ -1,5 +1,3 @@
-swift https://github.com/hyperoslo/cache
-swift https://github.com/johnlui/swift-on-ios
 swift https://github.com/krzysztofzablocki/sourcery
 swift https://github.com/krzyzanowskim/cryptoswift
 swift https://github.com/mac-cain13/r.swift
