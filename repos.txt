@@ -1,5 +1,3 @@
-ruby https://github.com/ruby-concurrency/concurrent-ruby
-ruby https://github.com/rubygems/rubygems
 ruby https://github.com/ruby-grape/grape
 ruby https://github.com/ryanb/cancan
 ruby https://github.com/shakacode/react_on_rails
