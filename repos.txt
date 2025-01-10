@@ -1,5 +1,3 @@
-typescript https://github.com/remix-run/react-router
-typescript https://github.com/remix-run/remix
 typescript https://github.com/storybookjs/storybook
 typescript https://github.com/typeorm/typeorm
 typescript https://github.com/umijs/umi
