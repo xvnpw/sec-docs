@@ -1,5 +1,3 @@
-rust https://github.com/servo/servo
-rust https://github.com/sharkdp/bat
 rust https://github.com/sharkdp/fd
 rust https://github.com/simd-lite/simd-json
 rust https://github.com/slint-ui/slint
