@@ -1,6 +1,6 @@
 # Masonry Analysis
 
-[GitHub Repository](https://github.com/SnapKit/Masonry)
+[GitHub Repository](https://github.com/snapkit/masonry)
 
 | Analysis Date | Model | Deep Analysis | Documents |
 |---------------|-------|:-------------:|-----------|
