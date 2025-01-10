@@ -1,5 +1,3 @@
-swift https://github.com/quick/quick
-swift https://github.com/ra1028/differencekit
 swift https://github.com/reactivex/rxswift
 swift https://github.com/realm/realm-cocoa
 swift https://github.com/robb/cartography
