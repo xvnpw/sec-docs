@@ -1,5 +1,3 @@
-swift https://github.com/krzysztofzablocki/sourcery
-swift https://github.com/krzyzanowskim/cryptoswift
 swift https://github.com/mac-cain13/r.swift
 swift https://github.com/mengto/spring
 swift https://github.com/moya/moya
