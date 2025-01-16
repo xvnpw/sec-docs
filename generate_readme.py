@@ -146,6 +146,8 @@ def main():
                     analyzer_args = metadata.get("analyzer_args", "")
                     deep_analysis = "✅" if "deep-analysis" in analyzer_args else ""
 
+                    agent_temperature = metadata.get("agent_temperature", 0)
+
                     doc_types = {
                         "sec-design.md": "Security Design Review",
                         "sec-design-deep-analysis.md": "Security Design Review - Deep Analysis",
@@ -165,10 +167,10 @@ def main():
                             language_doc_links.append(f"[{doc_name}]({owner}/{project}/{version}/{doc_file})")
 
                     version_lines.append(
-                        f"| {analysis_date} | {model_name} | {deep_analysis} | {', '.join(project_doc_links)} |"
+                        f"| {analysis_date} | {model_name} | {agent_temperature} | {deep_analysis} | {', '.join(project_doc_links)} |"
                     )
                     language_version_lines.append(
-                        f"| {analysis_date} | {model_name} | {deep_analysis} | {', '.join(language_doc_links)} |"
+                        f"| {analysis_date} | {model_name} | {agent_temperature} | {deep_analysis} | {', '.join(language_doc_links)} |"
                     )
 
                 languages[language][owner][project] = {
@@ -187,8 +189,8 @@ def main():
 
 def generate_language_readme(language, projects):
     readme_lines = [f"# {language.title()} Projects"]
-    readme_lines.append("| Project | Analysis Date | Model | Deep Analysis | Documentation |")
-    readme_lines.append("|---------|---------------|-------|:-------------:|---------------|")
+    readme_lines.append("| Project | Analysis Date | Model | T | Deep Analysis | Documentation |")
+    readme_lines.append("|---------|---------------|-------|---|:-------------:|---------------|")
 
     for owner in projects:
         for project, data in projects[owner].items():
@@ -202,9 +204,12 @@ def generate_language_readme(language, projects):
                 if len(parts) >= 4:
                     date = parts[1].strip()
                     model = parts[2].strip()
-                    deep_analysis = parts[3].strip()
-                    docs = parts[4].strip()
-                    readme_lines.append(f"| {project_name} | {date} | {model} | {deep_analysis} | {docs} |")
+                    temperature = parts[3].strip()
+                    deep_analysis = parts[4].strip()
+                    docs = parts[5].strip()
+                    readme_lines.append(
+                        f"| {project_name} | {date} | {model} | {temperature} | {deep_analysis} | {docs} |"
+                    )
 
     with open(os.path.join(language, "README.md"), "w") as f:
         f.write("\n".join(readme_lines))
@@ -217,8 +222,8 @@ def generate_project_readme(language, owner, project, versions):
     if github_link:
         readme_lines.append(f"\n[GitHub Repository]({github_link})\n")
 
-    readme_lines.append("| Analysis Date | Model | Deep Analysis | Documents |")
-    readme_lines.append("|---------------|-------|:-------------:|-----------|")
+    readme_lines.append("| Analysis Date | Model | T | Deep Analysis | Documents |")
+    readme_lines.append("|---------------|-------|---|:-------------:|-----------|")
     readme_lines.extend(versions)
 
     project_dir = os.path.join(language, owner, project)
