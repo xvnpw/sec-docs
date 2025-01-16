@@ -26,7 +26,7 @@ def process_first_repo(n=1):
             # Create config.json
             config = {
                 "repo_url": repo_url,
-                "analyzer_args": "--deep-analysis",
+                "analyzer_args": "--deep-analysis  ",
                 "agent_provider": "google",
                 "agent_model": "gemini-2.0-flash-thinking-exp",
                 "agent_temperature": 0.5,
