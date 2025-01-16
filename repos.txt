@@ -1,5 +1,3 @@
-c https://github.com/ffmpegwasm/ffmpeg.wasm
-c https://github.com/glfw/glfw
 c https://github.com/google/sanitizers
 c https://github.com/haproxy/haproxy
 c https://github.com/imagemagick/imagemagick
