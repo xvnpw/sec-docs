@@ -1,4 +1,2 @@
-python https://github.com/pallets/flask
-go https://github.com/cilium/cilium
 go https://github.com/etcd-io/etcd
 go https://github.com/gin-gonic/gin
