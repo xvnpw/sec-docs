@@ -143,6 +143,7 @@ jobs:
                 --agent-provider "$AGENT_PROVIDER" \
                 --agent-model "$AGENT_MODEL" \
                 --agent-temperature "$AGENT_TEMPERATURE" \
+                --checkpoint-dir /code/.checkpoints \
                 --agent-prompt-type "$prompt_type" #>> ./output/ai-security-analyzer.log 2>&1
 
               # Capture the exit code of the docker run command
