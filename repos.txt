@@ -1,2 +1,0 @@
-go https://github.com/etcd-io/etcd
-go https://github.com/gin-gonic/gin
