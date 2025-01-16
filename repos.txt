@@ -1,5 +1,3 @@
-c https://github.com/alibaba/tengine
-c https://github.com/allinurl/goaccess
 c https://github.com/apache/httpd
 c https://github.com/arut/nginx-rtmp-module
 c https://github.com/cesanta/mongoose
