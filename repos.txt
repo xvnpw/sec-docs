@@ -1,5 +1,3 @@
-cpp https://github.com/weidai11/cryptopp
-cpp https://github.com/yhirose/cpp-httplib
 cpp https://github.com/zeromq/libzmq
 cpp https://github.com/zeromq/zeromq4-x
 cpp https://github.com/zerotier/zerotierone
