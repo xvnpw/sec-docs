@@ -1,5 +1,3 @@
-cpp https://github.com/open-source-parsers/jsoncpp
-cpp https://github.com/oracle/node-oracledb
 cpp https://github.com/ossrs/srs
 cpp https://github.com/pocoproject/poco
 cpp https://github.com/protocolbuffers/protobuf
