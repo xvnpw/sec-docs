@@ -1,5 +1,3 @@
-c https://github.com/madler/zlib
-c https://github.com/memcached/memcached
 c https://github.com/mozilla/mozjpeg
 c https://github.com/netdata/netdata
 c https://github.com/nginx/nginx
