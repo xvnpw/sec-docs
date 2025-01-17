@@ -1,0 +1,119 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+2e7ec3a19c53: Pulling fs layer
+4f40115e4073: Pulling fs layer
+d49a49cd4bd8: Pulling fs layer
+a74a58395b97: Pulling fs layer
+513e2e3855da: Pulling fs layer
+40739c63992c: Pulling fs layer
+d02eae6e5f07: Pulling fs layer
+957488fc248d: Pulling fs layer
+2e7ec3a19c53: Waiting
+4f40115e4073: Waiting
+d49a49cd4bd8: Waiting
+a74a58395b97: Waiting
+513e2e3855da: Waiting
+40739c63992c: Waiting
+d02eae6e5f07: Waiting
+957488fc248d: Waiting
+5c3947958a83: Waiting
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+2e7ec3a19c53: Verifying Checksum
+2e7ec3a19c53: Download complete
+d49a49cd4bd8: Verifying Checksum
+d49a49cd4bd8: Download complete
+a74a58395b97: Verifying Checksum
+a74a58395b97: Download complete
+1f3e46996e29: Pull complete
+513e2e3855da: Verifying Checksum
+513e2e3855da: Download complete
+d02eae6e5f07: Verifying Checksum
+d02eae6e5f07: Download complete
+957488fc248d: Verifying Checksum
+957488fc248d: Download complete
+4f40115e4073: Verifying Checksum
+4f40115e4073: Download complete
+dfb81f221332: Pull complete
+40739c63992c: Verifying Checksum
+40739c63992c: Download complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+2e7ec3a19c53: Pull complete
+4f40115e4073: Pull complete
+d49a49cd4bd8: Pull complete
+a74a58395b97: Pull complete
+513e2e3855da: Pull complete
+40739c63992c: Pull complete
+d02eae6e5f07: Pull complete
+957488fc248d: Pull complete
+Digest: sha256:61578edc17557446da85344df75fdadcef2f3bdd7149b7f8ef3bbef93a0f2f62
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-17 08:53:08,892 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-17 08:53:08,933 - ai_security_analyzer.github2sd_agents - INFO - Internal step 1 of 2
+2025-01-17 08:53:24,037 - ai_security_analyzer.github2sd_agents - INFO - Internal step 2 of 2
+2025-01-17 08:53:42,208 - ai_security_analyzer.github2sd_agents - INFO - Getting intermediate response
+2025-01-17 08:53:42,211 - ai_security_analyzer.github2sd_agents - INFO - Getting deep analysis of security design review
+2025-01-17 08:53:57,945 - ai_security_analyzer.graphs - INFO - Actual token usage: 17316
+2025-01-17 08:53:57,950 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-17 08:54:02,376 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-17 08:54:02,417 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-17 08:54:13,168 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-17 08:54:25,109 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-17 08:54:29,340 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-17 08:54:29,343 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-17 08:54:33,536 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 4
+2025-01-17 08:54:50,365 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 4
+2025-01-17 08:55:09,221 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 3 of 4
+2025-01-17 08:55:09,243 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-01-17 08:55:11,269 - ai_security_analyzer.github2tm_agents - ERROR - Error on get threat details 3 of 4: 429 Resource has been exhausted (e.g. check quota).
+2025-01-17 08:55:11,270 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-01-17 08:55:11,273 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+2025-01-17 08:55:25,705 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-17 08:55:25,749 - ai_security_analyzer.github2tm_agents - INFO - Internal step 1 of 3
+2025-01-17 08:55:36,547 - ai_security_analyzer.github2tm_agents - INFO - Internal step 2 of 3
+2025-01-17 08:55:48,580 - ai_security_analyzer.github2tm_agents - INFO - Internal step 3 of 3
+2025-01-17 08:55:52,769 - ai_security_analyzer.github2tm_agents - INFO - Getting intermediate response
+2025-01-17 08:55:52,772 - ai_security_analyzer.github2tm_agents - INFO - Getting structured threat model
+2025-01-17 08:55:56,947 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 1 of 4
+2025-01-17 08:56:13,736 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 2 of 4
+2025-01-17 08:56:32,719 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 3 of 4
+2025-01-17 08:56:51,517 - ai_security_analyzer.github2tm_agents - INFO - Getting threat details 4 of 4
+2025-01-17 08:57:08,457 - ai_security_analyzer.github2tm_agents - INFO - Getting threats final response
+2025-01-17 08:57:08,464 - ai_security_analyzer.graphs - INFO - Actual token usage: 30242
+2025-01-17 08:57:08,472 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-17 08:57:12,948 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-17 08:57:12,989 - ai_security_analyzer.github2as_agents - INFO - Internal step 1 of 3
+2025-01-17 08:57:22,892 - ai_security_analyzer.github2as_agents - INFO - Internal step 2 of 3
+2025-01-17 08:57:35,028 - ai_security_analyzer.github2as_agents - INFO - Internal step 3 of 3
+2025-01-17 08:57:39,845 - ai_security_analyzer.github2as_agents - INFO - Getting intermediate response
+2025-01-17 08:57:39,847 - ai_security_analyzer.github2as_agents - INFO - Getting structured attack surface analysis
+2025-01-17 08:57:45,027 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 1 of 4
+2025-01-17 08:58:02,520 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 2 of 4
+2025-01-17 08:58:20,881 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 3 of 4
+2025-01-17 08:58:38,378 - ai_security_analyzer.github2as_agents - INFO - Getting attack surface details 4 of 4
+2025-01-17 08:58:55,842 - ai_security_analyzer.github2as_agents - INFO - Getting attack surfaces final response
+2025-01-17 08:58:55,849 - ai_security_analyzer.graphs - INFO - Actual token usage: 30217
+2025-01-17 08:58:55,856 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-17 08:59:00,235 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-17 08:59:00,275 - ai_security_analyzer.github2at_agents - INFO - Internal step 1 of 4
+2025-01-17 08:59:15,735 - ai_security_analyzer.github2at_agents - INFO - Internal step 2 of 4
+2025-01-17 08:59:30,964 - ai_security_analyzer.github2at_agents - INFO - Internal step 3 of 4
+2025-01-17 08:59:51,068 - ai_security_analyzer.github2at_agents - INFO - Internal step 4 of 4
+2025-01-17 08:59:56,244 - ai_security_analyzer.github2at_agents - INFO - Getting intermediate response
+2025-01-17 08:59:56,248 - ai_security_analyzer.github2at_agents - INFO - Getting structured attack tree path analysis
+2025-01-17 09:00:01,515 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 1 of 3
+2025-01-17 09:00:18,652 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 2 of 3
+2025-01-17 09:00:34,944 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree path details 3 of 3
+2025-01-17 09:00:50,777 - ai_security_analyzer.github2at_agents - INFO - Getting attack tree paths final response
+2025-01-17 09:00:50,785 - ai_security_analyzer.graphs - INFO - Actual token usage: 52804
+2025-01-17 09:00:50,796 - __main__ - INFO - AI Security Analyzer completed successfully
