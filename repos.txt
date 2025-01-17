@@ -1,5 +1,3 @@
-cpp https://github.com/nasa/trick
-cpp https://github.com/nlohmann/json
 cpp https://github.com/ocornut/imgui
 cpp https://github.com/opencv/opencv
 cpp https://github.com/open-source-parsers/jsoncpp
