@@ -1,5 +1,3 @@
-go https://github.com/hashicorp/vault
-go https://github.com/helm/helm
 go https://github.com/hibiken/asynq
 go https://github.com/hyperledger/fabric
 go https://github.com/iawia002/lux
