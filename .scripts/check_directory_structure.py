@@ -63,7 +63,7 @@ def check_directory_structure(input_file, base_dir):
                 "output-metadata.json",
             ]
             subdirectories = [item for item in os.listdir(repo_dir) if os.path.isdir(os.path.join(repo_dir, item))]
-            if len(subdirectories) < 2:
+            if len(subdirectories) < 3:
                 print(f"  Error: Only {len(subdirectories)} subdirectories found in '{repo_dir}'.")
 
             for item in subdirectories:
