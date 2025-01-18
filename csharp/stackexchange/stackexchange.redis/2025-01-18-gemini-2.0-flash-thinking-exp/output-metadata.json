@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/stackexchange/stackexchange.redis",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-18T13:21:31Z",
+  "end_datetime": "2025-01-18T13:29:06Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "135441",
+  "mode": "github"
+}
