@@ -1,5 +1,3 @@
-dart https://github.com/bitwarden/mobile
-dart https://github.com/dart-lang/http
 dart https://github.com/dart-lang/json_serializable
 dart https://github.com/dart-lang/shelf
 dart https://github.com/flame-engine/flame
