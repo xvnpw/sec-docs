@@ -1,5 +1,3 @@
-java https://github.com/jenkinsci/jenkins
-java https://github.com/jodaorg/joda-time
 java https://github.com/keycloak/keycloak
 java https://github.com/libgdx/libgdx
 java https://github.com/lmax-exchange/disruptor
