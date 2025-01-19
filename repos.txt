@@ -1,5 +1,3 @@
-go https://github.com/rook/rook
-go https://github.com/schollz/croc
 go https://github.com/seaweedfs/seaweedfs
 go https://github.com/shopify/sarama
 go https://github.com/sigstore/sigstore
