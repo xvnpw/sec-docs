@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/minimistjs/minimist",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-19T21:36:40Z",
+  "end_datetime": "2025-01-19T21:41:44Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "103752",
+  "mode": "github"
+}
