@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/serverless/serverless",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-19T23:06:06Z",
+  "end_datetime": "2025-01-19T23:13:14Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "131261",
+  "mode": "github"
+}
