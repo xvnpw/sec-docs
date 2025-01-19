@@ -1,5 +1,3 @@
-groovy https://github.com/marcelbirkner/docker-ci-tool-stack
-groovy https://github.com/nationalsecurityagency/skills-service
 groovy https://github.com/netflix/asgard
 groovy https://github.com/nextflow-io/nextflow
 groovy https://github.com/openboxes/openboxes
