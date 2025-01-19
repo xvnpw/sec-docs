@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/hibernate/hibernate-orm",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-19T12:34:20Z",
+  "end_datetime": "2025-01-19T12:45:31Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "187963",
+  "mode": "github"
+}
