@@ -1,5 +1,3 @@
-java https://github.com/reactivex/rxjava
-java https://github.com/realm/realm-java
 java https://github.com/signalapp/signal-server
 java https://github.com/spockframework/spock
 java https://github.com/spring-projects/spring-boot
