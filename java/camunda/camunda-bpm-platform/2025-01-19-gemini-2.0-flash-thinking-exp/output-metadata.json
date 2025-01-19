@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/camunda/camunda-bpm-platform",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-19T11:01:51Z",
+  "end_datetime": "2025-01-19T11:16:40Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "235685",
+  "mode": "github"
+}
