@@ -1,5 +1,3 @@
-go https://github.com/photoprism/photoprism
-go https://github.com/pingcap/tidb
 go https://github.com/pocketbase/pocketbase
 go https://github.com/prometheus/prometheus
 go https://github.com/rancher/rancher
