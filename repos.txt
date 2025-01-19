@@ -1,5 +1,3 @@
-java https://github.com/hibernate/hibernate-orm
-java https://github.com/jakewharton/butterknife
 java https://github.com/jenkinsci/jenkins
 java https://github.com/jodaorg/joda-time
 java https://github.com/keycloak/keycloak
