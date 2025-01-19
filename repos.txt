@@ -1,5 +1,3 @@
-javascript https://github.com/feross/safe-buffer
-javascript https://github.com/freecodecamp/freecodecamp
 javascript https://github.com/gatsbyjs/gatsby
 javascript https://github.com/hakimel/reveal.js
 javascript https://github.com/handlebars-lang/handlebars.js
