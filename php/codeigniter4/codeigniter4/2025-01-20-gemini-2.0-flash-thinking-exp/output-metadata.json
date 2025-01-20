@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/codeigniter4/codeigniter4",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-20T15:02:32Z",
+  "end_datetime": "2025-01-20T15:12:42Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "176196",
+  "mode": "github"
+}
