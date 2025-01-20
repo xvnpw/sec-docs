@@ -1,5 +1,3 @@
-kotlin https://github.com/arrow-kt/arrow
-kotlin https://github.com/badoo/reaktive
 kotlin https://github.com/coil-kt/coil
 kotlin https://github.com/cymchad/baserecyclerviewadapterhelper
 kotlin https://github.com/detekt/detekt
