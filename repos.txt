@@ -1,5 +1,3 @@
-lua https://github.com/kong/kong
-lua https://github.com/nodemcu/nodemcu-firmware
 objectivec https://github.com/afnetworking/afnetworking
 objectivec https://github.com/bang590/jspatch
 objectivec https://github.com/blockskit/blockskit
