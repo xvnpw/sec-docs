@@ -1,0 +1,58 @@
+# Attack Tree Analysis for jsonmodel/jsonmodel
+
+Objective: Gain unauthorized access or control over the application or its data by exploiting weaknesses in how the application uses the JSONModel library.
+
+## Attack Tree Visualization
+
+```
+* Compromise Application Using JSONModel Vulnerabilities
+    * **[HR]** Exploit Input Validation Weaknesses **[CN]**
+        * **[HR]** Supply Malformed JSON **[CN]**
+        * **[HR]** Supply Circular References in JSON **[CN]**
+        * **[HR]** Supply Extremely Large JSON Payloads **[CN]**
+    * **[HR]** Exploit Type Safety Issues **[CN]**
+        * **[HR]** Inject Incorrect Data Types for Properties **[CN]**
+        * **[HR]** Exploit Weak Type Checking during Mapping **[CN]**
+    * **[HR]** Manipulate JSON to Trigger Unexpected Object States **[CN]**
+    * **[HR]** Manipulate JSON to Trigger Unexpected Object Relationships **[CN]**
+    * **[HR]** Exploit Information Disclosure through Error Handling **[CN]**
+    * **[HR]** Exploit Dependencies (Less direct, but worth noting) **[CN]**
+```
+
+
+## Attack Tree Path: [[HR] Exploit Input Validation Weaknesses [CN]](./attack_tree_paths/_hr__exploit_input_validation_weaknesses__cn_.md)
+
+* **[HR] Supply Malformed JSON [CN]:** JSONModel relies on an underlying JSON parser (typically `NSJSONSerialization`). Sending syntactically incorrect JSON might cause the parser to throw exceptions. While JSONModel should handle these, improper error handling in the application could lead to crashes or reveal information about the application's internal workings.
+    * Actionable Insight: Implement robust error handling around JSONModel parsing. Avoid displaying raw error messages to users. Log errors securely for debugging.
+* **[HR] Supply Circular References in JSON [CN]:** JSON structures with circular references (an object referencing itself directly or indirectly) can cause infinite loops or stack overflow errors during parsing.
+    * Actionable Insight: Implement checks for circular references before or during JSON parsing. Consider using libraries that can detect and handle circular references.
+* **[HR] Supply Extremely Large JSON Payloads [CN]:** Sending very large JSON payloads can exhaust memory or processing resources, leading to a denial-of-service condition.
+    * Actionable Insight: Implement size limits on incoming JSON payloads. Consider using streaming or chunking techniques for handling large data.
+
+## Attack Tree Path: [[HR] Exploit Type Safety Issues [CN]](./attack_tree_paths/_hr__exploit_type_safety_issues__cn_.md)
+
+* **[HR] Inject Incorrect Data Types for Properties [CN]:** Even if the JSON is well-formed, providing data types that are incompatible with the expected property types in the model can lead to runtime errors or unexpected behavior. For example, if a property is an `NSNumber`, sending a string might cause issues if the application later tries to perform arithmetic operations on it.
+    * Actionable Insight: Reinforce type checking within the application logic. Use strong typing and consider using techniques like Swift's optional types to handle potential type mismatches gracefully.
+* **[HR] Exploit Weak Type Checking during Mapping [CN]:** If the application relies solely on JSONModel's implicit type mapping without further validation, attackers might be able to inject values that bypass intended validation or sanitization logic.
+    * Actionable Insight: Implement explicit validation rules for properties after they are mapped by JSONModel. Sanitize data before using it in sensitive operations.
+
+## Attack Tree Path: [[HR] Manipulate JSON to Trigger Unexpected Object States [CN]](./attack_tree_paths/_hr__manipulate_json_to_trigger_unexpected_object_states__cn_.md)
+
+By carefully crafting the JSON, an attacker might be able to influence the initial state of the mapped objects in a way that leads to vulnerabilities. For example, setting a flag to an unexpected value or leaving a required property uninitialized.
+    * Actionable Insight: Implement robust initialization logic for your model objects. Ensure that objects are in a valid and secure state after being mapped from JSON.
+
+## Attack Tree Path: [[HR] Manipulate JSON to Trigger Unexpected Object Relationships [CN]](./attack_tree_paths/_hr__manipulate_json_to_trigger_unexpected_object_relationships__cn_.md)
+
+While JSONModel primarily handles deserialization, there might be edge cases where manipulating the JSON structure could lead to incorrect object relationships being established, potentially causing logical errors or access control bypasses.
+    * Actionable Insight: Thoroughly test the application's behavior with various JSON structures, including those with complex relationships.
+
+## Attack Tree Path: [[HR] Exploit Information Disclosure through Error Handling [CN]](./attack_tree_paths/_hr__exploit_information_disclosure_through_error_handling__cn_.md)
+
+If error handling is not implemented carefully, error messages generated by JSONModel or the underlying parser could reveal sensitive information about the application's internal structure, file paths, or data.
+    * Actionable Insight: Implement centralized and secure error logging. Avoid displaying raw error messages to users. Sanitize error messages before logging.
+
+## Attack Tree Path: [[HR] Exploit Dependencies (Less direct, but worth noting) [CN]](./attack_tree_paths/_hr__exploit_dependencies__less_direct__but_worth_noting___cn_.md)
+
+JSONModel relies on a JSON parsing library (typically `NSJSONSerialization`). Vulnerabilities in this underlying library could indirectly affect applications using JSONModel.
+    * Actionable Insight: Keep the underlying JSON parsing library up-to-date with the latest security patches. Monitor for known vulnerabilities in these dependencies.
+
