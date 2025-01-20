@@ -1,5 +1,3 @@
-php https://github.com/dompdf/dompdf
-php https://github.com/drupal/core
 php https://github.com/drupal/drupal
 php https://github.com/egulias/emailvalidator
 php https://github.com/elastic/elasticsearch-php
