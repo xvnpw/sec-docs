@@ -1,5 +1,3 @@
-php https://github.com/php-fig/container
-php https://github.com/php-fig/log
 php https://github.com/phpmailer/phpmailer
 php https://github.com/phpoffice/phpexcel
 php https://github.com/phpoffice/phppresentation
