@@ -1,5 +1,3 @@
-objectivec https://github.com/flipboard/flanimatedimage
-objectivec https://github.com/forkingdog/uitableview-fdtemplatelayoutcell
 objectivec https://github.com/grouper/flatuikit
 objectivec https://github.com/ibireme/yykit
 objectivec https://github.com/ibireme/yytext
