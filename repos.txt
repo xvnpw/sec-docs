@@ -1,5 +1,3 @@
-objectivec https://github.com/johnezang/jsonkit
-objectivec https://github.com/jsonmodel/jsonmodel
 objectivec https://github.com/jverdi/jvfloatlabeledtextfield
 objectivec https://github.com/jverkoey/nimbus
 objectivec https://github.com/kanyun-inc/ytknetwork
