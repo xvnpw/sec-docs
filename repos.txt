@@ -1,5 +1,3 @@
-php https://github.com/doctrine/lexer
-php https://github.com/doctrine/orm
 php https://github.com/dompdf/dompdf
 php https://github.com/drupal/core
 php https://github.com/drupal/drupal
