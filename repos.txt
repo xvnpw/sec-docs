@@ -1,5 +1,3 @@
-php https://github.com/freshrss/freshrss
-php https://github.com/friendsofphp/goutte
 php https://github.com/fzaninotto/faker
 php https://github.com/getgrav/grav
 php https://github.com/getsentry/sentry-php
