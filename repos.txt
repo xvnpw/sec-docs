@@ -1,5 +1,3 @@
-objectivec https://github.com/mortimergoro/mgswipetablecell
-objectivec https://github.com/mutualmobile/mmdrawercontroller
 objectivec https://github.com/mwaterfall/mwphotobrowser
 objectivec https://github.com/nicklockwood/icarousel
 objectivec https://github.com/nst/ios-runtime-headers
