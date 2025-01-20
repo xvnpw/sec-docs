@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/koel/koel",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-20T17:42:40Z",
+  "end_datetime": "2025-01-20T17:57:35Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree"
+  ],
+  "actual_token_usage": "212122",
+  "mode": "github"
+}
