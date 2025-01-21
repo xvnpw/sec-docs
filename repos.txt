@@ -1,5 +1,3 @@
-ruby https://github.com/bkeepers/dotenv
-ruby https://github.com/capistrano/capistrano
 ruby https://github.com/carrierwaveuploader/carrierwave
 ruby https://github.com/chatwoot/chatwoot
 ruby https://github.com/chef/chef
