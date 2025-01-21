@@ -1,5 +1,3 @@
-python https://github.com/nvlabs/stylegan
-python https://github.com/odoo/odoo
 python https://github.com/openai/gym
 python https://github.com/opencv/opencv-python
 python https://github.com/openinterpreter/open-interpreter
