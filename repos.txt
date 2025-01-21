@@ -1,5 +1,3 @@
-python https://github.com/openinterpreter/open-interpreter
-python https://github.com/pallets/click
 python https://github.com/pallets/flask
 python https://github.com/pallets/jinja
 python https://github.com/pandas-dev/pandas
