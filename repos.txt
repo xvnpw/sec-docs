@@ -1,5 +1,3 @@
-python https://github.com/keras-team/keras
-python https://github.com/lllyasviel/fooocus
 python https://github.com/locustio/locust
 python https://github.com/matrix-org/synapse
 python https://github.com/mesonbuild/meson
