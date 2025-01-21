@@ -1,5 +1,3 @@
-python https://github.com/abi/screenshot-to-code
-python https://github.com/ansible/ansible
 python https://github.com/apache/airflow
 python https://github.com/borgbackup/borg
 python https://github.com/bottlepy/bottle
