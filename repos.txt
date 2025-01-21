@@ -1,5 +1,3 @@
-python https://github.com/getsentry/sentry
-python https://github.com/google/jax
 python https://github.com/gradio-app/gradio
 python https://github.com/graphite-project/graphite-web
 python https://github.com/home-assistant/core
