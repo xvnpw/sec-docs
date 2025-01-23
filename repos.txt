@@ -1,5 +1,3 @@
-cpp https://github.com/taichi-dev/taichi
-cpp https://github.com/tencent/mmkv
 cpp https://github.com/tencent/ncnn
 cpp https://github.com/tencent/rapidjson
 cpp https://github.com/typesense/typesense
