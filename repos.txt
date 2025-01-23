@@ -1,5 +1,3 @@
-cpp https://github.com/dragonflydb/dragonfly
-cpp https://github.com/duckdb/duckdb
 cpp https://github.com/electron/electron
 cpp https://github.com/embree/embree
 cpp https://github.com/envoyproxy/envoy
