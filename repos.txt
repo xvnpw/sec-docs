@@ -1,5 +1,3 @@
-c https://github.com/wg/wrk
-c https://github.com/wireguard/wireguard-linux
 c https://github.com/woltapp/blurhash
 c https://github.com/xianyi/openblas
 clojure https://github.com/metabase/metabase
