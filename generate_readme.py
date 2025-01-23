@@ -155,6 +155,7 @@ def main():
                         "threat-modeling.md": "Threat Modeling",
                         "attack-surface.md": "Attack Surface",
                         "attack-tree.md": "Attack Tree",
+                        "mitigations.md": "Mitigation Strategies",
                     }
 
                     # Project README doc links (relative to project directory)

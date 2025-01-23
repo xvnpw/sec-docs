@@ -82,7 +82,7 @@ jobs:
             core.setOutput('output_subdir', output_subdir);
 
             // Handle agent_prompt_types
-            const default_agent_prompt_types = ["sec-design", "threat-modeling", "attack-surface", "attack-tree"];
+            const default_agent_prompt_types = ["sec-design", "threat-modeling", "attack-surface", "attack-tree", "mitigations"];
             let agent_prompt_types = config.agent_prompt_types;
             if (!Array.isArray(agent_prompt_types) || agent_prompt_types.length === 0) {
               agent_prompt_types = default_agent_prompt_types;
