@@ -1,5 +1,3 @@
-csharp https://github.com/dotnet/docfx
-csharp https://github.com/dotnet/efcore
 csharp https://github.com/dotnet/eshop
 csharp https://github.com/dotnet/maui
 csharp https://github.com/dotnet/orleans
