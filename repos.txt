@@ -1,5 +1,3 @@
-c https://github.com/espressif/esp-idf
-c https://github.com/existentialaudio/blackhole
 c https://github.com/facebook/zstd
 c https://github.com/ffmpeg/ffmpeg
 c https://github.com/ffmpegwasm/ffmpeg.wasm
