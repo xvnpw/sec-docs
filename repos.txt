@@ -1,5 +1,3 @@
-dart https://github.com/isar/isar
-dart https://github.com/leoafarias/fvm
 dart https://github.com/miguelpruivo/flutter_file_picker
 dart https://github.com/reactivex/rxdart
 elixir https://github.com/elixir-lang/elixir
