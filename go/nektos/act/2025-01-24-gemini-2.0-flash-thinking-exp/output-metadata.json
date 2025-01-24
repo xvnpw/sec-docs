@@ -1,0 +1,14 @@
+{
+  "repo_url": "https://github.com/nektos/act",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-24T04:49:53Z",
+  "end_datetime": "2025-01-24T04:55:09Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "mitigations"
+  ],
+  "actual_token_usage": "70376",
+  "mode": "github"
+}
