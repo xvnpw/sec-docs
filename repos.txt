@@ -1,5 +1,3 @@
-javascript https://github.com/juliangruber/isarray
-javascript https://github.com/koajs/koa
 javascript https://github.com/kong/insomnia
 javascript https://github.com/leaflet/leaflet
 javascript https://github.com/ljharb/qs
