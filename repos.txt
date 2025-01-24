@@ -1,5 +1,3 @@
-java https://github.com/philjay/mpandroidchart
-java https://github.com/qos-ch/logback
 java https://github.com/qos-ch/slf4j
 java https://github.com/reactivex/rxandroid
 java https://github.com/reactivex/rxjava
