@@ -1,5 +1,3 @@
-javascript https://github.com/tryghost/ghost
-javascript https://github.com/twbs/bootstrap
 javascript https://github.com/typicode/json-server
 javascript https://github.com/veged/coa
 javascript https://github.com/vercel/hyper
