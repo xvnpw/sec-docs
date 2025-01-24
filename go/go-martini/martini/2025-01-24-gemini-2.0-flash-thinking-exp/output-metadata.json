@@ -1,0 +1,14 @@
+{
+  "repo_url": "https://github.com/go-martini/martini",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-24T02:42:33Z",
+  "end_datetime": "2025-01-24T02:47:24Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "mitigations"
+  ],
+  "actual_token_usage": "64680",
+  "mode": "github"
+}
