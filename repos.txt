@@ -1,5 +1,3 @@
-java https://github.com/apache/dubbo
-java https://github.com/apache/flink
 java https://github.com/apache/hadoop
 java https://github.com/apache/httpcomponents-client
 java https://github.com/apache/httpcomponents-core
