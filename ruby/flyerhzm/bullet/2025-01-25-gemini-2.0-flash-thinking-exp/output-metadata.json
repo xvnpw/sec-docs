@@ -1,0 +1,14 @@
+{
+  "repo_url": "https://github.com/flyerhzm/bullet",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-25T11:11:59Z",
+  "end_datetime": "2025-01-25T11:14:38Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "mitigations"
+  ],
+  "actual_token_usage": "32159",
+  "mode": "github"
+}
