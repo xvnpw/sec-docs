@@ -1,5 +1,3 @@
-php https://github.com/librespeed/speedtest
-php https://github.com/livewire/livewire
 php https://github.com/magento/magento2
 php https://github.com/matomo-org/matomo
 php https://github.com/mockery/mockery
