@@ -1,0 +1,14 @@
+{
+  "repo_url": "https://github.com/mtdowling/cron-expression",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-25T02:27:19Z",
+  "end_datetime": "2025-01-25T02:30:31Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "mitigations"
+  ],
+  "actual_token_usage": "38535",
+  "mode": "github"
+}
