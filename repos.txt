@@ -1,5 +1,3 @@
-typescript https://github.com/pmndrs/react-three-fiber
-typescript https://github.com/prisma/prisma
 typescript https://github.com/puppeteer/puppeteer
 typescript https://github.com/react-hook-form/react-hook-form
 typescript https://github.com/recharts/recharts
