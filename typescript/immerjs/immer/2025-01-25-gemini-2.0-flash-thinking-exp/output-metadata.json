@@ -1,0 +1,14 @@
+{
+  "repo_url": "https://github.com/immerjs/immer",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-25T21:46:58Z",
+  "end_datetime": "2025-01-25T21:48:47Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "mitigations"
+  ],
+  "actual_token_usage": "22280",
+  "mode": "github"
+}
