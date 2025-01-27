@@ -1,5 +1,3 @@
-cpp https://github.com/facebook/rocksdb
-cpp https://github.com/facebook/yoga
 cpp https://github.com/facebookresearch/faiss
 cpp https://github.com/fmtlib/fmt
 cpp https://github.com/gabime/spdlog
