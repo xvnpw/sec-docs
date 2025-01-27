@@ -1,5 +1,3 @@
-csharp https://github.com/mahapps/mahapps.metro
-csharp https://github.com/masstransit/masstransit
 csharp https://github.com/materialdesigninxaml/materialdesigninxamltoolkit
 csharp https://github.com/microsoft/garnet
 csharp https://github.com/microsoft/semantic-kernel
