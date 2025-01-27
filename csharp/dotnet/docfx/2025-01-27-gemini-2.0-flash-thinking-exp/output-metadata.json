@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/dotnet/docfx",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-27T14:22:36Z",
+  "end_datetime": "2025-01-27T14:41:23Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "268597",
+  "mode": "github"
+}
