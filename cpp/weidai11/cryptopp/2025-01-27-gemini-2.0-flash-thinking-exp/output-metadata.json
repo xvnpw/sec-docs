@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/weidai11/cryptopp",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-27T11:15:49Z",
+  "end_datetime": "2025-01-27T11:37:50Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "290497",
+  "mode": "github"
+}
