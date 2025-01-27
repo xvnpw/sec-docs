@@ -1,0 +1,15 @@
+# Attack Surface Analysis for spectreconsole/spectre.console
+
+## Attack Surface: [Unsanitized User Input in Prompts](./attack_surfaces/unsanitized_user_input_in_prompts.md)
+
+*   **Description:** Applications utilizing Spectre.Console's prompting features (e.g., `TextPrompt`, `SelectionPrompt`) are critically vulnerable if they fail to validate and sanitize user input *after* it is received from Spectre.Console, but *before* using it in subsequent operations within the application. This lack of sanitization can lead to injection vulnerabilities.
+*   **Spectre.Console Contribution:** Spectre.Console provides the direct mechanism for gathering user input via the console. While it handles basic input parsing for its own prompt structure, it does not perform application-specific sanitization or validation of the *content* of the user's response. The application code is solely responsible for secure handling of the input received from Spectre.Console prompts.
+*   **Example:** An application uses `TextPrompt` to obtain a command from the user, intending to execute a limited set of predefined commands. However, if the application directly passes the user-provided command string to a shell execution function without any validation, a malicious user could input shell commands like `; rm -rf /` or similar, leading to arbitrary command execution on the system.
+*   **Impact:** Arbitrary command execution, path traversal, SQL injection, code injection, or other critical application-specific vulnerabilities. The impact is highly dependent on how the unsanitized user input is used within the application logic, but can easily lead to full system compromise in severe cases.
+*   **Risk Severity:** Critical
+*   **Mitigation Strategies:**
+    *   **Mandatory Input Validation:** Implement rigorous input validation *immediately after* receiving input from any Spectre.Console prompt. Validate against expected formats, allowed character sets, and length limits. Use whitelisting (allow only known good inputs) rather than blacklisting (block known bad inputs) where possible.
+    *   **Strict Input Sanitization and Encoding:** Sanitize user input by encoding or escaping special characters that could be interpreted maliciously in downstream operations. The specific sanitization method depends on the context where the input will be used (e.g., shell escaping for command execution, SQL parameterization for database queries, HTML encoding for web output - even if console output is the primary target, consider potential future uses).
+    *   **Principle of Least Privilege:** Ensure the application and the user running it operate with the minimum necessary privileges. This limits the potential damage from successful exploits, even if input sanitization is bypassed.
+    *   **Secure Coding Practices and Reviews:**  Adopt secure coding practices throughout the application development lifecycle. Conduct thorough code reviews, specifically focusing on input handling and areas where user input from Spectre.Console prompts is used. Consider security testing and penetration testing to identify vulnerabilities.
+
