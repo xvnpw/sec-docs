@@ -1,5 +1,3 @@
-go https://github.com/caddyserver/caddy
-go https://github.com/charmbracelet/bubbletea
 go https://github.com/cilium/cilium
 go https://github.com/cloudwego/kitex
 go https://github.com/cockroachdb/cockroach
