@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/rclone/rclone",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-28T20:56:12Z",
+  "end_datetime": "2025-01-28T21:10:10Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "213134",
+  "mode": "github"
+}
