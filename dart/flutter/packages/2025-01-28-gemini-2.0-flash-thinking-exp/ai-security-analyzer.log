@@ -1,0 +1,91 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+7a0ff23c5674: Pulling fs layer
+f3474a68a80a: Pulling fs layer
+c194ee577201: Pulling fs layer
+dcb620b4f4b2: Pulling fs layer
+011a2216d755: Pulling fs layer
+42ccb426d0c7: Pulling fs layer
+6e870a59e383: Pulling fs layer
+4ab91b5750b7: Pulling fs layer
+f3474a68a80a: Waiting
+5c3947958a83: Waiting
+7a0ff23c5674: Waiting
+c194ee577201: Waiting
+dcb620b4f4b2: Waiting
+6e870a59e383: Waiting
+42ccb426d0c7: Waiting
+4ab91b5750b7: Waiting
+011a2216d755: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+7a0ff23c5674: Verifying Checksum
+7a0ff23c5674: Download complete
+1f3e46996e29: Pull complete
+c194ee577201: Verifying Checksum
+c194ee577201: Download complete
+dcb620b4f4b2: Verifying Checksum
+dcb620b4f4b2: Download complete
+011a2216d755: Download complete
+6e870a59e383: Verifying Checksum
+6e870a59e383: Download complete
+f3474a68a80a: Verifying Checksum
+f3474a68a80a: Download complete
+4ab91b5750b7: Verifying Checksum
+4ab91b5750b7: Download complete
+42ccb426d0c7: Verifying Checksum
+42ccb426d0c7: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+7a0ff23c5674: Pull complete
+f3474a68a80a: Pull complete
+c194ee577201: Pull complete
+dcb620b4f4b2: Pull complete
+011a2216d755: Pull complete
+42ccb426d0c7: Pull complete
+6e870a59e383: Pull complete
+4ab91b5750b7: Pull complete
+Digest: sha256:7b9658fe6a132a8ffe07cd038e0f9fb2e5d33c08567de8a6dc934d6fa98d233a
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-28 01:09:04,448 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-28 01:09:04,499 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 2
+2025-01-28 01:09:25,629 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 2
+2025-01-28 01:10:27,994 - ai_security_analyzer.graphs - INFO - Actual token usage: 21797
+2025-01-28 01:10:28,000 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738026630.321935       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-01-28 01:10:34,614 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-28 01:10:34,663 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-28 01:10:48,364 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-28 01:10:59,015 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-28 01:13:47,862 - ai_security_analyzer.graphs - INFO - Actual token usage: 35332
+2025-01-28 01:13:47,874 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-28 01:13:52,476 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-28 01:13:52,527 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-28 01:14:03,522 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-28 01:14:19,479 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-28 01:17:00,487 - ai_security_analyzer.graphs - INFO - Actual token usage: 36725
+2025-01-28 01:17:00,499 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-28 01:17:05,068 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-28 01:17:05,118 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-01-28 01:17:28,261 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-01-28 01:17:52,257 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-01-28 01:18:04,121 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-01-28 01:19:35,108 - ai_security_analyzer.graphs - INFO - Actual token usage: 47063
+2025-01-28 01:19:35,120 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-28 01:19:39,731 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-28 01:19:39,780 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-28 01:19:50,066 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-28 01:20:06,355 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-28 01:22:32,337 - ai_security_analyzer.graphs - INFO - Actual token usage: 40634
+2025-01-28 01:22:32,349 - __main__ - INFO - AI Security Analyzer completed successfully
