@@ -1,0 +1,22 @@
+# Threat Model Analysis for dart-lang/http
+
+## Threat: [Insecure HTTP Connections (HTTP instead of HTTPS)](./threats/insecure_http_connections__http_instead_of_https_.md)
+
+Description: Attacker eavesdrops on network traffic because communication is unencrypted. They can intercept sensitive data like credentials, personal information, and application data transmitted between the client and server. Impact: Confidentiality breach, data theft, account compromise, privacy violation. Affected HTTP Component: Network Transport, URL Scheme Risk Severity: Critical Mitigation Strategies: Always use `https://` URLs for all requests. Implement server-side HTTPS redirection to automatically upgrade HTTP to HTTPS. Enforce HSTS (HTTP Strict Transport Security) on the server to instruct clients to always use HTTPS.
+
+## Threat: [TLS/SSL Stripping Attacks](./threats/tlsssl_stripping_attacks.md)
+
+Description: Attacker attempts to downgrade an HTTPS connection to HTTP, often by intercepting the initial HTTP redirect to HTTPS. This allows them to eavesdrop on unencrypted traffic after the downgrade. Impact: Confidentiality breach, data theft, account compromise, privacy violation. Affected HTTP Component: Network Transport, TLS Handshake Risk Severity: High Mitigation Strategies: Ensure secure server-side HTTPS redirection (e.g., using HTTP 301 or 302 with `Location` header pointing to `https://`). Implement HSTS on the server to prevent downgrade attacks.
+
+## Threat: [Insufficient TLS Configuration on Server](./threats/insufficient_tls_configuration_on_server.md)
+
+Description: Attacker exploits weak TLS configurations on the server (e.g., weak ciphers, outdated protocols) to compromise the encrypted connection. This can lead to decryption of traffic or Man-in-the-Middle attacks. While not a vulnerability in `dart-lang/http` itself, it directly impacts the security of HTTPS connections made by the library. Impact: Confidentiality breach, data theft, integrity compromise, Man-in-the-Middle attacks. Affected HTTP Component: Server-side TLS Configuration, Network Transport (as used by `dart-lang/http`) Risk Severity: High Mitigation Strategies: Configure the server with strong TLS settings, including: Using TLS 1.2 or higher. Disabling weak ciphers and protocols. Using strong key exchange algorithms. Regularly update server TLS libraries and configurations. Use server TLS configuration testing tools to assess security.
+
+## Threat: [Server-Side Request Forgery (SSRF) via Unvalidated URLs](./threats/server-side_request_forgery__ssrf__via_unvalidated_urls.md)
+
+Description: Attacker manipulates URL parameters or input fields that are used to construct URLs for `dart-lang/http` requests. They can force the application to make requests to internal resources or external services that the application should not access directly. Impact: Access to internal systems, information disclosure, denial of service, potential remote code execution (in vulnerable internal services). Affected HTTP Component: `http.Client.get`, `http.Client.post`, URL parsing and construction within application code. Risk Severity: High Mitigation Strategies: Thoroughly validate and sanitize all URL inputs before using them in `dart-lang/http` requests. Implement strict URL whitelisting to only allow requests to pre-approved domains or URL patterns. Avoid dynamic URL construction from untrusted sources whenever possible.
+
+## Threat: [Dependency Vulnerabilities in `dart-lang/http` or Dependencies](./threats/dependency_vulnerabilities_in__dart-langhttp__or_dependencies.md)
+
+Description: Security vulnerabilities are discovered in the `dart-lang/http` package itself or in its dependencies. Attackers can exploit these vulnerabilities if the application uses a vulnerable version of the library. Impact: Various impacts depending on the vulnerability, potentially including remote code execution, denial of service, or information disclosure. Affected HTTP Component: `dart-lang/http` library, its dependencies. Risk Severity: Varies (can be Critical to High depending on the specific vulnerability) Mitigation Strategies: Regularly update `dart-lang/http` and all project dependencies to the latest versions to patch known vulnerabilities. Use dependency scanning tools to automatically identify known vulnerabilities in project dependencies. Monitor security advisories and vulnerability databases for `dart-lang/http` and its ecosystem.
+
