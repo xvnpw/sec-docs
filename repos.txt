@@ -1,5 +1,3 @@
-java https://github.com/camunda/camunda-bpm-platform
-java https://github.com/conductor-oss/conductor
 java https://github.com/dbeaver/dbeaver
 java https://github.com/dromara/hutool
 java https://github.com/dropwizard/dropwizard
