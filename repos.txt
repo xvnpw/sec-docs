@@ -1,5 +1,3 @@
-go https://github.com/uber-go/zap
-go https://github.com/urfave/cli
 go https://github.com/usememos/memos
 go https://github.com/v2ray/v2ray-core
 go https://github.com/valyala/fasthttp
