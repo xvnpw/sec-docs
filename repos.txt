@@ -1,5 +1,3 @@
-javascript https://github.com/adam-p/markdown-here
-javascript https://github.com/addaleax/natives
 javascript https://github.com/adobe/brackets
 javascript https://github.com/airbnb/lottie-web
 javascript https://github.com/alvarotrigo/fullpage.js
