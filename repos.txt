@@ -1,5 +1,3 @@
-kotlin https://github.com/square/moshi
-kotlin https://github.com/square/okhttp
 kotlin https://github.com/square/okio
 kotlin https://github.com/square/picasso
 kotlin https://github.com/square/workflow-kotlin
