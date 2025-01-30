@@ -1,5 +1,3 @@
-javascript https://github.com/handlebars-lang/handlebars.js
-javascript https://github.com/hapijs/hapi
 javascript https://github.com/hexojs/hexo
 javascript https://github.com/iamkun/dayjs
 javascript https://github.com/ianstormtaylor/slate
