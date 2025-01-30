@@ -1,5 +1,3 @@
-javascript https://github.com/rocketchat/rocket.chat
-javascript https://github.com/semantic-org/semantic-ui
 javascript https://github.com/serverless/serverless
 javascript https://github.com/socketio/socket.io
 javascript https://github.com/sortablejs/sortable
