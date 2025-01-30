@@ -1,0 +1,15 @@
+# Attack Surface Analysis for jakewharton/rxbinding
+
+## Attack Surface: [1. Dependency Vulnerabilities (Transitive Dependencies - High/Critical)](./attack_surfaces/1__dependency_vulnerabilities__transitive_dependencies_-_highcritical_.md)
+
+Description: RxBinding relies on external libraries, primarily RxJava and potentially Android support/AndroidX libraries. If RxBinding depends on vulnerable versions of these libraries, applications using RxBinding become indirectly vulnerable. This is a direct consequence of RxBinding's dependency structure.
+*   RxBinding Contribution: RxBinding *directly* declares dependencies on other libraries.  Choosing to depend on specific versions, especially outdated ones, directly introduces the risk of inheriting vulnerabilities from those dependencies.  RxBinding updates are crucial to address these transitive dependency risks.
+*   Example: RxBinding declares a dependency on an older version of RxJava that is later discovered to have a critical remote code execution vulnerability. Applications including RxBinding with this vulnerable RxJava version are now susceptible to this RCE, even if the application code itself is flawless. An attacker could exploit this RxJava vulnerability by crafting specific inputs or interactions that trigger the vulnerable code path within RxJava, indirectly through the application's use of RxBinding.
+*   Impact:  Can range from denial of service and information disclosure to **remote code execution**, depending on the severity of the vulnerability in the transitive dependency.  A critical vulnerability in RxJava could have widespread and severe consequences for applications using RxBinding.
+*   Risk Severity: **High to Critical**, directly dependent on the severity of the vulnerability present in the transitive dependency. A remote code execution vulnerability would be considered Critical.
+*   Mitigation Strategies:
+    *   Prioritize RxBinding Updates:  **Immediately** update RxBinding to the latest stable version whenever updates are released. RxBinding updates often include updates to its dependencies to address known vulnerabilities.
+    *   Dependency Scanning Focused on RxBinding's Tree:  Utilize dependency scanning tools specifically configured to analyze the *entire dependency tree* originating from RxBinding. This ensures that vulnerabilities in *transitive* dependencies brought in by RxBinding are identified.
+    *   Monitor RxBinding Release Notes and Security Advisories:  Actively monitor RxBinding's release notes and any security advisories related to RxBinding or its dependencies. Pay close attention to announcements regarding dependency updates and vulnerability fixes.
+    *   Consider Dependency Pinning (with Caution): In specific, well-justified cases, consider pinning RxBinding to a specific version *after* verifying its dependency tree is secure and stable. However, be extremely cautious with pinning as it can prevent automatic security updates and requires diligent manual monitoring and updates.  Generally, staying on the latest stable RxBinding version is preferred.
+
