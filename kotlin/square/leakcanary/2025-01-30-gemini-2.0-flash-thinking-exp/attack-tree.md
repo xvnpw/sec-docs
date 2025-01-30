@@ -1,0 +1,75 @@
+# Attack Tree Analysis for square/leakcanary
+
+Objective: Gain unauthorized access to sensitive information or disrupt the application's functionality by exploiting vulnerabilities introduced or exposed by LeakCanary, focusing on the most probable and impactful attack vectors.
+
+## Attack Tree Visualization
+
+```
+Attack: Compromise Application using LeakCanary [CRITICAL]
+└─── AND 1: LeakCanary Enabled/Present in Vulnerable Context [CRITICAL]
+    ├─── OR 1.1: LeakCanary Enabled in Production Build [CRITICAL]
+    │   └─── AND 1.1.1: Accidental Inclusion in Production [CRITICAL]
+    │       └─── Leaf 1.1.1.1: Developer Mistake during Build Configuration [CRITICAL]
+    └─── OR 1.2: LeakCanary Functionality Exploited in Debug/Test Builds
+        └─── AND 1.2.1: Heap Dump Access
+            └─── OR 1.2.1.1: Local Device Access (Physical or ADB) [CRITICAL for Debug Exploitation]
+                └─── Leaf 1.2.1.1.2: Attacker Uses ADB Debugging Bridge [CRITICAL for Debug Exploitation]
+        └─── AND 1.2.2: Heap Dump Analysis for Sensitive Information [CRITICAL]
+            └─── Leaf 1.2.2.1: Attacker Analyzes Heap Dump to Extract Secrets, API Keys, User Data, Business Logic, etc. [CRITICAL]
+```
+
+## Attack Tree Path: [1. Attack: Compromise Application using LeakCanary [CRITICAL]](./attack_tree_paths/1__attack_compromise_application_using_leakcanary__critical_.md)
+
+*   **Description:** The ultimate goal of the attacker is to successfully compromise the application by exploiting weaknesses related to LeakCanary.
+*   **Attack Vector:** Exploiting vulnerabilities stemming from the presence and functionality of LeakCanary in vulnerable contexts, leading to information disclosure or disruption.
+
+## Attack Tree Path: [2. AND 1: LeakCanary Enabled/Present in Vulnerable Context [CRITICAL]](./attack_tree_paths/2__and_1_leakcanary_enabledpresent_in_vulnerable_context__critical_.md)
+
+*   **Description:**  LeakCanary must be active or its artifacts accessible for any related attack to succeed. This node represents the necessary precondition for exploitation.
+*   **Attack Vector:**  The application is built and deployed in a configuration where LeakCanary is either actively running or has left behind exploitable artifacts (like heap dumps).
+
+## Attack Tree Path: [3. OR 1.1: LeakCanary Enabled in Production Build [CRITICAL]](./attack_tree_paths/3__or_1_1_leakcanary_enabled_in_production_build__critical_.md)
+
+*   **Description:** The most critical vulnerability point. LeakCanary in production exposes the application to significant information disclosure risks.
+*   **Attack Vector:**  The application is mistakenly or intentionally built and released to production environments with LeakCanary enabled and functional.
+
+## Attack Tree Path: [4. AND 1.1.1: Accidental Inclusion in Production [CRITICAL]](./attack_tree_paths/4__and_1_1_1_accidental_inclusion_in_production__critical_.md)
+
+*   **Description:** The most common scenario leading to LeakCanary in production.
+*   **Attack Vector:**  Due to errors in build configuration or oversight, LeakCanary dependencies and initialization code are not properly excluded from the production build process.
+
+## Attack Tree Path: [5. Leaf 1.1.1.1: Developer Mistake during Build Configuration [CRITICAL]](./attack_tree_paths/5__leaf_1_1_1_1_developer_mistake_during_build_configuration__critical_.md)
+
+*   **Description:** The root cause of accidental production inclusion. Human error during the build setup process.
+*   **Attack Vector:** Developers fail to correctly configure build variants, flavors, or dependency management in Gradle (or other build systems) to exclude LeakCanary from release/production builds. This can be due to:
+    *   Lack of awareness of the security implications.
+    *   Complexity of build configurations.
+    *   Simple oversight or human error during rushed releases.
+
+## Attack Tree Path: [6. OR 1.2.1.1: Local Device Access (Physical or ADB) [CRITICAL for Debug Exploitation]](./attack_tree_paths/6__or_1_2_1_1_local_device_access__physical_or_adb___critical_for_debug_exploitation_.md)
+
+*   **Description:** A primary method for attackers to access heap dumps in debug/test environments.
+*   **Attack Vectors:**
+    *   **Leaf 1.2.1.1.2: Attacker Uses ADB Debugging Bridge [CRITICAL for Debug Exploitation]:**
+        *   **Attack Vector:** The attacker leverages the Android Debug Bridge (ADB) to connect to a device running a debug build of the application. This can be achieved through:
+            *   **Network ADB:** If ADB debugging over network is enabled and accessible (e.g., in a shared testing environment or if port forwarding is misconfigured).
+            *   **USB ADB:** If the attacker gains physical access to a device with USB debugging enabled and authorized their attacking machine.
+        *   **Exploitation:** Once connected via ADB, the attacker can use ADB commands to:
+            *   List files on the device and locate heap dumps generated by LeakCanary.
+            *   Pull heap dump files from the device to their local machine for analysis.
+
+## Attack Tree Path: [7. AND 1.2.2: Heap Dump Analysis for Sensitive Information [CRITICAL]](./attack_tree_paths/7__and_1_2_2_heap_dump_analysis_for_sensitive_information__critical_.md)
+
+*   **Description:**  The crucial step after obtaining a heap dump, regardless of how it was acquired.
+*   **Attack Vector:**  The attacker analyzes the obtained heap dump file to extract sensitive information present in the application's memory at the time of the dump.
+
+## Attack Tree Path: [8. Leaf 1.2.2.1: Attacker Analyzes Heap Dump to Extract Secrets, API Keys, User Data, Business Logic, etc. [CRITICAL]](./attack_tree_paths/8__leaf_1_2_2_1_attacker_analyzes_heap_dump_to_extract_secrets__api_keys__user_data__business_logic__22725b27.md)
+
+*   **Description:** The specific goal of heap dump analysis - to find and extract valuable information.
+*   **Attack Vectors:** Using heap analysis tools (like Android Studio's Memory Analyzer or dedicated heap dump analysis software), the attacker examines the heap dump for:
+    *   **Hardcoded Secrets:** API keys, encryption keys, passwords, or other credentials mistakenly hardcoded in the application's code and present in memory.
+    *   **User Data:**  Personal Identifiable Information (PII), session tokens, authentication credentials, or other user-specific data that might be temporarily stored in memory.
+    *   **Business Logic and Algorithms:**  Object structures, data flows, and code snippets that reveal proprietary algorithms or business logic, potentially leading to reverse engineering or circumvention of security measures.
+    *   **Database Credentials:** If the application maintains database connections in memory, database usernames and passwords might be exposed in the heap dump.
+    *   **Other Sensitive Information:** Any other data considered confidential or valuable that happens to be present in the application's memory at the time of the heap dump.
+
