@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/pinterest/ktlint",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-30T20:12:26Z",
+  "end_datetime": "2025-01-30T20:23:48Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "162721",
+  "mode": "github"
+}
