@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/rikkaapps/shizuku",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-30T20:32:18Z",
+  "end_datetime": "2025-01-30T20:43:25Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "150712",
+  "mode": "github"
+}
