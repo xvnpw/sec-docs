@@ -1,5 +1,3 @@
-php https://github.com/bookstackapp/bookstack
-php https://github.com/briannesbitt/carbon
 php https://github.com/cachethq/cachet
 php https://github.com/cakephp/cakephp
 php https://github.com/codeigniter4/codeigniter4
