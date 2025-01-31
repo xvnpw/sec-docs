@@ -1,0 +1,30 @@
+# Attack Surface Analysis for egulias/emailvalidator
+
+## Attack Surface: [Regular Expression Denial of Service (ReDoS)](./attack_surfaces/regular_expression_denial_of_service__redos_.md)
+
+*   **Description:** An attacker exploits computationally expensive regular expressions within `emailvalidator` to cause excessive CPU consumption, leading to service disruption and potential Denial of Service.
+    *   **EmailValidator Contribution:** `emailvalidator` utilizes regular expressions in its `RFCValidation` and `NoRFCWarningsValidation` strategies for parsing and validating complex email address syntax.  Specifically crafted, malicious email inputs can trigger inefficient backtracking in these regexes.
+    *   **Example:** An attacker sends a large volume of requests containing email addresses like `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!@example.com` (or similar patterns with repeated 'a's and specific special characters designed for ReDoS).  Processing these emails consumes excessive server CPU, making the application unresponsive to legitimate users and potentially crashing the service.
+    *   **Impact:** **Critical**. Denial of Service (DoS), complete application downtime, resource exhaustion, significant financial loss due to service unavailability, reputational damage.
+    *   **Risk Severity:** **High to Critical** (Critical if application is highly critical and vulnerable to sustained DoS).
+    *   **Mitigation Strategies:**
+        *   **Regularly update `emailvalidator`:** Ensure you are using the latest version of the library, as updates may include improvements to regular expressions and ReDoS vulnerability fixes.
+        *   **Implement request rate limiting and input sanitization:** Limit the number of email validation requests from a single source and sanitize email inputs to remove or neutralize potentially malicious patterns before validation.
+        *   **Set aggressive timeouts for validation processes:** Implement strict timeouts for email validation operations to prevent long-running regex evaluations from consuming resources indefinitely. If validation takes longer than the timeout, fail the request.
+        *   **Consider alternative validation strategies:** If strict RFC compliance is not absolutely necessary for your use case, explore using simpler, less regex-intensive validation strategies within `emailvalidator` or consider a hybrid approach that prioritizes performance for common cases and uses more robust validation only when needed.
+        *   **Deploy Web Application Firewall (WAF):** A WAF can be configured to detect and block suspicious patterns in email address inputs that are known to trigger ReDoS vulnerabilities.
+
+## Attack Surface: [Input Validation Bypass leading to Security Vulnerabilities](./attack_surfaces/input_validation_bypass_leading_to_security_vulnerabilities.md)
+
+*   **Description:** Logic flaws or inconsistencies in `emailvalidator`'s RFC interpretation or implementation allow invalid email addresses to be incorrectly validated as valid. This bypass can be exploited to circumvent security controls that rely on email validation.
+    *   **EmailValidator Contribution:**  While aiming for RFC compliance, `emailvalidator`'s validation logic might contain subtle errors or misinterpretations of complex or edge-case email address syntax rules. This can lead to accepting malformed or malicious email addresses that should be rejected.
+    *   **Example:** An attacker discovers an email address format with specific character combinations or encoding (e.g., exploiting nuances in internationalized domain names or unusual quoting) that `emailvalidator` incorrectly validates as valid. This allows them to bypass email format checks in critical security functions like account registration, password reset, or data modification, potentially leading to account takeover or data breaches if further application logic relies on the flawed validation. For instance, if an application uses email validation to prevent duplicate accounts and a bypass allows creating multiple accounts with variations of an invalid email, it can be exploited.
+    *   **Impact:** **High to Critical**. Security bypass, potential for account takeover, unauthorized access, data manipulation, or injection vulnerabilities if the bypassed email address is used in further application processing without proper sanitization. The severity depends on the criticality of the security controls relying on email validation.
+    *   **Risk Severity:** **High to Critical** (Critical if bypass directly leads to account compromise or significant data breaches).
+    *   **Mitigation Strategies:**
+        *   **Rigorous testing with diverse and malicious email inputs:**  Thoroughly test `emailvalidator` with a comprehensive suite of valid, invalid, and intentionally malicious email addresses, including edge cases, internationalized addresses, and addresses designed to exploit known validation weaknesses.
+        *   **Compare validation results with multiple validators and RFC specifications:** Cross-reference `emailvalidator`'s validation outcomes with other reputable email validation libraries and the official RFC specifications to identify discrepancies and potential vulnerabilities.
+        *   **Implement server-side email verification (for critical operations):** For security-sensitive operations like account creation or password resets, implement server-side email verification (e.g., sending a confirmation link to the provided email address) as a crucial second layer of validation that goes beyond format checking.
+        *   **Apply principle of least trust:** Do not solely rely on `emailvalidator` for all security checks related to email addresses. Treat email addresses as untrusted input throughout your application and implement robust input sanitization and output encoding wherever email addresses are used.
+        *   **Stay updated with library updates and security advisories:**  Monitor `egulias/emailvalidator`'s release notes and security advisories for bug fixes and security patches related to validation logic and apply updates promptly.
+
