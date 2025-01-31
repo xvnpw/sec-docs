@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/laravel/laravel",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-01-31T16:19:57Z",
+  "end_datetime": "2025-01-31T16:37:13Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "214849",
+  "mode": "github"
+}
