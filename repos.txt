@@ -1,5 +1,3 @@
-php https://github.com/reactphp/reactphp
-php https://github.com/roots/sage
 php https://github.com/seldaek/monolog
 php https://github.com/serbanghita/mobile-detect
 php https://github.com/slimphp/slim
