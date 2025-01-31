@@ -1,5 +1,3 @@
-objectivec https://github.com/jverdi/jvfloatlabeledtextfield
-objectivec https://github.com/jverkoey/nimbus
 objectivec https://github.com/kanyun-inc/ytknetwork
 objectivec https://github.com/kevinzhow/pnchart
 objectivec https://github.com/kif-framework/kif
