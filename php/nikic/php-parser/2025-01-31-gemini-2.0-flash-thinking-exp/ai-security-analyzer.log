@@ -1,0 +1,98 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+9c806be0dca0: Pulling fs layer
+948857043caf: Pulling fs layer
+9f1716db02ca: Pulling fs layer
+fbe1499530f8: Pulling fs layer
+3e1ae3bdae2d: Pulling fs layer
+f630eeda2583: Pulling fs layer
+573a00d5eddb: Pulling fs layer
+9c806be0dca0: Waiting
+948857043caf: Waiting
+9f1716db02ca: Waiting
+fbe1499530f8: Waiting
+3e1ae3bdae2d: Waiting
+f630eeda2583: Waiting
+573a00d5eddb: Waiting
+5c3947958a83: Waiting
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Pull complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+9c806be0dca0: Verifying Checksum
+9c806be0dca0: Download complete
+9f1716db02ca: Verifying Checksum
+9f1716db02ca: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+948857043caf: Verifying Checksum
+948857043caf: Download complete
+f630eeda2583: Verifying Checksum
+f630eeda2583: Download complete
+fbe1499530f8: Verifying Checksum
+fbe1499530f8: Download complete
+573a00d5eddb: Download complete
+dfb81f221332: Pull complete
+3e1ae3bdae2d: Verifying Checksum
+3e1ae3bdae2d: Download complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+9c806be0dca0: Pull complete
+948857043caf: Pull complete
+9f1716db02ca: Pull complete
+fbe1499530f8: Pull complete
+3e1ae3bdae2d: Pull complete
+f630eeda2583: Pull complete
+573a00d5eddb: Pull complete
+Digest: sha256:fcdf5a3dc9e76972a79a681feea9f72a5bdb7a561a00036a01d2a35c73e2f1db
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-31 18:23:48,910 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 18:23:48,971 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-01-31 18:24:55,177 - ai_security_analyzer.graphs - INFO - Actual token usage: 15337
+2025-01-31 18:24:55,185 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738347897.419460       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-01-31 18:25:01,677 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 18:25:01,731 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-31 18:25:16,748 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-31 18:25:34,577 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-31 18:25:43,201 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 18:26:34,412 - ai_security_analyzer.graphs - INFO - Actual token usage: 13448
+2025-01-31 18:26:34,417 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-31 18:26:39,148 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 18:26:39,203 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-31 18:27:00,123 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-31 18:27:00,258 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 18:27:16,751 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-31 18:27:43,347 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 18:27:45,544 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+2025-01-31 18:27:45,546 - __main__ - ERROR - Application error: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. You can try to run with --resume to resume from last checkpoint.
+2025-01-31 18:28:00,192 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 18:28:00,252 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-31 18:28:22,051 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-31 18:28:38,884 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-31 18:29:04,919 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 18:30:05,677 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 18:30:36,468 - ai_security_analyzer.graphs - INFO - Actual token usage: 28677
+2025-01-31 18:30:36,477 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-31 18:30:41,120 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 18:30:41,176 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-01-31 18:31:05,305 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-01-31 18:31:29,420 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-01-31 18:31:57,688 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-01-31 18:32:09,649 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 18:33:25,505 - ai_security_analyzer.graphs - INFO - Actual token usage: 46899
+2025-01-31 18:33:25,517 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-31 18:33:30,104 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 18:33:30,158 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-31 18:33:43,819 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-31 18:34:11,095 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-31 18:35:23,143 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 18:36:15,241 - ai_security_analyzer.graphs - INFO - Actual token usage: 33763
+2025-01-31 18:36:15,251 - __main__ - INFO - AI Security Analyzer completed successfully
