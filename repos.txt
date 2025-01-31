@@ -1,5 +1,3 @@
-objectivec https://github.com/swisspol/gcdwebserver
-objectivec https://github.com/tonymillion/reachability
 objectivec https://github.com/tttattributedlabel/tttattributedlabel
 objectivec https://github.com/vicc/chameleon
 objectivec https://github.com/wenchaod/fscalendar
