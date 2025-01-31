@@ -1,5 +1,3 @@
-objectivec https://github.com/marcuswestin/webviewjavascriptbridge
-objectivec https://github.com/matthewyork/datetools
 objectivec https://github.com/mortimergoro/mgswipetablecell
 objectivec https://github.com/mutualmobile/mmdrawercontroller
 objectivec https://github.com/mwaterfall/mwphotobrowser
