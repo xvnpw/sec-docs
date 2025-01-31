@@ -1,0 +1,97 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+9c806be0dca0: Pulling fs layer
+948857043caf: Pulling fs layer
+9f1716db02ca: Pulling fs layer
+fbe1499530f8: Pulling fs layer
+3e1ae3bdae2d: Pulling fs layer
+f630eeda2583: Pulling fs layer
+573a00d5eddb: Pulling fs layer
+9c806be0dca0: Waiting
+5c3947958a83: Waiting
+9f1716db02ca: Waiting
+fbe1499530f8: Waiting
+948857043caf: Waiting
+3e1ae3bdae2d: Waiting
+f630eeda2583: Waiting
+573a00d5eddb: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+9c806be0dca0: Verifying Checksum
+9c806be0dca0: Download complete
+1f3e46996e29: Pull complete
+9f1716db02ca: Verifying Checksum
+9f1716db02ca: Download complete
+fbe1499530f8: Verifying Checksum
+fbe1499530f8: Download complete
+f630eeda2583: Verifying Checksum
+f630eeda2583: Download complete
+948857043caf: Verifying Checksum
+948857043caf: Download complete
+573a00d5eddb: Verifying Checksum
+573a00d5eddb: Download complete
+3e1ae3bdae2d: Verifying Checksum
+3e1ae3bdae2d: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+9c806be0dca0: Pull complete
+948857043caf: Pull complete
+9f1716db02ca: Pull complete
+fbe1499530f8: Pull complete
+3e1ae3bdae2d: Pull complete
+f630eeda2583: Pull complete
+573a00d5eddb: Pull complete
+Digest: sha256:fcdf5a3dc9e76972a79a681feea9f72a5bdb7a561a00036a01d2a35c73e2f1db
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-01-31 16:20:13,154 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 16:20:13,212 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-01-31 16:20:36,557 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 16:20:38,843 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+2025-01-31 16:20:38,845 - __main__ - ERROR - Application error: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738340441.101430       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-01-31 16:20:55,424 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 16:20:55,481 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-01-31 16:20:55,698 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 16:21:55,500 - ai_security_analyzer.graphs - INFO - Actual token usage: 13238
+2025-01-31 16:21:55,505 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738340517.784300       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-01-31 16:22:02,078 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 16:22:02,132 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-31 16:22:23,787 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-31 16:22:34,418 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-31 16:22:34,673 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 16:22:56,483 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting.
+2025-01-31 16:24:47,438 - ai_security_analyzer.graphs - INFO - Actual token usage: 31135
+2025-01-31 16:24:47,447 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-31 16:24:52,066 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 16:24:52,121 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-31 16:25:09,350 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-31 16:25:25,436 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-31 16:28:36,418 - ai_security_analyzer.graphs - INFO - Actual token usage: 43674
+2025-01-31 16:28:36,431 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-31 16:28:41,005 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 16:28:41,059 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-01-31 16:29:07,125 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-01-31 16:29:26,739 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-01-31 16:29:39,906 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-01-31 16:33:23,657 - ai_security_analyzer.graphs - INFO - Actual token usage: 71730
+2025-01-31 16:33:23,675 - __main__ - INFO - AI Security Analyzer completed successfully
+2025-01-31 16:33:28,193 - __main__ - INFO - Starting AI Security Analyzer
+2025-01-31 16:33:28,246 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-01-31 16:33:43,283 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-01-31 16:34:06,174 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-01-31 16:36:00,920 - ai_security_analyzer.graphs - INFO - Actual token usage: 34962
+2025-01-31 16:36:00,930 - __main__ - INFO - AI Security Analyzer completed successfully
