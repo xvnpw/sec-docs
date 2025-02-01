@@ -1,5 +1,3 @@
-python https://github.com/python-telegram-bot/python-telegram-bot
-python https://github.com/pytorch/pytorch
 python https://github.com/quivrhq/quivr
 python https://github.com/ray-project/ray
 python https://github.com/saltstack/salt
