@@ -1,5 +1,3 @@
-python https://github.com/home-assistant/core
-python https://github.com/httpie/cli
 python https://github.com/keras-team/keras
 python https://github.com/lllyasviel/fooocus
 python https://github.com/locustio/locust
