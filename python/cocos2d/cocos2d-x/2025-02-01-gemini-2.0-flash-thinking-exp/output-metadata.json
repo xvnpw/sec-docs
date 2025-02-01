@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/cocos2d/cocos2d-x",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-01T04:38:48Z",
+  "end_datetime": "2025-02-01T04:51:50Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "187227",
+  "mode": "github"
+}
