@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/ray-project/ray",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-01T14:53:33Z",
+  "end_datetime": "2025-02-01T15:16:39Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "287635",
+  "mode": "github"
+}
