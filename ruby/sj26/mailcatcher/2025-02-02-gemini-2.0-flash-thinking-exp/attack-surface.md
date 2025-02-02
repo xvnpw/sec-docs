@@ -1,0 +1,28 @@
+# Attack Surface Analysis for sj26/mailcatcher
+
+## Attack Surface: [Unauthenticated Web Interface Access](./attack_surfaces/unauthenticated_web_interface_access.md)
+
+*   **Description:** Mailcatcher's web interface, by default, lacks any authentication or authorization. This allows anyone who can reach the web interface port to view all captured emails.
+    *   **Mailcatcher Contribution:** Mailcatcher *directly* introduces this attack surface as a core design feature, prioritizing ease of use in development over security for the web UI.
+    *   **Example:** A development environment using Mailcatcher is accessible on a corporate network. An employee, not involved in the specific project, browses to the Mailcatcher web interface URL and gains access to emails containing sensitive database credentials or API keys used in the application under development.
+    *   **Impact:** **Information Disclosure** of highly sensitive data contained within captured emails. This can include credentials, personal information, application secrets, and debugging details, potentially leading to further compromise of development systems or data.
+    *   **Risk Severity:** **High** to **Critical**, depending on the sensitivity of data handled in the development environment and the accessibility of the web interface. If sensitive data is processed and the interface is easily reachable within a wider network, the risk is **Critical**.
+    *   **Mitigation Strategies:**
+        *   **Strict Network Segmentation:** Implement robust firewall rules and network access control lists (ACLs) to restrict access to the Mailcatcher web interface port (typically 1080) to only explicitly authorized development machines or a very limited, isolated development network segment.
+        *   **Localhost Binding (Web Interface):** Configure Mailcatcher to bind its web interface to `localhost` (127.0.0.1) by default. This limits access to only the machine running Mailcatcher itself. Access from other machines would require explicit port forwarding or proxying, which should be avoided unless absolutely necessary and carefully controlled.
+        *   **Avoid Public Exposure (Crucial):**  Never, under any circumstances, expose the Mailcatcher web interface directly to the public internet. This is a critical security misconfiguration.
+        *   **Reverse Proxy with Strong Authentication (Advanced, but Recommended for Shared Environments):** In development environments shared by multiple teams or with stricter security requirements, consider placing a reverse proxy (like Nginx or Apache) in front of Mailcatcher. Configure the reverse proxy to enforce strong authentication (e.g., username/password, multi-factor authentication) before allowing access to the Mailcatcher web interface.
+
+## Attack Surface: [Unauthenticated SMTP Server Access leading to Information Disclosure via Web Interface](./attack_surfaces/unauthenticated_smtp_server_access_leading_to_information_disclosure_via_web_interface.md)
+
+*   **Description:** Mailcatcher's SMTP server is designed to be open and accept emails from any source without authentication. While the SMTP server itself might seem low risk, it becomes a high-risk attack vector when combined with the unauthenticated web interface. An attacker can inject emails containing malicious or sensitive content, which are then readily viewable by anyone accessing the web interface.
+    *   **Mailcatcher Contribution:** Mailcatcher *directly* introduces this as a design feature of its SMTP component. The lack of SMTP authentication, coupled with the unauthenticated web UI, creates a pathway for information disclosure.
+    *   **Example:** An attacker on the same network as a Mailcatcher instance sends emails to the open SMTP port (1025). These emails are crafted to contain sensitive information disguised as legitimate test data or even malicious content designed to trick developers. Any developer accessing the Mailcatcher web interface will then be able to view these injected emails and potentially be exposed to the sensitive or malicious content.
+    *   **Impact:** **Information Disclosure** of sensitive data injected via SMTP and viewed through the unauthenticated web interface. This can be used to exfiltrate data from other systems by encoding it in emails, or to plant misleading information in the development environment.
+    *   **Risk Severity:** **High**. While the SMTP server itself being open might seem like a lower risk, the *consequence* of this open access, when combined with the unauthenticated web interface, elevates the risk to **High** due to the potential for information disclosure.
+    *   **Mitigation Strategies:**
+        *   **Strict Network Segmentation (SMTP Port):**  Similar to the web interface, restrict access to the SMTP port (1025) using firewalls and ACLs to only allow connections from authorized development machines or the isolated development network.
+        *   **Localhost Binding (SMTP Server):** Configure Mailcatcher to bind its SMTP server to `localhost` (127.0.0.1) by default. This prevents external systems from directly sending emails to Mailcatcher unless explicitly configured otherwise (which should be avoided).
+        *   **Combined Web/SMTP Network Isolation:** Ensure that both the web interface and SMTP ports are protected by the same robust network segmentation strategy.  Isolate the entire Mailcatcher instance within a secure development network.
+        *   **Regular Review of Captured Emails (Security Awareness):** Encourage developers to be aware of the potential for injected emails and to exercise caution when viewing email content in the Mailcatcher web interface, especially if the network is not strictly controlled.
+
