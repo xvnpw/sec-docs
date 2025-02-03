@@ -1,5 +1,3 @@
-cpp https://github.com/yhirose/cpp-httplib
-csharp https://github.com/aspnet/entityframeworkcore
 csharp https://github.com/cefsharp/cefsharp
 csharp https://github.com/dotnet/efcore
 csharp https://github.com/dotnet/orleans
