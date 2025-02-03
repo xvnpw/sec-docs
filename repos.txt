@@ -1,5 +1,3 @@
-c https://github.com/openssl/openssl
-c https://github.com/postgres/postgres
 c https://github.com/taosdata/tdengine
 c https://github.com/valkey-io/valkey
 Checking 1030 repositories...
