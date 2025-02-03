@@ -1,0 +1,14 @@
+# Threat Model Analysis for scalessec/toast-swift
+
+## Threat: [Denial of Service (DoS) due to Inefficient Toast Handling in toast-swift](./threats/denial_of_service__dos__due_to_inefficient_toast_handling_in_toast-swift.md)
+
+*   **Description:** An attacker could exploit potential inefficiencies within the `toast-swift` library in handling a large number of toast requests. If `toast-swift` is not optimized for rapid or concurrent toast displays, triggering a moderate volume of toast messages could overwhelm the library's resources (e.g., memory, UI rendering thread). This could lead to the application becoming unresponsive, freezing, or even crashing due to resource exhaustion within `toast-swift` itself. The attacker could achieve this by exploiting application logic that allows them to trigger toast messages, even without directly interacting with `toast-swift` API, but the vulnerability lies in `toast-swift`'s handling of these requests.
+*   **Impact:** Application becomes unresponsive or crashes, resulting in a denial of service for legitimate users. This disrupts application functionality and user experience. In critical applications, this could lead to significant operational disruptions.
+*   **Affected Component:** `toast-swift` library - specifically the `Toast` module responsible for managing toast display and potentially the `ToastView` component if rendering is inefficient.
+*   **Risk Severity:** High
+*   **Mitigation Strategies:**
+    *   **Library Optimization (toast-swift developers):** If this vulnerability is confirmed to be within `toast-swift`, the library developers should optimize the library's code for efficient handling of toast requests, including memory management and UI rendering. This might involve implementing internal queueing, throttling, or resource pooling within `toast-swift`.
+    *   **Rate Limiting (Application Developers):** Even if `toast-swift` is optimized, application developers should still implement rate limiting on the triggering of toast messages within their application logic as a defense-in-depth measure. This prevents excessive toast requests from being sent to `toast-swift` in the first place, regardless of the library's efficiency.
+    *   **Thorough Testing (Application Developers):**  Perform thorough performance testing and stress testing of the application, specifically focusing on scenarios that trigger toast messages. Monitor resource usage (CPU, memory, UI thread) when displaying a large number of toasts to identify potential performance bottlenecks related to `toast-swift`.
+    *   **Consider Alternative Libraries (Application Developers):** If performance issues with `toast-swift` are severe and cannot be mitigated, consider evaluating and switching to alternative toast notification libraries that are known to be more performant and resource-efficient.
+
