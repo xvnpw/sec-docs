@@ -1,5 +1,3 @@
-go https://github.com/mozilla/sops
-go https://github.com/opentofu/opentofu
 go https://github.com/photoprism/photoprism
 go https://github.com/revel/revel
 go https://github.com/rook/rook
