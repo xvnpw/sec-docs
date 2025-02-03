@@ -1,5 +1,3 @@
-typescript https://github.com/akveo/ngx-admin
-typescript https://github.com/angular/angular
 typescript https://github.com/ant-design/ant-design
 typescript https://github.com/ant-design/ant-design-pro
 typescript https://github.com/apollographql/apollo-client
