@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/nestjs/nest",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-03T09:22:26Z",
+  "end_datetime": "2025-02-03T09:42:31Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "257260",
+  "mode": "github"
+}
