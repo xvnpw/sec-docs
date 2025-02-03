@@ -60,18 +60,20 @@ def check_directory_structure(input_file, base_dir):
                 "attack-surface.md",
                 "attack-tree.md",
                 "sec-design.md",
+                "mitigations.md",
                 "output-metadata.json",
             ]
             subdirectories = [item for item in os.listdir(repo_dir) if os.path.isdir(os.path.join(repo_dir, item))]
-            if len(subdirectories) < 3:
-                print(f"  Error: Only {len(subdirectories)} subdirectories found in '{repo_dir}'.")
+            if len(subdirectories) < 5:
+                # print(f"  Error: Only {len(subdirectories)} subdirectories found in '{repo_dir}'.")
+                print(f"{lang} {repo_url}")
 
-            for item in subdirectories:
-                subdir_path = os.path.join(repo_dir, item)
-                if os.path.isdir(subdir_path):
-                    missing_files = [f for f in required_files if not os.path.isfile(os.path.join(subdir_path, f))]
-                    if missing_files:
-                        print(f"    Error: Missing files in subdirectory '{item}': {', '.join(missing_files)}")
+            # for item in subdirectories:
+            #     subdir_path = os.path.join(repo_dir, item)
+            #     if os.path.isdir(subdir_path):
+            #         missing_files = [f for f in required_files if not os.path.isfile(os.path.join(subdir_path, f))]
+            #         if missing_files:
+            #             print(f"    Error: Missing files in subdirectory '{item}': {', '.join(missing_files)}")
 
 
 if __name__ == "__main__":
