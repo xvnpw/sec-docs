@@ -1,5 +1,3 @@
-php https://github.com/phpoffice/phpexcel
-php https://github.com/phpoffice/phppresentation
 php https://github.com/phpoffice/phpspreadsheet
 php https://github.com/prestashop/prestashop
 php https://github.com/ramsey/uuid
