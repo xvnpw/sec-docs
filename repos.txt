@@ -1,2 +1,0 @@
-typescript https://github.com/typeorm/typeorm
-typescript https://github.com/vuejs/vue
