@@ -1,5 +1,3 @@
-typescript https://github.com/angular/angular
-typescript https://github.com/apollographql/apollo-client
 typescript https://github.com/oclif/oclif
 typescript https://github.com/prisma/prisma
 typescript https://github.com/typeorm/typeorm
