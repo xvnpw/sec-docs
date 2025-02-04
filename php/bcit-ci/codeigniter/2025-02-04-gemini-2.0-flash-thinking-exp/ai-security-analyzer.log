@@ -1,0 +1,159 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+eb7f4abcfb5e: Pulling fs layer
+ceae46ee0734: Pulling fs layer
+7c32705644fa: Pulling fs layer
+3c2e790aea1a: Pulling fs layer
+5329d4af5112: Pulling fs layer
+2a324bfb2360: Pulling fs layer
+18b969ecad97: Pulling fs layer
+7c32705644fa: Waiting
+2a324bfb2360: Waiting
+5c3947958a83: Waiting
+18b969ecad97: Waiting
+eb7f4abcfb5e: Waiting
+ceae46ee0734: Waiting
+5329d4af5112: Waiting
+3c2e790aea1a: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+eb7f4abcfb5e: Verifying Checksum
+eb7f4abcfb5e: Download complete
+7c32705644fa: Verifying Checksum
+7c32705644fa: Download complete
+1f3e46996e29: Pull complete
+ceae46ee0734: Download complete
+3c2e790aea1a: Verifying Checksum
+3c2e790aea1a: Download complete
+2a324bfb2360: Verifying Checksum
+2a324bfb2360: Download complete
+18b969ecad97: Verifying Checksum
+18b969ecad97: Download complete
+5329d4af5112: Verifying Checksum
+5329d4af5112: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+eb7f4abcfb5e: Pull complete
+ceae46ee0734: Pull complete
+7c32705644fa: Pull complete
+3c2e790aea1a: Pull complete
+5329d4af5112: Pull complete
+2a324bfb2360: Pull complete
+18b969ecad97: Pull complete
+Digest: sha256:de66ecfcbf9c9d2b64496e11dbf7e07822baa8dc5c9bfcf52b16859b8e86e322
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-04 07:07:04,486 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 07:07:04,546 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-04 07:07:52,544 - ai_security_analyzer.graphs - INFO - Actual token usage: 13036
+2025-02-04 07:07:52,549 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738652874.862169       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 07:07:59,194 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 07:07:59,249 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 07:08:16,213 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 07:08:28,318 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 07:11:31,403 - ai_security_analyzer.graphs - INFO - Actual token usage: 43802
+2025-02-04 07:11:31,418 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738653093.799490       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 07:11:38,064 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 07:11:38,120 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 07:11:50,165 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 07:12:02,993 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 07:14:04,505 - ai_security_analyzer.graphs - INFO - Actual token usage: 30956
+2025-02-04 07:14:04,513 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738653246.917658       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 07:14:11,363 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 07:14:11,423 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-04 07:14:38,905 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-04 07:15:08,174 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-04 07:15:31,957 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-04 07:16:01,702 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "attack_tree_objective": "Compromise CodeIgniter Application by Exploiting CodeIgniter-Specific Weaknesses.",
+  "attack_sub_tree_visualization": "* [CRITICAL NODE] Compromise CodeIgniter Application\n    * [1.0] [CRITICAL NODE] Exploit Configuration Vulnerabilities [HIGH-RISK PATH]\n        * [1.1] [CRITICAL NODE] Exposed Configuration Files [HIGH-RISK PATH]\n            * [1.1.1] Direct Access to config/ files [HIGH-RISK PATH]\n                * [1.1.1.A] [CRITICAL NODE] Misconfigured web server (e.g., Apache/Nginx not blocking access) [HIGH-RISK PATH]\n        * [1.1.2.A] [CRITICAL NODE] Verbose error reporting enabled in production\n    * [2.0] [CRITICAL NODE] Exploit Input Validation and Sanitization Issues (Developer Misuse of CI Features) [HIGH-RISK PATH]\n        * [2.1] [CRITICAL NODE] SQL Injection Vulnerabilities [HIGH-RISK PATH]\n            * [2.1.1] Lack of Input Sanitization in Database Queries [HIGH-RISK PATH]\n                * [2.1.1.A] [CRITICAL NODE] Directly embedding user input into raw SQL queries (e.g., `query(\"SELECT * FROM users WHERE username = '".$_GET['username']."'\")`) [HIGH-RISK PATH]\n        * [2.2] [CRITICAL NODE] Cross-Site Scripting (XSS) Vulnerabilities [HIGH-RISK PATH]\n            * [2.2.1] [CRITICAL NODE] Unescaped Output of User Input [HIGH-RISK PATH]\n                * [2.2.1.A] [CRITICAL NODE] Displaying user-provided data directly in views without using `esc()` or equivalent [HIGH-RISK PATH]\n            * [2.2.2] Stored XSS [HIGH-RISK PATH]\n                * [2.2.2.A] [CRITICAL NODE] Storing unsanitized user input in the database and displaying it later [HIGH-RISK PATH]\n            * [2.2.3] Reflected XSS [HIGH-RISK PATH]\n                * [2.2.3.A] [CRITICAL NODE] Injecting malicious scripts via URL parameters or form submissions that are immediately reflected in the response [HIGH-RISK PATH]\n        * [2.3.1.A] [CRITICAL NODE] Passing unsanitized user input to functions like `exec()`, `shell_exec()`, `system()`\n    * [3.0] Exploit Session Management Issues (Developer Misuse or Configuration)\n        * [3.1.3] [CRITICAL NODE] Cross-Site Scripting (XSS) leading to Session Hijacking [HIGH-RISK PATH]\n            * [3.1.3.A] [CRITICAL NODE] Exploiting XSS vulnerabilities (see 2.2) to steal session cookies [HIGH-RISK PATH]\n        * [3.1.4.A] [CRITICAL NODE] Missing `HttpOnly` flag allowing JavaScript access to session cookies (if not properly configured)\n    * [4.0] Exploit Routing and URI Handling Issues (Less common in well-structured CI apps)\n        * [4.1] Insecure Direct Object Reference (IDOR) via URI Manipulation [HIGH-RISK PATH]\n            * [4.1.1] [CRITICAL NODE] Predictable URI structures allowing access to unauthorized resources [HIGH-RISK PATH]\n                * [4.1.1.A] [CRITICAL NODE] Using sequential or easily guessable IDs in URIs without proper authorization checks [HIGH-RISK PATH]\n            * [4.1.2] [CRITICAL NODE] Lack of Authorization Checks in Controllers [HIGH-RISK PATH]\n                * [4.1.2.A] Controllers not properly verifying user permissions based on URI parameters [HIGH-RISK PATH]\n    * [5.0] [CRITICAL NODE] Exploit Vulnerabilities in Third-Party Libraries/Dependencies (Indirect CI Threat) [HIGH-RISK PATH]\n        * [5.1] [CRITICAL NODE] Outdated Libraries [HIGH-RISK PATH]\n            * [5.1.1] [CRITICAL NODE] Using outdated versions of CodeIgniter itself [HIGH-RISK PATH]\n                * [5.1.1.A] [CRITICAL NODE] Not applying security patches and updates to CodeIgniter framework [HIGH-RISK PATH]\n            * [5.1.2] [CRITICAL NODE] Vulnerable Composer Packages [HIGH-RISK PATH]\n                * [5.1.2.A] Using vulnerable versions of libraries managed by Composer that are used within the CodeIgniter application [HIGH-RISK PATH]\n                * [5.1.2.B] Not regularly updating Composer dependencies to patch known vulnerabilities [HIGH-RISK PATH]",
+  "attack_sub_tree_paths": [
+    {
+      "title": "[1.0] Exploit Configuration Vulnerabilities [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers target misconfigurations that expose sensitive information or allow unauthorized access.\n    * **Critical Nodes within this path:**\n        * **[1.1] Exposed Configuration Files [HIGH-RISK PATH]:**\n            * **Attack Vector:** Direct access to configuration files (like `.env`, `database.php`) reveals database credentials, API keys, and other sensitive settings.\n                * **[1.1.1.A] Misconfigured web server [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Web server (Apache/Nginx) not configured to block access to configuration files, allowing direct HTTP requests to these files.\n        * **[1.1.2.A] Verbose error reporting enabled in production:**\n            * **Attack Vector:** Production environment displays detailed error messages, leaking server paths, configuration details, and potentially database query structures, aiding further attacks."
+    },
+    {
+      "title": "[2.0] Exploit Input Validation and Sanitization Issues [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers exploit insufficient input validation and output sanitization in application code, leading to injection vulnerabilities.\n    * **Critical Nodes within this path:**\n        * **[2.1] SQL Injection Vulnerabilities [HIGH-RISK PATH]:**\n            * **Attack Vector:**  Exploiting flaws in database queries to inject malicious SQL code, allowing unauthorized data access, modification, or deletion.\n                * **[2.1.1.A] Directly embedding user input into raw SQL queries [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Developers directly concatenate user-provided input into SQL queries without proper sanitization or parameterized queries, creating a direct SQL injection vulnerability.\n        * **[2.2] Cross-Site Scripting (XSS) Vulnerabilities [HIGH-RISK PATH]:**\n            * **Attack Vector:** Injecting malicious scripts into web pages viewed by other users, enabling session hijacking, defacement, or phishing attacks.\n                * **[2.2.1.A] Displaying user-provided data directly in views without using `esc()` [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Developers fail to properly escape user-generated content before displaying it in HTML views, allowing execution of injected JavaScript code in users' browsers.\n                * **[2.2.2.A] Storing unsanitized user input in the database and displaying it later [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Unsanitized user input is stored in the database and then displayed to other users without proper escaping, leading to persistent XSS attacks.\n                * **[2.2.3.A] Injecting malicious scripts via URL parameters [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Malicious scripts are injected through URL parameters or form submissions and immediately reflected in the response without proper sanitization, leading to reflected XSS attacks.\n        * **[2.3.1.A] Passing unsanitized user input to functions like `exec()`, `shell_exec()`, `system()`:**\n            * **Attack Vector:**  Developers use system command execution functions and directly pass user-controlled input without sanitization, allowing attackers to execute arbitrary commands on the server."
+    },
+    {
+      "title": "[3.0] Exploit Session Management Issues:",
+      "text": "* **Attack Vector:** Attackers target weaknesses in session handling to hijack user sessions and gain unauthorized access.\n    * **Critical Nodes within this path:**\n        * **[3.1.3] Cross-Site Scripting (XSS) leading to Session Hijacking [HIGH-RISK PATH]:**\n            * **Attack Vector:** Exploiting XSS vulnerabilities (described in 2.2) to steal session cookies, allowing attackers to impersonate legitimate users.\n                * **[3.1.3.A] Exploiting XSS vulnerabilities to steal session cookies [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Attackers use JavaScript code injected via XSS to access and exfiltrate session cookies, enabling session hijacking.\n        * **[3.1.4.A] Missing `HttpOnly` flag allowing JavaScript access to session cookies:**\n            * **Attack Vector:** Session cookies are not configured with the `HttpOnly` flag, making them accessible to JavaScript code, increasing the risk of session hijacking via XSS."
+    },
+    {
+      "title": "[4.0] Exploit Routing and URI Handling Issues [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers manipulate URIs to bypass authorization checks and access resources they shouldn't be able to.\n    * **Critical Nodes within this path:**\n        * **[4.1] Insecure Direct Object Reference (IDOR) via URI Manipulation [HIGH-RISK PATH]:**\n            * **Attack Vector:**  Exploiting predictable URI structures and lack of authorization to directly access objects (data, resources) without proper permissions.\n                * **[4.1.1.A] Using sequential or easily guessable IDs in URIs [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Application uses sequential or predictable IDs in URIs to access resources, allowing attackers to guess IDs and access unauthorized resources.\n                * **[4.1.2.A] Controllers not properly verifying user permissions based on URI parameters [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Controllers fail to implement proper authorization checks based on URI parameters, allowing users to access resources they are not authorized for by manipulating the URI."
+    },
+    {
+      "title": "[5.0] Exploit Vulnerabilities in Third-Party Libraries/Dependencies [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers exploit known vulnerabilities in outdated or vulnerable third-party libraries used by the CodeIgniter application.\n    * **Critical Nodes within this path:**\n        * **[5.1] Outdated Libraries [HIGH-RISK PATH]:**\n            * **Attack Vector:** Using outdated versions of CodeIgniter or other libraries that contain known security vulnerabilities.\n                * **[5.1.1.A] Not applying security patches and updates to CodeIgniter framework [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Failing to regularly update the CodeIgniter framework, leaving known vulnerabilities unpatched and exploitable.\n                * **[5.1.2.A] Using vulnerable versions of libraries managed by Composer [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Using outdated or vulnerable versions of Composer packages that are dependencies of the CodeIgniter application.\n                * **[5.1.2.B] Not regularly updating Composer dependencies [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Failing to regularly update Composer dependencies, allowing known vulnerabilities in these libraries to persist and become exploitable."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-04 07:16:01,706 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "attack_tree_objective": "Compromise CodeIgniter Application by Exploiting CodeIgniter-Specific Weaknesses.",
+  "attack_sub_tree_visualization": "* [CRITICAL NODE] Compromise CodeIgniter Application\n    * [1.0] [CRITICAL NODE] Exploit Configuration Vulnerabilities [HIGH-RISK PATH]\n        * [1.1] [CRITICAL NODE] Exposed Configuration Files [HIGH-RISK PATH]\n            * [1.1.1] Direct Access to config/ files [HIGH-RISK PATH]\n                * [1.1.1.A] [CRITICAL NODE] Misconfigured web server (e.g., Apache/Nginx not blocking access) [HIGH-RISK PATH]\n        * [1.1.2.A] [CRITICAL NODE] Verbose error reporting enabled in production\n    * [2.0] [CRITICAL NODE] Exploit Input Validation and Sanitization Issues (Developer Misuse of CI Features) [HIGH-RISK PATH]\n        * [2.1] [CRITICAL NODE] SQL Injection Vulnerabilities [HIGH-RISK PATH]\n            * [2.1.1] Lack of Input Sanitization in Database Queries [HIGH-RISK PATH]\n                * [2.1.1.A] [CRITICAL NODE] Directly embedding user input into raw SQL queries (e.g., `query(\"SELECT * FROM users WHERE username = '".$_GET['username']."'\")`) [HIGH-RISK PATH]\n        * [2.2] [CRITICAL NODE] Cross-Site Scripting (XSS) Vulnerabilities [HIGH-RISK PATH]\n            * [2.2.1] [CRITICAL NODE] Unescaped Output of User Input [HIGH-RISK PATH]\n                * [2.2.1.A] [CRITICAL NODE] Displaying user-provided data directly in views without using `esc()` or equivalent [HIGH-RISK PATH]\n            * [2.2.2] Stored XSS [HIGH-RISK PATH]\n                * [2.2.2.A] [CRITICAL NODE] Storing unsanitized user input in the database and displaying it later [HIGH-RISK PATH]\n            * [2.2.3] Reflected XSS [HIGH-RISK PATH]\n                * [2.2.3.A] [CRITICAL NODE] Injecting malicious scripts via URL parameters or form submissions that are immediately reflected in the response [HIGH-RISK PATH]\n        * [2.3.1.A] [CRITICAL NODE] Passing unsanitized user input to functions like `exec()`, `shell_exec()`, `system()`\n    * [3.0] Exploit Session Management Issues (Developer Misuse or Configuration)\n        * [3.1.3] [CRITICAL NODE] Cross-Site Scripting (XSS) leading to Session Hijacking [HIGH-RISK PATH]\n            * [3.1.3.A] [CRITICAL NODE] Exploiting XSS vulnerabilities (see 2.2) to steal session cookies [HIGH-RISK PATH]\n        * [3.1.4.A] [CRITICAL NODE] Missing `HttpOnly` flag allowing JavaScript access to session cookies (if not properly configured)\n    * [4.0] Exploit Routing and URI Handling Issues (Less common in well-structured CI apps)\n        * [4.1] Insecure Direct Object Reference (IDOR) via URI Manipulation [HIGH-RISK PATH]\n            * [4.1.1] [CRITICAL NODE] Predictable URI structures allowing access to unauthorized resources [HIGH-RISK PATH]\n                * [4.1.1.A] [CRITICAL NODE] Using sequential or easily guessable IDs in URIs without proper authorization checks [HIGH-RISK PATH]\n            * [4.1.2] [CRITICAL NODE] Lack of Authorization Checks in Controllers [HIGH-RISK PATH]\n                * [4.1.2.A] Controllers not properly verifying user permissions based on URI parameters [HIGH-RISK PATH]\n    * [5.0] [CRITICAL NODE] Exploit Vulnerabilities in Third-Party Libraries/Dependencies (Indirect CI Threat) [HIGH-RISK PATH]\n        * [5.1] [CRITICAL NODE] Outdated Libraries [HIGH-RISK PATH]\n            * [5.1.1] [CRITICAL NODE] Using outdated versions of CodeIgniter itself [HIGH-RISK PATH]\n                * [5.1.1.A] [CRITICAL NODE] Not applying security patches and updates to CodeIgniter framework [HIGH-RISK PATH]\n            * [5.1.2] [CRITICAL NODE] Vulnerable Composer Packages [HIGH-RISK PATH]\n                * [5.1.2.A] Using vulnerable versions of libraries managed by Composer that are used within the CodeIgniter application [HIGH-RISK PATH]\n                * [5.1.2.B] Not regularly updating Composer dependencies to patch known vulnerabilities [HIGH-RISK PATH]",
+  "attack_sub_tree_paths": [
+    {
+      "title": "[1.0] Exploit Configuration Vulnerabilities [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers target misconfigurations that expose sensitive information or allow unauthorized access.\n    * **Critical Nodes within this path:**\n        * **[1.1] Exposed Configuration Files [HIGH-RISK PATH]:**\n            * **Attack Vector:** Direct access to configuration files (like `.env`, `database.php`) reveals database credentials, API keys, and other sensitive settings.\n                * **[1.1.1.A] Misconfigured web server [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Web server (Apache/Nginx) not configured to block access to configuration files, allowing direct HTTP requests to these files.\n        * **[1.1.2.A] Verbose error reporting enabled in production:**\n            * **Attack Vector:** Production environment displays detailed error messages, leaking server paths, configuration details, and potentially database query structures, aiding further attacks."
+    },
+    {
+      "title": "[2.0] Exploit Input Validation and Sanitization Issues [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers exploit insufficient input validation and output sanitization in application code, leading to injection vulnerabilities.\n    * **Critical Nodes within this path:**\n        * **[2.1] SQL Injection Vulnerabilities [HIGH-RISK PATH]:**\n            * **Attack Vector:**  Exploiting flaws in database queries to inject malicious SQL code, allowing unauthorized data access, modification, or deletion.\n                * **[2.1.1.A] Directly embedding user input into raw SQL queries [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Developers directly concatenate user-provided input into SQL queries without proper sanitization or parameterized queries, creating a direct SQL injection vulnerability.\n        * **[2.2] Cross-Site Scripting (XSS) Vulnerabilities [HIGH-RISK PATH]:**\n            * **Attack Vector:** Injecting malicious scripts into web pages viewed by other users, enabling session hijacking, defacement, or phishing attacks.\n                * **[2.2.1.A] Displaying user-provided data directly in views without using `esc()` [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Developers fail to properly escape user-generated content before displaying it in HTML views, allowing execution of injected JavaScript code in users' browsers.\n                * **[2.2.2.A] Storing unsanitized user input in the database and displaying it later [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Unsanitized user input is stored in the database and then displayed to other users without proper escaping, leading to persistent XSS attacks.\n                * **[2.2.3.A] Injecting malicious scripts via URL parameters [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Malicious scripts are injected through URL parameters or form submissions and immediately reflected in the response without proper sanitization, leading to reflected XSS attacks.\n        * **[2.3.1.A] Passing unsanitized user input to functions like `exec()`, `shell_exec()`, `system()`:**\n            * **Attack Vector:**  Developers use system command execution functions and directly pass user-controlled input without sanitization, allowing attackers to execute arbitrary commands on the server."
+    },
+    {
+      "title": "[3.0] Exploit Session Management Issues:",
+      "text": "* **Attack Vector:** Attackers target weaknesses in session handling to hijack user sessions and gain unauthorized access.\n    * **Critical Nodes within this path:**\n        * **[3.1.3] Cross-Site Scripting (XSS) leading to Session Hijacking [HIGH-RISK PATH]:**\n            * **Attack Vector:** Exploiting XSS vulnerabilities (described in 2.2) to steal session cookies, allowing attackers to impersonate legitimate users.\n                * **[3.1.3.A] Exploiting XSS vulnerabilities to steal session cookies [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Attackers use JavaScript code injected via XSS to access and exfiltrate session cookies, enabling session hijacking.\n        * **[3.1.4.A] Missing `HttpOnly` flag allowing JavaScript access to session cookies:**\n            * **Attack Vector:** Session cookies are not configured with the `HttpOnly` flag, making them accessible to JavaScript code, increasing the risk of session hijacking via XSS."
+    },
+    {
+      "title": "[4.0] Exploit Routing and URI Handling Issues [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers manipulate URIs to bypass authorization checks and access resources they shouldn't be able to.\n    * **Critical Nodes within this path:**\n        * **[4.1] Insecure Direct Object Reference (IDOR) via URI Manipulation [HIGH-RISK PATH]:**\n            * **Attack Vector:**  Exploiting predictable URI structures and lack of authorization to directly access objects (data, resources) without proper permissions.\n                * **[4.1.1.A] Using sequential or easily guessable IDs in URIs [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Application uses sequential or predictable IDs in URIs to access resources, allowing attackers to guess IDs and access unauthorized resources.\n                * **[4.1.2.A] Controllers not properly verifying user permissions based on URI parameters [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Controllers fail to implement proper authorization checks based on URI parameters, allowing users to access resources they are not authorized for by manipulating the URI."
+    },
+    {
+      "title": "[5.0] Exploit Vulnerabilities in Third-Party Libraries/Dependencies [HIGH-RISK PATH]:",
+      "text": "* **Attack Vector:** Attackers exploit known vulnerabilities in outdated or vulnerable third-party libraries used by the CodeIgniter application.\n    * **Critical Nodes within this path:**\n        * **[5.1] Outdated Libraries [HIGH-RISK PATH]:**\n            * **Attack Vector:** Using outdated versions of CodeIgniter or other libraries that contain known security vulnerabilities.\n                * **[5.1.1.A] Not applying security patches and updates to CodeIgniter framework [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Failing to regularly update the CodeIgniter framework, leaving known vulnerabilities unpatched and exploitable.\n                * **[5.1.2.A] Using vulnerable versions of libraries managed by Composer [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Using outdated or vulnerable versions of Composer packages that are dependencies of the CodeIgniter application.\n                * **[5.1.2.B] Not regularly updating Composer dependencies [HIGH-RISK PATH]:**\n                    * **Attack Vector:** Failing to regularly update Composer dependencies, allowing known vulnerabilities in these libraries to persist and become exploitable."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738653364.065467       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 07:16:18,461 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 07:16:18,527 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-04 07:16:42,945 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-04 07:17:07,889 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-04 07:17:25,874 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-04 07:18:49,779 - ai_security_analyzer.graphs - INFO - Actual token usage: 53026
+2025-02-04 07:18:49,791 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738653532.192050       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 07:18:56,482 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 07:18:56,537 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 07:19:13,229 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 07:19:35,012 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 07:27:36,100 - ai_security_analyzer.graphs - INFO - Actual token usage: 102853
+2025-02-04 07:27:36,140 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738654058.453097       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
