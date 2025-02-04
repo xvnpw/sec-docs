@@ -1,5 +1,3 @@
-php https://github.com/bookstackapp/bookstack
-php https://github.com/doctrine/inflector
 php https://github.com/doctrine/instantiator
 php https://github.com/doctrine/orm
 php https://github.com/magento/magento2
