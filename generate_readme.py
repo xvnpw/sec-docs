@@ -51,11 +51,14 @@ We're exploring how different LLM models can help create comprehensive security 
 ## 🧪 Experimental Status
 
 This is an early-phase research project currently testing:
-- Gemini 2.0 Flash Thinking Experimental - model cut off date: **end of October 2023**
+- Gemini 2.0 Flash Thinking Experimental - model cut off date: **end of August 2024** (updated 21.01.2025)
 - Other LLM models (planned)
+
 
 ### News
 
+- 2025-02-04: Finished re-processing all projects using latest Gemini 2.0 Flash Thinking Experimental model, updated at 21.01.2025
+- 2025-02-02: Added mitigations using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/forget-threats-mitigations-are-all-you-really-need/)
 - 2025-01-22: Added analysis for temperature 0 using Gemini 2.0 Flash Thinking Experimental
 - 2025-01-10: Deep analysis finished for all projects using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/ai-security-analyzer-deep-analysis-mode/)
 - 2025-01-01: Processed 1000+ projects ([list](.data/origin_repos.txt)) using Gemini 2.0 Flash Thinking Experimental - [blog](https://xvnpw.github.io/posts/scaling-threat-modeling-with-ai/)
