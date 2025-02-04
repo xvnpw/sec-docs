@@ -1,0 +1,106 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+eb7f4abcfb5e: Pulling fs layer
+ceae46ee0734: Pulling fs layer
+7c32705644fa: Pulling fs layer
+3c2e790aea1a: Pulling fs layer
+5329d4af5112: Pulling fs layer
+2a324bfb2360: Pulling fs layer
+18b969ecad97: Pulling fs layer
+5c3947958a83: Waiting
+eb7f4abcfb5e: Waiting
+ceae46ee0734: Waiting
+7c32705644fa: Waiting
+3c2e790aea1a: Waiting
+5329d4af5112: Waiting
+2a324bfb2360: Waiting
+18b969ecad97: Waiting
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Pull complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+eb7f4abcfb5e: Download complete
+7c32705644fa: Verifying Checksum
+7c32705644fa: Download complete
+3c2e790aea1a: Verifying Checksum
+3c2e790aea1a: Download complete
+ceae46ee0734: Verifying Checksum
+ceae46ee0734: Download complete
+2a324bfb2360: Download complete
+18b969ecad97: Verifying Checksum
+18b969ecad97: Download complete
+dfb81f221332: Pull complete
+5329d4af5112: Verifying Checksum
+5329d4af5112: Download complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+eb7f4abcfb5e: Pull complete
+ceae46ee0734: Pull complete
+7c32705644fa: Pull complete
+3c2e790aea1a: Pull complete
+5329d4af5112: Pull complete
+2a324bfb2360: Pull complete
+18b969ecad97: Pull complete
+Digest: sha256:de66ecfcbf9c9d2b64496e11dbf7e07822baa8dc5c9bfcf52b16859b8e86e322
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-04 16:59:41,100 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 16:59:41,160 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-04 17:00:29,433 - ai_security_analyzer.graphs - INFO - Actual token usage: 12207
+2025-02-04 17:00:29,437 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738688431.769241       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 17:00:36,057 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 17:00:36,114 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 17:00:54,224 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 17:01:06,047 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 17:03:25,918 - ai_security_analyzer.graphs - INFO - Actual token usage: 35572
+2025-02-04 17:03:25,929 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738688608.237374       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 17:03:32,606 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 17:03:32,664 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 17:03:44,968 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 17:03:58,227 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 17:04:16,862 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Failed to parse AttackSurfaceAnalysis from completion null. Got: 1 validation error for AttackSurfaceAnalysis
+  Input should be a valid dictionary or instance of AttackSurfaceAnalysis [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-04 17:04:16,864 - __main__ - ERROR - Application error: Failed to parse AttackSurfaceAnalysis from completion null. Got: 1 validation error for AttackSurfaceAnalysis
+  Input should be a valid dictionary or instance of AttackSurfaceAnalysis [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738688659.151302       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 17:04:33,572 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 17:04:33,633 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 17:04:45,578 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 17:04:56,667 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 17:06:21,418 - ai_security_analyzer.graphs - INFO - Actual token usage: 23404
+2025-02-04 17:06:21,425 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738688783.792345       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 17:06:28,184 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 17:06:28,241 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-04 17:06:53,950 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-04 17:07:14,806 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-04 17:07:27,206 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-04 17:09:24,791 - ai_security_analyzer.graphs - INFO - Actual token usage: 52755
+2025-02-04 17:09:24,805 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738688967.115452       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 17:09:31,429 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 17:09:31,486 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 17:09:43,424 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 17:10:24,262 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 17:12:52,914 - ai_security_analyzer.graphs - INFO - Actual token usage: 47201
+2025-02-04 17:12:52,929 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738689175.273358       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
