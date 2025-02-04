@@ -1,5 +1,3 @@
-javascript https://github.com/sortablejs/sortable
-javascript https://github.com/yarnpkg/berry
 kotlin https://github.com/acra/acra
 kotlin https://github.com/apollographql/apollo-android
 kotlin https://github.com/jetbrains/compose-jb
