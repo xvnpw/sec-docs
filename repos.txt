@@ -1,5 +1,3 @@
-rust https://github.com/tikv/tikv
-swift https://github.com/quick/nimble
 typescript https://github.com/angular/angular
 typescript https://github.com/apollographql/apollo-client
 typescript https://github.com/oclif/oclif
