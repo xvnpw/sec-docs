@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/gradio-app/gradio",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-04T14:09:40Z",
+  "end_datetime": "2025-02-04T14:28:02Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.3",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "240283",
+  "mode": "github"
+}
