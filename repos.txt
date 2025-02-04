@@ -1,5 +1,3 @@
-objectivec https://github.com/marcuswestin/webviewjavascriptbridge
-php https://github.com/bcit-ci/codeigniter
 php https://github.com/bookstackapp/bookstack
 php https://github.com/doctrine/inflector
 php https://github.com/doctrine/instantiator
