@@ -1,0 +1,99 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+eb7f4abcfb5e: Pulling fs layer
+ceae46ee0734: Pulling fs layer
+7c32705644fa: Pulling fs layer
+3c2e790aea1a: Pulling fs layer
+5329d4af5112: Pulling fs layer
+2a324bfb2360: Pulling fs layer
+18b969ecad97: Pulling fs layer
+eb7f4abcfb5e: Waiting
+ceae46ee0734: Waiting
+7c32705644fa: Waiting
+3c2e790aea1a: Waiting
+5329d4af5112: Waiting
+2a324bfb2360: Waiting
+18b969ecad97: Waiting
+5c3947958a83: Waiting
+1f3e46996e29: Download complete
+1f3e46996e29: Pull complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+eb7f4abcfb5e: Download complete
+7c32705644fa: Verifying Checksum
+7c32705644fa: Download complete
+ceae46ee0734: Verifying Checksum
+ceae46ee0734: Download complete
+2a324bfb2360: Verifying Checksum
+2a324bfb2360: Download complete
+18b969ecad97: Download complete
+dfb81f221332: Pull complete
+5329d4af5112: Verifying Checksum
+5329d4af5112: Download complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+eb7f4abcfb5e: Pull complete
+ceae46ee0734: Pull complete
+7c32705644fa: Pull complete
+3c2e790aea1a: Verifying Checksum
+3c2e790aea1a: Download complete
+3c2e790aea1a: Pull complete
+5329d4af5112: Pull complete
+2a324bfb2360: Pull complete
+18b969ecad97: Pull complete
+Digest: sha256:de66ecfcbf9c9d2b64496e11dbf7e07822baa8dc5c9bfcf52b16859b8e86e322
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-04 05:48:11,798 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 05:48:11,858 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-04 05:49:01,009 - ai_security_analyzer.graphs - INFO - Actual token usage: 10881
+2025-02-04 05:49:01,014 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738648143.269662       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 05:49:07,506 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 05:49:07,561 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 05:49:24,135 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 05:49:32,459 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 05:49:40,634 - ai_security_analyzer.graphs - INFO - Actual token usage: 9722
+2025-02-04 05:49:40,639 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738648182.883002       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 05:49:47,131 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 05:49:47,186 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 05:49:58,215 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 05:49:58,299 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-04 05:50:00,449 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-04 05:50:00,450 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738648202.687809       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 05:50:16,944 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 05:50:17,001 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 05:50:31,171 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 05:50:44,102 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 05:50:55,832 - ai_security_analyzer.graphs - INFO - Actual token usage: 8521
+2025-02-04 05:50:55,836 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738648258.087748       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 05:51:02,333 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 05:51:02,389 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-04 05:51:26,677 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-04 05:51:46,500 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-04 05:51:59,451 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-04 05:53:42,828 - ai_security_analyzer.graphs - INFO - Actual token usage: 46179
+2025-02-04 05:53:42,842 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738648425.100135       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 05:53:49,331 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 05:53:49,386 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 05:53:59,144 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 05:54:12,310 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 05:56:01,979 - ai_security_analyzer.graphs - INFO - Actual token usage: 30295
+2025-02-04 05:56:01,993 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738648564.238862       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
