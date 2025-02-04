@@ -1,0 +1,160 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+eb7f4abcfb5e: Pulling fs layer
+ceae46ee0734: Pulling fs layer
+7c32705644fa: Pulling fs layer
+3c2e790aea1a: Pulling fs layer
+5329d4af5112: Pulling fs layer
+2a324bfb2360: Pulling fs layer
+18b969ecad97: Pulling fs layer
+5c3947958a83: Waiting
+ceae46ee0734: Waiting
+7c32705644fa: Waiting
+5329d4af5112: Waiting
+eb7f4abcfb5e: Waiting
+3c2e790aea1a: Waiting
+2a324bfb2360: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+eb7f4abcfb5e: Verifying Checksum
+eb7f4abcfb5e: Download complete
+7c32705644fa: Verifying Checksum
+7c32705644fa: Download complete
+1f3e46996e29: Pull complete
+3c2e790aea1a: Verifying Checksum
+3c2e790aea1a: Download complete
+ceae46ee0734: Verifying Checksum
+ceae46ee0734: Download complete
+2a324bfb2360: Verifying Checksum
+2a324bfb2360: Download complete
+18b969ecad97: Download complete
+5329d4af5112: Verifying Checksum
+5329d4af5112: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+eb7f4abcfb5e: Pull complete
+ceae46ee0734: Pull complete
+7c32705644fa: Pull complete
+3c2e790aea1a: Pull complete
+5329d4af5112: Pull complete
+2a324bfb2360: Pull complete
+18b969ecad97: Pull complete
+Digest: sha256:de66ecfcbf9c9d2b64496e11dbf7e07822baa8dc5c9bfcf52b16859b8e86e322
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-04 20:05:22,200 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 20:05:22,263 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-04 20:06:16,734 - ai_security_analyzer.graphs - INFO - Actual token usage: 15474
+2025-02-04 20:06:16,739 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738699579.103555       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 20:06:23,614 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 20:06:23,672 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 20:06:35,662 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 20:06:47,419 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 20:09:19,599 - ai_security_analyzer.graphs - INFO - Actual token usage: 35916
+2025-02-04 20:09:19,612 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738699762.013522       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 20:09:26,581 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 20:09:26,640 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 20:09:40,893 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 20:09:53,512 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 20:10:25,797 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "Command Injection via Unsanitized Arguments",
+      "text": "*   **Description:** Attackers inject malicious commands into arguments or flags of the CLI application. When the application executes these commands, the injected commands are also executed, leading to arbitrary code execution.\n*   **How Oclif Contributes:** Oclif provides the structure for command parsing and argument handling. If developers using Oclif do not sanitize user-provided arguments and flags before using them in shell commands or Node.js process executions within their Oclif commands, they introduce this vulnerability. Oclif itself does not provide automatic sanitization.\n*   **Example:** An Oclif command defined to accept a filename argument, which is then unsafely used in a shell command. For instance, if a command uses `child_process.exec(\`mv ${filename} /destination\`)` without sanitizing `filename`, an attacker could provide a malicious filename like `\"; rm -rf /\"` to execute arbitrary commands.\n*   **Impact:** Full system compromise, data breach, denial of service, privilege escalation.\n*   **Risk Severity:** **Critical**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Strict Input Sanitization:**  Implement robust input sanitization for all user-provided arguments and flags before using them in shell commands or Node.js process executions. Use appropriate escaping and validation techniques.\n        *   **Prefer Programmatic Alternatives:**  Favor using Node.js built-in modules or libraries to perform operations instead of relying on shell commands whenever possible to minimize shell injection risks."
+    },
+    {
+      "title": "Path Traversal via File Path Arguments",
+      "text": "*   **Description:** Attackers manipulate file path arguments to access files or directories outside of the intended scope. This can lead to unauthorized access to sensitive data or modification of critical files.\n*   **How Oclif Contributes:** Oclif allows developers to easily define commands that accept file paths as arguments. If these paths are used to access the file system without proper validation within the Oclif command logic, path traversal vulnerabilities can arise. Oclif does not automatically restrict file path access.\n*   **Example:** An Oclif command designed to read a configuration file based on a user-provided path. If the command directly uses the provided path without validation, an attacker could supply a path like `../../../etc/shadow` to attempt to read sensitive system files.\n*   **Impact:** Information disclosure (sensitive files accessed), unauthorized file modification.\n*   **Risk Severity:** **High**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Path Validation and Restriction:**  Implement strict validation and sanitization of all user-provided file paths.\n            *   **Whitelist Allowed Paths:** Restrict file access to a predefined set of directories or paths.\n            *   **Canonical Path Resolution:** Use path canonicalization to resolve symbolic links and relative paths to prevent traversal bypasses.\n            *   **Input Validation:** Validate that the path does not contain malicious sequences like `../`."
+    },
+    {
+      "title": "Plugin Installation from Untrusted Sources",
+      "text": "*   **Description:** Attackers can compromise the application by installing malicious plugins if the application allows plugin installation from untrusted or unverified sources. Malicious plugins can execute arbitrary code within the application's context.\n*   **How Oclif Contributes:** Oclif's plugin system is a core feature that enables extensibility. If an Oclif application is configured to allow users or automated processes to install plugins from arbitrary sources (e.g., public npm registry without verification), it directly introduces the risk of installing malicious plugins.\n*   **Example:** An Oclif application that uses `oclif-plugin-plugins` and allows users to install plugins using `mycli plugins:install <plugin-name>` without restricting the plugin source or verifying plugin integrity. An attacker could publish a malicious plugin with a similar name to a legitimate one, tricking users into installing it.\n*   **Impact:** Full system compromise, data breach, persistent backdoor, privilege escalation.\n*   **Risk Severity:** **Critical**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Restrict Plugin Sources:** Limit plugin installation to trusted and verified sources. Ideally, use a private or curated plugin registry.\n        *   **Plugin Verification Mechanisms:** Implement mechanisms to verify the integrity and authenticity of plugins before installation, such as digital signatures or checksums.\n        *   **Security Audits for Plugins:**  Conduct security audits of plugins, especially those intended for public or widespread use.\n    *   **Users:**\n        *   **Install Plugins from Trusted Sources Only:**  Only install plugins from highly reputable and verified sources. Be extremely cautious about installing plugins from unknown or untrusted origins."
+    },
+    {
+      "title": "Insecure Update Channels (Application Updates)",
+      "text": "*   **Description:** If the application's update mechanism uses insecure channels (e.g., HTTP) to download updates, attackers can perform Man-in-the-Middle (MITM) attacks to inject malicious application versions during the update process.\n*   **How Oclif Contributes:** Oclif applications can implement self-update features. If developers configure these update mechanisms to use insecure protocols like HTTP for downloading updates, they create a direct vulnerability. While Oclif provides tools for updates, it's the developer's responsibility to ensure secure update channels.\n*   **Example:** An Oclif application configured to download updates from a non-HTTPS URL specified in its configuration or update logic. An attacker on a shared network could intercept the update request and replace the legitimate update file with a malicious executable.\n*   **Impact:** Full system compromise, persistent backdoor, data breach.\n*   **Risk Severity:** **Critical**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Enforce HTTPS for Updates:**  Always use HTTPS for downloading application updates to ensure encrypted communication and prevent MITM attacks.\n        *   **Update Integrity Verification:** Implement update integrity verification using digital signatures or checksums to guarantee that downloaded updates are authentic and have not been tampered with.\n    *   **Users:**\n        *   **Use Secure Networks for Updates:** Perform application updates only on trusted and secure networks to minimize the risk of MITM attacks."
+    },
+    {
+      "title": "Insecure Storage of Sensitive Configuration",
+      "text": "*   **Description:** Sensitive information, such as API keys or credentials, might be stored insecurely in configuration files used by the Oclif application. If these files are compromised due to weak permissions or vulnerabilities, attackers can gain access to these secrets.\n*   **How Oclif Contributes:** Oclif applications often rely on configuration files for settings. If developers choose to store sensitive data directly in these configuration files without proper protection (e.g., encryption, restricted permissions), they introduce this vulnerability. Oclif itself does not enforce secure configuration practices.\n*   **Example:** An Oclif application storing an API key in plain text within a JSON configuration file located in a user's home directory with overly permissive file permissions (e.g., world-readable). An attacker gaining local access to the system could easily read this file and steal the API key.\n*   **Impact:** Unauthorized access to external services, data breaches, account takeovers.\n*   **Risk Severity:** **High**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Avoid Storing Secrets in Configuration Files:**  Whenever possible, avoid storing sensitive credentials directly in configuration files.\n        *   **Use Secure Secret Storage:** Utilize secure secret management mechanisms like environment variables, dedicated credential management systems, or secure key vaults for sensitive information.\n        *   **Encrypt Sensitive Data (If Stored in Files):** If secrets must be stored in configuration files, encrypt them using strong encryption algorithms.\n        *   **Restrict File Permissions:** Set restrictive file permissions on configuration files to limit access to only authorized users and the application process.\n    *   **Users:**\n        *   **Review Configuration Files:**  Inspect configuration files for any sensitive data stored in plain text.\n        *   **Restrict File Permissions:** Ensure that configuration files containing sensitive information have appropriate file permissions (e.g., readable only by the user)."
+    },
+    {
+      "title": "Plugin Isolation and Permissions",
+      "text": "*   **Description:** Insufficient isolation or overly broad permissions granted to Oclif plugins can create a significant attack surface. If a plugin is compromised, weak isolation can allow the malicious plugin to access sensitive resources or functionalities of the main application or the underlying system, escalating the impact of the plugin compromise.\n*   **How Oclif Contributes:** Oclif's design of the plugin system and how it handles plugin permissions directly influences the level of isolation. If Oclif does not provide strong default isolation or allows plugins excessive permissions by default, it contributes to this attack surface.\n*   **Example:** An Oclif application where plugins, once installed, have unrestricted access to environment variables, file system paths, or network resources used by the core application. A compromised plugin could then easily access sensitive data or perform actions beyond its intended scope.\n*   **Impact:** Privilege escalation, broader system compromise beyond the plugin's intended functionality, data breaches.\n*   **Risk Severity:** **High**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Implement Plugin Sandboxing/Isolation:** Design the Oclif application to provide strong isolation or sandboxing for plugins to limit their access to system resources and the main application's functionalities.\n        *   **Principle of Least Privilege for Plugins:** Grant plugins only the minimum necessary permissions required for their intended functionality. Avoid granting overly broad permissions by default.\n        *   **Regular Security Audits of Plugin System:** Conduct regular security audits of the plugin system design and implementation to identify and address potential isolation weaknesses or permission issues."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-04 20:10:25,799 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "Command Injection via Unsanitized Arguments",
+      "text": "*   **Description:** Attackers inject malicious commands into arguments or flags of the CLI application. When the application executes these commands, the injected commands are also executed, leading to arbitrary code execution.\n*   **How Oclif Contributes:** Oclif provides the structure for command parsing and argument handling. If developers using Oclif do not sanitize user-provided arguments and flags before using them in shell commands or Node.js process executions within their Oclif commands, they introduce this vulnerability. Oclif itself does not provide automatic sanitization.\n*   **Example:** An Oclif command defined to accept a filename argument, which is then unsafely used in a shell command. For instance, if a command uses `child_process.exec(\`mv ${filename} /destination\`)` without sanitizing `filename`, an attacker could provide a malicious filename like `\"; rm -rf /\"` to execute arbitrary commands.\n*   **Impact:** Full system compromise, data breach, denial of service, privilege escalation.\n*   **Risk Severity:** **Critical**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Strict Input Sanitization:**  Implement robust input sanitization for all user-provided arguments and flags before using them in shell commands or Node.js process executions. Use appropriate escaping and validation techniques.\n        *   **Prefer Programmatic Alternatives:**  Favor using Node.js built-in modules or libraries to perform operations instead of relying on shell commands whenever possible to minimize shell injection risks."
+    },
+    {
+      "title": "Path Traversal via File Path Arguments",
+      "text": "*   **Description:** Attackers manipulate file path arguments to access files or directories outside of the intended scope. This can lead to unauthorized access to sensitive data or modification of critical files.\n*   **How Oclif Contributes:** Oclif allows developers to easily define commands that accept file paths as arguments. If these paths are used to access the file system without proper validation within the Oclif command logic, path traversal vulnerabilities can arise. Oclif does not automatically restrict file path access.\n*   **Example:** An Oclif command designed to read a configuration file based on a user-provided path. If the command directly uses the provided path without validation, an attacker could supply a path like `../../../etc/shadow` to attempt to read sensitive system files.\n*   **Impact:** Information disclosure (sensitive files accessed), unauthorized file modification.\n*   **Risk Severity:** **High**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Path Validation and Restriction:**  Implement strict validation and sanitization of all user-provided file paths.\n            *   **Whitelist Allowed Paths:** Restrict file access to a predefined set of directories or paths.\n            *   **Canonical Path Resolution:** Use path canonicalization to resolve symbolic links and relative paths to prevent traversal bypasses.\n            *   **Input Validation:** Validate that the path does not contain malicious sequences like `../`."
+    },
+    {
+      "title": "Plugin Installation from Untrusted Sources",
+      "text": "*   **Description:** Attackers can compromise the application by installing malicious plugins if the application allows plugin installation from untrusted or unverified sources. Malicious plugins can execute arbitrary code within the application's context.\n*   **How Oclif Contributes:** Oclif's plugin system is a core feature that enables extensibility. If an Oclif application is configured to allow users or automated processes to install plugins from arbitrary sources (e.g., public npm registry without verification), it directly introduces the risk of installing malicious plugins.\n*   **Example:** An Oclif application that uses `oclif-plugin-plugins` and allows users to install plugins using `mycli plugins:install <plugin-name>` without restricting the plugin source or verifying plugin integrity. An attacker could publish a malicious plugin with a similar name to a legitimate one, tricking users into installing it.\n*   **Impact:** Full system compromise, data breach, persistent backdoor, privilege escalation.\n*   **Risk Severity:** **Critical**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Restrict Plugin Sources:** Limit plugin installation to trusted and verified sources. Ideally, use a private or curated plugin registry.\n        *   **Plugin Verification Mechanisms:** Implement mechanisms to verify the integrity and authenticity of plugins before installation, such as digital signatures or checksums.\n        *   **Security Audits for Plugins:**  Conduct security audits of plugins, especially those intended for public or widespread use.\n    *   **Users:**\n        *   **Install Plugins from Trusted Sources Only:**  Only install plugins from highly reputable and verified sources. Be extremely cautious about installing plugins from unknown or untrusted origins."
+    },
+    {
+      "title": "Insecure Update Channels (Application Updates)",
+      "text": "*   **Description:** If the application's update mechanism uses insecure channels (e.g., HTTP) to download updates, attackers can perform Man-in-the-Middle (MITM) attacks to inject malicious application versions during the update process.\n*   **How Oclif Contributes:** Oclif applications can implement self-update features. If developers configure these update mechanisms to use insecure protocols like HTTP for downloading updates, they create a direct vulnerability. While Oclif provides tools for updates, it's the developer's responsibility to ensure secure update channels.\n*   **Example:** An Oclif application configured to download updates from a non-HTTPS URL specified in its configuration or update logic. An attacker on a shared network could intercept the update request and replace the legitimate update file with a malicious executable.\n*   **Impact:** Full system compromise, persistent backdoor, data breach.\n*   **Risk Severity:** **Critical**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Enforce HTTPS for Updates:**  Always use HTTPS for downloading application updates to ensure encrypted communication and prevent MITM attacks.\n        *   **Update Integrity Verification:** Implement update integrity verification using digital signatures or checksums to guarantee that downloaded updates are authentic and have not been tampered with.\n    *   **Users:**\n        *   **Use Secure Networks for Updates:** Perform application updates only on trusted and secure networks to minimize the risk of MITM attacks."
+    },
+    {
+      "title": "Insecure Storage of Sensitive Configuration",
+      "text": "*   **Description:** Sensitive information, such as API keys or credentials, might be stored insecurely in configuration files used by the Oclif application. If these files are compromised due to weak permissions or vulnerabilities, attackers can gain access to these secrets.\n*   **How Oclif Contributes:** Oclif applications often rely on configuration files for settings. If developers choose to store sensitive data directly in these configuration files without proper protection (e.g., encryption, restricted permissions), they introduce this vulnerability. Oclif itself does not enforce secure configuration practices.\n*   **Example:** An Oclif application storing an API key in plain text within a JSON configuration file located in a user's home directory with overly permissive file permissions (e.g., world-readable). An attacker gaining local access to the system could easily read this file and steal the API key.\n*   **Impact:** Unauthorized access to external services, data breaches, account takeovers.\n*   **Risk Severity:** **High**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Avoid Storing Secrets in Configuration Files:**  Whenever possible, avoid storing sensitive credentials directly in configuration files.\n        *   **Use Secure Secret Storage:** Utilize secure secret management mechanisms like environment variables, dedicated credential management systems, or secure key vaults for sensitive information.\n        *   **Encrypt Sensitive Data (If Stored in Files):** If secrets must be stored in configuration files, encrypt them using strong encryption algorithms.\n        *   **Restrict File Permissions:** Set restrictive file permissions on configuration files to limit access to only authorized users and the application process.\n    *   **Users:**\n        *   **Review Configuration Files:**  Inspect configuration files for any sensitive data stored in plain text.\n        *   **Restrict File Permissions:** Ensure that configuration files containing sensitive information have appropriate file permissions (e.g., readable only by the user)."
+    },
+    {
+      "title": "Plugin Isolation and Permissions",
+      "text": "*   **Description:** Insufficient isolation or overly broad permissions granted to Oclif plugins can create a significant attack surface. If a plugin is compromised, weak isolation can allow the malicious plugin to access sensitive resources or functionalities of the main application or the underlying system, escalating the impact of the plugin compromise.\n*   **How Oclif Contributes:** Oclif's design of the plugin system and how it handles plugin permissions directly influences the level of isolation. If Oclif does not provide strong default isolation or allows plugins excessive permissions by default, it contributes to this attack surface.\n*   **Example:** An Oclif application where plugins, once installed, have unrestricted access to environment variables, file system paths, or network resources used by the core application. A compromised plugin could then easily access sensitive data or perform actions beyond its intended scope.\n*   **Impact:** Privilege escalation, broader system compromise beyond the plugin's intended functionality, data breaches.\n*   **Risk Severity:** **High**\n*   **Mitigation Strategies:**\n    *   **Developers:**\n        *   **Implement Plugin Sandboxing/Isolation:** Design the Oclif application to provide strong isolation or sandboxing for plugins to limit their access to system resources and the main application's functionalities.\n        *   **Principle of Least Privilege for Plugins:** Grant plugins only the minimum necessary permissions required for their intended functionality. Avoid granting overly broad permissions by default.\n        *   **Regular Security Audits of Plugin System:** Conduct regular security audits of the plugin system design and implementation to identify and address potential isolation weaknesses or permission issues."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738699828.196172       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 20:10:42,741 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 20:10:42,807 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 20:10:57,294 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 20:11:10,868 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 20:13:10,688 - ai_security_analyzer.graphs - INFO - Actual token usage: 31905
+2025-02-04 20:13:10,697 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738699993.046573       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 20:13:17,455 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 20:13:17,513 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-04 20:13:42,635 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-04 20:14:10,827 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-04 20:14:29,456 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-04 20:16:36,077 - ai_security_analyzer.graphs - INFO - Actual token usage: 63674
+2025-02-04 20:16:36,095 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738700198.481964       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-04 20:16:42,985 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-04 20:16:43,044 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-04 20:16:57,326 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-04 20:17:13,082 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-04 20:18:45,122 - ai_security_analyzer.graphs - INFO - Actual token usage: 31179
+2025-02-04 20:18:45,130 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1738700327.491962       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
