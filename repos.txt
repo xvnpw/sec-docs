@@ -1,4 +1,2 @@
-typescript https://github.com/oclif/oclif
-typescript https://github.com/prisma/prisma
 typescript https://github.com/typeorm/typeorm
 typescript https://github.com/vuejs/vue
