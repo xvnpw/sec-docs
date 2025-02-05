@@ -37,7 +37,7 @@ def remove_directories_before_date(root_dir, cutoff_date_str):
 
 
 if __name__ == "__main__":
-    root_directory = "./yaml"
+    root_directory = "./"
     cutoff_date = "2025-01-26"
 
     print(f"Starting to process directories under: {root_directory}")
