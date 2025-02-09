@@ -1,5 +1,3 @@
-cpp https://github.com/ripple/rippled
-cpp https://github.com/signalapp/signal-android
 cpp https://github.com/simdjson/simdjson
 cpp https://github.com/sqlcipher/sqlcipher
 cpp https://github.com/taichi-dev/taichi
