@@ -1,5 +1,3 @@
-cpp https://github.com/bvlc/caffe
-cpp https://github.com/catchorg/catch2
 cpp https://github.com/ceph/ceph
 cpp https://github.com/clickhouse/clickhouse
 cpp https://github.com/dragonflydb/dragonfly
