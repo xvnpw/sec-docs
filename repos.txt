@@ -1,5 +1,3 @@
-cpp https://github.com/simdjson/simdjson
-cpp https://github.com/sqlcipher/sqlcipher
 cpp https://github.com/taichi-dev/taichi
 cpp https://github.com/tencent/mmkv
 cpp https://github.com/tencent/ncnn
