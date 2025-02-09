@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/zeromq/libzmq",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-09T20:07:28Z",
+  "end_datetime": "2025-02-09T20:28:35Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-pro-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "172100",
+  "mode": "github"
+}
