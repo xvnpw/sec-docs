@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/adguardteam/adguardhome",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-10T12:12:18Z",
+  "end_datetime": "2025-02-10T12:37:54Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-pro-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "180055",
+  "mode": "github"
+}
