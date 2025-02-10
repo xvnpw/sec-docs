@@ -1,0 +1,135 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+0e07bef7de6c: Pulling fs layer
+dc1d62924e18: Pulling fs layer
+af0d5719fdaf: Pulling fs layer
+cc182fc92d33: Pulling fs layer
+abc927ee421f: Pulling fs layer
+8be0fe0e0342: Pulling fs layer
+a91015bcf636: Pulling fs layer
+af0d5719fdaf: Waiting
+cc182fc92d33: Waiting
+abc927ee421f: Waiting
+8be0fe0e0342: Waiting
+a91015bcf636: Waiting
+5c3947958a83: Waiting
+0e07bef7de6c: Waiting
+dc1d62924e18: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+0e07bef7de6c: Download complete
+1f3e46996e29: Pull complete
+af0d5719fdaf: Download complete
+cc182fc92d33: Verifying Checksum
+cc182fc92d33: Download complete
+dc1d62924e18: Verifying Checksum
+dc1d62924e18: Download complete
+8be0fe0e0342: Verifying Checksum
+8be0fe0e0342: Download complete
+a91015bcf636: Download complete
+abc927ee421f: Verifying Checksum
+abc927ee421f: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+0e07bef7de6c: Pull complete
+dc1d62924e18: Pull complete
+af0d5719fdaf: Pull complete
+cc182fc92d33: Pull complete
+abc927ee421f: Pull complete
+8be0fe0e0342: Pull complete
+a91015bcf636: Pull complete
+Digest: sha256:ad7efc3224b1638db049bec18d512834b88de46094c6374a581c3282e7c833f8
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-10 17:49:03,652 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-10 17:49:03,715 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-10 17:50:29,868 - ai_security_analyzer.graphs - INFO - Actual token usage: 11924
+2025-02-10 17:50:29,872 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739209832.222535       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-10 17:50:36,578 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-10 17:50:36,641 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-10 17:51:02,626 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-10 17:51:34,184 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-10 17:54:47,585 - ai_security_analyzer.graphs - INFO - Actual token usage: 27829
+2025-02-10 17:54:47,594 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739210089.889136       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-10 17:54:54,205 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-10 17:54:54,264 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-10 17:55:15,409 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-10 17:55:36,629 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-10 17:59:29,168 - ai_security_analyzer.graphs - INFO - Actual token usage: 36358
+2025-02-10 17:59:29,182 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739210371.492383       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-10 17:59:35,845 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-10 17:59:35,904 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-10 18:00:06,457 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-10 18:00:23,283 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-10 18:00:38,628 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-10 18:05:48,460 - ai_security_analyzer.graphs - INFO - Actual token usage: 49691
+2025-02-10 18:05:48,474 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739210750.767772       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-10 18:05:55,198 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-10 18:05:55,262 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-10 18:06:19,679 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-10 18:07:02,574 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-10 18:07:39,445 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Strict Path Parameter Handling with `chi`'s Regular Expressions",
+      "text": "*   **Mitigation Strategy:**  Enforce strict validation of path parameters *at the routing level* using `chi`'s built-in regular expression matching capabilities.\n\n    *   **Description:**\n        1.  **Precise Regular Expressions:** When defining routes with path parameters in `chi`, *always* use regular expressions that are as specific as possible.  This is the core `chi`-specific mitigation.  Instead of:\n            ```go\n            r.Get("/users/{id}", getUser) // Vulnerable!\n            ```\n            Use:\n            ```go\n            r.Get("/users/{id:[0-9]+}", getUser) // Only allows numeric IDs\n            ```\n            Or, for a UUID:\n            ```go\n            r.Get("/users/{id:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}}", getUser)\n            ```\n            Avoid overly permissive patterns like `/{id:.*}` or `/{id}` (without a regex). The more precise the regex, the better the protection.\n        2.  **`chi.URLParam` for Retrieval:**  Within the handler, use `chi.URLParam(r, \"id\")` to safely retrieve the parameter value from the request context (`r`). This is a `chi`-provided function designed for this purpose.\n\n    *   **Threats Mitigated:**\n        *   **Path Traversal:** (Severity: High) - The strict regex prevents the use of `../` or other path manipulation characters *before* the handler is even called. This is a first line of defense.\n        *   **NoSQL Injection/Command Injection:** (Severity: High) - By limiting the allowed characters at the routing level, you significantly reduce the risk of injection attacks, although further validation within the handler is still recommended.\n        *   **Unexpected Application Behavior:** (Severity: Medium) - Prevents unexpected input from reaching the handler, improving robustness.\n\n    *   **Impact:**\n        *   **Path Traversal:** Risk significantly reduced (almost eliminated at the routing level; further file handling security is still needed).\n        *   **NoSQL Injection/Command Injection:** Risk significantly reduced (but not eliminated; proper database/command handling is still essential).\n        *   **Unexpected Application Behavior:** Risk significantly reduced.\n\n    *   **Currently Implemented:**  *Example: Implemented for all routes using numeric IDs (`[0-9]+`).  Implemented for UUIDs using the full UUID regex.* (Replace with your project's details)\n\n    *   **Missing Implementation:** *Example: Missing for `/articles/{slug}` route.  Currently using a very permissive regex. Need to define a more restrictive pattern for slugs.* (Replace with your project's details)"
+    },
+    {
+      "title": "Middleware Ordering with `chi.Group`",
+      "text": "*   **Mitigation Strategy:**  Utilize `chi`'s `Group` functionality to apply security-related middleware (authentication, authorization) to specific sets of routes, ensuring correct ordering and granularity.\n\n    *   **Description:**\n        1.  **Identify Security Requirements:** Determine which routes require specific security checks (e.g., authentication, authorization, rate limiting).\n        2.  **Group Routes:** Use `chi.Group` to create groups of routes with shared security requirements.\n            ```go\n            r.Group(func(r chi.Router) {\n                r.Use(authMiddleware) // Apply to all routes in this group\n                r.Get(\"/protected\", protectedHandler)\n                r.Get(\"/admin\", adminHandler)\n            })\n\n            r.Group(func(r chi.Router) {\n                // No authentication required for these routes\n                r.Get(\"/public\", publicHandler)\n            })\n            ```\n        3.  **Apply Middleware to Groups:**  Within each `Group`, use `r.Use(...)` to apply the appropriate middleware *before* defining the routes. This ensures that the middleware is executed in the correct order for that group.\n        4.  **Global Middleware (Optional):**  For middleware that should apply to *all* routes (e.g., basic request logging), use `r.Use(...)` on the main router *before* any group definitions.\n\n    *   **Threats Mitigated:**\n        *   **Authentication Bypass:** (Severity: High) - Ensures that authentication middleware is executed *before* handlers that require authentication.\n        *   **Authorization Bypass:** (Severity: High) - Ensures that authorization middleware is executed *before* handlers that require specific permissions.\n        *   **Inconsistent Security:** (Severity: Medium) - Prevents situations where some routes are accidentally left unprotected due to incorrect middleware configuration.\n\n    *   **Impact:**\n        *   **Authentication/Authorization Bypass:** Risk significantly reduced (almost eliminated if middleware is correctly implemented and comprehensive).\n        *   **Inconsistent Security:** Risk significantly reduced by providing a clear and organized way to manage middleware.\n\n    *   **Currently Implemented:** *Example: We are using `chi.Group` to apply authentication middleware to all routes under `/api/v1/private`.  We have a separate group for public routes.* (Replace with your project's details)\n\n    *   **Missing Implementation:** *Example: We need to review our middleware configuration to ensure that all routes requiring authorization are correctly grouped and have the authorization middleware applied.* (Replace with your project's details)"
+    },
+    {
+      "title": "Custom `NotFound` and `MethodNotAllowed` Handlers (Using `chi.Mux`)",
+      "text": "*   **Mitigation Strategy:** If implementing custom `NotFound` or `MethodNotAllowed` handlers using `chi.Mux`, ensure they handle errors securely and do not leak information.\n\n    *   **Description:**\n        1.  **Avoid Information Disclosure:**  When setting custom handlers using `mux.NotFound` and `mux.MethodNotAllowed`, ensure that the responses do *not* reveal any information about the server's internal structure, file paths, or available routes.\n        2.  **Consistent Error Responses:**  Return consistent and generic error responses.  For example, for `NotFound`, always return a simple 404 Not Found response without any additional details.  For `MethodNotAllowed`, return a 405 Method Not Allowed response, potentially including an `Allow` header listing the allowed methods (if appropriate).\n        3.  **Avoid Stack Traces:**  Do *not* include stack traces or any debugging information in the responses.\n        4. **Testing:** Thoroughly test these custom handlers with various invalid requests to ensure they behave as expected and do not leak information.\n\n        ```go\n        // Example of a secure NotFound handler\n        mux.NotFound(func(w http.ResponseWriter, r *http.Request) {\n            http.Error(w, \"Resource not found\", http.StatusNotFound)\n        })\n\n        // Example of a secure MethodNotAllowed handler\n        mux.MethodNotAllowed(func(w http.ResponseWriter, r *http.Request) {\n            http.Error(w, \"Method not allowed\", http.StatusMethodNotAllowed)\n            // Optionally, add an Allow header:\n            // w.Header().Set(\"Allow\", \"GET, POST\")\n        })\n        ```\n\n    *   **Threats Mitigated:**\n        *   **Information Disclosure:** (Severity: Medium) - Prevents attackers from gaining information about the server's structure or available routes by probing with invalid requests.\n        *   **Reconnaissance:** (Severity: Low) - Makes it more difficult for attackers to map out the application's attack surface.\n\n    *   **Impact:**\n        *   **Information Disclosure/Reconnaissance:** Risk significantly reduced by providing generic and consistent error responses.\n\n    *   **Currently Implemented:** *Example: We have custom `NotFound` and `MethodNotAllowed` handlers that return generic error messages without any sensitive information.* (Replace with your project's details)\n\n    *   **Missing Implementation:** *Example: We need to add tests to specifically verify the behavior of our custom `NotFound` and `MethodNotAllowed` handlers.* (Replace with your project's details)"
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-10 18:07:39,447 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Strict Path Parameter Handling with `chi`'s Regular Expressions",
+      "text": "*   **Mitigation Strategy:**  Enforce strict validation of path parameters *at the routing level* using `chi`'s built-in regular expression matching capabilities.\n\n    *   **Description:**\n        1.  **Precise Regular Expressions:** When defining routes with path parameters in `chi`, *always* use regular expressions that are as specific as possible.  This is the core `chi`-specific mitigation.  Instead of:\n            ```go\n            r.Get("/users/{id}", getUser) // Vulnerable!\n            ```\n            Use:\n            ```go\n            r.Get("/users/{id:[0-9]+}", getUser) // Only allows numeric IDs\n            ```\n            Or, for a UUID:\n            ```go\n            r.Get("/users/{id:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}}", getUser)\n            ```\n            Avoid overly permissive patterns like `/{id:.*}` or `/{id}` (without a regex). The more precise the regex, the better the protection.\n        2.  **`chi.URLParam` for Retrieval:**  Within the handler, use `chi.URLParam(r, \"id\")` to safely retrieve the parameter value from the request context (`r`). This is a `chi`-provided function designed for this purpose.\n\n    *   **Threats Mitigated:**\n        *   **Path Traversal:** (Severity: High) - The strict regex prevents the use of `../` or other path manipulation characters *before* the handler is even called. This is a first line of defense.\n        *   **NoSQL Injection/Command Injection:** (Severity: High) - By limiting the allowed characters at the routing level, you significantly reduce the risk of injection attacks, although further validation within the handler is still recommended.\n        *   **Unexpected Application Behavior:** (Severity: Medium) - Prevents unexpected input from reaching the handler, improving robustness.\n\n    *   **Impact:**\n        *   **Path Traversal:** Risk significantly reduced (almost eliminated at the routing level; further file handling security is still needed).\n        *   **NoSQL Injection/Command Injection:** Risk significantly reduced (but not eliminated; proper database/command handling is still essential).\n        *   **Unexpected Application Behavior:** Risk significantly reduced.\n\n    *   **Currently Implemented:**  *Example: Implemented for all routes using numeric IDs (`[0-9]+`).  Implemented for UUIDs using the full UUID regex.* (Replace with your project's details)\n\n    *   **Missing Implementation:** *Example: Missing for `/articles/{slug}` route.  Currently using a very permissive regex. Need to define a more restrictive pattern for slugs.* (Replace with your project's details)"
+    },
+    {
+      "title": "Middleware Ordering with `chi.Group`",
+      "text": "*   **Mitigation Strategy:**  Utilize `chi`'s `Group` functionality to apply security-related middleware (authentication, authorization) to specific sets of routes, ensuring correct ordering and granularity.\n\n    *   **Description:**\n        1.  **Identify Security Requirements:** Determine which routes require specific security checks (e.g., authentication, authorization, rate limiting).\n        2.  **Group Routes:** Use `chi.Group` to create groups of routes with shared security requirements.\n            ```go\n            r.Group(func(r chi.Router) {\n                r.Use(authMiddleware) // Apply to all routes in this group\n                r.Get(\"/protected\", protectedHandler)\n                r.Get(\"/admin\", adminHandler)\n            })\n\n            r.Group(func(r chi.Router) {\n                // No authentication required for these routes\n                r.Get(\"/public\", publicHandler)\n            })\n            ```\n        3.  **Apply Middleware to Groups:**  Within each `Group`, use `r.Use(...)` to apply the appropriate middleware *before* defining the routes. This ensures that the middleware is executed in the correct order for that group.\n        4.  **Global Middleware (Optional):**  For middleware that should apply to *all* routes (e.g., basic request logging), use `r.Use(...)` on the main router *before* any group definitions.\n\n    *   **Threats Mitigated:**\n        *   **Authentication Bypass:** (Severity: High) - Ensures that authentication middleware is executed *before* handlers that require authentication.\n        *   **Authorization Bypass:** (Severity: High) - Ensures that authorization middleware is executed *before* handlers that require specific permissions.\n        *   **Inconsistent Security:** (Severity: Medium) - Prevents situations where some routes are accidentally left unprotected due to incorrect middleware configuration.\n\n    *   **Impact:**\n        *   **Authentication/Authorization Bypass:** Risk significantly reduced (almost eliminated if middleware is correctly implemented and comprehensive).\n        *   **Inconsistent Security:** Risk significantly reduced by providing a clear and organized way to manage middleware.\n\n    *   **Currently Implemented:** *Example: We are using `chi.Group` to apply authentication middleware to all routes under `/api/v1/private`.  We have a separate group for public routes.* (Replace with your project's details)\n\n    *   **Missing Implementation:** *Example: We need to review our middleware configuration to ensure that all routes requiring authorization are correctly grouped and have the authorization middleware applied.* (Replace with your project's details)"
+    },
+    {
+      "title": "Custom `NotFound` and `MethodNotAllowed` Handlers (Using `chi.Mux`)",
+      "text": "*   **Mitigation Strategy:** If implementing custom `NotFound` or `MethodNotAllowed` handlers using `chi.Mux`, ensure they handle errors securely and do not leak information.\n\n    *   **Description:**\n        1.  **Avoid Information Disclosure:**  When setting custom handlers using `mux.NotFound` and `mux.MethodNotAllowed`, ensure that the responses do *not* reveal any information about the server's internal structure, file paths, or available routes.\n        2.  **Consistent Error Responses:**  Return consistent and generic error responses.  For example, for `NotFound`, always return a simple 404 Not Found response without any additional details.  For `MethodNotAllowed`, return a 405 Method Not Allowed response, potentially including an `Allow` header listing the allowed methods (if appropriate).\n        3.  **Avoid Stack Traces:**  Do *not* include stack traces or any debugging information in the responses.\n        4. **Testing:** Thoroughly test these custom handlers with various invalid requests to ensure they behave as expected and do not leak information.\n\n        ```go\n        // Example of a secure NotFound handler\n        mux.NotFound(func(w http.ResponseWriter, r *http.Request) {\n            http.Error(w, \"Resource not found\", http.StatusNotFound)\n        })\n\n        // Example of a secure MethodNotAllowed handler\n        mux.MethodNotAllowed(func(w http.ResponseWriter, r *http.Request) {\n            http.Error(w, \"Method not allowed\", http.StatusMethodNotAllowed)\n            // Optionally, add an Allow header:\n            // w.Header().Set(\"Allow\", \"GET, POST\")\n        })\n        ```\n\n    *   **Threats Mitigated:**\n        *   **Information Disclosure:** (Severity: Medium) - Prevents attackers from gaining information about the server's structure or available routes by probing with invalid requests.\n        *   **Reconnaissance:** (Severity: Low) - Makes it more difficult for attackers to map out the application's attack surface.\n\n    *   **Impact:**\n        *   **Information Disclosure/Reconnaissance:** Risk significantly reduced by providing generic and consistent error responses.\n\n    *   **Currently Implemented:** *Example: We have custom `NotFound` and `MethodNotAllowed` handlers that return generic error messages without any sensitive information.* (Replace with your project's details)\n\n    *   **Missing Implementation:** *Example: We need to add tests to specifically verify the behavior of our custom `NotFound` and `MethodNotAllowed` handlers.* (Replace with your project's details)"
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739210861.753094       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-10 18:07:56,070 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-10 18:07:56,131 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-10 18:08:17,156 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-10 18:08:52,350 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-10 18:12:26,179 - ai_security_analyzer.graphs - INFO - Actual token usage: 31484
+2025-02-10 18:12:26,189 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739211148.513068       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
