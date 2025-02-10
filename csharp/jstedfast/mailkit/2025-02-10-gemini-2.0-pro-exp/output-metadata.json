@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/jstedfast/mailkit",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-10T02:46:33Z",
+  "end_datetime": "2025-02-10T03:03:17Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-pro-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "142894",
+  "mode": "github"
+}
