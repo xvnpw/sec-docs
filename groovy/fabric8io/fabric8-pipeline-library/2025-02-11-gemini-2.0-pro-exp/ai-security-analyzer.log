@@ -1,0 +1,157 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+0e07bef7de6c: Pulling fs layer
+dc1d62924e18: Pulling fs layer
+af0d5719fdaf: Pulling fs layer
+cc182fc92d33: Pulling fs layer
+5c3947958a83: Waiting
+0e07bef7de6c: Waiting
+abc927ee421f: Pulling fs layer
+dc1d62924e18: Waiting
+8be0fe0e0342: Pulling fs layer
+a91015bcf636: Pulling fs layer
+af0d5719fdaf: Waiting
+cc182fc92d33: Waiting
+abc927ee421f: Waiting
+8be0fe0e0342: Waiting
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+0e07bef7de6c: Verifying Checksum
+0e07bef7de6c: Download complete
+1f3e46996e29: Pull complete
+af0d5719fdaf: Download complete
+dc1d62924e18: Verifying Checksum
+dc1d62924e18: Download complete
+cc182fc92d33: Verifying Checksum
+cc182fc92d33: Download complete
+8be0fe0e0342: Verifying Checksum
+8be0fe0e0342: Download complete
+a91015bcf636: Verifying Checksum
+a91015bcf636: Download complete
+abc927ee421f: Verifying Checksum
+abc927ee421f: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+0e07bef7de6c: Pull complete
+dc1d62924e18: Pull complete
+af0d5719fdaf: Pull complete
+cc182fc92d33: Pull complete
+abc927ee421f: Pull complete
+8be0fe0e0342: Pull complete
+a91015bcf636: Pull complete
+Digest: sha256:ad7efc3224b1638db049bec18d512834b88de46094c6374a581c3282e7c833f8
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-11 13:37:26,075 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 13:37:26,139 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-11 13:38:55,671 - ai_security_analyzer.graphs - INFO - Actual token usage: 12529
+2025-02-11 13:38:55,675 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739281138.109049       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 13:39:02,581 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 13:39:02,641 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 13:39:27,967 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 13:39:53,484 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 13:43:09,862 - ai_security_analyzer.graphs - INFO - Actual token usage: 32051
+2025-02-11 13:43:09,872 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739281392.135210       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 13:43:16,432 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 13:43:16,489 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 13:43:41,849 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 13:44:04,802 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 13:47:55,262 - ai_security_analyzer.graphs - INFO - Actual token usage: 33776
+2025-02-11 13:47:55,272 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739281677.531158       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 13:48:01,823 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 13:48:01,880 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-11 13:48:36,368 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-11 13:48:53,533 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-11 13:49:09,065 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-11 13:49:35,729 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "attack_tree_objective": "Execute Arbitrary Code on Kubernetes Cluster",
+  "attack_sub_tree_visualization": "[**Root: Execute Arbitrary Code on Kubernetes Cluster**]\n        /               \\\n       /                 \\\n---[***]---/                   ---[***]---\n[1. Compromise Pipeline Configuration]      [3. Abuse Library Features]\n    /       \\                                       \\\n   /         \\                                       \\\n---[***]---/   ---[***]---\                               ---[***]---\n[**1.1**]       [**1.2**]                                   [**3.3**]\n**Modify**    **Inject**                               **Leverage**\n**Pipeline**  **Malicious**                            **Legitimate**\n**YAML**      **Step**                                 **Functions**\n                                                        (e.g., `sh` step)",
+  "attack_sub_tree_paths": [
+    {
+      "title": "1. Compromise Pipeline Configuration",
+      "text": "This branch focuses on manipulating the pipeline definition itself to introduce malicious code."
+    },
+    {
+      "title": "1.1 Modify Pipeline YAML",
+      "text": "*   **Description:** The attacker directly modifies the pipeline configuration file (e.g., `Jenkinsfile`, Tekton Pipeline definition) to include malicious steps or alter existing ones that lead to arbitrary code execution.\n*   **Entry Point:** Compromised developer workstation, unauthorized access to the source code repository (e.g., weak Git credentials, compromised CI/CD system user).\n*   **Likelihood:** Medium (Depends heavily on access controls and code review practices)\n*   **Impact:** Very High (Complete control over the pipeline)\n*   **Effort:** Low (If access is gained, modification is easy)\n*   **Skill Level:** Intermediate (Requires understanding of pipeline syntax and access to the repository)\n*   **Detection Difficulty:** Medium (Changes to the pipeline file *should* be logged and reviewed, but subtle changes might be missed)\n*   **Mitigation:**\n    *   Strict access control to the repository (least privilege, MFA).\n    *   Code review and approval processes for all pipeline changes.\n    *   Pipeline-as-code validation (linting, schema validation).\n    *   Immutable pipeline definitions (e.g., using GitOps principles).\n    *   Audit logging of all changes to pipeline configurations."
+    },
+    {
+      "title": "1.2 Inject Malicious Step",
+      "text": "*   **Description:** The attacker injects a new step into the pipeline that executes arbitrary code. This could be a `sh` step in a Jenkinsfile or a custom Task in Tekton. The fabric8-pipeline-library often uses `sh` steps to execute shell commands, making this a prime target.\n*   **Entry Point:** Same as 1.1.\n*   **Likelihood:** Medium (Similar to 1.1, depends on access and review)\n*   **Impact:** Very High (Direct code execution)\n*   **Effort:** Low (If access is gained, adding a step is easy)\n*   **Skill Level:** Intermediate (Requires understanding of pipeline syntax and basic scripting)\n*   **Detection Difficulty:** Medium (Similar to 1.1, depends on the subtlety of the injected step)\n*   **Mitigation:**\n    *   Same as 1.1, plus:\n    *   Restrict the use of `sh` steps or other potentially dangerous steps. Favor library functions that provide safer abstractions.\n    *   Sandboxing of pipeline steps (e.g., using containers with limited privileges).\n    *   Code scanning of pipeline definitions for suspicious commands."
+    },
+    {
+      "title": "3. Abuse Library Features",
+      "text": "This branch focuses on misusing the library's intended functionality in a malicious way, specifically targeting commonly used and potentially dangerous functions."
+    },
+    {
+      "title": "3.3 Leverage Legitimate Functions (e.g., `sh` step)",
+      "text": "*   **Description:** Even if the `sh` step (or a similar function that executes shell commands) is used \"correctly\" according to the library's documentation, the attacker could still use it to execute malicious commands if they can control the arguments passed to the function. This is a very common attack vector because pipelines often use shell commands to interact with the system.\n*   **Entry Point:** Pipeline parameters or environment variables that are used as arguments to the `sh` step (or similar function). The attacker manipulates these inputs to inject malicious commands.\n*   **Likelihood:** High (The `sh` step is commonly used, and controlling its arguments is a frequent attack vector)\n*   **Impact:** High (Arbitrary command execution within the pipeline, potentially leading to full cluster compromise)\n*   **Effort:** Low (If input to the `sh` step is not properly validated, exploitation is easy)\n*   **Skill Level:** Intermediate (Requires understanding of shell scripting and how the pipeline uses the `sh` step)\n*   **Detection Difficulty:** Medium (Requires monitoring of shell commands executed within the pipeline and, crucially, robust input validation checks)\n*   **Mitigation:**\n    *   **Strict Input Validation:** This is the *most critical* mitigation. *All* input that is used as an argument to the `sh` step (or any function that executes shell commands) must be rigorously validated and sanitized. This includes checking for metacharacters, command injection sequences, and any other potentially malicious input.\n    *   **Parameterization:** Use parameterized commands instead of directly embedding user input in shell scripts. This helps prevent command injection vulnerabilities.\n    *   **Avoid using `sh` for sensitive operations:** If possible, use library functions that provide safer alternatives and are specifically designed for the task at hand.\n    *   **Whitelisting of commands:** If feasible, implement a whitelist of allowed commands that can be executed within the `sh` step. This drastically reduces the attack surface.\n    *   **Least Privilege:** Ensure that the pipeline runs with the minimum necessary privileges. Avoid running the pipeline as root or with excessive permissions.\n    * **Sandboxing:** Consider using sandboxing techniques to isolate the execution of shell commands, limiting the potential damage from a successful attack."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-11 13:49:35,731 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "attack_tree_objective": "Execute Arbitrary Code on Kubernetes Cluster",
+  "attack_sub_tree_visualization": "[**Root: Execute Arbitrary Code on Kubernetes Cluster**]\n        /               \\\n       /                 \\\n---[***]---/                   ---[***]---\n[1. Compromise Pipeline Configuration]      [3. Abuse Library Features]\n    /       \\                                       \\\n   /         \\                                       \\\n---[***]---/   ---[***]---\                               ---[***]---\n[**1.1**]       [**1.2**]                                   [**3.3**]\n**Modify**    **Inject**                               **Leverage**\n**Pipeline**  **Malicious**                            **Legitimate**\n**YAML**      **Step**                                 **Functions**\n                                                        (e.g., `sh` step)",
+  "attack_sub_tree_paths": [
+    {
+      "title": "1. Compromise Pipeline Configuration",
+      "text": "This branch focuses on manipulating the pipeline definition itself to introduce malicious code."
+    },
+    {
+      "title": "1.1 Modify Pipeline YAML",
+      "text": "*   **Description:** The attacker directly modifies the pipeline configuration file (e.g., `Jenkinsfile`, Tekton Pipeline definition) to include malicious steps or alter existing ones that lead to arbitrary code execution.\n*   **Entry Point:** Compromised developer workstation, unauthorized access to the source code repository (e.g., weak Git credentials, compromised CI/CD system user).\n*   **Likelihood:** Medium (Depends heavily on access controls and code review practices)\n*   **Impact:** Very High (Complete control over the pipeline)\n*   **Effort:** Low (If access is gained, modification is easy)\n*   **Skill Level:** Intermediate (Requires understanding of pipeline syntax and access to the repository)\n*   **Detection Difficulty:** Medium (Changes to the pipeline file *should* be logged and reviewed, but subtle changes might be missed)\n*   **Mitigation:**\n    *   Strict access control to the repository (least privilege, MFA).\n    *   Code review and approval processes for all pipeline changes.\n    *   Pipeline-as-code validation (linting, schema validation).\n    *   Immutable pipeline definitions (e.g., using GitOps principles).\n    *   Audit logging of all changes to pipeline configurations."
+    },
+    {
+      "title": "1.2 Inject Malicious Step",
+      "text": "*   **Description:** The attacker injects a new step into the pipeline that executes arbitrary code. This could be a `sh` step in a Jenkinsfile or a custom Task in Tekton. The fabric8-pipeline-library often uses `sh` steps to execute shell commands, making this a prime target.\n*   **Entry Point:** Same as 1.1.\n*   **Likelihood:** Medium (Similar to 1.1, depends on access and review)\n*   **Impact:** Very High (Direct code execution)\n*   **Effort:** Low (If access is gained, adding a step is easy)\n*   **Skill Level:** Intermediate (Requires understanding of pipeline syntax and basic scripting)\n*   **Detection Difficulty:** Medium (Similar to 1.1, depends on the subtlety of the injected step)\n*   **Mitigation:**\n    *   Same as 1.1, plus:\n    *   Restrict the use of `sh` steps or other potentially dangerous steps. Favor library functions that provide safer abstractions.\n    *   Sandboxing of pipeline steps (e.g., using containers with limited privileges).\n    *   Code scanning of pipeline definitions for suspicious commands."
+    },
+    {
+      "title": "3. Abuse Library Features",
+      "text": "This branch focuses on misusing the library's intended functionality in a malicious way, specifically targeting commonly used and potentially dangerous functions."
+    },
+    {
+      "title": "3.3 Leverage Legitimate Functions (e.g., `sh` step)",
+      "text": "*   **Description:** Even if the `sh` step (or a similar function that executes shell commands) is used \"correctly\" according to the library's documentation, the attacker could still use it to execute malicious commands if they can control the arguments passed to the function. This is a very common attack vector because pipelines often use shell commands to interact with the system.\n*   **Entry Point:** Pipeline parameters or environment variables that are used as arguments to the `sh` step (or similar function). The attacker manipulates these inputs to inject malicious commands.\n*   **Likelihood:** High (The `sh` step is commonly used, and controlling its arguments is a frequent attack vector)\n*   **Impact:** High (Arbitrary command execution within the pipeline, potentially leading to full cluster compromise)\n*   **Effort:** Low (If input to the `sh` step is not properly validated, exploitation is easy)\n*   **Skill Level:** Intermediate (Requires understanding of shell scripting and how the pipeline uses the `sh` step)\n*   **Detection Difficulty:** Medium (Requires monitoring of shell commands executed within the pipeline and, crucially, robust input validation checks)\n*   **Mitigation:**\n    *   **Strict Input Validation:** This is the *most critical* mitigation. *All* input that is used as an argument to the `sh` step (or any function that executes shell commands) must be rigorously validated and sanitized. This includes checking for metacharacters, command injection sequences, and any other potentially malicious input.\n    *   **Parameterization:** Use parameterized commands instead of directly embedding user input in shell scripts. This helps prevent command injection vulnerabilities.\n    *   **Avoid using `sh` for sensitive operations:** If possible, use library functions that provide safer alternatives and are specifically designed for the task at hand.\n    *   **Whitelisting of commands:** If feasible, implement a whitelist of allowed commands that can be executed within the `sh` step. This drastically reduces the attack surface.\n    *   **Least Privilege:** Ensure that the pipeline runs with the minimum necessary privileges. Avoid running the pipeline as root or with excessive permissions.\n    * **Sandboxing:** Consider using sandboxing techniques to isolate the execution of shell commands, limiting the potential damage from a successful attack."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739281778.090215       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 13:49:52,472 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 13:49:52,537 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-11 13:50:19,577 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-11 13:50:44,311 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-11 13:51:01,170 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-11 14:01:07,577 - ai_security_analyzer.graphs - INFO - Actual token usage: 73387
+2025-02-11 14:01:07,604 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739282469.985480       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 14:01:14,442 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 14:01:14,505 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 14:01:40,100 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 14:02:22,716 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 14:04:30,144 - ai_security_analyzer.graphs - INFO - Actual token usage: 27803
+2025-02-11 14:04:30,152 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739282672.527659       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
