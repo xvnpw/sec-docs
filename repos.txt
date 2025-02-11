@@ -1,5 +1,3 @@
-java https://github.com/apache/shardingsphere
-java https://github.com/apache/skywalking
 java https://github.com/apache/solr
 java https://github.com/apache/struts
 java https://github.com/apache/tomcat
