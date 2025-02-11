@@ -1,0 +1,147 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+0e07bef7de6c: Pulling fs layer
+dc1d62924e18: Pulling fs layer
+af0d5719fdaf: Pulling fs layer
+cc182fc92d33: Pulling fs layer
+abc927ee421f: Pulling fs layer
+8be0fe0e0342: Pulling fs layer
+5c3947958a83: Waiting
+0e07bef7de6c: Waiting
+dc1d62924e18: Waiting
+a91015bcf636: Pulling fs layer
+abc927ee421f: Waiting
+af0d5719fdaf: Waiting
+cc182fc92d33: Waiting
+a91015bcf636: Waiting
+8be0fe0e0342: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+1f3e46996e29: Pull complete
+0e07bef7de6c: Verifying Checksum
+0e07bef7de6c: Download complete
+af0d5719fdaf: Verifying Checksum
+af0d5719fdaf: Download complete
+dc1d62924e18: Verifying Checksum
+dc1d62924e18: Download complete
+cc182fc92d33: Verifying Checksum
+cc182fc92d33: Download complete
+8be0fe0e0342: Verifying Checksum
+8be0fe0e0342: Download complete
+a91015bcf636: Verifying Checksum
+a91015bcf636: Download complete
+abc927ee421f: Verifying Checksum
+abc927ee421f: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+0e07bef7de6c: Pull complete
+dc1d62924e18: Pull complete
+af0d5719fdaf: Pull complete
+cc182fc92d33: Pull complete
+abc927ee421f: Pull complete
+8be0fe0e0342: Pull complete
+a91015bcf636: Pull complete
+Digest: sha256:ad7efc3224b1638db049bec18d512834b88de46094c6374a581c3282e7c833f8
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-11 08:06:55,268 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 08:06:55,332 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-11 08:08:33,342 - ai_security_analyzer.graphs - INFO - Actual token usage: 13536
+2025-02-11 08:08:33,349 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739261315.624030       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 08:08:39,884 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 08:08:39,942 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 08:09:05,616 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 08:09:38,371 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 08:13:29,639 - ai_security_analyzer.graphs - INFO - Actual token usage: 35890
+2025-02-11 08:13:29,650 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739261611.905232       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 08:13:36,189 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 08:13:36,246 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 08:14:03,379 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 08:14:34,289 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 08:19:39,058 - ai_security_analyzer.graphs - INFO - Actual token usage: 44456
+2025-02-11 08:19:39,076 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739261981.324911       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 08:19:45,578 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 08:19:45,636 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-11 08:20:20,669 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-11 08:20:48,110 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-11 08:21:04,504 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-11 08:23:29,462 - ai_security_analyzer.graphs - INFO - Actual token usage: 41318
+2025-02-11 08:23:29,473 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739262211.731772       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 08:23:35,975 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 08:23:36,032 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 08:24:01,781 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 08:24:45,094 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 08:25:33,917 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Consumer Group Management (Resource Exhaustion & Stability)",
+      "text": "**Mitigation Strategy:** Optimize Sarama Consumer Group Configuration\n\n**Description:**\n1.  **`Fetch.Min` and `Fetch.Max` Tuning:**  Within your Sarama `ConsumerConfig`, carefully adjust `Fetch.Min` (minimum bytes to fetch) and `Fetch.Max` (maximum bytes to fetch).  Start with smaller values and incrementally increase, monitoring the impact on latency and throughput. Avoid excessively large `Fetch.Max` values, which can lead to application memory issues.\n2.  **`MaxProcessingTime` Setting:** Set `ConsumerGroupConfig.Group.MaxProcessingTime` to a value slightly *greater* than the maximum expected processing time for a *batch* of messages your consumer handles. This prevents unnecessary rebalances due to slow processing, but avoid setting it too high, which can mask real consumer failures.\n3.  **`Consumer.Offsets.Initial` Choice:**  Explicitly set `Consumer.Offsets.Initial` in your `ConsumerConfig`. Choose `sarama.OffsetOldest` to consume from the beginning of the topic (if no committed offset exists) or `sarama.OffsetNewest` to consume only new messages.  The correct choice depends entirely on your application's requirements.\n4.  **`ConsumerGroupHandler` Implementation:**  Fully implement the `sarama.ConsumerGroupHandler` interface:\n    *   **`Setup(sarama.ConsumerGroupSession)`:** Initialize any resources your consumer needs *per session*.  Keep this fast and avoid blocking operations.\n    *   **`Cleanup(sarama.ConsumerGroupSession)`:**  Release resources acquired in `Setup()`.  Ensure this is also fast and non-blocking.\n    *   **`ConsumeClaim(sarama.ConsumerGroupSession, sarama.ConsumerGroupClaim)`:**  This is your core message processing loop.  Process messages from `claim.Messages()`.  Crucially, call `session.MarkMessage(msg, "")` *after* successful processing to commit the offset (for at-least-once semantics).\n5. **Backpressure with `Pause()` and `Resume()`:** If your downstream processing can't keep up, use the `PartitionConsumer`'s `Pause()` and `Resume()` methods.  Obtain the `PartitionConsumer` from the `ConsumerGroupClaim`.  This allows you to temporarily stop consuming from specific partitions, providing a direct form of backpressure.\n6. **Error Handling in `ConsumeClaim`:** Wrap your message processing and offset marking logic in a `for...range` loop over `claim.Messages()`. Handle any errors that occur during processing *before* marking the message. If an error occurs, you might choose *not* to mark the message, allowing it to be reprocessed after a rebalance.\n\n**Threats Mitigated:**\n*   **Denial of Service (DoS) on Kafka Brokers:** (Severity: High) - Prevents overwhelming brokers with excessive fetch requests.\n*   **Application Resource Exhaustion:** (Severity: High) - Prevents the application from consuming more messages than it can handle.\n*   **Consumer Group Instability:** (Severity: Medium) - Reduces unnecessary rebalances.\n*   **Message Processing Delays:** (Severity: Medium) - Optimizes message fetching.\n\n**Impact:**\n*   DoS on Kafka Brokers: Risk significantly reduced.\n*   Application Resource Exhaustion: Risk significantly reduced.\n*   Consumer Group Instability: Risk moderately reduced.\n*   Message Processing Delays: Risk moderately reduced.\n\n**Currently Implemented:**\n*   Basic `ConsumerGroupHandler` implementation (Setup, Cleanup, ConsumeClaim).\n*   `MaxProcessingTime` is set.\n*   `Consumer.Offsets.Initial` is set.\n\n**Missing Implementation:**\n*   Fine-tuning of `Fetch.Min` and `Fetch.Max`.\n*   Backpressure using `Pause()` and `Resume()`.\n*   Robust error handling *within* `ConsumeClaim` before marking messages."
+    },
+    {
+      "title": "Producer Configuration (Resource Exhaustion & Reliability)",
+      "text": "**Mitigation Strategy:** Optimize Sarama Producer Configuration\n\n**Description:**\n1.  **`Producer.Flush` Settings:**  Adjust `Producer.Flush.Frequency`, `Producer.Flush.Messages`, and `Producer.Flush.Bytes` in your `ProducerConfig`. These control how often the producer sends buffered messages to Kafka.  For high throughput, increase these values (allowing more buffering). For low latency, decrease them.\n2.  **`Producer.Retry` Configuration:** Set `Producer.Retry.Max` (maximum number of retries) and `Producer.Retry.Backoff` (time between retries) to handle transient network or broker issues.  Avoid infinite retries.\n3.  **`Producer.RequiredAcks` Choice:**  Select an appropriate value for `Producer.RequiredAcks`.  `sarama.WaitForAll` provides the strongest durability guarantee (waiting for all in-sync replicas to acknowledge), but has the highest latency. `sarama.WaitForLocal` is faster but less durable. `sarama.NoResponse` offers the lowest latency but no guarantee of delivery.\n4.  **`Producer.MaxMessageBytes`:** Set this to limit the maximum size of a single message your producer can send. This prevents accidentally sending excessively large messages that could be rejected by the broker.\n5. **Asynchronous Producer Error Handling:** If using `sarama.AsyncProducer`, *always* read from both the `Successes()` and `Errors()` channels.  The `Successes()` channel receives `*sarama.ProducerMessage` objects for successfully sent messages.  The `Errors()` channel receives `*sarama.ProducerError` objects, which contain the original message and the error.  Implement appropriate error handling (retries, logging, dead-letter queues) based on the errors received.\n6. **Synchronous Producer Error Handling:** If using `sarama.SyncProducer`, check the return values of `SendMessage` and `SendMessages`. They return an error if the message could not be sent.\n\n**Threats Mitigated:**\n*   **Denial of Service (DoS) on Kafka Brokers:** (Severity: High) - Prevents overwhelming brokers.\n*   **Application Resource Exhaustion:** (Severity: High) - Prevents uncontrolled message production.\n*   **Message Loss (Transient Errors):** (Severity: Medium) - Handles transient issues.\n*   **Message Loss (Incorrect Configuration):** (Severity: High) - Prevents loss due to misconfigured acknowledgments or message size limits.\n\n**Impact:**\n*   DoS on Kafka Brokers: Risk significantly reduced.\n*   Application Resource Exhaustion: Risk significantly reduced.\n*   Message Loss (Transient Errors): Risk moderately reduced.\n*   Message Loss (Incorrect Configuration): Risk significantly reduced.\n\n**Currently Implemented:**\n*   `Producer.Retry.Max` and `Producer.Retry.Backoff` are configured.\n\n**Missing Implementation:**\n*   Fine-tuning of `Producer.Flush` settings.\n*   Proper error handling for asynchronous producers (checking both `Successes()` and `Errors()` channels).\n*   Review of `Producer.RequiredAcks` setting to ensure it matches durability requirements."
+    },
+    {
+      "title": "TLS/SSL and SASL Authentication (Secure Communication)",
+      "text": "**Mitigation Strategy:** Configure Sarama for Encrypted and Authenticated Communication\n\n**Description:**\n1.  **TLS/SSL Configuration:**\n    *   Set `Config.Net.TLS.Enable = true` in your Sarama `Config`.\n    *   Provide a `tls.Config` object to `Config.Net.TLS.Config`.  This object should be configured to:\n        *   Verify the Kafka broker's certificate using a trusted CA certificate (or a list of trusted CAs).\n        *   Optionally, provide a client-side certificate and key if your Kafka brokers require mutual TLS (mTLS).\n2.  **SASL Configuration:**\n    *   Set `Config.Net.SASL.Enable = true` in your Sarama `Config`.\n    *   Set `Config.Net.SASL.Mechanism` to the SASL mechanism your Kafka brokers use (e.g., `sarama.SASLTypeSCRAMSHA512`, `sarama.SASLTypeSCRAMSHA256`, `sarama.SASLTypePlain`).\n    *   Set `Config.Net.SASL.User` and `Config.Net.SASL.Password` to the appropriate credentials.\n    *   **Important:** Never hardcode these credentials directly in your code. Use environment variables or a secure secrets management system.\n\n**Threats Mitigated:**\n*   **Man-in-the-Middle (MitM) Attacks:** (Severity: High) - TLS/SSL prevents interception and modification.\n*   **Eavesdropping:** (Severity: High) - TLS/SSL prevents data from being read in transit.\n*   **Unauthorized Access:** (Severity: High) - SASL prevents unauthorized clients.\n\n**Impact:**\n*   MitM Attacks: Risk eliminated.\n*   Eavesdropping: Risk eliminated.\n*   Unauthorized Access: Risk significantly reduced.\n\n**Currently Implemented:**\n*   TLS/SSL is enabled and configured.\n*   SASL authentication is enabled.\n\n**Missing Implementation:**\n*   No missing implementations directly related to Sarama configuration."
+    },
+    {
+      "title": "Timeout Configuration",
+      "text": "**Mitigation Strategy:** Set Appropriate Timeouts in Sarama's `Config`\n\n**Description:**\n1. **Network Timeouts:** Configure `Config.Net.DialTimeout`, `Config.Net.ReadTimeout`, and `Config.Net.WriteTimeout`. These control the timeouts for establishing connections, reading data, and writing data to Kafka brokers, respectively. Setting these prevents your application from hanging indefinitely if a broker becomes unresponsive.\n2. **Metadata Refresh:** `Config.Metadata.Retry.Max` and `Config.Metadata.Retry.Backoff` control how Sarama retries fetching metadata (topic and partition information) from the brokers.  Set these to reasonable values to handle temporary network issues.\n3. **Producer Timeouts:** `Config.Producer.Timeout` sets the maximum time the producer will wait for a successful send (including retries).\n\n**Threats Mitigated:**\n*   **Application Hangs/Deadlocks:** (Severity: High) - Prevents the application from becoming unresponsive due to network issues or unresponsive brokers.\n*   **Resource Exhaustion:** (Severity: Medium) - Prevents resources (e.g., goroutines, connections) from being tied up indefinitely.\n\n**Impact:**\n    * Application Hangs: Risk significantly reduced.\n    * Resource Exhaustion: Risk moderately reduced.\n\n* **Currently Implemented:**\n    * Basic network timeouts are set.\n\n* **Missing Implementation:**\n    * Review and fine-tuning of all timeout settings, including metadata refresh and producer timeouts."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-11 08:25:33,919 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Consumer Group Management (Resource Exhaustion & Stability)",
+      "text": "**Mitigation Strategy:** Optimize Sarama Consumer Group Configuration\n\n**Description:**\n1.  **`Fetch.Min` and `Fetch.Max` Tuning:**  Within your Sarama `ConsumerConfig`, carefully adjust `Fetch.Min` (minimum bytes to fetch) and `Fetch.Max` (maximum bytes to fetch).  Start with smaller values and incrementally increase, monitoring the impact on latency and throughput. Avoid excessively large `Fetch.Max` values, which can lead to application memory issues.\n2.  **`MaxProcessingTime` Setting:** Set `ConsumerGroupConfig.Group.MaxProcessingTime` to a value slightly *greater* than the maximum expected processing time for a *batch* of messages your consumer handles. This prevents unnecessary rebalances due to slow processing, but avoid setting it too high, which can mask real consumer failures.\n3.  **`Consumer.Offsets.Initial` Choice:**  Explicitly set `Consumer.Offsets.Initial` in your `ConsumerConfig`. Choose `sarama.OffsetOldest` to consume from the beginning of the topic (if no committed offset exists) or `sarama.OffsetNewest` to consume only new messages.  The correct choice depends entirely on your application's requirements.\n4.  **`ConsumerGroupHandler` Implementation:**  Fully implement the `sarama.ConsumerGroupHandler` interface:\n    *   **`Setup(sarama.ConsumerGroupSession)`:** Initialize any resources your consumer needs *per session*.  Keep this fast and avoid blocking operations.\n    *   **`Cleanup(sarama.ConsumerGroupSession)`:**  Release resources acquired in `Setup()`.  Ensure this is also fast and non-blocking.\n    *   **`ConsumeClaim(sarama.ConsumerGroupSession, sarama.ConsumerGroupClaim)`:**  This is your core message processing loop.  Process messages from `claim.Messages()`.  Crucially, call `session.MarkMessage(msg, "")` *after* successful processing to commit the offset (for at-least-once semantics).\n5. **Backpressure with `Pause()` and `Resume()`:** If your downstream processing can't keep up, use the `PartitionConsumer`'s `Pause()` and `Resume()` methods.  Obtain the `PartitionConsumer` from the `ConsumerGroupClaim`.  This allows you to temporarily stop consuming from specific partitions, providing a direct form of backpressure.\n6. **Error Handling in `ConsumeClaim`:** Wrap your message processing and offset marking logic in a `for...range` loop over `claim.Messages()`. Handle any errors that occur during processing *before* marking the message. If an error occurs, you might choose *not* to mark the message, allowing it to be reprocessed after a rebalance.\n\n**Threats Mitigated:**\n*   **Denial of Service (DoS) on Kafka Brokers:** (Severity: High) - Prevents overwhelming brokers with excessive fetch requests.\n*   **Application Resource Exhaustion:** (Severity: High) - Prevents the application from consuming more messages than it can handle.\n*   **Consumer Group Instability:** (Severity: Medium) - Reduces unnecessary rebalances.\n*   **Message Processing Delays:** (Severity: Medium) - Optimizes message fetching.\n\n**Impact:**\n*   DoS on Kafka Brokers: Risk significantly reduced.\n*   Application Resource Exhaustion: Risk significantly reduced.\n*   Consumer Group Instability: Risk moderately reduced.\n*   Message Processing Delays: Risk moderately reduced.\n\n**Currently Implemented:**\n*   Basic `ConsumerGroupHandler` implementation (Setup, Cleanup, ConsumeClaim).\n*   `MaxProcessingTime` is set.\n*   `Consumer.Offsets.Initial` is set.\n\n**Missing Implementation:**\n*   Fine-tuning of `Fetch.Min` and `Fetch.Max`.\n*   Backpressure using `Pause()` and `Resume()`.\n*   Robust error handling *within* `ConsumeClaim` before marking messages."
+    },
+    {
+      "title": "Producer Configuration (Resource Exhaustion & Reliability)",
+      "text": "**Mitigation Strategy:** Optimize Sarama Producer Configuration\n\n**Description:**\n1.  **`Producer.Flush` Settings:**  Adjust `Producer.Flush.Frequency`, `Producer.Flush.Messages`, and `Producer.Flush.Bytes` in your `ProducerConfig`. These control how often the producer sends buffered messages to Kafka.  For high throughput, increase these values (allowing more buffering). For low latency, decrease them.\n2.  **`Producer.Retry` Configuration:** Set `Producer.Retry.Max` (maximum number of retries) and `Producer.Retry.Backoff` (time between retries) to handle transient network or broker issues.  Avoid infinite retries.\n3.  **`Producer.RequiredAcks` Choice:**  Select an appropriate value for `Producer.RequiredAcks`.  `sarama.WaitForAll` provides the strongest durability guarantee (waiting for all in-sync replicas to acknowledge), but has the highest latency. `sarama.WaitForLocal` is faster but less durable. `sarama.NoResponse` offers the lowest latency but no guarantee of delivery.\n4.  **`Producer.MaxMessageBytes`:** Set this to limit the maximum size of a single message your producer can send. This prevents accidentally sending excessively large messages that could be rejected by the broker.\n5. **Asynchronous Producer Error Handling:** If using `sarama.AsyncProducer`, *always* read from both the `Successes()` and `Errors()` channels.  The `Successes()` channel receives `*sarama.ProducerMessage` objects for successfully sent messages.  The `Errors()` channel receives `*sarama.ProducerError` objects, which contain the original message and the error.  Implement appropriate error handling (retries, logging, dead-letter queues) based on the errors received.\n6. **Synchronous Producer Error Handling:** If using `sarama.SyncProducer`, check the return values of `SendMessage` and `SendMessages`. They return an error if the message could not be sent.\n\n**Threats Mitigated:**\n*   **Denial of Service (DoS) on Kafka Brokers:** (Severity: High) - Prevents overwhelming brokers.\n*   **Application Resource Exhaustion:** (Severity: High) - Prevents uncontrolled message production.\n*   **Message Loss (Transient Errors):** (Severity: Medium) - Handles transient issues.\n*   **Message Loss (Incorrect Configuration):** (Severity: High) - Prevents loss due to misconfigured acknowledgments or message size limits.\n\n**Impact:**\n*   DoS on Kafka Brokers: Risk significantly reduced.\n*   Application Resource Exhaustion: Risk significantly reduced.\n*   Message Loss (Transient Errors): Risk moderately reduced.\n*   Message Loss (Incorrect Configuration): Risk significantly reduced.\n\n**Currently Implemented:**\n*   `Producer.Retry.Max` and `Producer.Retry.Backoff` are configured.\n\n**Missing Implementation:**\n*   Fine-tuning of `Producer.Flush` settings.\n*   Proper error handling for asynchronous producers (checking both `Successes()` and `Errors()` channels).\n*   Review of `Producer.RequiredAcks` setting to ensure it matches durability requirements."
+    },
+    {
+      "title": "TLS/SSL and SASL Authentication (Secure Communication)",
+      "text": "**Mitigation Strategy:** Configure Sarama for Encrypted and Authenticated Communication\n\n**Description:**\n1.  **TLS/SSL Configuration:**\n    *   Set `Config.Net.TLS.Enable = true` in your Sarama `Config`.\n    *   Provide a `tls.Config` object to `Config.Net.TLS.Config`.  This object should be configured to:\n        *   Verify the Kafka broker's certificate using a trusted CA certificate (or a list of trusted CAs).\n        *   Optionally, provide a client-side certificate and key if your Kafka brokers require mutual TLS (mTLS).\n2.  **SASL Configuration:**\n    *   Set `Config.Net.SASL.Enable = true` in your Sarama `Config`.\n    *   Set `Config.Net.SASL.Mechanism` to the SASL mechanism your Kafka brokers use (e.g., `sarama.SASLTypeSCRAMSHA512`, `sarama.SASLTypeSCRAMSHA256`, `sarama.SASLTypePlain`).\n    *   Set `Config.Net.SASL.User` and `Config.Net.SASL.Password` to the appropriate credentials.\n    *   **Important:** Never hardcode these credentials directly in your code. Use environment variables or a secure secrets management system.\n\n**Threats Mitigated:**\n*   **Man-in-the-Middle (MitM) Attacks:** (Severity: High) - TLS/SSL prevents interception and modification.\n*   **Eavesdropping:** (Severity: High) - TLS/SSL prevents data from being read in transit.\n*   **Unauthorized Access:** (Severity: High) - SASL prevents unauthorized clients.\n\n**Impact:**\n*   MitM Attacks: Risk eliminated.\n*   Eavesdropping: Risk eliminated.\n*   Unauthorized Access: Risk significantly reduced.\n\n**Currently Implemented:**\n*   TLS/SSL is enabled and configured.\n*   SASL authentication is enabled.\n\n**Missing Implementation:**\n*   No missing implementations directly related to Sarama configuration."
+    },
+    {
+      "title": "Timeout Configuration",
+      "text": "**Mitigation Strategy:** Set Appropriate Timeouts in Sarama's `Config`\n\n**Description:**\n1. **Network Timeouts:** Configure `Config.Net.DialTimeout`, `Config.Net.ReadTimeout`, and `Config.Net.WriteTimeout`. These control the timeouts for establishing connections, reading data, and writing data to Kafka brokers, respectively. Setting these prevents your application from hanging indefinitely if a broker becomes unresponsive.\n2. **Metadata Refresh:** `Config.Metadata.Retry.Max` and `Config.Metadata.Retry.Backoff` control how Sarama retries fetching metadata (topic and partition information) from the brokers.  Set these to reasonable values to handle temporary network issues.\n3. **Producer Timeouts:** `Config.Producer.Timeout` sets the maximum time the producer will wait for a successful send (including retries).\n\n**Threats Mitigated:**\n*   **Application Hangs/Deadlocks:** (Severity: High) - Prevents the application from becoming unresponsive due to network issues or unresponsive brokers.\n*   **Resource Exhaustion:** (Severity: Medium) - Prevents resources (e.g., goroutines, connections) from being tied up indefinitely.\n\n**Impact:**\n    * Application Hangs: Risk significantly reduced.\n    * Resource Exhaustion: Risk moderately reduced.\n\n* **Currently Implemented:**\n    * Basic network timeouts are set.\n\n* **Missing Implementation:**\n    * Review and fine-tuning of all timeout settings, including metadata refresh and producer timeouts."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739262336.179761       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 08:25:50,405 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 08:25:50,466 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 08:26:20,198 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 08:27:09,930 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 08:31:14,416 - ai_security_analyzer.graphs - INFO - Actual token usage: 38925
+2025-02-11 08:31:14,428 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739262676.752365       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
