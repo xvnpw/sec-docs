@@ -1,0 +1,123 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+0e07bef7de6c: Pulling fs layer
+dc1d62924e18: Pulling fs layer
+af0d5719fdaf: Pulling fs layer
+cc182fc92d33: Pulling fs layer
+abc927ee421f: Pulling fs layer
+8be0fe0e0342: Pulling fs layer
+5c3947958a83: Waiting
+0e07bef7de6c: Waiting
+dc1d62924e18: Waiting
+a91015bcf636: Pulling fs layer
+abc927ee421f: Waiting
+8be0fe0e0342: Waiting
+a91015bcf636: Waiting
+af0d5719fdaf: Waiting
+cc182fc92d33: Waiting
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+1f3e46996e29: Pull complete
+0e07bef7de6c: Verifying Checksum
+0e07bef7de6c: Download complete
+af0d5719fdaf: Verifying Checksum
+af0d5719fdaf: Download complete
+cc182fc92d33: Verifying Checksum
+cc182fc92d33: Download complete
+8be0fe0e0342: Download complete
+dc1d62924e18: Verifying Checksum
+dc1d62924e18: Download complete
+a91015bcf636: Verifying Checksum
+a91015bcf636: Download complete
+abc927ee421f: Verifying Checksum
+abc927ee421f: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+0e07bef7de6c: Pull complete
+dc1d62924e18: Pull complete
+af0d5719fdaf: Pull complete
+cc182fc92d33: Pull complete
+abc927ee421f: Pull complete
+8be0fe0e0342: Pull complete
+a91015bcf636: Pull complete
+Digest: sha256:ad7efc3224b1638db049bec18d512834b88de46094c6374a581c3282e7c833f8
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-11 15:13:33,533 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:13:33,600 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-11 15:14:54,501 - ai_security_analyzer.graphs - INFO - Actual token usage: 11395
+2025-02-11 15:14:54,505 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739286896.812095       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 15:15:01,300 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:15:01,363 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 15:15:21,994 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 15:15:50,335 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 15:20:38,225 - ai_security_analyzer.graphs - INFO - Actual token usage: 42776
+2025-02-11 15:20:38,247 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739287240.531777       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 15:20:44,871 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:20:44,931 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 15:21:06,701 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 15:21:06,754 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-11 15:21:30,688 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 15:24:48,167 - ai_security_analyzer.graphs - INFO - Actual token usage: 32143
+2025-02-11 15:24:48,178 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739287490.455999       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 15:24:54,798 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:24:54,858 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-11 15:25:23,356 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-11 15:25:41,883 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-11 15:25:56,491 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-11 15:25:56,570 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-11 15:25:58,647 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-11 15:25:58,649 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739287561.008873       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 15:26:15,317 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:26:15,379 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-11 15:26:49,620 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-11 15:27:12,762 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-11 15:27:37,059 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-11 15:28:09,361 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-11 15:30:45,537 - ai_security_analyzer.graphs - INFO - Actual token usage: 44346
+2025-02-11 15:30:45,548 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739287847.821026       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 15:30:52,138 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:30:52,197 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 15:31:09,278 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 15:31:51,469 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 15:34:55,286 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-11 15:34:57,344 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-11 15:34:57,347 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739288099.616201       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 15:35:13,870 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:35:13,934 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 15:35:32,525 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 15:36:09,493 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 15:38:07,299 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-11 15:38:09,350 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-11 15:38:09,354 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739288291.683779       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-11 15:38:26,093 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-11 15:38:26,159 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-11 15:38:46,960 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-11 15:39:24,916 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-11 15:41:32,699 - ai_security_analyzer.graphs - INFO - Actual token usage: 27041
+2025-02-11 15:41:32,709 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739288495.047522       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
