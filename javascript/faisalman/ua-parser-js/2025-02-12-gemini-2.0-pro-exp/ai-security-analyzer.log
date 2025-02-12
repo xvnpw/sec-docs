@@ -1,0 +1,109 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+1f3e46996e29: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+1f3e46996e29: Pull complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+dfb81f221332: Pull complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+8b438fc1cd11: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-12 15:38:24,982 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 15:38:25,042 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-12 15:39:43,828 - ai_security_analyzer.graphs - INFO - Actual token usage: 10290
+2025-02-12 15:39:43,831 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739374786.076590       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 15:39:50,295 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 15:39:50,353 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-12 15:40:18,255 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-12 15:40:43,707 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-12 15:42:20,848 - ai_security_analyzer.graphs - INFO - Actual token usage: 20880
+2025-02-12 15:42:20,854 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739374943.189921       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 15:42:27,527 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 15:42:27,587 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-12 15:42:47,912 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-12 15:43:46,597 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-12 15:45:05,381 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Failed to parse AttackSurfaceAnalysis from completion {"attack_surface": [{"title": "SQL Injection", "text": "SQL injection is a code injection technique that might be used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker)."}, {"title": "Cross-site scripting (XSS)", "text": "Cross-site scripting (XSS) is a type of security vulnerability typically found in web applications. XSS attacks enable attackers to inject client-side scripts into web pages viewed by other users. A cross-\nsite scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy."}, {"title": "Cross-site request forgery", "text": "Cross-site request forgery, also known as one-click attack or session riding and abbreviated as CSRF or XSRF, is a type of malicious exploit of a website where unauthorized commands are submitted from a user that the web application trusts."}, {"title": "Path Traversal", "text": "A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder. By manipulating variables that reference files with \u201cdot-dot-slash (../)\u201d sequences and its variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system including application source code or configuration and critical system files."}, {"title": "Local File Inclusion", "text": "Local File Inclusion (LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application."}, {"title": "Remote File Inclusion", "text": "Remote File Inclusion (RFI) is an attack targeting vulnerabilities in web applications that dynamically reference external scripts. The perpetrator injects a URL into a web application to trick the web application into including malicious files from remote servers."}, {"title": "Denial of Service", "text": "In computing, a denial-of-service attack (DoS attack) is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services of a host connected to the Internet."}, {"title": "Brute Force", "text": "In cryptography, a brute-force attack consists of an attacker submitting many passwords or passphrases with the hope of eventually guessing correctly. The attacker systematically checks all possible passwords and passphrases until the correct one is found."}, {"title": "Dictionary Attack", "text": "In cryptanalysis and computer security, a dictionary attack is a form of brute force attack technique for defeating a cipher or authentication mechanism by trying to determine its decryption key or passphrase by trying hundreds or sometimes millions of likely possibilities, such as words in a dictionary."}, {"title": "Phishing", "text": "Phishing is the fraudulent attempt to obtain sensitive information such as usernames, passwords and credit card details by disguising as a trustworthy entity in an electronic communication."}, {"title": "Clickjacking", "text": "Clickjacking, also known as a \"UI redress attack\", is a malicious technique of tricking a user into clicking on something different from what the user perceives, thus potentially revealing confidential information or allowing others to take control of their computer while clicking on seemingly innocuous objects, including web pages."}, {"title": "Session Hijacking", "text": "Session hijacking, sometimes also known as cookie hijacking, is the exploitation of a valid computer session\u2014sometimes also called a session key\u2014to gain unauthorized access to information or services in a computer system."}, {"title": "Buffer Overflow", "text": "In computer security and programming, a buffer overflow, or buffer overrun, is an anomaly where a program, while writing data to a buffer, overruns the buffer's boundary and overwrites adjacent memory locations."}, {"title": "Man-in-the-Middle (MitM) Attack", "text": "In cryptography and computer security, a man-in-the-middle attack (MITM) is a cyberattack where the attacker secretly relays and possibly alters the communications between two parties who believe that they are directly communicating with each other."}, {"title": "Cross-Site Request Forgery (CSRF)", "text": "Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated."}, {"title": "SQL Injection", "text": "SQL injection is a code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker)."}]}. Got: 1 validation error for AttackSurfaceAnalysis
+attack_surfaces
+  Field required [type=missing, input_value={'attack_surface': [{'tit...ts to the attacker).'}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-12 15:45:05,386 - __main__ - ERROR - Application error: Failed to parse AttackSurfaceAnalysis from completion {"attack_surface": [{"title": "SQL Injection", "text": "SQL injection is a code injection technique that might be used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker)."}, {"title": "Cross-site scripting (XSS)", "text": "Cross-site scripting (XSS) is a type of security vulnerability typically found in web applications. XSS attacks enable attackers to inject client-side scripts into web pages viewed by other users. A cross-\nsite scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy."}, {"title": "Cross-site request forgery", "text": "Cross-site request forgery, also known as one-click attack or session riding and abbreviated as CSRF or XSRF, is a type of malicious exploit of a website where unauthorized commands are submitted from a user that the web application trusts."}, {"title": "Path Traversal", "text": "A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder. By manipulating variables that reference files with \u201cdot-dot-slash (../)\u201d sequences and its variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system including application source code or configuration and critical system files."}, {"title": "Local File Inclusion", "text": "Local File Inclusion (LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application."}, {"title": "Remote File Inclusion", "text": "Remote File Inclusion (RFI) is an attack targeting vulnerabilities in web applications that dynamically reference external scripts. The perpetrator injects a URL into a web application to trick the web application into including malicious files from remote servers."}, {"title": "Denial of Service", "text": "In computing, a denial-of-service attack (DoS attack) is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services of a host connected to the Internet."}, {"title": "Brute Force", "text": "In cryptography, a brute-force attack consists of an attacker submitting many passwords or passphrases with the hope of eventually guessing correctly. The attacker systematically checks all possible passwords and passphrases until the correct one is found."}, {"title": "Dictionary Attack", "text": "In cryptanalysis and computer security, a dictionary attack is a form of brute force attack technique for defeating a cipher or authentication mechanism by trying to determine its decryption key or passphrase by trying hundreds or sometimes millions of likely possibilities, such as words in a dictionary."}, {"title": "Phishing", "text": "Phishing is the fraudulent attempt to obtain sensitive information such as usernames, passwords and credit card details by disguising as a trustworthy entity in an electronic communication."}, {"title": "Clickjacking", "text": "Clickjacking, also known as a \"UI redress attack\", is a malicious technique of tricking a user into clicking on something different from what the user perceives, thus potentially revealing confidential information or allowing others to take control of their computer while clicking on seemingly innocuous objects, including web pages."}, {"title": "Session Hijacking", "text": "Session hijacking, sometimes also known as cookie hijacking, is the exploitation of a valid computer session\u2014sometimes also called a session key\u2014to gain unauthorized access to information or services in a computer system."}, {"title": "Buffer Overflow", "text": "In computer security and programming, a buffer overflow, or buffer overrun, is an anomaly where a program, while writing data to a buffer, overruns the buffer's boundary and overwrites adjacent memory locations."}, {"title": "Man-in-the-Middle (MitM) Attack", "text": "In cryptography and computer security, a man-in-the-middle attack (MITM) is a cyberattack where the attacker secretly relays and possibly alters the communications between two parties who believe that they are directly communicating with each other."}, {"title": "Cross-Site Request Forgery (CSRF)", "text": "Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated."}, {"title": "SQL Injection", "text": "SQL injection is a code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker)."}]}. Got: 1 validation error for AttackSurfaceAnalysis
+attack_surfaces
+  Field required [type=missing, input_value={'attack_surface': [{'tit...ts to the attacker).'}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739375107.698040       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 15:45:21,985 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 15:45:22,051 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-12 15:45:46,280 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-12 15:46:48,282 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-12 15:49:28,663 - ai_security_analyzer.graphs - INFO - Actual token usage: 40906
+2025-02-12 15:49:28,676 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739375370.926910       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 15:49:35,135 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 15:49:35,193 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-12 15:50:01,085 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-12 15:50:16,309 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-12 15:50:28,754 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-12 15:52:12,326 - ai_security_analyzer.graphs - INFO - Actual token usage: 27735
+2025-02-12 15:52:12,333 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739375534.580027       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 15:52:18,802 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 15:52:18,860 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-12 15:52:45,172 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-12 15:53:39,387 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-12 15:55:43,623 - ai_security_analyzer.graphs - INFO - Actual token usage: 28804
+2025-02-12 15:55:43,630 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739375745.873488       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
