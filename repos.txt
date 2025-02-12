@@ -1,5 +1,3 @@
-javascript https://github.com/serverless/serverless
-javascript https://github.com/socketio/socket.io
 javascript https://github.com/sortablejs/sortable
 javascript https://github.com/standardnotes/app
 javascript https://github.com/sveltejs/svelte
