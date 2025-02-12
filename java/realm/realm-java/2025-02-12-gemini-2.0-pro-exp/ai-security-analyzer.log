@@ -1,0 +1,115 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+28d645c00242: Waiting
+37e00e2d9431: Waiting
+921df71b230f: Waiting
+d3f883494790: Waiting
+c457853b6d82: Waiting
+5c3947958a83: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+b9be2ce5276b: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+28d645c00242: Download complete
+1f3e46996e29: Pull complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-12 06:44:24,179 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 06:44:24,245 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-12 06:46:10,156 - ai_security_analyzer.graphs - INFO - Actual token usage: 16508
+2025-02-12 06:46:10,164 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739342772.574716       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 06:46:17,133 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 06:46:17,197 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-12 06:46:43,789 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-12 06:47:08,975 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-12 06:50:35,489 - ai_security_analyzer.graphs - INFO - Actual token usage: 33365
+2025-02-12 06:50:35,503 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739343037.886992       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 06:50:42,369 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 06:50:42,433 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-12 06:51:09,165 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-12 06:51:36,435 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-12 06:54:34,078 - ai_security_analyzer.graphs - INFO - Actual token usage: 28018
+2025-02-12 06:54:34,086 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739343276.406654       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 06:54:40,802 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 06:54:40,864 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-12 06:55:11,150 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-12 06:55:31,164 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-12 06:55:48,159 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-12 06:56:57,457 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "To gain unauthorized access to, modify, or delete data stored within the Realm database used by the application."}. Got: 2 validation errors for AttackTreeAnalysis
+attack_sub_tree_visualization
+  Field required [type=missing, input_value={'attack_tree_objective':...ed by the application.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+attack_sub_tree_paths
+  Field required [type=missing, input_value={'attack_tree_objective':...ed by the application.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-12 06:56:57,460 - __main__ - ERROR - Application error: Failed to parse AttackTreeAnalysis from completion {"attack_tree_objective": "To gain unauthorized access to, modify, or delete data stored within the Realm database used by the application."}. Got: 2 validation errors for AttackTreeAnalysis
+attack_sub_tree_visualization
+  Field required [type=missing, input_value={'attack_tree_objective':...ed by the application.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+attack_sub_tree_paths
+  Field required [type=missing, input_value={'attack_tree_objective':...ed by the application.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739343419.842889       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 06:57:14,441 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 06:57:14,508 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-12 06:57:49,341 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-12 06:58:13,536 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-12 06:58:28,955 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-12 07:00:50,957 - ai_security_analyzer.graphs - INFO - Actual token usage: 35652
+2025-02-12 07:00:50,966 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739343653.339243       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-12 07:00:57,788 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-12 07:00:57,849 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-12 07:01:24,176 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-12 07:02:11,972 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-12 07:06:30,593 - ai_security_analyzer.graphs - INFO - Actual token usage: 41326
+2025-02-12 07:06:30,608 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739343993.032533       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
