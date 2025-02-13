@@ -1,0 +1,140 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+c457853b6d82: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+1f3e46996e29: Pull complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-13 20:25:19,234 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 20:25:19,298 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-13 20:26:26,224 - ai_security_analyzer.graphs - INFO - Actual token usage: 10456
+2025-02-13 20:26:26,229 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739478388.533719       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 20:26:32,818 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 20:26:32,878 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 20:26:52,703 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 20:27:15,298 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 20:27:15,417 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 20:28:35,809 - ai_security_analyzer.graphs - INFO - Actual token usage: 17828
+2025-02-13 20:28:35,816 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739478518.085127       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 20:28:42,288 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 20:28:42,346 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 20:28:59,200 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 20:29:16,030 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 20:29:28,511 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 20:30:33,690 - ai_security_analyzer.graphs - INFO - Actual token usage: 16024
+2025-02-13 20:30:33,695 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739478635.938875       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 20:30:40,184 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 20:30:40,242 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-13 20:31:06,298 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-13 20:31:26,976 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-13 20:31:45,690 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-13 20:35:41,368 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 20:39:00,217 - ai_security_analyzer.graphs - INFO - Actual token usage: 62647
+2025-02-13 20:39:00,241 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739479142.568510       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 20:39:06,957 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 20:39:07,019 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 20:39:26,153 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 20:39:54,503 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 20:40:29,439 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Review and Enhance Accessibility (Directly on `jvfloatlabeledtextfield`)",
+      "text": "*   **Description:**\n    1.  **Directly inspect the `jvfloatlabeledtextfield` instances in your code (or their configuration if using Interface Builder/Storyboards).**  This is *not* about general accessibility; it's about this specific component.\n    2.  **Test *specifically* how `jvfloatlabeledtextfield` behaves with screen readers.**  Don't just test the overall page; focus on the interaction with this component.\n    3.  **If necessary, *subclass* or *extend* `jvfloatlabeledtextfield` to override or add methods related to accessibility.** This is a direct modification of the component's behavior.\n    4.  Within the subclass/extension, **manually add or modify ARIA attributes** on the underlying `UITextField` that `jvfloatlabeledtextfield` manages:\n        *   `aria-label`: Provide a clear, concise label. If the floating label's behavior is problematic for screen readers, provide an alternative `aria-label`.\n        *   `aria-labelledby`: If you have a separate, visible label element, link it to the `UITextField` using this attribute.\n        *   `aria-describedby`: If you have additional descriptive text (e.g., help text), link it using this attribute.\n        *   `aria-required`: Set this to `"true"` if the field is required.  Ensure this matches your server-side validation.\n        *   `aria-invalid`: Dynamically set this to `"true"` when the field contains an error (based on your validation logic, *not* just the visual state).\n    5.  **Specifically address the floating label animation.**  Ensure it doesn't interfere with screen reader announcements. You might need to adjust timings or temporarily disable the animation for assistive technology users. This is a `jvfloatlabeledtextfield`-specific concern.\n    6.  **Test your changes thoroughly with multiple screen readers.**\n\n*   **Threats Mitigated:**\n    *   **Accessibility Issues (Specific to `jvfloatlabeledtextfield`):** (Severity: Low to Medium) - Addresses potential usability and information disclosure issues arising from how *this specific component* interacts with assistive technologies.\n\n*   **Impact:**\n    *   **Accessibility Issues:** Risk reduced (Low/Medium to Low) for issues directly related to the component's implementation.\n\n*   **Currently Implemented:**\n    *   Example: \"Basic `aria-label` is set based on the placeholder text, but no subclassing or further customization is done.\"\n\n*   **Missing Implementation:**\n    *   Example: \"No testing with screen readers has been performed specifically focusing on `jvfloatlabeledtextfield`.  `aria-invalid` and `aria-describedby` are not used.  The animation's impact on accessibility is not assessed.\""
+    },
+    {
+      "title": "Client-Side Validation *Enhancements* (Specific to `jvfloatlabeledtextfield` Interaction)",
+      "text": "*   **Description:**\n    1.  **Do *not* replace server-side validation.** This is about *enhancing* the user experience, *specifically* related to how `jvfloatlabeledtextfield` presents information.\n    2.  **Write JavaScript code that *directly interacts* with the `jvfloatlabeledtextfield` instances.** This is *not* general form validation; it's about this component.\n    3.  **Leverage the visual cues of `jvfloatlabeledtextfield` (e.g., the floating label, color changes) to provide *immediate* feedback to the user.**  This is about using the component's features.\n    4.  **Implement client-side validation rules that *mirror* your server-side validation rules.** This ensures consistency.\n    5.  **When validation fails:**\n        *   **Use `jvfloatlabeledtextfield`'s API (if available) to visually indicate the error.**  For example, change the color of the label or text field.  If no API is available, you might need to directly manipulate the DOM elements of the component (but be cautious about breaking its functionality).\n        *   **Prevent form submission.**\n        *   **Display a clear error message *near* the `jvfloatlabeledtextfield` instance.**\n    6.  **When validation passes:**\n        *   **Use `jvfloatlabeledtextfield`'s API (or direct manipulation) to visually indicate success.**\n    7.  **Thoroughly test the interaction between your client-side validation and `jvfloatlabeledtextfield`'s behavior.**\n\n*   **Threats Mitigated:**\n    *   **Usability Issues Related to Visual Feedback:** (Severity: Low) - Improves the user experience by providing immediate feedback based on the component's visual style.  This is *not* a security mitigation in the traditional sense, but it improves the user's interaction with the component.\n    *  **Input Validation Bypass (Client-Side Only):** (Severity: Low) - It is very low, because it is only client-side validation.\n\n*   **Impact:**\n    *   **Usability Issues:** Improved user experience.\n    *   **Input Validation Bypass (Client-Side Only):** Very little impact.\n\n*   **Currently Implemented:**\n    *   Example: \"Basic JavaScript validation checks for required fields, but doesn't interact with `jvfloatlabeledtextfield`'s visual cues.\"\n\n*   **Missing Implementation:**\n    *   Example: \"No client-side validation is specifically tied to `jvfloatlabeledtextfield`'s appearance.  Error messages are displayed generically, not in relation to the specific field.\""
+    },
+    {
+      "title": "Investigate and Potentially Modify `jvfloatlabeledtextfield` Source Code (Last Resort)",
+      "text": "*   **Description:**\n    1.  **This is a last resort, only if the library has unaddressed issues *and* you cannot switch to an alternative.**\n    2.  **Fork the `jvfloatlabeledtextfield` repository on GitHub.** This creates your own copy that you can modify.\n    3.  **Carefully review the library's source code to understand its implementation.** Pay close attention to:\n        *   How it handles user input.\n        *   How it renders the text field and label.\n        *   How it handles accessibility.\n    4.  **Identify the specific code responsible for the vulnerability or issue you need to address.**\n    5.  **Make the necessary code changes to mitigate the issue.** This might involve:\n        *   Adding input sanitization.\n        *   Improving accessibility attributes.\n        *   Fixing bugs.\n    6.  **Thoroughly test your changes.** Create unit tests and integration tests to ensure that your modifications do not introduce new issues.\n    7.  **Use your forked version of the library in your project.** Update your project's dependencies to point to your fork.\n    8.  **Consider contributing your changes back to the original library (if appropriate) by creating a pull request.**\n\n*   **Threats Mitigated:**\n    *   **Any vulnerability *directly* within the `jvfloatlabeledtextfield` code:** (Severity: Variable, depends on the vulnerability) - This allows you to directly address issues that cannot be mitigated through other means.\n\n*   **Impact:**\n    *   **Direct Vulnerabilities:** Risk reduced (Variable to Low, depending on the fix).\n\n*   **Currently Implemented:**\n    *   Example: \"N/A - No modifications to the source code have been made.\"\n\n*   **Missing Implementation:**\n    *   Example: \"N/A - This strategy would only be used if a critical vulnerability were discovered in the library that could not be addressed otherwise.\""
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-13 20:40:29,442 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Review and Enhance Accessibility (Directly on `jvfloatlabeledtextfield`)",
+      "text": "*   **Description:**\n    1.  **Directly inspect the `jvfloatlabeledtextfield` instances in your code (or their configuration if using Interface Builder/Storyboards).**  This is *not* about general accessibility; it's about this specific component.\n    2.  **Test *specifically* how `jvfloatlabeledtextfield` behaves with screen readers.**  Don't just test the overall page; focus on the interaction with this component.\n    3.  **If necessary, *subclass* or *extend* `jvfloatlabeledtextfield` to override or add methods related to accessibility.** This is a direct modification of the component's behavior.\n    4.  Within the subclass/extension, **manually add or modify ARIA attributes** on the underlying `UITextField` that `jvfloatlabeledtextfield` manages:\n        *   `aria-label`: Provide a clear, concise label. If the floating label's behavior is problematic for screen readers, provide an alternative `aria-label`.\n        *   `aria-labelledby`: If you have a separate, visible label element, link it to the `UITextField` using this attribute.\n        *   `aria-describedby`: If you have additional descriptive text (e.g., help text), link it using this attribute.\n        *   `aria-required`: Set this to `"true"` if the field is required.  Ensure this matches your server-side validation.\n        *   `aria-invalid`: Dynamically set this to `"true"` when the field contains an error (based on your validation logic, *not* just the visual state).\n    5.  **Specifically address the floating label animation.**  Ensure it doesn't interfere with screen reader announcements. You might need to adjust timings or temporarily disable the animation for assistive technology users. This is a `jvfloatlabeledtextfield`-specific concern.\n    6.  **Test your changes thoroughly with multiple screen readers.**\n\n*   **Threats Mitigated:**\n    *   **Accessibility Issues (Specific to `jvfloatlabeledtextfield`):** (Severity: Low to Medium) - Addresses potential usability and information disclosure issues arising from how *this specific component* interacts with assistive technologies.\n\n*   **Impact:**\n    *   **Accessibility Issues:** Risk reduced (Low/Medium to Low) for issues directly related to the component's implementation.\n\n*   **Currently Implemented:**\n    *   Example: \"Basic `aria-label` is set based on the placeholder text, but no subclassing or further customization is done.\"\n\n*   **Missing Implementation:**\n    *   Example: \"No testing with screen readers has been performed specifically focusing on `jvfloatlabeledtextfield`.  `aria-invalid` and `aria-describedby` are not used.  The animation's impact on accessibility is not assessed.\""
+    },
+    {
+      "title": "Client-Side Validation *Enhancements* (Specific to `jvfloatlabeledtextfield` Interaction)",
+      "text": "*   **Description:**\n    1.  **Do *not* replace server-side validation.** This is about *enhancing* the user experience, *specifically* related to how `jvfloatlabeledtextfield` presents information.\n    2.  **Write JavaScript code that *directly interacts* with the `jvfloatlabeledtextfield` instances.** This is *not* general form validation; it's about this component.\n    3.  **Leverage the visual cues of `jvfloatlabeledtextfield` (e.g., the floating label, color changes) to provide *immediate* feedback to the user.**  This is about using the component's features.\n    4.  **Implement client-side validation rules that *mirror* your server-side validation rules.** This ensures consistency.\n    5.  **When validation fails:**\n        *   **Use `jvfloatlabeledtextfield`'s API (if available) to visually indicate the error.**  For example, change the color of the label or text field.  If no API is available, you might need to directly manipulate the DOM elements of the component (but be cautious about breaking its functionality).\n        *   **Prevent form submission.**\n        *   **Display a clear error message *near* the `jvfloatlabeledtextfield` instance.**\n    6.  **When validation passes:**\n        *   **Use `jvfloatlabeledtextfield`'s API (or direct manipulation) to visually indicate success.**\n    7.  **Thoroughly test the interaction between your client-side validation and `jvfloatlabeledtextfield`'s behavior.**\n\n*   **Threats Mitigated:**\n    *   **Usability Issues Related to Visual Feedback:** (Severity: Low) - Improves the user experience by providing immediate feedback based on the component's visual style.  This is *not* a security mitigation in the traditional sense, but it improves the user's interaction with the component.\n    *  **Input Validation Bypass (Client-Side Only):** (Severity: Low) - It is very low, because it is only client-side validation.\n\n*   **Impact:**\n    *   **Usability Issues:** Improved user experience.\n    *   **Input Validation Bypass (Client-Side Only):** Very little impact.\n\n*   **Currently Implemented:**\n    *   Example: \"Basic JavaScript validation checks for required fields, but doesn't interact with `jvfloatlabeledtextfield`'s visual cues.\"\n\n*   **Missing Implementation:**\n    *   Example: \"No client-side validation is specifically tied to `jvfloatlabeledtextfield`'s appearance.  Error messages are displayed generically, not in relation to the specific field.\""
+    },
+    {
+      "title": "Investigate and Potentially Modify `jvfloatlabeledtextfield` Source Code (Last Resort)",
+      "text": "*   **Description:**\n    1.  **This is a last resort, only if the library has unaddressed issues *and* you cannot switch to an alternative.**\n    2.  **Fork the `jvfloatlabeledtextfield` repository on GitHub.** This creates your own copy that you can modify.\n    3.  **Carefully review the library's source code to understand its implementation.** Pay close attention to:\n        *   How it handles user input.\n        *   How it renders the text field and label.\n        *   How it handles accessibility.\n    4.  **Identify the specific code responsible for the vulnerability or issue you need to address.**\n    5.  **Make the necessary code changes to mitigate the issue.** This might involve:\n        *   Adding input sanitization.\n        *   Improving accessibility attributes.\n        *   Fixing bugs.\n    6.  **Thoroughly test your changes.** Create unit tests and integration tests to ensure that your modifications do not introduce new issues.\n    7.  **Use your forked version of the library in your project.** Update your project's dependencies to point to your fork.\n    8.  **Consider contributing your changes back to the original library (if appropriate) by creating a pull request.**\n\n*   **Threats Mitigated:**\n    *   **Any vulnerability *directly* within the `jvfloatlabeledtextfield` code:** (Severity: Variable, depends on the vulnerability) - This allows you to directly address issues that cannot be mitigated through other means.\n\n*   **Impact:**\n    *   **Direct Vulnerabilities:** Risk reduced (Variable to Low, depending on the fix).\n\n*   **Currently Implemented:**\n    *   Example: \"N/A - No modifications to the source code have been made.\"\n\n*   **Missing Implementation:**\n    *   Example: \"N/A - This strategy would only be used if a critical vulnerability were discovered in the library that could not be addressed otherwise.\""
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739479231.699714       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 20:40:45,933 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 20:40:45,994 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 20:41:04,591 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 20:41:33,340 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 20:43:17,939 - ai_security_analyzer.graphs - INFO - Actual token usage: 23707
+2025-02-13 20:43:17,948 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739479400.203370       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
