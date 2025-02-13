@@ -1,0 +1,174 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+8b438fc1cd11: Waiting
+37e00e2d9431: Pulling fs layer
+28d645c00242: Waiting
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+b9be2ce5276b: Waiting
+d3f883494790: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+1f3e46996e29: Pull complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-13 02:27:08,855 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 02:27:08,916 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-13 02:28:09,926 - ai_security_analyzer.graphs - INFO - Actual token usage: 10165
+2025-02-13 02:28:09,930 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739413692.204061       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 02:28:16,538 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 02:28:16,598 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 02:28:32,870 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 02:28:53,405 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 02:30:17,937 - ai_security_analyzer.graphs - INFO - Actual token usage: 18226
+2025-02-13 02:30:17,944 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739413820.217837       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 02:30:24,516 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 02:30:24,575 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 02:30:47,433 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 02:31:05,120 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 02:32:02,626 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 02:32:37,288 - ai_security_analyzer.graphs - INFO - Actual token usage: 18973
+2025-02-13 02:32:37,298 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739413959.601101       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 02:32:43,912 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 02:32:43,971 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-13 02:33:14,008 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-13 02:33:36,240 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-13 02:33:55,856 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-13 02:34:42,765 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "attack_tree_objective": "Manipulate UI/Application Behavior via material-dialogs",
+  "attack_sub_tree_visualization": "Goal: Manipulate UI/Application Behavior via material-dialogs\n├── 1.  Inject Malicious Content into Dialog [CRITICAL]\n│   ├── 1.1  Unsanitized Input Handling (If applicable)\n│   │   ├── 1.1.1  Exploit input fields within the dialog that don't properly sanitize user-provided data. [CRITICAL]\n│   │   │   └── 1.1.1.1 Inject JavaScript into a text input field within a dialog, triggering XSS when the dialog content is rendered. (Assumes the library doesn't escape this content). [HIGH RISK]\n│   └── 1.3  Manipulate Dialog Content via API Misuse [CRITICAL]\n│       ├── 1.3.1  Application dynamically generates dialog content based on untrusted input *without* proper sanitization *before* passing it to the `material-dialogs` API. [CRITICAL]\n│       │   └── 1.3.1.1  Attacker provides crafted input to the application, which is then directly used to construct the dialog's content, leading to XSS or content spoofing. [HIGH RISK]",
+  "attack_sub_tree_paths": [
+    {
+      "title": "1. Inject Malicious Content into Dialog [CRITICAL]",
+      "text": "*   **Description:** This is the overarching critical node representing the primary attack vector: introducing malicious code or content into the dialogs displayed by the `material-dialogs` library. This is the foundation for most serious exploits.\n*   **Why Critical:** Successful injection opens the door to various attacks, including XSS, content spoofing, and potentially even more severe consequences depending on the application's context.\n*   **Mitigation Strategies (General):**\n    *   **Strict Input Validation and Sanitization:** The most crucial defense. All user-supplied data MUST be validated and sanitized *before* being used in any part of the dialog.\n    *   **Content Security Policy (CSP):** A strong CSP can limit the impact of injection attacks by preventing the execution of unauthorized scripts.\n    *   **Output Encoding:** Ensure that data is properly encoded for the context in which it's displayed (e.g., HTML encoding for text content)."
+    },
+    {
+      "title": "1.1 Unsanitized Input Handling (If applicable)",
+      "text": "This is a general category, and the sub-nodes are more specific."
+    },
+    {
+      "title": "1.1.1 Exploit input fields within the dialog that don't properly sanitize user-provided data. [CRITICAL]",
+      "text": "*   **Description:** This node focuses on the specific vulnerability of input fields *within* the dialog itself. If the library (or the application using it) doesn't properly sanitize data entered into these fields, it creates an injection point.\n*   **Why Critical:** Input fields are a direct conduit for user-provided data. If they are not handled securely, they become a primary target for attackers.\n*   **Mitigation Strategies:**\n    *   **Client-Side and Server-Side Validation:** Implement validation on both the client-side (for immediate feedback) and the server-side (for security).\n    *   **Input Sanitization:** Use a robust sanitization library (like DOMPurify) to remove or neutralize any potentially harmful code or characters from the input.\n    *   **Whitelisting (Preferred over Blacklisting):** Define a strict set of allowed characters or patterns, rather than trying to block specific malicious ones."
+    },
+    {
+      "title": "1.1.1.1 Inject JavaScript into a text input field within a dialog, triggering XSS when the dialog content is rendered. (Assumes the library doesn't escape this content). [HIGH RISK]",
+      "text": "*   **Description:** This is a classic Cross-Site Scripting (XSS) attack. The attacker injects malicious JavaScript code into a text input field within the dialog. If the application doesn't sanitize this input, the injected script will be executed when the dialog is displayed.\n*   **Why High Risk:**\n    *   **Likelihood:** Relatively high if input sanitization is weak or absent.\n    *   **Impact:** High. XSS can lead to session hijacking, data theft, defacement, and other serious consequences.\n    *   **Effort:** Relatively low for a skilled attacker.\n    *   **Skill Level:** Intermediate.\n    *   **Detection Difficulty:** Medium.\n*   **Attack Vector Details:**\n    1.  **Injection:** The attacker finds an input field within a dialog that is vulnerable to XSS.\n    2.  **Payload:** The attacker crafts a malicious JavaScript payload (e.g., `<script>alert('XSS')</script>`).  More sophisticated payloads might steal cookies, redirect the user, or modify the page content.\n    3.  **Execution:** The attacker submits the payload through the vulnerable input field.\n    4.  **Trigger:** When the dialog is displayed, the injected script is executed in the context of the victim's browser.\n*   **Mitigation Strategies (Specific to XSS):**\n    *   **HTML Sanitization:** Use a library like DOMPurify to remove all script tags and other potentially dangerous HTML elements.\n    *   **Output Encoding:** Encode any user-supplied data that is displayed within the dialog's HTML.  Use HTML entity encoding (e.g., `&lt;` for `<`).\n    *   **Content Security Policy (CSP):** Use a strict CSP to prevent the execution of inline scripts and to restrict the sources from which scripts can be loaded.  Avoid `unsafe-inline`."
+    },
+    {
+      "title": "1.3 Manipulate Dialog Content via API Misuse [CRITICAL]",
+      "text": "*   **Description:** This node highlights the risk of the *application* misusing the `material-dialogs` API in a way that introduces vulnerabilities.  Even if the library itself is secure, improper usage can create security holes.\n*   **Why Critical:** The application's code is the primary interface with the library.  Mistakes here directly impact security.\n*   **Mitigation Strategies:**\n    *   **Follow Documentation:** Carefully read and understand the library's documentation.  Use the API as intended.\n    *   **Avoid Deprecated Features:** Do not use deprecated or undocumented API features, as they may have known vulnerabilities.\n    *   **Code Reviews:** Conduct thorough code reviews to ensure that the library is being used securely."
+    },
+    {
+      "title": "1.3.1 Application dynamically generates dialog content based on untrusted input *without* proper sanitization *before* passing it to the `material-dialogs` API. [CRITICAL]",
+      "text": "*   **Description:** This is the most common and dangerous form of API misuse. The application takes user input, directly incorporates it into the dialog's content (e.g., title, message, button labels), and then passes this unsanitized content to the `material-dialogs` API.\n*   **Why Critical:** This is a direct path to XSS and other injection attacks. It bypasses any potential (though insufficient) internal sanitization the library *might* perform.\n*   **Mitigation Strategies:**\n    *   **Sanitize *Before* API Calls:**  The most important point: *always* sanitize user input *before* it is used to construct any part of the dialog's content.  Do not rely on the library to do this for you.\n    *   **Parameterization (if applicable):** If the library provides a way to pass data separately from the dialog's structure (e.g., through template variables), use this approach."
+    },
+    {
+      "title": "1.3.1.1 Attacker provides crafted input to the application, which is then directly used to construct the dialog's content, leading to XSS or content spoofing. [HIGH RISK]",
+      "text": "*   **Description:** This is the specific attack scenario resulting from the vulnerability described in 1.3.1. The attacker provides malicious input, which the application blindly uses to create the dialog, leading to an XSS or content spoofing attack.\n*   **Why High Risk:**\n    *   **Likelihood:** High if the application doesn't sanitize input before using the API.\n    *   **Impact:** High (same as 1.1.1.1).\n    *   **Effort:** Low.\n    *   **Skill Level:** Intermediate.\n    *   **Detection Difficulty:** Medium.\n*   **Attack Vector Details:**\n    1.  **Vulnerable Application:** The application takes user input from a form, URL parameter, or other source.\n    2.  **Unsanitized Concatenation:** The application directly concatenates this user input with strings used to build the dialog's content (e.g., `dialog.setTitle("Welcome, " + userInput);`).\n    3.  **Injection:** The attacker provides input containing malicious code (e.g., `<script>alert('XSS')</script>`).\n    4.  **Execution:** The application passes the unsanitized string to the `material-dialogs` API. When the dialog is rendered, the injected script executes.\n*   **Mitigation Strategies (Redundant but Crucial):**\n    *   **Input Sanitization:**  Use a robust HTML sanitization library (like DOMPurify) *before* passing any data to the `material-dialogs` API. This is the primary defense.\n    *   **Output Encoding:**  Even after sanitization, encode the output appropriately for the context (HTML encoding for HTML content).\n    *   **CSP:** A strong CSP can mitigate the impact of XSS, even if injection occurs."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-13 02:34:42,768 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "attack_tree_objective": "Manipulate UI/Application Behavior via material-dialogs",
+  "attack_sub_tree_visualization": "Goal: Manipulate UI/Application Behavior via material-dialogs\n├── 1.  Inject Malicious Content into Dialog [CRITICAL]\n│   ├── 1.1  Unsanitized Input Handling (If applicable)\n│   │   ├── 1.1.1  Exploit input fields within the dialog that don't properly sanitize user-provided data. [CRITICAL]\n│   │   │   └── 1.1.1.1 Inject JavaScript into a text input field within a dialog, triggering XSS when the dialog content is rendered. (Assumes the library doesn't escape this content). [HIGH RISK]\n│   └── 1.3  Manipulate Dialog Content via API Misuse [CRITICAL]\n│       ├── 1.3.1  Application dynamically generates dialog content based on untrusted input *without* proper sanitization *before* passing it to the `material-dialogs` API. [CRITICAL]\n│       │   └── 1.3.1.1  Attacker provides crafted input to the application, which is then directly used to construct the dialog's content, leading to XSS or content spoofing. [HIGH RISK]",
+  "attack_sub_tree_paths": [
+    {
+      "title": "1. Inject Malicious Content into Dialog [CRITICAL]",
+      "text": "*   **Description:** This is the overarching critical node representing the primary attack vector: introducing malicious code or content into the dialogs displayed by the `material-dialogs` library. This is the foundation for most serious exploits.\n*   **Why Critical:** Successful injection opens the door to various attacks, including XSS, content spoofing, and potentially even more severe consequences depending on the application's context.\n*   **Mitigation Strategies (General):**\n    *   **Strict Input Validation and Sanitization:** The most crucial defense. All user-supplied data MUST be validated and sanitized *before* being used in any part of the dialog.\n    *   **Content Security Policy (CSP):** A strong CSP can limit the impact of injection attacks by preventing the execution of unauthorized scripts.\n    *   **Output Encoding:** Ensure that data is properly encoded for the context in which it's displayed (e.g., HTML encoding for text content)."
+    },
+    {
+      "title": "1.1 Unsanitized Input Handling (If applicable)",
+      "text": "This is a general category, and the sub-nodes are more specific."
+    },
+    {
+      "title": "1.1.1 Exploit input fields within the dialog that don't properly sanitize user-provided data. [CRITICAL]",
+      "text": "*   **Description:** This node focuses on the specific vulnerability of input fields *within* the dialog itself. If the library (or the application using it) doesn't properly sanitize data entered into these fields, it creates an injection point.\n*   **Why Critical:** Input fields are a direct conduit for user-provided data. If they are not handled securely, they become a primary target for attackers.\n*   **Mitigation Strategies:**\n    *   **Client-Side and Server-Side Validation:** Implement validation on both the client-side (for immediate feedback) and the server-side (for security).\n    *   **Input Sanitization:** Use a robust sanitization library (like DOMPurify) to remove or neutralize any potentially harmful code or characters from the input.\n    *   **Whitelisting (Preferred over Blacklisting):** Define a strict set of allowed characters or patterns, rather than trying to block specific malicious ones."
+    },
+    {
+      "title": "1.1.1.1 Inject JavaScript into a text input field within a dialog, triggering XSS when the dialog content is rendered. (Assumes the library doesn't escape this content). [HIGH RISK]",
+      "text": "*   **Description:** This is a classic Cross-Site Scripting (XSS) attack. The attacker injects malicious JavaScript code into a text input field within the dialog. If the application doesn't sanitize this input, the injected script will be executed when the dialog is displayed.\n*   **Why High Risk:**\n    *   **Likelihood:** Relatively high if input sanitization is weak or absent.\n    *   **Impact:** High. XSS can lead to session hijacking, data theft, defacement, and other serious consequences.\n    *   **Effort:** Relatively low for a skilled attacker.\n    *   **Skill Level:** Intermediate.\n    *   **Detection Difficulty:** Medium.\n*   **Attack Vector Details:**\n    1.  **Injection:** The attacker finds an input field within a dialog that is vulnerable to XSS.\n    2.  **Payload:** The attacker crafts a malicious JavaScript payload (e.g., `<script>alert('XSS')</script>`).  More sophisticated payloads might steal cookies, redirect the user, or modify the page content.\n    3.  **Execution:** The attacker submits the payload through the vulnerable input field.\n    4.  **Trigger:** When the dialog is displayed, the injected script is executed in the context of the victim's browser.\n*   **Mitigation Strategies (Specific to XSS):**\n    *   **HTML Sanitization:** Use a library like DOMPurify to remove all script tags and other potentially dangerous HTML elements.\n    *   **Output Encoding:** Encode any user-supplied data that is displayed within the dialog's HTML.  Use HTML entity encoding (e.g., `&lt;` for `<`).\n    *   **Content Security Policy (CSP):** Use a strict CSP to prevent the execution of inline scripts and to restrict the sources from which scripts can be loaded.  Avoid `unsafe-inline`."
+    },
+    {
+      "title": "1.3 Manipulate Dialog Content via API Misuse [CRITICAL]",
+      "text": "*   **Description:** This node highlights the risk of the *application* misusing the `material-dialogs` API in a way that introduces vulnerabilities.  Even if the library itself is secure, improper usage can create security holes.\n*   **Why Critical:** The application's code is the primary interface with the library.  Mistakes here directly impact security.\n*   **Mitigation Strategies:**\n    *   **Follow Documentation:** Carefully read and understand the library's documentation.  Use the API as intended.\n    *   **Avoid Deprecated Features:** Do not use deprecated or undocumented API features, as they may have known vulnerabilities.\n    *   **Code Reviews:** Conduct thorough code reviews to ensure that the library is being used securely."
+    },
+    {
+      "title": "1.3.1 Application dynamically generates dialog content based on untrusted input *without* proper sanitization *before* passing it to the `material-dialogs` API. [CRITICAL]",
+      "text": "*   **Description:** This is the most common and dangerous form of API misuse. The application takes user input, directly incorporates it into the dialog's content (e.g., title, message, button labels), and then passes this unsanitized content to the `material-dialogs` API.\n*   **Why Critical:** This is a direct path to XSS and other injection attacks. It bypasses any potential (though insufficient) internal sanitization the library *might* perform.\n*   **Mitigation Strategies:**\n    *   **Sanitize *Before* API Calls:**  The most important point: *always* sanitize user input *before* it is used to construct any part of the dialog's content.  Do not rely on the library to do this for you.\n    *   **Parameterization (if applicable):** If the library provides a way to pass data separately from the dialog's structure (e.g., through template variables), use this approach."
+    },
+    {
+      "title": "1.3.1.1 Attacker provides crafted input to the application, which is then directly used to construct the dialog's content, leading to XSS or content spoofing. [HIGH RISK]",
+      "text": "*   **Description:** This is the specific attack scenario resulting from the vulnerability described in 1.3.1. The attacker provides malicious input, which the application blindly uses to create the dialog, leading to an XSS or content spoofing attack.\n*   **Why High Risk:**\n    *   **Likelihood:** High if the application doesn't sanitize input before using the API.\n    *   **Impact:** High (same as 1.1.1.1).\n    *   **Effort:** Low.\n    *   **Skill Level:** Intermediate.\n    *   **Detection Difficulty:** Medium.\n*   **Attack Vector Details:**\n    1.  **Vulnerable Application:** The application takes user input from a form, URL parameter, or other source.\n    2.  **Unsanitized Concatenation:** The application directly concatenates this user input with strings used to build the dialog's content (e.g., `dialog.setTitle("Welcome, " + userInput);`).\n    3.  **Injection:** The attacker provides input containing malicious code (e.g., `<script>alert('XSS')</script>`).\n    4.  **Execution:** The application passes the unsanitized string to the `material-dialogs` API. When the dialog is rendered, the injected script executes.\n*   **Mitigation Strategies (Redundant but Crucial):**\n    *   **Input Sanitization:**  Use a robust HTML sanitization library (like DOMPurify) *before* passing any data to the `material-dialogs` API. This is the primary defense.\n    *   **Output Encoding:**  Even after sanitization, encode the output appropriately for the context (HTML encoding for HTML content).\n    *   **CSP:** A strong CSP can mitigate the impact of XSS, even if injection occurs."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739414085.077507       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 02:34:59,360 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 02:34:59,424 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-13 02:35:27,314 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-13 02:35:46,963 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-13 02:36:00,978 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-13 02:38:47,978 - ai_security_analyzer.graphs - INFO - Actual token usage: 34157
+2025-02-13 02:38:47,988 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739414330.321687       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 02:38:54,679 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 02:38:54,739 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 02:39:18,827 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 02:39:52,593 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 02:42:42,916 - ai_security_analyzer.graphs - INFO - Actual token usage: 31040
+2025-02-13 02:42:42,926 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739414565.232927       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
