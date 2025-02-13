@@ -1,0 +1,146 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+b9be2ce5276b: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+8b438fc1cd11: Waiting
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Pull complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+b9be2ce5276b: Download complete
+28d645c00242: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-13 17:32:35,055 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:32:35,117 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-13 17:34:01,213 - ai_security_analyzer.graphs - INFO - Actual token usage: 12259
+2025-02-13 17:34:01,217 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739468043.483535       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 17:34:07,760 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:34:07,818 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 17:34:34,867 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 17:34:34,968 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 17:34:37,062 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-13 17:34:37,063 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739468079.357160       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 17:34:53,608 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:34:53,668 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 17:35:14,944 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 17:35:15,052 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 17:35:17,145 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-13 17:35:17,146 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739468119.427872       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 17:35:33,721 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:35:33,782 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 17:35:34,008 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 17:36:00,923 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 17:36:30,853 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 17:38:00,996 - ai_security_analyzer.graphs - INFO - Actual token usage: 20161
+2025-02-13 17:38:01,002 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739468283.270392       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 17:38:07,516 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:38:07,574 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 17:38:30,293 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 17:38:48,563 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 17:41:24,197 - ai_security_analyzer.graphs - INFO - Actual token usage: 25804
+2025-02-13 17:41:24,205 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739468486.454397       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 17:41:30,754 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:41:30,813 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-13 17:42:01,133 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-13 17:42:19,709 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-13 17:42:33,272 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-13 17:45:02,670 - ai_security_analyzer.graphs - INFO - Actual token usage: 36671
+2025-02-13 17:45:02,679 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739468704.926351       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 17:45:09,212 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:45:09,270 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 17:45:37,529 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 17:45:37,638 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-13 17:46:20,555 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 17:46:47,169 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Rigorous Observer Registration and Key Path Specificity",
+      "text": "    *   **Description:**\n        1.  **Audit Existing `FBKVOController` Calls:** Search the codebase for all instances of `FBKVOController` methods: `observe:keyPath:options:block:`, `observe:keys:options:block:`, `observe:keyPaths:options:block:`, and any variations.\n        2.  **Justification Review:** For *each* `FBKVOController` call, document a clear, concise reason *why* that specific observation is absolutely necessary. Remove any calls that lack a strong justification.\n        3.  **Key Path Minimization:** Examine the `keyPath` (or `keys`/`keyPaths`) argument in each `FBKVOController` call.  Refine the key path to be as specific as possible, observing only the *exact* nested property that needs to be monitored, rather than a broader object.  For example, change `@"user"` to `@"user.profile.firstName"`.\n        4.  **Code Review:** A second developer reviews all `FBKVOController` calls, justifications, and key paths.\n\n    *   **Threats Mitigated:**\n        *   **Performance Degradation (Severity: High):** Reduces the number of KVO notifications triggered and processed, improving application responsiveness.\n        *   **Application Crashes (Severity: Medium):** Lowers the chance of overwhelming the system with excessive KVO notifications.\n        *   **Unnecessary Resource Consumption (Severity: Low):** Minimizes CPU and memory usage by avoiding unnecessary observations.\n\n    *   **Impact:**\n        *   **Performance Degradation:** Significant reduction in notification overhead. Risk reduction: High.\n        *   **Application Crashes:** Moderate reduction in crash risk. Risk reduction: Moderate.\n        *   **Unnecessary Resource Consumption:** Moderate reduction in resource usage. Risk reduction: Moderate.\n\n    *   **Currently Implemented:**\n        *   Example: `UserProfileViewController.m`:  `[self.KVOController observe:self.user keyPath:@\"profile.name\" ...]` is justified and uses a specific key path.\n        *   Example: `NetworkManager.m`: `[self.KVOController observe:self.connection keyPath:@\"status\" ...]` is justified.\n\n    *   **Missing Implementation:**\n        *   Example: `ChatViewController.m`: `[self.KVOController observe:self.chatSession keyPath:@\"messages\" ...]` needs to be more specific (e.g., `@\"messages.lastObject\"` if only the latest message matters).\n        *   Example: `SettingsViewController.m`: Several `FBKVOController` calls lack clear justifications and need review/removal."
+    },
+    {
+      "title": "Retain Cycle Prevention and Explicit Unregistration (KVOController-Specific)",
+      "text": "    *   **Description:**\n        1.  **`FBKVOControllerNonRetaining` (If Available):**  *Prioritize* using the `FBKVOControllerNonRetaining` option *if* it's available in your version of the library.  This is the most direct and safest way to prevent retain cycles using the library's own features.  Check the `FBKVOController` header file or documentation to confirm its availability.  Use it like this: `[self.KVOControllerNonRetaining observe:...]`.\n        2.  **`__weak` + `dealloc` (If `NonRetaining` is Unavailable):** If `FBKVOControllerNonRetaining` is *not* available, you *must* use the `__weak` reference pattern *and* explicit unregistration:\n            *   **Before** the `observe:...` call: `__weak typeof(self) weakSelf = self;`\n            *   **Inside** the observation block: `__strong typeof(weakSelf) strongSelf = weakSelf; if (strongSelf) { ... }`\n            *   **In `dealloc`:**  `[self.KVOController unobserveAll];` (or `unobserve:` for specific objects/keyPaths if you need finer control). This is *mandatory*.\n        3.  **Code Review:**  A second developer *must* review all `FBKVOController` calls to verify correct weak reference usage and `dealloc` unregistration.\n\n    *   **Threats Mitigated:**\n        *   **Memory Leaks (Severity: High):** Prevents retain cycles between the observer and the observed object, ensuring proper deallocation.\n        *   **Unexpected Behavior (Severity: Medium):** Avoids situations where deallocated objects continue to receive KVO notifications.\n        *   **Application Crashes (Severity: Low):** Reduces the risk of crashes caused by severe memory leaks.\n\n    *   **Impact:**\n        *   **Memory Leaks:** Eliminates retain cycles related to `KVOController`. Risk reduction: High.\n        *   **Unexpected Behavior:** Prevents unexpected KVO notifications to deallocated objects. Risk reduction: High.\n        *   **Application Crashes:** Reduces crash risk from memory exhaustion. Risk reduction: Low.\n\n    *   **Currently Implemented:**\n        *   Example: `UserProfileViewController.m`: Uses `[self.KVOControllerNonRetaining observe:...]` (assuming availability).\n        *   Example: `NetworkManager.m`: Uses `__weak` and `[self.KVOController unobserveAll]` in `dealloc`.\n\n    *   **Missing Implementation:**\n        *   Example: `LegacyModuleA.m`:  Older code that doesn't use `FBKVOControllerNonRetaining` (if available) or the `__weak`/`dealloc` pattern.  Needs immediate refactoring.\n        *   Example: `QuickFixComponent.m`:  Missing `dealloc` unregistration."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-13 17:46:47,172 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Rigorous Observer Registration and Key Path Specificity",
+      "text": "    *   **Description:**\n        1.  **Audit Existing `FBKVOController` Calls:** Search the codebase for all instances of `FBKVOController` methods: `observe:keyPath:options:block:`, `observe:keys:options:block:`, `observe:keyPaths:options:block:`, and any variations.\n        2.  **Justification Review:** For *each* `FBKVOController` call, document a clear, concise reason *why* that specific observation is absolutely necessary. Remove any calls that lack a strong justification.\n        3.  **Key Path Minimization:** Examine the `keyPath` (or `keys`/`keyPaths`) argument in each `FBKVOController` call.  Refine the key path to be as specific as possible, observing only the *exact* nested property that needs to be monitored, rather than a broader object.  For example, change `@"user"` to `@"user.profile.firstName"`.\n        4.  **Code Review:** A second developer reviews all `FBKVOController` calls, justifications, and key paths.\n\n    *   **Threats Mitigated:**\n        *   **Performance Degradation (Severity: High):** Reduces the number of KVO notifications triggered and processed, improving application responsiveness.\n        *   **Application Crashes (Severity: Medium):** Lowers the chance of overwhelming the system with excessive KVO notifications.\n        *   **Unnecessary Resource Consumption (Severity: Low):** Minimizes CPU and memory usage by avoiding unnecessary observations.\n\n    *   **Impact:**\n        *   **Performance Degradation:** Significant reduction in notification overhead. Risk reduction: High.\n        *   **Application Crashes:** Moderate reduction in crash risk. Risk reduction: Moderate.\n        *   **Unnecessary Resource Consumption:** Moderate reduction in resource usage. Risk reduction: Moderate.\n\n    *   **Currently Implemented:**\n        *   Example: `UserProfileViewController.m`:  `[self.KVOController observe:self.user keyPath:@\"profile.name\" ...]` is justified and uses a specific key path.\n        *   Example: `NetworkManager.m`: `[self.KVOController observe:self.connection keyPath:@\"status\" ...]` is justified.\n\n    *   **Missing Implementation:**\n        *   Example: `ChatViewController.m`: `[self.KVOController observe:self.chatSession keyPath:@\"messages\" ...]` needs to be more specific (e.g., `@\"messages.lastObject\"` if only the latest message matters).\n        *   Example: `SettingsViewController.m`: Several `FBKVOController` calls lack clear justifications and need review/removal."
+    },
+    {
+      "title": "Retain Cycle Prevention and Explicit Unregistration (KVOController-Specific)",
+      "text": "    *   **Description:**\n        1.  **`FBKVOControllerNonRetaining` (If Available):**  *Prioritize* using the `FBKVOControllerNonRetaining` option *if* it's available in your version of the library.  This is the most direct and safest way to prevent retain cycles using the library's own features.  Check the `FBKVOController` header file or documentation to confirm its availability.  Use it like this: `[self.KVOControllerNonRetaining observe:...]`.\n        2.  **`__weak` + `dealloc` (If `NonRetaining` is Unavailable):** If `FBKVOControllerNonRetaining` is *not* available, you *must* use the `__weak` reference pattern *and* explicit unregistration:\n            *   **Before** the `observe:...` call: `__weak typeof(self) weakSelf = self;`\n            *   **Inside** the observation block: `__strong typeof(weakSelf) strongSelf = weakSelf; if (strongSelf) { ... }`\n            *   **In `dealloc`:**  `[self.KVOController unobserveAll];` (or `unobserve:` for specific objects/keyPaths if you need finer control). This is *mandatory*.\n        3.  **Code Review:**  A second developer *must* review all `FBKVOController` calls to verify correct weak reference usage and `dealloc` unregistration.\n\n    *   **Threats Mitigated:**\n        *   **Memory Leaks (Severity: High):** Prevents retain cycles between the observer and the observed object, ensuring proper deallocation.\n        *   **Unexpected Behavior (Severity: Medium):** Avoids situations where deallocated objects continue to receive KVO notifications.\n        *   **Application Crashes (Severity: Low):** Reduces the risk of crashes caused by severe memory leaks.\n\n    *   **Impact:**\n        *   **Memory Leaks:** Eliminates retain cycles related to `KVOController`. Risk reduction: High.\n        *   **Unexpected Behavior:** Prevents unexpected KVO notifications to deallocated objects. Risk reduction: High.\n        *   **Application Crashes:** Reduces crash risk from memory exhaustion. Risk reduction: Low.\n\n    *   **Currently Implemented:**\n        *   Example: `UserProfileViewController.m`: Uses `[self.KVOControllerNonRetaining observe:...]` (assuming availability).\n        *   Example: `NetworkManager.m`: Uses `__weak` and `[self.KVOController unobserveAll]` in `dealloc`.\n\n    *   **Missing Implementation:**\n        *   Example: `LegacyModuleA.m`:  Older code that doesn't use `FBKVOControllerNonRetaining` (if available) or the `__weak`/`dealloc` pattern.  Needs immediate refactoring.\n        *   Example: `QuickFixComponent.m`:  Missing `dealloc` unregistration."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739468809.441386       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-13 17:47:03,733 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-13 17:47:03,795 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-13 17:47:26,750 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-13 17:48:08,713 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-13 17:51:07,239 - ai_security_analyzer.graphs - INFO - Actual token usage: 35662
+2025-02-13 17:51:07,249 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739469069.506942       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
