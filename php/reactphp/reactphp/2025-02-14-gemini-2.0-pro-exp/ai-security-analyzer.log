@@ -1,0 +1,161 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+28d645c00242: Waiting
+5c3947958a83: Waiting
+921df71b230f: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+b9be2ce5276b: Download complete
+1f3e46996e29: Pull complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+8b438fc1cd11: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 17:28:14,461 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:28:14,521 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 17:29:32,890 - ai_security_analyzer.graphs - INFO - Actual token usage: 11366
+2025-02-14 17:29:32,893 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554175.134291       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:29:39,337 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:29:39,394 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:30:07,186 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:30:33,106 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:33:45,727 - ai_security_analyzer.graphs - INFO - Actual token usage: 33148
+2025-02-14 17:33:45,738 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554427.988502       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:33:52,231 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:33:52,290 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:34:18,526 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:34:38,556 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:34:38,579 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 17:34:40,609 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-14 17:34:40,610 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554482.872751       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:34:57,073 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:34:57,133 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:35:21,969 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:35:43,073 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:39:40,167 - ai_security_analyzer.graphs - INFO - Actual token usage: 34564
+2025-02-14 17:39:40,176 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554782.411767       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:39:46,663 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:39:46,722 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 17:40:23,710 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 17:40:42,854 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 17:40:58,979 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 17:50:13,407 - ai_security_analyzer.graphs - INFO - Actual token usage: 71629
+2025-02-14 17:50:13,429 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739555415.699243       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:50:19,929 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:50:19,988 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:50:48,647 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:51:15,350 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:51:55,051 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Avoid Blocking Operations (ReactPHP Asynchronous Components)",
+      "text": "**Mitigation Strategy:** Utilize ReactPHP's asynchronous components for all I/O operations.\n\n**Description:**\n1.  **Identify Blocking Calls:** Within event loop callbacks, identify any standard PHP functions that perform blocking I/O (file system, database, network).\n2.  **Replace with ReactPHP Components:** Replace these with the corresponding ReactPHP asynchronous components:\n    *   **File System:** Use `react/filesystem` instead of `file_get_contents`, `fopen`, `fwrite`, etc.  This provides non-blocking file operations.\n    *   **Database:** Use `react/mysql` or `react/pgsql` for asynchronous database interactions.  These provide non-blocking query execution.\n    *   **Network:** Use `react/http` (for HTTP servers and clients) or `react/socket` (for lower-level socket communication) for asynchronous network requests and responses.\n    *   **DNS:** Use `react/dns` for asynchronous DNS resolution.\n3.  **Promise-Based Handling:** Ensure all interactions with these components use Promises (`.then()` and `.catch()`) to handle results and errors asynchronously.\n\n**List of Threats Mitigated:**\n*   **Event Loop Blocking (Critical):** Prevents the application from becoming unresponsive.\n*   **Denial of Service (DoS) (Critical):** Reduces DoS vulnerability due to event loop blocking.\n\n**Impact:**\n*   **Event Loop Blocking:** Risk reduced from *Critical* to *Low*.\n*   **Denial of Service (DoS):** Risk reduced from *Critical* to *Medium*.\n\n**Currently Implemented:**\n*   Partially: `src/Network/Server.php` uses `react/http`.\n*   Fully: `src/Database/Connection.php` uses `react/mysql`.\n\n**Missing Implementation:**\n*   `src/Utils/FileProcessor.php` uses standard blocking file functions; needs `react/filesystem`."
+    },
+    {
+      "title": "Defer Long-Running Tasks (ReactPHP Child Processes)",
+      "text": "**Mitigation Strategy:**  Use `react/child-process` to offload long-running tasks to separate processes.\n\n**Description:**\n1.  **Identify Long Tasks:** Profile the application to find CPU-bound or long-running operations.\n2.  **Create Child Process Script:** Write a separate PHP script that performs the long-running task.\n3.  **Use `react/child-process`:** Within the main ReactPHP application:\n    *   `$process = new Process('php child_script.php');` (Create a `Process` instance).\n    *   `$process->start($loop);` (Start the child process, associating it with the event loop).\n    *   Use streams (`$process->stdin`, `$process->stdout`, `$process->stderr`) to communicate with the child process.  Send data to the child process and receive results asynchronously.\n    *   Handle the child process's exit code and output using event listeners or Promises.\n4.  **Asynchronous Communication:** Ensure all communication with the child process is asynchronous, using ReactPHP's stream handling.\n\n**List of Threats Mitigated:**\n*   **Event Loop Blocking (Critical):** Prevents long tasks from blocking the main thread.\n*   **Denial of Service (DoS) (Critical):** Reduces DoS risk from CPU exhaustion.\n\n**Impact:**\n*   **Event Loop Blocking:** Risk reduced from *Critical* to *Low*.\n*   **Denial of Service (DoS):** Risk reduced from *Critical* to *Medium*.\n\n**Currently Implemented:**\n*   Not currently implemented.\n\n**Missing Implementation:**\n*   `src/ImageProcessing/Processor.php` needs to offload image resizing using `react/child-process`."
+    },
+    {
+      "title": "Always Handle Promise Rejections (ReactPHP Promises)",
+      "text": "**Mitigation Strategy:**  Ensure every ReactPHP Promise has a `.catch()` handler.\n\n**Description:**\n1.  **Code Review:** Examine all code using ReactPHP Promises.\n2.  **Add `.catch()`:**  Append a `.catch(function ($error) { ... });` block to *every* Promise chain.\n3.  **Error Handling:** Inside the `.catch()` block:\n    *   Log the error using a PSR-3 compatible logger (for consistency).\n    *   Implement appropriate error handling: close connections, retry (if appropriate, with backoff), send error responses, etc.\n\n**List of Threats Mitigated:**\n*   **Unhandled Promise Rejections (High):** Prevents application instability.\n*   **Resource Leaks (Medium):** Facilitates proper resource cleanup in error cases.\n\n**Impact:**\n*   **Unhandled Promise Rejections:** Risk reduced from *High* to *Low*.\n*   **Resource Leaks:** Risk reduced from *Medium* to *Low*.\n\n**Currently Implemented:**\n*   Partially: Most Promises in `src/Network/Server.php` and `src/Database/Connection.php` have `.catch()`.\n\n**Missing Implementation:**\n*   `src/Utils/AsyncHelper.php` has Promises without `.catch()` handlers."
+    },
+    {
+      "title": "Explicit Resource Management (ReactPHP Component APIs)",
+      "text": "**Mitigation Strategy:**  Explicitly close/cancel resources managed by ReactPHP components.\n\n**Description:**\n1.  **Identify ReactPHP Resources:**  Identify instances of:\n    *   `react/socket` connections (both client and server).\n    *   `react/mysql` and `react/pgsql` connections.\n    *   `react/filesystem` file handles (although these are often handled implicitly by the component).\n    *   Timers created with `$loop->addTimer()` and `$loop->addPeriodicTimer()`.\n    *   Stream resources from ReactPHP components.\n2.  **Use Component APIs:** Use the appropriate methods provided by the ReactPHP components:\n    *   **Connections:** `$connection->close();`\n    *   **Timers:** `$loop->cancelTimer($timer);`\n    *   **Streams:** Handle `end` and `close` events to release resources.\n3.  **Error Handling:** Ensure resources are closed even in error scenarios (within `.catch()` blocks of Promises).\n\n**List of Threats Mitigated:**\n*   **Resource Leaks (Medium):** Prevents resource exhaustion.\n*   **Application Instability (Medium):** Reduces crashes due to resource limits.\n\n**Impact:**\n*   **Resource Leaks:** Risk reduced from *Medium* to *Low*.\n*   **Application Instability:** Risk reduced from *Medium* to *Low*.\n\n**Currently Implemented:**\n*   Partially: `src/Database/Connection.php` closes connections.\n\n**Missing Implementation:**\n*   `src/Network/Server.php` needs to explicitly close socket connections on errors.\n*   `src/Utils/FileProcessor.php` (once refactored to use `react/filesystem`) needs to ensure proper resource handling."
+    },
+    {
+      "title": "Promise-Based Timeouts (ReactPHP Timers)",
+      "text": "**Mitigation Strategy:** Use `React\Promise\Timer\timeout()` to set timeouts for asynchronous operations.\n\n**Description:**\n1. **Identify Potentially Slow Operations:** Identify any asynchronous operations (Promises) that might take an excessively long time or hang indefinitely.\n2. **Wrap with `timeout()`:** Wrap the Promise with `React\Promise\Timer\timeout($promise, $timeoutSeconds, $loop);`.\n    *   `$promise`: The original Promise.\n    *   `$timeoutSeconds`: The timeout duration in seconds.\n    *   `$loop`: The ReactPHP event loop instance.\n3. **Handle Timeout Rejection:** The `timeout()` function returns a new Promise.  Handle its rejection (using `.catch()`) to detect and respond to timeouts.  This usually involves:\n    *   Logging the timeout.\n    *   Closing any associated connections.\n    *   Sending an appropriate error response (e.g., a 504 Gateway Timeout in an HTTP server).\n\n**List of Threats Mitigated:**\n*   **Event Loop Blocking (Medium):** Prevents a single slow operation from blocking the loop for an extended period.\n*   **Denial of Service (DoS) (Medium):** Reduces the effectiveness of slowloris-type attacks.\n*   **Resource Exhaustion (Low):** Helps prevent resources from being held indefinitely by stalled operations.\n\n**Impact:**\n*   **Event Loop Blocking:** Risk reduced from *Medium* to *Low*.\n*   **Denial of Service (DoS):** Risk reduced from *Medium* to *Low*.\n*   **Resource Exhaustion:** Risk reduced from *Low* to *Very Low*.\n\n**Currently Implemented:**\n*   Not currently implemented.\n\n**Missing Implementation:**\n*   Should be implemented in `src/Network/Server.php` for HTTP requests and in `src/Database/Connection.php` for database queries."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 17:51:55,053 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Avoid Blocking Operations (ReactPHP Asynchronous Components)",
+      "text": "**Mitigation Strategy:** Utilize ReactPHP's asynchronous components for all I/O operations.\n\n**Description:**\n1.  **Identify Blocking Calls:** Within event loop callbacks, identify any standard PHP functions that perform blocking I/O (file system, database, network).\n2.  **Replace with ReactPHP Components:** Replace these with the corresponding ReactPHP asynchronous components:\n    *   **File System:** Use `react/filesystem` instead of `file_get_contents`, `fopen`, `fwrite`, etc.  This provides non-blocking file operations.\n    *   **Database:** Use `react/mysql` or `react/pgsql` for asynchronous database interactions.  These provide non-blocking query execution.\n    *   **Network:** Use `react/http` (for HTTP servers and clients) or `react/socket` (for lower-level socket communication) for asynchronous network requests and responses.\n    *   **DNS:** Use `react/dns` for asynchronous DNS resolution.\n3.  **Promise-Based Handling:** Ensure all interactions with these components use Promises (`.then()` and `.catch()`) to handle results and errors asynchronously.\n\n**List of Threats Mitigated:**\n*   **Event Loop Blocking (Critical):** Prevents the application from becoming unresponsive.\n*   **Denial of Service (DoS) (Critical):** Reduces DoS vulnerability due to event loop blocking.\n\n**Impact:**\n*   **Event Loop Blocking:** Risk reduced from *Critical* to *Low*.\n*   **Denial of Service (DoS):** Risk reduced from *Critical* to *Medium*.\n\n**Currently Implemented:**\n*   Partially: `src/Network/Server.php` uses `react/http`.\n*   Fully: `src/Database/Connection.php` uses `react/mysql`.\n\n**Missing Implementation:**\n*   `src/Utils/FileProcessor.php` uses standard blocking file functions; needs `react/filesystem`."
+    },
+    {
+      "title": "Defer Long-Running Tasks (ReactPHP Child Processes)",
+      "text": "**Mitigation Strategy:**  Use `react/child-process` to offload long-running tasks to separate processes.\n\n**Description:**\n1.  **Identify Long Tasks:** Profile the application to find CPU-bound or long-running operations.\n2.  **Create Child Process Script:** Write a separate PHP script that performs the long-running task.\n3.  **Use `react/child-process`:** Within the main ReactPHP application:\n    *   `$process = new Process('php child_script.php');` (Create a `Process` instance).\n    *   `$process->start($loop);` (Start the child process, associating it with the event loop).\n    *   Use streams (`$process->stdin`, `$process->stdout`, `$process->stderr`) to communicate with the child process.  Send data to the child process and receive results asynchronously.\n    *   Handle the child process's exit code and output using event listeners or Promises.\n4.  **Asynchronous Communication:** Ensure all communication with the child process is asynchronous, using ReactPHP's stream handling.\n\n**List of Threats Mitigated:**\n*   **Event Loop Blocking (Critical):** Prevents long tasks from blocking the main thread.\n*   **Denial of Service (DoS) (Critical):** Reduces DoS risk from CPU exhaustion.\n\n**Impact:**\n*   **Event Loop Blocking:** Risk reduced from *Critical* to *Low*.\n*   **Denial of Service (DoS):** Risk reduced from *Critical* to *Medium*.\n\n**Currently Implemented:**\n*   Not currently implemented.\n\n**Missing Implementation:**\n*   `src/ImageProcessing/Processor.php` needs to offload image resizing using `react/child-process`."
+    },
+    {
+      "title": "Always Handle Promise Rejections (ReactPHP Promises)",
+      "text": "**Mitigation Strategy:**  Ensure every ReactPHP Promise has a `.catch()` handler.\n\n**Description:**\n1.  **Code Review:** Examine all code using ReactPHP Promises.\n2.  **Add `.catch()`:**  Append a `.catch(function ($error) { ... });` block to *every* Promise chain.\n3.  **Error Handling:** Inside the `.catch()` block:\n    *   Log the error using a PSR-3 compatible logger (for consistency).\n    *   Implement appropriate error handling: close connections, retry (if appropriate, with backoff), send error responses, etc.\n\n**List of Threats Mitigated:**\n*   **Unhandled Promise Rejections (High):** Prevents application instability.\n*   **Resource Leaks (Medium):** Facilitates proper resource cleanup in error cases.\n\n**Impact:**\n*   **Unhandled Promise Rejections:** Risk reduced from *High* to *Low*.\n*   **Resource Leaks:** Risk reduced from *Medium* to *Low*.\n\n**Currently Implemented:**\n*   Partially: Most Promises in `src/Network/Server.php` and `src/Database/Connection.php` have `.catch()`.\n\n**Missing Implementation:**\n*   `src/Utils/AsyncHelper.php` has Promises without `.catch()` handlers."
+    },
+    {
+      "title": "Explicit Resource Management (ReactPHP Component APIs)",
+      "text": "**Mitigation Strategy:**  Explicitly close/cancel resources managed by ReactPHP components.\n\n**Description:**\n1.  **Identify ReactPHP Resources:**  Identify instances of:\n    *   `react/socket` connections (both client and server).\n    *   `react/mysql` and `react/pgsql` connections.\n    *   `react/filesystem` file handles (although these are often handled implicitly by the component).\n    *   Timers created with `$loop->addTimer()` and `$loop->addPeriodicTimer()`.\n    *   Stream resources from ReactPHP components.\n2.  **Use Component APIs:** Use the appropriate methods provided by the ReactPHP components:\n    *   **Connections:** `$connection->close();`\n    *   **Timers:** `$loop->cancelTimer($timer);`\n    *   **Streams:** Handle `end` and `close` events to release resources.\n3.  **Error Handling:** Ensure resources are closed even in error scenarios (within `.catch()` blocks of Promises).\n\n**List of Threats Mitigated:**\n*   **Resource Leaks (Medium):** Prevents resource exhaustion.\n*   **Application Instability (Medium):** Reduces crashes due to resource limits.\n\n**Impact:**\n*   **Resource Leaks:** Risk reduced from *Medium* to *Low*.\n*   **Application Instability:** Risk reduced from *Medium* to *Low*.\n\n**Currently Implemented:**\n*   Partially: `src/Database/Connection.php` closes connections.\n\n**Missing Implementation:**\n*   `src/Network/Server.php` needs to explicitly close socket connections on errors.\n*   `src/Utils/FileProcessor.php` (once refactored to use `react/filesystem`) needs to ensure proper resource handling."
+    },
+    {
+      "title": "Promise-Based Timeouts (ReactPHP Timers)",
+      "text": "**Mitigation Strategy:** Use `React\Promise\Timer\timeout()` to set timeouts for asynchronous operations.\n\n**Description:**\n1. **Identify Potentially Slow Operations:** Identify any asynchronous operations (Promises) that might take an excessively long time or hang indefinitely.\n2. **Wrap with `timeout()`:** Wrap the Promise with `React\Promise\Timer\timeout($promise, $timeoutSeconds, $loop);`.\n    *   `$promise`: The original Promise.\n    *   `$timeoutSeconds`: The timeout duration in seconds.\n    *   `$loop`: The ReactPHP event loop instance.\n3. **Handle Timeout Rejection:** The `timeout()` function returns a new Promise.  Handle its rejection (using `.catch()`) to detect and respond to timeouts.  This usually involves:\n    *   Logging the timeout.\n    *   Closing any associated connections.\n    *   Sending an appropriate error response (e.g., a 504 Gateway Timeout in an HTTP server).\n\n**List of Threats Mitigated:**\n*   **Event Loop Blocking (Medium):** Prevents a single slow operation from blocking the loop for an extended period.\n*   **Denial of Service (DoS) (Medium):** Reduces the effectiveness of slowloris-type attacks.\n*   **Resource Exhaustion (Low):** Helps prevent resources from being held indefinitely by stalled operations.\n\n**Impact:**\n*   **Event Loop Blocking:** Risk reduced from *Medium* to *Low*.\n*   **Denial of Service (DoS):** Risk reduced from *Medium* to *Low*.\n*   **Resource Exhaustion:** Risk reduced from *Low* to *Very Low*.\n\n**Currently Implemented:**\n*   Not currently implemented.\n\n**Missing Implementation:**\n*   Should be implemented in `src/Network/Server.php` for HTTP requests and in `src/Database/Connection.php` for database queries."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739555517.300455       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:52:11,537 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:52:11,598 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:52:39,733 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:53:21,511 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:56:45,863 - ai_security_analyzer.graphs - INFO - Actual token usage: 38311
+2025-02-14 17:56:45,874 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739555808.117588       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
