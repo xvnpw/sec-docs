@@ -1,5 +1,3 @@
-objectivec https://github.com/tttattributedlabel/tttattributedlabel
-objectivec https://github.com/vicc/chameleon
 objectivec https://github.com/wenchaod/fscalendar
 php https://github.com/bagisto/bagisto
 php https://github.com/barryvdh/laravel-debugbar
