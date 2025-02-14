@@ -1,0 +1,163 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+1f3e46996e29: Pull complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 04:18:31,378 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 04:18:31,443 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 04:20:18,400 - ai_security_analyzer.graphs - INFO - Actual token usage: 15378
+2025-02-14 04:20:18,405 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739506820.812033       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 04:20:25,231 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 04:20:25,290 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 04:20:50,606 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 04:21:11,982 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 04:21:38,575 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Debug Mode Enabled in Production",
+      "text": "*   **Threat:** Debug Mode Enabled in Production\n\n    *   **Description:** An attacker discovers that the application is running in debug mode by observing verbose error messages or accessing known debug routes. They can then leverage this information to gain insights into the application's internal structure, database credentials, file paths, and potentially exploit other vulnerabilities.  This is a *direct* CakePHP issue because the framework provides the debug functionality and its misconfiguration is a common mistake.\n    *   **Impact:** Complete compromise of the application and its data. Exposure of sensitive information, including database credentials, API keys, and source code. Facilitates further attacks.\n    *   **Affected Component:** `config/app.php` (specifically the `debug` setting), Application-wide.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   **Mandatory:** Set `debug` to `false` in `config/app.php` and any environment-specific configuration files for production.\n        *   Use environment variables to manage configuration, preventing accidental commits of debug settings.\n        *   Regularly audit the production environment to confirm debug mode is disabled.\n        *   Implement monitoring to alert on any changes to the `debug` setting."
+    },
+    {
+      "title": "Mass Assignment Vulnerability",
+      "text": "*   **Threat:** Mass Assignment Vulnerability\n\n    *   **Description:** An attacker sends a crafted HTTP request that includes unexpected fields not intended to be modified by the user. If the application uses `$this->request->getData()` or similar methods without proper whitelisting or blacklisting, the attacker can overwrite arbitrary database fields, potentially changing user roles, bypassing security checks, or modifying sensitive data. This is *direct* because it exploits how CakePHP's ORM handles data binding.\n    *   **Impact:** Data corruption, unauthorized data modification, privilege escalation, potential account takeover.\n    *   **Affected Component:** ORM (specifically `Table::patchEntity()`, `Table::newEntity()`, `Table::newEntities()`, and direct use of `$this->request->getData()` for saving), Entities (accessible fields configuration).\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   **Mandatory:** Always use `patchEntity()` with a properly configured entity that defines accessible fields using the `$_accessible` property. Never directly use `$this->request->getData()` to save data to the database.\n        *   Use strict whitelisting of allowed fields in the entity's `$_accessible` property. Prefer whitelisting over blacklisting.\n        *   Validate data at multiple levels (entity, form, and potentially database constraints)."
+    },
+    {
+      "title": "Authentication Bypass in Custom Authenticator",
+      "text": "*   **Threat:** Authentication Bypass in Custom Authenticator\n\n    *   **Description:** An attacker exploits a flaw in a custom-built authenticator (e.g., a custom OAuth2 implementation, a bespoke API key handler). This flaw might involve incorrect token validation, improper handling of user sessions, or logic errors that allow authentication without valid credentials. This is *direct* because it targets the custom implementation *within* CakePHP's authentication framework.\n    *   **Impact:** Unauthorized access to the application, impersonation of legitimate users, potential access to sensitive data.\n    *   **Affected Component:** Authentication Component (specifically custom authenticators extending `Authentication\Authenticator\AbstractAuthenticator`), Session Management.\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   Thoroughly review and test custom authenticators, including edge cases and negative test scenarios.\n        *   Follow secure coding practices for authentication, including proper input validation, secure session management, and robust error handling.\n        *   Consider using well-established authentication libraries or protocols instead of building custom solutions whenever possible.\n        *   Regularly audit and update authentication-related code."
+    },
+    {
+      "title": "Authorization Bypass in Plugin",
+      "text": "*   **Threat:** Authorization Bypass in Plugin\n\n    *   **Description:** An attacker exploits a vulnerability in a third-party CakePHP plugin's authorization logic. This could involve incorrect permission checks, flawed role-based access control, or other logic errors that allow access to restricted functionality or data. This is *direct* because the vulnerability exists *within* a CakePHP plugin, extending the framework's functionality.\n    *   **Impact:** Unauthorized access to features or data, potential privilege escalation.\n    *   **Affected Component:** Third-party plugins, Authorization Component (if the plugin integrates with it).\n    *   **Risk Severity:** High (depending on the plugin's functionality)\n    *   **Mitigation Strategies:**\n        *   Carefully vet third-party plugins before installation, checking for security reviews and community feedback.\n        *   Keep all plugins updated to the latest versions.\n        *   Monitor security advisories for installed plugins.\n        *   Implement additional authorization checks at the application level, even if the plugin provides its own.\n        *   If possible, review the plugin's source code for potential security issues."
+    },
+    {
+      "title": "Insecure \"Remember Me\" Functionality",
+      "text": "*   **Threat:** Insecure \"Remember Me\" Functionality\n\n    *   **Description:** If the \"remember me\" functionality is implemented using predictable or easily guessable tokens, or if the tokens are stored insecurely (e.g., in plain text in a cookie), an attacker can hijack user sessions by guessing or stealing these tokens. This is *direct* because it relates to a feature often implemented using CakePHP's authentication components.\n    *   **Impact:** Session hijacking, unauthorized access to user accounts.\n    *   **Affected Component:** Authentication Component (specifically the \"remember me\" feature), Session Management, Cookies.\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   Use cryptographically secure random tokens for \"remember me\" functionality.\n        *   Store tokens securely, either hashed in the database or using a secure cookie with appropriate flags (HttpOnly, Secure).\n        *   Implement token expiration and rotation.\n        *   Provide users with the ability to revoke \"remember me\" tokens."
+    },
+    {
+      "title": "Routing Manipulation via File Upload",
+      "text": "*   **Threat:** Routing Manipulation via File Upload\n\n    *   **Description:** An attacker uploads a malicious file that overwrites or modifies the application's routing configuration (e.g., `config/routes.php`). This allows them to redirect requests to malicious controllers or actions, potentially executing arbitrary code. This is *direct* because it targets CakePHP's routing mechanism and configuration files.\n    *   **Impact:** Redirection to malicious code, potential code execution, complete application compromise.\n    *   **Affected Component:** Routing (specifically the `config/routes.php` file), File Upload functionality.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   Store routing configuration files in secure locations outside the webroot, with restricted file system permissions.\n        *   **Never** allow user-uploaded files to be placed in locations where they can be executed or interpreted as configuration files.\n        *   Validate all user-provided input, including filenames and file contents.\n        *   Use a whitelist of allowed file extensions and MIME types."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 04:21:38,576 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Debug Mode Enabled in Production",
+      "text": "*   **Threat:** Debug Mode Enabled in Production\n\n    *   **Description:** An attacker discovers that the application is running in debug mode by observing verbose error messages or accessing known debug routes. They can then leverage this information to gain insights into the application's internal structure, database credentials, file paths, and potentially exploit other vulnerabilities.  This is a *direct* CakePHP issue because the framework provides the debug functionality and its misconfiguration is a common mistake.\n    *   **Impact:** Complete compromise of the application and its data. Exposure of sensitive information, including database credentials, API keys, and source code. Facilitates further attacks.\n    *   **Affected Component:** `config/app.php` (specifically the `debug` setting), Application-wide.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   **Mandatory:** Set `debug` to `false` in `config/app.php` and any environment-specific configuration files for production.\n        *   Use environment variables to manage configuration, preventing accidental commits of debug settings.\n        *   Regularly audit the production environment to confirm debug mode is disabled.\n        *   Implement monitoring to alert on any changes to the `debug` setting."
+    },
+    {
+      "title": "Mass Assignment Vulnerability",
+      "text": "*   **Threat:** Mass Assignment Vulnerability\n\n    *   **Description:** An attacker sends a crafted HTTP request that includes unexpected fields not intended to be modified by the user. If the application uses `$this->request->getData()` or similar methods without proper whitelisting or blacklisting, the attacker can overwrite arbitrary database fields, potentially changing user roles, bypassing security checks, or modifying sensitive data. This is *direct* because it exploits how CakePHP's ORM handles data binding.\n    *   **Impact:** Data corruption, unauthorized data modification, privilege escalation, potential account takeover.\n    *   **Affected Component:** ORM (specifically `Table::patchEntity()`, `Table::newEntity()`, `Table::newEntities()`, and direct use of `$this->request->getData()` for saving), Entities (accessible fields configuration).\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   **Mandatory:** Always use `patchEntity()` with a properly configured entity that defines accessible fields using the `$_accessible` property. Never directly use `$this->request->getData()` to save data to the database.\n        *   Use strict whitelisting of allowed fields in the entity's `$_accessible` property. Prefer whitelisting over blacklisting.\n        *   Validate data at multiple levels (entity, form, and potentially database constraints)."
+    },
+    {
+      "title": "Authentication Bypass in Custom Authenticator",
+      "text": "*   **Threat:** Authentication Bypass in Custom Authenticator\n\n    *   **Description:** An attacker exploits a flaw in a custom-built authenticator (e.g., a custom OAuth2 implementation, a bespoke API key handler). This flaw might involve incorrect token validation, improper handling of user sessions, or logic errors that allow authentication without valid credentials. This is *direct* because it targets the custom implementation *within* CakePHP's authentication framework.\n    *   **Impact:** Unauthorized access to the application, impersonation of legitimate users, potential access to sensitive data.\n    *   **Affected Component:** Authentication Component (specifically custom authenticators extending `Authentication\Authenticator\AbstractAuthenticator`), Session Management.\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   Thoroughly review and test custom authenticators, including edge cases and negative test scenarios.\n        *   Follow secure coding practices for authentication, including proper input validation, secure session management, and robust error handling.\n        *   Consider using well-established authentication libraries or protocols instead of building custom solutions whenever possible.\n        *   Regularly audit and update authentication-related code."
+    },
+    {
+      "title": "Authorization Bypass in Plugin",
+      "text": "*   **Threat:** Authorization Bypass in Plugin\n\n    *   **Description:** An attacker exploits a vulnerability in a third-party CakePHP plugin's authorization logic. This could involve incorrect permission checks, flawed role-based access control, or other logic errors that allow access to restricted functionality or data. This is *direct* because the vulnerability exists *within* a CakePHP plugin, extending the framework's functionality.\n    *   **Impact:** Unauthorized access to features or data, potential privilege escalation.\n    *   **Affected Component:** Third-party plugins, Authorization Component (if the plugin integrates with it).\n    *   **Risk Severity:** High (depending on the plugin's functionality)\n    *   **Mitigation Strategies:**\n        *   Carefully vet third-party plugins before installation, checking for security reviews and community feedback.\n        *   Keep all plugins updated to the latest versions.\n        *   Monitor security advisories for installed plugins.\n        *   Implement additional authorization checks at the application level, even if the plugin provides its own.\n        *   If possible, review the plugin's source code for potential security issues."
+    },
+    {
+      "title": "Insecure \"Remember Me\" Functionality",
+      "text": "*   **Threat:** Insecure \"Remember Me\" Functionality\n\n    *   **Description:** If the \"remember me\" functionality is implemented using predictable or easily guessable tokens, or if the tokens are stored insecurely (e.g., in plain text in a cookie), an attacker can hijack user sessions by guessing or stealing these tokens. This is *direct* because it relates to a feature often implemented using CakePHP's authentication components.\n    *   **Impact:** Session hijacking, unauthorized access to user accounts.\n    *   **Affected Component:** Authentication Component (specifically the \"remember me\" feature), Session Management, Cookies.\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   Use cryptographically secure random tokens for \"remember me\" functionality.\n        *   Store tokens securely, either hashed in the database or using a secure cookie with appropriate flags (HttpOnly, Secure).\n        *   Implement token expiration and rotation.\n        *   Provide users with the ability to revoke \"remember me\" tokens."
+    },
+    {
+      "title": "Routing Manipulation via File Upload",
+      "text": "*   **Threat:** Routing Manipulation via File Upload\n\n    *   **Description:** An attacker uploads a malicious file that overwrites or modifies the application's routing configuration (e.g., `config/routes.php`). This allows them to redirect requests to malicious controllers or actions, potentially executing arbitrary code. This is *direct* because it targets CakePHP's routing mechanism and configuration files.\n    *   **Impact:** Redirection to malicious code, potential code execution, complete application compromise.\n    *   **Affected Component:** Routing (specifically the `config/routes.php` file), File Upload functionality.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   Store routing configuration files in secure locations outside the webroot, with restricted file system permissions.\n        *   **Never** allow user-uploaded files to be placed in locations where they can be executed or interpreted as configuration files.\n        *   Validate all user-provided input, including filenames and file contents.\n        *   Use a whitelist of allowed file extensions and MIME types."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739506900.953421       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 04:21:55,485 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 04:21:55,552 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 04:22:20,260 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 04:22:45,684 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 04:25:44,792 - ai_security_analyzer.graphs - INFO - Actual token usage: 29925
+2025-02-14 04:25:44,802 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739507147.068472       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 04:25:51,523 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 04:25:51,585 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 04:26:23,009 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 04:26:44,891 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 04:27:05,263 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 04:30:07,555 - ai_security_analyzer.graphs - INFO - Actual token usage: 33535
+2025-02-14 04:30:07,564 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739507409.824644       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 04:30:14,125 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 04:30:14,183 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 04:30:47,295 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 04:31:09,875 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 04:31:25,261 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 04:34:06,222 - ai_security_analyzer.graphs - INFO - Actual token usage: 38060
+2025-02-14 04:34:06,232 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739507648.486829       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 04:34:12,837 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 04:34:12,895 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 04:34:36,659 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 04:35:30,796 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 04:39:37,150 - ai_security_analyzer.graphs - INFO - Actual token usage: 43846
+2025-02-14 04:39:37,164 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739507979.426222       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
