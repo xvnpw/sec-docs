@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/woocommerce/woocommerce",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-14T22:08:35Z",
+  "end_datetime": "2025-02-14T22:29:05Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-pro-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "159818",
+  "mode": "github"
+}
