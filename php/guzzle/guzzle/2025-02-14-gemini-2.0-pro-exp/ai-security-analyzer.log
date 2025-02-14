@@ -1,0 +1,213 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Pull complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 09:56:08,304 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 09:56:08,368 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 09:58:06,246 - ai_security_analyzer.graphs - INFO - Actual token usage: 11761
+2025-02-14 09:58:06,253 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739527088.607061       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 09:58:12,953 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 09:58:13,012 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 09:58:39,705 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 09:59:09,860 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 09:59:36,112 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Server-Side Request Forgery (SSRF)",
+      "text": "*   **Threat:** Server-Side Request Forgery (SSRF)\n\n    *   **Description:** An attacker crafts malicious input that controls the URL passed to Guzzle's `request()` method (or related methods like `get()`, `post()`).  The attacker can force the application to make requests to internal servers (metadata services, databases, internal APIs) or external servers, bypassing intended access controls. The attacker might exploit URL schemes (e.g., `file://`, `gopher://`) or internal IP addresses. This is a *direct* misuse of Guzzle's core functionality.\n    *   **Impact:**\n        *   Exposure of sensitive internal data.\n        *   Access to internal services, leading to further compromise.\n        *   Circumvention of network security controls.\n        *   Data exfiltration.\n        *   Denial of service.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Client::request()` (and related methods like `get()`, `post()`, etc.)\n        *   Any code that uses user-provided input to construct the request URI *without proper validation*.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   **Strict Input Validation:** Implement a *whitelist* of allowed URLs or domains.  Reject *any* request to URLs not on the whitelist.  This is the most crucial mitigation.\n        *   **Indirect URL Mapping:** If user input *must* influence the URL, use a lookup table or other indirect method to map user input to a safe, pre-defined URL.  *Never* construct the URL directly from user input.\n        *   **Avoid Raw User Input:** Avoid using raw user input in the URL entirely, if possible."
+    },
+    {
+      "title": "Sensitive Data Exposure via Logging",
+      "text": "*   **Threat:** Sensitive Data Exposure via Logging\n\n    *   **Description:** Guzzle's logging features (middleware, `debug` option, `MessageFormatter`), if improperly configured, can log sensitive information like API keys, passwords, tokens, or PII from request headers, bodies, or responses. An attacker gaining access to these logs obtains this sensitive data. This is a direct consequence of how Guzzle's logging components are used.\n    *   **Impact:**\n        *   Compromise of user accounts.\n        *   Exposure of API keys, leading to unauthorized service access.\n        *   Violation of privacy regulations.\n        *   Reputational damage.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Middleware::log()`\n        *   `GuzzleHttp\MessageFormatter`\n        *   `GuzzleHttp\HandlerStack` (when used with logging middleware)\n        *   `debug` option in `GuzzleHttp\Client`\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   **Redaction:** Use `MessageFormatter` with custom format strings to *redact* sensitive data in logs (e.g., replace passwords with `***`).\n        *   **Conditional Logging:** Only enable detailed logging in development/debugging.  Disable or severely restrict logging in production.\n        *   **Avoid Logging Bodies:** Avoid logging full request/response bodies unless absolutely necessary for debugging, and even then, redact sensitive parts."
+    },
+    {
+      "title": "Header Injection",
+      "text": "*   **Threat:** Header Injection\n\n    *   **Description:** An attacker injects malicious HTTP headers by manipulating user input that is used *directly* to construct request headers within Guzzle. This can lead to attacks like HTTP response splitting, cache poisoning, or bypassing security controls. The attacker often uses newline characters (`\\r\\n`) to manipulate the header structure. This is a direct misuse of how headers are set in Guzzle.\n    *   **Impact:**\n        *   Cache poisoning.\n        *   HTTP response splitting.\n        *   Bypassing security controls (XSS filters, CSRF protection).\n        *   Session fixation.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Client::request()` (and related methods) - when headers are constructed using *unsanitized* user input.\n        *   `GuzzleHttp\Psr7\Request` (and related classes) - when headers are set directly with user input.\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   **Input Validation:** *Strictly* validate and sanitize any user input used to construct headers. Reject input containing newline characters or other malicious characters.\n        *   **Use Guzzle's Header Handling:** Use Guzzle's built-in methods for setting headers (e.g., `$request->withHeader()`), which offer *some* built-in protection.\n        *   **Avoid Direct User Input:** Avoid using raw user input directly in headers. If necessary, use a whitelist of allowed header values."
+    },
+    {
+      "title": "Misconfigured SSL/TLS Verification",
+      "text": "* **Threat:** Misconfigured SSL/TLS Verification\n\n    *   **Description:** If Guzzle's SSL/TLS verification is disabled (the `verify` option is set to `false`) or improperly configured (e.g., pointing to an incorrect or outdated CA bundle), the application becomes vulnerable to man-in-the-middle (MITM) attacks. This is a *direct* misconfiguration of a core Guzzle security feature.\n    *   **Impact:**\n        *   Interception of sensitive data (credentials, API keys).\n        *   Modification of requests and responses.\n        *   Complete compromise of the communication.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Client` - `verify` option.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   **Enable Verification:**  **Always** enable SSL/TLS verification (`verify` set to `true` or a path to a *valid* and *up-to-date* CA bundle) in production environments. This is non-negotiable for secure communication."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 09:59:36,113 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Server-Side Request Forgery (SSRF)",
+      "text": "*   **Threat:** Server-Side Request Forgery (SSRF)\n\n    *   **Description:** An attacker crafts malicious input that controls the URL passed to Guzzle's `request()` method (or related methods like `get()`, `post()`).  The attacker can force the application to make requests to internal servers (metadata services, databases, internal APIs) or external servers, bypassing intended access controls. The attacker might exploit URL schemes (e.g., `file://`, `gopher://`) or internal IP addresses. This is a *direct* misuse of Guzzle's core functionality.\n    *   **Impact:**\n        *   Exposure of sensitive internal data.\n        *   Access to internal services, leading to further compromise.\n        *   Circumvention of network security controls.\n        *   Data exfiltration.\n        *   Denial of service.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Client::request()` (and related methods like `get()`, `post()`, etc.)\n        *   Any code that uses user-provided input to construct the request URI *without proper validation*.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   **Strict Input Validation:** Implement a *whitelist* of allowed URLs or domains.  Reject *any* request to URLs not on the whitelist.  This is the most crucial mitigation.\n        *   **Indirect URL Mapping:** If user input *must* influence the URL, use a lookup table or other indirect method to map user input to a safe, pre-defined URL.  *Never* construct the URL directly from user input.\n        *   **Avoid Raw User Input:** Avoid using raw user input in the URL entirely, if possible."
+    },
+    {
+      "title": "Sensitive Data Exposure via Logging",
+      "text": "*   **Threat:** Sensitive Data Exposure via Logging\n\n    *   **Description:** Guzzle's logging features (middleware, `debug` option, `MessageFormatter`), if improperly configured, can log sensitive information like API keys, passwords, tokens, or PII from request headers, bodies, or responses. An attacker gaining access to these logs obtains this sensitive data. This is a direct consequence of how Guzzle's logging components are used.\n    *   **Impact:**\n        *   Compromise of user accounts.\n        *   Exposure of API keys, leading to unauthorized service access.\n        *   Violation of privacy regulations.\n        *   Reputational damage.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Middleware::log()`\n        *   `GuzzleHttp\MessageFormatter`\n        *   `GuzzleHttp\HandlerStack` (when used with logging middleware)\n        *   `debug` option in `GuzzleHttp\Client`\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   **Redaction:** Use `MessageFormatter` with custom format strings to *redact* sensitive data in logs (e.g., replace passwords with `***`).\n        *   **Conditional Logging:** Only enable detailed logging in development/debugging.  Disable or severely restrict logging in production.\n        *   **Avoid Logging Bodies:** Avoid logging full request/response bodies unless absolutely necessary for debugging, and even then, redact sensitive parts."
+    },
+    {
+      "title": "Header Injection",
+      "text": "*   **Threat:** Header Injection\n\n    *   **Description:** An attacker injects malicious HTTP headers by manipulating user input that is used *directly* to construct request headers within Guzzle. This can lead to attacks like HTTP response splitting, cache poisoning, or bypassing security controls. The attacker often uses newline characters (`\\r\\n`) to manipulate the header structure. This is a direct misuse of how headers are set in Guzzle.\n    *   **Impact:**\n        *   Cache poisoning.\n        *   HTTP response splitting.\n        *   Bypassing security controls (XSS filters, CSRF protection).\n        *   Session fixation.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Client::request()` (and related methods) - when headers are constructed using *unsanitized* user input.\n        *   `GuzzleHttp\Psr7\Request` (and related classes) - when headers are set directly with user input.\n    *   **Risk Severity:** High\n    *   **Mitigation Strategies:**\n        *   **Input Validation:** *Strictly* validate and sanitize any user input used to construct headers. Reject input containing newline characters or other malicious characters.\n        *   **Use Guzzle's Header Handling:** Use Guzzle's built-in methods for setting headers (e.g., `$request->withHeader()`), which offer *some* built-in protection.\n        *   **Avoid Direct User Input:** Avoid using raw user input directly in headers. If necessary, use a whitelist of allowed header values."
+    },
+    {
+      "title": "Misconfigured SSL/TLS Verification",
+      "text": "* **Threat:** Misconfigured SSL/TLS Verification\n\n    *   **Description:** If Guzzle's SSL/TLS verification is disabled (the `verify` option is set to `false`) or improperly configured (e.g., pointing to an incorrect or outdated CA bundle), the application becomes vulnerable to man-in-the-middle (MITM) attacks. This is a *direct* misconfiguration of a core Guzzle security feature.\n    *   **Impact:**\n        *   Interception of sensitive data (credentials, API keys).\n        *   Modification of requests and responses.\n        *   Complete compromise of the communication.\n    *   **Guzzle Component Affected:**\n        *   `GuzzleHttp\Client` - `verify` option.\n    *   **Risk Severity:** Critical\n    *   **Mitigation Strategies:**\n        *   **Enable Verification:**  **Always** enable SSL/TLS verification (`verify` set to `true` or a path to a *valid* and *up-to-date* CA bundle) in production environments. This is non-negotiable for secure communication."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739527178.432733       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 09:59:52,825 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 09:59:52,888 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 10:00:20,663 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 10:00:49,712 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 10:04:30,331 - ai_security_analyzer.graphs - INFO - Actual token usage: 33150
+2025-02-14 10:04:30,340 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739527472.650832       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 10:04:37,047 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 10:04:37,108 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 10:05:10,113 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 10:05:32,515 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 10:06:09,888 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "Request Parameter Injection",
+      "text": "*   **Description:** Attackers inject malicious data into request parameters (URL, headers, body) to manipulate the application's behavior or exploit vulnerabilities in the target service.\n*   **Guzzle Contribution:** Guzzle provides the mechanisms to construct and send HTTP requests (URL, headers, body), making it the direct conduit for injected data if not properly handled.  The flexibility of Guzzle in constructing requests increases the risk if misused.\n*   **Example:**\n    *   `$client->get('https://api.example.com/products?id=' . $_GET['id']);`  If `$_GET['id']` is not validated, an attacker could inject SQL injection payloads or path traversal characters.  Guzzle executes this request.\n*   **Impact:** Data breaches, unauthorized access, remote code execution (RCE) on the target server, denial of service, application compromise.\n*   **Risk Severity:** Critical\n*   **Mitigation Strategies:**\n    *   **Input Validation:** Implement strict, whitelist-based input validation for *all* user-supplied data. Define allowed data types, formats, lengths, and character sets. Reject any input that doesn't conform.\n    *   **Encoding/Escaping:** Use appropriate encoding (e.g., URL encoding) and escaping techniques for the context (URL, header, body). Guzzle handles URL encoding for query parameters automatically in many cases, but be explicit and verify.\n    *   **Parameterization:** Use Guzzle's built-in parameterization features (e.g., the `query` option for query parameters, `form_params` for form data, `json` for JSON bodies) to avoid manual string concatenation. This is the *primary* Guzzle-specific mitigation.\n    *   **Prepared Statements (Server-Side):**  This is a server-side mitigation, but crucial. If interacting with a database, use prepared statements on the *target* server."
+    },
+    {
+      "title": "Uncontrolled Redirects",
+      "text": "*   **Description:** The application blindly follows HTTP redirects (3xx responses) to attacker-controlled URLs, leading to phishing, open redirect vulnerabilities, or bypassing security controls.\n*   **Guzzle Contribution:** Guzzle's `allow_redirects` option (default: `true`) *automatically* follows redirects, making this a direct Guzzle-related risk.\n*   **Example:**\n    *   An application uses Guzzle to fetch a user-provided URL. The attacker provides a URL that redirects to a phishing site. Guzzle, with `allow_redirects` enabled, follows the redirect.\n*   **Impact:** Phishing attacks, user credential theft, session hijacking, bypassing security controls, malware distribution.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Disable Redirects:** If redirects are not necessary, set `allow_redirects` to `false`. This is the most secure option and directly controls Guzzle's behavior.\n    *   **Strict URL Validation:** If redirects are required, *validate the redirect URL* before Guzzle follows it.  Check the protocol, domain, and path against a whitelist of trusted destinations.  Use a custom `RedirectMiddleware` (a Guzzle feature) to implement this validation. This is the *key* Guzzle-specific mitigation.\n    *   **Limit Redirects:** Use the `max` option within `allow_redirects` (e.g., `allow_redirects => ['max' => 5]`) to limit the number of allowed redirects."
+    },
+    {
+      "title": "Sensitive Data Exposure in Redirects",
+      "text": "*   **Description:** Sensitive data (e.g., authentication tokens, cookies) sent in the initial request are leaked to an attacker-controlled URL during a redirect.\n*   **Guzzle Contribution:** Guzzle, by default, might send headers (including cookies) to the redirected URL.  The `allow_redirects` and related options directly control this.\n*   **Example:**\n    *   A POST request with an `Authorization` header is made using Guzzle.  The server redirects to an attacker-controlled site.  The `Authorization` header is sent to the attacker.\n*   **Impact:** Credential theft, session hijacking, unauthorized access.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **`strict` Redirects:** Use `allow_redirects => ['strict' => true]` to convert POST redirects to GET requests, preventing the body and potentially sensitive headers from being sent. This is a direct Guzzle configuration change.\n    *   **Custom Redirect Middleware:** Implement a custom `RedirectMiddleware` (a Guzzle feature) to selectively remove sensitive headers (e.g., `Authorization`, `Cookie`) before following a redirect, especially if the redirect is to a different domain. This is the *most robust* Guzzle-specific mitigation."
+    },
+    {
+      "title": "Disabled or Misconfigured SSL/TLS Verification",
+      "text": "*   **Description:**  The application does not verify the SSL/TLS certificate of the target server, making it vulnerable to man-in-the-middle (MITM) attacks.\n*   **Guzzle Contribution:** Guzzle's `verify` option *directly* controls certificate verification (default: `true`).  Disabling it is a Guzzle-specific action with severe consequences.\n*   **Example:**\n    *   `$client = new GuzzleHttp\Client(['verify' => false]);` This disables certificate verification within Guzzle.\n*   **Impact:**  Data interception, data modification, credential theft, complete compromise of communication.\n*   **Risk Severity:** Critical\n*   **Mitigation Strategies:**\n    *   **Enable Verification:**  *Always* set `verify` to `true` (the default) in production. This is the fundamental Guzzle-specific mitigation.\n    *   **Use a Valid CA Bundle:** Ensure that the system's default CA bundle is up-to-date, or provide a path to a trusted CA bundle file using the `verify` option (a Guzzle setting)."
+    },
+    {
+      "title": "HTTP Method Tampering",
+      "text": "*   **Description:** Attackers manipulate the HTTP method (GET, POST, PUT, etc.) to bypass intended access controls.\n*   **Guzzle Contribution:** Guzzle *provides the methods* to specify the HTTP verb used in the request (e.g., `$client->get()`, `$client->post()`, `$client->request()`).\n*   **Example:**\n    * An application intends to use a GET request, but the attacker manipulates a parameter to change it to a POST request, potentially allowing unauthorized data modification.\n*   **Impact:** Unauthorized data modification/deletion, bypassing security controls.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Hardcode HTTP Method:** Use the specific Guzzle methods for each verb (e.g., `$client->post()`) instead of the generic `$client->request()` with a variable method. This is the *primary* Guzzle-related mitigation.\n    *   **Whitelist Allowed Methods:** If the method *must* be dynamic, validate it against a strict whitelist *before* passing it to Guzzle."
+    },
+    {
+      "title": "Debug Mode Enabled in Production",
+      "text": "*   **Description:**  Guzzle's debug mode, which outputs verbose request and response information, is accidentally left enabled in a production environment.\n*   **Guzzle Contribution:** Guzzle's `debug` option *directly* controls this behavior. Enabling it in production is a Guzzle-specific misconfiguration.\n*   **Example:**\n    *   `$client = new GuzzleHttp\Client(['debug' => true]);` is accidentally deployed.\n*   **Impact:**  Sensitive data leakage (headers, request/response bodies), exposure of internal application details.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Disable Debug in Production:**  *Never* enable `debug` in a production environment.  Use environment variables or configuration files to control this Guzzle setting, ensuring it's off in production. This is entirely a Guzzle configuration issue."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 10:06:09,890 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "attack_surfaces": [
+    {
+      "title": "Request Parameter Injection",
+      "text": "*   **Description:** Attackers inject malicious data into request parameters (URL, headers, body) to manipulate the application's behavior or exploit vulnerabilities in the target service.\n*   **Guzzle Contribution:** Guzzle provides the mechanisms to construct and send HTTP requests (URL, headers, body), making it the direct conduit for injected data if not properly handled.  The flexibility of Guzzle in constructing requests increases the risk if misused.\n*   **Example:**\n    *   `$client->get('https://api.example.com/products?id=' . $_GET['id']);`  If `$_GET['id']` is not validated, an attacker could inject SQL injection payloads or path traversal characters.  Guzzle executes this request.\n*   **Impact:** Data breaches, unauthorized access, remote code execution (RCE) on the target server, denial of service, application compromise.\n*   **Risk Severity:** Critical\n*   **Mitigation Strategies:**\n    *   **Input Validation:** Implement strict, whitelist-based input validation for *all* user-supplied data. Define allowed data types, formats, lengths, and character sets. Reject any input that doesn't conform.\n    *   **Encoding/Escaping:** Use appropriate encoding (e.g., URL encoding) and escaping techniques for the context (URL, header, body). Guzzle handles URL encoding for query parameters automatically in many cases, but be explicit and verify.\n    *   **Parameterization:** Use Guzzle's built-in parameterization features (e.g., the `query` option for query parameters, `form_params` for form data, `json` for JSON bodies) to avoid manual string concatenation. This is the *primary* Guzzle-specific mitigation.\n    *   **Prepared Statements (Server-Side):**  This is a server-side mitigation, but crucial. If interacting with a database, use prepared statements on the *target* server."
+    },
+    {
+      "title": "Uncontrolled Redirects",
+      "text": "*   **Description:** The application blindly follows HTTP redirects (3xx responses) to attacker-controlled URLs, leading to phishing, open redirect vulnerabilities, or bypassing security controls.\n*   **Guzzle Contribution:** Guzzle's `allow_redirects` option (default: `true`) *automatically* follows redirects, making this a direct Guzzle-related risk.\n*   **Example:**\n    *   An application uses Guzzle to fetch a user-provided URL. The attacker provides a URL that redirects to a phishing site. Guzzle, with `allow_redirects` enabled, follows the redirect.\n*   **Impact:** Phishing attacks, user credential theft, session hijacking, bypassing security controls, malware distribution.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Disable Redirects:** If redirects are not necessary, set `allow_redirects` to `false`. This is the most secure option and directly controls Guzzle's behavior.\n    *   **Strict URL Validation:** If redirects are required, *validate the redirect URL* before Guzzle follows it.  Check the protocol, domain, and path against a whitelist of trusted destinations.  Use a custom `RedirectMiddleware` (a Guzzle feature) to implement this validation. This is the *key* Guzzle-specific mitigation.\n    *   **Limit Redirects:** Use the `max` option within `allow_redirects` (e.g., `allow_redirects => ['max' => 5]`) to limit the number of allowed redirects."
+    },
+    {
+      "title": "Sensitive Data Exposure in Redirects",
+      "text": "*   **Description:** Sensitive data (e.g., authentication tokens, cookies) sent in the initial request are leaked to an attacker-controlled URL during a redirect.\n*   **Guzzle Contribution:** Guzzle, by default, might send headers (including cookies) to the redirected URL.  The `allow_redirects` and related options directly control this.\n*   **Example:**\n    *   A POST request with an `Authorization` header is made using Guzzle.  The server redirects to an attacker-controlled site.  The `Authorization` header is sent to the attacker.\n*   **Impact:** Credential theft, session hijacking, unauthorized access.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **`strict` Redirects:** Use `allow_redirects => ['strict' => true]` to convert POST redirects to GET requests, preventing the body and potentially sensitive headers from being sent. This is a direct Guzzle configuration change.\n    *   **Custom Redirect Middleware:** Implement a custom `RedirectMiddleware` (a Guzzle feature) to selectively remove sensitive headers (e.g., `Authorization`, `Cookie`) before following a redirect, especially if the redirect is to a different domain. This is the *most robust* Guzzle-specific mitigation."
+    },
+    {
+      "title": "Disabled or Misconfigured SSL/TLS Verification",
+      "text": "*   **Description:**  The application does not verify the SSL/TLS certificate of the target server, making it vulnerable to man-in-the-middle (MITM) attacks.\n*   **Guzzle Contribution:** Guzzle's `verify` option *directly* controls certificate verification (default: `true`).  Disabling it is a Guzzle-specific action with severe consequences.\n*   **Example:**\n    *   `$client = new GuzzleHttp\Client(['verify' => false]);` This disables certificate verification within Guzzle.\n*   **Impact:**  Data interception, data modification, credential theft, complete compromise of communication.\n*   **Risk Severity:** Critical\n*   **Mitigation Strategies:**\n    *   **Enable Verification:**  *Always* set `verify` to `true` (the default) in production. This is the fundamental Guzzle-specific mitigation.\n    *   **Use a Valid CA Bundle:** Ensure that the system's default CA bundle is up-to-date, or provide a path to a trusted CA bundle file using the `verify` option (a Guzzle setting)."
+    },
+    {
+      "title": "HTTP Method Tampering",
+      "text": "*   **Description:** Attackers manipulate the HTTP method (GET, POST, PUT, etc.) to bypass intended access controls.\n*   **Guzzle Contribution:** Guzzle *provides the methods* to specify the HTTP verb used in the request (e.g., `$client->get()`, `$client->post()`, `$client->request()`).\n*   **Example:**\n    * An application intends to use a GET request, but the attacker manipulates a parameter to change it to a POST request, potentially allowing unauthorized data modification.\n*   **Impact:** Unauthorized data modification/deletion, bypassing security controls.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Hardcode HTTP Method:** Use the specific Guzzle methods for each verb (e.g., `$client->post()`) instead of the generic `$client->request()` with a variable method. This is the *primary* Guzzle-related mitigation.\n    *   **Whitelist Allowed Methods:** If the method *must* be dynamic, validate it against a strict whitelist *before* passing it to Guzzle."
+    },
+    {
+      "title": "Debug Mode Enabled in Production",
+      "text": "*   **Description:**  Guzzle's debug mode, which outputs verbose request and response information, is accidentally left enabled in a production environment.\n*   **Guzzle Contribution:** Guzzle's `debug` option *directly* controls this behavior. Enabling it in production is a Guzzle-specific misconfiguration.\n*   **Example:**\n    *   `$client = new GuzzleHttp\Client(['debug' => true]);` is accidentally deployed.\n*   **Impact:**  Sensitive data leakage (headers, request/response bodies), exposure of internal application details.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Disable Debug in Production:**  *Never* enable `debug` in a production environment.  Use environment variables or configuration files to control this Guzzle setting, ensuring it's off in production. This is entirely a Guzzle configuration issue."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739527572.244326       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 10:06:26,655 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 10:06:26,719 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 10:06:58,998 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 10:07:26,566 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 10:10:12,528 - ai_security_analyzer.graphs - INFO - Actual token usage: 29014
+2025-02-14 10:10:12,537 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739527814.885463       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 10:10:19,287 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 10:10:19,350 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 10:10:54,562 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 10:11:26,189 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 10:11:49,646 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 10:15:06,739 - ai_security_analyzer.graphs - INFO - Actual token usage: 49250
+2025-02-14 10:15:06,750 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739528109.092391       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 10:15:13,511 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 10:15:13,570 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 10:15:36,185 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 10:16:24,146 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 10:20:03,084 - ai_security_analyzer.graphs - INFO - Actual token usage: 37339
+2025-02-14 10:20:03,095 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739528405.449014       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
