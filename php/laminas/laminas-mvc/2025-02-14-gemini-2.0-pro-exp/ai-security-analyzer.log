@@ -1,0 +1,172 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+1f3e46996e29: Pull complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Download complete
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 10:51:32,494 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 10:51:32,557 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 10:53:41,755 - ai_security_analyzer.graphs - INFO - Actual token usage: 14296
+2025-02-14 10:53:41,763 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739530424.162684       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 10:53:48,530 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 10:53:48,591 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 10:54:20,242 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 10:54:59,984 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 10:55:00,055 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 10:55:56,277 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Route Parameter Tampering",
+      "text": "**1. Threat: Route Parameter Tampering (Directly Affecting `laminas-mvc` Routing)**\n\n*   **Description:** An attacker manipulates URL route parameters that are handled by `laminas-mvc`'s routing system (`laminas-router`, as integrated within `laminas-mvc`).  Because routing is *fundamental* to `laminas-mvc`, this is a direct threat. The attacker injects unexpected characters, exceeds length limits, or provides values that bypass intended constraints *defined within the MVC routing configuration*. This is *not* just about general input validation, but about how `laminas-mvc` processes routes.\n*   **Impact:**  The attacker can access unauthorized resources, trigger unintended actions within controllers, or potentially exploit vulnerabilities like SQL injection or path traversal if the route parameters are used insecurely *within the MVC controller logic*.\n*   **Affected Component:** `laminas-mvc` (specifically, the `Laminas\Mvc\Router` component and its integration with `Laminas\Mvc\Controller\AbstractActionController`), and the controller actions that handle these parameters. The vulnerability lies in how `laminas-mvc` *uses* the router and how controllers receive routed parameters.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Configuration (laminas-mvc):** Use `laminas-mvc`'s route constraints (e.g., regular expressions, `type` within the `route` configuration) to *strictly* define the allowed format and type of route parameters. This is a *key Laminas-MVC-specific defense*.\n    *   **Code (Controller):** Within the controller action (which is part of `laminas-mvc`), *always* sanitize and validate route parameters using Laminas's input filters and validators, *even if* constraints are defined. Constraints are a first line of defense, not a complete solution. The controller is part of the MVC flow.\n    *   **Code (Controller):** Avoid using overly permissive route configurations (e.g., `*` wildcards) within `laminas-mvc`'s routing setup without careful consideration.\n    *   **Code (Controller):** Avoid directly using route parameters (obtained via `laminas-mvc`'s `$this->params()`) in database queries or file system operations without proper escaping and validation *within the controller*."
+    },
+    {
+      "title": "Error Handling and Exception Exposure",
+      "text": "**2. Threat: Error Handling and Exception Exposure (via `laminas-mvc`'s Error Handling)**\n\n*   **Description:** `laminas-mvc` itself is configured to display detailed error messages or stack traces in a production environment (through incorrect settings in `laminas-mvc`'s configuration, specifically the `view_manager` and `controller` sections). This is *not* about general error handling, but about `laminas-mvc`'s *built-in* error and exception handling mechanisms. This reveals sensitive information about the application's internal workings.\n*   **Impact:**  Information disclosure. Provides attackers with valuable information that can be used to plan further attacks, including details about the application's structure, database schema, and file paths.\n*   **Affected Component:** `laminas-mvc` (specifically, the error handling configuration within `view_manager` and how exceptions are handled within the MVC dispatch process), and potentially custom `laminas-mvc` event listeners that handle exceptions.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Configuration (laminas-mvc):** *Disable* detailed error reporting in production environments using `laminas-mvc`'s configuration options (e.g., `display_exceptions` set to `false` in the `view_manager` configuration *within the application's `module.config.php` or similar*). This is a direct `laminas-mvc` setting.\n    *   **Configuration (laminas-mvc):** Ensure `laminas-development-mode` is *disabled* in production. This tool is directly related to `laminas-mvc`'s development workflow.\n    *   **Code (laminas-mvc):** Use `laminas-mvc`'s custom error pages (configured via `view_manager` within the `laminas-mvc` configuration) to display generic error messages to users.\n    *   **Code (laminas-mvc):** Log detailed error information (including stack traces) using `laminas-log`, but ensure these logs are *not* publicly accessible. While `laminas-log` is a separate component, its *use in response to laminas-mvc errors* is relevant here.\n    *   **Code (laminas-mvc):** Carefully review any custom `laminas-mvc` event listeners (e.g., listeners attached to the `dispatch.error` event) to ensure they do not reveal sensitive data in error responses."
+    },
+    {
+      "title": "Insecure Direct Object References (IDOR)",
+      "text": "**3. Threat: Insecure Direct Object References (IDOR) via `laminas-mvc` Controller Parameter Handling**\n\n*   **Description:** A `laminas-mvc` controller *directly* uses user-supplied parameters (e.g., IDs passed in the URL or form data, obtained via `$this->params()` within the controller) to access resources (e.g., database records, files) *without* performing proper authorization checks *within the controller logic*. This is about how `laminas-mvc` controllers handle input and interact with models. An attacker can change the ID to access data belonging to other users.\n*   **Impact:**  Unauthorized data access. The attacker can view, modify, or delete data they should not have access to.\n*   **Affected Component:** `laminas-mvc` (specifically, `Laminas\Mvc\Controller\AbstractActionController` and its subclasses, and how they handle parameters from the request), and the interaction between controllers and models/services. The vulnerability is in the *controller logic*, which is part of `laminas-mvc`.\n*   **Risk Severity:** High to Critical (depending on the sensitivity of the data)\n*   **Mitigation Strategies:**\n    *   **Code (Controller):** Implement authorization checks *within* `laminas-mvc` controllers to verify that the currently authenticated user has permission to access the requested resource, *before* accessing the resource. This is done *within the controller*, which is part of `laminas-mvc`.\n    *   **Code (Controller/Service):** Use Laminas's ACL (`laminas-permissions-acl`) or RBAC (`laminas-permissions-rbac`) components to enforce authorization rules. While these are separate components, their *integration within the laminas-mvc controller flow* is key. The controller would typically call these components.\n    *   **Code (Controller):** Avoid directly exposing internal object IDs (e.g., database primary keys) in URLs or forms. Use indirect references or tokens instead (e.g., UUIDs, hashids), managed within the `laminas-mvc` application (likely within controllers or services called by controllers).\n    *   **Code (Controller):** When retrieving data based on user input (obtained via `laminas-mvc`'s parameter handling), *always* include a check within the controller or a called service to ensure the data belongs to the currently authenticated user."
+    },
+    {
+      "title": "Improper Authorization with Laminas ACL/RBAC",
+      "text": "**4. Threat: Improper Authorization with Laminas ACL/RBAC (within the `laminas-mvc` Context)**\n\n*   **Description:** While `laminas-permissions-acl` and `laminas-permissions-rbac` are separate components, their *primary use case* is within the `laminas-mvc` framework to control access to controllers and actions.  The threat is that the ACL or RBAC rules are incorrectly defined *within the context of a laminas-mvc application*, allowing users to access resources or perform actions they should not be authorized to do.  The misconfiguration or bypass happens *within the laminas-mvc application's authorization logic*.\n*   **Impact:**  Elevation of privilege. Users can gain access to functionality or data they should not have.\n*   **Affected Component:**  `laminas-mvc` (specifically, how controllers integrate with `laminas-permissions-acl` or `laminas-permissions-rbac`), and the configuration of these authorization components *within the laminas-mvc application*. The vulnerability lies in how `laminas-mvc` *uses* the authorization components.\n*   **Risk Severity:** High to Critical\n*   **Mitigation Strategies:**\n    *   **Configuration (laminas-mvc):** Carefully define and *thoroughly test* ACL or RBAC rules *within the context of the laminas-mvc application*. Follow the principle of least privilege. This configuration is typically done within `module.config.php` or similar, which is part of the `laminas-mvc` structure.\n    *   **Code (Controller/Service):** Ensure that authorization checks (using `isAllowed()`) are *consistently* applied within `laminas-mvc` controllers or services, before accessing protected resources or performing actions.\n    *   **Code (laminas-mvc):** Regularly review and update Laminas ACL/RBAC configurations *within the laminas-mvc application*, especially after adding new features or modifying existing ones.\n    *   **Code (laminas-mvc):** Avoid hardcoding roles or permissions within controllers; use Laminas's configuration system (again, typically within `module.config.php` or similar) to manage them. This is part of `laminas-mvc`'s configuration approach.\n    *   **Code (laminas-mvc):** Use a \"deny-by-default\" approach: explicitly deny access unless a rule specifically allows it, configured within the `laminas-mvc` application's authorization setup."
+    },
+    {
+      "title": "Session Fixation/Hijacking",
+      "text": "**5. Threat: Session Fixation/Hijacking (Specifically Exploiting `laminas-mvc`'s Session Integration)**\n* **Description:** While `laminas-session` is a separate component, `laminas-mvc` *integrates* with it directly. This threat focuses on vulnerabilities arising from *how* `laminas-mvc` uses `laminas-session`. An attacker provides a victim with a known session ID. If `laminas-mvc`'s controller logic doesn't properly regenerate the session ID upon authentication (a `laminas-mvc` best practice), the attacker can hijack the session.\n* **Impact:** Complete account takeover.\n* **Affected Component:** `laminas-mvc` (specifically, `Laminas\Mvc\Controller\AbstractActionController` and how it interacts with `laminas-session` via the Service Manager. The vulnerability is in *how the controller uses the session*).\n* **Risk Severity:** Critical\n* **Mitigation Strategies:**\n    *   **Code (Controller - laminas-mvc):** Ensure `regenerate_id()` is called on the `SessionManager` (obtained via `laminas-mvc`'s service manager) *within the controller*, *after* successful authentication. This is a *critical Laminas-MVC-specific best practice*. The controller is responsible for this.\n    *   **Configuration (laminas-mvc):** Configure `laminas-session` (through `laminas-mvc`'s configuration, typically in `module.config.php`) to use strong session ID generation.\n    *   **Configuration (laminas-mvc):** Enable `cookie_secure` (if using HTTPS) and `cookie_httponly` in the `laminas-session` configuration (again, accessed via `laminas-mvc`'s configuration).\n    *   **Code (Controller - laminas-mvc):** Use Laminas's built-in session validators (`RemoteAddr`, `HttpUserAgent`), leveraging them *within the laminas-mvc controller logic* for added protection.\n    *   **Code (Controller - laminas-mvc):** Avoid storing sensitive data directly in the session (accessed via `laminas-mvc`'s controller) without encryption."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 10:55:56,280 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Route Parameter Tampering",
+      "text": "**1. Threat: Route Parameter Tampering (Directly Affecting `laminas-mvc` Routing)**\n\n*   **Description:** An attacker manipulates URL route parameters that are handled by `laminas-mvc`'s routing system (`laminas-router`, as integrated within `laminas-mvc`).  Because routing is *fundamental* to `laminas-mvc`, this is a direct threat. The attacker injects unexpected characters, exceeds length limits, or provides values that bypass intended constraints *defined within the MVC routing configuration*. This is *not* just about general input validation, but about how `laminas-mvc` processes routes.\n*   **Impact:**  The attacker can access unauthorized resources, trigger unintended actions within controllers, or potentially exploit vulnerabilities like SQL injection or path traversal if the route parameters are used insecurely *within the MVC controller logic*.\n*   **Affected Component:** `laminas-mvc` (specifically, the `Laminas\Mvc\Router` component and its integration with `Laminas\Mvc\Controller\AbstractActionController`), and the controller actions that handle these parameters. The vulnerability lies in how `laminas-mvc` *uses* the router and how controllers receive routed parameters.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Configuration (laminas-mvc):** Use `laminas-mvc`'s route constraints (e.g., regular expressions, `type` within the `route` configuration) to *strictly* define the allowed format and type of route parameters. This is a *key Laminas-MVC-specific defense*.\n    *   **Code (Controller):** Within the controller action (which is part of `laminas-mvc`), *always* sanitize and validate route parameters using Laminas's input filters and validators, *even if* constraints are defined. Constraints are a first line of defense, not a complete solution. The controller is part of the MVC flow.\n    *   **Code (Controller):** Avoid using overly permissive route configurations (e.g., `*` wildcards) within `laminas-mvc`'s routing setup without careful consideration.\n    *   **Code (Controller):** Avoid directly using route parameters (obtained via `laminas-mvc`'s `$this->params()`) in database queries or file system operations without proper escaping and validation *within the controller*."
+    },
+    {
+      "title": "Error Handling and Exception Exposure",
+      "text": "**2. Threat: Error Handling and Exception Exposure (via `laminas-mvc`'s Error Handling)**\n\n*   **Description:** `laminas-mvc` itself is configured to display detailed error messages or stack traces in a production environment (through incorrect settings in `laminas-mvc`'s configuration, specifically the `view_manager` and `controller` sections). This is *not* about general error handling, but about `laminas-mvc`'s *built-in* error and exception handling mechanisms. This reveals sensitive information about the application's internal workings.\n*   **Impact:**  Information disclosure. Provides attackers with valuable information that can be used to plan further attacks, including details about the application's structure, database schema, and file paths.\n*   **Affected Component:** `laminas-mvc` (specifically, the error handling configuration within `view_manager` and how exceptions are handled within the MVC dispatch process), and potentially custom `laminas-mvc` event listeners that handle exceptions.\n*   **Risk Severity:** High\n*   **Mitigation Strategies:**\n    *   **Configuration (laminas-mvc):** *Disable* detailed error reporting in production environments using `laminas-mvc`'s configuration options (e.g., `display_exceptions` set to `false` in the `view_manager` configuration *within the application's `module.config.php` or similar*). This is a direct `laminas-mvc` setting.\n    *   **Configuration (laminas-mvc):** Ensure `laminas-development-mode` is *disabled* in production. This tool is directly related to `laminas-mvc`'s development workflow.\n    *   **Code (laminas-mvc):** Use `laminas-mvc`'s custom error pages (configured via `view_manager` within the `laminas-mvc` configuration) to display generic error messages to users.\n    *   **Code (laminas-mvc):** Log detailed error information (including stack traces) using `laminas-log`, but ensure these logs are *not* publicly accessible. While `laminas-log` is a separate component, its *use in response to laminas-mvc errors* is relevant here.\n    *   **Code (laminas-mvc):** Carefully review any custom `laminas-mvc` event listeners (e.g., listeners attached to the `dispatch.error` event) to ensure they do not reveal sensitive data in error responses."
+    },
+    {
+      "title": "Insecure Direct Object References (IDOR)",
+      "text": "**3. Threat: Insecure Direct Object References (IDOR) via `laminas-mvc` Controller Parameter Handling**\n\n*   **Description:** A `laminas-mvc` controller *directly* uses user-supplied parameters (e.g., IDs passed in the URL or form data, obtained via `$this->params()` within the controller) to access resources (e.g., database records, files) *without* performing proper authorization checks *within the controller logic*. This is about how `laminas-mvc` controllers handle input and interact with models. An attacker can change the ID to access data belonging to other users.\n*   **Impact:**  Unauthorized data access. The attacker can view, modify, or delete data they should not have access to.\n*   **Affected Component:** `laminas-mvc` (specifically, `Laminas\Mvc\Controller\AbstractActionController` and its subclasses, and how they handle parameters from the request), and the interaction between controllers and models/services. The vulnerability is in the *controller logic*, which is part of `laminas-mvc`.\n*   **Risk Severity:** High to Critical (depending on the sensitivity of the data)\n*   **Mitigation Strategies:**\n    *   **Code (Controller):** Implement authorization checks *within* `laminas-mvc` controllers to verify that the currently authenticated user has permission to access the requested resource, *before* accessing the resource. This is done *within the controller*, which is part of `laminas-mvc`.\n    *   **Code (Controller/Service):** Use Laminas's ACL (`laminas-permissions-acl`) or RBAC (`laminas-permissions-rbac`) components to enforce authorization rules. While these are separate components, their *integration within the laminas-mvc controller flow* is key. The controller would typically call these components.\n    *   **Code (Controller):** Avoid directly exposing internal object IDs (e.g., database primary keys) in URLs or forms. Use indirect references or tokens instead (e.g., UUIDs, hashids), managed within the `laminas-mvc` application (likely within controllers or services called by controllers).\n    *   **Code (Controller):** When retrieving data based on user input (obtained via `laminas-mvc`'s parameter handling), *always* include a check within the controller or a called service to ensure the data belongs to the currently authenticated user."
+    },
+    {
+      "title": "Improper Authorization with Laminas ACL/RBAC",
+      "text": "**4. Threat: Improper Authorization with Laminas ACL/RBAC (within the `laminas-mvc` Context)**\n\n*   **Description:** While `laminas-permissions-acl` and `laminas-permissions-rbac` are separate components, their *primary use case* is within the `laminas-mvc` framework to control access to controllers and actions.  The threat is that the ACL or RBAC rules are incorrectly defined *within the context of a laminas-mvc application*, allowing users to access resources or perform actions they should not be authorized to do.  The misconfiguration or bypass happens *within the laminas-mvc application's authorization logic*.\n*   **Impact:**  Elevation of privilege. Users can gain access to functionality or data they should not have.\n*   **Affected Component:**  `laminas-mvc` (specifically, how controllers integrate with `laminas-permissions-acl` or `laminas-permissions-rbac`), and the configuration of these authorization components *within the laminas-mvc application*. The vulnerability lies in how `laminas-mvc` *uses* the authorization components.\n*   **Risk Severity:** High to Critical\n*   **Mitigation Strategies:**\n    *   **Configuration (laminas-mvc):** Carefully define and *thoroughly test* ACL or RBAC rules *within the context of the laminas-mvc application*. Follow the principle of least privilege. This configuration is typically done within `module.config.php` or similar, which is part of the `laminas-mvc` structure.\n    *   **Code (Controller/Service):** Ensure that authorization checks (using `isAllowed()`) are *consistently* applied within `laminas-mvc` controllers or services, before accessing protected resources or performing actions.\n    *   **Code (laminas-mvc):** Regularly review and update Laminas ACL/RBAC configurations *within the laminas-mvc application*, especially after adding new features or modifying existing ones.\n    *   **Code (laminas-mvc):** Avoid hardcoding roles or permissions within controllers; use Laminas's configuration system (again, typically within `module.config.php` or similar) to manage them. This is part of `laminas-mvc`'s configuration approach.\n    *   **Code (laminas-mvc):** Use a \"deny-by-default\" approach: explicitly deny access unless a rule specifically allows it, configured within the `laminas-mvc` application's authorization setup."
+    },
+    {
+      "title": "Session Fixation/Hijacking",
+      "text": "**5. Threat: Session Fixation/Hijacking (Specifically Exploiting `laminas-mvc`'s Session Integration)**\n* **Description:** While `laminas-session` is a separate component, `laminas-mvc` *integrates* with it directly. This threat focuses on vulnerabilities arising from *how* `laminas-mvc` uses `laminas-session`. An attacker provides a victim with a known session ID. If `laminas-mvc`'s controller logic doesn't properly regenerate the session ID upon authentication (a `laminas-mvc` best practice), the attacker can hijack the session.\n* **Impact:** Complete account takeover.\n* **Affected Component:** `laminas-mvc` (specifically, `Laminas\Mvc\Controller\AbstractActionController` and how it interacts with `laminas-session` via the Service Manager. The vulnerability is in *how the controller uses the session*).\n* **Risk Severity:** Critical\n* **Mitigation Strategies:**\n    *   **Code (Controller - laminas-mvc):** Ensure `regenerate_id()` is called on the `SessionManager` (obtained via `laminas-mvc`'s service manager) *within the controller*, *after* successful authentication. This is a *critical Laminas-MVC-specific best practice*. The controller is responsible for this.\n    *   **Configuration (laminas-mvc):** Configure `laminas-session` (through `laminas-mvc`'s configuration, typically in `module.config.php`) to use strong session ID generation.\n    *   **Configuration (laminas-mvc):** Enable `cookie_secure` (if using HTTPS) and `cookie_httponly` in the `laminas-session` configuration (again, accessed via `laminas-mvc`'s configuration).\n    *   **Code (Controller - laminas-mvc):** Use Laminas's built-in session validators (`RemoteAddr`, `HttpUserAgent`), leveraging them *within the laminas-mvc controller logic* for added protection.\n    *   **Code (Controller - laminas-mvc):** Avoid storing sensitive data directly in the session (accessed via `laminas-mvc`'s controller) without encryption."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739530558.665011       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 10:56:13,115 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 10:56:13,181 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 10:56:40,353 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 10:57:04,926 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 11:00:16,121 - ai_security_analyzer.graphs - INFO - Actual token usage: 30519
+2025-02-14 11:00:16,131 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739530818.487767       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 11:00:22,841 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 11:00:22,900 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 11:00:52,904 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 11:00:52,945 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 11:00:54,976 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-14 11:00:54,977 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739530857.303116       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 11:01:11,702 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 11:01:11,767 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 11:01:37,740 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 11:01:37,783 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 11:02:05,351 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 11:04:23,066 - ai_security_analyzer.graphs - INFO - Actual token usage: 26064
+2025-02-14 11:04:23,075 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739531065.431035       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 11:04:29,904 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 11:04:29,966 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 11:04:54,101 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 11:04:54,143 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 11:04:56,177 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-14 11:04:56,178 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739531098.518303       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 11:05:12,947 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 11:05:13,010 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 11:05:45,804 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 11:05:45,841 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 11:06:06,418 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 11:06:21,529 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 11:11:59,855 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 11:13:58,361 - ai_security_analyzer.graphs - INFO - Actual token usage: 64127
+2025-02-14 11:13:58,378 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739531640.821883       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 11:14:05,212 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 11:14:05,272 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 11:14:29,239 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 11:15:36,951 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 11:18:56,728 - ai_security_analyzer.graphs - INFO - Actual token usage: 44863
+2025-02-14 11:18:56,742 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739531939.322350       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
