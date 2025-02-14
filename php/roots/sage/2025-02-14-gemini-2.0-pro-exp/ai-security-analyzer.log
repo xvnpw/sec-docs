@@ -1,0 +1,147 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+b9be2ce5276b: Waiting
+5c3947958a83: Waiting
+8b438fc1cd11: Waiting
+37e00e2d9431: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+d3f883494790: Waiting
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+1f3e46996e29: Pull complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+dfb81f221332: Pull complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 17:28:15,143 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:28:15,206 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 17:28:15,341 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 17:29:43,530 - ai_security_analyzer.graphs - INFO - Actual token usage: 12206
+2025-02-14 17:29:43,534 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554185.908195       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:29:50,333 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:29:50,394 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:30:16,857 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:30:43,503 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:33:18,834 - ai_security_analyzer.graphs - INFO - Actual token usage: 26527
+2025-02-14 17:33:18,845 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554401.228571       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:33:25,661 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:33:25,721 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:33:47,301 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:34:15,118 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:37:43,203 - ai_security_analyzer.graphs - INFO - Actual token usage: 31711
+2025-02-14 17:37:43,212 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554665.532320       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:37:49,867 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:37:49,926 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 17:38:24,286 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 17:38:57,260 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 17:39:25,373 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 17:42:59,566 - ai_security_analyzer.graphs - INFO - Actual token usage: 51012
+2025-02-14 17:42:59,578 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739554981.941516       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:43:06,319 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:43:06,379 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:43:26,533 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:44:18,056 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:45:01,221 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Secure Webpack Configuration and Asset Handling",
+      "text": "1.  **Disable Source Maps in Production:** Open `webpack.config.js` and `webpack.config.optimize.js`. Locate the `devtool` option.  For production builds (typically triggered by `yarn build:production` or similar), set `devtool: false;`.  For development, you can use a safer option like `'inline-source-map'` or `'eval-cheap-module-source-map'`.  After building, inspect the generated `.js` files in your `dist` folder to confirm no `.map` files are present and that source code isn't easily readable.\n2.  **Verify `publicPath`:** In `webpack.config.js`, find the `output` section and the `publicPath` property.  Ensure this is set to the correct URL where your assets will be served in production (e.g., `/wp-content/themes/your-theme/dist/`).  Incorrect values can lead to 404 errors or, worse, reveal your server's directory structure.\n3.  **Secure Environment Variables:**\n    *   Install `dotenv`: `yarn add dotenv --dev`\n    *   Create a `.env` file in your project root.  Add your environment variables (e.g., `API_KEY=your_secret_key`).  **Never commit this file to version control.**\n    *   Add `.env` to your `.gitignore` file.\n    *   In `webpack.config.js`, require `dotenv`: `const Dotenv = require('dotenv-webpack');`\n    *   Add `Dotenv` to the `plugins` array: `plugins: [ new Dotenv() ]`.\n    *   Access variables in your JavaScript code using `process.env.VARIABLE_NAME`.\n    *   **Crucially:**  Only expose *necessary* variables.  Don't blindly expose all variables from `.env`.  Consider using a separate configuration file to whitelist the variables exposed to the client.\n4.  **Code Splitting Review (if applicable):** If using code splitting (dynamic `import()`), after building, manually inspect the generated chunk files in your `dist` folder.  Ensure no sensitive data (API keys, internal comments, etc.) is present in these publicly accessible files.\n5. **Regularly Audit:** At least monthly, review the entire Webpack configuration for any accidental exposures or outdated configurations.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure (High Severity):** Exposing source maps reveals the original source code, making it easier for attackers to understand the application's logic and find vulnerabilities.  *Directly related to Sage's build process.*\n    *   **Information Disclosure (Medium Severity):** Incorrect `publicPath` can expose the server's directory structure. *Directly related to Sage's Webpack configuration.*\n    *   **Credential Exposure (Critical Severity):** Hardcoding or improperly handling environment variables can expose API keys, database credentials, or other secrets. *Directly related to how Sage encourages environment variable use in the build process.*\n    *   **Information Disclosure (Medium Severity):** Code splitting, if not carefully reviewed, can leak sensitive information in publicly accessible chunks. *Directly related to Sage's use of Webpack and code splitting features.*\n\n*   **Impact:**\n    *   **Information Disclosure (Source Maps):** Risk reduced to near zero.\n    *   **Information Disclosure (`publicPath`):** Risk significantly reduced.\n    *   **Credential Exposure:** Risk dramatically reduced.\n    *   **Information Disclosure (Code Splitting):** Risk reduced, but manual review is still crucial.\n\n*   **Currently Implemented:**\n    *   Source Maps Disabled: `webpack.config.optimize.js` - `devtool: false;`\n    *   `publicPath` Verified: `webpack.config.js` - `output: { publicPath: '/wp-content/themes/my-theme/dist/' }`\n    *   Environment Variables: Partially implemented. `dotenv` is used, but not all variables are carefully filtered.\n    * Code Splitting Review: Not implemented.\n\n*   **Missing Implementation:**\n    *   Environment Variables: Need to implement a whitelist to filter which variables from `.env` are exposed to the client.\n    *   Code Splitting Review:  Need to establish a process for regularly reviewing generated code chunks.\n    *   Regular Audit: Need to schedule and document regular audits of the Webpack configuration."
+    },
+    {
+      "title": "Enforce Strict Output Escaping in Blade Templates",
+      "text": "1.  **Default to Escaped Output:**  In all Blade templates (`.blade.php` files), use the `{{ $variable }}` syntax for *all* variables that display user-provided data or data from potentially untrusted sources (including WordPress data). This automatically escapes HTML entities.\n2.  **Avoid Unescaped Output:**  *Never* use `!! $variable !!` unless you are *absolutely certain* the data is safe and has been thoroughly sanitized.  If you *must* use unescaped output, use a dedicated HTML sanitization library like `html-purifier` in your PHP controller *before* passing the data to the Blade view.  Document the sanitization process clearly.\n3.  **Context-Specific Escaping:**\n    *   If outputting data within a JavaScript context (e.g., inside a `<script>` tag or an event handler), use JavaScript escaping functions (e.g., `escape()`, or better, a dedicated library like `DOMPurify`) *in addition to* Blade's escaping.\n    *   If outputting data within an HTML attribute (e.g., `value="{{ $value }}"`), ensure you're using the correct escaping for that attribute.  Blade's `{{ }}` is usually sufficient, but be aware of context.\n4.  **Code Reviews:**  During code reviews, specifically check for any instances of `!! !!` and ensure they are justified and properly sanitized.  Also, check for any potential XSS vulnerabilities in how data is handled and displayed.\n5. **Avoid Inline JavaScript:** Minimize inline JavaScript within Blade templates. Instead, use external JavaScript files and event listeners. This makes it easier to manage and apply CSP.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) (Critical Severity):**  Unescaped output allows attackers to inject malicious JavaScript code. *Directly related to Sage's use of Blade templating.*\n    *   **Data Corruption (Medium Severity):**  Incorrect escaping can lead to data being displayed incorrectly. *Directly related to how data is handled within Blade.*\n\n*   **Impact:**\n    *   **XSS:** Risk significantly reduced.\n    *   **Data Corruption:** Risk reduced.\n\n*   **Currently Implemented:**\n    *   Default to Escaped Output: Mostly implemented.\n    *   Avoid Unescaped Output: Partially implemented.\n    *   Context-Specific Escaping: Not consistently implemented.\n    *   Code Reviews:  Partially implemented.\n    * Avoid Inline JavaScript: Partially implemented.\n\n*   **Missing Implementation:**\n    *   Avoid Unescaped Output: Need to audit and refactor.\n    *   Context-Specific Escaping: Need to provide guidelines and examples.\n    *   Code Reviews: Need to strengthen code review processes.\n    * Avoid Inline JavaScript: Need to refactor existing inline JavaScript."
+    },
+    {
+      "title": "Secure Dependency Management and Third-Party Library Vetting (as it pertains to Sage's front-end focus)",
+      "text": "1.  **Use a Package Manager:** Use `npm` or `Yarn` for *all* front-end dependencies.\n2.  **Regular Updates:** Run `npm update` or `yarn upgrade` regularly.\n3.  **Vulnerability Audits:** Run `npm audit` or `yarn audit` after updating.\n4.  **Library Vetting:** Before adding a new library, check popularity, maintenance, security vulnerabilities, and code quality.\n5.  **Subresource Integrity (SRI):** Use SRI hashes for external resources from CDNs.\n6. **Regular Security Audits:** Conduct regular security audits of the codebase, including custom code and all third-party libraries.\n\n*   **Threats Mitigated:**\n    *   **Dependency Vulnerabilities (High to Critical Severity):** Using outdated or vulnerable *front-end* libraries. *Directly related to Sage's focus on front-end development and its reliance on npm/Yarn.*\n    *   **Supply Chain Attacks (Critical Severity):** A compromised *front-end* library. *Directly related to Sage's front-end dependency management.*\n    *   **Man-in-the-Middle (MITM) Attacks (High Severity):** Without SRI, an attacker could modify a *front-end* file served from a CDN. *Directly related to how Sage projects typically include front-end assets.*\n\n*   **Impact:**\n    *   **Dependency Vulnerabilities:** Risk significantly reduced.\n    *   **Supply Chain Attacks:** Risk reduced, but not eliminated.\n    *   **MITM Attacks:** Risk significantly reduced with SRI.\n\n*   **Currently Implemented:**\n    *   Use a Package Manager: Implemented (Yarn).\n    *   Regular Updates: Partially implemented.\n    *   Vulnerability Audits: Partially implemented.\n    *   Library Vetting: Partially implemented.\n    *   Subresource Integrity (SRI): Not implemented.\n    * Regular Security Audits: Not implemented.\n\n*   **Missing Implementation:**\n    *   Regular Updates: Need to establish a strict schedule.\n    *   Vulnerability Audits: Need to integrate into the update process.\n    *   Library Vetting: Need to create a formal process.\n    *   Subresource Integrity (SRI): Need to implement SRI.\n    * Regular Security Audits: Need to schedule and document."
+    },
+    {
+      "title": "Restrict and Disable Browsersync in Production (Sage 9 Specific)",
+      "text": "1.  **Restrict Access:** Ensure Browsersync is only accessible from `localhost` or a trusted internal network via firewall rules (e.g., `sudo ufw deny 3000`).\n2.  **Disable in Production:** Ensure Browsersync code in `webpack.config.js` is *only* executed for development (e.g., `process.env.NODE_ENV !== 'production'`). The `browser-sync-webpack-plugin` should *not* be in the `plugins` array for production builds.\n3. **Verify:** After deploying to production, attempt to access your site on port 3000 (or the configured Browsersync port). You should *not* connect.\n\n*   **Threats Mitigated:**\n    *   **Unauthorized Access (High Severity):** Exposing Browsersync could allow attackers to access the development environment. *Directly related to Sage's use of Browsersync.*\n\n*   **Impact:**\n    *   **Unauthorized Access:** Risk reduced to near zero.\n\n*   **Currently Implemented:**\n    *   Restrict Access: Partially implemented.\n    *   Disable in Production: Implemented.\n    * Verify: Implemented.\n\n*   **Missing Implementation:**\n    *   Restrict Access: Need to ensure firewall rules are consistently applied."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 17:45:01,224 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Secure Webpack Configuration and Asset Handling",
+      "text": "1.  **Disable Source Maps in Production:** Open `webpack.config.js` and `webpack.config.optimize.js`. Locate the `devtool` option.  For production builds (typically triggered by `yarn build:production` or similar), set `devtool: false;`.  For development, you can use a safer option like `'inline-source-map'` or `'eval-cheap-module-source-map'`.  After building, inspect the generated `.js` files in your `dist` folder to confirm no `.map` files are present and that source code isn't easily readable.\n2.  **Verify `publicPath`:** In `webpack.config.js`, find the `output` section and the `publicPath` property.  Ensure this is set to the correct URL where your assets will be served in production (e.g., `/wp-content/themes/your-theme/dist/`).  Incorrect values can lead to 404 errors or, worse, reveal your server's directory structure.\n3.  **Secure Environment Variables:**\n    *   Install `dotenv`: `yarn add dotenv --dev`\n    *   Create a `.env` file in your project root.  Add your environment variables (e.g., `API_KEY=your_secret_key`).  **Never commit this file to version control.**\n    *   Add `.env` to your `.gitignore` file.\n    *   In `webpack.config.js`, require `dotenv`: `const Dotenv = require('dotenv-webpack');`\n    *   Add `Dotenv` to the `plugins` array: `plugins: [ new Dotenv() ]`.\n    *   Access variables in your JavaScript code using `process.env.VARIABLE_NAME`.\n    *   **Crucially:**  Only expose *necessary* variables.  Don't blindly expose all variables from `.env`.  Consider using a separate configuration file to whitelist the variables exposed to the client.\n4.  **Code Splitting Review (if applicable):** If using code splitting (dynamic `import()`), after building, manually inspect the generated chunk files in your `dist` folder.  Ensure no sensitive data (API keys, internal comments, etc.) is present in these publicly accessible files.\n5. **Regularly Audit:** At least monthly, review the entire Webpack configuration for any accidental exposures or outdated configurations.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure (High Severity):** Exposing source maps reveals the original source code, making it easier for attackers to understand the application's logic and find vulnerabilities.  *Directly related to Sage's build process.*\n    *   **Information Disclosure (Medium Severity):** Incorrect `publicPath` can expose the server's directory structure. *Directly related to Sage's Webpack configuration.*\n    *   **Credential Exposure (Critical Severity):** Hardcoding or improperly handling environment variables can expose API keys, database credentials, or other secrets. *Directly related to how Sage encourages environment variable use in the build process.*\n    *   **Information Disclosure (Medium Severity):** Code splitting, if not carefully reviewed, can leak sensitive information in publicly accessible chunks. *Directly related to Sage's use of Webpack and code splitting features.*\n\n*   **Impact:**\n    *   **Information Disclosure (Source Maps):** Risk reduced to near zero.\n    *   **Information Disclosure (`publicPath`):** Risk significantly reduced.\n    *   **Credential Exposure:** Risk dramatically reduced.\n    *   **Information Disclosure (Code Splitting):** Risk reduced, but manual review is still crucial.\n\n*   **Currently Implemented:**\n    *   Source Maps Disabled: `webpack.config.optimize.js` - `devtool: false;`\n    *   `publicPath` Verified: `webpack.config.js` - `output: { publicPath: '/wp-content/themes/my-theme/dist/' }`\n    *   Environment Variables: Partially implemented. `dotenv` is used, but not all variables are carefully filtered.\n    * Code Splitting Review: Not implemented.\n\n*   **Missing Implementation:**\n    *   Environment Variables: Need to implement a whitelist to filter which variables from `.env` are exposed to the client.\n    *   Code Splitting Review:  Need to establish a process for regularly reviewing generated code chunks.\n    *   Regular Audit: Need to schedule and document regular audits of the Webpack configuration."
+    },
+    {
+      "title": "Enforce Strict Output Escaping in Blade Templates",
+      "text": "1.  **Default to Escaped Output:**  In all Blade templates (`.blade.php` files), use the `{{ $variable }}` syntax for *all* variables that display user-provided data or data from potentially untrusted sources (including WordPress data). This automatically escapes HTML entities.\n2.  **Avoid Unescaped Output:**  *Never* use `!! $variable !!` unless you are *absolutely certain* the data is safe and has been thoroughly sanitized.  If you *must* use unescaped output, use a dedicated HTML sanitization library like `html-purifier` in your PHP controller *before* passing the data to the Blade view.  Document the sanitization process clearly.\n3.  **Context-Specific Escaping:**\n    *   If outputting data within a JavaScript context (e.g., inside a `<script>` tag or an event handler), use JavaScript escaping functions (e.g., `escape()`, or better, a dedicated library like `DOMPurify`) *in addition to* Blade's escaping.\n    *   If outputting data within an HTML attribute (e.g., `value="{{ $value }}"`), ensure you're using the correct escaping for that attribute.  Blade's `{{ }}` is usually sufficient, but be aware of context.\n4.  **Code Reviews:**  During code reviews, specifically check for any instances of `!! !!` and ensure they are justified and properly sanitized.  Also, check for any potential XSS vulnerabilities in how data is handled and displayed.\n5. **Avoid Inline JavaScript:** Minimize inline JavaScript within Blade templates. Instead, use external JavaScript files and event listeners. This makes it easier to manage and apply CSP.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) (Critical Severity):**  Unescaped output allows attackers to inject malicious JavaScript code. *Directly related to Sage's use of Blade templating.*\n    *   **Data Corruption (Medium Severity):**  Incorrect escaping can lead to data being displayed incorrectly. *Directly related to how data is handled within Blade.*\n\n*   **Impact:**\n    *   **XSS:** Risk significantly reduced.\n    *   **Data Corruption:** Risk reduced.\n\n*   **Currently Implemented:**\n    *   Default to Escaped Output: Mostly implemented.\n    *   Avoid Unescaped Output: Partially implemented.\n    *   Context-Specific Escaping: Not consistently implemented.\n    *   Code Reviews:  Partially implemented.\n    * Avoid Inline JavaScript: Partially implemented.\n\n*   **Missing Implementation:**\n    *   Avoid Unescaped Output: Need to audit and refactor.\n    *   Context-Specific Escaping: Need to provide guidelines and examples.\n    *   Code Reviews: Need to strengthen code review processes.\n    * Avoid Inline JavaScript: Need to refactor existing inline JavaScript."
+    },
+    {
+      "title": "Secure Dependency Management and Third-Party Library Vetting (as it pertains to Sage's front-end focus)",
+      "text": "1.  **Use a Package Manager:** Use `npm` or `Yarn` for *all* front-end dependencies.\n2.  **Regular Updates:** Run `npm update` or `yarn upgrade` regularly.\n3.  **Vulnerability Audits:** Run `npm audit` or `yarn audit` after updating.\n4.  **Library Vetting:** Before adding a new library, check popularity, maintenance, security vulnerabilities, and code quality.\n5.  **Subresource Integrity (SRI):** Use SRI hashes for external resources from CDNs.\n6. **Regular Security Audits:** Conduct regular security audits of the codebase, including custom code and all third-party libraries.\n\n*   **Threats Mitigated:**\n    *   **Dependency Vulnerabilities (High to Critical Severity):** Using outdated or vulnerable *front-end* libraries. *Directly related to Sage's focus on front-end development and its reliance on npm/Yarn.*\n    *   **Supply Chain Attacks (Critical Severity):** A compromised *front-end* library. *Directly related to Sage's front-end dependency management.*\n    *   **Man-in-the-Middle (MITM) Attacks (High Severity):** Without SRI, an attacker could modify a *front-end* file served from a CDN. *Directly related to how Sage projects typically include front-end assets.*\n\n*   **Impact:**\n    *   **Dependency Vulnerabilities:** Risk significantly reduced.\n    *   **Supply Chain Attacks:** Risk reduced, but not eliminated.\n    *   **MITM Attacks:** Risk significantly reduced with SRI.\n\n*   **Currently Implemented:**\n    *   Use a Package Manager: Implemented (Yarn).\n    *   Regular Updates: Partially implemented.\n    *   Vulnerability Audits: Partially implemented.\n    *   Library Vetting: Partially implemented.\n    *   Subresource Integrity (SRI): Not implemented.\n    * Regular Security Audits: Not implemented.\n\n*   **Missing Implementation:**\n    *   Regular Updates: Need to establish a strict schedule.\n    *   Vulnerability Audits: Need to integrate into the update process.\n    *   Library Vetting: Need to create a formal process.\n    *   Subresource Integrity (SRI): Need to implement SRI.\n    * Regular Security Audits: Need to schedule and document."
+    },
+    {
+      "title": "Restrict and Disable Browsersync in Production (Sage 9 Specific)",
+      "text": "1.  **Restrict Access:** Ensure Browsersync is only accessible from `localhost` or a trusted internal network via firewall rules (e.g., `sudo ufw deny 3000`).\n2.  **Disable in Production:** Ensure Browsersync code in `webpack.config.js` is *only* executed for development (e.g., `process.env.NODE_ENV !== 'production'`). The `browser-sync-webpack-plugin` should *not* be in the `plugins` array for production builds.\n3. **Verify:** After deploying to production, attempt to access your site on port 3000 (or the configured Browsersync port). You should *not* connect.\n\n*   **Threats Mitigated:**\n    *   **Unauthorized Access (High Severity):** Exposing Browsersync could allow attackers to access the development environment. *Directly related to Sage's use of Browsersync.*\n\n*   **Impact:**\n    *   **Unauthorized Access:** Risk reduced to near zero.\n\n*   **Currently Implemented:**\n    *   Restrict Access: Partially implemented.\n    *   Disable in Production: Implemented.\n    * Verify: Implemented.\n\n*   **Missing Implementation:**\n    *   Restrict Access: Need to ensure firewall rules are consistently applied."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739555103.666206       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 17:45:18,122 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 17:45:18,186 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 17:45:40,401 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 17:46:18,488 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 17:49:18,160 - ai_security_analyzer.graphs - INFO - Actual token usage: 35314
+2025-02-14 17:49:18,175 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739555360.502539       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
