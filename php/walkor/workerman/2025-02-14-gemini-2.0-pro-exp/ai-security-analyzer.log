@@ -1,0 +1,161 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+c457853b6d82: Waiting
+28d645c00242: Waiting
+37e00e2d9431: Waiting
+921df71b230f: Waiting
+5c3947958a83: Waiting
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+1f3e46996e29: Pull complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 21:40:25,322 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 21:40:25,382 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 21:41:35,366 - ai_security_analyzer.graphs - INFO - Actual token usage: 10917
+2025-02-14 21:41:35,370 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739569297.637961       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 21:41:41,856 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 21:41:41,913 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 21:42:07,579 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 21:42:27,352 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 21:46:32,748 - ai_security_analyzer.graphs - INFO - Actual token usage: 36583
+2025-02-14 21:46:32,760 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739569594.997980       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 21:46:39,216 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 21:46:39,275 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 21:46:58,614 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 21:47:19,571 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 21:49:32,378 - ai_security_analyzer.graphs - INFO - Actual token usage: 23966
+2025-02-14 21:49:32,384 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739569774.642222       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 21:49:38,889 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 21:49:38,949 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 21:50:06,216 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 21:51:00,471 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 21:51:57,508 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 21:58:43,725 - ai_security_analyzer.graphs - INFO - Actual token usage: 76686
+2025-02-14 21:58:43,834 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739570326.153587       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 21:58:50,460 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 21:58:50,519 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 21:59:15,879 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 21:59:52,479 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 22:00:22,421 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Per-IP and Global Connection Limits (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Implement Per-IP Limits:**\n        *   Within the `onConnect` callback:\n            *   Use `$connection->getRemoteIp()` to get the client's IP.\n            *   Use a persistent storage mechanism (e.g., Redis, *accessed through a Workerman connection if possible*) to maintain a counter for each IP.\n            *   Increment the counter.\n            *   If the counter exceeds the per-IP limit, call `$connection->close()` to reject the connection.\n    2.  **Implement Global Limits:**\n        *   Within the `onConnect` callback:\n            *   Use `count(Worker::$connections)` to get the total number of active connections.\n            *   If `count(Worker::$connections)` exceeds the global limit, call `$connection->close()`.\n\n*   **Threats Mitigated:**\n    *   **Connection Exhaustion / Resource Starvation (DoS):** (Severity: High)\n    *   **Slowloris Attacks:** (Severity: Medium)\n\n*   **Impact:**\n    *   **Connection Exhaustion:** Significantly reduces risk.\n    *   **Slowloris:** Reduces impact.\n\n*   **Currently Implemented:**\n    *   Global limit via `Worker::$count` in `start.php`.\n    *   Per-IP limit *not* implemented.\n\n*   **Missing Implementation:**\n    *   Per-IP limit logic in `onConnect`.\n    *   Persistent storage for per-IP counters."
+    },
+    {
+      "title": "Connection Timeouts and Heartbeats (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Idle Connection Timeout:**\n        *   Set `Connection::$defaultMaxIdleTime` in your Workerman configuration (e.g., `start.php`).\n        *   Workerman automatically closes idle connections.\n    2.  **Heartbeat Mechanism:**\n        *   Define a heartbeat message format.\n        *   Client sends heartbeats.\n        *   Server-Side (`onMessage` callback):\n            *   Check for heartbeat messages.\n            *   Update last activity timestamp for the connection (using persistent storage, ideally accessed via a Workerman connection).\n            *   Use `Workerman\Timer::add()` to create a periodic timer.\n            *   The timer callback checks last activity timestamps.\n            *   If a heartbeat is missed, call `$connection->close()`.\n\n*   **Threats Mitigated:**\n    *   **Connection Exhaustion / Resource Starvation (DoS):** (Severity: High)\n    *   **Slowloris Attacks:** (Severity: Medium)\n    *   **Long-Lived Connection Hijacking:** (Severity: Low)\n\n*   **Impact:**\n    *   **Connection Exhaustion:** Significantly reduces risk.\n    *   **Slowloris:** Moderate protection.\n    *   **Long-Lived Connection Hijacking:** Minor impact.\n\n*   **Currently Implemented:**\n    *   `Connection::$defaultMaxIdleTime` is set.\n    *   Heartbeat mechanism *not* implemented.\n\n*   **Missing Implementation:**\n        *   Heartbeat mechanism (client and server).\n        *   Timer for heartbeat checks."
+    },
+    {
+      "title": "Minimum Data Rate Enforcement (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Track Data Received (`onMessage`):**\n        *   Record timestamp and byte count for each connection (using persistent storage, ideally accessed via a Workerman connection).\n    2.  **Calculate Data Rate (Timer):**\n        *   Use `Workerman\Timer::add()` to create a periodic timer.\n        *   The timer callback calculates the data rate for each connection.\n    3.  **Enforce Minimum Rate:**\n        *   Define a minimum data rate.\n        *   If a connection's rate is below the minimum, call `$connection->close()`.\n\n*   **Threats Mitigated:**\n    *   **Slowloris Attacks:** (Severity: High)\n\n*   **Impact:**\n    *   **Slowloris:** Significantly reduces risk.\n\n*   **Currently Implemented:**\n    *   Not implemented.\n\n*   **Missing Implementation:**\n    *   Data tracking in `onMessage`.\n    *   Timer for rate calculation.\n    *   Enforcement logic."
+    },
+    {
+      "title": "Periodic Connection Rotation (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Connection Rotation Timer:**\n        *   Use `Workerman\Timer::add()` to create a periodic timer.\n        *   The timer callback iterates through `Worker::$connections`.\n        *   For each connection, call `$connection->close()`.  This forces clients to reconnect.\n\n*   **Threats Mitigated:**\n    *   **Long-Lived Connection Hijacking:** (Severity: High)\n\n*   **Impact:**\n    *   **Long-Lived Connection Hijacking:** Significantly reduces risk.\n\n*   **Currently Implemented:**\n    *   Not implemented.\n\n*   **Missing Implementation:**\n    *   Timer for connection rotation."
+    },
+    {
+      "title": "Exception Handling in Callbacks (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Try-Catch Blocks:**\n        *   Wrap the *entire* body of *each* Workerman callback (`onConnect`, `onMessage`, `onClose`, `onError`) in a `try-catch` block.\n    2. **Logging (using Workerman connection to logging service, if possible):**\n        * Log exception details within the catch block.\n\n*   **Threats Mitigated:**\n    *   **Unhandled Exceptions in Asynchronous Callbacks:** (Severity: High)\n\n*   **Impact:**\n    *   **Unhandled Exceptions:** Significantly reduces risk.\n\n*   **Currently Implemented:**\n    *   Inconsistent `try-catch` blocks.\n\n*   **Missing Implementation:**\n    *   Consistent `try-catch` in *all* callbacks."
+    },
+    {
+      "title": "Process Restarting (using Workerman reload)",
+      "text": "* **Description:**\n   1.  Use Workerman's `reload` functionality to gracefully restart worker processes. This can be triggered:\n       *   On a schedule (e.g., every few hours). Use Workerman timer for this.\n       *   After a certain number of requests have been processed.\n   2.  Be aware that `reload` will briefly interrupt service as processes are restarted.  Clients should be able to handle this.\n\n*   **Threats Mitigated:**\n    *   **Memory Leaks in Long-Running Processes:** (Severity: Medium) - Prevents memory leaks from accumulating and causing performance degradation or crashes.\n\n*   **Impact:**\n    *   **Memory Leaks:** Significantly reduces the risk.\n\n*   **Currently Implemented:**\n    *   Process restarting using `reload` is *not* currently implemented.\n\n*   **Missing Implementation:**\n    *   Scheduled or memory-usage-based process restarting is missing."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 22:00:22,423 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Per-IP and Global Connection Limits (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Implement Per-IP Limits:**\n        *   Within the `onConnect` callback:\n            *   Use `$connection->getRemoteIp()` to get the client's IP.\n            *   Use a persistent storage mechanism (e.g., Redis, *accessed through a Workerman connection if possible*) to maintain a counter for each IP.\n            *   Increment the counter.\n            *   If the counter exceeds the per-IP limit, call `$connection->close()` to reject the connection.\n    2.  **Implement Global Limits:**\n        *   Within the `onConnect` callback:\n            *   Use `count(Worker::$connections)` to get the total number of active connections.\n            *   If `count(Worker::$connections)` exceeds the global limit, call `$connection->close()`.\n\n*   **Threats Mitigated:**\n    *   **Connection Exhaustion / Resource Starvation (DoS):** (Severity: High)\n    *   **Slowloris Attacks:** (Severity: Medium)\n\n*   **Impact:**\n    *   **Connection Exhaustion:** Significantly reduces risk.\n    *   **Slowloris:** Reduces impact.\n\n*   **Currently Implemented:**\n    *   Global limit via `Worker::$count` in `start.php`.\n    *   Per-IP limit *not* implemented.\n\n*   **Missing Implementation:**\n    *   Per-IP limit logic in `onConnect`.\n    *   Persistent storage for per-IP counters."
+    },
+    {
+      "title": "Connection Timeouts and Heartbeats (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Idle Connection Timeout:**\n        *   Set `Connection::$defaultMaxIdleTime` in your Workerman configuration (e.g., `start.php`).\n        *   Workerman automatically closes idle connections.\n    2.  **Heartbeat Mechanism:**\n        *   Define a heartbeat message format.\n        *   Client sends heartbeats.\n        *   Server-Side (`onMessage` callback):\n            *   Check for heartbeat messages.\n            *   Update last activity timestamp for the connection (using persistent storage, ideally accessed via a Workerman connection).\n            *   Use `Workerman\Timer::add()` to create a periodic timer.\n            *   The timer callback checks last activity timestamps.\n            *   If a heartbeat is missed, call `$connection->close()`.\n\n*   **Threats Mitigated:**\n    *   **Connection Exhaustion / Resource Starvation (DoS):** (Severity: High)\n    *   **Slowloris Attacks:** (Severity: Medium)\n    *   **Long-Lived Connection Hijacking:** (Severity: Low)\n\n*   **Impact:**\n    *   **Connection Exhaustion:** Significantly reduces risk.\n    *   **Slowloris:** Moderate protection.\n    *   **Long-Lived Connection Hijacking:** Minor impact.\n\n*   **Currently Implemented:**\n    *   `Connection::$defaultMaxIdleTime` is set.\n    *   Heartbeat mechanism *not* implemented.\n\n*   **Missing Implementation:**\n        *   Heartbeat mechanism (client and server).\n        *   Timer for heartbeat checks."
+    },
+    {
+      "title": "Minimum Data Rate Enforcement (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Track Data Received (`onMessage`):**\n        *   Record timestamp and byte count for each connection (using persistent storage, ideally accessed via a Workerman connection).\n    2.  **Calculate Data Rate (Timer):**\n        *   Use `Workerman\Timer::add()` to create a periodic timer.\n        *   The timer callback calculates the data rate for each connection.\n    3.  **Enforce Minimum Rate:**\n        *   Define a minimum data rate.\n        *   If a connection's rate is below the minimum, call `$connection->close()`.\n\n*   **Threats Mitigated:**\n    *   **Slowloris Attacks:** (Severity: High)\n\n*   **Impact:**\n    *   **Slowloris:** Significantly reduces risk.\n\n*   **Currently Implemented:**\n    *   Not implemented.\n\n*   **Missing Implementation:**\n    *   Data tracking in `onMessage`.\n    *   Timer for rate calculation.\n    *   Enforcement logic."
+    },
+    {
+      "title": "Periodic Connection Rotation (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Connection Rotation Timer:**\n        *   Use `Workerman\Timer::add()` to create a periodic timer.\n        *   The timer callback iterates through `Worker::$connections`.\n        *   For each connection, call `$connection->close()`.  This forces clients to reconnect.\n\n*   **Threats Mitigated:**\n    *   **Long-Lived Connection Hijacking:** (Severity: High)\n\n*   **Impact:**\n    *   **Long-Lived Connection Hijacking:** Significantly reduces risk.\n\n*   **Currently Implemented:**\n    *   Not implemented.\n\n*   **Missing Implementation:**\n    *   Timer for connection rotation."
+    },
+    {
+      "title": "Exception Handling in Callbacks (Workerman-Specific)",
+      "text": "*   **Description:**\n    1.  **Try-Catch Blocks:**\n        *   Wrap the *entire* body of *each* Workerman callback (`onConnect`, `onMessage`, `onClose`, `onError`) in a `try-catch` block.\n    2. **Logging (using Workerman connection to logging service, if possible):**\n        * Log exception details within the catch block.\n\n*   **Threats Mitigated:**\n    *   **Unhandled Exceptions in Asynchronous Callbacks:** (Severity: High)\n\n*   **Impact:**\n    *   **Unhandled Exceptions:** Significantly reduces risk.\n\n*   **Currently Implemented:**\n    *   Inconsistent `try-catch` blocks.\n\n*   **Missing Implementation:**\n    *   Consistent `try-catch` in *all* callbacks."
+    },
+    {
+      "title": "Process Restarting (using Workerman reload)",
+      "text": "* **Description:**\n   1.  Use Workerman's `reload` functionality to gracefully restart worker processes. This can be triggered:\n       *   On a schedule (e.g., every few hours). Use Workerman timer for this.\n       *   After a certain number of requests have been processed.\n   2.  Be aware that `reload` will briefly interrupt service as processes are restarted.  Clients should be able to handle this.\n\n*   **Threats Mitigated:**\n    *   **Memory Leaks in Long-Running Processes:** (Severity: Medium) - Prevents memory leaks from accumulating and causing performance degradation or crashes.\n\n*   **Impact:**\n    *   **Memory Leaks:** Significantly reduces the risk.\n\n*   **Currently Implemented:**\n    *   Process restarting using `reload` is *not* currently implemented.\n\n*   **Missing Implementation:**\n    *   Scheduled or memory-usage-based process restarting is missing."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739570424.765207       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 22:00:39,146 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:00:39,209 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 22:01:01,977 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 22:01:34,562 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 22:05:37,271 - ai_security_analyzer.graphs - INFO - Actual token usage: 42741
+2025-02-14 22:05:37,287 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739570739.640237       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
