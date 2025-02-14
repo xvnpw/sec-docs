@@ -1,0 +1,203 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+5c3947958a83: Waiting
+921df71b230f: Waiting
+28d645c00242: Waiting
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+1f3e46996e29: Pull complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+37e00e2d9431: Download complete
+d3f883494790: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 22:36:23,106 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:36:23,169 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 22:38:14,779 - ai_security_analyzer.graphs - INFO - Actual token usage: 17797
+2025-02-14 22:38:14,784 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739572697.021479       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 22:38:21,266 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:38:21,324 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 22:38:45,230 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 22:39:14,496 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 22:42:50,961 - ai_security_analyzer.graphs - INFO - Actual token usage: 35706
+2025-02-14 22:42:50,973 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739572973.241532       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 22:42:57,492 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:42:57,550 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 22:43:20,520 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 22:43:42,751 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 22:46:06,793 - ai_security_analyzer.graphs - INFO - Actual token usage: 26272
+2025-02-14 22:46:06,800 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739573169.079387       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 22:46:13,381 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:46:13,440 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 22:46:39,903 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 22:46:56,727 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 22:47:11,089 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 22:47:23,528 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-14 22:47:25,608 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-14 22:47:25,610 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739573247.928080       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 22:47:42,234 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:47:42,296 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 22:48:06,790 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 22:48:40,213 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 22:48:57,557 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 22:52:18,280 - ai_security_analyzer.graphs - INFO - Actual token usage: 49711
+2025-02-14 22:52:18,293 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739573540.555226       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 22:52:24,851 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:52:24,909 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 22:53:12,783 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 22:54:14,743 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 22:55:23,933 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Html::encode() for Output Encoding (Yii2-Specific)",
+      "text": "*   **Description:**\n    1.  **Identify User Input:** Locate all instances in your views (e.g., `.php`, `.twig` files) where data originating from user input (including database data potentially influenced by users) is displayed.\n    2.  **Apply `Html::encode()`:** Wrap *every* instance of user-supplied data with `Html::encode()`. This Yii2 helper function replaces special HTML characters with their HTML entities.\n    3.  **Consistency:** Ensure this is done *consistently* across *all* views.\n    4.  **Contextual Encoding (Yii2 Helpers):** For data within JavaScript, use Yii2's `Json::encode()`. For HTML attributes, `Html::encode()` is usually sufficient, but be aware of context.\n    5.  **Code Review:** Regularly review code for consistent `Html::encode()` usage.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) - Stored, Reflected, DOM-Based:** (Severity: High) - All forms of XSS are mitigated by preventing the injection of malicious scripts.  Yii2's `Html::encode()` is the *primary* defense.\n\n*   **Impact:**\n    *   **XSS:** Reduces risk to *very low* with consistent, correct application.\n\n*   **Currently Implemented:**\n    *   Partially implemented in `views/user/profile.php` and `views/post/view.php`.\n\n*   **Missing Implementation:**\n    *   Missing in `views/comment/_form.php` and `views/search/results.php`.\n    *   Needs review in all partial views (`views/_partials/`)."
+    },
+    {
+      "title": "HtmlPurifier Component for Rich Text Input (Yii2-Specific)",
+      "text": "*   **Description:**\n    1.  **Identify Rich Text Fields:** Locate areas where users input formatted text.\n    2.  **Install & Configure `HtmlPurifier` (Yii2 Component):** Ensure the `HtmlPurifier` component is installed (via Composer) and configured in `config/web.php`.\n    3.  **Restrictive Configuration:** Create a *very restrictive* `HtmlPurifier` configuration, allowing *only* essential HTML tags and attributes.  Example:\n        ```php\n        $config = [\n            'HTML.Allowed' => 'p,a[href],b,i,strong,em,ul,ol,li,br', // Very limited\n        ];\n        ```\n    4.  **Apply `HtmlPurifier::process()` (Yii2 Helper):** Before saving rich text, use Yii2's `HtmlPurifier::process($userInput, $config)` to sanitize the input.\n    5.  **Regular Review:** Periodically review and update the `HtmlPurifier` configuration.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) - Stored (with Rich Text):** (Severity: High) - Prevents XSS even within allowed HTML.\n    *   **HTML Injection:** (Severity: Medium)\n\n*   **Impact:**\n    *   **XSS (Stored, Rich Text):** Reduces risk to *low* with correct configuration.\n    *   **HTML Injection:** Reduces risk to *low*.\n\n*   **Currently Implemented:**\n    *   Implemented in `controllers/BlogController.php`.\n\n*   **Missing Implementation:**\n    *   Missing in `controllers/ForumController.php` (*critical*).\n    *   Review other areas with rich text input."
+    },
+    {
+      "title": "Enable and Verify Yii2's CSRF Protection",
+      "text": "*   **Description:**\n    1.  **Check `config/web.php`:**  Locate the `request` component.\n    2.  **Verify `enableCsrfValidation`:** Ensure `enableCsrfValidation` is `true`. This enables Yii2's built-in CSRF protection.\n    3.  **Verify `cookieValidationKey`:** Ensure `cookieValidationKey` is set to a *strong, secret key*. This is *crucial* for Yii2's CSRF mechanism.\n    4.  **`ActiveForm` Usage (Yii2 Forms):** When using Yii2's `ActiveForm`, CSRF protection is automatic (hidden `_csrf` field).\n    5.  **Manual AJAX (Yii2 `request`):** For AJAX *without* `ActiveForm`, *manually* include the CSRF token (`Yii::$app->request->csrfToken`) and validate it server-side (`Yii::$app->request->validateCsrfToken()`). This is *essential* for using Yii2's CSRF with custom AJAX.\n    6. **Review non-GET requests:** Ensure CSRF protection for all data-modifying requests.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Request Forgery (CSRF):** (Severity: High)\n\n*   **Impact:**\n    *   **CSRF:** Reduces risk to *very low* with correct implementation.\n\n*   **Currently Implemented:**\n    *   `enableCsrfValidation` is `true`.\n    *   `cookieValidationKey` is set (needs strength review).\n    *   `ActiveForm` is used for most forms.\n\n*   **Missing Implementation:**\n    *   Manual AJAX in `web/js/custom.js` *lacks* CSRF token handling (*critical*).\n    *   Review all non-`ActiveForm` submissions and AJAX."
+    },
+    {
+      "title": "Use Yii2's Active Record/Query Builder and Parameterized Queries",
+      "text": "*   **Description:**\n    1.  **Prioritize Active Record (Yii2 ORM):** Use Yii2's Active Record for most database interactions. It automatically handles parameter binding.\n    2.  **Use Query Builder (Yii2 Component):** If Active Record is unsuitable, use Yii2's Query Builder. It also provides automatic parameter binding.\n    3.  **Avoid Raw SQL:** Minimize raw SQL (`Yii::$app->db->createCommand()`).\n    4.  **Parameterized Raw SQL (Yii2 `bindParam`/`bindValues`):** If raw SQL is *unavoidable*, *always* use parameterized queries with Yii2's `bindParam()` or `bindValues()`. *Never* concatenate user input directly.\n    5. **Code Review:** Regularly review database code.\n\n*   **Threats Mitigated:**\n    *   **SQL Injection:** (Severity: Critical)\n\n*   **Impact:**\n    *   **SQL Injection:** Reduces risk to *very low* with consistent use.\n\n*   **Currently Implemented:**\n    *   Active Record is used extensively.\n    *   Query Builder is used in some cases.\n\n*   **Missing Implementation:**\n    *   Raw SQL *without* parameter binding in `models/Report.php` (*critical*).\n    *   Thorough review of all database code needed."
+    },
+    {
+      "title": "Yii2 Mass Assignment Protection (Scenarios and `safeAttributes()`)",
+      "text": "*   **Description:**\n    1.  **Define Scenarios (Yii2 Models):** In your models (extending `yii\db\ActiveRecord` or `yii\base\Model`), define scenarios using the `scenarios()` method.  Each scenario represents a context (e.g., 'create', 'update').\n    2.  **List Safe Attributes:** Within each scenario, list attributes safe for mass assignment. These can be set via `load()` or record creation/updates.\n    3.  **Use `load()` with Scenario (Yii2 Method):** When using `load()` to populate model attributes from user input, *always* specify the scenario: `$model->load(Yii::$app->request->post(), 'create')`.\n    4. **Review Model Logic:** Ensure custom attribute-setting logic respects scenarios.\n\n*   **Threats Mitigated:**\n    *   **Mass Assignment:** (Severity: High)\n\n*   **Impact:**\n    *   **Mass Assignment:** Reduces risk to *very low*.\n\n*   **Currently Implemented:**\n    *   Scenarios defined in `models/User.php` and `models/Post.php`.\n    *   `load()` generally used with scenarios.\n\n*   **Missing Implementation:**\n    *   Missing scenario definitions in `models/Comment.php`.\n    *   Review all models for consistent scenario and `safeAttributes()` use."
+    },
+    {
+      "title": "Disable Yii2 Debug Mode and Gii in Production",
+      "text": "*   **Description:**\n    1.  **Check `index.php`:** Verify `YII_DEBUG` is `false` in `web/index.php`.\n    2.  **Check `config/web.php`:** Ensure the Gii module is *disabled* in the production configuration. Remove or comment out the Gii configuration.\n    3.  **Environment Variables:** Consider using environment variables to control these settings.\n    4. **Server Configuration:** Ensure web server prevents access to sensitive files.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure:** (Severity: High)\n    *   **Code Execution (via Gii):** (Severity: Critical)\n\n*   **Impact:**\n    *   **Information Disclosure:** Reduces risk to *very low*.\n    *   **Code Execution (via Gii):** Eliminates risk.\n\n*   **Currently Implemented:**\n    *   `YII_DEBUG` is `false`.\n    *   Gii is disabled.\n\n*   **Missing Implementation:**\n    *   None. Correctly implemented."
+    },
+    {
+      "title": "Secure File Uploads with Yii2's `UploadedFile` and `FileValidator`",
+      "text": "*   **Description:**\n    1.  **Use `UploadedFile` (Yii2 Class):** Use Yii2's `UploadedFile` class to handle file uploads securely.\n    2.  **Implement `FileValidator` (Yii2 Validator):** Use `yii\validators\FileValidator` in your model's `rules()`. Specify:\n        *   `extensions`: Allowed extensions.\n        *   `maxSize`: Maximum file size.\n        *   `mimeTypes`: Allowed MIME types (requires `fileinfo` extension).\n        *   `checkExtensionByMimeType`: Set to true.\n    3.  **Store Outside Web Root:** Store files *outside* the web root.\n    4.  **Serve Files via Controller (Yii2 Action):** Create a controller action to serve files, verifying authorization and sending appropriate headers.\n    5.  **Rename Files:** Rename files to random names (e.g., using `uniqid()`).\n    6. **.htaccess or web.config:** Add file to prevent direct access to the upload directory.\n\n*   **Threats Mitigated:**\n    *   **File Upload Vulnerabilities:** (Severity: High)\n    *   **Directory Traversal:** (Severity: High)\n    *   **Unauthorized File Access:** (Severity: Medium)\n\n*   **Impact:**\n    *   **File Upload Vulnerabilities:** Reduces risk to *low*.\n    *   **Directory Traversal:** Reduces risk to *very low*.\n    *   **Unauthorized File Access:** Reduces risk to *low*.\n\n*   **Currently Implemented:**\n    *   `UploadedFile` is used.\n    *   `FileValidator` is used with `extensions` and `maxSize`.\n    *   Files stored in `uploads/` (inside web root - *problem*).\n\n*   **Missing Implementation:**\n    *   Files stored *inside* web root (*critical*).\n    *   No controller action serves files (*critical*).\n    *   Files *not* renamed (*medium*).\n    *   Missing `mimeTypes` and `checkExtensionByMimeType` validation."
+    },
+    {
+      "title": "Secure Session Management with Yii2 Components",
+      "text": "*   **Description:**\n    1.  **Secure Session Handler (Yii2 Components):** Use `yii\web\DbSession` or `yii\redis\Session` instead of `yii\web\PhpSession`.\n    2.  **Configure `cookieParams` (Yii2 `session` Component):** In `config/web.php`, configure `session`:\n        *   `httpOnly`: `true`\n        *   `secure`: `true` (HTTPS only)\n        *   `sameSite`: `\\yii\\web\\Cookie::SAME_SITE_STRICT` or `\\yii\\web\\Cookie::SAME_SITE_LAX`\n    3.  **Set `timeout`:** Set a reasonable session timeout.\n    4.  **Enable `useStrictMode`:** Set `useStrictMode` to `true`.\n    5.  **Regenerate Session ID (Yii2 Method):** After login/privilege change, use `Yii::$app->session->regenerateID()`.\n    6. **Session data validation:** Validate data stored in session.\n\n*   **Threats Mitigated:**\n    *   **Session Hijacking:** (Severity: High)\n    *   **Session Fixation:** (Severity: High)\n    *   **CSRF (via `sameSite`):** (Severity: High)\n\n*   **Impact:**\n    *   **Session Hijacking:** Reduces risk significantly.\n    *   **Session Fixation:** Reduces risk to *very low*.\n    *   **CSRF:** Additional defense.\n\n*   **Currently Implemented:**\n    *   `cookieParams` partially configured (`httpOnly` is `true`).\n    *   `timeout` is set.\n    *   `useStrictMode` is `true`.\n\n*   **Missing Implementation:**\n    *   Using default `yii\web\PhpSession`. Should use `yii\web\DbSession` or `yii\redis\Session`.\n    *   `secure` and `sameSite` not set (*medium*).\n    *   Session ID not regenerated after login (*medium*)."
+    },
+    {
+      "title": "Access Control with Yii2's `AccessControl` Filter and RBAC",
+      "text": "*   **Description:**\n    1.  **Use `AccessControl` Filter (Yii2 Filter):** In controllers, use `yii\filters\AccessControl` in `behaviors()`. Define rules for user access to actions.\n    2.  **Define Roles:** Use `'roles'` in ACF rules (`?` for guests, `@` for logged-in, or specific role names).\n    3.  **Implement RBAC (Yii2 `authManager`):** For granular control, use Yii2's RBAC:\n        *   Create roles and permissions (using `authManager`).\n        *   Assign permissions to roles.\n        *   Assign roles to users.\n        *   Use `Yii::$app->user->can('permissionName')` for checks.\n    4. **Least Privilege:** Grant minimal necessary permissions.\n    5. **Review Controller Logic:** Ensure custom authorization is consistent with ACF/RBAC.\n\n*   **Threats Mitigated:**\n    *   **Unauthorized Access:** (Severity: High)\n    *   **Privilege Escalation:** (Severity: High)\n\n*   **Impact:**\n    *   **Unauthorized Access:** Reduces risk to *very low*.\n    *   **Privilege Escalation:** Reduces risk to *very low*.\n\n*   **Currently Implemented:**\n    *   `AccessControl` used in `controllers/AdminController.php`.\n    *   Basic roles (`?` and `@`) used in some controllers.\n\n*   **Missing Implementation:**\n    *   `AccessControl` *not* consistently used (*critical*).\n    *   RBAC *not* implemented (*medium*, depending on complexity)."
+    },
+    {
+      "title": "Custom Error Handling with Yii2's `errorHandler`",
+      "text": "*   **Description:**\n    1.  **Create Custom Error Action (Yii2 Action):** Create a controller action (e.g., `SiteController::actionError()`) to handle errors.  Log details and display a user-friendly message *without* sensitive information.\n    2.  **Configure `errorHandler` (Yii2 Component):** In `config/web.php`, set `errorHandler`:\n        *   `errorAction`: Route to your custom error action (e.g., `'site/error'`).\n    3.  **Disable Debug Mode:** Ensure `YII_DEBUG` is `false` in production.\n    4. **Test Error Handling:** Trigger errors to test.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure:** (Severity: High)\n\n*   **Impact:**\n    *   **Information Disclosure:** Reduces risk to *very low*.\n\n*   **Currently Implemented:**\n    *   `errorHandler` configured to use `site/error`.\n    *   `SiteController::actionError()` exists (but lacks logging).\n\n*   **Missing Implementation:**\n    *   `SiteController::actionError()` *doesn't* log details (*medium*).\n    *   Needs more robust error handling."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 22:55:23,936 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Html::encode() for Output Encoding (Yii2-Specific)",
+      "text": "*   **Description:**\n    1.  **Identify User Input:** Locate all instances in your views (e.g., `.php`, `.twig` files) where data originating from user input (including database data potentially influenced by users) is displayed.\n    2.  **Apply `Html::encode()`:** Wrap *every* instance of user-supplied data with `Html::encode()`. This Yii2 helper function replaces special HTML characters with their HTML entities.\n    3.  **Consistency:** Ensure this is done *consistently* across *all* views.\n    4.  **Contextual Encoding (Yii2 Helpers):** For data within JavaScript, use Yii2's `Json::encode()`. For HTML attributes, `Html::encode()` is usually sufficient, but be aware of context.\n    5.  **Code Review:** Regularly review code for consistent `Html::encode()` usage.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) - Stored, Reflected, DOM-Based:** (Severity: High) - All forms of XSS are mitigated by preventing the injection of malicious scripts.  Yii2's `Html::encode()` is the *primary* defense.\n\n*   **Impact:**\n    *   **XSS:** Reduces risk to *very low* with consistent, correct application.\n\n*   **Currently Implemented:**\n    *   Partially implemented in `views/user/profile.php` and `views/post/view.php`.\n\n*   **Missing Implementation:**\n    *   Missing in `views/comment/_form.php` and `views/search/results.php`.\n    *   Needs review in all partial views (`views/_partials/`)."
+    },
+    {
+      "title": "HtmlPurifier Component for Rich Text Input (Yii2-Specific)",
+      "text": "*   **Description:**\n    1.  **Identify Rich Text Fields:** Locate areas where users input formatted text.\n    2.  **Install & Configure `HtmlPurifier` (Yii2 Component):** Ensure the `HtmlPurifier` component is installed (via Composer) and configured in `config/web.php`.\n    3.  **Restrictive Configuration:** Create a *very restrictive* `HtmlPurifier` configuration, allowing *only* essential HTML tags and attributes.  Example:\n        ```php\n        $config = [\n            'HTML.Allowed' => 'p,a[href],b,i,strong,em,ul,ol,li,br', // Very limited\n        ];\n        ```\n    4.  **Apply `HtmlPurifier::process()` (Yii2 Helper):** Before saving rich text, use Yii2's `HtmlPurifier::process($userInput, $config)` to sanitize the input.\n    5.  **Regular Review:** Periodically review and update the `HtmlPurifier` configuration.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) - Stored (with Rich Text):** (Severity: High) - Prevents XSS even within allowed HTML.\n    *   **HTML Injection:** (Severity: Medium)\n\n*   **Impact:**\n    *   **XSS (Stored, Rich Text):** Reduces risk to *low* with correct configuration.\n    *   **HTML Injection:** Reduces risk to *low*.\n\n*   **Currently Implemented:**\n    *   Implemented in `controllers/BlogController.php`.\n\n*   **Missing Implementation:**\n    *   Missing in `controllers/ForumController.php` (*critical*).\n    *   Review other areas with rich text input."
+    },
+    {
+      "title": "Enable and Verify Yii2's CSRF Protection",
+      "text": "*   **Description:**\n    1.  **Check `config/web.php`:**  Locate the `request` component.\n    2.  **Verify `enableCsrfValidation`:** Ensure `enableCsrfValidation` is `true`. This enables Yii2's built-in CSRF protection.\n    3.  **Verify `cookieValidationKey`:** Ensure `cookieValidationKey` is set to a *strong, secret key*. This is *crucial* for Yii2's CSRF mechanism.\n    4.  **`ActiveForm` Usage (Yii2 Forms):** When using Yii2's `ActiveForm`, CSRF protection is automatic (hidden `_csrf` field).\n    5.  **Manual AJAX (Yii2 `request`):** For AJAX *without* `ActiveForm`, *manually* include the CSRF token (`Yii::$app->request->csrfToken`) and validate it server-side (`Yii::$app->request->validateCsrfToken()`). This is *essential* for using Yii2's CSRF with custom AJAX.\n    6. **Review non-GET requests:** Ensure CSRF protection for all data-modifying requests.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Request Forgery (CSRF):** (Severity: High)\n\n*   **Impact:**\n    *   **CSRF:** Reduces risk to *very low* with correct implementation.\n\n*   **Currently Implemented:**\n    *   `enableCsrfValidation` is `true`.\n    *   `cookieValidationKey` is set (needs strength review).\n    *   `ActiveForm` is used for most forms.\n\n*   **Missing Implementation:**\n    *   Manual AJAX in `web/js/custom.js` *lacks* CSRF token handling (*critical*).\n    *   Review all non-`ActiveForm` submissions and AJAX."
+    },
+    {
+      "title": "Use Yii2's Active Record/Query Builder and Parameterized Queries",
+      "text": "*   **Description:**\n    1.  **Prioritize Active Record (Yii2 ORM):** Use Yii2's Active Record for most database interactions. It automatically handles parameter binding.\n    2.  **Use Query Builder (Yii2 Component):** If Active Record is unsuitable, use Yii2's Query Builder. It also provides automatic parameter binding.\n    3.  **Avoid Raw SQL:** Minimize raw SQL (`Yii::$app->db->createCommand()`).\n    4.  **Parameterized Raw SQL (Yii2 `bindParam`/`bindValues`):** If raw SQL is *unavoidable*, *always* use parameterized queries with Yii2's `bindParam()` or `bindValues()`. *Never* concatenate user input directly.\n    5. **Code Review:** Regularly review database code.\n\n*   **Threats Mitigated:**\n    *   **SQL Injection:** (Severity: Critical)\n\n*   **Impact:**\n    *   **SQL Injection:** Reduces risk to *very low* with consistent use.\n\n*   **Currently Implemented:**\n    *   Active Record is used extensively.\n    *   Query Builder is used in some cases.\n\n*   **Missing Implementation:**\n    *   Raw SQL *without* parameter binding in `models/Report.php` (*critical*).\n    *   Thorough review of all database code needed."
+    },
+    {
+      "title": "Yii2 Mass Assignment Protection (Scenarios and `safeAttributes()`)",
+      "text": "*   **Description:**\n    1.  **Define Scenarios (Yii2 Models):** In your models (extending `yii\db\ActiveRecord` or `yii\base\Model`), define scenarios using the `scenarios()` method.  Each scenario represents a context (e.g., 'create', 'update').\n    2.  **List Safe Attributes:** Within each scenario, list attributes safe for mass assignment. These can be set via `load()` or record creation/updates.\n    3.  **Use `load()` with Scenario (Yii2 Method):** When using `load()` to populate model attributes from user input, *always* specify the scenario: `$model->load(Yii::$app->request->post(), 'create')`.\n    4. **Review Model Logic:** Ensure custom attribute-setting logic respects scenarios.\n\n*   **Threats Mitigated:**\n    *   **Mass Assignment:** (Severity: High)\n\n*   **Impact:**\n    *   **Mass Assignment:** Reduces risk to *very low*.\n\n*   **Currently Implemented:**\n    *   Scenarios defined in `models/User.php` and `models/Post.php`.\n    *   `load()` generally used with scenarios.\n\n*   **Missing Implementation:**\n    *   Missing scenario definitions in `models/Comment.php`.\n    *   Review all models for consistent scenario and `safeAttributes()` use."
+    },
+    {
+      "title": "Disable Yii2 Debug Mode and Gii in Production",
+      "text": "*   **Description:**\n    1.  **Check `index.php`:** Verify `YII_DEBUG` is `false` in `web/index.php`.\n    2.  **Check `config/web.php`:** Ensure the Gii module is *disabled* in the production configuration. Remove or comment out the Gii configuration.\n    3.  **Environment Variables:** Consider using environment variables to control these settings.\n    4. **Server Configuration:** Ensure web server prevents access to sensitive files.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure:** (Severity: High)\n    *   **Code Execution (via Gii):** (Severity: Critical)\n\n*   **Impact:**\n    *   **Information Disclosure:** Reduces risk to *very low*.\n    *   **Code Execution (via Gii):** Eliminates risk.\n\n*   **Currently Implemented:**\n    *   `YII_DEBUG` is `false`.\n    *   Gii is disabled.\n\n*   **Missing Implementation:**\n    *   None. Correctly implemented."
+    },
+    {
+      "title": "Secure File Uploads with Yii2's `UploadedFile` and `FileValidator`",
+      "text": "*   **Description:**\n    1.  **Use `UploadedFile` (Yii2 Class):** Use Yii2's `UploadedFile` class to handle file uploads securely.\n    2.  **Implement `FileValidator` (Yii2 Validator):** Use `yii\validators\FileValidator` in your model's `rules()`. Specify:\n        *   `extensions`: Allowed extensions.\n        *   `maxSize`: Maximum file size.\n        *   `mimeTypes`: Allowed MIME types (requires `fileinfo` extension).\n        *   `checkExtensionByMimeType`: Set to true.\n    3.  **Store Outside Web Root:** Store files *outside* the web root.\n    4.  **Serve Files via Controller (Yii2 Action):** Create a controller action to serve files, verifying authorization and sending appropriate headers.\n    5.  **Rename Files:** Rename files to random names (e.g., using `uniqid()`).\n    6. **.htaccess or web.config:** Add file to prevent direct access to the upload directory.\n\n*   **Threats Mitigated:**\n    *   **File Upload Vulnerabilities:** (Severity: High)\n    *   **Directory Traversal:** (Severity: High)\n    *   **Unauthorized File Access:** (Severity: Medium)\n\n*   **Impact:**\n    *   **File Upload Vulnerabilities:** Reduces risk to *low*.\n    *   **Directory Traversal:** Reduces risk to *very low*.\n    *   **Unauthorized File Access:** Reduces risk to *low*.\n\n*   **Currently Implemented:**\n    *   `UploadedFile` is used.\n    *   `FileValidator` is used with `extensions` and `maxSize`.\n    *   Files stored in `uploads/` (inside web root - *problem*).\n\n*   **Missing Implementation:**\n    *   Files stored *inside* web root (*critical*).\n    *   No controller action serves files (*critical*).\n    *   Files *not* renamed (*medium*).\n    *   Missing `mimeTypes` and `checkExtensionByMimeType` validation."
+    },
+    {
+      "title": "Secure Session Management with Yii2 Components",
+      "text": "*   **Description:**\n    1.  **Secure Session Handler (Yii2 Components):** Use `yii\web\DbSession` or `yii\redis\Session` instead of `yii\web\PhpSession`.\n    2.  **Configure `cookieParams` (Yii2 `session` Component):** In `config/web.php`, configure `session`:\n        *   `httpOnly`: `true`\n        *   `secure`: `true` (HTTPS only)\n        *   `sameSite`: `\\yii\\web\\Cookie::SAME_SITE_STRICT` or `\\yii\\web\\Cookie::SAME_SITE_LAX`\n    3.  **Set `timeout`:** Set a reasonable session timeout.\n    4.  **Enable `useStrictMode`:** Set `useStrictMode` to `true`.\n    5.  **Regenerate Session ID (Yii2 Method):** After login/privilege change, use `Yii::$app->session->regenerateID()`.\n    6. **Session data validation:** Validate data stored in session.\n\n*   **Threats Mitigated:**\n    *   **Session Hijacking:** (Severity: High)\n    *   **Session Fixation:** (Severity: High)\n    *   **CSRF (via `sameSite`):** (Severity: High)\n\n*   **Impact:**\n    *   **Session Hijacking:** Reduces risk significantly.\n    *   **Session Fixation:** Reduces risk to *very low*.\n    *   **CSRF:** Additional defense.\n\n*   **Currently Implemented:**\n    *   `cookieParams` partially configured (`httpOnly` is `true`).\n    *   `timeout` is set.\n    *   `useStrictMode` is `true`.\n\n*   **Missing Implementation:**\n    *   Using default `yii\web\PhpSession`. Should use `yii\web\DbSession` or `yii\redis\Session`.\n    *   `secure` and `sameSite` not set (*medium*).\n    *   Session ID not regenerated after login (*medium*)."
+    },
+    {
+      "title": "Access Control with Yii2's `AccessControl` Filter and RBAC",
+      "text": "*   **Description:**\n    1.  **Use `AccessControl` Filter (Yii2 Filter):** In controllers, use `yii\filters\AccessControl` in `behaviors()`. Define rules for user access to actions.\n    2.  **Define Roles:** Use `'roles'` in ACF rules (`?` for guests, `@` for logged-in, or specific role names).\n    3.  **Implement RBAC (Yii2 `authManager`):** For granular control, use Yii2's RBAC:\n        *   Create roles and permissions (using `authManager`).\n        *   Assign permissions to roles.\n        *   Assign roles to users.\n        *   Use `Yii::$app->user->can('permissionName')` for checks.\n    4. **Least Privilege:** Grant minimal necessary permissions.\n    5. **Review Controller Logic:** Ensure custom authorization is consistent with ACF/RBAC.\n\n*   **Threats Mitigated:**\n    *   **Unauthorized Access:** (Severity: High)\n    *   **Privilege Escalation:** (Severity: High)\n\n*   **Impact:**\n    *   **Unauthorized Access:** Reduces risk to *very low*.\n    *   **Privilege Escalation:** Reduces risk to *very low*.\n\n*   **Currently Implemented:**\n    *   `AccessControl` used in `controllers/AdminController.php`.\n    *   Basic roles (`?` and `@`) used in some controllers.\n\n*   **Missing Implementation:**\n    *   `AccessControl` *not* consistently used (*critical*).\n    *   RBAC *not* implemented (*medium*, depending on complexity)."
+    },
+    {
+      "title": "Custom Error Handling with Yii2's `errorHandler`",
+      "text": "*   **Description:**\n    1.  **Create Custom Error Action (Yii2 Action):** Create a controller action (e.g., `SiteController::actionError()`) to handle errors.  Log details and display a user-friendly message *without* sensitive information.\n    2.  **Configure `errorHandler` (Yii2 Component):** In `config/web.php`, set `errorHandler`:\n        *   `errorAction`: Route to your custom error action (e.g., `'site/error'`).\n    3.  **Disable Debug Mode:** Ensure `YII_DEBUG` is `false` in production.\n    4. **Test Error Handling:** Trigger errors to test.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure:** (Severity: High)\n\n*   **Impact:**\n    *   **Information Disclosure:** Reduces risk to *very low*.\n\n*   **Currently Implemented:**\n    *   `errorHandler` configured to use `site/error`.\n    *   `SiteController::actionError()` exists (but lacks logging).\n\n*   **Missing Implementation:**\n    *   `SiteController::actionError()` *doesn't* log details (*medium*).\n    *   Needs more robust error handling."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739573726.203788       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 22:55:40,593 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 22:55:40,657 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 22:56:08,915 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 22:57:02,835 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 23:01:53,800 - ai_security_analyzer.graphs - INFO - Actual token usage: 53490
+2025-02-14 23:01:53,817 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739574116.058337       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
