@@ -1,5 +1,3 @@
-php https://github.com/joomla/joomla-cms
-php https://github.com/koel/koel
 php https://github.com/laminas/laminas-mvc
 php https://github.com/laravel/framework
 php https://github.com/laravel/laravel
