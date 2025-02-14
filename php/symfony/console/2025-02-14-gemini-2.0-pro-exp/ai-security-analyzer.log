@@ -1,0 +1,150 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+d3f883494790: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+dfb81f221332: Download complete
+1f3e46996e29: Pull complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+b9be2ce5276b: Download complete
+28d645c00242: Download complete
+921df71b230f: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-14 19:08:01,315 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 19:08:01,383 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-14 19:09:21,969 - ai_security_analyzer.graphs - INFO - Actual token usage: 11931
+2025-02-14 19:09:21,973 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739560164.304348       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 19:09:28,736 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 19:09:28,797 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 19:09:55,789 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 19:10:23,699 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 19:14:01,774 - ai_security_analyzer.graphs - INFO - Actual token usage: 35827
+2025-02-14 19:14:01,786 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739560444.148621       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 19:14:08,626 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 19:14:08,688 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 19:14:32,334 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 19:14:56,441 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 19:17:47,653 - ai_security_analyzer.graphs - INFO - Actual token usage: 29488
+2025-02-14 19:17:47,663 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739560670.037044       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 19:17:54,614 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 19:17:54,677 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-14 19:18:20,376 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-14 19:18:49,194 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-14 19:19:08,519 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-14 19:30:59,509 - ai_security_analyzer.graphs - INFO - Actual token usage: 90613
+2025-02-14 19:30:59,547 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739561461.925674       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 19:31:06,469 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 19:31:06,532 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 19:31:28,410 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 19:32:05,431 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 19:32:50,255 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Strict Input Validation and Sanitization (Console-Specific)",
+      "text": "*   **Description:**\n    1.  **Define Arguments and Options:** Within the `configure()` method, use `InputArgument` and `InputOption` to *strictly* define expected input. Specify `name`, `mode` (REQUIRED, OPTIONAL, IS_ARRAY), `description`, and `default` values. This is *more* than just documentation; it's the first line of defense.\n    2.  **Retrieve Input:** In `execute()`, use `$input->getArgument()` and `$input->getOption()`.\n    3.  **Console-Specific Validation:** Implement *explicit* validation *within* `execute()`, *before* using any input. This goes *beyond* typical web form validation. Examples:\n        *   **Type Checking:** `is_numeric()`, `is_string()`, `is_array()`, etc.  Crucial for console input.\n        *   **Whitelist Validation:** `in_array($input, ['allowed', 'values'])` for arguments with limited valid values.\n        *   **Regular Expressions:** `preg_match()` for complex input formats (file paths, specific patterns).\n        *   **Length Constraints:** `strlen($input) > min && strlen($input) < max`.\n        *   **Custom Logic:** Any validation specific to the command's purpose.  Think *beyond* web forms.\n    4.  **Console-Specific Sanitization:** After validation, sanitize:\n        *   **`escapeshellarg()`:** Use *only* when passing validated input to shell commands via the `Process` component (and use the array form of `Process`!).\n        *   **Context-Specific Sanitization:** Consider other sanitization functions *if* the input is used in specific contexts (e.g., database queries – but use prepared statements primarily!).\n    5.  **Console Error Handling:** If validation fails, use `$output->writeln('<error>Invalid input...</error>')` to provide a *clear* error message to the user on the console.  Do *not* proceed. Throw an exception if appropriate for the command's logic.\n\n*   **Threats Mitigated:**\n    *   **Command Injection (Severity: Critical):** Prevents injecting shell commands via manipulated console input.\n    *   **Code Injection (Severity: Critical):** Prevents injecting PHP or other code.\n    *   **SQL Injection (Severity: Critical):** (If the command interacts with a DB) Prevents manipulating SQL via console input.\n    *   **Denial of Service (DoS) (Severity: Medium):** Prevents excessively long/malformed input from crashing the command.\n    *   **Unexpected Behavior (Severity: Low-Medium):** Ensures the command behaves as intended.\n\n*   **Impact:**\n    *   **Command/Code/SQL Injection:** Risk reduced from Critical to Negligible (with correct implementation).\n    *   **DoS:** Risk reduced from Medium to Low.\n    *   **Unexpected Behavior:** Risk reduced from Low-Medium to Negligible.\n\n*   **Currently Implemented:**\n    *   Basic argument/option definitions in `src/Command/ExampleCommand.php`.\n    *   Partial type checking in `src/Command/AnotherCommand.php`.\n    *   No sanitization.\n\n*   **Missing Implementation:**\n    *   Comprehensive validation (whitelists, regex, length constraints) is largely missing.\n    *   Sanitization is completely missing – *critical*.\n    *   Consistent error handling for invalid input.\n    *   No use of `escapeshellarg()` (though DB interaction is minimal now)."
+    },
+    {
+      "title": "Secure Command Execution with Symfony's `Process` Component",
+      "text": "*   **Description:**\n    1.  **Identify Shell Interactions:** Review all console commands for *any* external program or shell command execution.\n    2.  **Prefer PHP Alternatives:** If possible, replace shell commands with PHP functions or Symfony components (e.g., `Filesystem`).\n    3.  **Mandatory `Process` Component:** If shell execution is *unavoidable*, use Symfony's `Process` component.\n    4.  **Array Form ONLY:** *Always* use the array form of command arguments with `Process`:\n        ```php\n        use Symfony\Component\Process\Process;\n        $process = new Process(['command', 'arg1', $validatedArg2]); // GOOD - Safe\n        $process->run();\n        ```\n    5.  **NEVER String Concatenation:** *Never* build command strings by concatenating user input:\n        ```php\n        $process = new Process(\"command \" . $userInput); // BAD - Vulnerable!\n        $process->run();\n        ```\n    6.  **Error Handling:** Check `$process->isSuccessful()` and handle errors appropriately (console output).\n    7.  **Timeout:** Set a reasonable timeout: `$process->setTimeout(60);`.\n\n*   **Threats Mitigated:**\n    *   **Command Injection (Severity: Critical):** Prevents injecting shell commands.\n    *   **Denial of Service (DoS) (Severity: Medium):** Timeouts prevent hung processes.\n\n*   **Impact:**\n    *   **Command Injection:** Risk reduced from Critical to Negligible (correctly implemented).\n    *   **DoS:** Risk reduced from Medium to Low.\n\n*   **Currently Implemented:**\n    *   No commands currently use direct shell execution.\n    *   `src/Command/SystemInfoCommand.php` uses `Process`, but *incorrectly* (string concatenation) – *critical*.\n\n*   **Missing Implementation:**\n    *   `src/Command/SystemInfoCommand.php` needs refactoring to use the array form – *critical vulnerability*.\n    *   Future commands *must* use `Process` correctly."
+    },
+    {
+      "title": "Controlled Console Output and Error Handling",
+      "text": "*   **Description:**\n    1.  **Review Output:** Examine all commands for sensitive information displayed in the console.\n    2.  **Verbosity Levels:** Use verbosity levels (`-v`, `-vv`, `-vvv`) to control output detail. Sensitive info should *only* be at high verbosity.\n    3.  **Avoid Sensitive Data:** *Never* print passwords, API keys, etc., to the console.\n    4.  **Console Error Handling:**\n        *   Use `try-catch` blocks.\n        *   Display user-friendly error messages on the console: `$output->writeln('<error>...</error>')`.\n        *   Log *detailed* errors (stack traces, etc.) to a *secure log file*, *not* the console.\n        *   Avoid raw exception messages/stack traces on the console in production.\n    5. **Output Styling:** Use `$output->writeln('<info>...</info>')`, etc., for readability and to distinguish output types.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure (Severity: Medium-High):** Prevents leaking sensitive info via console output.\n    *   **Improved Debugging (Severity: Low):** Verbosity and styling aid debugging.\n\n*   **Impact:**\n    *   **Information Disclosure:** Risk reduced from Medium-High to Low (depends on data sensitivity).\n    *   **Improved Debugging:** Better developer experience.\n\n*   **Currently Implemented:**\n    *   Basic error handling in some commands.\n    *   Verbosity levels are supported, but not consistently used for sensitive output.\n\n*   **Missing Implementation:**\n    *   Consistent, comprehensive error handling.\n    *   Consistent masking/omission of sensitive data.\n    *   Detailed error logging to a separate file is not consistent."
+    },
+    {
+      "title": "Console-Specific Access Control",
+      "text": "*   **Description:**\n    1.  **OS-Level Permissions:** Use `chmod` to restrict *execute* permissions on the `bin/console` script to authorized users/groups. This is the *first* layer of access control.\n    2.  **Environment Checks:** *Within* the `execute()` method, check the environment (`$this->getApplication()->getKernel()->getEnvironment()`) and prevent sensitive commands from running in inappropriate environments (e.g., production). This is a *console-specific* check.\n    3.  **Authentication (If Applicable):** For commands requiring authentication:\n        *   Implement a *secure* authentication mechanism (API key, token).\n        *   Verify identity *before* executing sensitive logic.\n        *   *Never* store credentials in the command code.\n    4. **IP Address Restriction (If Applicable):** If the command should only be accessible from specific IPs, implement whitelisting (firewall rules or web server config). This is less common for console commands but might be relevant.\n\n*   **Threats Mitigated:**\n    *   **Unauthorized Access (Severity: High-Critical):** Prevents unauthorized execution.\n    *   **Privilege Escalation (Severity: High-Critical):** Limits the impact of a compromised account.\n    *   **Accidental Execution (Severity: Low):** Environment checks prevent accidental execution in the wrong context.\n\n*   **Impact:**\n    *   **Unauthorized Access:** Risk reduced significantly.\n    *   **Privilege Escalation:** Risk reduced significantly.\n    *   **Accidental Execution:** Risk reduced from Low to Negligible.\n\n*   **Currently Implemented:**\n    *   Basic OS-level permissions are likely present (but should be verified).\n    *   No environment checks within commands.\n    *   No authentication mechanisms.\n    *   No IP restrictions.\n\n*   **Missing Implementation:**\n    *   Explicit verification of OS-level permissions.\n    *   Environment checks *within* commands.\n    *   Authentication mechanisms (if needed).\n    *   IP restrictions (if applicable)."
+    },
+    {
+      "title": "Console Command Logging and Auditing",
+      "text": "*   **Description:**\n    1.  **Log Every Execution:** Log *every* console command execution. Include:\n        *   Command name\n        *   Arguments/options (redact sensitive data!)\n        *   User (if applicable)\n        *   Timestamp\n        *   Result (success/failure)\n        *   Execution time (optional)\n    2.  **Sensitive Data Handling:** *Never* log passwords, API keys, etc. Use placeholders or redaction.\n    3.  **Log Destination:** Log to a secure file or a centralized logging system.\n    4.  **Log Rotation:** Prevent log files from growing indefinitely.\n\n*   **Threats Mitigated:**\n    *   **Lack of Audit Trail (Severity: Medium-High):** Provides an audit trail for forensics and incident response.\n    *   **Intrusion Detection (Severity: Medium):** Can help detect unauthorized access.\n\n*   **Impact:**\n    *   **Lack of Audit Trail:** Risk reduced significantly.\n    *   **Intrusion Detection:** Provides valuable data.\n\n*   **Currently Implemented:**\n    *   No specific logging of console command execution.\n\n*   **Missing Implementation:**\n    *   Comprehensive logging of command execution.\n    *   Secure handling of sensitive data in logs.\n    *   Centralized logging or a dedicated log file.\n    *   Log rotation."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-14 19:32:50,257 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Strict Input Validation and Sanitization (Console-Specific)",
+      "text": "*   **Description:**\n    1.  **Define Arguments and Options:** Within the `configure()` method, use `InputArgument` and `InputOption` to *strictly* define expected input. Specify `name`, `mode` (REQUIRED, OPTIONAL, IS_ARRAY), `description`, and `default` values. This is *more* than just documentation; it's the first line of defense.\n    2.  **Retrieve Input:** In `execute()`, use `$input->getArgument()` and `$input->getOption()`.\n    3.  **Console-Specific Validation:** Implement *explicit* validation *within* `execute()`, *before* using any input. This goes *beyond* typical web form validation. Examples:\n        *   **Type Checking:** `is_numeric()`, `is_string()`, `is_array()`, etc.  Crucial for console input.\n        *   **Whitelist Validation:** `in_array($input, ['allowed', 'values'])` for arguments with limited valid values.\n        *   **Regular Expressions:** `preg_match()` for complex input formats (file paths, specific patterns).\n        *   **Length Constraints:** `strlen($input) > min && strlen($input) < max`.\n        *   **Custom Logic:** Any validation specific to the command's purpose.  Think *beyond* web forms.\n    4.  **Console-Specific Sanitization:** After validation, sanitize:\n        *   **`escapeshellarg()`:** Use *only* when passing validated input to shell commands via the `Process` component (and use the array form of `Process`!).\n        *   **Context-Specific Sanitization:** Consider other sanitization functions *if* the input is used in specific contexts (e.g., database queries – but use prepared statements primarily!).\n    5.  **Console Error Handling:** If validation fails, use `$output->writeln('<error>Invalid input...</error>')` to provide a *clear* error message to the user on the console.  Do *not* proceed. Throw an exception if appropriate for the command's logic.\n\n*   **Threats Mitigated:**\n    *   **Command Injection (Severity: Critical):** Prevents injecting shell commands via manipulated console input.\n    *   **Code Injection (Severity: Critical):** Prevents injecting PHP or other code.\n    *   **SQL Injection (Severity: Critical):** (If the command interacts with a DB) Prevents manipulating SQL via console input.\n    *   **Denial of Service (DoS) (Severity: Medium):** Prevents excessively long/malformed input from crashing the command.\n    *   **Unexpected Behavior (Severity: Low-Medium):** Ensures the command behaves as intended.\n\n*   **Impact:**\n    *   **Command/Code/SQL Injection:** Risk reduced from Critical to Negligible (with correct implementation).\n    *   **DoS:** Risk reduced from Medium to Low.\n    *   **Unexpected Behavior:** Risk reduced from Low-Medium to Negligible.\n\n*   **Currently Implemented:**\n    *   Basic argument/option definitions in `src/Command/ExampleCommand.php`.\n    *   Partial type checking in `src/Command/AnotherCommand.php`.\n    *   No sanitization.\n\n*   **Missing Implementation:**\n    *   Comprehensive validation (whitelists, regex, length constraints) is largely missing.\n    *   Sanitization is completely missing – *critical*.\n    *   Consistent error handling for invalid input.\n    *   No use of `escapeshellarg()` (though DB interaction is minimal now)."
+    },
+    {
+      "title": "Secure Command Execution with Symfony's `Process` Component",
+      "text": "*   **Description:**\n    1.  **Identify Shell Interactions:** Review all console commands for *any* external program or shell command execution.\n    2.  **Prefer PHP Alternatives:** If possible, replace shell commands with PHP functions or Symfony components (e.g., `Filesystem`).\n    3.  **Mandatory `Process` Component:** If shell execution is *unavoidable*, use Symfony's `Process` component.\n    4.  **Array Form ONLY:** *Always* use the array form of command arguments with `Process`:\n        ```php\n        use Symfony\Component\Process\Process;\n        $process = new Process(['command', 'arg1', $validatedArg2]); // GOOD - Safe\n        $process->run();\n        ```\n    5.  **NEVER String Concatenation:** *Never* build command strings by concatenating user input:\n        ```php\n        $process = new Process(\"command \" . $userInput); // BAD - Vulnerable!\n        $process->run();\n        ```\n    6.  **Error Handling:** Check `$process->isSuccessful()` and handle errors appropriately (console output).\n    7.  **Timeout:** Set a reasonable timeout: `$process->setTimeout(60);`.\n\n*   **Threats Mitigated:**\n    *   **Command Injection (Severity: Critical):** Prevents injecting shell commands.\n    *   **Denial of Service (DoS) (Severity: Medium):** Timeouts prevent hung processes.\n\n*   **Impact:**\n    *   **Command Injection:** Risk reduced from Critical to Negligible (correctly implemented).\n    *   **DoS:** Risk reduced from Medium to Low.\n\n*   **Currently Implemented:**\n    *   No commands currently use direct shell execution.\n    *   `src/Command/SystemInfoCommand.php` uses `Process`, but *incorrectly* (string concatenation) – *critical*.\n\n*   **Missing Implementation:**\n    *   `src/Command/SystemInfoCommand.php` needs refactoring to use the array form – *critical vulnerability*.\n    *   Future commands *must* use `Process` correctly."
+    },
+    {
+      "title": "Controlled Console Output and Error Handling",
+      "text": "*   **Description:**\n    1.  **Review Output:** Examine all commands for sensitive information displayed in the console.\n    2.  **Verbosity Levels:** Use verbosity levels (`-v`, `-vv`, `-vvv`) to control output detail. Sensitive info should *only* be at high verbosity.\n    3.  **Avoid Sensitive Data:** *Never* print passwords, API keys, etc., to the console.\n    4.  **Console Error Handling:**\n        *   Use `try-catch` blocks.\n        *   Display user-friendly error messages on the console: `$output->writeln('<error>...</error>')`.\n        *   Log *detailed* errors (stack traces, etc.) to a *secure log file*, *not* the console.\n        *   Avoid raw exception messages/stack traces on the console in production.\n    5. **Output Styling:** Use `$output->writeln('<info>...</info>')`, etc., for readability and to distinguish output types.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure (Severity: Medium-High):** Prevents leaking sensitive info via console output.\n    *   **Improved Debugging (Severity: Low):** Verbosity and styling aid debugging.\n\n*   **Impact:**\n    *   **Information Disclosure:** Risk reduced from Medium-High to Low (depends on data sensitivity).\n    *   **Improved Debugging:** Better developer experience.\n\n*   **Currently Implemented:**\n    *   Basic error handling in some commands.\n    *   Verbosity levels are supported, but not consistently used for sensitive output.\n\n*   **Missing Implementation:**\n    *   Consistent, comprehensive error handling.\n    *   Consistent masking/omission of sensitive data.\n    *   Detailed error logging to a separate file is not consistent."
+    },
+    {
+      "title": "Console-Specific Access Control",
+      "text": "*   **Description:**\n    1.  **OS-Level Permissions:** Use `chmod` to restrict *execute* permissions on the `bin/console` script to authorized users/groups. This is the *first* layer of access control.\n    2.  **Environment Checks:** *Within* the `execute()` method, check the environment (`$this->getApplication()->getKernel()->getEnvironment()`) and prevent sensitive commands from running in inappropriate environments (e.g., production). This is a *console-specific* check.\n    3.  **Authentication (If Applicable):** For commands requiring authentication:\n        *   Implement a *secure* authentication mechanism (API key, token).\n        *   Verify identity *before* executing sensitive logic.\n        *   *Never* store credentials in the command code.\n    4. **IP Address Restriction (If Applicable):** If the command should only be accessible from specific IPs, implement whitelisting (firewall rules or web server config). This is less common for console commands but might be relevant.\n\n*   **Threats Mitigated:**\n    *   **Unauthorized Access (Severity: High-Critical):** Prevents unauthorized execution.\n    *   **Privilege Escalation (Severity: High-Critical):** Limits the impact of a compromised account.\n    *   **Accidental Execution (Severity: Low):** Environment checks prevent accidental execution in the wrong context.\n\n*   **Impact:**\n    *   **Unauthorized Access:** Risk reduced significantly.\n    *   **Privilege Escalation:** Risk reduced significantly.\n    *   **Accidental Execution:** Risk reduced from Low to Negligible.\n\n*   **Currently Implemented:**\n    *   Basic OS-level permissions are likely present (but should be verified).\n    *   No environment checks within commands.\n    *   No authentication mechanisms.\n    *   No IP restrictions.\n\n*   **Missing Implementation:**\n    *   Explicit verification of OS-level permissions.\n    *   Environment checks *within* commands.\n    *   Authentication mechanisms (if needed).\n    *   IP restrictions (if applicable)."
+    },
+    {
+      "title": "Console Command Logging and Auditing",
+      "text": "*   **Description:**\n    1.  **Log Every Execution:** Log *every* console command execution. Include:\n        *   Command name\n        *   Arguments/options (redact sensitive data!)\n        *   User (if applicable)\n        *   Timestamp\n        *   Result (success/failure)\n        *   Execution time (optional)\n    2.  **Sensitive Data Handling:** *Never* log passwords, API keys, etc. Use placeholders or redaction.\n    3.  **Log Destination:** Log to a secure file or a centralized logging system.\n    4.  **Log Rotation:** Prevent log files from growing indefinitely.\n\n*   **Threats Mitigated:**\n    *   **Lack of Audit Trail (Severity: Medium-High):** Provides an audit trail for forensics and incident response.\n    *   **Intrusion Detection (Severity: Medium):** Can help detect unauthorized access.\n\n*   **Impact:**\n    *   **Lack of Audit Trail:** Risk reduced significantly.\n    *   **Intrusion Detection:** Provides valuable data.\n\n*   **Currently Implemented:**\n    *   No specific logging of console command execution.\n\n*   **Missing Implementation:**\n    *   Comprehensive logging of command execution.\n    *   Secure handling of sensitive data in logs.\n    *   Centralized logging or a dedicated log file.\n    *   Log rotation."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739561572.626165       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-14 19:33:07,176 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-14 19:33:07,243 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-14 19:33:33,737 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-14 19:34:15,929 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-14 19:37:35,737 - ai_security_analyzer.graphs - INFO - Actual token usage: 38157
+2025-02-14 19:37:35,748 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739561858.091405       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
