@@ -1,0 +1,17 @@
+# Attack Surface Analysis for egulias/emailvalidator
+
+## Attack Surface: [Regular Expression Denial of Service (ReDoS)](./attack_surfaces/regular_expression_denial_of_service__redos_.md)
+
+*   **Description:** An attacker crafts a malicious email address string designed to trigger excessive backtracking in the library's regular expressions, consuming CPU resources and potentially causing a denial of service.
+*   **How `email-validator` Contributes:** The library's core functionality *is* email address validation using regular expressions. This is the *direct* source of the ReDoS vulnerability. The library *attempts* to mitigate this with careful regex design, but the inherent risk remains.
+*   **Example:** An email address like `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!@example.com`. The excessive repetition combined with a special character can trigger exponential backtracking.
+*   **Impact:** Application becomes unresponsive, potentially affecting all users. Services dependent on email validation may fail.
+*   **Risk Severity:** High (Potentially Critical if no timeouts or resource limits are in place)
+*   **Mitigation Strategies:**
+    *   **Strict Timeout:** Implement a short, strict timeout (e.g., 200-500ms) on the *entire* email validation process. Terminate the validation if it exceeds this time. This is the *most critical* mitigation and directly addresses the library's processing time.
+    *   **Resource Limits:** Run the validation in a resource-constrained environment (e.g., separate process/thread with limited CPU/memory). This limits the impact of a successful ReDoS attack on the library.
+    *   **Input Length Limits (Pre-Validation):** Impose reasonable length limits on the *entire* email address string *before* passing it to the validator. This reduces the attack surface presented to the library.
+    *   **Appropriate Validation Level:** Use the least strict validation level necessary (e.g., avoid `RFCValidation` with `DNSCheckValidation` if DNS checks aren't required). This reduces the complexity of the regular expressions used *by the library*.
+    *   **Monitoring:** Monitor CPU usage and validation times to detect potential ReDoS attempts targeting the library.
+    *   **Web Application Firewall (WAF):** A WAF *might* be able to detect and block *some* ReDoS attempts, but this is not a reliable primary defense against attacks targeting the library's regex engine. It's a supplementary measure.
+
