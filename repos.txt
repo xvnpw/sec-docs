@@ -1,5 +1,3 @@
-python https://github.com/tornadoweb/tornado
-python https://github.com/ultralytics/yolov5
 python https://github.com/urllib3/urllib3
 ruby https://github.com/activeadmin/activeadmin
 ruby https://github.com/activemerchant/active_merchant
