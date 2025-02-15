@@ -1,5 +1,3 @@
-python https://github.com/saltstack/salt
-python https://github.com/searxng/searxng
 python https://github.com/sqlalchemy/sqlalchemy
 python https://github.com/sshwsfc/xadmin
 python https://github.com/streamlit/streamlit
