@@ -1,0 +1,278 @@
+name: Run ai-security-analyzer on config changes
+
+on:
+  push:
+    paths:
+      - '**/**/**/config.json'
+
+jobs:
+  get_config_files:
+    runs-on: ubuntu-latest
+    outputs:
+      config_files: ${{ steps.get_config_files.outputs.config_files }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get list of changed config.json files
+        id: get_config_files
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const commitSHA = context.sha;
+            const response = await github.rest.repos.getCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: commitSHA,
+            });
+            const changedFiles = response.data.files.map(f => f.filename);
+            const configFilesChanged = changedFiles.filter(f => f.endsWith('config.json'));
+            if (configFilesChanged.length === 0) {
+              throw new Error('No changed config.json files found');
+            }
+            core.setOutput('config_files', JSON.stringify(configFilesChanged));
+
+  analyze:
+    needs: get_config_files
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        config_file: ${{ fromJson(needs.get_config_files.outputs.config_files) }}
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up git user
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Read config.json
+        id: read_config
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const configFile = '${{ matrix.config_file }}';
+            const configPath = path.join(process.env.GITHUB_WORKSPACE, configFile);
+            const configContent = fs.readFileSync(configPath, 'utf8');
+            const config = JSON.parse(configContent);
+
+            let mode = config.mode;
+            let target = config.repo_url;
+            let agent_model = config.agent_model || 'gpt-4o';
+            core.setOutput('mode', mode);
+            core.setOutput('target', target);
+
+            core.setOutput('repo_url', config.repo_url || '');
+            
+            core.setOutput('agent_provider', config.agent_provider || 'openai');
+            core.setOutput('agent_model', agent_model);
+            core.setOutput('agent_temperature', config.agent_temperature || 0.0);
+            
+            core.setOutput('analyzer_args', config.analyzer_args || '');
+            const configDir = path.dirname(configFile);
+            core.setOutput('config_dir', configDir);
+            // Determine the output subdirectory
+            const output_subdir = `${new Date().toISOString().slice(0, 10)}-${agent_model}`;
+            core.setOutput('output_subdir', output_subdir);
+
+            // Handle agent_prompt_types
+            const default_agent_prompt_types = ["sec-design", "threat-modeling", "attack-surface", "attack-tree", "mitigations"];
+            let agent_prompt_types = config.agent_prompt_types;
+            if (!Array.isArray(agent_prompt_types) || agent_prompt_types.length === 0) {
+              agent_prompt_types = default_agent_prompt_types;
+            }
+            core.setOutput('agent_prompt_types', JSON.stringify(agent_prompt_types));
+
+      - name: Clone target repository
+        run: |
+          git clone ${{ steps.read_config.outputs.repo_url }} target_repo
+        shell: bash
+
+      - name: Record Start Time
+        id: record_start_time
+        shell: bash
+        run: |
+          echo "start_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
+
+      - name: Run ai-security-analyzer via Docker for each agent_prompt_type
+        id: run_analyzer
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LANGCHAIN_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: |
+          AGENT_PROMPT_TYPES='${{ steps.read_config.outputs.agent_prompt_types }}'
+          AGENT_PROVIDER='${{ steps.read_config.outputs.agent_provider }}'
+          AGENT_MODEL='${{ steps.read_config.outputs.agent_model }}'
+          AGENT_TEMPERATURE='${{ steps.read_config.outputs.agent_temperature }}'
+          MODE='${{ steps.read_config.outputs.mode }}'
+          TARGET='${{ steps.read_config.outputs.target }}'
+
+          # Convert JSON array to bash array
+          agent_prompt_types=$(echo "$AGENT_PROMPT_TYPES" | jq -r '.[]')
+
+          mkdir -p output target_repo
+
+          # Define maximum retries and delay between retries
+          MAX_RETRIES=3
+          RETRY_DELAY=10
+
+          for prompt_type in $agent_prompt_types; do
+            echo "Running ai-security-analyzer with agent_prompt_type: $prompt_type"
+            output_file="/output/${prompt_type}.md"
+
+            # Initialize retry counter
+            retries=0
+            success=false
+
+            while [ $retries -lt $MAX_RETRIES ]; do
+              # Temporarily disable 'set -e' to handle command failures manually
+              set +e
+
+              # Run docker command and redirect output to log file
+              docker run --rm \
+                --user $(id -u):$(id -g) \
+                -v "${{ github.workspace }}/target_repo:/code" \
+                -v "${{ github.workspace }}/output:/output" \
+                -e OPENAI_API_KEY \
+                -e GOOGLE_API_KEY \
+                ghcr.io/xvnpw/ai-security-analyzer:latest \
+                $MODE -v -t /code \
+                -o "$output_file" \
+                ${{ steps.read_config.outputs.analyzer_args }} \
+                --agent-provider "$AGENT_PROVIDER" \
+                --agent-model "$AGENT_MODEL" \
+                --agent-temperature "$AGENT_TEMPERATURE" \
+                --checkpoint-dir /code/.checkpoints \
+                --agent-prompt-type "$prompt_type" >> ./output/ai-security-analyzer.log 2>&1
+
+              # Capture the exit code of the docker run command
+              exit_code=$?
+
+              # Re-enable 'set -e' to make the script exit on errors outside this block
+              set -e
+
+              if [ $exit_code -eq 0 ]; then
+                success=true
+                break
+              else
+                echo "ai-security-analyzer failed with exit code $exit_code. Retrying in $RETRY_DELAY seconds..."
+                sleep $RETRY_DELAY
+                retries=$((retries + 1))
+              fi
+            done
+
+            if [ "$success" = false ]; then
+              echo "ai-security-analyzer failed after $MAX_RETRIES attempts."
+              exit 1
+            fi
+          done
+        shell: bash
+
+      - name: Calculate total token count
+        id: calculate_total_token_count
+        run: |
+          actual_token_usage=$(grep -oP 'Actual token usage: \K\d+' "./output/ai-security-analyzer.log" | awk '{sum += $1} END {print sum}')
+          echo "actual_token_usage=$actual_token_usage" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Record End Time
+        id: record_end_time
+        shell: bash
+        run: |
+          echo "end_datetime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
+
+      - name: Move output files to output directory
+        env:
+          AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
+        run: |
+          mkdir -p ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}
+          cp -r output/* ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
+        shell: bash
+
+      - name: Create output-metadata.json
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const outputDir = path.join(
+              process.env.GITHUB_WORKSPACE,
+              '${{ steps.read_config.outputs.config_dir }}',
+              '${{ steps.read_config.outputs.output_subdir }}'
+            );
+            const metadata = {
+              repo_url: process.env.REPO_URL,
+              analyzer_args: process.env.ANALYZER_ARGS,
+              start_datetime: process.env.START_DATETIME,
+              end_datetime: process.env.END_DATETIME,
+              agent_provider: process.env.AGENT_PROVIDER,
+              agent_model: process.env.AGENT_MODEL,
+              agent_temperature: process.env.AGENT_TEMPERATURE,
+              agent_prompt_types: JSON.parse(process.env.AGENT_PROMPT_TYPES),
+              actual_token_usage: process.env.ACTUAL_TOKEN_USAGE,
+              mode: process.env.MODE,
+            };
+            fs.mkdirSync(outputDir, { recursive: true });
+            fs.writeFileSync(path.join(outputDir, 'output-metadata.json'), JSON.stringify(metadata, null, 2));
+        env:
+          REPO_URL: ${{ steps.read_config.outputs.repo_url }}
+          ANALYZER_ARGS: ${{ steps.read_config.outputs.analyzer_args }}
+          START_DATETIME: ${{ steps.record_start_time.outputs.start_datetime }}
+          END_DATETIME: ${{ steps.record_end_time.outputs.end_datetime }}
+          AGENT_PROVIDER: ${{ steps.read_config.outputs.agent_provider }}
+          AGENT_MODEL: ${{ steps.read_config.outputs.agent_model }}
+          AGENT_TEMPERATURE: ${{ steps.read_config.outputs.agent_temperature }}
+          AGENT_PROMPT_TYPES: ${{ steps.read_config.outputs.agent_prompt_types }}
+          ACTUAL_TOKEN_USAGE: ${{ steps.calculate_total_token_count.outputs.actual_token_usage }}
+          MODE: ${{ steps.read_config.outputs.mode }}
+
+      - name: Clean up target_repo
+        run: |
+          rm -rf target_repo/ output/
+        shell: bash
+
+      - name: Commit changes
+        id: commit
+        uses: EndBug/add-and-commit@v9
+        continue-on-error: true
+        with:
+          message: 'Add security documentation generated by ai-security-analyzer for ${{ matrix.config_file }}'
+          add: ${{ steps.read_config.outputs.config_dir }}/${{ steps.read_config.outputs.output_subdir }}/
+          pull: '--rebase --autostash'
+
+      - name: Retry commit on failure
+        if: steps.commit.outcome == 'failure'
+        run: |
+          for i in {1..3}; do
+            echo "Attempt $i to commit changes..."
+            git pull --rebase --autostash
+            if git push; then
+              echo "Commit successful on attempt $i"
+              exit 0
+            fi
+            sleep $((i * 5))  # Exponential backoff: 5s, 10s, 15s
+          done
+          echo "Failed to commit after 3 attempts"
+          exit 1
+        shell: bash
+
+  trigger_workflow:
+    if: contains(needs.*.result, 'success')  # Run if at least one analyze job succeeded
+    needs: analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger second workflow
+        env:
+          PAT_SECRET: ${{ secrets.PAT_SECRET }}
+        run: |
+          curl -X POST -H "Authorization: token $PAT_SECRET" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/xvnpw/sec-docs/actions/workflows/process-repos.yaml/dispatches \
+          -d '{"ref":"main"}'

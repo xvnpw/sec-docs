@@ -1,0 +1,4 @@
+cookiecutter/cookiecutter-django
+django-commons/django-debug-toolbar
+vitalik/django-ninja
+liangliangyy/DjangoBlog
