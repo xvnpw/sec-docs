@@ -91,7 +91,7 @@ jobs:
 
       - name: Clone target repository
         run: |
-          git clone ${{ steps.read_config.outputs.repo_url }} target_repo
+          git clone https://github.com/${{ steps.read_config.outputs.repo_url }} target_repo
         shell: bash
 
       - name: Record Start Time
