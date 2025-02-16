@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/rubocop/rubocop",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-16T03:54:43Z",
+  "end_datetime": "2025-02-16T04:10:44Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-pro-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "120544",
+  "mode": "github"
+}
