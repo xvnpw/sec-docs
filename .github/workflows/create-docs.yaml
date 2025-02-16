@@ -1,7 +1,9 @@
 name: Run ai-security-analyzer on config changes
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - '**/**/**/config.json'
 
 jobs:
   get_config_files:
