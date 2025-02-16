@@ -1,0 +1,75 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+28d645c00242: Waiting
+921df71b230f: Waiting
+8b438fc1cd11: Waiting
+d3f883494790: Waiting
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+37e00e2d9431: Waiting
+c457853b6d82: Waiting
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Pull complete
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-16 13:12:26,747 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 13:12:28,012 - ai_security_analyzer.full_dir_scan_agents - INFO - Loading files
+2025-02-16 13:12:28,012 - ai_security_analyzer.loaders - INFO - exclude config: mode=add, patterns=['LICENSE', '**/dist/*', '**/bin/*']
+2025-02-16 13:12:28,012 - ai_security_analyzer.loaders - INFO - include config: mode=add, patterns=['**/*.md', '**/Dockerfile', '**/*.yml', '**/*.sh', '**/*.bash', '**/*.yaml', '**/*.toml', '**/*.py', 'pyproject.toml', 'requirements.txt']
+2025-02-16 13:12:28,050 - ai_security_analyzer.full_dir_scan_agents - INFO - Loaded 102 documents
+2025-02-16 13:12:28,051 - ai_security_analyzer.full_dir_scan_agents - INFO - Sorting and filtering documents
+2025-02-16 13:12:28,051 - ai_security_analyzer.full_dir_scan_agents - INFO - Documents after sorting and filtering: 102
+2025-02-16 13:12:28,053 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitting documents
+2025-02-16 13:12:28,137 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitted documents into smaller chunks: 95
+2025-02-16 13:12:28,138 - ai_security_analyzer.full_dir_scan_agents - INFO - Creating initial draft
+2025-02-16 13:12:28,179 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing first batch of documents: 43 of 95
+2025-02-16 13:12:28,504 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-16 13:13:08,238 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-16 13:13:08,267 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 30 [73 of 95]
+2025-02-16 13:13:30,877 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-16 13:13:30,887 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 22 [95 of 95]
+2025-02-16 13:13:49,159 - ai_security_analyzer.full_dir_scan_agents - INFO - Generating final response
+2025-02-16 13:13:49,185 - ai_security_analyzer.graphs - INFO - Actual token usage: 102378
+2025-02-16 13:13:49,228 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739711631.493492       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
