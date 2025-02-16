@@ -1,4 +1,2 @@
-python cookiecutter/cookiecutter-django
-python django-commons/django-debug-toolbar
 python vitalik/django-ninja
 python liangliangyy/DjangoBlog
