@@ -1,4 +1,4 @@
-cookiecutter/cookiecutter-django
-django-commons/django-debug-toolbar
-vitalik/django-ninja
-liangliangyy/DjangoBlog
+python cookiecutter/cookiecutter-django
+python django-commons/django-debug-toolbar
+python vitalik/django-ninja
+python liangliangyy/DjangoBlog
