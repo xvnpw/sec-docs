@@ -1,0 +1,147 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+37e00e2d9431: Waiting
+d3f883494790: Waiting
+5c3947958a83: Waiting
+921df71b230f: Waiting
+8b438fc1cd11: Waiting
+b9be2ce5276b: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Verifying Checksum
+1f3e46996e29: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+5c3947958a83: Verifying Checksum
+5c3947958a83: Download complete
+b9be2ce5276b: Verifying Checksum
+b9be2ce5276b: Download complete
+1f3e46996e29: Pull complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+921df71b230f: Download complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+37e00e2d9431: Verifying Checksum
+37e00e2d9431: Download complete
+d3f883494790: Verifying Checksum
+d3f883494790: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-16 10:41:45,139 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 10:41:45,203 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-16 10:43:25,641 - ai_security_analyzer.graphs - INFO - Actual token usage: 14875
+2025-02-16 10:43:25,646 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739702607.899200       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-16 10:43:32,199 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 10:43:32,259 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-16 10:43:54,946 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-16 10:44:25,581 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-16 10:47:08,374 - ai_security_analyzer.graphs - INFO - Actual token usage: 29059
+2025-02-16 10:47:08,387 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739702830.643278       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-16 10:47:14,902 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 10:47:14,960 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-16 10:47:40,825 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-16 10:48:05,045 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-16 10:50:12,862 - ai_security_analyzer.graphs - INFO - Actual token usage: 24432
+2025-02-16 10:50:12,870 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739703015.211337       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-16 10:50:19,511 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 10:50:19,570 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-16 10:50:44,650 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-16 10:51:08,007 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-16 10:51:08,077 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-16 10:51:23,778 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-16 10:53:02,875 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2025-02-16 10:53:04,909 - ai_security_analyzer.graphs - ERROR - Graph execution failed: 429 Resource has been exhausted (e.g. check quota).
+2025-02-16 10:53:04,912 - __main__ - ERROR - Application error: 429 Resource has been exhausted (e.g. check quota).. You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739703187.170594       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-16 10:53:21,466 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 10:53:21,532 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-16 10:53:50,686 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-16 10:54:08,692 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-16 10:54:23,702 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-16 10:56:57,801 - ai_security_analyzer.graphs - INFO - Actual token usage: 35899
+2025-02-16 10:56:57,810 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739703420.060994       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-16 10:57:04,353 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 10:57:04,413 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-16 10:57:27,758 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-16 10:58:12,282 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-16 10:58:56,768 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Enforce Prepared Statements and Avoid Raw SQL (Diesel-Specific)",
+      "text": "*   **Description:**\n    1.  **Prioritize Diesel's Query Builder:**  Mandatory use of Diesel's query builder functions (e.g., `filter`, `select`, `insert_into`, `update`, `delete`) for *all* database interactions where feasible.  These functions are designed to generate parameterized queries, Diesel's primary defense against SQL injection.\n    2.  **Strictly Controlled Raw SQL:**  `diesel::sql_query` and `diesel::sql_function!` should be treated as *exceptional* cases, used *only* after a documented justification process demonstrating that the query builder cannot achieve the required functionality *and* that the risk is understood and mitigated.\n    3.  **Mandatory Manual Parameterization (Raw SQL):**  If raw SQL is unavoidable, *never* concatenate user-supplied data.  Use the database driver's parameterization mechanism (typically `?` placeholders).  This is *not* optional when using raw SQL with Diesel.  Example:\n        ```rust\n        // BAD (Vulnerable)\n        // let user_id = get_user_input();\n        // diesel::sql_query(format!("SELECT * FROM users WHERE id = {}", user_id))...\n\n        // GOOD (Safe)\n        let user_id = get_user_input(); // Validate this input!\n        diesel::sql_query("SELECT * FROM users WHERE id = ?").bind::<diesel::sql_types::Integer, _>(user_id)...\n        ```\n    4.  **Code Review Gatekeeper:**  Code reviews *must* include a specific check for any use of raw SQL.  The reviewer must verify:\n        *   Justification: Is raw SQL truly necessary?\n        *   Parameterization: Is parameterization correctly implemented?\n        *   Input Validation: Is any user input used in the query properly validated *before* being passed to Diesel?\n    5.  **Static Analysis Integration:**  Configure static analysis tools (Clippy, etc.) to flag any potentially unsafe raw SQL usage within the Diesel context. This provides an automated layer of defense.\n\n*   **Threats Mitigated:**\n    *   **SQL Injection (Critical):**  Diesel's primary vulnerability if misused.  Allows attackers to execute arbitrary SQL.\n    *   **Unintended Query Logic (High):**  Incorrect raw SQL can lead to data exposure or modification, even without malicious intent.\n\n*   **Impact:**\n    *   **SQL Injection:** Risk reduced from *critical* to *low* (with proper parameterization and strict control of raw SQL).\n    *   **Unintended Query Logic:** Risk reduced from *high* to *moderate* (code reviews and testing are still crucial).\n\n*   **Currently Implemented:**\n    *   Document all current uses of the query builder within Diesel-related code.\n    *   List all instances of `diesel::sql_query` and `diesel::sql_function!` and their justifications.\n    *   Confirm that static analysis is configured to detect raw SQL misuse *specifically within Diesel contexts*.\n\n*   **Missing Implementation:**\n    *   Identify any areas where the query builder *could* replace existing raw SQL.\n    *   List any missing code review checks or static analysis configurations related to Diesel's raw SQL features."
+    },
+    {
+      "title": "Rigorous Query Builder Usage and Testing (Diesel-Specific)",
+      "text": "*   **Description:**\n    1.  **Explicit `SELECT` Columns (Always):**  Never use `SELECT *` with Diesel.  Always explicitly list the columns needed in your Diesel queries.  Leverage Diesel's `#[derive(Queryable)]` and struct definitions to enforce this. This prevents accidental data leakage if the database schema changes.\n    2.  **Validated `filter` and `order_by` Inputs:**  Before passing *any* user-provided data to Diesel's `filter` or `order_by` methods, perform rigorous validation and sanitization.  This is *in addition to* Diesel's parameterization.  Validation steps include:\n        *   **Type Checking:**  Ensure the input matches the expected Diesel data type.\n        *   **Range/Value Whitelisting:**  Restrict input to a predefined set of allowed values, especially for sorting criteria.\n        *   **Sanitization:** Even with parameterization, sanitize string inputs to mitigate potential database-specific quirks.\n    3.  **Pagination Validation (`limit` and `offset`):**  If using Diesel's `limit` and `offset` for pagination, strictly validate these values as positive integers and enforce a reasonable maximum `limit` to prevent DoS attacks.\n    4.  **Diesel-Specific Unit Tests:**  Write unit tests that *specifically* target your Diesel queries.  These tests should:\n        *   **Verify Correct SQL Generation (Indirectly):**  While you don't need to inspect the raw SQL directly in every test, the tests should confirm that the *results* are correct, indirectly verifying the generated SQL.\n        *   **Test Edge Cases with Diesel:**  Focus on edge cases and boundary conditions *within the context of how Diesel handles them*.\n        *   **Test for Expected Failures:**  Include tests that deliberately provide invalid input to Diesel queries and verify that the expected errors (e.g., `NotFound`) are returned *and handled correctly*.\n    5. **Integration Tests with a Test Database:** Use a dedicated test database (not production!) for integration tests that exercise your Diesel queries against a real database instance. This helps catch issues that might not be apparent in unit tests.\n\n*   **Threats Mitigated:**\n    *   **Unintended Data Exposure (High):**  Explicit `SELECT` prevents accidental exposure of sensitive columns.\n    *   **Denial of Service (DoS) (Moderate):**  Validating `limit`, `offset`, and `order_by` prevents resource exhaustion.\n    *   **Query Logic Errors (Moderate):**  Thorough testing catches errors in how the Diesel query builder is used, *specific to Diesel's behavior*.\n\n*   **Impact:**\n    *   **Unintended Data Exposure:** Risk reduced from *high* to *low*.\n    *   **Denial of Service:** Risk reduced from *moderate* to *low*.\n    *   **Query Logic Errors:** Risk reduced from *moderate* to *low*.\n\n*   **Currently Implemented:**\n    *   Document all instances where explicit `SELECT` columns are used with Diesel.\n    *   Describe existing input validation for Diesel's `filter`, `order_by`, `limit`, and `offset`.\n    *   List all existing unit and integration tests that specifically target Diesel queries.\n\n*   **Missing Implementation:**\n    *   Identify any Diesel queries using `SELECT *`.\n    *   List any missing input validation for Diesel query parameters.\n    *   Identify any missing unit or integration tests for specific Diesel queries."
+    },
+    {
+      "title": "Secure Schema Management with Diesel Migrations",
+      "text": "*   **Description:**\n    1.  **Exclusive Use of Diesel Migrations:**  *All* database schema changes *must* be managed through Diesel's migration system (`diesel migration run`, `diesel migration revert`).  Manual schema modifications are strictly prohibited.\n    2.  **Version Control for Migrations:**  All Diesel migration files *must* be stored in version control (e.g., Git).  This provides a history of schema changes and allows for rollbacks.\n    3.  **Mandatory Migration Review:**  Before applying *any* Diesel migration to *any* environment (development, staging, production), a thorough code review of the generated SQL in the migration files is *required*.  This review must check for:\n        *   Correctness: Does the migration achieve the intended schema change?\n        *   Security: Does the migration introduce any security risks (e.g., overly permissive permissions, dropping columns without backups)?\n        *   Data Integrity: Does the migration preserve existing data correctly?\n    4.  **Comprehensive Migration Testing:**  Before applying migrations to production, they *must* be tested in a development or staging environment.  Testing includes:\n        *   **Forward and Reverse Migrations:**  Test both applying and reverting the migrations.\n        *   **Data Integrity Checks:**  Verify that existing data is not corrupted or lost.\n        *   **Idempotency:** Ensure that running the migration multiple times has the same effect as running it once.\n    5.  **Automated Migration Application (CI/CD):**  Integrate Diesel migration application into your CI/CD pipeline to ensure consistent and automated schema updates.\n    6. **Diesel Schema Consistency Checks:** Implement checks within your application (ideally at startup) to verify that the database schema matches the schema expected by your Diesel code. This can be done by comparing the `schema.rs` file with the actual database schema. This helps detect any out-of-band schema changes.\n\n*   **Threats Mitigated:**\n    *   **Schema Mismatches (Moderate):**  Ensures the database schema is always synchronized with the Diesel code, preventing errors and data corruption.\n    *   **Unintentional Schema Changes (Moderate):**  Reviewing and testing migrations prevents accidental or malicious schema modifications *introduced through Diesel*.\n    *   **Data Loss (High):**  Testing migrations and using version control helps prevent data loss due to incorrect schema changes *managed by Diesel*.\n\n*   **Impact:**\n    *   **Schema Mismatches:** Risk reduced from *moderate* to *low*.\n    *   **Unintentional Schema Changes:** Risk reduced from *moderate* to *low*.\n    *   **Data Loss:** Risk reduced from *high* to *low*.\n\n*   **Currently Implemented:**\n    *   Confirm that *only* Diesel's migration system is used for schema changes.\n    *   Verify that all Diesel migration files are in version control.\n    *   Describe the migration review and testing process, specifically for Diesel migrations.\n    *   Confirm if Diesel migration application is automated in CI/CD.\n    *   Document if Diesel schema consistency checks are implemented.\n\n*   **Missing Implementation:**\n    *   Identify any manual schema modifications (strictly prohibited).\n    *   List any missing migration review or testing procedures *specific to Diesel*.\n    *   Note if Diesel migration application is not automated.\n    *   Identify if Diesel schema consistency checks are missing."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-16 10:58:56,771 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Enforce Prepared Statements and Avoid Raw SQL (Diesel-Specific)",
+      "text": "*   **Description:**\n    1.  **Prioritize Diesel's Query Builder:**  Mandatory use of Diesel's query builder functions (e.g., `filter`, `select`, `insert_into`, `update`, `delete`) for *all* database interactions where feasible.  These functions are designed to generate parameterized queries, Diesel's primary defense against SQL injection.\n    2.  **Strictly Controlled Raw SQL:**  `diesel::sql_query` and `diesel::sql_function!` should be treated as *exceptional* cases, used *only* after a documented justification process demonstrating that the query builder cannot achieve the required functionality *and* that the risk is understood and mitigated.\n    3.  **Mandatory Manual Parameterization (Raw SQL):**  If raw SQL is unavoidable, *never* concatenate user-supplied data.  Use the database driver's parameterization mechanism (typically `?` placeholders).  This is *not* optional when using raw SQL with Diesel.  Example:\n        ```rust\n        // BAD (Vulnerable)\n        // let user_id = get_user_input();\n        // diesel::sql_query(format!("SELECT * FROM users WHERE id = {}", user_id))...\n\n        // GOOD (Safe)\n        let user_id = get_user_input(); // Validate this input!\n        diesel::sql_query("SELECT * FROM users WHERE id = ?").bind::<diesel::sql_types::Integer, _>(user_id)...\n        ```\n    4.  **Code Review Gatekeeper:**  Code reviews *must* include a specific check for any use of raw SQL.  The reviewer must verify:\n        *   Justification: Is raw SQL truly necessary?\n        *   Parameterization: Is parameterization correctly implemented?\n        *   Input Validation: Is any user input used in the query properly validated *before* being passed to Diesel?\n    5.  **Static Analysis Integration:**  Configure static analysis tools (Clippy, etc.) to flag any potentially unsafe raw SQL usage within the Diesel context. This provides an automated layer of defense.\n\n*   **Threats Mitigated:**\n    *   **SQL Injection (Critical):**  Diesel's primary vulnerability if misused.  Allows attackers to execute arbitrary SQL.\n    *   **Unintended Query Logic (High):**  Incorrect raw SQL can lead to data exposure or modification, even without malicious intent.\n\n*   **Impact:**\n    *   **SQL Injection:** Risk reduced from *critical* to *low* (with proper parameterization and strict control of raw SQL).\n    *   **Unintended Query Logic:** Risk reduced from *high* to *moderate* (code reviews and testing are still crucial).\n\n*   **Currently Implemented:**\n    *   Document all current uses of the query builder within Diesel-related code.\n    *   List all instances of `diesel::sql_query` and `diesel::sql_function!` and their justifications.\n    *   Confirm that static analysis is configured to detect raw SQL misuse *specifically within Diesel contexts*.\n\n*   **Missing Implementation:**\n    *   Identify any areas where the query builder *could* replace existing raw SQL.\n    *   List any missing code review checks or static analysis configurations related to Diesel's raw SQL features."
+    },
+    {
+      "title": "Rigorous Query Builder Usage and Testing (Diesel-Specific)",
+      "text": "*   **Description:**\n    1.  **Explicit `SELECT` Columns (Always):**  Never use `SELECT *` with Diesel.  Always explicitly list the columns needed in your Diesel queries.  Leverage Diesel's `#[derive(Queryable)]` and struct definitions to enforce this. This prevents accidental data leakage if the database schema changes.\n    2.  **Validated `filter` and `order_by` Inputs:**  Before passing *any* user-provided data to Diesel's `filter` or `order_by` methods, perform rigorous validation and sanitization.  This is *in addition to* Diesel's parameterization.  Validation steps include:\n        *   **Type Checking:**  Ensure the input matches the expected Diesel data type.\n        *   **Range/Value Whitelisting:**  Restrict input to a predefined set of allowed values, especially for sorting criteria.\n        *   **Sanitization:** Even with parameterization, sanitize string inputs to mitigate potential database-specific quirks.\n    3.  **Pagination Validation (`limit` and `offset`):**  If using Diesel's `limit` and `offset` for pagination, strictly validate these values as positive integers and enforce a reasonable maximum `limit` to prevent DoS attacks.\n    4.  **Diesel-Specific Unit Tests:**  Write unit tests that *specifically* target your Diesel queries.  These tests should:\n        *   **Verify Correct SQL Generation (Indirectly):**  While you don't need to inspect the raw SQL directly in every test, the tests should confirm that the *results* are correct, indirectly verifying the generated SQL.\n        *   **Test Edge Cases with Diesel:**  Focus on edge cases and boundary conditions *within the context of how Diesel handles them*.\n        *   **Test for Expected Failures:**  Include tests that deliberately provide invalid input to Diesel queries and verify that the expected errors (e.g., `NotFound`) are returned *and handled correctly*.\n    5. **Integration Tests with a Test Database:** Use a dedicated test database (not production!) for integration tests that exercise your Diesel queries against a real database instance. This helps catch issues that might not be apparent in unit tests.\n\n*   **Threats Mitigated:**\n    *   **Unintended Data Exposure (High):**  Explicit `SELECT` prevents accidental exposure of sensitive columns.\n    *   **Denial of Service (DoS) (Moderate):**  Validating `limit`, `offset`, and `order_by` prevents resource exhaustion.\n    *   **Query Logic Errors (Moderate):**  Thorough testing catches errors in how the Diesel query builder is used, *specific to Diesel's behavior*.\n\n*   **Impact:**\n    *   **Unintended Data Exposure:** Risk reduced from *high* to *low*.\n    *   **Denial of Service:** Risk reduced from *moderate* to *low*.\n    *   **Query Logic Errors:** Risk reduced from *moderate* to *low*.\n\n*   **Currently Implemented:**\n    *   Document all instances where explicit `SELECT` columns are used with Diesel.\n    *   Describe existing input validation for Diesel's `filter`, `order_by`, `limit`, and `offset`.\n    *   List all existing unit and integration tests that specifically target Diesel queries.\n\n*   **Missing Implementation:**\n    *   Identify any Diesel queries using `SELECT *`.\n    *   List any missing input validation for Diesel query parameters.\n    *   Identify any missing unit or integration tests for specific Diesel queries."
+    },
+    {
+      "title": "Secure Schema Management with Diesel Migrations",
+      "text": "*   **Description:**\n    1.  **Exclusive Use of Diesel Migrations:**  *All* database schema changes *must* be managed through Diesel's migration system (`diesel migration run`, `diesel migration revert`).  Manual schema modifications are strictly prohibited.\n    2.  **Version Control for Migrations:**  All Diesel migration files *must* be stored in version control (e.g., Git).  This provides a history of schema changes and allows for rollbacks.\n    3.  **Mandatory Migration Review:**  Before applying *any* Diesel migration to *any* environment (development, staging, production), a thorough code review of the generated SQL in the migration files is *required*.  This review must check for:\n        *   Correctness: Does the migration achieve the intended schema change?\n        *   Security: Does the migration introduce any security risks (e.g., overly permissive permissions, dropping columns without backups)?\n        *   Data Integrity: Does the migration preserve existing data correctly?\n    4.  **Comprehensive Migration Testing:**  Before applying migrations to production, they *must* be tested in a development or staging environment.  Testing includes:\n        *   **Forward and Reverse Migrations:**  Test both applying and reverting the migrations.\n        *   **Data Integrity Checks:**  Verify that existing data is not corrupted or lost.\n        *   **Idempotency:** Ensure that running the migration multiple times has the same effect as running it once.\n    5.  **Automated Migration Application (CI/CD):**  Integrate Diesel migration application into your CI/CD pipeline to ensure consistent and automated schema updates.\n    6. **Diesel Schema Consistency Checks:** Implement checks within your application (ideally at startup) to verify that the database schema matches the schema expected by your Diesel code. This can be done by comparing the `schema.rs` file with the actual database schema. This helps detect any out-of-band schema changes.\n\n*   **Threats Mitigated:**\n    *   **Schema Mismatches (Moderate):**  Ensures the database schema is always synchronized with the Diesel code, preventing errors and data corruption.\n    *   **Unintentional Schema Changes (Moderate):**  Reviewing and testing migrations prevents accidental or malicious schema modifications *introduced through Diesel*.\n    *   **Data Loss (High):**  Testing migrations and using version control helps prevent data loss due to incorrect schema changes *managed by Diesel*.\n\n*   **Impact:**\n    *   **Schema Mismatches:** Risk reduced from *moderate* to *low*.\n    *   **Unintentional Schema Changes:** Risk reduced from *moderate* to *low*.\n    *   **Data Loss:** Risk reduced from *high* to *low*.\n\n*   **Currently Implemented:**\n    *   Confirm that *only* Diesel's migration system is used for schema changes.\n    *   Verify that all Diesel migration files are in version control.\n    *   Describe the migration review and testing process, specifically for Diesel migrations.\n    *   Confirm if Diesel migration application is automated in CI/CD.\n    *   Document if Diesel schema consistency checks are implemented.\n\n*   **Missing Implementation:**\n    *   Identify any manual schema modifications (strictly prohibited).\n    *   List any missing migration review or testing procedures *specific to Diesel*.\n    *   Note if Diesel migration application is not automated.\n    *   Identify if Diesel schema consistency checks are missing."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739703539.029679       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-16 10:59:13,274 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-16 10:59:13,336 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-16 10:59:35,244 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-16 11:00:19,789 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-16 11:02:45,437 - ai_security_analyzer.graphs - INFO - Actual token usage: 30842
+2025-02-16 11:02:45,446 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739703767.707628       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.

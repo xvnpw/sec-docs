@@ -1,0 +1,18 @@
+{
+  "repo_url": "https://github.com/diesel-rs/diesel",
+  "analyzer_args": "--deep-analysis",
+  "start_datetime": "2025-02-16T10:41:29Z",
+  "end_datetime": "2025-02-16T11:02:47Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-pro-exp",
+  "agent_temperature": "0",
+  "agent_prompt_types": [
+    "sec-design",
+    "threat-modeling",
+    "attack-surface",
+    "attack-tree",
+    "mitigations"
+  ],
+  "actual_token_usage": "135107",
+  "mode": "github"
+}
