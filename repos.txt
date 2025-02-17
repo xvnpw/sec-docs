@@ -1,2 +1,0 @@
-typescript https://github.com/xtermjs/xterm.js
-yaml https://github.com/airflow-helm/charts
