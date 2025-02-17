@@ -1,0 +1,216 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+1f3e46996e29: Pulling fs layer
+dfb81f221332: Pulling fs layer
+69d04f35a207: Pulling fs layer
+5c3947958a83: Pulling fs layer
+b9be2ce5276b: Pulling fs layer
+8b438fc1cd11: Pulling fs layer
+28d645c00242: Pulling fs layer
+921df71b230f: Pulling fs layer
+c457853b6d82: Pulling fs layer
+37e00e2d9431: Pulling fs layer
+d3f883494790: Pulling fs layer
+5c3947958a83: Waiting
+b9be2ce5276b: Waiting
+8b438fc1cd11: Waiting
+28d645c00242: Waiting
+921df71b230f: Waiting
+c457853b6d82: Waiting
+37e00e2d9431: Waiting
+dfb81f221332: Verifying Checksum
+dfb81f221332: Download complete
+1f3e46996e29: Download complete
+5c3947958a83: Download complete
+69d04f35a207: Verifying Checksum
+69d04f35a207: Download complete
+28d645c00242: Verifying Checksum
+28d645c00242: Download complete
+1f3e46996e29: Pull complete
+8b438fc1cd11: Verifying Checksum
+8b438fc1cd11: Download complete
+921df71b230f: Verifying Checksum
+921df71b230f: Download complete
+37e00e2d9431: Download complete
+d3f883494790: Download complete
+c457853b6d82: Verifying Checksum
+c457853b6d82: Download complete
+dfb81f221332: Pull complete
+69d04f35a207: Pull complete
+5c3947958a83: Pull complete
+b9be2ce5276b: Pull complete
+8b438fc1cd11: Pull complete
+28d645c00242: Pull complete
+921df71b230f: Pull complete
+c457853b6d82: Pull complete
+37e00e2d9431: Pull complete
+d3f883494790: Pull complete
+Digest: sha256:de5354acec6e1b13185500d521e5a9e27b7ac4e65c267bb3a5c82deb7c8475f5
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-17 12:50:25,812 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-17 12:50:25,874 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 1
+2025-02-17 12:51:52,569 - ai_security_analyzer.graphs - INFO - Actual token usage: 12825
+2025-02-17 12:51:52,573 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739796714.917843       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-17 12:51:59,225 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-17 12:51:59,284 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-17 12:52:30,943 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-17 12:53:08,855 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-17 12:53:41,441 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Unintentional Reactive Data Exposure",
+      "text": "*   **Threat:** Unintentional Reactive Data Exposure\n\n    *   **Description:** An attacker inspects client-side code or uses browser developer tools to view sensitive data unintentionally included in a reactive object due to developer error, often related to misunderstanding the Composition API or complex data flows. The attacker observes data the developer didn't intend to expose.\n    *   **Impact:** Leakage of sensitive information (API keys, internal IDs, PII), leading to unauthorized access, data breaches, or privacy violations.\n    *   **Affected Component:**  `reactive()` and `ref()` (Composition API), computed properties, and any component template referencing a reactive object with sensitive data.\n    *   **Risk Severity:** High (if sensitive data is exposed).\n    *   **Mitigation Strategies:**\n        *   **Data Separation:** Strictly separate sensitive data from reactive data. Use non-reactive variables for sensitive information.\n        *   **Computed Properties:** Use computed properties to expose *only* necessary, non-sensitive parts of reactive data.\n        *   **Vue Devtools Inspection:** Regularly use Vue Devtools to inspect component data.\n        *   **Code Reviews:** Thorough code reviews, focusing on data flow and reactivity.\n        *   **TypeScript:** Utilize TypeScript for strong typing and preventing accidental property exposure.\n        *   **Linting Rules:** Implement ESLint rules to flag potentially sensitive data in templates."
+    },
+    {
+      "title": "Prototype Pollution via Reactive Objects",
+      "text": "*   **Threat:** Prototype Pollution via Reactive Objects\n\n    *   **Description:** An attacker crafts malicious input that, when processed and used to modify a deeply nested reactive object, injects properties onto the object's prototype. This can alter application behavior, potentially leading to denial of service or, in rare cases, arbitrary code execution (though XSS is more likely).  Leverages Vue 3's Proxy-based reactivity.\n    *   **Impact:** Application instability, denial of service, potential data corruption, and in extreme (less likely) cases, remote code execution. More commonly, it leads to exploitable unexpected behavior.\n    *   **Affected Component:** `reactive()` (Composition API), especially with deeply nested objects and user input.\n    *   **Risk Severity:** High (due to potential for disruption and data manipulation).\n    *   **Mitigation Strategies:**\n        *   **Input Sanitization:** *Never* directly assign user input to reactive objects. Sanitize and validate all user input *before* incorporating it.\n        *   **Deep Cloning:** Use a secure deep cloning library (carefully vetted) to copy user input *before* merging with reactive data.\n        *   **Input Validation:** Strict input validation to restrict the structure and content of user-provided data.\n        *   **Avoid `Object.assign` and Spread:** Avoid using these directly with unsanitized user input on reactive objects.\n        *   **Vue Updates:** Keep Vue 3 updated for security patches."
+    },
+    {
+      "title": "Component Hijacking via Dynamic Components",
+      "text": "*   **Threat:** Component Hijacking via Dynamic Components\n\n    *   **Description:** An attacker provides input controlling which component is rendered by a dynamic component (`<component :is="...">`). Without proper validation, the attacker forces the application to render a malicious component.\n    *   **Impact:** Execution of arbitrary JavaScript code (XSS), leading to data theft, session hijacking, or defacement.\n    *   **Affected Component:** The `<component :is="...">` dynamic component syntax.\n    *   **Risk Severity:** Critical (due to potential for arbitrary code execution).\n    *   **Mitigation Strategies:**\n        *   **Whitelist:** *Never* directly use user input to determine the rendered component. Use a strict whitelist of allowed components.\n        *   **Input Validation:** If user input *must* influence selection, use a very restrictive validation scheme (e.g., an enum).\n        *   **Avoid Dynamic Components (if possible):** Use `v-if` / `v-else-if` instead for better security if the component set is small and known."
+    },
+    {
+      "title": "XSS via `v-html` (Amplified in Vue)",
+      "text": "*   **Threat:** XSS via `v-html` (Amplified in Vue)\n\n    *   **Description:** An attacker injects malicious HTML with JavaScript through a field rendered using `v-html`. While `v-html` is a general XSS risk, its interaction with Vue's reactivity can make exploitation more potent, allowing the injected script to interact with component data.\n    *   **Impact:** Execution of arbitrary JavaScript code (XSS), leading to data theft, session hijacking, defacement, or other client-side attacks.\n    *   **Affected Component:** The `v-html` directive.\n    *   **Risk Severity:** Critical (due to potential for arbitrary code execution).\n    *   **Mitigation Strategies:**\n        *   **Avoid `v-html`:** *Avoid `v-html` whenever possible*. This is the most crucial mitigation.\n        *   **HTML Sanitization:** If `v-html` is *absolutely necessary*, use a robust HTML sanitization library like DOMPurify *before* rendering. *Never* trust user-provided HTML.\n        *   **`v-text`:** Use `v-text` or template interpolation (`{{ }}`) for user-provided text; these are inherently safe.\n        *   **Content Security Policy (CSP):** Implement a strong CSP to mitigate XSS impact."
+    },
+    {
+      "title": "Improper use of `ref` and `$refs` leading to DOM XSS",
+      "text": "* **Threat:** Improper use of `ref` and `$refs` leading to DOM XSS\n\n    *   **Description:** An attacker provides input that is then used by the application to directly manipulate the DOM via a `ref`. If this manipulation doesn't properly sanitize the input, it can lead to a DOM-based XSS vulnerability, bypassing Vue's virtual DOM.\n    *   **Impact:** Execution of arbitrary JavaScript code (XSS) in the user's browser, leading to data theft, session hijacking, or other attacks.\n    *   **Affected Component:**  `ref` attribute and the `$refs` object within a component.\n    *   **Risk Severity:** High (due to the potential for XSS).\n    *   **Mitigation Strategies:**\n        *   **Minimize Direct DOM Manipulation:** Prefer Vue's data binding and directives over direct DOM manipulation.\n        *   **Input Sanitization:** If direct manipulation with user input is unavoidable, *thoroughly* sanitize the input using a library like DOMPurify *before* applying it.\n        *   **Avoid `innerHTML` and `outerHTML`:** Prefer safer methods like `textContent` or creating elements individually."
+    },
+    {
+      "title": "SSR-Specific XSS",
+      "text": "* **Threat:** SSR-Specific XSS\n\n    * **Description:** An attacker injects malicious code executed during server-side rendering (SSR). Similar to traditional XSS, but the attack vector is through the SSR process. Occurs if user input generates HTML on the server without proper escaping/sanitization.\n    * **Impact:** Execution of arbitrary JavaScript code (XSS) in the user's browser, potentially leading to data theft, session hijacking, or other attacks. The attacker might also influence the application's initial state.\n    * **Affected Component:** Server-side rendering logic, including templates/functions generating HTML from user input.\n    * **Risk Severity:** Critical (due to potential for arbitrary code execution).\n    * **Mitigation Strategies:**\n        * **Server-Side Sanitization:** Use a robust HTML sanitization library (e.g., DOMPurify, configured for server-side use) on the server to escape/remove malicious code from user input *before* inclusion in rendered HTML.\n        * **Templating Engine Security:** Use a templating engine that automatically escapes output by default.\n        * **Input Validation:** Strict input validation on the server to prevent malicious input from reaching the rendering process.\n        * **Content Security Policy (CSP):** Use CSP to mitigate XSS impact."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-17 12:53:41,443 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "threats": [
+    {
+      "title": "Unintentional Reactive Data Exposure",
+      "text": "*   **Threat:** Unintentional Reactive Data Exposure\n\n    *   **Description:** An attacker inspects client-side code or uses browser developer tools to view sensitive data unintentionally included in a reactive object due to developer error, often related to misunderstanding the Composition API or complex data flows. The attacker observes data the developer didn't intend to expose.\n    *   **Impact:** Leakage of sensitive information (API keys, internal IDs, PII), leading to unauthorized access, data breaches, or privacy violations.\n    *   **Affected Component:**  `reactive()` and `ref()` (Composition API), computed properties, and any component template referencing a reactive object with sensitive data.\n    *   **Risk Severity:** High (if sensitive data is exposed).\n    *   **Mitigation Strategies:**\n        *   **Data Separation:** Strictly separate sensitive data from reactive data. Use non-reactive variables for sensitive information.\n        *   **Computed Properties:** Use computed properties to expose *only* necessary, non-sensitive parts of reactive data.\n        *   **Vue Devtools Inspection:** Regularly use Vue Devtools to inspect component data.\n        *   **Code Reviews:** Thorough code reviews, focusing on data flow and reactivity.\n        *   **TypeScript:** Utilize TypeScript for strong typing and preventing accidental property exposure.\n        *   **Linting Rules:** Implement ESLint rules to flag potentially sensitive data in templates."
+    },
+    {
+      "title": "Prototype Pollution via Reactive Objects",
+      "text": "*   **Threat:** Prototype Pollution via Reactive Objects\n\n    *   **Description:** An attacker crafts malicious input that, when processed and used to modify a deeply nested reactive object, injects properties onto the object's prototype. This can alter application behavior, potentially leading to denial of service or, in rare cases, arbitrary code execution (though XSS is more likely).  Leverages Vue 3's Proxy-based reactivity.\n    *   **Impact:** Application instability, denial of service, potential data corruption, and in extreme (less likely) cases, remote code execution. More commonly, it leads to exploitable unexpected behavior.\n    *   **Affected Component:** `reactive()` (Composition API), especially with deeply nested objects and user input.\n    *   **Risk Severity:** High (due to potential for disruption and data manipulation).\n    *   **Mitigation Strategies:**\n        *   **Input Sanitization:** *Never* directly assign user input to reactive objects. Sanitize and validate all user input *before* incorporating it.\n        *   **Deep Cloning:** Use a secure deep cloning library (carefully vetted) to copy user input *before* merging with reactive data.\n        *   **Input Validation:** Strict input validation to restrict the structure and content of user-provided data.\n        *   **Avoid `Object.assign` and Spread:** Avoid using these directly with unsanitized user input on reactive objects.\n        *   **Vue Updates:** Keep Vue 3 updated for security patches."
+    },
+    {
+      "title": "Component Hijacking via Dynamic Components",
+      "text": "*   **Threat:** Component Hijacking via Dynamic Components\n\n    *   **Description:** An attacker provides input controlling which component is rendered by a dynamic component (`<component :is="...">`). Without proper validation, the attacker forces the application to render a malicious component.\n    *   **Impact:** Execution of arbitrary JavaScript code (XSS), leading to data theft, session hijacking, or defacement.\n    *   **Affected Component:** The `<component :is="...">` dynamic component syntax.\n    *   **Risk Severity:** Critical (due to potential for arbitrary code execution).\n    *   **Mitigation Strategies:**\n        *   **Whitelist:** *Never* directly use user input to determine the rendered component. Use a strict whitelist of allowed components.\n        *   **Input Validation:** If user input *must* influence selection, use a very restrictive validation scheme (e.g., an enum).\n        *   **Avoid Dynamic Components (if possible):** Use `v-if` / `v-else-if` instead for better security if the component set is small and known."
+    },
+    {
+      "title": "XSS via `v-html` (Amplified in Vue)",
+      "text": "*   **Threat:** XSS via `v-html` (Amplified in Vue)\n\n    *   **Description:** An attacker injects malicious HTML with JavaScript through a field rendered using `v-html`. While `v-html` is a general XSS risk, its interaction with Vue's reactivity can make exploitation more potent, allowing the injected script to interact with component data.\n    *   **Impact:** Execution of arbitrary JavaScript code (XSS), leading to data theft, session hijacking, defacement, or other client-side attacks.\n    *   **Affected Component:** The `v-html` directive.\n    *   **Risk Severity:** Critical (due to potential for arbitrary code execution).\n    *   **Mitigation Strategies:**\n        *   **Avoid `v-html`:** *Avoid `v-html` whenever possible*. This is the most crucial mitigation.\n        *   **HTML Sanitization:** If `v-html` is *absolutely necessary*, use a robust HTML sanitization library like DOMPurify *before* rendering. *Never* trust user-provided HTML.\n        *   **`v-text`:** Use `v-text` or template interpolation (`{{ }}`) for user-provided text; these are inherently safe.\n        *   **Content Security Policy (CSP):** Implement a strong CSP to mitigate XSS impact."
+    },
+    {
+      "title": "Improper use of `ref` and `$refs` leading to DOM XSS",
+      "text": "* **Threat:** Improper use of `ref` and `$refs` leading to DOM XSS\n\n    *   **Description:** An attacker provides input that is then used by the application to directly manipulate the DOM via a `ref`. If this manipulation doesn't properly sanitize the input, it can lead to a DOM-based XSS vulnerability, bypassing Vue's virtual DOM.\n    *   **Impact:** Execution of arbitrary JavaScript code (XSS) in the user's browser, leading to data theft, session hijacking, or other attacks.\n    *   **Affected Component:**  `ref` attribute and the `$refs` object within a component.\n    *   **Risk Severity:** High (due to the potential for XSS).\n    *   **Mitigation Strategies:**\n        *   **Minimize Direct DOM Manipulation:** Prefer Vue's data binding and directives over direct DOM manipulation.\n        *   **Input Sanitization:** If direct manipulation with user input is unavoidable, *thoroughly* sanitize the input using a library like DOMPurify *before* applying it.\n        *   **Avoid `innerHTML` and `outerHTML`:** Prefer safer methods like `textContent` or creating elements individually."
+    },
+    {
+      "title": "SSR-Specific XSS",
+      "text": "* **Threat:** SSR-Specific XSS\n\n    * **Description:** An attacker injects malicious code executed during server-side rendering (SSR). Similar to traditional XSS, but the attack vector is through the SSR process. Occurs if user input generates HTML on the server without proper escaping/sanitization.\n    * **Impact:** Execution of arbitrary JavaScript code (XSS) in the user's browser, potentially leading to data theft, session hijacking, or other attacks. The attacker might also influence the application's initial state.\n    * **Affected Component:** Server-side rendering logic, including templates/functions generating HTML from user input.\n    * **Risk Severity:** Critical (due to potential for arbitrary code execution).\n    * **Mitigation Strategies:**\n        * **Server-Side Sanitization:** Use a robust HTML sanitization library (e.g., DOMPurify, configured for server-side use) on the server to escape/remove malicious code from user input *before* inclusion in rendered HTML.\n        * **Templating Engine Security:** Use a templating engine that automatically escapes output by default.\n        * **Input Validation:** Strict input validation on the server to prevent malicious input from reaching the rendering process.\n        * **Content Security Policy (CSP):** Use CSP to mitigate XSS impact."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739796823.782355       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-17 12:53:58,157 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-17 12:53:58,221 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-17 12:54:20,951 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-17 12:54:58,387 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-17 12:59:29,411 - ai_security_analyzer.graphs - INFO - Actual token usage: 39377
+2025-02-17 12:59:29,424 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739797171.755703       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-17 12:59:36,083 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-17 12:59:36,142 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-17 13:00:07,008 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-17 13:00:33,444 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-17 13:04:05,974 - ai_security_analyzer.graphs - INFO - Actual token usage: 34614
+2025-02-17 13:04:05,983 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739797448.314157       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-17 13:04:12,665 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-17 13:04:12,725 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 4
+2025-02-17 13:04:45,547 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 4
+2025-02-17 13:05:07,133 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 4
+2025-02-17 13:05:22,021 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 4 of 4
+2025-02-17 13:08:44,703 - ai_security_analyzer.graphs - INFO - Actual token usage: 39009
+2025-02-17 13:08:44,713 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739797727.126513       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-17 13:08:51,720 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-17 13:08:51,783 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-17 13:09:12,372 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-17 13:09:46,744 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-17 13:10:25,564 - ai_security_analyzer.graphs - ERROR - Graph execution failed: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Strict Component Encapsulation",
+      "text": "*   **Description:**\n    1.  **Identify all components:** List all `.vue` files in the project.\n    2.  **Apply `<style scoped>`:** In each component's `.vue` file, ensure the `<style>` tag includes the `scoped` attribute: `<style scoped> /* CSS rules here */ </style>`. This uses Vue's built-in scoped CSS feature to prevent style leaks.\n    3.  **Avoid Deep Selectors (with exceptions):** Avoid using deep selectors (`>>>`, `/deep/`, or `::v-deep`) which break Vue's style encapsulation. If absolutely necessary, document the reason and review carefully. Consider using props or events instead.\n    4.  **Regular Code Reviews:** Check for proper use of `scoped` and the absence of unnecessary deep selectors during code reviews.\n\n*   **Threats Mitigated:**\n    *   **CSS Leaks (Medium Severity):** Prevents CSS from one Vue component affecting others.\n    *   **Component Interaction Conflicts (Medium Severity):** Reduces style interference between Vue components.\n    *   **Indirect Information Disclosure (Low Severity):** Limits the (small) chance that CSS class names could reveal internal Vue component structure.\n\n*   **Impact:**\n    *   **CSS Leaks:** Risk significantly reduced (80-90%) due to Vue's `scoped` styles.\n    *   **Component Interaction Conflicts:** Risk significantly reduced (70-80%).\n    *   **Indirect Information Disclosure:** Risk slightly reduced (20-30%).\n\n*   **Currently Implemented:** Partially. `scoped` styles are used in most components in `/components/common`, but not in `/components/legacy`.\n\n*   **Missing Implementation:** Refactor components in `/components/legacy` to use `scoped` styles. `/components/dashboard/UserList.vue` also needs this."
+    },
+    {
+      "title": "Careful Prop and Event Management (Vue-Specific Aspects)",
+      "text": "*   **Description:**\n    1.  **Define Prop Types:** Use Vue's prop validation system to explicitly define the types of all props in each component. Use specific types and custom validators where possible.\n    2.  **Minimize Prop Data:** Pass only the *necessary* data as props, avoiding large, complex objects when only a subset is needed. This leverages Vue's reactivity system efficiently and reduces the attack surface.\n    3.  **Define Emitted Events:** Use Vue's `emits` option to clearly define the events a component emits.\n    4.  **Validate Event Payloads:** (Less common, but consider) Validate data passed with emitted events, especially if it originates from user input.\n    5.  **Code Reviews:** Verify proper prop definitions, validation, and minimal data transfer during code reviews.\n\n*   **Threats Mitigated:**\n    *   **Data Leaks Between Components (Medium Severity):** Enforces data contracts between Vue components.\n    *   **Unintended Component Behavior (Medium Severity):** Prevents unexpected behavior due to incorrect prop types.\n    *   **Type Confusion Attacks (Low Severity):** Vue's prop validation helps prevent these.\n\n*   **Impact:**\n    *   **Data Leaks:** Risk moderately reduced (50-60%) through Vue's prop system.\n    *   **Unintended Behavior:** Risk significantly reduced (70-80%).\n    *   **Type Confusion:** Risk moderately reduced (40-50%).\n\n*   **Currently Implemented:** Basic prop types are defined, but custom validators are rare. `emits` is inconsistent.\n\n*   **Missing Implementation:** Add custom validators, especially for user input or external data. Consistently implement `emits`. `/components/forms` needs better prop validation."
+    },
+    {
+      "title": "Avoid `v-html` with Untrusted Data (Vue-Specific Directive)",
+      "text": "*   **Description:**\n    1.  **Identify `v-html` instances:** Search the codebase for `v-html`.\n    2.  **Evaluate data source:** Determine the origin of the data bound to `v-html`.\n    3.  **Replace with safer alternatives:** If the data is untrusted, replace `v-html` with Vue's `v-text` or standard data binding (`{{ }}`), which automatically escape HTML.\n    4.  **Sanitize if absolutely necessary:** If `v-html` *must* be used with potentially untrusted data, sanitize it *before* binding using a library like DOMPurify. Create a helper function for this.\n    5.  **Code Reviews:** Rigorously check for `v-html` usage and ensure it's only used with sanitized or trusted data.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) (High Severity):** Prevents injecting malicious JavaScript via user-provided HTML. This is directly related to Vue's `v-html` directive.\n\n*   **Impact:**\n    *   **XSS:** Risk drastically reduced (95-99%) when `v-html` is avoided or used with sanitized data.\n\n*   **Currently Implemented:** `v-html` is used in `/components/blog/BlogPost.vue` without sanitization.\n\n*   **Missing Implementation:** Update `BlogPost.vue` to use `v-text` or DOMPurify to sanitize content before using `v-html`. Create a sanitization helper."
+    },
+    {
+      "title": "Secure Dynamic Component Usage (Vue-Specific Feature)",
+      "text": "*   **Description:**\n    1.  **Identify Dynamic Components:** Locate all instances where `<component :is="...">` is used.\n    2.  **Verify `is` Source:** For each instance, determine the source of the value provided to the `:is` attribute.\n    3.  **Whitelist Allowed Components:** If the component name comes from user input or any external, untrusted source, implement a whitelist.  This whitelist should be a hardcoded list of *allowed* component names.  Do *not* directly use user input to determine the component to render.\n        ```javascript\n        // Example whitelist\n        const allowedComponents = {\n          'user-profile': UserProfileComponent,\n          'product-details': ProductDetailsComponent,\n          // ... other allowed components\n        };\n\n        // In the component using dynamic components:\n        export default {\n          props: {\n            componentName: String // Assume this comes from user input\n          },\n          computed: {\n            componentToRender() {\n              return allowedComponents[this.componentName] || DefaultComponent; // Use a default if not in the whitelist\n            }\n          }\n        }\n        ```\n    4.  **Code Reviews:** During code reviews, ensure that dynamic components are used securely and that whitelists are implemented correctly.\n\n*   **Threats Mitigated:**\n    *   **Arbitrary Component Injection (High Severity):** Prevents attackers from injecting and rendering arbitrary Vue components, which could lead to XSS, data leaks, or other malicious behavior. This is a threat *specific* to Vue's dynamic component feature.\n\n*   **Impact:**\n    *   **Arbitrary Component Injection:** Risk significantly reduced (90-95%) with a properly implemented whitelist.\n\n*   **Currently Implemented:** Dynamic components are used in `/components/dashboard/WidgetRenderer.vue`. The component name is currently derived from a database field, which *could* be manipulated by an attacker.\n\n*   **Missing Implementation:** Implement a whitelist of allowed widget components in `WidgetRenderer.vue`. The component selection logic should be updated to use this whitelist instead of directly using the value from the database."
+    },
+    {
+      "title": "Disable Vue Devtools in Production",
+      "text": "*   **Description:**\n    1.  **Environment Variable Check:** Use `process.env.NODE_ENV`.\n    2.  **Conditional Devtools Configuration:** In the Vue app's main configuration, disable Devtools based on the environment variable: `app.config.devtools = false;` if in production.\n    3.  **Build Process Verification:** Ensure the build process sets `NODE_ENV` to `production`.\n    4.  **Testing:** Test the production build to confirm Devtools are inaccessible.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure (Medium Severity):** Prevents attackers from using Vue Devtools to inspect the application's internal state.\n\n*   **Impact:**\n    *   **Information Disclosure:** Risk significantly reduced (90-95%).\n\n*   **Currently Implemented:** Correctly implemented in `main.js`.\n\n*   **Missing Implementation:** None."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-02-17 13:10:25,566 - __main__ - ERROR - Application error: Invalid json output: ```json
+{
+  "mitigation_strategies": [
+    {
+      "title": "Strict Component Encapsulation",
+      "text": "*   **Description:**\n    1.  **Identify all components:** List all `.vue` files in the project.\n    2.  **Apply `<style scoped>`:** In each component's `.vue` file, ensure the `<style>` tag includes the `scoped` attribute: `<style scoped> /* CSS rules here */ </style>`. This uses Vue's built-in scoped CSS feature to prevent style leaks.\n    3.  **Avoid Deep Selectors (with exceptions):** Avoid using deep selectors (`>>>`, `/deep/`, or `::v-deep`) which break Vue's style encapsulation. If absolutely necessary, document the reason and review carefully. Consider using props or events instead.\n    4.  **Regular Code Reviews:** Check for proper use of `scoped` and the absence of unnecessary deep selectors during code reviews.\n\n*   **Threats Mitigated:**\n    *   **CSS Leaks (Medium Severity):** Prevents CSS from one Vue component affecting others.\n    *   **Component Interaction Conflicts (Medium Severity):** Reduces style interference between Vue components.\n    *   **Indirect Information Disclosure (Low Severity):** Limits the (small) chance that CSS class names could reveal internal Vue component structure.\n\n*   **Impact:**\n    *   **CSS Leaks:** Risk significantly reduced (80-90%) due to Vue's `scoped` styles.\n    *   **Component Interaction Conflicts:** Risk significantly reduced (70-80%).\n    *   **Indirect Information Disclosure:** Risk slightly reduced (20-30%).\n\n*   **Currently Implemented:** Partially. `scoped` styles are used in most components in `/components/common`, but not in `/components/legacy`.\n\n*   **Missing Implementation:** Refactor components in `/components/legacy` to use `scoped` styles. `/components/dashboard/UserList.vue` also needs this."
+    },
+    {
+      "title": "Careful Prop and Event Management (Vue-Specific Aspects)",
+      "text": "*   **Description:**\n    1.  **Define Prop Types:** Use Vue's prop validation system to explicitly define the types of all props in each component. Use specific types and custom validators where possible.\n    2.  **Minimize Prop Data:** Pass only the *necessary* data as props, avoiding large, complex objects when only a subset is needed. This leverages Vue's reactivity system efficiently and reduces the attack surface.\n    3.  **Define Emitted Events:** Use Vue's `emits` option to clearly define the events a component emits.\n    4.  **Validate Event Payloads:** (Less common, but consider) Validate data passed with emitted events, especially if it originates from user input.\n    5.  **Code Reviews:** Verify proper prop definitions, validation, and minimal data transfer during code reviews.\n\n*   **Threats Mitigated:**\n    *   **Data Leaks Between Components (Medium Severity):** Enforces data contracts between Vue components.\n    *   **Unintended Component Behavior (Medium Severity):** Prevents unexpected behavior due to incorrect prop types.\n    *   **Type Confusion Attacks (Low Severity):** Vue's prop validation helps prevent these.\n\n*   **Impact:**\n    *   **Data Leaks:** Risk moderately reduced (50-60%) through Vue's prop system.\n    *   **Unintended Behavior:** Risk significantly reduced (70-80%).\n    *   **Type Confusion:** Risk moderately reduced (40-50%).\n\n*   **Currently Implemented:** Basic prop types are defined, but custom validators are rare. `emits` is inconsistent.\n\n*   **Missing Implementation:** Add custom validators, especially for user input or external data. Consistently implement `emits`. `/components/forms` needs better prop validation."
+    },
+    {
+      "title": "Avoid `v-html` with Untrusted Data (Vue-Specific Directive)",
+      "text": "*   **Description:**\n    1.  **Identify `v-html` instances:** Search the codebase for `v-html`.\n    2.  **Evaluate data source:** Determine the origin of the data bound to `v-html`.\n    3.  **Replace with safer alternatives:** If the data is untrusted, replace `v-html` with Vue's `v-text` or standard data binding (`{{ }}`), which automatically escape HTML.\n    4.  **Sanitize if absolutely necessary:** If `v-html` *must* be used with potentially untrusted data, sanitize it *before* binding using a library like DOMPurify. Create a helper function for this.\n    5.  **Code Reviews:** Rigorously check for `v-html` usage and ensure it's only used with sanitized or trusted data.\n\n*   **Threats Mitigated:**\n    *   **Cross-Site Scripting (XSS) (High Severity):** Prevents injecting malicious JavaScript via user-provided HTML. This is directly related to Vue's `v-html` directive.\n\n*   **Impact:**\n    *   **XSS:** Risk drastically reduced (95-99%) when `v-html` is avoided or used with sanitized data.\n\n*   **Currently Implemented:** `v-html` is used in `/components/blog/BlogPost.vue` without sanitization.\n\n*   **Missing Implementation:** Update `BlogPost.vue` to use `v-text` or DOMPurify to sanitize content before using `v-html`. Create a sanitization helper."
+    },
+    {
+      "title": "Secure Dynamic Component Usage (Vue-Specific Feature)",
+      "text": "*   **Description:**\n    1.  **Identify Dynamic Components:** Locate all instances where `<component :is="...">` is used.\n    2.  **Verify `is` Source:** For each instance, determine the source of the value provided to the `:is` attribute.\n    3.  **Whitelist Allowed Components:** If the component name comes from user input or any external, untrusted source, implement a whitelist.  This whitelist should be a hardcoded list of *allowed* component names.  Do *not* directly use user input to determine the component to render.\n        ```javascript\n        // Example whitelist\n        const allowedComponents = {\n          'user-profile': UserProfileComponent,\n          'product-details': ProductDetailsComponent,\n          // ... other allowed components\n        };\n\n        // In the component using dynamic components:\n        export default {\n          props: {\n            componentName: String // Assume this comes from user input\n          },\n          computed: {\n            componentToRender() {\n              return allowedComponents[this.componentName] || DefaultComponent; // Use a default if not in the whitelist\n            }\n          }\n        }\n        ```\n    4.  **Code Reviews:** During code reviews, ensure that dynamic components are used securely and that whitelists are implemented correctly.\n\n*   **Threats Mitigated:**\n    *   **Arbitrary Component Injection (High Severity):** Prevents attackers from injecting and rendering arbitrary Vue components, which could lead to XSS, data leaks, or other malicious behavior. This is a threat *specific* to Vue's dynamic component feature.\n\n*   **Impact:**\n    *   **Arbitrary Component Injection:** Risk significantly reduced (90-95%) with a properly implemented whitelist.\n\n*   **Currently Implemented:** Dynamic components are used in `/components/dashboard/WidgetRenderer.vue`. The component name is currently derived from a database field, which *could* be manipulated by an attacker.\n\n*   **Missing Implementation:** Implement a whitelist of allowed widget components in `WidgetRenderer.vue`. The component selection logic should be updated to use this whitelist instead of directly using the value from the database."
+    },
+    {
+      "title": "Disable Vue Devtools in Production",
+      "text": "*   **Description:**\n    1.  **Environment Variable Check:** Use `process.env.NODE_ENV`.\n    2.  **Conditional Devtools Configuration:** In the Vue app's main configuration, disable Devtools based on the environment variable: `app.config.devtools = false;` if in production.\n    3.  **Build Process Verification:** Ensure the build process sets `NODE_ENV` to `production`.\n    4.  **Testing:** Test the production build to confirm Devtools are inaccessible.\n\n*   **Threats Mitigated:**\n    *   **Information Disclosure (Medium Severity):** Prevents attackers from using Vue Devtools to inspect the application's internal state.\n\n*   **Impact:**\n    *   **Information Disclosure:** Risk significantly reduced (90-95%).\n\n*   **Currently Implemented:** Correctly implemented in `main.js`.\n\n*   **Missing Implementation:** None."
+    }
+  ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE . You can try to run with --resume to resume from last checkpoint.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739797827.988621       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
+2025-02-17 13:10:42,457 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-17 13:10:42,523 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 1 of 3
+2025-02-17 13:11:07,352 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 2 of 3
+2025-02-17 13:11:40,014 - ai_security_analyzer.github2_deep_base_agents - INFO - Running internal step 3 of 3
+2025-02-17 13:14:45,316 - ai_security_analyzer.graphs - INFO - Actual token usage: 27822
+2025-02-17 13:14:45,324 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739798087.641238       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
