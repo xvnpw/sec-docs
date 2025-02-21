@@ -1,4 +1,3 @@
-python deschler/django-modeltranslation
 python dfunckt/django-rules
 python django/asgiref
 python django/channels
