@@ -1,4 +1,3 @@
-python dfunckt/django-rules
 python django/asgiref
 python django/channels
 python django/daphne
