@@ -155,6 +155,8 @@ jobs:
               # Capture the exit code of the docker run command
               exit_code=$?
 
+              cat ./output/ai-security-analyzer.log
+
               # Re-enable 'set -e' to make the script exit on errors outside this block
               set -e
 
