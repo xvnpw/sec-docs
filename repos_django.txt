@@ -1,4 +1,3 @@
-python django/daphne
 python django-cms/django-filer
 python django-commons/django-debug-toolbar
 python django-compressor/django-compressor
