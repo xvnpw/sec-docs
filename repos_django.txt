@@ -1,4 +1,3 @@
-python bennylope/django-organizations
 python brack3t/django-braces
 python carltongibson/django-filter
 python celery/django-celery-beat
