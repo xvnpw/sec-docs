@@ -1,4 +1,4 @@
-name: Run ai-security-analyzer on config changes
+name: Run ai-security-analyzer in dir mode on config changes
 
 on:
   push:
