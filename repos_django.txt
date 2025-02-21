@@ -1,4 +1,3 @@
-python django-cms/django-filer
 python django-commons/django-debug-toolbar
 python django-compressor/django-compressor
 python django-crispy-forms/django-crispy-forms
