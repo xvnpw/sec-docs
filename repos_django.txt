@@ -1,4 +1,3 @@
-python adamchainz/django-cors-headers
 python agconti/cookiecutter-django-rest
 python AndrewIngram/django-extra-views
 python bennylope/django-organizations
