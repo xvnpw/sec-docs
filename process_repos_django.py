@@ -31,7 +31,7 @@ def process_first_repo(n=1):
                 "agent_provider": "google",
                 "agent_model": "gemini-2.0-flash-thinking-exp",
                 "agent_temperature": 0.7,
-                "agent_prompt_types": ["vulnerabilities"],
+                "agent_prompt_types": ["vulnerabilities-workflow-1"],
             }
 
             # Write config.json
