@@ -1,4 +1,3 @@
-python carltongibson/django-filter
 python celery/django-celery-beat
 python cookiecutter/cookiecutter-django
 python deschler/django-modeltranslation
