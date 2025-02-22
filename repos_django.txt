@@ -1,4 +1,3 @@
-python django-money/django-money
 python django-mptt/django-mptt
 python django-notifications/django-notifications
 python django-recaptcha/django-recaptcha
