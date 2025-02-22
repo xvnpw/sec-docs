@@ -1,4 +1,3 @@
-python django-ses/django-ses
 python django-tastypie/django-tastypie
 python django-tenants/django-tenants
 python django-treebeard/django-treebeard
