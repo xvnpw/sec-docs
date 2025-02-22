@@ -1,4 +1,3 @@
-python Ehco1996/django-sspanel
 python etianen/django-reversion
 python etianen/django-watson
 python fabiocaccamo/django-admin-interface
