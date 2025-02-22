@@ -1,4 +1,3 @@
-python korfuri/django-prometheus
 python liangliangyy/DjangoBlog
 python llazzaro/django-scheduler
 python lqez/django-summernote
