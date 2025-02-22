@@ -1,4 +1,3 @@
-python django-guardian/django-guardian
 python django-helpdesk/django-helpdesk
 python django-hijack/django-hijack
 python django-import-export/django-import-export
