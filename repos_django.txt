@@ -1,4 +1,3 @@
-python mbi/django-rosetta
 python mbi/django-simple-captcha
 python MicroPyramid/Django-CRM
 python noripyt/django-cachalot
