@@ -1,4 +1,3 @@
-python Fantomas42/django-blog-zinnia
 python graphql-python/graphene-django
 python ivelum/djangoql
 python jazzband/django-auditlog
