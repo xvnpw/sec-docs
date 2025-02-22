@@ -1,4 +1,3 @@
-python jazzband/django-polymorphic
 python jazzband/django-push-notifications
 python jazzband/django-redis
 python jazzband/djangorestframework-simplejwt
