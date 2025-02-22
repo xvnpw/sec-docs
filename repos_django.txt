@@ -1,4 +1,3 @@
-python django-import-export/django-import-export
 python django-json-api/django-rest-framework-json-api
 python django-money/django-money
 python django-mptt/django-mptt
