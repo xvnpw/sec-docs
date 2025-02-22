@@ -1,4 +1,3 @@
-python Koed00/django-q
 python korfuri/django-prometheus
 python liangliangyy/DjangoBlog
 python llazzaro/django-scheduler
