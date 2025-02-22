@@ -1,4 +1,3 @@
-python graphql-python/graphene-django
 python ivelum/djangoql
 python jazzband/django-auditlog
 python jazzband/django-axes
