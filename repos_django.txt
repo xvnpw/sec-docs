@@ -1,4 +1,3 @@
-python stefanfoulis/django-phonenumber-field
 python Suor/django-cacheops
 python timonweb/django-tailwind
 python Tivix/django-rest-auth
