@@ -1,4 +1,3 @@
-python django-treebeard/django-treebeard
 python django-webpack/django-webpack-loader
 python django-wiki/django-wiki
 python dmpayton/django-admin-honeypot
