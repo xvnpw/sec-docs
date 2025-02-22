@@ -1,4 +1,3 @@
-python joke2k/django-environ
 python jschneier/django-storages
 python jsocol/django-ratelimit
 python justquick/django-activity-stream
