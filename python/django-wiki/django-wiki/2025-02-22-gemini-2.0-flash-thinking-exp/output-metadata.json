@@ -1,0 +1,14 @@
+{
+  "repo_url": "django-wiki/django-wiki",
+  "analyzer_args": "--secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+  "start_datetime": "2025-02-22T02:51:47Z",
+  "end_datetime": "2025-02-22T02:59:09Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "550182",
+  "mode": "dir"
+}
