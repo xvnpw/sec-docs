@@ -1,4 +1,3 @@
-python jazzband/django-widget-tweaks
 python jieter/django-tables2
 python joke2k/django-environ
 python jschneier/django-storages
