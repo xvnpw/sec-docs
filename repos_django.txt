@@ -1,4 +1,3 @@
-python jazzband/django-taggit
 python jazzband/django-two-factor-auth
 python jazzband/django-waffle
 python jazzband/django-widget-tweaks
