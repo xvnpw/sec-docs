@@ -1,4 +1,3 @@
-python MicroPyramid/Django-CRM
 python noripyt/django-cachalot
 python openwisp/django-rest-framework-gis
 python pinax/django-user-accounts
