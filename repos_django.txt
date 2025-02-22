@@ -1,4 +1,3 @@
-python Tivix/django-rest-auth
 python ui/django-post_office
 python un1t/django-cleanup
 python un33k/django-ipware
