@@ -1,4 +1,3 @@
-python wemake-services/django-split-settings
 python wq/django-rest-pandas
 python yourlabs/django-autocomplete-light
 python zostera/django-bootstrap3
