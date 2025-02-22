@@ -1,4 +1,3 @@
-python Suor/django-cacheops
 python timonweb/django-tailwind
 python Tivix/django-rest-auth
 python ui/django-post_office
