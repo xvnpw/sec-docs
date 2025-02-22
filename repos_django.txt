@@ -1,4 +1,3 @@
-python noripyt/django-cachalot
 python openwisp/django-rest-framework-gis
 python pinax/django-user-accounts
 python python-social-auth/social-app-django
