@@ -1,4 +1,3 @@
-python django-webpack/django-webpack-loader
 python django-wiki/django-wiki
 python dmpayton/django-admin-honeypot
 python Ehco1996/django-sspanel
