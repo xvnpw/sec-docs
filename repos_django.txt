@@ -1,4 +1,3 @@
-python django-tenants/django-tenants
 python django-treebeard/django-treebeard
 python django-webpack/django-webpack-loader
 python django-wiki/django-wiki
