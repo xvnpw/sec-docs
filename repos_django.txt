@@ -1,4 +1,3 @@
-python jazzband/django-defender
 python jazzband/django-model-utils
 python jazzband/django-oauth-toolkit
 python jazzband/django-payments
