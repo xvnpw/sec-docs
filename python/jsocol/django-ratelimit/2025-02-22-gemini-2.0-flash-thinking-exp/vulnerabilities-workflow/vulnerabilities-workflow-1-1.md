@@ -1,0 +1,81 @@
+### Vulnerability List
+
+- Vulnerability Name: Inadequate Rate Limiting in Multi-Process Environments with LocMemCache
+- Description:
+    1. An attacker targets a Django application that uses `django-ratelimit` for rate limiting.
+    2. The application is configured to use `django.core.cache.backends.locmem.LocMemCache` as the cache backend.
+    3. The Django application is deployed in a multi-process environment, such as using WSGI servers like Gunicorn or uWSGI with multiple worker processes, or ASGI servers with multiple processes.
+    4. The attacker sends requests to a rate-limited endpoint.
+    5. Because `LocMemCache` is not shared between processes, each process maintains its own independent rate limit counters.
+    6. If the attacker's requests are distributed across multiple processes (which can happen due to load balancing or request distribution in multi-process environments), the rate limit is applied per process, not globally.
+    7. As a result, the attacker can send more requests in total than the intended global rate limit by effectively resetting the rate limit counter in each process.
+- Impact: Rate limits can be circumvented, allowing attackers to bypass intended restrictions. This can lead to abuse of application resources, such as excessive API calls, brute-force attacks, or other actions that rate limiting is meant to prevent. This undermines the security functionality of the rate limiter.
+- Vulnerability Rank: High
+- Currently Implemented Mitigations:
+    - The project includes a system check (`django_ratelimit.E003`) that flags `django.core.cache.backends.locmem.LocMemCache` as a broken backend because it is not a shared cache.
+    - This system check generates an error during Django's `check` command, warning developers about the unsuitable cache backend.
+    - However, this is only a warning and does not prevent the use of `LocMemCache`. Developers can silence this check, as demonstrated in the provided `test_settings.py` file.
+- Missing Mitigations:
+    - Prevent or strongly discourage the use of `LocMemCache` or other non-shared cache backends in production environments. This could involve:
+        - Enhancing the system check to be a critical error that cannot be easily silenced, especially in production settings.
+        - Adding runtime warnings or exceptions when `LocMemCache` is detected in a multi-process environment.
+    - Improve documentation to clearly highlight the limitations of `LocMemCache` in multi-process environments and strongly recommend shared cache backends like Memcached or Redis for production deployments.
+- Preconditions:
+    - Django application is deployed in a multi-process environment.
+    - `django-ratelimit` is configured to use `django.core.cache.backends.locmem.LocMemCache`.
+- Source Code Analysis:
+    1. `/code/django_ratelimit/checks.py`: The `check_caches` function explicitly identifies `django.core.cache.backends.locmem.LocMemCache` in `KNOWN_BROKEN_CACHE_BACKENDS` with the reason `CACHE_NOT_SHARED`. This results in a `checks.Error` with `id='django_ratelimit.E003'`.
+    2. `/code/test_settings.py`: The `SILENCED_SYSTEM_CHECKS = ['django_ratelimit.E003', 'django_ratelimit.W001']` setting in the test configuration silences this error, indicating awareness of the issue but no active prevention in the library itself beyond the system check.
+    3. `/code/django_ratelimit/core.py`: The `is_ratelimited` and `get_usage` functions rely on Django's cache framework to store and retrieve rate limit counters. When `LocMemCache` is configured, each process operates on its own isolated in-memory cache.
+    4. In multi-process environments, requests can be routed to different processes. Each process will independently manage rate limits based on its local `LocMemCache`. This process-local rate limiting fails to provide a global rate limit across the entire application instance.
+- Security Test Case:
+    1. Setup:
+        - Deploy a Django application using `django-ratelimit`.
+        - Configure `settings.py` to use `LocMemCache`:
+          ```python
+          RATELIMIT_USE_CACHE = 'default'
+          CACHES = {
+              'default': {
+                  'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+                  'LOCATION': 'ratelimit-tests',
+              }
+          }
+          ```
+        - Configure a view to be rate-limited, for example:
+          ```python
+          from django_ratelimit.decorators import ratelimit
+          from django.http import HttpResponse
+
+          @ratelimit(key='ip', rate='2/m')
+          def my_view(request):
+              return HttpResponse("View Accessed")
+          ```
+        - Deploy the Django application with a multi-process server like Gunicorn (e.g., `gunicorn -w 2 your_project.wsgi`).
+    2. Attack Simulation:
+        - From an attacker's machine, use a tool like `curl` or a script to send HTTP requests to the rate-limited view.
+        - Send 3 or more requests within a minute from the same IP address. Try to distribute requests in time to potentially hit different processes if possible but even rapid requests can be distributed by OS scheduler.
+        - Observe the HTTP responses.
+    3. Expected Result (Vulnerable Case - LocMemCache):
+        - All requests (including the 3rd and subsequent requests within the minute) will likely return a successful "View Accessed" response (HTTP 200). This indicates that the rate limit of 2 requests per minute is not being enforced globally across processes and is being bypassed.
+    4. Mitigation Test:
+        - Modify `settings.py` to use a shared cache backend like Redis:
+          ```python
+          RATELIMIT_USE_CACHE = 'default'
+          CACHES = {
+              'default': {
+                  'BACKEND': 'django_redis.cache.RedisCache',
+                  'LOCATION': 'redis://127.0.0.1:6379/1', # Replace with your Redis connection details
+                  'OPTIONS': {
+                      'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+                  }
+              }
+          }
+          ```
+          (Ensure `django-redis` is installed and Redis server is running).
+        - Redeploy the Django application.
+        - Repeat step 2 (send 3 or more requests within a minute).
+    5. Expected Result (Mitigated Case - Redis):
+        - The first two requests will return a successful "View Accessed" response (HTTP 200).
+        - The third and subsequent requests within the minute should be blocked by the rate limiter, and will likely return a `Ratelimited` exception (e.g., HTTP 403 if default exception handling is in place, or a custom response if middleware is configured). This confirms that the rate limit is now being enforced globally.
+
+This test case demonstrates that `LocMemCache` is insufficient for rate limiting in multi-process environments, and using a shared cache like Redis correctly enforces the rate limit.
