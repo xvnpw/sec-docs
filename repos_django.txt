@@ -1,4 +1,3 @@
-python wq/django-rest-pandas
 python yourlabs/django-autocomplete-light
 python zostera/django-bootstrap3
 python zostera/django-bootstrap4
