@@ -1,4 +1,3 @@
-python jazzband/django-axes
 python jazzband/django-configurations
 python jazzband/django-constance
 python jazzband/django-dbbackup
