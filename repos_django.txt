@@ -1,4 +1,3 @@
-python jazzband/django-rest-knox
 python jazzband/django-silk
 python jazzband/django-simple-history
 python jazzband/django-smart-selects
