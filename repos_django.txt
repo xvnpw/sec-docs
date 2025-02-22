@@ -1,4 +1,3 @@
-python django-mptt/django-mptt
 python django-notifications/django-notifications
 python django-recaptcha/django-recaptcha
 python django-ses/django-ses
