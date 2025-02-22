@@ -1,4 +1,3 @@
-python etianen/django-reversion
 python etianen/django-watson
 python fabiocaccamo/django-admin-interface
 python Fantomas42/django-blog-zinnia
