@@ -1,4 +1,3 @@
-python rsinger86/django-lifecycle
 python sebleier/django-redis-cache
 python SmileyChris/django-countries
 python stefanfoulis/django-phonenumber-field
