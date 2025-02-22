@@ -1,4 +1,3 @@
-python ivelum/djangoql
 python jazzband/django-auditlog
 python jazzband/django-axes
 python jazzband/django-configurations
