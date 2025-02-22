@@ -1,2 +1,1 @@
-python vintasoftware/django-react-boilerplate
 python wemake-services/wemake-django-template
