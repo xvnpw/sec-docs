@@ -1,4 +1,3 @@
-python django-helpdesk/django-helpdesk
 python django-hijack/django-hijack
 python django-import-export/django-import-export
 python django-json-api/django-rest-framework-json-api
