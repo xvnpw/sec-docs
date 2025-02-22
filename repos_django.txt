@@ -1,4 +1,3 @@
-python jazzband/django-redis
 python jazzband/djangorestframework-simplejwt
 python jazzband/django-rest-knox
 python jazzband/django-silk
