@@ -1,4 +1,3 @@
-python python-social-auth/social-app-django
 python revsys/django-health-check
 python rq/django-rq
 python rsinger86/django-lifecycle
