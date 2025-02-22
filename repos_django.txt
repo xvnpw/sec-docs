@@ -1,4 +1,3 @@
-python jazzband/django-constance
 python jazzband/django-dbbackup
 python jazzband/django-defender
 python jazzband/django-model-utils
