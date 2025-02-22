@@ -1,4 +1,3 @@
-python unfoldadmin/django-unfold
 python vitalik/django-ninja
 python wemake-services/django-split-settings
 python wq/django-rest-pandas
