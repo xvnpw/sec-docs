@@ -1,0 +1,3 @@
+## Vulnerability List for django-rest-knox
+
+There are no high or critical vulnerabilities found in the provided project files for django-rest-knox that meet the specified criteria. After a thorough analysis of the code and documentation, potential areas of concern were investigated, but no exploitable vulnerabilities with a rank of high or critical were identified that could be triggered by an external attacker and are introduced by the project itself, not by insecure usage.
