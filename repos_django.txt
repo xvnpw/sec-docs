@@ -1,4 +1,3 @@
-python django-crispy-forms/django-crispy-forms
 python django-es/django-elasticsearch-dsl
 python django-extensions/django-extensions
 python django-guardian/django-guardian
