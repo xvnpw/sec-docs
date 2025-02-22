@@ -1,0 +1,14 @@
+{
+  "repo_url": "zostera/django-bootstrap3",
+  "analyzer_args": "--secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+  "start_datetime": "2025-02-22T09:44:19Z",
+  "end_datetime": "2025-02-22T09:47:11Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "139510",
+  "mode": "dir"
+}
