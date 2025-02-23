@@ -116,7 +116,7 @@ def generate_main_readme(languages):
 
 
 def main():
-    exclude_dirs = {".git", ".github", "__pycache__", ".data", ".scripts"}
+    exclude_dirs = {".git", ".github", "__pycache__", ".data", ".scripts", "vulnerabilities-workflow"}
     exclude_files = {"README.md", "LICENSE", "generate_readme.py"}
 
     languages = {}
@@ -161,6 +161,7 @@ def main():
                         "attack-surface.md": "Attack Surface",
                         "attack-tree.md": "Attack Tree",
                         "mitigations.md": "Mitigation Strategies",
+                        "vulnerabilities-workflow-1.md": "Vulnerabilities Workflow",
                     }
 
                     # Project README doc links (relative to project directory)
