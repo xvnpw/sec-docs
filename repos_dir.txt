@@ -1,4 +1,3 @@
-go pmezard/go-difflib
 go prometheus/client_model
 go prometheus/common
 go prometheus/procfs
