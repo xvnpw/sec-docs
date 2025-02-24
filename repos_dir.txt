@@ -1,4 +1,3 @@
-go go-openapi/jsonreference
 go go-openapi/loads
 go go-openapi/spec
 go hashicorp/errwrap
