@@ -1,4 +1,3 @@
-go klauspost/compress
 go magiconair/properties
 go mattn/go-colorable
 go mattn/go-isatty
