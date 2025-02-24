@@ -1,0 +1,1 @@
+- **No New High/Critical Non‑DoS Vulnerabilities Identified**

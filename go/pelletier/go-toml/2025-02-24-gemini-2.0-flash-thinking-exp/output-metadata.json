@@ -1,0 +1,14 @@
+{
+  "repo_url": "pelletier/go-toml",
+  "analyzer_args": "-p go --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+  "start_datetime": "2025-02-24T18:08:28Z",
+  "end_datetime": "2025-02-24T18:17:31Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "718883",
+  "mode": "dir"
+}
