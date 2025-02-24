@@ -1,4 +1,3 @@
-go mitchellh/go-homedir
 go mitchellh/mapstructure
 go modern-go/concurrent
 go modern-go/reflect2
