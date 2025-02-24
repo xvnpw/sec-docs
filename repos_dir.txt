@@ -1,4 +1,3 @@
-go hashicorp/go-retryablehttp
 go hashicorp/go-rootcerts
 go hashicorp/go-sockaddr
 go hashicorp/hcl
