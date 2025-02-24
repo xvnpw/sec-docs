@@ -1,4 +1,3 @@
-go ryanuber/go-glob
 go sagikazarmark/slog-shim
 go spf13/afero
 go spf13/cast
