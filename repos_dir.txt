@@ -1,4 +1,3 @@
-go felixge/httpsnoop
 go form3tech-oss/easyjson
 go fsnotify/fsnotify
 go go-logr/logr
