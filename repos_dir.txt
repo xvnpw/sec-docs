@@ -1,4 +1,3 @@
-go form3tech-oss/easyjson
 go fsnotify/fsnotify
 go go-logr/logr
 go go-logr/stdr
