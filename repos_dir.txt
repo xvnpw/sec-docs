@@ -1,4 +1,3 @@
-go modern-go/concurrent
 go modern-go/reflect2
 go mongodb/mongo-go-driver
 go munnerz/goautoneg
