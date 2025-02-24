@@ -1,4 +1,3 @@
-go asaskevich/govalidator
 go beorn7/perks
 go cespare/xxhash
 go davecgh/go-spew
