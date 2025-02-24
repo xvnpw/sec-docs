@@ -5,7 +5,7 @@ import shutil
 
 def process_first_repo(n=1):
     # Read all lines
-    with open("repos_django.txt", "r") as file:
+    with open("repos_dir.txt", "r") as file:
         lines = file.readlines()
         if not lines:
             return False
@@ -40,7 +40,7 @@ def process_first_repo(n=1):
                 json.dump(config, f, indent=4)
 
         # Remove processed lines and write back remaining lines
-        with open("repos_django.txt", "w") as file:
+        with open("repos_dir.txt", "w") as file:
             file.writelines(lines[repos_to_process:])
 
     return True
