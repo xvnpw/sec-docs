@@ -1,4 +1,3 @@
-go mattn/go-colorable
 go mattn/go-isatty
 go mitchellh/go-homedir
 go mitchellh/mapstructure
