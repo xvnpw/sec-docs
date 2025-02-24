@@ -1,4 +1,3 @@
-go json-iterator/go
 go klauspost/compress
 go magiconair/properties
 go mattn/go-colorable
