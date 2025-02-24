@@ -1,4 +1,3 @@
-go prometheus/common
 go prometheus/procfs
 go ryanuber/go-glob
 go sagikazarmark/slog-shim
