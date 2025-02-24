@@ -1,4 +1,3 @@
-go spf13/afero
 go spf13/cast
 go spf13/pflag
 go subosito/gotenv
