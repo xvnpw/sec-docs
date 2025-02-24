@@ -1,4 +1,3 @@
-go munnerz/goautoneg
 go oklog/ulid
 go open-telemetry/opentelemetry-go
 go pelletier/go-toml
