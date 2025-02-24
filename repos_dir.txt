@@ -1,4 +1,3 @@
-go go-openapi/spec
 go hashicorp/errwrap
 go hashicorp/go-cleanhttp
 go hashicorp/go-hclog
