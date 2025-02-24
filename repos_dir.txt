@@ -1,3 +1,2 @@
-go spf13/pflag
 go subosito/gotenv
 go uber-go/multierr
