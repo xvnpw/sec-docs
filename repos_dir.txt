@@ -1,4 +1,3 @@
-go josharian/intern
 go json-iterator/go
 go klauspost/compress
 go magiconair/properties
