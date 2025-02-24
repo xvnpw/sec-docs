@@ -1,4 +1,3 @@
-go prometheus/client_model
 go prometheus/common
 go prometheus/procfs
 go ryanuber/go-glob
