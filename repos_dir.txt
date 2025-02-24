@@ -1,4 +1,3 @@
-go pelletier/go-toml
 go pmezard/go-difflib
 go prometheus/client_model
 go prometheus/common
