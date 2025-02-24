@@ -1,4 +1,3 @@
-go cespare/xxhash
 go davecgh/go-spew
 go fatih/color
 go felixge/httpsnoop
