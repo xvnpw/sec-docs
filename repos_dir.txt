@@ -1,4 +1,3 @@
-go hashicorp/hcl
 go inconshreveable/mousetrap
 go jmespath/go-jmespath
 go josharian/intern
