@@ -1,4 +1,3 @@
-go go-openapi/runtime
 go jackc/pgx
 go nats-io/nats.go
 go phayes/freeport
