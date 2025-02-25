@@ -1,4 +1,3 @@
-javascript gitkraken/vscode-gitlens
 javascript godotengine/godot-vscode-plugin
 javascript golang/vscode-go
 javascript hediet/vscode-debug-visualizer
