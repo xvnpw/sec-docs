@@ -1,4 +1,3 @@
-javascript jeff-hykin/better-cpp-syntax
 javascript jest-community/vscode-jest
 javascript julia-vscode/julia-vscode
 javascript kbrose/vsc-python-indent
