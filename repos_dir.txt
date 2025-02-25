@@ -1,4 +1,3 @@
-javascript HookyQR/VSCodeBeautify
 javascript Huachao/vscode-restclient
 javascript huggingface/llm-vscode
 javascript infracost/vscode-infracost
