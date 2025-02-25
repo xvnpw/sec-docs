@@ -1,4 +1,3 @@
-javascript redhat-developer/vscode-yaml
 javascript ritwickdey/live-server-web-extension
 javascript ritwickdey/vscode-live-server
 javascript robb0wen/synthwave-vscode
