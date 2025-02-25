@@ -1,4 +1,3 @@
-javascript kbrose/vsc-python-indent
 javascript LeetCode-OpenSource/vscode-leetcode
 javascript marp-team/marp-vscode
 javascript material-extensions/vscode-material-icon-theme
