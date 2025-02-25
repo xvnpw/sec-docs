@@ -1,14 +1,11 @@
 {
-    "repo_url": "https://github.com/gin-gonic/gin",
-    "analyzer_args": "--deep-analysis",
+    "mode": "dir",
+    "repo_url": "gin-gonic/gin",
+    "analyzer_args": "-p go",
     "agent_provider": "google",
-    "agent_model": "gemini-2.0-pro-exp",
-    "agent_temperature": 0,
+    "agent_model": "gemini-2.0-flash-thinking-exp",
+    "agent_temperature": 0.7,
     "agent_prompt_types": [
-        "sec-design",
-        "threat-modeling",
-        "attack-surface",
-        "attack-tree",
-        "mitigations"
+        "vulnerabilities-workflow-1"
     ]
 }
