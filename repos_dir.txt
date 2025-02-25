@@ -1,4 +1,3 @@
-javascript antfu/vscode-file-nesting-config
 javascript antfu/vscode-settings
 javascript aws/aws-toolkit-vscode
 javascript Binaryify/OneDark-Pro
