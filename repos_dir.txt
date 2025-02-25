@@ -1,4 +1,3 @@
-javascript julia-vscode/julia-vscode
 javascript kbrose/vsc-python-indent
 javascript LeetCode-OpenSource/vscode-leetcode
 javascript marp-team/marp-vscode
