@@ -1,4 +1,3 @@
-go avast/retry-go
 go gin-gonic/gin
 go go-openapi/runtime
 go jackc/pgx
