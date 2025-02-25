@@ -1,4 +1,3 @@
-javascript DonJayamanne/pythonVSCode
 javascript DonJayamanne/vscode-python-manager
 javascript dotnet/vscode-csharp
 javascript dracula/visual-studio-code
