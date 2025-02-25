@@ -1,4 +1,3 @@
-javascript material-extensions/vscode-material-icon-theme
 javascript mechatroner/vscode_rainbow_csv
 javascript mhutchie/vscode-git-graph
 javascript mtxr/vscode-sqltools
