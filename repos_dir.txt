@@ -1,4 +1,3 @@
-javascript angular/vscode-ng-language-service
 javascript antfu/vscode-file-nesting-config
 javascript antfu/vscode-settings
 javascript aws/aws-toolkit-vscode
