@@ -1,4 +1,3 @@
-javascript codota/tabnine-vscode
 javascript cschlosser/doxdocgen
 javascript cweijan/vscode-database-client
 javascript Dart-Code/Dart-Code
