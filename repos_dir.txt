@@ -1,4 +1,3 @@
-javascript formulahendry/vscode-code-runner
 javascript gitkraken/vscode-gitlens
 javascript godotengine/godot-vscode-plugin
 javascript golang/vscode-go
