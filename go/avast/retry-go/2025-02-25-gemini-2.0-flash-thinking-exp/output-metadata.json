@@ -1,0 +1,14 @@
+{
+  "repo_url": "avast/retry-go",
+  "analyzer_args": "-p go",
+  "start_datetime": "2025-02-25T07:06:04Z",
+  "end_datetime": "2025-02-25T07:07:27Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "68969",
+  "mode": "dir"
+}
