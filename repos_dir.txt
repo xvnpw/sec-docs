@@ -1,4 +1,3 @@
-javascript denoland/vscode_deno
 javascript DonJayamanne/gitHistoryVSCode
 javascript DonJayamanne/python-extension-pack
 javascript DonJayamanne/pythonVSCode
