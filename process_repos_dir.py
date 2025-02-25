@@ -27,7 +27,7 @@ def process_first_repo(n=1):
             config = {
                 "mode": "dir",
                 "repo_url": repo_url,
-                "analyzer_args": "-p go --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+                "analyzer_args": "-p go",
                 "agent_provider": "google",
                 "agent_model": "gemini-2.0-flash-thinking-exp",
                 "agent_temperature": 0.7,
