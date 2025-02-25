@@ -1,4 +1,3 @@
-javascript dotnet/vscode-csharp
 javascript dracula/visual-studio-code
 javascript ecmel/vscode-html-css
 javascript editorconfig/editorconfig-vscode
