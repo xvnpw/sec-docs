@@ -1,4 +1,3 @@
-javascript primer/github-vscode-theme
 javascript r5n-labs/vscode-react-javascript-snippets
 javascript redhat-developer/vscode-java
 javascript redhat-developer/vscode-yaml
