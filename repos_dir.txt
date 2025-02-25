@@ -1,4 +1,3 @@
-javascript mechatroner/vscode_rainbow_csv
 javascript mhutchie/vscode-git-graph
 javascript mtxr/vscode-sqltools
 javascript naumovs/vscode-ext-color-highlight
