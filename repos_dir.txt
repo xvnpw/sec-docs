@@ -1,2 +1,1 @@
-go phayes/freeport
 go prometheus/client_golang
