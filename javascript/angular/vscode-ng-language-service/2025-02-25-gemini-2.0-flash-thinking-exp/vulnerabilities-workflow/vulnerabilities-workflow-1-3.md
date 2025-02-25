@@ -1,0 +1,1 @@
+* No high-rank vulnerabilities identified based on the analysis of `pnpm-lock.yaml` file.
