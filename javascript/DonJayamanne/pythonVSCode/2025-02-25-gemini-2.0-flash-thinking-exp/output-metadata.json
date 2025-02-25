@@ -1,0 +1,14 @@
+{
+  "repo_url": "DonJayamanne/pythonVSCode",
+  "analyzer_args": "--secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+  "start_datetime": "2025-02-25T20:37:15Z",
+  "end_datetime": "2025-02-25T20:48:42Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "1325982",
+  "mode": "dir"
+}
