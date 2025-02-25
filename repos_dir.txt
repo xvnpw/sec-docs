@@ -1,4 +1,3 @@
-javascript LeetCode-OpenSource/vscode-leetcode
 javascript marp-team/marp-vscode
 javascript material-extensions/vscode-material-icon-theme
 javascript mechatroner/vscode_rainbow_csv
