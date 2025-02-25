@@ -1,4 +1,3 @@
-javascript mtxr/vscode-sqltools
 javascript naumovs/vscode-ext-color-highlight
 javascript NilsJPWerner/autoDocstring
 javascript oderwat/vscode-indent-rainbow
