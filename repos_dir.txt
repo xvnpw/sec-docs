@@ -1,4 +1,3 @@
-javascript godotengine/godot-vscode-plugin
 javascript golang/vscode-go
 javascript hediet/vscode-debug-visualizer
 javascript hediet/vscode-drawio
