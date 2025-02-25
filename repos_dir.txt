@@ -1,4 +1,3 @@
-javascript ecmel/vscode-html-css
 javascript editorconfig/editorconfig-vscode
 javascript estruyf/vscode-front-matter
 javascript formulahendry/vscode-auto-close-tag
