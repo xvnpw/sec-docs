@@ -1,4 +1,3 @@
-javascript NilsJPWerner/autoDocstring
 javascript oderwat/vscode-indent-rainbow
 javascript PowerShell/vscode-powershell
 javascript prettier/prettier-vscode
