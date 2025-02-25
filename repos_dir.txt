@@ -1,4 +1,3 @@
-javascript ChristianKohler/PathIntellisense
 javascript codota/tabnine-vscode
 javascript cschlosser/doxdocgen
 javascript cweijan/vscode-database-client
