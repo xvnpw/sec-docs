@@ -1,4 +1,3 @@
-javascript hediet/vscode-drawio
 javascript HookyQR/VSCodeBeautify
 javascript Huachao/vscode-restclient
 javascript huggingface/llm-vscode
