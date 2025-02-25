@@ -1,4 +1,3 @@
-javascript infracost/vscode-infracost
 javascript jeff-hykin/better-cpp-syntax
 javascript jest-community/vscode-jest
 javascript julia-vscode/julia-vscode
