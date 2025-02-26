@@ -1,4 +1,3 @@
-javascript alefragnani/vscode-bookmarks
 javascript alefragnani/vscode-project-manager
 javascript amir9480/vscode-laravel-extra-intellisense
 javascript angular/vscode-ng-language-service
