@@ -1,4 +1,3 @@
-javascript cweijan/vscode-database-client
 javascript Dart-Code/Dart-Code
 javascript Dart-Code/Flutter
 javascript DavidAnson/vscode-markdownlint
