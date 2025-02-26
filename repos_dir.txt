@@ -1,4 +1,3 @@
-javascript vscode-neovim/vscode-neovim
 javascript vscode-org-mode/vscode-org-mode
 javascript vuejs/vetur
 javascript wakatime/vscode-wakatime
