@@ -1,4 +1,3 @@
-typescript estruyf/vscode-front-matter
 typescript formulahendry/vscode-auto-close-tag
 typescript formulahendry/vscode-auto-rename-tag
 typescript formulahendry/vscode-code-runner
