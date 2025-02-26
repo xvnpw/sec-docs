@@ -1,3 +1,2 @@
-javascript xdebug/vscode-php-debug
 javascript yzhang-gh/vscode-markdown
 javascript Zignd/HTML-CSS-Class-Completion
