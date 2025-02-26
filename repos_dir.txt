@@ -1,4 +1,3 @@
-javascript robb0wen/synthwave-vscode
 javascript sdras/night-owl-vscode-theme
 javascript sdras/vue-vscode-snippets
 javascript shalldie/vscode-background
