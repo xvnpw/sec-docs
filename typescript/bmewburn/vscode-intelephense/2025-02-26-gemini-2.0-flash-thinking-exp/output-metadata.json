@@ -1,0 +1,14 @@
+{
+  "repo_url": "bmewburn/vscode-intelephense",
+  "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+  "start_datetime": "2025-02-26T16:07:31Z",
+  "end_datetime": "2025-02-26T16:11:39Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "114727",
+  "mode": "dir"
+}
