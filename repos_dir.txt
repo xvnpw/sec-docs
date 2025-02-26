@@ -1,0 +1,15 @@
+typescript aaron-bond/better-comments
+typescript alefragnani/vscode-bookmarks
+typescript alefragnani/vscode-project-manager
+typescript amir9480/vscode-laravel-extra-intellisense
+typescript angular/vscode-ng-language-service
+typescript antfu/vscode-file-nesting-config
+typescript antfu/vscode-settings
+typescript Binaryify/OneDark-Pro
+typescript bmewburn/vscode-intelephense
+typescript catppuccin/vscode
+typescript ChristianKohler/NpmIntellisense
+typescript ChristianKohler/PathIntellisense
+typescript codota/tabnine-vscode
+typescript cschlosser/doxdocgen
+typescript cweijan/vscode-database-client
