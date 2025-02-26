@@ -1,4 +1,3 @@
-typescript Binaryify/OneDark-Pro
 typescript bmewburn/vscode-intelephense
 typescript catppuccin/vscode
 typescript ChristianKohler/NpmIntellisense
