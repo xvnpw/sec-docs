@@ -1,4 +1,3 @@
-javascript vscode-django/vscode-django
 javascript vscode-icons/vscode-icons
 javascript vscode-neovim/vscode-neovim
 javascript vscode-org-mode/vscode-org-mode
