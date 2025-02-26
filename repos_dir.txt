@@ -1,4 +1,3 @@
-javascript Binaryify/OneDark-Pro
 javascript bmewburn/vscode-intelephense
 javascript catppuccin/vscode
 javascript ChristianKohler/NpmIntellisense
