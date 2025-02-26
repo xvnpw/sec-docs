@@ -1,4 +1,3 @@
-javascript streetsidesoftware/vscode-spell-checker
 javascript SudoKillMe/vscode-extensions-open-in-browser
 javascript tailwindlabs/tailwindcss-intellisense
 javascript tokyo-night/tokyo-night-vscode-theme
