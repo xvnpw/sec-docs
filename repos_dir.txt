@@ -1,4 +1,3 @@
-javascript vuejs/vetur
 javascript wakatime/vscode-wakatime
 javascript wholroyd/vscode-jinja
 javascript xabikos/vscode-javascript
