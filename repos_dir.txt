@@ -1,4 +1,3 @@
-javascript wholroyd/vscode-jinja
 javascript xabikos/vscode-javascript
 javascript xdebug/vscode-php-debug
 javascript yzhang-gh/vscode-markdown
