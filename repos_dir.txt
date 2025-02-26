@@ -1,4 +1,3 @@
-javascript tonybaloney/vscode-pets
 javascript twxs/vs.language.cmake
 javascript vadimcn/codelldb
 javascript vscode-django/vscode-django
