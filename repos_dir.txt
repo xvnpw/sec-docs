@@ -1,4 +1,3 @@
-typescript antfu/vscode-file-nesting-config
 typescript antfu/vscode-settings
 typescript Binaryify/OneDark-Pro
 typescript bmewburn/vscode-intelephense
