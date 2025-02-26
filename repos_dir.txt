@@ -1,4 +1,3 @@
-javascript sdras/vue-vscode-snippets
 javascript shalldie/vscode-background
 javascript shd101wyy/vscode-markdown-preview-enhanced
 javascript shufo/vscode-blade-formatter
