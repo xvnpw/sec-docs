@@ -23,11 +23,12 @@ def remove_directories_before_date(root_dir, cutoff_date_str):
                 date_str_part = dir_name[:10]  # Assuming date is at the beginning and 10 chars long (YYYY-MM-DD)
                 dir_date = datetime.datetime.strptime(date_str_part, "%Y-%m-%d").date()
 
-                if dir_date < cutoff_date:
+                if dir_date < cutoff_date and dir_date > datetime.date(2025, 2, 22):
                     print(f"Deleting directory: {full_dir_path} with date: {dir_date}")
                     shutil.rmtree(full_dir_path)
                 else:
-                    print(f"Keeping directory: {full_dir_path} with date: {dir_date}")
+                    # print(f"Keeping directory: {full_dir_path} with date: {dir_date}")
+                    pass
 
             except ValueError:
                 # If the directory name does not start with a date, ignore it
@@ -38,7 +39,7 @@ def remove_directories_before_date(root_dir, cutoff_date_str):
 
 if __name__ == "__main__":
     root_directory = "./"
-    cutoff_date = "2025-01-26"
+    cutoff_date = "2025-02-26"
 
     print(f"Starting to process directories under: {root_directory}")
     remove_directories_before_date(root_directory, cutoff_date)
