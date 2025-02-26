@@ -1,4 +1,3 @@
-typescript gitkraken/vscode-gitlens
 typescript godotengine/godot-vscode-plugin
 typescript golang/vscode-go
 typescript hediet/vscode-debug-visualizer
