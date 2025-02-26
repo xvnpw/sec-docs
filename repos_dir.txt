@@ -1,4 +1,3 @@
-typescript catppuccin/vscode
 typescript ChristianKohler/NpmIntellisense
 typescript ChristianKohler/PathIntellisense
 typescript codota/tabnine-vscode
