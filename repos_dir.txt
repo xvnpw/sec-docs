@@ -1,4 +1,3 @@
-typescript DavidAnson/vscode-markdownlint
 typescript denoland/vscode_deno
 typescript DonJayamanne/gitHistoryVSCode
 typescript DonJayamanne/python-extension-pack
