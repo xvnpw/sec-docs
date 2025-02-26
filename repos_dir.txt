@@ -1,4 +1,3 @@
-javascript tokyo-night/tokyo-night-vscode-theme
 javascript tomoki1207/vscode-pdfviewertypescript
 javascript tonybaloney/vscode-pets
 javascript twxs/vs.language.cmake
