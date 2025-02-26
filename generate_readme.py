@@ -116,7 +116,7 @@ def generate_main_readme(languages):
 
 
 def main():
-    exclude_dirs = {".git", ".github", "__pycache__", ".data", ".scripts", "vulnerabilities-workflow"}
+    exclude_dirs = {".git", ".github", "__pycache__", ".data", ".scripts", "vulnerabilities-workflow", ".vscode"}
     exclude_files = {"README.md", "LICENSE", "generate_readme.py"}
 
     languages = {}
