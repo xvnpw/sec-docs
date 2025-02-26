@@ -1,4 +1,3 @@
-javascript shufo/vscode-blade-formatter
 javascript skills/copilot-codespaces-vscode
 javascript streetsidesoftware/vscode-spell-checker
 javascript SudoKillMe/vscode-extensions-open-in-browser
