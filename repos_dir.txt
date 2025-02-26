@@ -1,2 +1,1 @@
-typescript cschlosser/doxdocgen
 typescript cweijan/vscode-database-client
