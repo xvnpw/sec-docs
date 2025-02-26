@@ -1,0 +1,14 @@
+{
+  "repo_url": "cschlosser/doxdocgen",
+  "analyzer_args": "-p javascript --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+  "start_datetime": "2025-02-26T09:33:34Z",
+  "end_datetime": "2025-02-26T09:39:08Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "360428",
+  "mode": "dir"
+}
