@@ -1,0 +1,14 @@
+{
+  "repo_url": "catppuccin/vscode",
+  "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 500000 --files-chunk-size 450000 --recursion-limit 100 --vulnerabilities-iterations 3",
+  "start_datetime": "2025-02-27T23:04:35Z",
+  "end_datetime": "2025-02-27T23:06:03Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "302778",
+  "mode": "dir"
+}
