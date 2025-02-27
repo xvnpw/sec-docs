@@ -1,87 +1,63 @@
-### Vulnerability List:
+### Vulnerability List
 
-#### 1. Vulnerability Name: Improper Path Validation in Custom SVG Icons leading to Local File Read (within `.vscode/extensions`)
+- Vulnerability Name: Directory Traversal in Custom Icon Paths
 
 - Description:
-    1. The Material Icon Theme allows users to specify custom SVG icons for files and folders through configuration settings (`material-icon-theme.files.associations` and `material-icon-theme.folders.associations`).
-    2. According to the documentation, the path to the custom SVG file is specified relative to the extension's `dist` folder.
-    3. The documentation states that the custom icon directory must be within the `extensions` directory of the `.vscode` folder in the user directory.
-    4. If the extension does not properly validate and sanitize the provided paths in the settings, an attacker might be able to use relative path traversal techniques (e.g., `../`, `..\/`) within the `.vscode/extensions` directory to access and load SVG files from locations they should not have access to.
-    5. While the access is restricted within the `.vscode/extensions` directory, an attacker could potentially read sensitive files placed by other extensions within the same directory or exploit vulnerabilities in how VS Code handles SVG rendering if a malicious SVG is loaded.
+  1. An attacker can modify the user settings for the Material Icon Theme to include a malicious custom icon association.
+  2. In the user settings, the attacker provides a file association with an icon path that uses directory traversal sequences (e.g., `../../`) to point outside the intended `extensions` directory within the `.vscode` folder.
+  3. When VS Code attempts to display an icon based on this association, the extension uses the provided path to load the SVG icon.
+  4. Due to insufficient validation, the extension might traverse the directory structure outside the intended scope and attempt to read arbitrary files from the user's file system, depending on VS Code's file access permissions in extensions.
+  5. If VS Code extension process has enough permissions, this could lead to information disclosure if the attacker crafts a path to a sensitive file like `/etc/passwd` (on Linux/macOS) or sensitive configuration files.
 
 - Impact:
-    - Local File Read (within `.vscode/extensions`): An attacker could potentially read files within the `.vscode/extensions` directory by crafting a malicious path in the custom icon settings.
-    - Information Disclosure: Sensitive information from other extensions or VS Code configuration within the `.vscode/extensions` directory could be disclosed if readable files are accessed.
-    - Potential for further exploitation: If a malicious SVG is crafted and loaded, it could potentially lead to further vulnerabilities depending on VS Code's SVG rendering engine and any vulnerabilities present there.
+  Information Disclosure. An attacker could potentially read arbitrary files from the user's system if the VS Code extension process has sufficient file system permissions. This could expose sensitive information like configuration files, credentials, or other user data, depending on the attacker's path and the system's file permissions.
 
 - Vulnerability Rank: High
 
 - Currently Implemented Mitigations:
-    - Based on the documentation, the only mentioned mitigation is a restriction that custom icons must be located within the `.vscode/extensions` directory. There is no mention of input validation or sanitization of the paths provided in the settings. It is unclear from the documentation if there is any active mitigation against path traversal.
+  None. The code only checks if the path starts with `./` or `../` to identify custom paths but doesn't validate if the path stays within the intended `extensions` directory.
 
 - Missing Mitigations:
-    - Input validation and sanitization: The extension should strictly validate and sanitize the paths provided in the settings for custom SVG icons to prevent path traversal attempts. This should include:
-        - Validating that the path is indeed within the allowed `.vscode/extensions` directory.
-        - Preventing usage of path traversal sequences like `../` and `..\/`.
-        - Using secure path handling functions to resolve and normalize paths.
+  - Path validation: Implement robust path validation to ensure that custom icon paths are strictly limited to a specific directory within the extension's context (e.g., within the `extensions` directory of the `.vscode` folder). Use path canonicalization to resolve symbolic links and prevent traversal attempts.
+  - Input sanitization: Sanitize user-provided paths to remove or neutralize directory traversal sequences like `../` and `..\/`.
+  - Sandboxing or isolation: Ensure the extension operates with minimal file system permissions to limit the impact of potential directory traversal vulnerabilities. VS Code extension security policies should be reviewed and applied.
 
 - Preconditions:
-    1. The attacker needs to be able to influence the user's VS Code settings. This can be achieved if the attacker can convince the user to:
-        - Install a malicious VS Code extension that modifies the user settings to include malicious custom icon paths targeting Material Icon Theme settings.
-        - Manually edit user settings (`settings.json`) to include malicious custom icon paths.
+  1. The user must have the Material Icon Theme extension installed in VS Code.
+  2. The attacker needs to be able to influence the user to add a malicious configuration to their VS Code `settings.json` file. This could be achieved through social engineering, phishing, or by compromising a workspace configuration that the user loads.
 
 - Source Code Analysis:
-    - **File: /code/README.md** and **File: /code/CONTRIBUTING.md**:
-        - These files describe the feature of custom SVG icons and mention the directory restriction: "However, the restriction applies that the directory in which the custom icons are located must be within the `extensions` directory of the `.vscode` folder in the user directory." and "This directory has to be somewhere inside of the `.vscode/extensions` folder."
-        - There is no mention of input validation or security considerations in these files.
-        - Example settings provided use relative paths like `"../../icons/sample"` and "../../../../icons/folder-sample", which if not properly validated, could be manipulated for path traversal.
-    - **File: /code/src/core/generator/fileGenerator.ts** and **File: /code/src/core/generator/languageGenerator.ts**:
-        - These files use the function `getCustomIcons` to process custom icon associations from the configuration.
-        - The `getCustomIcons` function (and related `getCustomIconPaths` function, not directly in provided files but used in `iconSaturation.ts` and `iconOpacity.ts`) needs to be further analyzed to understand how it handles and validates the paths provided in user settings.
-        - If `getCustomIconPaths` doesn't implement proper path validation and sanitization, it could be vulnerable to path traversal as described.
-    - **File: /code/src/core/helpers/customIconPaths.ts**:
-        - This file contains the `getCustomIconPaths` function which is responsible for processing custom icon paths from user settings.
-        - The function `getCustomIconPaths` extracts icon paths from `filesAssociations` and filters paths that appear to be relative (starting with `./` or `../`).
-        - It then uses `resolvePath(fileName)` to resolve these paths.
-    - **File: /code/src/core/helpers/resolvePath.ts**:
-        - This file contains the `resolvePath` function, which is used by `getCustomIconPaths` to resolve paths.
-        - The `resolvePath` function uses `join(__dirname, '..', '..', ...paths)` to resolve paths relative to the directory of the `resolvePath.ts` module itself (which is within the extension's source code directory, likely under `src/core/helpers` after compilation).
-        - Crucially, `resolvePath` does **not** resolve paths relative to the extension's `dist` folder or the `.vscode/extensions` directory as might be intended or documented. It resolves paths relative to the extension's source code location.
-        - This incorrect path resolution, combined with the lack of sanitization in `getCustomIconPaths`, allows path traversal within the `.vscode/extensions` directory when a user provides a malicious relative path in the custom icon settings. The comment `// <- custom dirs have a relative path to the dist folder` in `getCustomIconPaths` is misleading and does not reflect the actual path resolution logic.
-    - **File: /code/src/core/generator/iconSaturation.ts** and **File: /code/src/core/generator/iconOpacity.ts**:
-        - These files demonstrate the usage of `getCustomIconPaths` in `setIconSaturation` and `setIconOpacity` functions.
-        - Both `setIconSaturation` and `setIconOpacity` functions retrieve custom icon paths using `getCustomIconPaths(filesAssociations)`.
-        - They then iterate through these paths and use `readdir(iconPath)` to read the contents of the directories specified by the potentially user-controlled paths.
-        - Subsequently, they call `processSVGFileForSaturation` and `processSVGFile` respectively, which read SVG files using `readFile(svgFilePath, 'utf-8')` based on the paths derived from user settings.
-        - This confirms that the extension reads files and directories based on user-provided paths without proper validation, making it vulnerable to path traversal within the `.vscode/extensions` directory.
-    - **File: /code/src/core/tests/icons/cloning.test.ts**, **File: /code/src/core/tests/icons/data/icons.ts**:
-        - These files are related to icon cloning and color manipulation, and do not directly address path handling or validation. They provide context on how icons are processed (SVG parsing and manipulation), but don't reveal any information about custom icon path handling.
-    - **File: /code/src/core/helpers/object.test.ts**, **File: /code/src/core/tests/mocks/vscode.ts**, **File: /code/src/core/tests/mocks/index.ts**, **File: /code/src/core/i18n/translate.ts**, **File: /code/src/core/i18n/translations/...ts**, **File: /code/src/core/models/...ts**, **File: /code/src/core/logging/logger.ts**:
-        - These files cover testing utilities, i18n functionalities, data models, and logging. They are not directly related to the custom icon path handling and validation logic.
+  1. File: `/code/src/core/helpers/customIconPaths.ts`
+  ```typescript
+  import { dirname } from 'node:path';
+  import { resolvePath } from './resolvePath';
+
+  export const getCustomIconPaths = (
+    filesAssociations: Record<string, string> = {}
+  ) => {
+    return Object.values(filesAssociations)
+      .filter((fileName) => fileName.match(/^[.\/]+/)) // <- custom dirs have a relative path to the dist folder
+      .map((fileName) => dirname(resolvePath(fileName)));
+  };
+  ```
+  - The `getCustomIconPaths` function extracts custom icon paths from `filesAssociations`.
+  - It uses a regex `fileName.match(/^[.\/]+/)` to filter paths that start with `./` or `../`, considering them as relative paths.
+  - It then uses `dirname(resolvePath(fileName))` to resolve the path relative to the extension's `dist` folder.
+  - **Vulnerability:** The validation is insufficient. It only checks if the path *starts* with `.` or `/` but does not prevent directory traversal beyond the intended directory. It does not enforce that the resolved path stays within the allowed `.vscode/extensions` directory.
 
 - Security Test Case:
-    1. Install the Material Icon Theme extension in VS Code.
-    2. Open VS Code settings (JSON) and add the following configuration to `settings.json` to associate a file extension with a custom icon path using path traversal:
-
-```json
-"material-icon-theme.files.associations": {
-    "test.txt": "../../test.svg"
-}
-```
-
-    3. Create a folder named `test_extension` inside the `.vscode/extensions` directory in your user home directory (if it doesn't exist already).
-    4. Inside the `test_extension` folder, create another folder named `icons`.
-    5. Inside the `icons` folder, place a file named `test.svg`. This is a dummy SVG icon file.
-    6. In the same `test_extension` folder (alongside `icons`), create a file named `sensitive.txt` with some sensitive content (e.g., "This is a sensitive file.").
-    7. Now, create a file named `test.txt` in any workspace folder opened in VS Code.
-    8. Observe if the icon for `test.txt` is loaded, and if the extension attempts to read the file at the path `../../test.svg` relative to the extension's `dist` folder.
-    9. To verify if local file read is possible, try to modify the path in `settings.json` to point to the `sensitive.txt` file created earlier:
-
-```json
-"material-icon-theme.files.associations": {
-    "test.txt": "../../sensitive.txt"
-}
-```
-
-    10. Create or open `test.txt` again and check if VS Code attempts to load `sensitive.txt` as an icon. While it might not render as a valid icon, observe for any errors or behavior indicating file access.
-    11. If the extension successfully loads the `test.svg` icon using the relative path and attempts to access `sensitive.txt`, it confirms the path traversal vulnerability.
+  1. Open VS Code with the Material Icon Theme extension activated.
+  2. Open the User Settings (JSON) in VS Code (`Ctrl+Shift+P` or `Cmd+Shift+P` and type "Open Settings (JSON)").
+  3. Add the following configuration to your `settings.json` to create a malicious file association (replace `/path/to/icon` with `..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/etc/passwd` for Linux/macOS or similar sensitive file for Windows like `..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/`..`/Windows/win.ini`):
+     ```json
+     "material-icon-theme.files.associations": {
+         "test_file_traversal.txt": "../../../../../../../../../../../../../../etc/passwd"
+     }
+     ```
+  4. Create a new file named `test_file_traversal.txt` in your workspace.
+  5. Observe if VS Code attempts to load an icon. In a vulnerable scenario, the extension might try to read the `/etc/passwd` file (or `win.ini` on Windows) when rendering the icon for `test_file_traversal.txt`.
+  6. **Expected Result (Vulnerable):** If the extension is vulnerable, and if VS Code extension process has sufficient permissions, no error might be immediately visible in VS Code UI, but in an actual attack scenario, the extension would have attempted to read the contents of `/etc/passwd` or `win.ini`. You might observe errors in the extension's logs if logging is enabled, or by monitoring file system access.
+  7. **Expected Result (Mitigated):** If the vulnerability is mitigated, the extension should either:
+     - Refuse to load the custom icon and potentially log an error due to invalid path.
+     - Successfully load a default icon without attempting directory traversal.
+     - Throw an error and prevent the extension from activating or functioning correctly if secure path handling is enforced strictly during extension initialization.
