@@ -1,0 +1,8 @@
+typescript DonJayamanne/pythonVSCode
+typescript gitkraken/vscode-gitlens
+typescript huggingface/llm-vscode
+typescript jeff-hykin/better-cpp-syntax
+typescript julia-vscode/julia-vscode
+typescript tomoki1207/vscode-pdfviewertypescript
+typescript vscode-icons/vscode-icons
+typescript Zignd/HTML-CSS-Class-Completion
