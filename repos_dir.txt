@@ -1,4 +1,3 @@
-typescript vscode-icons/vscode-icons
 typescript vscode-neovim/vscode-neovim
 typescript vscode-org-mode/vscode-org-mode
 typescript vuejs/vetur
