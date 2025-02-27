@@ -1,4 +1,3 @@
-typescript microsoft/vscode-js-debug
 typescript microsoft/vscode-mssql
 typescript microsoft/vscode-languageserver-node
 typescript microsoft/vscode-cmake-tools
