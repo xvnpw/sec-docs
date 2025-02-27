@@ -1385,7 +1385,7 @@ We need community help to determine:
 - [SudoKillMe/vscode-extensions-open-in-browser](typescript/SudoKillMe/vscode-extensions-open-in-browser) ([GitHub](https://github.com/SudoKillMe/vscode-extensions-open-in-browser))
 - [tailwindlabs/tailwindcss-intellisense](typescript/tailwindlabs/tailwindcss-intellisense) ([GitHub](https://github.com/tailwindlabs/tailwindcss-intellisense))
 - [tokyo-night/tokyo-night-vscode-theme](typescript/tokyo-night/tokyo-night-vscode-theme) ([GitHub](https://github.com/tokyo-night/tokyo-night-vscode-theme))
-- [tomoki1207/vscode-pdfviewertypescript](typescript/tomoki1207/vscode-pdfviewertypescript) ([GitHub](https://github.com/tomoki1207/vscode-pdfviewertypescript))
+- [tomoki1207/vscode-pdfviewer](typescript/tomoki1207/vscode-pdfviewer) ([GitHub](https://github.com/tomoki1207/vscode-pdfviewer))
 - [tonybaloney/vscode-pets](typescript/tonybaloney/vscode-pets) ([GitHub](https://github.com/tonybaloney/vscode-pets))
 - [twxs/vs.language.cmake](typescript/twxs/vs.language.cmake) ([GitHub](https://github.com/twxs/vs.language.cmake))
 - [typeorm/typeorm](typescript/typeorm/typeorm) ([GitHub](https://github.com/typeorm/typeorm))
