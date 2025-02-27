@@ -1,6 +1,6 @@
-# Vscode-Icons Analysis
+# Vscode-Mssql Analysis
 
-[GitHub Repository](https://github.com/vscode-icons/vscode-icons)
+[GitHub Repository](https://github.com/microsoft/vscode-mssql)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|
