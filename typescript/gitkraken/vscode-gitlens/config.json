@@ -1,7 +1,7 @@
 {
     "mode": "dir",
     "repo_url": "gitkraken/vscode-gitlens",
-    "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 300000 --files-chunk-size 270000 --recursion-limit 100 --vulnerabilities-iterations 2",
+    "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 80000 --files-chunk-size 50000 --recursion-limit 100 --vulnerabilities-iterations 2",
     "agent_provider": "google",
     "agent_model": "gemini-2.0-flash-thinking-exp",
     "agent_temperature": 0.7,
