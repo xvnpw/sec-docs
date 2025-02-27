@@ -1,3 +1,2 @@
-typescript xdebug/vscode-php-debug
 typescript yzhang-gh/vscode-markdown
 typescript Zignd/HTML-CSS-Class-Completion
