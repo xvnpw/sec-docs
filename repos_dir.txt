@@ -1,4 +1,3 @@
-typescript vscode-org-mode/vscode-org-mode
 typescript vuejs/vetur
 typescript wakatime/vscode-wakatime
 typescript wholroyd/vscode-jinja
