@@ -1,2 +1,1 @@
-typescript microsoft/vscode-remote-try-python
 typescript microsoft/deoptexplorer-vscode
