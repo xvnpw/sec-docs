@@ -1,0 +1,223 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+f18232174bc9: Pulling fs layer
+4bf0423a57b1: Pulling fs layer
+d3746672e3dd: Pulling fs layer
+2aad0d33617a: Pulling fs layer
+ef2e99cf0552: Pulling fs layer
+5fc0af7bf5ee: Pulling fs layer
+8570db82e8af: Pulling fs layer
+9ab023252c3a: Pulling fs layer
+ca366d4fc993: Pulling fs layer
+4b4e4eb3c143: Pulling fs layer
+6cc01feec954: Pulling fs layer
+2aad0d33617a: Waiting
+ef2e99cf0552: Waiting
+5fc0af7bf5ee: Waiting
+8570db82e8af: Waiting
+9ab023252c3a: Waiting
+ca366d4fc993: Waiting
+4b4e4eb3c143: Waiting
+6cc01feec954: Waiting
+f18232174bc9: Verifying Checksum
+f18232174bc9: Download complete
+f18232174bc9: Pull complete
+4bf0423a57b1: Verifying Checksum
+4bf0423a57b1: Download complete
+d3746672e3dd: Verifying Checksum
+d3746672e3dd: Download complete
+2aad0d33617a: Verifying Checksum
+2aad0d33617a: Download complete
+ef2e99cf0552: Verifying Checksum
+ef2e99cf0552: Download complete
+8570db82e8af: Download complete
+9ab023252c3a: Verifying Checksum
+9ab023252c3a: Download complete
+5fc0af7bf5ee: Verifying Checksum
+5fc0af7bf5ee: Download complete
+4b4e4eb3c143: Download complete
+6cc01feec954: Download complete
+4bf0423a57b1: Pull complete
+ca366d4fc993: Verifying Checksum
+ca366d4fc993: Download complete
+d3746672e3dd: Pull complete
+2aad0d33617a: Pull complete
+ef2e99cf0552: Pull complete
+5fc0af7bf5ee: Pull complete
+8570db82e8af: Pull complete
+9ab023252c3a: Pull complete
+ca366d4fc993: Pull complete
+4b4e4eb3c143: Pull complete
+6cc01feec954: Pull complete
+Digest: sha256:46a726e64e96d65b74dba9456f16b793975c796332ddca230542ec6ba86d723c
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-27 10:46:16,669 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-27 10:46:17,895 - ai_security_analyzer.full_dir_scan_agents - INFO - Loading files
+2025-02-27 10:46:17,896 - ai_security_analyzer.loaders - INFO - exclude config: mode=add, patterns=['LICENSE', '**/dist/*', '**/bin/*']
+2025-02-27 10:46:17,896 - ai_security_analyzer.loaders - INFO - include config: mode=add, patterns=['**/*.md', '**/Dockerfile', '**/*.yml', '**/*.sh', '**/*.bash', '**/*.yaml', '**/*.toml', '**/*.js', '**/*.ts']
+2025-02-27 10:46:18,028 - ai_security_analyzer.full_dir_scan_agents - INFO - Loaded 796 documents
+2025-02-27 10:46:18,028 - ai_security_analyzer.full_dir_scan_agents - INFO - Sorting and filtering documents
+2025-02-27 10:46:18,029 - ai_security_analyzer.full_dir_scan_agents - INFO - Documents after sorting and filtering: 796
+2025-02-27 10:46:18,035 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitting documents
+2025-02-27 10:46:19,722 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitted documents into smaller chunks: 802
+2025-02-27 10:46:19,723 - ai_security_analyzer.full_dir_scan_agents - INFO - Creating initial draft
+2025-02-27 10:46:19,872 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing first batch of documents: 3 of 802
+2025-02-27 10:46:29,605 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:46:29,699 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [4 of 802]
+2025-02-27 10:46:37,834 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:46:37,951 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 28 [32 of 802]
+2025-02-27 10:46:51,853 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:46:51,927 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [33 of 802]
+2025-02-27 10:46:59,974 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:47:00,042 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [34 of 802]
+2025-02-27 10:47:05,563 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:47:05,688 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [35 of 802]
+2025-02-27 10:47:14,812 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:47:14,911 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 15 [50 of 802]
+2025-02-27 10:47:54,341 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:47:54,454 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 21 [71 of 802]
+2025-02-27 10:48:16,695 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:48:16,783 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 4 [75 of 802]
+2025-02-27 10:48:46,535 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:48:46,648 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 29 [104 of 802]
+2025-02-27 10:49:28,512 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:49:28,632 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 43 [147 of 802]
+2025-02-27 10:50:10,631 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:50:10,745 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 14 [161 of 802]
+2025-02-27 10:50:51,592 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:50:51,704 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 24 [185 of 802]
+2025-02-27 10:51:30,511 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:51:30,615 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 15 [200 of 802]
+2025-02-27 10:52:27,264 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:52:27,387 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 33 [233 of 802]
+2025-02-27 10:52:43,480 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:52:43,591 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 35 [268 of 802]
+2025-02-27 10:53:17,819 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:53:17,956 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 31 [299 of 802]
+2025-02-27 10:54:07,692 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:54:07,825 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 6 [305 of 802]
+2025-02-27 10:54:48,224 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:54:48,318 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 8 [313 of 802]
+2025-02-27 10:55:38,994 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:55:39,098 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 24 [337 of 802]
+2025-02-27 10:56:55,846 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:56:55,963 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 55 [392 of 802]
+2025-02-27 10:58:03,659 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:58:03,804 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 42 [434 of 802]
+2025-02-27 10:59:07,972 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 10:59:08,082 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 16 [450 of 802]
+2025-02-27 11:00:30,692 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:00:30,803 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 24 [474 of 802]
+2025-02-27 11:02:05,416 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:02:05,527 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 38 [512 of 802]
+2025-02-27 11:03:42,817 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:03:42,929 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 33 [545 of 802]
+2025-02-27 11:05:01,501 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:05:01,622 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 17 [562 of 802]
+2025-02-27 11:06:21,157 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:06:21,260 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 11 [573 of 802]
+2025-02-27 11:07:40,778 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:07:40,892 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 27 [600 of 802]
+2025-02-27 11:09:09,783 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:09:09,910 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 10 [610 of 802]
+2025-02-27 11:10:42,896 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:10:42,996 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 12 [622 of 802]
+2025-02-27 11:12:08,159 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:12:08,270 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 32 [654 of 802]
+2025-02-27 11:13:48,128 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:13:48,247 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 27 [681 of 802]
+2025-02-27 11:15:19,870 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:15:19,985 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 26 [707 of 802]
+2025-02-27 11:16:50,408 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:16:50,533 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 61 [768 of 802]
+2025-02-27 11:18:32,133 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:18:32,246 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 34 [802 of 802]
+2025-02-27 11:19:58,412 - ai_security_analyzer.full_dir_scan_agents - INFO - Generating final response
+2025-02-27 11:19:58,758 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Filtering vulnerabilities
+2025-02-27 11:21:14,487 - ai_security_analyzer.full_dir_scan_agents - INFO - Loading files
+2025-02-27 11:21:14,497 - ai_security_analyzer.loaders - INFO - exclude config: mode=add, patterns=['LICENSE', '**/dist/*', '**/bin/*']
+2025-02-27 11:21:14,497 - ai_security_analyzer.loaders - INFO - include config: mode=add, patterns=['**/*.md', '**/Dockerfile', '**/*.yml', '**/*.sh', '**/*.bash', '**/*.yaml', '**/*.toml', '**/*.js', '**/*.ts']
+2025-02-27 11:21:14,962 - ai_security_analyzer.full_dir_scan_agents - INFO - Loaded 796 documents
+2025-02-27 11:21:14,964 - ai_security_analyzer.full_dir_scan_agents - INFO - Sorting and filtering documents
+2025-02-27 11:21:14,964 - ai_security_analyzer.full_dir_scan_agents - INFO - Documents after sorting and filtering: 796
+2025-02-27 11:21:14,965 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitting documents
+2025-02-27 11:21:17,063 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitted documents into smaller chunks: 802
+2025-02-27 11:21:17,064 - ai_security_analyzer.full_dir_scan_agents - INFO - Creating initial draft
+2025-02-27 11:21:17,207 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing first batch of documents: 3 of 802
+2025-02-27 11:21:26,128 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:21:26,211 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [4 of 802]
+2025-02-27 11:21:33,884 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:21:33,999 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 28 [32 of 802]
+2025-02-27 11:21:47,442 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:21:47,509 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [33 of 802]
+2025-02-27 11:22:03,942 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:22:04,019 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [34 of 802]
+2025-02-27 11:22:22,611 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:22:22,699 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 1 [35 of 802]
+2025-02-27 11:22:34,131 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:22:34,225 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 15 [50 of 802]
+2025-02-27 11:22:57,623 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:22:57,753 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 21 [71 of 802]
+2025-02-27 11:23:29,231 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:23:29,315 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 4 [75 of 802]
+2025-02-27 11:23:46,728 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:23:46,840 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 29 [104 of 802]
+2025-02-27 11:23:59,178 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:23:59,302 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 43 [147 of 802]
+2025-02-27 11:24:34,937 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:24:35,072 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 14 [161 of 802]
+2025-02-27 11:25:13,869 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:25:13,977 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 24 [185 of 802]
+2025-02-27 11:25:59,710 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:25:59,842 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 15 [200 of 802]
+2025-02-27 11:26:32,616 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:26:32,736 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 33 [233 of 802]
+2025-02-27 11:27:06,804 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:27:06,913 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 35 [268 of 802]
+2025-02-27 11:27:47,687 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:27:47,795 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 31 [299 of 802]
+2025-02-27 11:28:30,479 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:28:30,576 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 6 [305 of 802]
+2025-02-27 11:29:28,740 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:29:28,837 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 8 [313 of 802]
+2025-02-27 11:30:31,287 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:30:31,388 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 24 [337 of 802]
+2025-02-27 11:31:38,476 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:31:38,586 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 55 [392 of 802]
+2025-02-27 11:32:37,515 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:32:37,634 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 42 [434 of 802]
+2025-02-27 11:33:48,290 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:33:48,390 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 16 [450 of 802]
+2025-02-27 11:34:48,855 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:34:48,962 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 24 [474 of 802]
+2025-02-27 11:36:11,747 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:36:11,857 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 38 [512 of 802]
+2025-02-27 11:37:22,971 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:37:23,082 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 33 [545 of 802]
+2025-02-27 11:38:38,641 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:38:38,744 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 17 [562 of 802]
+2025-02-27 11:40:06,672 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:40:06,788 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 11 [573 of 802]
+2025-02-27 11:41:46,566 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:41:46,687 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 27 [600 of 802]
+2025-02-27 11:43:05,452 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:43:05,555 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 10 [610 of 802]
+2025-02-27 11:44:30,519 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:44:30,640 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 12 [622 of 802]
+2025-02-27 11:46:40,077 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:46:40,203 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 32 [654 of 802]
+2025-02-27 11:48:06,787 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:48:06,906 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 27 [681 of 802]
+2025-02-27 11:49:34,383 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:49:34,501 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 26 [707 of 802]
+2025-02-27 11:51:08,588 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:51:08,708 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 61 [768 of 802]
+2025-02-27 11:53:06,471 - ai_security_analyzer.full_dir_scan_agents - INFO - Updating draft with new documents
+2025-02-27 11:53:06,592 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing next batch of documents: 34 [802 of 802]
+2025-02-27 11:54:57,184 - ai_security_analyzer.full_dir_scan_agents - INFO - Generating final response
+2025-02-27 11:54:57,518 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Filtering vulnerabilities
+2025-02-27 11:56:06,671 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Consolidating vulnerabilities
+2025-02-27 11:58:30,540 - ai_security_analyzer.graphs - INFO - Actual token usage: 5880864
+2025-02-27 11:58:46,689 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1740657528.931731       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
