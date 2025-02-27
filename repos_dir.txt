@@ -1,4 +1,3 @@
-typescript cschlosser/doxdocgen
 typescript cweijan/vscode-database-client
 typescript Dart-Code/Dart-Code
 typescript Dart-Code/Flutter
