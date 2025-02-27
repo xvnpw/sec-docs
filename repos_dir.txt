@@ -1,4 +1,3 @@
-typescript microsoft/vscode-mssql
 typescript microsoft/vscode-languageserver-node
 typescript microsoft/vscode-cmake-tools
 typescript microsoft/vscode-generator-code
