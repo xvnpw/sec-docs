@@ -1,0 +1,11 @@
+{
+    "mode": "dir",
+    "repo_url": "tomoki1207/vscode-pdfviewer",
+    "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 200000 --files-chunk-size 170000 --recursion-limit 100 --vulnerabilities-iterations 2",
+    "agent_provider": "google",
+    "agent_model": "gemini-2.0-flash-thinking-exp",
+    "agent_temperature": 0.7,
+    "agent_prompt_types": [
+        "vulnerabilities-workflow-1"
+    ]
+}

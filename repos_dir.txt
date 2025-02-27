@@ -1,1 +1,0 @@
-typescript tomoki1207/vscode-pdfviewer
