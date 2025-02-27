@@ -1,4 +1,3 @@
-typescript gitkraken/vscode-gitlens
 typescript huggingface/llm-vscode
 typescript jeff-hykin/better-cpp-syntax
 typescript julia-vscode/julia-vscode
