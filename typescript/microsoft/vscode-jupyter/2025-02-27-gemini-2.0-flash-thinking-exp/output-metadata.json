@@ -1,0 +1,14 @@
+{
+  "repo_url": "microsoft/vscode-jupyter",
+  "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 200000 --files-chunk-size 170000 --recursion-limit 100 --vulnerabilities-iterations 2 --exclude '**/build/**,**/ipywidgets/**'",
+  "start_datetime": "2025-02-27T20:32:50Z",
+  "end_datetime": "2025-02-27T20:46:16Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "3862743",
+  "mode": "dir"
+}
