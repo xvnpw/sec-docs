@@ -1,2 +1,1 @@
-typescript yzhang-gh/vscode-markdown
 typescript Zignd/HTML-CSS-Class-Completion
