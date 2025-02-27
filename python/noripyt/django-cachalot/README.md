@@ -1,6 +1,6 @@
 # Django-Cachalot Analysis
 
-[GitHub Repository](noripyt/django-cachalot)
+[GitHub Repository](https://github.com/noripyt/django-cachalot)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

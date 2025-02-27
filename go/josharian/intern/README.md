@@ -1,6 +1,6 @@
 # Intern Analysis
 
-[GitHub Repository](josharian/intern)
+[GitHub Repository](https://github.com/josharian/intern)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

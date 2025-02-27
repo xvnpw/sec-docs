@@ -1,6 +1,6 @@
 # Django-Prometheus Analysis
 
-[GitHub Repository](korfuri/django-prometheus)
+[GitHub Repository](https://github.com/korfuri/django-prometheus)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Multierr Analysis
 
-[GitHub Repository](uber-go/multierr)
+[GitHub Repository](https://github.com/uber-go/multierr)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

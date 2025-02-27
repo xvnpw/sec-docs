@@ -1,6 +1,6 @@
 # Django-Summernote Analysis
 
-[GitHub Repository](lqez/django-summernote)
+[GitHub Repository](https://github.com/lqez/django-summernote)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

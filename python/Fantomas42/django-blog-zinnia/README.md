@@ -1,6 +1,6 @@
 # Django-Blog-Zinnia Analysis
 
-[GitHub Repository](Fantomas42/django-blog-zinnia)
+[GitHub Repository](https://github.com/Fantomas42/django-blog-zinnia)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

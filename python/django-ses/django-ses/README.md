@@ -1,6 +1,6 @@
 # Django-Ses Analysis
 
-[GitHub Repository](django-ses/django-ses)
+[GitHub Repository](https://github.com/django-ses/django-ses)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

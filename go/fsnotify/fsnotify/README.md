@@ -1,6 +1,6 @@
 # Fsnotify Analysis
 
-[GitHub Repository](fsnotify/fsnotify)
+[GitHub Repository](https://github.com/fsnotify/fsnotify)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

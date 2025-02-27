@@ -1,6 +1,6 @@
 # Django-Ipware Analysis
 
-[GitHub Repository](un33k/django-ipware)
+[GitHub Repository](https://github.com/un33k/django-ipware)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Loads Analysis
 
-[GitHub Repository](go-openapi/loads)
+[GitHub Repository](https://github.com/go-openapi/loads)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

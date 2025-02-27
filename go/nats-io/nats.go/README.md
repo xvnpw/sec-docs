@@ -1,6 +1,6 @@
 # Nats.Go Analysis
 
-[GitHub Repository](nats-io/nats.go)
+[GitHub Repository](https://github.com/nats-io/nats.go)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

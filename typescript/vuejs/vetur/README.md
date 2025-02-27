@@ -1,6 +1,6 @@
 # Vetur Analysis
 
-[GitHub Repository](vuejs/vetur)
+[GitHub Repository](https://github.com/vuejs/vetur)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

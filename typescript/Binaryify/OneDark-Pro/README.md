@@ -1,6 +1,6 @@
 # Onedark-Pro Analysis
 
-[GitHub Repository](Binaryify/OneDark-Pro)
+[GitHub Repository](https://github.com/Binaryify/OneDark-Pro)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

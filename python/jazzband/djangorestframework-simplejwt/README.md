@@ -1,6 +1,6 @@
 # Djangorestframework-Simplejwt Analysis
 
-[GitHub Repository](jazzband/djangorestframework-simplejwt)
+[GitHub Repository](https://github.com/jazzband/djangorestframework-simplejwt)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Concurrent Analysis
 
-[GitHub Repository](modern-go/concurrent)
+[GitHub Repository](https://github.com/modern-go/concurrent)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

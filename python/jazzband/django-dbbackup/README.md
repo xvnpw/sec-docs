@@ -1,6 +1,6 @@
 # Django-Dbbackup Analysis
 
-[GitHub Repository](jazzband/django-dbbackup)
+[GitHub Repository](https://github.com/jazzband/django-dbbackup)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

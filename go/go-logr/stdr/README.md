@@ -1,6 +1,6 @@
 # Stdr Analysis
 
-[GitHub Repository](go-logr/stdr)
+[GitHub Repository](https://github.com/go-logr/stdr)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Simple-Captcha Analysis
 
-[GitHub Repository](mbi/django-simple-captcha)
+[GitHub Repository](https://github.com/mbi/django-simple-captcha)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

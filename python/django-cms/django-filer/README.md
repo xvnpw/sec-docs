@@ -1,6 +1,6 @@
 # Django-Filer Analysis
 
-[GitHub Repository](django-cms/django-filer)
+[GitHub Repository](https://github.com/django-cms/django-filer)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

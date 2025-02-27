@@ -85,7 +85,11 @@ def get_github_link(project_dir):
     if os.path.isfile(config_path):
         with open(config_path, "r") as config_file:
             config = json.load(config_file)
-            return config.get("repo_url", "")
+            repo_url = config.get("repo_url", "")
+            if repo_url and not repo_url.startswith("https://github.com/"):
+                return f"https://github.com/{repo_url}"
+            else:
+                return repo_url
     return ""
 
 

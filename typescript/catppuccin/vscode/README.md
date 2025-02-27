@@ -1,6 +1,6 @@
 # Vscode Analysis
 
-[GitHub Repository](catppuccin/vscode)
+[GitHub Repository](https://github.com/catppuccin/vscode)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

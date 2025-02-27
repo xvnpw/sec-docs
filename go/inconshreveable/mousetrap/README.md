@@ -1,6 +1,6 @@
 # Mousetrap Analysis
 
-[GitHub Repository](inconshreveable/mousetrap)
+[GitHub Repository](https://github.com/inconshreveable/mousetrap)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

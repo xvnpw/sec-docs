@@ -1,6 +1,6 @@
 # Client_Model Analysis
 
-[GitHub Repository](prometheus/client_model)
+[GitHub Repository](https://github.com/prometheus/client_model)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

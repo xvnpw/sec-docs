@@ -1,6 +1,6 @@
 # Django-Rest-Knox Analysis
 
-[GitHub Repository](jazzband/django-rest-knox)
+[GitHub Repository](https://github.com/jazzband/django-rest-knox)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

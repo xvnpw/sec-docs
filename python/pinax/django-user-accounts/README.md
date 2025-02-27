@@ -1,6 +1,6 @@
 # Django-User-Accounts Analysis
 
-[GitHub Repository](pinax/django-user-accounts)
+[GitHub Repository](https://github.com/pinax/django-user-accounts)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

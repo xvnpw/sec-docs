@@ -1,6 +1,6 @@
 # Afero Analysis
 
-[GitHub Repository](spf13/afero)
+[GitHub Repository](https://github.com/spf13/afero)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

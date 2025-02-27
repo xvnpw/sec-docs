@@ -1,6 +1,6 @@
 # Django-Admin-Honeypot Analysis
 
-[GitHub Repository](dmpayton/django-admin-honeypot)
+[GitHub Repository](https://github.com/dmpayton/django-admin-honeypot)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

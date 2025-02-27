@@ -1,6 +1,6 @@
 # Django-Rosetta Analysis
 
-[GitHub Repository](mbi/django-rosetta)
+[GitHub Repository](https://github.com/mbi/django-rosetta)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

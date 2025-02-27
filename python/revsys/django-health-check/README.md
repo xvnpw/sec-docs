@@ -1,6 +1,6 @@
 # Django-Health-Check Analysis
 
-[GitHub Repository](revsys/django-health-check)
+[GitHub Repository](https://github.com/revsys/django-health-check)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

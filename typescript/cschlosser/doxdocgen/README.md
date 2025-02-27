@@ -1,6 +1,6 @@
 # Doxdocgen Analysis
 
-[GitHub Repository](cschlosser/doxdocgen)
+[GitHub Repository](https://github.com/cschlosser/doxdocgen)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

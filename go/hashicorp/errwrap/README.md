@@ -1,6 +1,6 @@
 # Errwrap Analysis
 
-[GitHub Repository](hashicorp/errwrap)
+[GitHub Repository](https://github.com/hashicorp/errwrap)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

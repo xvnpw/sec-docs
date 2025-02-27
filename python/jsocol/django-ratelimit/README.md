@@ -1,6 +1,6 @@
 # Django-Ratelimit Analysis
 
-[GitHub Repository](jsocol/django-ratelimit)
+[GitHub Repository](https://github.com/jsocol/django-ratelimit)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

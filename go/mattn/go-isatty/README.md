@@ -1,6 +1,6 @@
 # Go-Isatty Analysis
 
-[GitHub Repository](mattn/go-isatty)
+[GitHub Repository](https://github.com/mattn/go-isatty)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

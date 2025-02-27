@@ -1,6 +1,6 @@
 # Django-Recaptcha Analysis
 
-[GitHub Repository](django-recaptcha/django-recaptcha)
+[GitHub Repository](https://github.com/django-recaptcha/django-recaptcha)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Freeport Analysis
 
-[GitHub Repository](phayes/freeport)
+[GitHub Repository](https://github.com/phayes/freeport)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

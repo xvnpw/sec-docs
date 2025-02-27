@@ -1,6 +1,6 @@
 # Vscode-Leetcode Analysis
 
-[GitHub Repository](LeetCode-OpenSource/vscode-leetcode)
+[GitHub Repository](https://github.com/LeetCode-OpenSource/vscode-leetcode)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

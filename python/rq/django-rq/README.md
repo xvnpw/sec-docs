@@ -1,6 +1,6 @@
 # Django-Rq Analysis
 
-[GitHub Repository](rq/django-rq)
+[GitHub Repository](https://github.com/rq/django-rq)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

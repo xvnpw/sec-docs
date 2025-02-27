@@ -1,6 +1,6 @@
 # Vscode-Settings Analysis
 
-[GitHub Repository](antfu/vscode-settings)
+[GitHub Repository](https://github.com/antfu/vscode-settings)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

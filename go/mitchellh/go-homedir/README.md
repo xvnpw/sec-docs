@@ -1,6 +1,6 @@
 # Go-Homedir Analysis
 
-[GitHub Repository](mitchellh/go-homedir)
+[GitHub Repository](https://github.com/mitchellh/go-homedir)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

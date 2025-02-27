@@ -1,6 +1,6 @@
 # Django-Q Analysis
 
-[GitHub Repository](Koed00/django-q)
+[GitHub Repository](https://github.com/Koed00/django-q)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Mptt Analysis
 
-[GitHub Repository](django-mptt/django-mptt)
+[GitHub Repository](https://github.com/django-mptt/django-mptt)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

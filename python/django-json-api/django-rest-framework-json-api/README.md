@@ -1,6 +1,6 @@
 # Django-Rest-Framework-Json-Api Analysis
 
-[GitHub Repository](django-json-api/django-rest-framework-json-api)
+[GitHub Repository](https://github.com/django-json-api/django-rest-framework-json-api)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

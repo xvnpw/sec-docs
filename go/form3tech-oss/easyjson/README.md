@@ -1,6 +1,6 @@
 # Easyjson Analysis
 
-[GitHub Repository](form3tech-oss/easyjson)
+[GitHub Repository](https://github.com/form3tech-oss/easyjson)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

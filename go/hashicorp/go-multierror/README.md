@@ -1,6 +1,6 @@
 # Go-Multierror Analysis
 
-[GitHub Repository](hashicorp/go-multierror)
+[GitHub Repository](https://github.com/hashicorp/go-multierror)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

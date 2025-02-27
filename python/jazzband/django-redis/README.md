@@ -1,6 +1,6 @@
 # Django-Redis Analysis
 
-[GitHub Repository](jazzband/django-redis)
+[GitHub Repository](https://github.com/jazzband/django-redis)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

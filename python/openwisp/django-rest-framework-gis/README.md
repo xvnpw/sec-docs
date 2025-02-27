@@ -1,6 +1,6 @@
 # Django-Rest-Framework-Gis Analysis
 
-[GitHub Repository](openwisp/django-rest-framework-gis)
+[GitHub Repository](https://github.com/openwisp/django-rest-framework-gis)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

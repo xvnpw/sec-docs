@@ -1,6 +1,6 @@
 # Go-Cleanhttp Analysis
 
-[GitHub Repository](hashicorp/go-cleanhttp)
+[GitHub Repository](https://github.com/hashicorp/go-cleanhttp)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

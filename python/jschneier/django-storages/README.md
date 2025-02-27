@@ -1,6 +1,6 @@
 # Django-Storages Analysis
 
-[GitHub Repository](jschneier/django-storages)
+[GitHub Repository](https://github.com/jschneier/django-storages)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

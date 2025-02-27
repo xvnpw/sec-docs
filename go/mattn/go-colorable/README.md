@@ -1,6 +1,6 @@
 # Go-Colorable Analysis
 
-[GitHub Repository](mattn/go-colorable)
+[GitHub Repository](https://github.com/mattn/go-colorable)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

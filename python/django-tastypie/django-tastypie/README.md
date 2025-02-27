@@ -1,6 +1,6 @@
 # Django-Tastypie Analysis
 
-[GitHub Repository](django-tastypie/django-tastypie)
+[GitHub Repository](https://github.com/django-tastypie/django-tastypie)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

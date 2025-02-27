@@ -1,6 +1,6 @@
 # Django-React-Boilerplate Analysis
 
-[GitHub Repository](vintasoftware/django-react-boilerplate)
+[GitHub Repository](https://github.com/vintasoftware/django-react-boilerplate)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

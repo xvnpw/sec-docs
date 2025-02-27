@@ -1,6 +1,6 @@
 # Jsonpointer Analysis
 
-[GitHub Repository](go-openapi/jsonpointer)
+[GitHub Repository](https://github.com/go-openapi/jsonpointer)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

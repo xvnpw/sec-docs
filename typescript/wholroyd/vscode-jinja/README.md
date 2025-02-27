@@ -1,6 +1,6 @@
 # Vscode-Jinja Analysis
 
-[GitHub Repository](wholroyd/vscode-jinja)
+[GitHub Repository](https://github.com/wholroyd/vscode-jinja)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

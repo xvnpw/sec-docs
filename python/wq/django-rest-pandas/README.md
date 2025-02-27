@@ -1,6 +1,6 @@
 # Django-Rest-Pandas Analysis
 
-[GitHub Repository](wq/django-rest-pandas)
+[GitHub Repository](https://github.com/wq/django-rest-pandas)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

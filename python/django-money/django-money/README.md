@@ -1,6 +1,6 @@
 # Django-Money Analysis
 
-[GitHub Repository](django-money/django-money)
+[GitHub Repository](https://github.com/django-money/django-money)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

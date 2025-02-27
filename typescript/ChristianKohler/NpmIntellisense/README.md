@@ -1,6 +1,6 @@
 # Npmintellisense Analysis
 
-[GitHub Repository](ChristianKohler/NpmIntellisense)
+[GitHub Repository](https://github.com/ChristianKohler/NpmIntellisense)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

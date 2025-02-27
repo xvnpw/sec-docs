@@ -1,6 +1,6 @@
 # Synthwave-Vscode Analysis
 
-[GitHub Repository](robb0wen/synthwave-vscode)
+[GitHub Repository](https://github.com/robb0wen/synthwave-vscode)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

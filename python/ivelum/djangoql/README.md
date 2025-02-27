@@ -1,6 +1,6 @@
 # Djangoql Analysis
 
-[GitHub Repository](ivelum/djangoql)
+[GitHub Repository](https://github.com/ivelum/djangoql)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

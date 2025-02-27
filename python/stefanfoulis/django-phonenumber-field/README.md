@@ -1,6 +1,6 @@
 # Django-Phonenumber-Field Analysis
 
-[GitHub Repository](stefanfoulis/django-phonenumber-field)
+[GitHub Repository](https://github.com/stefanfoulis/django-phonenumber-field)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

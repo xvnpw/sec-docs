@@ -1,6 +1,6 @@
 # Django-Debug-Toolbar Analysis
 
-[GitHub Repository](django-commons/django-debug-toolbar)
+[GitHub Repository](https://github.com/django-commons/django-debug-toolbar)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

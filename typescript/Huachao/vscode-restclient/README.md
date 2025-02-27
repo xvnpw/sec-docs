@@ -1,6 +1,6 @@
 # Vscode-Restclient Analysis
 
-[GitHub Repository](Huachao/vscode-restclient)
+[GitHub Repository](https://github.com/Huachao/vscode-restclient)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

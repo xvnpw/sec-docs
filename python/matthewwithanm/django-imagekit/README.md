@@ -1,6 +1,6 @@
 # Django-Imagekit Analysis
 
-[GitHub Repository](matthewwithanm/django-imagekit)
+[GitHub Repository](https://github.com/matthewwithanm/django-imagekit)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

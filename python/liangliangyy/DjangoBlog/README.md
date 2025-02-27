@@ -1,6 +1,6 @@
 # Djangoblog Analysis
 
-[GitHub Repository](liangliangyy/DjangoBlog)
+[GitHub Repository](https://github.com/liangliangyy/DjangoBlog)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

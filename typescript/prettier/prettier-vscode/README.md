@@ -1,6 +1,6 @@
 # Prettier-Vscode Analysis
 
-[GitHub Repository](prettier/prettier-vscode)
+[GitHub Repository](https://github.com/prettier/prettier-vscode)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

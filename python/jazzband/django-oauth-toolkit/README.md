@@ -1,6 +1,6 @@
 # Django-Oauth-Toolkit Analysis
 
-[GitHub Repository](jazzband/django-oauth-toolkit)
+[GitHub Repository](https://github.com/jazzband/django-oauth-toolkit)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

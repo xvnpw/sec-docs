@@ -1,6 +1,6 @@
 # Django-Elasticsearch-Dsl Analysis
 
-[GitHub Repository](django-es/django-elasticsearch-dsl)
+[GitHub Repository](https://github.com/django-es/django-elasticsearch-dsl)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

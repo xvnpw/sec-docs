@@ -1,6 +1,6 @@
 # Gotenv Analysis
 
-[GitHub Repository](subosito/gotenv)
+[GitHub Repository](https://github.com/subosito/gotenv)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

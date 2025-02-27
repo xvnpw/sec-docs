@@ -1,6 +1,6 @@
 # Vscode-Front-Matter Analysis
 
-[GitHub Repository](estruyf/vscode-front-matter)
+[GitHub Repository](https://github.com/estruyf/vscode-front-matter)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

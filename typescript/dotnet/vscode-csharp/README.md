@@ -1,6 +1,6 @@
 # Vscode-Csharp Analysis
 
-[GitHub Repository](dotnet/vscode-csharp)
+[GitHub Repository](https://github.com/dotnet/vscode-csharp)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

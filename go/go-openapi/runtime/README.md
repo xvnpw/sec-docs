@@ -1,6 +1,6 @@
 # Runtime Analysis
 
-[GitHub Repository](go-openapi/runtime)
+[GitHub Repository](https://github.com/go-openapi/runtime)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Cookiecutter-Django Analysis
 
-[GitHub Repository](cookiecutter/cookiecutter-django)
+[GitHub Repository](https://github.com/cookiecutter/cookiecutter-django)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

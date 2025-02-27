@@ -1,6 +1,6 @@
 # Django-Modeltranslation Analysis
 
-[GitHub Repository](deschler/django-modeltranslation)
+[GitHub Repository](https://github.com/deschler/django-modeltranslation)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

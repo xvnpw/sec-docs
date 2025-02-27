@@ -1,6 +1,6 @@
 # Vscode-Bookmarks Analysis
 
-[GitHub Repository](alefragnani/vscode-bookmarks)
+[GitHub Repository](https://github.com/alefragnani/vscode-bookmarks)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

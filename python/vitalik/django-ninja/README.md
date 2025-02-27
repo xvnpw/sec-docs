@@ -1,6 +1,6 @@
 # Django-Ninja Analysis
 
-[GitHub Repository](vitalik/django-ninja)
+[GitHub Repository](https://github.com/vitalik/django-ninja)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

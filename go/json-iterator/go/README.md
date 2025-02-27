@@ -1,6 +1,6 @@
 # Go Analysis
 
-[GitHub Repository](json-iterator/go)
+[GitHub Repository](https://github.com/json-iterator/go)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

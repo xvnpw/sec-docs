@@ -1,6 +1,6 @@
 # Autodocstring Analysis
 
-[GitHub Repository](NilsJPWerner/autoDocstring)
+[GitHub Repository](https://github.com/NilsJPWerner/autoDocstring)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

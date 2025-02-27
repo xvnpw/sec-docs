@@ -1,6 +1,6 @@
 # Reflect2 Analysis
 
-[GitHub Repository](modern-go/reflect2)
+[GitHub Repository](https://github.com/modern-go/reflect2)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

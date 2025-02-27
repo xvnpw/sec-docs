@@ -1,6 +1,6 @@
 # Procfs Analysis
 
-[GitHub Repository](prometheus/procfs)
+[GitHub Repository](https://github.com/prometheus/procfs)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

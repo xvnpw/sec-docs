@@ -1,6 +1,6 @@
 # Vscode-Markdownlint Analysis
 
-[GitHub Repository](DavidAnson/vscode-markdownlint)
+[GitHub Repository](https://github.com/DavidAnson/vscode-markdownlint)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

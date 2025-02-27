@@ -1,6 +1,6 @@
 # Django-Autocomplete-Light Analysis
 
-[GitHub Repository](yourlabs/django-autocomplete-light)
+[GitHub Repository](https://github.com/yourlabs/django-autocomplete-light)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

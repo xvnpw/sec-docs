@@ -1,6 +1,6 @@
 # Hcl Analysis
 
-[GitHub Repository](hashicorp/hcl)
+[GitHub Repository](https://github.com/hashicorp/hcl)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Go-Sockaddr Analysis
 
-[GitHub Repository](hashicorp/go-sockaddr)
+[GitHub Repository](https://github.com/hashicorp/go-sockaddr)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

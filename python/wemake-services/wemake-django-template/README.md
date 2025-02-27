@@ -1,6 +1,6 @@
 # Wemake-Django-Template Analysis
 
-[GitHub Repository](wemake-services/wemake-django-template)
+[GitHub Repository](https://github.com/wemake-services/wemake-django-template)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Gin Analysis
 
-[GitHub Repository](gin-gonic/gin)
+[GitHub Repository](https://github.com/gin-gonic/gin)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

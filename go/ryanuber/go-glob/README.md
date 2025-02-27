@@ -1,6 +1,6 @@
 # Go-Glob Analysis
 
-[GitHub Repository](ryanuber/go-glob)
+[GitHub Repository](https://github.com/ryanuber/go-glob)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

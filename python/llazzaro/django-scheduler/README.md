@@ -1,6 +1,6 @@
 # Django-Scheduler Analysis
 
-[GitHub Repository](llazzaro/django-scheduler)
+[GitHub Repository](https://github.com/llazzaro/django-scheduler)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

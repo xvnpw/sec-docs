@@ -1,6 +1,6 @@
 # Django-Two-Factor-Auth Analysis
 
-[GitHub Repository](jazzband/django-two-factor-auth)
+[GitHub Repository](https://github.com/jazzband/django-two-factor-auth)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Go-Toml Analysis
 
-[GitHub Repository](pelletier/go-toml)
+[GitHub Repository](https://github.com/pelletier/go-toml)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

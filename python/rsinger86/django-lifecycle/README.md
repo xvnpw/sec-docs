@@ -1,6 +1,6 @@
 # Django-Lifecycle Analysis
 
-[GitHub Repository](rsinger86/django-lifecycle)
+[GitHub Repository](https://github.com/rsinger86/django-lifecycle)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

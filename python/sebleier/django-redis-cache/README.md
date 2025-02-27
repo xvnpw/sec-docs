@@ -1,6 +1,6 @@
 # Django-Redis-Cache Analysis
 
-[GitHub Repository](sebleier/django-redis-cache)
+[GitHub Repository](https://github.com/sebleier/django-redis-cache)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Go-Spew Analysis
 
-[GitHub Repository](davecgh/go-spew)
+[GitHub Repository](https://github.com/davecgh/go-spew)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

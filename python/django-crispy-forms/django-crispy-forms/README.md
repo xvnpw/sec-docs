@@ -1,6 +1,6 @@
 # Django-Crispy-Forms Analysis
 
-[GitHub Repository](django-crispy-forms/django-crispy-forms)
+[GitHub Repository](https://github.com/django-crispy-forms/django-crispy-forms)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

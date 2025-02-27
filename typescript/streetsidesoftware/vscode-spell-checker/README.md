@@ -1,6 +1,6 @@
 # Vscode-Spell-Checker Analysis
 
-[GitHub Repository](streetsidesoftware/vscode-spell-checker)
+[GitHub Repository](https://github.com/streetsidesoftware/vscode-spell-checker)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Organizations Analysis
 
-[GitHub Repository](bennylope/django-organizations)
+[GitHub Repository](https://github.com/bennylope/django-organizations)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

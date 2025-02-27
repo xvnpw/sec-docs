@@ -1,6 +1,6 @@
 # Pgx Analysis
 
-[GitHub Repository](jackc/pgx)
+[GitHub Repository](https://github.com/jackc/pgx)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

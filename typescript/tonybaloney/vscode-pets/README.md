@@ -1,6 +1,6 @@
 # Vscode-Pets Analysis
 
-[GitHub Repository](tonybaloney/vscode-pets)
+[GitHub Repository](https://github.com/tonybaloney/vscode-pets)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

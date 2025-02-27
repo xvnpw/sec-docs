@@ -1,6 +1,6 @@
 # Vscode-Git-Graph Analysis
 
-[GitHub Repository](mhutchie/vscode-git-graph)
+[GitHub Repository](https://github.com/mhutchie/vscode-git-graph)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

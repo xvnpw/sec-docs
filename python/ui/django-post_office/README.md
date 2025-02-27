@@ -1,6 +1,6 @@
 # Django-Post_Office Analysis
 
-[GitHub Repository](ui/django-post_office)
+[GitHub Repository](https://github.com/ui/django-post_office)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

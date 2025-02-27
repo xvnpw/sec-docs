@@ -1,6 +1,6 @@
 # Django-Countries Analysis
 
-[GitHub Repository](SmileyChris/django-countries)
+[GitHub Repository](https://github.com/SmileyChris/django-countries)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Go-Retryablehttp Analysis
 
-[GitHub Repository](hashicorp/go-retryablehttp)
+[GitHub Repository](https://github.com/hashicorp/go-retryablehttp)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

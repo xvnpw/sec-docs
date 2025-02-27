@@ -1,6 +1,6 @@
 # Django-Extra-Views Analysis
 
-[GitHub Repository](AndrewIngram/django-extra-views)
+[GitHub Repository](https://github.com/AndrewIngram/django-extra-views)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

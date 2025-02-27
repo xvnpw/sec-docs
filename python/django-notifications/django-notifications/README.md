@@ -1,6 +1,6 @@
 # Django-Notifications Analysis
 
-[GitHub Repository](django-notifications/django-notifications)
+[GitHub Repository](https://github.com/django-notifications/django-notifications)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

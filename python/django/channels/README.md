@@ -1,6 +1,6 @@
 # Channels Analysis
 
-[GitHub Repository](django/channels)
+[GitHub Repository](https://github.com/django/channels)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

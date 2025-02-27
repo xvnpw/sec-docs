@@ -1,6 +1,6 @@
 # Go-Difflib Analysis
 
-[GitHub Repository](pmezard/go-difflib)
+[GitHub Repository](https://github.com/pmezard/go-difflib)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

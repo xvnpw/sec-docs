@@ -1,6 +1,6 @@
 # Vscode-Infracost Analysis
 
-[GitHub Repository](infracost/vscode-infracost)
+[GitHub Repository](https://github.com/infracost/vscode-infracost)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

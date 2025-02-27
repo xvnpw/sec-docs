@@ -1,6 +1,6 @@
 # Django-Widget-Tweaks Analysis
 
-[GitHub Repository](jazzband/django-widget-tweaks)
+[GitHub Repository](https://github.com/jazzband/django-widget-tweaks)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

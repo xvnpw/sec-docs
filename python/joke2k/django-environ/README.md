@@ -1,6 +1,6 @@
 # Django-Environ Analysis
 
-[GitHub Repository](joke2k/django-environ)
+[GitHub Repository](https://github.com/joke2k/django-environ)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

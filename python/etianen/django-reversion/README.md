@@ -1,6 +1,6 @@
 # Django-Reversion Analysis
 
-[GitHub Repository](etianen/django-reversion)
+[GitHub Repository](https://github.com/etianen/django-reversion)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

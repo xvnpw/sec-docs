@@ -1,6 +1,6 @@
 # Logr Analysis
 
-[GitHub Repository](go-logr/logr)
+[GitHub Repository](https://github.com/go-logr/logr)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

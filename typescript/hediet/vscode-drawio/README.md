@@ -1,6 +1,6 @@
 # Vscode-Drawio Analysis
 
-[GitHub Repository](hediet/vscode-drawio)
+[GitHub Repository](https://github.com/hediet/vscode-drawio)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

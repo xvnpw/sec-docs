@@ -1,6 +1,6 @@
 # Mongo-Go-Driver Analysis
 
-[GitHub Repository](mongodb/mongo-go-driver)
+[GitHub Repository](https://github.com/mongodb/mongo-go-driver)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Crm Analysis
 
-[GitHub Repository](MicroPyramid/Django-CRM)
+[GitHub Repository](https://github.com/MicroPyramid/Django-CRM)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

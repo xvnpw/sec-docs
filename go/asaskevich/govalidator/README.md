@@ -1,6 +1,6 @@
 # Govalidator Analysis
 
-[GitHub Repository](asaskevich/govalidator)
+[GitHub Repository](https://github.com/asaskevich/govalidator)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

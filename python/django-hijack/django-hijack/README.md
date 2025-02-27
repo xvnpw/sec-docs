@@ -1,6 +1,6 @@
 # Django-Hijack Analysis
 
-[GitHub Repository](django-hijack/django-hijack)
+[GitHub Repository](https://github.com/django-hijack/django-hijack)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

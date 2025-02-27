@@ -1,6 +1,6 @@
 # Django-Unfold Analysis
 
-[GitHub Repository](unfoldadmin/django-unfold)
+[GitHub Repository](https://github.com/unfoldadmin/django-unfold)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

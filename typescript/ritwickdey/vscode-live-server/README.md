@@ -1,6 +1,6 @@
 # Vscode-Live-Server Analysis
 
-[GitHub Repository](ritwickdey/vscode-live-server)
+[GitHub Repository](https://github.com/ritwickdey/vscode-live-server)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

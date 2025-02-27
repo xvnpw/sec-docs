@@ -1,6 +1,6 @@
 # Vscode-Blade-Formatter Analysis
 
-[GitHub Repository](shufo/vscode-blade-formatter)
+[GitHub Repository](https://github.com/shufo/vscode-blade-formatter)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

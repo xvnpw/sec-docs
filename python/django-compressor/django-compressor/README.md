@@ -1,6 +1,6 @@
 # Django-Compressor Analysis
 
-[GitHub Repository](django-compressor/django-compressor)
+[GitHub Repository](https://github.com/django-compressor/django-compressor)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

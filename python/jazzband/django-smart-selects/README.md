@@ -1,6 +1,6 @@
 # Django-Smart-Selects Analysis
 
-[GitHub Repository](jazzband/django-smart-selects)
+[GitHub Repository](https://github.com/jazzband/django-smart-selects)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

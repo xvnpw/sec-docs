@@ -1,6 +1,6 @@
 # Client_Golang Analysis
 
-[GitHub Repository](prometheus/client_golang)
+[GitHub Repository](https://github.com/prometheus/client_golang)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

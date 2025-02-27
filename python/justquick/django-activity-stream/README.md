@@ -1,6 +1,6 @@
 # Django-Activity-Stream Analysis
 
-[GitHub Repository](justquick/django-activity-stream)
+[GitHub Repository](https://github.com/justquick/django-activity-stream)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

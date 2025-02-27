@@ -1,6 +1,6 @@
 # Django-Cacheops Analysis
 
-[GitHub Repository](Suor/django-cacheops)
+[GitHub Repository](https://github.com/Suor/django-cacheops)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

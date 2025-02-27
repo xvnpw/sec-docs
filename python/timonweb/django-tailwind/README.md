@@ -1,6 +1,6 @@
 # Django-Tailwind Analysis
 
-[GitHub Repository](timonweb/django-tailwind)
+[GitHub Repository](https://github.com/timonweb/django-tailwind)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Properties Analysis
 
-[GitHub Repository](magiconair/properties)
+[GitHub Repository](https://github.com/magiconair/properties)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Tokyo-Night-Vscode-Theme Analysis
 
-[GitHub Repository](tokyo-night/tokyo-night-vscode-theme)
+[GitHub Repository](https://github.com/tokyo-night/tokyo-night-vscode-theme)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

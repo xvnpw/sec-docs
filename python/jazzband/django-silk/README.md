@@ -1,6 +1,6 @@
 # Django-Silk Analysis
 
-[GitHub Repository](jazzband/django-silk)
+[GitHub Repository](https://github.com/jazzband/django-silk)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

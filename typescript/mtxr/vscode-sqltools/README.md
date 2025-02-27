@@ -1,6 +1,6 @@
 # Vscode-Sqltools Analysis
 
-[GitHub Repository](mtxr/vscode-sqltools)
+[GitHub Repository](https://github.com/mtxr/vscode-sqltools)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

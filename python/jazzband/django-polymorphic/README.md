@@ -1,6 +1,6 @@
 # Django-Polymorphic Analysis
 
-[GitHub Repository](jazzband/django-polymorphic)
+[GitHub Repository](https://github.com/jazzband/django-polymorphic)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

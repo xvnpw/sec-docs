@@ -1,6 +1,6 @@
 # Django-Sspanel Analysis
 
-[GitHub Repository](Ehco1996/django-sspanel)
+[GitHub Repository](https://github.com/Ehco1996/django-sspanel)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

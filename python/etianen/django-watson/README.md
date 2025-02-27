@@ -1,6 +1,6 @@
 # Django-Watson Analysis
 
-[GitHub Repository](etianen/django-watson)
+[GitHub Repository](https://github.com/etianen/django-watson)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

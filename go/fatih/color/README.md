@@ -1,6 +1,6 @@
 # Color Analysis
 
-[GitHub Repository](fatih/color)
+[GitHub Repository](https://github.com/fatih/color)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Common Analysis
 
-[GitHub Repository](prometheus/common)
+[GitHub Repository](https://github.com/prometheus/common)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Ulid Analysis
 
-[GitHub Repository](oklog/ulid)
+[GitHub Repository](https://github.com/oklog/ulid)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

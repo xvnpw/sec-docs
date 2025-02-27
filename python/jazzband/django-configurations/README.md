@@ -1,6 +1,6 @@
 # Django-Configurations Analysis
 
-[GitHub Repository](jazzband/django-configurations)
+[GitHub Repository](https://github.com/jazzband/django-configurations)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

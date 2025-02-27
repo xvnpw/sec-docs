@@ -1,6 +1,6 @@
 # Retry-Go Analysis
 
-[GitHub Repository](avast/retry-go)
+[GitHub Repository](https://github.com/avast/retry-go)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

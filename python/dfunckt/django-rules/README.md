@@ -1,6 +1,6 @@
 # Django-Rules Analysis
 
-[GitHub Repository](dfunckt/django-rules)
+[GitHub Repository](https://github.com/dfunckt/django-rules)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Treebeard Analysis
 
-[GitHub Repository](django-treebeard/django-treebeard)
+[GitHub Repository](https://github.com/django-treebeard/django-treebeard)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

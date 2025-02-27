@@ -1,6 +1,6 @@
 # Django-Filter Analysis
 
-[GitHub Repository](carltongibson/django-filter)
+[GitHub Repository](https://github.com/carltongibson/django-filter)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

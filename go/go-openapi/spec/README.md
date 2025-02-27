@@ -1,6 +1,6 @@
 # Spec Analysis
 
-[GitHub Repository](go-openapi/spec)
+[GitHub Repository](https://github.com/go-openapi/spec)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

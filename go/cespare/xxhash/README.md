@@ -1,6 +1,6 @@
 # Xxhash Analysis
 
-[GitHub Repository](cespare/xxhash)
+[GitHub Repository](https://github.com/cespare/xxhash)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

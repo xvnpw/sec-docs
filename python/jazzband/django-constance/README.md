@@ -1,6 +1,6 @@
 # Django-Constance Analysis
 
-[GitHub Repository](jazzband/django-constance)
+[GitHub Repository](https://github.com/jazzband/django-constance)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

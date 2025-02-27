@@ -1,6 +1,6 @@
 # Django-Model-Utils Analysis
 
-[GitHub Repository](jazzband/django-model-utils)
+[GitHub Repository](https://github.com/jazzband/django-model-utils)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

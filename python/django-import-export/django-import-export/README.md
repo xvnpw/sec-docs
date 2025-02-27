@@ -1,6 +1,6 @@
 # Django-Import-Export Analysis
 
-[GitHub Repository](django-import-export/django-import-export)
+[GitHub Repository](https://github.com/django-import-export/django-import-export)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

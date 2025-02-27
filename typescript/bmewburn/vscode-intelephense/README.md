@@ -1,6 +1,6 @@
 # Vscode-Intelephense Analysis
 
-[GitHub Repository](bmewburn/vscode-intelephense)
+[GitHub Repository](https://github.com/bmewburn/vscode-intelephense)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

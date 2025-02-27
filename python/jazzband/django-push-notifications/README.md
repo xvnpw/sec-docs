@@ -1,6 +1,6 @@
 # Django-Push-Notifications Analysis
 
-[GitHub Repository](jazzband/django-push-notifications)
+[GitHub Repository](https://github.com/jazzband/django-push-notifications)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Admin-Interface Analysis
 
-[GitHub Repository](fabiocaccamo/django-admin-interface)
+[GitHub Repository](https://github.com/fabiocaccamo/django-admin-interface)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Compress Analysis
 
-[GitHub Repository](klauspost/compress)
+[GitHub Repository](https://github.com/klauspost/compress)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Codelldb Analysis
 
-[GitHub Repository](vadimcn/codelldb)
+[GitHub Repository](https://github.com/vadimcn/codelldb)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

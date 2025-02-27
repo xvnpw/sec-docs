@@ -1,6 +1,6 @@
 # Django-Webpack-Loader Analysis
 
-[GitHub Repository](django-webpack/django-webpack-loader)
+[GitHub Repository](https://github.com/django-webpack/django-webpack-loader)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

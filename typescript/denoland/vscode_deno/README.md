@@ -1,6 +1,6 @@
 # Vscode_Deno Analysis
 
-[GitHub Repository](denoland/vscode_deno)
+[GitHub Repository](https://github.com/denoland/vscode_deno)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

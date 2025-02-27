@@ -1,6 +1,6 @@
 # Social-App-Django Analysis
 
-[GitHub Repository](python-social-auth/social-app-django)
+[GitHub Repository](https://github.com/python-social-auth/social-app-django)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

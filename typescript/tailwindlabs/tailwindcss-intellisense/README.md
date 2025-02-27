@@ -1,6 +1,6 @@
 # Tailwindcss-Intellisense Analysis
 
-[GitHub Repository](tailwindlabs/tailwindcss-intellisense)
+[GitHub Repository](https://github.com/tailwindlabs/tailwindcss-intellisense)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

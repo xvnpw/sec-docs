@@ -1,6 +1,6 @@
 # Django-Extensions Analysis
 
-[GitHub Repository](django-extensions/django-extensions)
+[GitHub Repository](https://github.com/django-extensions/django-extensions)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

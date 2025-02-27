@@ -1,6 +1,6 @@
 # Graphene-Django Analysis
 
-[GitHub Repository](graphql-python/graphene-django)
+[GitHub Repository](https://github.com/graphql-python/graphene-django)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Pipeline Analysis
 
-[GitHub Repository](jazzband/django-pipeline)
+[GitHub Repository](https://github.com/jazzband/django-pipeline)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

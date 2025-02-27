@@ -1,6 +1,6 @@
 # Django-Tenants Analysis
 
-[GitHub Repository](django-tenants/django-tenants)
+[GitHub Repository](https://github.com/django-tenants/django-tenants)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

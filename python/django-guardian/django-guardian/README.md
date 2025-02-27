@@ -1,6 +1,6 @@
 # Django-Guardian Analysis
 
-[GitHub Repository](django-guardian/django-guardian)
+[GitHub Repository](https://github.com/django-guardian/django-guardian)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

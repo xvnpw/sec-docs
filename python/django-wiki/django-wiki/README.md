@@ -1,6 +1,6 @@
 # Django-Wiki Analysis
 
-[GitHub Repository](django-wiki/django-wiki)
+[GitHub Repository](https://github.com/django-wiki/django-wiki)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

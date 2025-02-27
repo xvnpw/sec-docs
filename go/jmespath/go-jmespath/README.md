@@ -1,6 +1,6 @@
 # Go-Jmespath Analysis
 
-[GitHub Repository](jmespath/go-jmespath)
+[GitHub Repository](https://github.com/jmespath/go-jmespath)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

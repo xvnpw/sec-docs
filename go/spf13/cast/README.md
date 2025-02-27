@@ -1,6 +1,6 @@
 # Cast Analysis
 
-[GitHub Repository](spf13/cast)
+[GitHub Repository](https://github.com/spf13/cast)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Celery-Beat Analysis
 
-[GitHub Repository](celery/django-celery-beat)
+[GitHub Repository](https://github.com/celery/django-celery-beat)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

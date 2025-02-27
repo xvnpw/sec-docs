@@ -1,6 +1,6 @@
 # Goautoneg Analysis
 
-[GitHub Repository](munnerz/goautoneg)
+[GitHub Repository](https://github.com/munnerz/goautoneg)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

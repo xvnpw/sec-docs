@@ -1,6 +1,6 @@
 # Django-Waffle Analysis
 
-[GitHub Repository](jazzband/django-waffle)
+[GitHub Repository](https://github.com/jazzband/django-waffle)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

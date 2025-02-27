@@ -1,6 +1,6 @@
 # Django-Bootstrap3 Analysis
 
-[GitHub Repository](zostera/django-bootstrap3)
+[GitHub Repository](https://github.com/zostera/django-bootstrap3)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

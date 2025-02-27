@@ -1,6 +1,6 @@
 # Django-Taggit Analysis
 
-[GitHub Repository](jazzband/django-taggit)
+[GitHub Repository](https://github.com/jazzband/django-taggit)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

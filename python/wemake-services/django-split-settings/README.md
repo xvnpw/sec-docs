@@ -1,6 +1,6 @@
 # Django-Split-Settings Analysis
 
-[GitHub Repository](wemake-services/django-split-settings)
+[GitHub Repository](https://github.com/wemake-services/django-split-settings)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Braces Analysis
 
-[GitHub Repository](brack3t/django-braces)
+[GitHub Repository](https://github.com/brack3t/django-braces)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

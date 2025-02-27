@@ -1,6 +1,6 @@
 # Go-Hclog Analysis
 
-[GitHub Repository](hashicorp/go-hclog)
+[GitHub Repository](https://github.com/hashicorp/go-hclog)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

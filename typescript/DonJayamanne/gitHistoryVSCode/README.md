@@ -1,6 +1,6 @@
 # Githistoryvscode Analysis
 
-[GitHub Repository](DonJayamanne/gitHistoryVSCode)
+[GitHub Repository](https://github.com/DonJayamanne/gitHistoryVSCode)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

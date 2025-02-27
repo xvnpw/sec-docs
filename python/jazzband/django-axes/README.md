@@ -1,6 +1,6 @@
 # Django-Axes Analysis
 
-[GitHub Repository](jazzband/django-axes)
+[GitHub Repository](https://github.com/jazzband/django-axes)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Django-Defender Analysis
 
-[GitHub Repository](jazzband/django-defender)
+[GitHub Repository](https://github.com/jazzband/django-defender)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

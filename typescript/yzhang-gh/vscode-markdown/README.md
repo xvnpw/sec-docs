@@ -1,6 +1,6 @@
 # Vscode-Markdown Analysis
 
-[GitHub Repository](yzhang-gh/vscode-markdown)
+[GitHub Repository](https://github.com/yzhang-gh/vscode-markdown)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

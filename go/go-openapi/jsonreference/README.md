@@ -1,6 +1,6 @@
 # Jsonreference Analysis
 
-[GitHub Repository](go-openapi/jsonreference)
+[GitHub Repository](https://github.com/go-openapi/jsonreference)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

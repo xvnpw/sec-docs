@@ -1,6 +1,6 @@
 # Django-Simple-History Analysis
 
-[GitHub Repository](jazzband/django-simple-history)
+[GitHub Repository](https://github.com/jazzband/django-simple-history)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

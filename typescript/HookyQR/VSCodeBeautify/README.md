@@ -1,6 +1,6 @@
 # Vscodebeautify Analysis
 
-[GitHub Repository](HookyQR/VSCodeBeautify)
+[GitHub Repository](https://github.com/HookyQR/VSCodeBeautify)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

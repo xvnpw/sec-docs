@@ -1,6 +1,6 @@
 # Django-Rest-Auth Analysis
 
-[GitHub Repository](Tivix/django-rest-auth)
+[GitHub Repository](https://github.com/Tivix/django-rest-auth)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

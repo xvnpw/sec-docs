@@ -1,6 +1,6 @@
 # Mapstructure Analysis
 
-[GitHub Repository](mitchellh/mapstructure)
+[GitHub Repository](https://github.com/mitchellh/mapstructure)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

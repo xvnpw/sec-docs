@@ -1,6 +1,6 @@
 # Vscode-Wakatime Analysis
 
-[GitHub Repository](wakatime/vscode-wakatime)
+[GitHub Repository](https://github.com/wakatime/vscode-wakatime)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

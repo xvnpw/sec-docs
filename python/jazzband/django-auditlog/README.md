@@ -1,6 +1,6 @@
 # Django-Auditlog Analysis
 
-[GitHub Repository](jazzband/django-auditlog)
+[GitHub Repository](https://github.com/jazzband/django-auditlog)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

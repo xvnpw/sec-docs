@@ -1,6 +1,6 @@
 # Django-Cleanup Analysis
 
-[GitHub Repository](un1t/django-cleanup)
+[GitHub Repository](https://github.com/un1t/django-cleanup)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

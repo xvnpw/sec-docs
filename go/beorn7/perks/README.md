@@ -1,6 +1,6 @@
 # Perks Analysis
 
-[GitHub Repository](beorn7/perks)
+[GitHub Repository](https://github.com/beorn7/perks)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

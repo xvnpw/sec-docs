@@ -1,6 +1,6 @@
 # Django-Tables2 Analysis
 
-[GitHub Repository](jieter/django-tables2)
+[GitHub Repository](https://github.com/jieter/django-tables2)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

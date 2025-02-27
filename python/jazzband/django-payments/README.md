@@ -1,6 +1,6 @@
 # Django-Payments Analysis
 
-[GitHub Repository](jazzband/django-payments)
+[GitHub Repository](https://github.com/jazzband/django-payments)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

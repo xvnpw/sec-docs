@@ -1,6 +1,6 @@
 # Editorconfig-Vscode Analysis
 
-[GitHub Repository](editorconfig/editorconfig-vscode)
+[GitHub Repository](https://github.com/editorconfig/editorconfig-vscode)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

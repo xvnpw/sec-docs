@@ -1,6 +1,6 @@
 # Analysis Analysis
 
-[GitHub Repository](go-openapi/analysis)
+[GitHub Repository](https://github.com/go-openapi/analysis)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

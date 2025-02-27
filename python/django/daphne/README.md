@@ -1,6 +1,6 @@
 # Daphne Analysis
 
-[GitHub Repository](django/daphne)
+[GitHub Repository](https://github.com/django/daphne)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
 # Vscode-Javascript Analysis
 
-[GitHub Repository](xabikos/vscode-javascript)
+[GitHub Repository](https://github.com/xabikos/vscode-javascript)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|
