@@ -1,4 +1,3 @@
-typescript tomoki1207/vscode-pdfviewertypescript
 typescript vscode-icons/vscode-icons
 typescript microsoft/vscode-cpptools
 typescript microsoft/vscode-remote-release
