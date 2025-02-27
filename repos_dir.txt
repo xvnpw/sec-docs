@@ -1,4 +1,3 @@
-typescript microsoft/vscode-remote-release
 typescript microsoft/vscode-react-native
 typescript microsoft/vscode-pull-request-github
 typescript microsoft/vscode-eslint
