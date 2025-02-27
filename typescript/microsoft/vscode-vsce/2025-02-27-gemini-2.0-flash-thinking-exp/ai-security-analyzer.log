@@ -1,0 +1,86 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+f18232174bc9: Pulling fs layer
+4bf0423a57b1: Pulling fs layer
+d3746672e3dd: Pulling fs layer
+2aad0d33617a: Pulling fs layer
+ef2e99cf0552: Pulling fs layer
+5fc0af7bf5ee: Pulling fs layer
+8570db82e8af: Pulling fs layer
+9ab023252c3a: Pulling fs layer
+ca366d4fc993: Pulling fs layer
+4b4e4eb3c143: Pulling fs layer
+6cc01feec954: Pulling fs layer
+2aad0d33617a: Waiting
+ef2e99cf0552: Waiting
+5fc0af7bf5ee: Waiting
+8570db82e8af: Waiting
+9ab023252c3a: Waiting
+ca366d4fc993: Waiting
+4b4e4eb3c143: Waiting
+6cc01feec954: Waiting
+4bf0423a57b1: Verifying Checksum
+4bf0423a57b1: Download complete
+f18232174bc9: Verifying Checksum
+f18232174bc9: Download complete
+d3746672e3dd: Verifying Checksum
+d3746672e3dd: Download complete
+f18232174bc9: Pull complete
+2aad0d33617a: Verifying Checksum
+2aad0d33617a: Download complete
+ef2e99cf0552: Verifying Checksum
+ef2e99cf0552: Download complete
+8570db82e8af: Verifying Checksum
+8570db82e8af: Download complete
+9ab023252c3a: Verifying Checksum
+9ab023252c3a: Download complete
+5fc0af7bf5ee: Verifying Checksum
+5fc0af7bf5ee: Download complete
+4b4e4eb3c143: Verifying Checksum
+4b4e4eb3c143: Download complete
+6cc01feec954: Verifying Checksum
+6cc01feec954: Download complete
+4bf0423a57b1: Pull complete
+ca366d4fc993: Verifying Checksum
+ca366d4fc993: Download complete
+d3746672e3dd: Pull complete
+2aad0d33617a: Pull complete
+ef2e99cf0552: Pull complete
+5fc0af7bf5ee: Pull complete
+8570db82e8af: Pull complete
+9ab023252c3a: Pull complete
+ca366d4fc993: Pull complete
+4b4e4eb3c143: Pull complete
+6cc01feec954: Pull complete
+Digest: sha256:46a726e64e96d65b74dba9456f16b793975c796332ddca230542ec6ba86d723c
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-27 09:23:29,283 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-27 09:23:30,522 - ai_security_analyzer.full_dir_scan_agents - INFO - Loading files
+2025-02-27 09:23:30,522 - ai_security_analyzer.loaders - INFO - exclude config: mode=add, patterns=['LICENSE', '**/dist/*', '**/bin/*']
+2025-02-27 09:23:30,522 - ai_security_analyzer.loaders - INFO - include config: mode=add, patterns=['**/*.md', '**/Dockerfile', '**/*.yml', '**/*.sh', '**/*.bash', '**/*.yaml', '**/*.toml', '**/*.js', '**/*.ts']
+2025-02-27 09:23:30,552 - ai_security_analyzer.full_dir_scan_agents - INFO - Loaded 61 documents
+2025-02-27 09:23:30,552 - ai_security_analyzer.full_dir_scan_agents - INFO - Sorting and filtering documents
+2025-02-27 09:23:30,552 - ai_security_analyzer.full_dir_scan_agents - INFO - Documents after sorting and filtering: 61
+2025-02-27 09:23:30,561 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitting documents
+2025-02-27 09:23:30,635 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitted documents into smaller chunks: 55
+2025-02-27 09:23:30,636 - ai_security_analyzer.full_dir_scan_agents - INFO - Creating initial draft
+2025-02-27 09:23:30,707 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing first batch of documents: 55 of 55
+2025-02-27 09:23:57,571 - ai_security_analyzer.full_dir_scan_agents - INFO - Generating final response
+2025-02-27 09:23:57,594 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Filtering vulnerabilities
+2025-02-27 09:24:06,962 - ai_security_analyzer.full_dir_scan_agents - INFO - Loading files
+2025-02-27 09:24:06,963 - ai_security_analyzer.loaders - INFO - exclude config: mode=add, patterns=['LICENSE', '**/dist/*', '**/bin/*']
+2025-02-27 09:24:06,963 - ai_security_analyzer.loaders - INFO - include config: mode=add, patterns=['**/*.md', '**/Dockerfile', '**/*.yml', '**/*.sh', '**/*.bash', '**/*.yaml', '**/*.toml', '**/*.js', '**/*.ts']
+2025-02-27 09:24:07,009 - ai_security_analyzer.full_dir_scan_agents - INFO - Loaded 61 documents
+2025-02-27 09:24:07,009 - ai_security_analyzer.full_dir_scan_agents - INFO - Sorting and filtering documents
+2025-02-27 09:24:07,010 - ai_security_analyzer.full_dir_scan_agents - INFO - Documents after sorting and filtering: 61
+2025-02-27 09:24:07,012 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitting documents
+2025-02-27 09:24:07,103 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitted documents into smaller chunks: 55
+2025-02-27 09:24:07,104 - ai_security_analyzer.full_dir_scan_agents - INFO - Creating initial draft
+2025-02-27 09:24:07,172 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing first batch of documents: 55 of 55
+2025-02-27 09:24:23,482 - ai_security_analyzer.full_dir_scan_agents - INFO - Generating final response
+2025-02-27 09:24:23,504 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Filtering vulnerabilities
+2025-02-27 09:24:31,097 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Consolidating vulnerabilities
+2025-02-27 09:24:42,817 - ai_security_analyzer.graphs - INFO - Actual token usage: 208254
+2025-02-27 09:24:42,962 - __main__ - INFO - AI Security Analyzer completed successfully
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1740648285.225395       1 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
