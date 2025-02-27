@@ -1,4 +1,3 @@
-typescript wholroyd/vscode-jinja
 typescript xabikos/vscode-javascript
 typescript xdebug/vscode-php-debug
 typescript yzhang-gh/vscode-markdown
