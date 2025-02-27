@@ -1,0 +1,9 @@
+- Vulnerability name: Command Injection in killPort Command
+    - Description: An attacker can inject arbitrary shell commands via the 'Kill Port' command input field, leading to arbitrary code execution on the user's machine.
+    - Impact: Arbitrary command execution, sensitive data exposure, malware installation, system compromise.
+    - Vulnerability rank: high
+    - Currently implemented mitigations: None
+    - Missing mitigations: Input validation and sanitization for the port input, use of safer command execution methods.
+    - Preconditions: User must execute the 'Kill Port' command.
+    - Source code analysis: Usage of `child_process.exec` with unsanitized user input in `killPort.ts`.
+    - Security test case: Execute 'Kill Port' command and provide malicious input like `; touch vulnerable;` to verify arbitrary file creation.
