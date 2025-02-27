@@ -1,6 +1,6 @@
-# Vscode-Gitlens Analysis
+# Deoptexplorer-Vscode Analysis
 
-[GitHub Repository](https://github.com/gitkraken/vscode-gitlens)
+[GitHub Repository](https://github.com/microsoft/deoptexplorer-vscode)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|

@@ -1,6 +1,6 @@
-# Vscode-Gitlens Analysis
+# Vscode-Codicons Analysis
 
-[GitHub Repository](https://github.com/gitkraken/vscode-gitlens)
+[GitHub Repository](https://github.com/microsoft/vscode-codicons)
 
 | Analysis Date | Model | T | Deep Analysis | Documents |
 |---------------|-------|---|:-------------:|-----------|
