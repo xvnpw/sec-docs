@@ -1,4 +1,3 @@
-typescript julia-vscode/julia-vscode
 typescript tomoki1207/vscode-pdfviewertypescript
 typescript vscode-icons/vscode-icons
 typescript microsoft/vscode-cpptools
