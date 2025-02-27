@@ -1,4 +1,3 @@
-typescript microsoft/vscode-ai-toolkit
 typescript microsoft/vscode-jupyter
 typescript microsoft/vscode-docker
 typescript microsoft/vscode-codicons
