@@ -27,7 +27,7 @@ def process_first_repo(n=1):
             config = {
                 "mode": "dir",
                 "repo_url": repo_url,
-                "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 500000 --files-chunk-size 450000 --recursion-limit 100 --vulnerabilities-iterations 3",
+                "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 500000 --files-chunk-size 450000 --recursion-limit 100 --vulnerabilities-iterations 3 --exclude '**/.github/**'",
                 "agent_provider": "google",
                 "agent_model": "gemini-2.0-flash-thinking-exp",
                 "agent_temperature": 0.7,
