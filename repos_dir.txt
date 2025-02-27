@@ -1,4 +1,3 @@
-typescript DonJayamanne/gitHistoryVSCode
 typescript DonJayamanne/python-extension-pack
 typescript DonJayamanne/pythonVSCode
 typescript DonJayamanne/vscode-python-manager
