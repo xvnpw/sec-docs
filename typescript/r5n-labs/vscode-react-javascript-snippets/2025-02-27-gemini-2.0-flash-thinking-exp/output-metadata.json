@@ -1,0 +1,14 @@
+{
+  "repo_url": "r5n-labs/vscode-react-javascript-snippets",
+  "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+  "start_datetime": "2025-02-27T03:05:24Z",
+  "end_datetime": "2025-02-27T03:07:50Z",
+  "agent_provider": "google",
+  "agent_model": "gemini-2.0-flash-thinking-exp",
+  "agent_temperature": "0.7",
+  "agent_prompt_types": [
+    "vulnerabilities-workflow-1"
+  ],
+  "actual_token_usage": "165514",
+  "mode": "dir"
+}
