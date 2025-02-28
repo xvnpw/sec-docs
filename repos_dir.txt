@@ -1,4 +1,3 @@
-typescript marp-team/marp-vscode
 typescript material-extensions/vscode-material-icon-theme
 typescript mechatroner/vscode_rainbow_csv
 typescript mhutchie/vscode-git-graph
