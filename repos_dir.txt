@@ -1,4 +1,3 @@
-typescript twxs/vs.language.cmake
 typescript vadimcn/codelldb
 typescript vscode-django/vscode-django
 typescript vscode-icons/vscode-icons
