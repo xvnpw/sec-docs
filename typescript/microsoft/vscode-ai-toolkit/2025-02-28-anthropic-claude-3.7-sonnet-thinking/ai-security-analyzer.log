@@ -1,0 +1,85 @@
+Unable to find image 'ghcr.io/xvnpw/ai-security-analyzer:latest' locally
+latest: Pulling from xvnpw/ai-security-analyzer
+f18232174bc9: Pulling fs layer
+4bf0423a57b1: Pulling fs layer
+d3746672e3dd: Pulling fs layer
+2aad0d33617a: Pulling fs layer
+cf0f6d89db46: Pulling fs layer
+a11a73de9b12: Pulling fs layer
+741433dafacf: Pulling fs layer
+9c6ac720626f: Pulling fs layer
+812fadab5b11: Pulling fs layer
+392bb646eeba: Pulling fs layer
+2e9cb9c9a350: Pulling fs layer
+2aad0d33617a: Waiting
+cf0f6d89db46: Waiting
+812fadab5b11: Waiting
+a11a73de9b12: Waiting
+741433dafacf: Waiting
+392bb646eeba: Waiting
+2e9cb9c9a350: Waiting
+9c6ac720626f: Waiting
+4bf0423a57b1: Verifying Checksum
+4bf0423a57b1: Download complete
+f18232174bc9: Verifying Checksum
+f18232174bc9: Download complete
+d3746672e3dd: Download complete
+2aad0d33617a: Download complete
+cf0f6d89db46: Verifying Checksum
+cf0f6d89db46: Download complete
+f18232174bc9: Pull complete
+741433dafacf: Verifying Checksum
+741433dafacf: Download complete
+9c6ac720626f: Verifying Checksum
+9c6ac720626f: Download complete
+a11a73de9b12: Verifying Checksum
+a11a73de9b12: Download complete
+392bb646eeba: Download complete
+2e9cb9c9a350: Download complete
+812fadab5b11: Verifying Checksum
+812fadab5b11: Download complete
+4bf0423a57b1: Pull complete
+d3746672e3dd: Pull complete
+2aad0d33617a: Pull complete
+cf0f6d89db46: Pull complete
+a11a73de9b12: Pull complete
+741433dafacf: Pull complete
+9c6ac720626f: Pull complete
+812fadab5b11: Pull complete
+392bb646eeba: Pull complete
+2e9cb9c9a350: Pull complete
+Digest: sha256:366f149f326ec3dbf49f759293486526e50ffd1694e991d28b95e9690bf32eea
+Status: Downloaded newer image for ghcr.io/xvnpw/ai-security-analyzer:latest
+2025-02-28 11:42:49,105 - __main__ - INFO - Starting AI Security Analyzer
+2025-02-28 11:42:50,216 - ai_security_analyzer.full_dir_scan_agents - INFO - Loading files
+2025-02-28 11:42:50,216 - ai_security_analyzer.loaders - INFO - exclude config: mode=add, patterns=['LICENSE', '**/dist/**', '**/bin/**', '**/build/**', '**/node_modules/**', '**/lib/**', '**/libs/**', '**/.github/**']
+2025-02-28 11:42:50,216 - ai_security_analyzer.loaders - INFO - include config: mode=add, patterns=['**/*.md', '**/Dockerfile', '**/*.yml', '**/*.sh', '**/*.bash', '**/*.yaml', '**/*.toml', '**/*.js', '**/*.ts']
+2025-02-28 11:42:50,232 - ai_security_analyzer.full_dir_scan_agents - INFO - Loaded 24 documents
+2025-02-28 11:42:50,233 - ai_security_analyzer.full_dir_scan_agents - INFO - Sorting and filtering documents
+2025-02-28 11:42:50,234 - ai_security_analyzer.full_dir_scan_agents - INFO - Documents after sorting and filtering: 24
+2025-02-28 11:42:50,238 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitting documents
+2025-02-28 11:42:50,260 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitted documents into smaller chunks: 24
+2025-02-28 11:42:50,261 - ai_security_analyzer.full_dir_scan_agents - INFO - Creating initial draft
+2025-02-28 11:42:50,280 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing first batch of documents: 24 of 24
+2025-02-28 11:42:50,428 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-28 11:43:46,246 - ai_security_analyzer.full_dir_scan_agents - INFO - Generating final response
+2025-02-28 11:43:46,260 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Filtering vulnerabilities
+2025-02-28 11:43:46,348 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-28 11:44:29,836 - ai_security_analyzer.full_dir_scan_agents - INFO - Loading files
+2025-02-28 11:44:29,836 - ai_security_analyzer.loaders - INFO - exclude config: mode=add, patterns=['LICENSE', '**/dist/**', '**/bin/**', '**/build/**', '**/node_modules/**', '**/lib/**', '**/libs/**', '**/.github/**']
+2025-02-28 11:44:29,837 - ai_security_analyzer.loaders - INFO - include config: mode=add, patterns=['**/*.md', '**/Dockerfile', '**/*.yml', '**/*.sh', '**/*.bash', '**/*.yaml', '**/*.toml', '**/*.js', '**/*.ts']
+2025-02-28 11:44:29,860 - ai_security_analyzer.full_dir_scan_agents - INFO - Loaded 24 documents
+2025-02-28 11:44:29,861 - ai_security_analyzer.full_dir_scan_agents - INFO - Sorting and filtering documents
+2025-02-28 11:44:29,861 - ai_security_analyzer.full_dir_scan_agents - INFO - Documents after sorting and filtering: 24
+2025-02-28 11:44:29,867 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitting documents
+2025-02-28 11:44:29,888 - ai_security_analyzer.full_dir_scan_agents - INFO - Splitted documents into smaller chunks: 24
+2025-02-28 11:44:29,889 - ai_security_analyzer.full_dir_scan_agents - INFO - Creating initial draft
+2025-02-28 11:44:29,906 - ai_security_analyzer.full_dir_scan_agents - INFO - Processing first batch of documents: 24 of 24
+2025-02-28 11:45:13,926 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-28 11:45:13,929 - ai_security_analyzer.full_dir_scan_agents - INFO - Generating final response
+2025-02-28 11:45:13,957 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Filtering vulnerabilities
+2025-02-28 11:45:14,162 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-28 11:45:40,798 - ai_security_analyzer.vulnerabilities_workflow1 - INFO - Consolidating vulnerabilities
+2025-02-28 11:45:40,892 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-28 11:46:22,485 - ai_security_analyzer.graphs - INFO - Actual token usage: 72182
+2025-02-28 11:46:22,540 - __main__ - INFO - AI Security Analyzer completed successfully
