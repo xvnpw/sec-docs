@@ -1,4 +1,3 @@
-typescript jest-community/vscode-jest
 typescript julia-vscode/julia-vscode
 typescript kbrose/vsc-python-indent
 typescript LeetCode-OpenSource/vscode-leetcode
