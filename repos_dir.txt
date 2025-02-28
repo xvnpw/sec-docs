@@ -1,4 +1,3 @@
-typescript sdras/night-owl-vscode-theme
 typescript sdras/vue-vscode-snippets
 typescript shalldie/vscode-background
 typescript shd101wyy/vscode-markdown-preview-enhanced
