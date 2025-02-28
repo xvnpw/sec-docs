@@ -1,4 +1,3 @@
-typescript ritwickdey/live-server-web-extension
 typescript ritwickdey/vscode-live-server
 typescript robb0wen/synthwave-vscode
 typescript sdras/night-owl-vscode-theme
