@@ -1,4 +1,3 @@
-typescript tomoki1207/vscode-pdfviewer
 typescript tonybaloney/vscode-pets
 typescript twxs/vs.language.cmake
 typescript vadimcn/codelldb
