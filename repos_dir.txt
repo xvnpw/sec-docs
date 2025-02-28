@@ -1,4 +1,3 @@
-typescript kbrose/vsc-python-indent
 typescript LeetCode-OpenSource/vscode-leetcode
 typescript marp-team/marp-vscode
 typescript material-extensions/vscode-material-icon-theme
