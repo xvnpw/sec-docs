@@ -1,4 +1,3 @@
-typescript DonJayamanne/vscode-python-manager
 typescript dotnet/vscode-csharp
 typescript dracula/visual-studio-code
 typescript ecmel/vscode-html-css
