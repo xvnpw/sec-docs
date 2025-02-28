@@ -1,2 +1,1 @@
-typescript alefragnani/vscode-project-manager
 typescript amir9480/vscode-laravel-extra-intellisense
