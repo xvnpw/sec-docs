@@ -1,4 +1,3 @@
-typescript hediet/vscode-drawio
 typescript HookyQR/VSCodeBeautify
 typescript Huachao/vscode-restclient
 typescript infracost/vscode-infracost
