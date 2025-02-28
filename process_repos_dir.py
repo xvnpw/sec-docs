@@ -27,10 +27,10 @@ def process_first_repo(n=1):
             config = {
                 "mode": "dir",
                 "repo_url": repo_url,
-                "analyzer_args": "--vulnerabilities-threat-actor vscode_extension -p javascript --files-context-window 500000 --files-chunk-size 450000 --recursion-limit 100 --vulnerabilities-iterations 3 --exclude '**/.github/**'",
-                "agent_provider": "google",
-                "agent_model": "gemini-2.0-flash-thinking-exp",
-                "agent_temperature": 0.7,
+                "analyzer_args": "--vulnerabilities-threat-actor vscode_extension_malicious_repo --included-classes-of-vulnerabilities 'RCE, Command Injection, Code Injection' -p javascript --vulnerabilities-iterations 2 --exclude '**/.github/**' --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1",
+                "agent_provider": "openrouter",
+                "agent_model": "anthropic/claude-3.7-sonnet:thinking",
+                "agent_temperature": 1,
                 "agent_prompt_types": ["vulnerabilities-workflow-1"],
             }
 
