@@ -1,4 +1,3 @@
-typescript r5n-labs/vscode-react-javascript-snippets
 typescript redhat-developer/vscode-yaml
 typescript ritwickdey/live-server-web-extension
 typescript ritwickdey/vscode-live-server
