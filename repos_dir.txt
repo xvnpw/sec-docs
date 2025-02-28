@@ -1,4 +1,3 @@
-typescript shd101wyy/vscode-markdown-preview-enhanced
 typescript shufo/vscode-blade-formatter
 typescript skills/copilot-codespaces-vscode
 typescript SudoKillMe/vscode-extensions-open-in-browser
