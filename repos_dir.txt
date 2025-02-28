@@ -1,4 +1,3 @@
-typescript Huachao/vscode-restclient
 typescript infracost/vscode-infracost
 typescript kbrose/vsc-python-indent
 typescript LeetCode-OpenSource/vscode-leetcode
