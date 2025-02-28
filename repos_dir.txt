@@ -1,4 +1,3 @@
-typescript oderwat/vscode-indent-rainbow
 typescript PowerShell/vscode-powershell
 typescript prettier/prettier-vscode
 typescript primer/github-vscode-theme
