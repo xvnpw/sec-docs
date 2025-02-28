@@ -1,4 +1,3 @@
-typescript dracula/visual-studio-code
 typescript ecmel/vscode-html-css
 typescript editorconfig/editorconfig-vscode
 typescript formulahendry/vscode-auto-close-tag
