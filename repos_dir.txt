@@ -1,4 +1,3 @@
-typescript formulahendry/vscode-code-runner
 typescript gitkraken/vscode-gitlens
 typescript godotengine/godot-vscode-plugin
 typescript golang/vscode-go
