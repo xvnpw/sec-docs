@@ -1,4 +1,3 @@
-typescript ecmel/vscode-html-css
 typescript editorconfig/editorconfig-vscode
 typescript estruyf/vscode-front-matter
 typescript formulahendry/vscode-auto-close-tag
