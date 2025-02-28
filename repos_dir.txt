@@ -1,4 +1,3 @@
-typescript SudoKillMe/vscode-extensions-open-in-browser
 typescript tailwindlabs/tailwindcss-intellisense
 typescript tokyo-night/tokyo-night-vscode-theme
 typescript tomoki1207/vscode-pdfviewertypescript
