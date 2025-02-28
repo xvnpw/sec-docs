@@ -1,4 +1,3 @@
-typescript skills/copilot-codespaces-vscode
 typescript streetsidesoftware/vscode-spell-checker
 typescript SudoKillMe/vscode-extensions-open-in-browser
 typescript tailwindlabs/tailwindcss-intellisense
