@@ -1,4 +1,3 @@
-typescript DonJayamanne/gitHistoryVSCode
 typescript DonJayamanne/python-extension-pack
 typescript dracula/visual-studio-code
 typescript ecmel/vscode-html-css
