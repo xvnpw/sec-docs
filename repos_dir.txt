@@ -1,4 +1,3 @@
-typescript HookyQR/VSCodeBeautify
 typescript Huachao/vscode-restclient
 typescript infracost/vscode-infracost
 typescript kbrose/vsc-python-indent
