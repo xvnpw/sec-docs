@@ -77,8 +77,12 @@ jobs:
             core.setOutput('analyzer_args', config.analyzer_args || '');
             const configDir = path.dirname(configFile);
             core.setOutput('config_dir', configDir);
-            // Determine the output subdirectory
-            const output_subdir = `${new Date().toISOString().slice(0, 10)}-${agent_model}`;
+            
+            // Sanitize agent_model for filesystem safety
+            const sanitized_model = agent_model.replace(/[\/\\:*?"<>|]/g, '-');
+            
+            // Determine the output subdirectory with sanitized model name
+            const output_subdir = `${new Date().toISOString().slice(0, 10)}-${sanitized_model}`;
             core.setOutput('output_subdir', output_subdir);
 
             // Handle agent_prompt_types

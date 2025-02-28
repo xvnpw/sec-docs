@@ -27,7 +27,7 @@ def process_first_repo(n=1):
             config = {
                 "mode": "dir",
                 "repo_url": repo_url,
-                "analyzer_args": "--vulnerabilities-threat-actor vscode_extension_malicious_repo --included-classes-of-vulnerabilities 'RCE, Command Injection, Code Injection' -p javascript --vulnerabilities-iterations 2 --exclude '**/.github/**' --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1 ",
+                "analyzer_args": "--vulnerabilities-threat-actor vscode_extension_malicious_repo --included-classes-of-vulnerabilities 'RCE, Command Injection, Code Injection' -p javascript --vulnerabilities-iterations 2  --exclude '**/.github/**' --secondary-agent-provider openai --secondary-agent-model o3-mini --secondary-agent-temperature 1 ",
                 "agent_provider": "openrouter",
                 "agent_model": "anthropic/claude-3.7-sonnet:thinking",
                 "agent_temperature": 1,
