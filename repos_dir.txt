@@ -1,4 +1,3 @@
-typescript microsoft/vscode-eslint
 typescript microsoft/vscode-generator-code
 typescript microsoft/vscode-languageserver-node
 typescript microsoft/vscode-mssql
