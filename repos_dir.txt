@@ -1,4 +1,3 @@
-typescript Dart-Code/Flutter
 typescript DavidAnson/vscode-markdownlint
 typescript denoland/vscode_deno
 typescript DonJayamanne/gitHistoryVSCode
