@@ -1,4 +1,3 @@
-typescript denoland/vscode_deno
 typescript DonJayamanne/gitHistoryVSCode
 typescript DonJayamanne/python-extension-pack
 typescript dracula/visual-studio-code
