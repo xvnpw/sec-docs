@@ -1,4 +1,3 @@
-typescript mhutchie/vscode-git-graph
 typescript microsoft/deoptexplorer-vscode
 typescript microsoft/vscode-ai-toolkit
 typescript microsoft/vscode-cmake-tools
