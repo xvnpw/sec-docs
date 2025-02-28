@@ -1,4 +1,3 @@
-typescript shufo/vscode-blade-formatter
 typescript skills/copilot-codespaces-vscode
 typescript SudoKillMe/vscode-extensions-open-in-browser
 typescript tokyo-night/tokyo-night-vscode-theme
