@@ -1,4 +1,3 @@
-typescript golang/vscode-go
 typescript hediet/vscode-debug-visualizer
 typescript hediet/vscode-drawio
 typescript HookyQR/VSCodeBeautify
