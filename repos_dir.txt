@@ -1,4 +1,3 @@
-typescript huggingface/llm-vscode
 typescript infracost/vscode-infracost
 typescript jeff-hykin/better-cpp-syntax
 typescript jest-community/vscode-jest
