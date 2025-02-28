@@ -1,4 +1,3 @@
-typescript microsoft/vscode-cmake-tools
 typescript microsoft/vscode-codicons
 typescript microsoft/vscode-cpptools
 typescript microsoft/vscode-docker
