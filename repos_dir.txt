@@ -1,4 +1,3 @@
-typescript microsoft/vscode-remote-try-python
 typescript microsoft/vscode-vsce
 typescript naumovs/vscode-ext-color-highlight
 typescript NilsJPWerner/autoDocstring
