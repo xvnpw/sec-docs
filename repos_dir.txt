@@ -1,1 +1,0 @@
-typescript amir9480/vscode-laravel-extra-intellisense
