@@ -106,6 +106,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGCHAIN_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           AGENT_PROMPT_TYPES='${{ steps.read_config.outputs.agent_prompt_types }}'
           AGENT_PROVIDER='${{ steps.read_config.outputs.agent_provider }}'
@@ -142,6 +143,7 @@ jobs:
                 -v "${{ github.workspace }}/output:/output" \
                 -e OPENAI_API_KEY \
                 -e GOOGLE_API_KEY \
+                -e OPENROUTER_API_KEY \
                 ghcr.io/xvnpw/ai-security-analyzer:latest \
                 $MODE -v -t /code \
                 -o "$output_file" \
