@@ -1,0 +1,22 @@
+## Vulnerability List
+
+- Vulnerability Name: Command Injection via Terminal Links
+  - Description: The `ExecutableTerminalLinkProvider` in `/code/src/terminal-link-provider.ts` parses URIs from terminal output and executes commands based on the `command` and `args` parameters in the URI. An attacker could potentially inject malicious commands by crafting a terminal output that includes a specially crafted `vscode-jest://` URI.
+  - Impact: Arbitrary command execution in the user's environment with the privileges of the VSCode extension.
+  - Vulnerability Rank: High
+  - Currently implemented mitigations: None
+  - Missing mitigations: Input validation and sanitization of the URI parameters, especially the `command` and `args`, before executing the command. Consider using a whitelist of allowed commands or a safer command execution mechanism that avoids direct shell command construction.
+  - Preconditions: User must interact with a terminal output that contains a malicious `vscode-jest://` link and click on it.
+  - Source code analysis:
+    - 1. `handleTerminalLink(link: ExecutableTerminalLink)`: This function in `/code/src/terminal-link-provider.ts` is the entry point for handling terminal links.
+    - 2. `vscode.Uri.parse(link.data)`: The `link.data` (which comes directly from the terminal output) is parsed into a URI.
+    - 3. `decodeURIComponent(uri.authority)`, `decodeURIComponent(uri.path).substring(1)`, `JSON.parse(decodeURIComponent(uri.query))`:  The authority, path, and query components of the URI are decoded using `decodeURIComponent`. The query is parsed as JSON.
+    - 4. `vscode.commands.executeCommand(command, folderName, args)`: The decoded `command` string and parsed `args` are directly passed to `vscode.commands.executeCommand`. This function executes arbitrary VSCode commands, making it a potential command injection point.
+  - Security test case:
+    - 1. Create a VSCode workspace with the extension activated.
+    - 2. Open an integrated terminal in VSCode.
+    - 3. In the terminal, print the following string: `open \x1b]8;;vscode-jest://test-workspace/evil-command?{"payload":"malicious"}\x1b\\Click here\x1b]8;;`
+    - 4. Observe that "Click here" is rendered as a link in the terminal.
+    - 5. Click on the "Click here" link.
+    - 6. Observe that the command `evil-command` with arguments `test-workspace` and `{"payload":"malicious"}` is executed. (For testing, `evil-command` could be a command that shows a message box).
+    - 7. Verify that arbitrary commands can be injected and executed by modifying the URI.
