@@ -1,4 +1,3 @@
-typescript ChristianKohler/PathIntellisense
 typescript codota/tabnine-vscode
 typescript cschlosser/doxdocgen
 typescript Dart-Code/Flutter
