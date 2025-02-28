@@ -1,4 +1,3 @@
-typescript microsoft/vscode-vsce
 typescript naumovs/vscode-ext-color-highlight
 typescript NilsJPWerner/autoDocstring
 typescript oderwat/vscode-indent-rainbow
