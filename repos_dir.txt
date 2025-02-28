@@ -1,4 +1,3 @@
-typescript Huachao/vscode-restclient
 typescript huggingface/llm-vscode
 typescript infracost/vscode-infracost
 typescript jeff-hykin/better-cpp-syntax
